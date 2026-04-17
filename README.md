@@ -1,101 +1,313 @@
 # FractaVolta
+## Distributed Infrastructure for Physical Flow, Sensing, and Probabilistic Inference
 
-FractaVolta est une plateforme open source de souveraineté numérique intégrant mobilité électrique, infrastructures énergétiques distribuées et architectures logicielles réplicables.
-
-Le projet débute à Corte (Corse) comme démonstrateur opérationnel de mobilité douce, puis évolue vers un système modulaire exportable combinant énergie, transport et infrastructures numériques critiques.
-
----
-
-## Objectifs
-
-- Déployer une infrastructure locale de mobilité électrique (vélos, véhicules légers)
-- Expérimenter des systèmes énergétiques distribués (notamment solaire)
-- Concevoir une architecture logicielle souveraine, résiliente et réplicable
-- Permettre la réplication du modèle via licences ou déploiements territoriaux
-- Servir de base à des systèmes autonomes à haute disponibilité
+**Repository:** github.com/JeanHuguesRobert/FractaVolta  
+**Author:** Jean Hugues Noël Robert, baron Mariani. 1 cours Paoli, F-20250.
+**Date:** 2026-04-17  
 
 ---
 
-## Architecture conceptuelle
+# 1. Executive Summary (Dual-Layer Reading)
 
-FractaVolta repose sur trois couches :
+FractaVolta is a distributed infrastructure framework designed to transform **physical reality into actionable probabilistic inference systems for critical services**.
 
-### 1. Couche physique
-- Mobilité électrique
-- Bornes et infrastructures de recharge
-- Production et gestion d’énergie locale
+It operates on a single fundamental principle:
 
-### 2. Couche opérationnelle
-- Gestion de flotte et services de mobilité
-- Logistique et exploitation terrain
-- Interfaces utilisateurs
+> Physical systems do not need to be fully measured to be understood.  
+> They can be inferred from weak signals, motion, and distributed observation.
 
-### 3. Couche numérique
-- Plateforme logicielle souveraine
-- Gestion des données et des flux
-- Systèmes distribués et tolérants aux pannes
+The system supports two simultaneous interpretations:
+
+- **Principle layer (theory):** photon-to-inference distributed AI architecture  
+- **Implementation layer (practice):** mobility, energy, and territorial infrastructure systems
 
 ---
 
-## Modèle organisationnel
+# 2. Core Idea: Photon-to-Inference Transformation
 
-Le projet s’appuie sur un écosystème évolutif :
+At its core, FractaVolta defines a transformation pipeline:
 
-- Une société d’exploitation (SAS FractaVolta) pour les activités opérationnelles
-- Une association support pour l’expérimentation initiale et l’intérêt général
-- Un futur fonds de dotation pour la gestion patrimoniale, énergétique et territoriale
+> Photons and physical emissions → weak signals → distributed sensing → probabilistic inference → actionable decisions
 
----
+This includes:
 
-## Philosophie
+- electromagnetic signals (radio, light, thermal)
+- motion-induced signal variation
+- partial and noisy observations
+- opportunistic data capture
 
-FractaVolta vise à réduire la dépendance aux infrastructures centralisées en combinant :
-- énergie locale
-- mobilité autonome
-- systèmes numériques souverains
-
-L’objectif est de construire des systèmes reproductibles, robustes et adaptables à différents territoires.
+The system does not aim for perfect measurement, but for **usable inference under uncertainty**.
 
 ---
 
-## Licences
+# 3. Dual Interpretation Model
 
-Ce projet adopte une stratégie de licences différenciées selon les couches :
+FractaVolta is intentionally designed for two levels of reading:
 
-### Logiciel (software)
-- **Apache License 2.0**
+## 3.1 Conceptual Layer (Scientific Model)
 
-Permet :
-- usage commercial
-- contributions industrielles
-- compatibilité avec les systèmes critiques et les investisseurs
+- distributed sensing of physical reality
+- probabilistic reconstruction of moving systems
+- weak-signal amplification through motion and density
+- edge-based inference and aggregation
 
-### Documentation et contenus
-- **Creative Commons Attribution 4.0 International (CC BY 4.0)**
+This layer defines FractaVolta as:
 
-Permet :
-- réutilisation libre avec attribution
-- diffusion académique et institutionnelle
-
-### Matériel et conceptions physiques (le cas échéant)
-- **CERN Open Hardware Licence v2 – Strongly Reciprocal (CERN-OHL-S)**
-
-Permet :
-- transparence des designs
-- protection contre appropriation non réciproque
+> a physical-world inference architecture based on distributed weak signals
 
 ---
 
-## Licence commerciale et déploiements
+## 3.2 Implementation Layer (Territorial Systems)
 
-Certaines implémentations, déploiements industriels ou services peuvent faire l’objet de licences commerciales via des entités dédiées (notamment la SAS FractaVolta ou ses structures partenaires).
+- mobility infrastructure
+- energy distribution systems
+- logistics and tracking networks
+- territorial sensing and coordination systems
+
+This layer defines FractaVolta as:
+
+> a modular infrastructure framework for real-world deployment in mobility, energy, and resource systems
 
 ---
 
-## Vision
+# 4. System Architecture
 
-FractaVolta est conçu comme une infrastructure réplicable combinant :
-- souveraineté numérique
-- énergie distribuée
-- mobilité locale
-- architectures logicielles exportables
+## 4.1 Physical Layer (Photon Interaction Layer)
+
+The physical world is the origin of all signals:
+
+- photons
+- radio waves
+- thermal emissions
+- reflections and attenuation patterns
+
+These signals are not directly controlled, only observed.
+
+---
+
+## 4.2 Sensing Layer
+
+Consumer-grade devices act as distributed sensors:
+
+- smartphones
+- vehicle systems
+- embedded low-cost radios
+- GPS-enabled mobile units
+
+They capture:
+
+- signal intensity variation
+- temporal drift
+- movement-induced distortions
+
+---
+
+## 4.3 Inference Layer
+
+Core transformation layer:
+
+- noisy signals → probabilistic fields
+- partial observations → trajectories
+- sparse measurements → continuous models
+
+Key property:
+
+> Motion transforms noise into structure.
+
+---
+
+## 4.4 Network Layer
+
+Hybrid communication infrastructure:
+
+- cellular networks (backbone)
+- opportunistic device-to-device exchange
+- low-power radio systems
+- asynchronous synchronization
+
+---
+
+## 4.5 Application Layer
+
+Two classes of applications:
+
+### A. Safety and Awareness Systems
+- collision avoidance
+- anomaly detection
+- territorial risk mapping
+
+### B. Infrastructure Systems
+- mobility networks
+- logistics coordination
+- energy flow tracking
+- mobile resource visibility
+
+---
+
+# 5. FractaTera Reference Architecture
+
+FractaVolta is structurally aligned with the FractaTera model (see `tera.md`), which defines:
+
+- multi-scale sensing networks
+- probabilistic territorial mapping
+- distributed inference models
+
+FractaVolta provides the **physical substrate and flow dynamics** for this architecture.
+
+---
+
+# 6. Implementation Context (Territorial Deployment)
+
+FractaVolta is designed for real-world deployment in modular territorial systems.
+
+## 6.1 Pilot Context (Corsica)
+
+Initial deployment context includes:
+
+- rural mobility environments
+- mixed vehicle/animal interaction zones
+- distributed and low-density infrastructure conditions
+
+---
+
+## 6.2 Mobility Infrastructure
+
+- electric mobility systems (light vehicles, shared fleets)
+- distributed charging and energy access points
+- mobile usage patterns and dynamic routing
+
+---
+
+## 6.3 Energy Infrastructure
+
+- distributed energy production (including solar)
+- mobile energy storage units
+- battery logistics and movement tracking
+
+---
+
+## 6.4 Resource Tracking Systems
+
+- mobile containers
+- energy units in transit
+- distributed logistical assets
+
+All tracked through probabilistic inference rather than centralized control.
+
+---
+
+# 7. Resilience Model
+
+FractaVolta assumes:
+
+> infrastructure robustness emerges from redundancy and distribution, not centralization.
+
+Properties:
+
+- graceful degradation
+- no single point of failure
+- increasing performance with node density
+- tolerance to intermittent connectivity
+
+---
+
+# 8. Computational Model
+
+The system relies on:
+
+- probabilistic inference under uncertainty
+- distributed sensor fusion
+- weak signal aggregation
+- time-correlated motion analysis
+
+There is no absolute state reconstruction:
+
+> only converging probability fields of reality.
+
+---
+
+# 9. Emergent Intelligence
+
+As deployment density increases:
+
+- signal coverage increases
+- inference accuracy improves
+- system-wide intelligence emerges
+
+This creates a positive feedback loop:
+
+> more nodes → better inference → higher utility → more nodes
+
+---
+
+# 10. Ethical Design Principles
+
+FractaVolta is designed as:
+
+- non-coercive infrastructure
+- non-destructive sensing system
+- safety-oriented distributed intelligence
+
+Core principle:
+
+> Replace enforcement with awareness.
+
+---
+
+# 11. Governance and Sovereignty Layer
+
+FractaVolta is intended to support modular governance structures:
+
+- territorial autonomy in infrastructure management
+- distributed control of mobility and energy systems
+- resilience against central infrastructure failure
+
+It enables:
+
+> local sovereignty through technological distribution rather than central dependency.
+
+---
+
+# 12. Licensing Model
+
+FractaVolta adopts a layered licensing approach:
+
+- software components: permissive open source (e.g., Apache 2.0)
+- documentation: Creative Commons Attribution (CC BY 4.0)
+- hardware designs (if applicable): CERN OHL (reciprocal licensing)
+- deployments: optionally commercial or institutional agreements
+
+---
+
+# 13. Conceptual Positioning
+
+FractaVolta sits at the intersection of:
+
+- distributed systems engineering
+- edge AI and probabilistic inference
+- opportunistic networking
+- mobility and energy infrastructure systems
+- resilient territorial design
+
+---
+
+# 14. Conclusion
+
+FractaVolta defines a structural inversion of traditional infrastructure:
+
+> from deterministic measurement systems  
+> to distributed probabilistic inference systems built on weak physical signals.
+
+At its core:
+
+> reality is not directly measured — it is inferred from photons, motion, and distributed observation.
+
+---
+
+# 15. License
+
+Open conceptual framework.
+
+Attribution required:
+
+**Jean Hugues Noël Robert — FractaVolta / FractaTera (2026)**
