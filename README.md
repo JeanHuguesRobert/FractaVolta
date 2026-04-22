@@ -2,9 +2,7 @@
 ## Distributed Infrastructure for Physical Flow, Sensing, and Probabilistic Inference
 
 **Repository:** github.com/JeanHuguesRobert/FractaVolta  
-**Author:** Jean Hugues Noël Robert, baron Mariani. 1 cours Paoli, F-20250 Corte
-
-**Date:** 2026-04-17  
+**Author:** Jean Hugues Noël Robert. 1 cours Paoli, F-20250 Corte
 
 ---
 
