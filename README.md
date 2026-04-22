@@ -8,7 +8,7 @@
 
 ---
 
-# 1. Executive Summary (Dual-Layer Reading)
+# 1. Executive Summary
 
 FractaVolta is a distributed infrastructure framework designed to transform **physical reality into actionable probabilistic inference systems for critical services**.
 
@@ -45,7 +45,7 @@ The system does not aim for perfect measurement, but for **usable inference unde
 
 FractaVolta is intentionally designed for two levels of reading:
 
-## 3.1 Conceptual Layer (Scientific Model)
+## 3.1 Scientific Model
 
 - distributed sensing of physical reality
 - probabilistic reconstruction of moving systems
@@ -58,7 +58,7 @@ This layer defines FractaVolta as:
 
 ---
 
-## 3.2 Implementation Layer (Territorial Systems)
+## 3.2 Territorial Systems
 
 - mobility infrastructure
 - energy distribution systems
@@ -73,7 +73,7 @@ This layer defines FractaVolta as:
 
 # 4. System Architecture
 
-## 4.1 Physical Layer (Photon Interaction Layer)
+## 4.1 Photon Interaction Layer
 
 The physical world is the origin of all signals:
 
@@ -157,11 +157,11 @@ FractaVolta provides the **physical substrate and flow dynamics** for this archi
 
 ---
 
-# 6. Implementation Context (Territorial Deployment)
+# 6. Territorial Deployment
 
 FractaVolta is designed for real-world deployment in modular territorial systems.
 
-## 6.1 Pilot Context (Corsica)
+## 6.1 Corsica
 
 Initial deployment context includes:
 
@@ -311,4 +311,4 @@ Open conceptual framework.
 
 Attribution required:
 
-**Jean Hugues Noël Robert — FractaVolta / FractaTera (2026)**
+**Jean Hugues Noël Robert — FractaVolta (2026)**
