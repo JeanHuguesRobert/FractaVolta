@@ -7,6 +7,7 @@
 Jean Hugues Noël Robert, baron Mariani - 1 cours Paoli, F-20250 Corte - jhr@baronsmariani.org
 
 C.O.R.S.I.C.A. / FractaVolta
+
 2026
 
 ---
@@ -67,7 +68,9 @@ FractaVolta begins from another premise:
 
 # 2. Foundational Model
 
-## The Triad
+## The Two Coupled Architectures
+
+### A. Territorial Triad
 
 FractaVolta is built on three inseparable layers.
 
@@ -106,6 +109,20 @@ Compute is coordination capacity.
 ---
 
 These are not sectors.
+
+---
+
+### B. Signal and Inference Architecture
+
+Physical reality emits weak signals.
+
+Motion can transform noise into structure.
+
+Distributed sensing enables probabilistic reconstruction.
+
+Inference becomes an infrastructural layer.
+
+This informational architecture complements the territorial triad.
 
 They form one system.
 
