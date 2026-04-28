@@ -4,22 +4,23 @@
 
 **Jean Hugues Noël Robert, baron Mariani**
 
-Institut Mariani — C.O.R.S.I.C.A.
+Institut Mariani — C.O.R.S.I.C.A. - FractaVolta
 
-1 cours Paoli, F-20250 Corte. jhr@baronsmariani.org institutmariani@gmail.com
+1 cours Paoli, F-20250 Corte.
+
+jhr@baronsmariani.org · institutmariani@gmail.com · jhr@fractavolta.com
 
 Working Paper — April 2026
 
-*Part of the FractaVolta & Mare Nostrum research program.*
-[github.com/JeanHuguesRobert/FractaVolta](github.com/JeanHuguesRobert/FractaVolta)
-[github.com/JeanHuguesRobert/marenostrum](github.com/JeanHuguesRobert/marenostrum)
+*Part of the FractaVolta & MareNostrum research program.*
+*Website: [fractavolta.com](https://fractavolta.com)*
+*Repository: [github.com/JeanHuguesRobert/FractaVolta](https://github.com/JeanHuguesRobert/FractaVolta)*
 
-*Cross-reference:*
-- Robert & Valdes (2026), "Constellia: A Fractal Architecture for Energy,
-Food, and Digital Sovereignty in Island Territories."
-[github.com/JeanHuguesRobert/marenostrum/blob/main/constellia.md](github.com/JeanHuguesRobert/marenostrum/blob/main/constellia.md)
-- *Robert (2026), "Electricity in Containers. [github.com/JeanHuguesRobert/FractaVolta/blob/main/electricity_in_containers.md](github.com/JeanHuguesRobert/FractaVolta/blob/main/electricity_in_containers.md)
-- *Robert (2026b), "DHITL." [github.com/JeanHuguesRobert/marenostrum/blob/main/DHITL.md](github.com/JeanHuguesRobert/marenostrum/blob/main/DHITL.md)
+*Cross-references:*
+- Robert & Valdes (2026), "Constellia." [`github.com/JeanHuguesRobert/marenostrum/blob/main/constellia.md`](https://github.com/JeanHuguesRobert/marenostrum/blob/main/constellia.md)
+- Robert (2026), "Electricity in Containers." [`github.com/JeanHuguesRobert/FractaVolta/blob/main/electricity_in_containers.md`](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/electricity_in_containers.md)
+- Robert (2026b), "DHITL." [`github.com/JeanHuguesRobert/marenostrum/blob/main/DHITL.md`](https://github.com/JeanHuguesRobert/marenostrum/blob/main/DHITL.md)
+
 ---
 
 ## Working Status Note
@@ -34,13 +35,13 @@ Conventional photovoltaic optimisation treats electricity as a homogeneous commo
 
 First, recent empirical evidence from vertical bifacial agrivoltaic systems confirms that east-west oriented panels produce a characteristic **double-peaked diurnal profile** — enhanced morning and evening generation, reduced midday output — whose temporal structure correlates strongly with high-value hours in electricity spot markets. A kilowatt-hour at 07:30 or 18:30 is not economically equivalent to one at 13:00. The relevant optimisation variable is not yield alone, but *value-shaped generation*.
 
-Second, flexible containerised computing loads — inference tasks, asynchronous AI workloads, scientific computation — can be temporally dispatched to absorb otherwise curtailed or undervalued renewable output. When compute is treated as controllable demand rather than passive load, it becomes *virtual storage*: a mechanism for absorbing intermittent supply without electrochemical conversion. This is not metaphorical. It is architectural.
+Second, flexible containerised computing loads — inference tasks, asynchronous AI workloads, and now distributed model training — can be temporally dispatched to absorb otherwise curtailed or undervalued renewable output. When compute is treated as controllable demand rather than passive load, it becomes *virtual storage*: a mechanism for absorbing intermittent supply without electrochemical conversion. This is not metaphorical. It is architectural. Decoupled DiLoCo (Douillard et al., 2026) has demonstrated that frontier-scale distributed model training is now achievable across geographically separated islands at internet-scale bandwidth, dramatically expanding the class of deferrable workloads.
 
 The conjunction of these two observations suggests a new infrastructure class: **Compute-Coupled Agrivoltaics (CCA)** — systems in which photovoltaic design is optimised jointly for crops, electricity value, and computational workload absorption. We propose a four-dimensional objective function — energy yield, market value yield, grid system value yield, and computational value yield — and introduce **Grid Value Yield (GVY)** as a candidate metric capturing the third and fourth dimensions.
 
 The paper connects to the FractaVolta distributed inference architecture (which provides the routing and dispatch layer for flexible compute), the Constellia Mediterranean energy architecture (which provides the physical deployment context and verified field numbers), and the DHITL framework (which provides the Compute Exergy Unit as the economic denominator for computational value).
 
-**Keywords:** agrivoltaics; vertical bifacial photovoltaics; value-shaped generation; temporal agrivoltaics; flexible compute; containerised computing; compute-coupled agrivoltaics; Grid Value Yield; FractaVolta; Constellia; energy-compute co-design; dispatchable intelligence.
+**Keywords:** agrivoltaics; vertical bifacial photovoltaics; value-shaped generation; temporal agrivoltaics; flexible compute; containerised computing; compute-coupled agrivoltaics; Grid Value Yield; FractaVolta; Constellia; energy-compute co-design; dispatchable intelligence; distributed training; DiLoCo.
 
 ---
 
@@ -61,7 +62,7 @@ Two phenomena are driving the correction:
 
 **Temporal price divergence.** As midday solar generation saturates grid capacity in high-solar regions, spot electricity prices during peak irradiance hours collapse — sometimes to zero or negative values — while morning and evening hours, when demand is high and solar generation is low, command premium prices. The duck curve, now well documented in California, Spain, Italy, and increasingly Germany, is the market expression of this divergence. A photovoltaic system that produces heavily at noon generates electricity when it is least valuable; one that produces at shoulder hours generates electricity when it is most valuable.
 
-**Follow-the-power computing.** Switzer et al. (2021) argue that the growing problem is not a shortage of wind and solar power, but too much generation at the wrong times and in the wrong places, and propose a geographically-distributed zero-carbon compute infrastructure — TerraWatt — that uses surplus renewable energy and older hardware to absorb otherwise curtailed generation. This is the origin of the *follow-the-power* paradigm: move compute to where and when renewable energy is surplus, rather than moving renewable energy to where compute is.
+**Follow-the-power computing.** Switzer et al. (2021) argue that the growing problem is not a shortage of wind and solar power, but too much generation at the wrong times and in the wrong places, and propose a geographically-distributed zero-carbon compute infrastructure — TerraWatt — that uses surplus renewable energy and older hardware to absorb otherwise curtailed generation. This is the origin of the *follow-the-power* paradigm: move compute to where and when renewable energy is surplus, rather than moving renewable energy to where compute is. Decoupled DiLoCo (Douillard et al., 2026) now demonstrates that this paradigm is viable even for frontier-scale model training, not only for inference, removing what was the last strong argument for co-located compute concentration.
 
 This paper proposes that these two phenomena, taken together, suggest a structural redesign of how agrivoltaic systems are conceived and optimised. The question is not "how much electricity can this system produce per year?" It is: "what temporal profile of electricity production maximises total value, including the value that flexible computational demand can extract from otherwise undervalued output?"
 
@@ -108,7 +109,7 @@ Szabo et al. (2024), in *Nature Communications*, study the impacts of large-scal
 
 Traditional photovoltaic optimisation maximises:
 
-$$\max_{(\text{tilt}, \text{azimuth}, \text{technology})} \int_0^{8760} P(t)\, dt$$
+$$\max_{(\text{tilt},\, \text{azimuth},\, \text{technology})} \int_0^{8760} P(t)\, dt$$
 
 where $P(t)$ is instantaneous power output and the integral is annual energy yield in kWh/kWp. This is equivalent to maximising the area under the production curve, with no weighting for time of day.
 
@@ -154,7 +155,7 @@ When a data centre shifts an AI inference job from a peak-price hour to a should
 
 The "storage" is temporal displacement of demand rather than physical accumulation of charge. The mechanism is identical in economic function:
 
-| Mechanism | Charges (absorbs excess) | Discharges (reduces demand) | Round-trip efficiency |
+| Mechanism | Absorbs excess | Reduces demand | Round-trip efficiency |
 |---|---|---|---|
 | Li-ion BESS | During surplus generation | During deficit | 85–92% |
 | Pumped hydro | During surplus generation | During deficit | 70–85% |
@@ -164,14 +165,16 @@ The third row is structurally superior on efficiency. Its constraint is not ther
 
 ### 4.3 Workload Classes and Deferability
 
-Not all compute is equally deferrable. A useful taxonomy:
+Not all compute is equally deferrable. A useful taxonomy, updated to reflect the Decoupled DiLoCo result (Douillard et al., 2026):
 
-| Class | Examples | Deferability | Value capture |
-|---|---|---|---|
-| Hard real-time | Interactive inference, live transactions | None | Not relevant |
-| Soft real-time | Batch inference, API responses | Minutes–hours | Limited |
-| Deferrable | Training runs, scientific simulation | Hours–days | Significant |
-| Fully flexible | Model pre-computation, data processing, archival | Days–weeks | Maximum |
+| Class | Examples | Deferability | Value capture | DiLoCo status |
+|---|---|---|---|---|
+| Hard real-time | Interactive inference, live transactions | None | Not relevant | N/A |
+| Soft real-time | Batch inference, API responses | Minutes–hours | Limited | N/A |
+| Deferrable | **Distributed pre-training**, fine-tuning, scientific simulation | Hours–days | **Significant** | **Demonstrated at 12B params, 4 regions** |
+| Fully flexible | Model pre-computation, data processing, archival | Days–weeks | Maximum | Unaffected |
+
+The critical update from v0.2: distributed pre-training of large language models has been assumed to require tightly co-located, high-bandwidth compute clusters — placing it in a "not deferrable, not geographically distributable" category. Decoupled DiLoCo falsifies this assumption. A 12B-parameter model was trained across four geographically separate US regions at 2–5 Gbps of wide-area networking — a bandwidth level available over existing Mediterranean submarine fiber infrastructure. This moves frontier-scale training from the "not applicable" column to the "deferrable, hours–days" class, with demonstrated production-level results.
 
 The FractaVolta distributed inference architecture is designed for the third and fourth classes: workloads that can be routed to nodes with surplus renewable generation at the moment of execution, without pre-committed execution schedules.
 
@@ -183,9 +186,28 @@ In both cases, the "container" is a unit of deferred value — energy in chemica
 
 This is what the draft correctly identifies as *compute as virtual storage*. It is architectural, not metaphorical.
 
+### 4.5 Decoupled DiLoCo: Frontier Training as a Deferrable Workload
+
+*This section was added in v0.3 following the publication of Douillard et al. (2026) on April 23, 2026.*
+
+Conventional large-scale AI training requires that thousands of accelerators maintain near-perfect synchronisation at sub-millisecond latency. This constraint has made co-location in a single data centre effectively mandatory, which in turn has made frontier training a powerful driver of compute concentration (high K in the DHITL framework). The argument "training must be co-located, therefore concentrated" has been a structural limit on the CCA architecture's applicability to training workloads.
+
+Decoupled DiLoCo dissolves this constraint. The architecture divides training into decoupled "islands" of compute that exchange gradient updates asynchronously, requiring only 0.84 Gbps between data centres — compared to 198 Gbps for conventional data-parallel training. Key demonstrated properties:
+
+- **Resilience:** 88% goodput under simulated high-failure conditions (1.2M chips), versus 27% for standard data-parallel. Entire learner islands can be lost and seamlessly reintegrated.
+- **Bandwidth:** Training at internet-scale WAN (2–5 Gbps) without custom inter-facility network infrastructure.
+- **Performance parity:** ML benchmarks of 64.1% average accuracy versus 64.4% for the baseline — within measurement noise.
+- **Hardware heterogeneity:** Mixed TPU generations (v6e and v5p) within a single training run without performance degradation.
+
+The resonance with the CCA / Stella architecture is structural, not coincidental. Both are ARPANET-inspired: distributed islands, no single point of failure, proportional degradation under node loss, asynchronous coordination. The Stella network of 60 Mediterranean nodes — each with sovereign solar generation, local BESS, and compute capacity — is now a technically plausible substrate for Decoupled DiLoCo-style training runs, not only inference.
+
+**The value-shaping implication is direct:** if training runs can be scheduled across Stella islands in windows of surplus solar generation, the CCA architecture extends from *inference absorption* to *training absorption*. A morning generation surplus across 20 Corsican nodes could power a distributed pre-training run that was queued overnight and dispatched at 07:00 when the east-facing bifacial panels begin producing. The FractaVolta routing layer schedules the gradient synchronisation; the energy provenance registry certifies the renewable origin of each compute token; the CXU (Compute Exergy Unit) captures the governance premium.
+
+**A governance concern introduced by DiLoCo** — noted here for the DHITL update and not yet fully resolved: the "outer optimizer" in Decoupled DiLoCo, which aggregates gradient updates across all islands, is a potential governance chokepoint. Even if compute is physically distributed across sovereign nodes, whoever controls the outer optimizer controls the training run. This creates a new failure mode — *distributed compute, concentrated control* — that is not addressed in the current DHITL framework. A future revision of DHITL must specify governance requirements for the outer optimizer layer. Candidate solutions: democratic election of the outer optimizer operator; cryptographic gradient aggregation that prevents the aggregator from reading individual island gradients; or multi-party computation for the outer step. This is an open research question.
+
 ---
 
-## 5. The Three-Dimensional Optimisation Problem
+## 5. The Four-Dimensional Optimisation Problem
 
 ### 5.1 Current Practice: One Dimension
 
@@ -199,7 +221,7 @@ Temporal agrivoltaics optimises energy yield and market value yield:
 
 $$\text{Objective: } \max\; (E,\; V_m) \text{ subject to agronomic constraints}$$
 
-This is already a Pareto front problem: the vertical east-west system may achieve lower E but higher $V_m$ than a tilted south system, and the optimal design depends on the relative weights of the two objectives.
+This is a Pareto front problem: the vertical east-west system may achieve lower E but higher $V_m$ than a tilted south system. The optimal design depends on the relative weights of the two objectives.
 
 ### 5.3 Compute-Coupled Agrivoltaics: Four Dimensions
 
@@ -212,7 +234,7 @@ where:
 - $E$ = energy yield [kWh/year] — physical production
 - $V_m$ = market value yield [€/year] — production weighted by spot price
 - $V_g$ = grid system value yield [€/year] — avoided system costs (curtailment, congestion, storage, backup)
-- $C$ = computational value yield [CXU/year or €/year] — value of absorbed flexible compute workloads
+- $C$ = computational value yield [CXU/year or €/year] — value of absorbed flexible compute workloads, including both inference and distributed training
 
 and $w_E, w_m, w_g, w_c$ are weights reflecting the system designer's objective function. Traditional PV design sets $w_m = w_g = w_c = 0$. Temporal agrivoltaics sets $w_g = w_c = 0$. CCA design uses all four.
 
@@ -226,9 +248,9 @@ where each term is the system-level cost avoided by the temporal profile of the 
 
 GVY captures externalities that market value yield $V_m$ does not. In a perfectly functioning electricity market, $V_m$ would fully capture $V_g$. In practice, market prices imperfectly reflect system costs, particularly:
 
-- curtailment costs (excess renewable generation that must be wasted because no flexible load or storage is available)
-- congestion costs (transmission constraints that prevent renewable energy from reaching loads)
-- capacity costs (investment in backup thermal generation that is only needed because renewable generation is non-dispatchable)
+- curtailment costs (excess renewable generation wasted because no flexible load or storage is available)
+- congestion costs (transmission constraints preventing renewable energy from reaching loads)
+- capacity costs (investment in backup thermal generation only needed because renewable generation is non-dispatchable)
 
 These costs are real and growing. A CCA system that systematically shifts demand to surplus-generation hours internalises these externalities without requiring their explicit pricing. This makes GVY a relevant metric even in markets where system cost pricing is incomplete.
 
@@ -240,7 +262,7 @@ $$X_c = E \times \eta_{hw} \times \eta_{sys} \times \eta_{sla} \times \eta_{gov}
 
 In the CCA context, the compute absorbed during surplus generation hours has a value that includes not merely the raw energy cost saved, but the governance premium associated with computation that is: (a) powered by certified renewable energy, (b) executed at a node with verified energy provenance, and (c) subject to democratic accountability requirements. This is the $\eta_{gov}$ factor in the Xc formula.
 
-The market expression of this premium is the ×4-to-×31 spread between uncertified batch compute (€350/MWh equivalent) and sovereign-critical certified compute (€2,800/MWh equivalent) documented in the Constellia architecture (Robert & Valdes, 2026). A CCA system that directly powers compute at the point of surplus renewable generation, with full energy provenance certification, captures this premium without transmission losses or intermediary costs.
+The market expression of this premium is the ×4-to-×31 spread between uncertified batch compute (€350/MWh equivalent) and sovereign-critical certified compute (€2,800/MWh equivalent) documented in the Constellia architecture (Robert & Valdes, 2026). A CCA system that directly powers compute — including Decoupled DiLoCo training runs — at the point of surplus renewable generation, with full energy provenance certification, captures this premium without transmission losses or intermediary costs.
 
 ---
 
@@ -252,7 +274,7 @@ The market expression of this premium is the ×4-to-×31 spread between uncertif
 
 1. Photovoltaic generation is co-located with agricultural production (the agrivoltaic layer);
 2. The temporal profile of PV generation is designed to correlate with high-value electricity market hours (the value-shaping layer);
-3. Flexible containerised computing workloads are co-located or logistically coupled to the site, and dispatched to absorb surplus generation that would otherwise be curtailed or sold at depressed prices (the computational layer);
+3. Flexible containerised computing workloads — inference, fine-tuning, and distributed pre-training — are co-located or logistically coupled to the site, and dispatched to absorb surplus generation that would otherwise be curtailed or sold at depressed prices (the computational layer);
 4. A distributed inference system — the FractaVolta layer — routes workloads across the computational layer in response to real-time and forecast renewable generation, price signals, and job queue states.
 
 ### 6.2 The Physical Architecture
@@ -264,7 +286,7 @@ A CCA site minimally comprises:
 | Vertical east-west bifacial array | Value-shaped generation, agronomic compatibility |
 | Agricultural production | Primary land use, crop income, water management |
 | On-site BESS (hours-scale) | Buffer between generation and compute |
-| Compute nodes (edge or containerised) | Flexible workload execution |
+| Compute nodes (edge or containerised) | Flexible workload execution — inference and training |
 | FractaVolta inference layer | Routing, dispatch, provenance certification |
 | Energy provenance registry | Governance coupling, $\eta_{gov}$ certification |
 
@@ -280,7 +302,7 @@ Among agricultural contexts, vineyards offer an unusually strong combination of 
 
 **Irrigation relevance.** East-west vertical panels reduce irradiance on inter-row soil, decreasing evapotranspiration by an estimated 15–30% in Mediterranean climates (Marrou et al., 2013). In a context of increasing summer drought stress on Mediterranean viticulture, this microclimate benefit is potentially transformative for yield quality even if aggregate biomass is unchanged.
 
-**Distributed rural compute opportunities.** Vineyards are typically distributed across landscapes rather than concentrated at a single site. A network of vineyard CCA nodes — each with modest compute capacity — constitutes exactly the distributed low-K infrastructure described in the MareNostrum governance framework: no single node dominates, and compute provision is geographically and institutionally distributed.
+**Distributed rural compute opportunities.** Vineyards are typically distributed across landscapes rather than concentrated at a single site. A network of vineyard CCA nodes — each with modest compute capacity — constitutes exactly the distributed low-K infrastructure described in the MareNostrum governance framework: no single node dominates, and compute provision is geographically and institutionally distributed. Under Decoupled DiLoCo, these nodes can now participate in training runs, not only inference.
 
 **Friches viticoles.** In Corsica specifically, approximately 30,000 ha of formerly productive vineyard land has been abandoned over the past four decades following the collapse of mass wine production. These *friches viticoles* are not active SAU (surface agricole utile) and do not conflict with food production. They represent the primary deployment surface in the Constellia architecture (Robert & Valdes, 2026): 10.8 GWp of installed agrivoltaic capacity on 21,000 ha, generating 13.8 TWh/year of surplus electricity for compute export.
 
@@ -294,28 +316,30 @@ The FractaVolta architecture (Robert, 2026) defines a distributed inference syst
 
 **Provenance certification.** Each compute operation is linked to a specific generation event at a specific node with a specific energy provenance chain. This produces the governance certification that activates the $\eta_{gov}$ premium in the CXU formula.
 
-**Cross-node routing.** When a single node has insufficient surplus to absorb a large job, the FractaVolta layer routes the job across multiple nodes, treating the network of CCA sites as a single distributed compute resource. This is the "follow-the-power" paradigm at the network level.
+**Cross-node routing and DiLoCo coordination.** When a single node has insufficient surplus to absorb a large job, the FractaVolta layer routes the job across multiple nodes, treating the network of CCA sites as a single distributed compute resource. Under Decoupled DiLoCo, this cross-node routing becomes the coordination layer for the outer optimizer — the FractaVolta layer manages which island nodes participate in a given training run, when gradient synchronisation occurs (aligned with inter-generation lulls), and how provenance is attributed across islands. The bandwidth requirement of 2–5 Gbps between nodes is comfortably within the capacity of existing Mediterranean submarine fiber infrastructure.
+
+*Governance note:* as discussed in Section 4.5, the outer optimizer is a potential governance chokepoint even in a physically distributed system. The FractaVolta routing layer should be designed with this in mind: the outer optimizer function must itself be democratically accountable, not merely technically distributed. This requirement is added to the FractaVolta design specification as of v0.3.
 
 ---
 
 ## 7. The Research Hypothesis
 
-**Hypothesis:** A vertical east-west agrivoltaic system coupled to flexible containerised compute can achieve higher total system value $F$ than a conventional south-facing agrivoltaic system with equivalent installed capacity and land area — even at equal or lower annual energy yield — when the full four-dimensional objective function is evaluated.
+**Hypothesis:** A vertical east-west agrivoltaic system coupled to flexible containerised compute — including both inference and Decoupled DiLoCo-style distributed training — can achieve higher total system value $F$ than a conventional south-facing agrivoltaic system with equivalent installed capacity and land area — even at equal or lower annual energy yield — when the full four-dimensional objective function is evaluated.
 
 This hypothesis is testable. It requires:
 
 1. Simultaneous measurement of PV production and market price for matched vertical and tilted systems (E and $V_m$)
 2. System-level modelling of grid cost impacts ($V_g$)
-3. Economic modelling of compute workload absorption value ($C$)
+3. Economic modelling of compute workload absorption value ($C$), now including training workloads schedulable under Decoupled DiLoCo
 4. A defined weighting vector $(w_E, w_m, w_g, w_c)$ reflecting the system designer's objective
 
-Partial tests are possible with existing data:
+Partial tests possible with existing data:
 
-- The $V_m$ comparison can be computed from PVGIS production profiles combined with EPEX historical prices — no new field experiment required.
+- The $V_m$ comparison is computable from PVGIS production profiles combined with EPEX historical prices — no new field experiment required.
 - The $V_g$ computation requires a grid model but can use published curtailment and congestion data from RTE (France), Terna (Italy), or CAISO (California).
-- The $C$ valuation requires the CXU pricing model from DHITL and an empirical estimate of workload deferability rates.
+- The $C$ valuation for inference uses the CXU pricing model from DHITL. The $C$ valuation for distributed training under DiLoCo requires an empirical estimate of job-size distribution and synchronisation overhead at WAN latency — a new measurement need introduced by v0.3.
 
-The hypothesis is stated in falsifiable form. If the south-facing system achieves higher $F$ even under the four-dimensional objective, the paper's recommendation is wrong. If it achieves lower $F$, a publishable empirical result follows.
+The hypothesis is stated in falsifiable form.
 
 ---
 
@@ -325,11 +349,15 @@ The hypothesis is stated in falsifiable form. If the south-facing system achieve
 
 **Flexible compute demand may not be locally available.** A vineyard CCA node in a rural Mediterranean area does not inherently have access to deferrable AI training workloads. The system requires logistics: a mechanism for connecting surplus renewable generation at rural nodes to compute demand that can tolerate geographic and temporal displacement. The FractaVolta layer provides the technical routing infrastructure; the commercial mechanisms for this market are not yet established.
 
+**The outer optimizer governance gap.** Decoupled DiLoCo introduces a specific governance vulnerability: the outer optimizer that aggregates gradients across training islands can exercise effective control over the training run even when compute is physically distributed. This is a new failure mode — *distributed hardware, concentrated algorithmic control* — that neither the current DHITL framework nor the CCA architecture addresses. Candidate solutions exist (democratic election of outer optimizer operators, cryptographic gradient aggregation, multi-party computation) but none is production-ready. This is the highest-priority governance research question introduced by v0.3, and a required addition to DHITL.
+
 **The $V_g$ term is difficult to internalise.** Grid system value is a public good. Without appropriate market instruments — capacity markets, curtailment compensation, system service contracts — the CCA site cannot capture $V_g$ as revenue. This is a regulatory gap, not a technical one.
 
 **Provenance certification at scale is unsolved.** The $\eta_{gov}$ premium in the CXU formula requires that every compute operation be traceable to a specific renewable energy event at a certified site. The technical architecture for this certification at scale — append-only provenance registries linked to energy production meters — exists in principle but has not been deployed.
 
 **Agronomic interactions require site-specific study.** The literature on vertical bifacial agrivoltaics is growing but geographically concentrated in northern Europe and Asia. Mediterranean vineyard applications, with their specific microclimate, crop physiology, and soil conditions, represent a research gap. The Muscat de Corse variety, grown on existing Constellia deployment surfaces, is an unstudied candidate.
+
+**DiLoCo synchronisation overhead at Mediterranean WAN latency.** Decoupled DiLoCo was demonstrated at 2–5 Gbps across US datacenter regions. Mediterranean submarine fiber latency (Marseille–Tunis: ~25 ms; Toulon–Bastia: ~8 ms) is within range, but the outer optimizer step's tolerance for latency variance under island renewable generation intermittency has not been characterised. This is a required measurement for the Stella network deployment.
 
 ---
 
@@ -339,9 +367,11 @@ The central claim of this paper is simple to state and potentially consequential
 
 *The future problem of solar energy is not maximising kilowatt-hours. It is optimising when electricity appears and what flexible infrastructures can absorb it.*
 
-The vertical east-west bifacial agrivoltaic system, combined with flexible containerised computing workloads managed by a distributed inference layer, offers a candidate answer to both parts of that question simultaneously. It produces electricity when it is most valuable. It dispatches compute to absorb what would otherwise be undervalued surplus. It certifies the energy provenance of the resulting compute, capturing the governance premium that sovereign-critical compute commands in current markets.
+The vertical east-west bifacial agrivoltaic system, combined with flexible containerised computing workloads — inference and, following Decoupled DiLoCo, frontier-scale distributed training — managed by a distributed inference layer, offers a candidate answer to both parts of that question simultaneously. It produces electricity when it is most valuable. It dispatches compute to absorb what would otherwise be undervalued surplus. It certifies the energy provenance of the resulting compute, capturing the governance premium that sovereign-critical compute commands in current markets.
 
-If the full four-dimensional objective function is evaluated, the system may outperform conventional agrivoltaic designs on total value even at lower annual energy yield. That proposition is falsifiable, and testing it is the research programme proposed here.
+Decoupled DiLoCo, published April 23, 2026, is the single most significant external development for this research program since the original TerraWatt proposal. It transforms the CCA architecture from an inference-scale proposal to a training-scale one. The research program must now address the outer optimizer governance gap it introduces — a task assigned to the next DHITL revision.
+
+If the full four-dimensional objective function is evaluated, the CCA system may outperform conventional agrivoltaic designs on total value even at lower annual energy yield. That proposition is now testable at training scale, not only inference scale. Testing it is the research programme proposed here.
 
 ---
 
@@ -351,15 +381,18 @@ If the full four-dimensional objective function is evaluated, the system may out
 |---|---|
 | **Value-shaped generation** | PV system design optimised for the temporal value of production rather than its annual volume |
 | **Temporal agrivoltaics** | Co-optimisation of PV temporal profile with electricity market value, as a design variable alongside agronomic and technical constraints |
-| **Compute as virtual storage** | Deferrable computing workloads that absorb surplus renewable generation without electrochemical conversion, achieving equivalent economic function to demand-side storage |
+| **Compute as virtual storage** | Deferrable computing workloads — inference and training — that absorb surplus renewable generation without electrochemical conversion |
 | **Grid Value Yield (GVY)** | The aggregate system-level cost avoided by the temporal profile of a CCA system, including curtailment, congestion, storage, backup, and balancing costs |
-| **Compute-Coupled Agrivoltaics (CCA)** | An infrastructure class integrating agrivoltaic generation, value-shaped temporal design, flexible compute absorption, and distributed inference routing |
+| **Compute-Coupled Agrivoltaics (CCA)** | An infrastructure class integrating agrivoltaic generation, value-shaped temporal design, flexible compute absorption (inference + training), and distributed inference routing |
+| **Outer optimizer governance gap** | The risk that DiLoCo-style distributed training concentrates effective control in the gradient aggregation step even when compute hardware is physically distributed |
 
 ---
 
 ## References
 
 Badran, G., & Dhimish, M. (2024). Comprehensive study on the efficiency of vertical bifacial photovoltaic systems: a UK case study. *Scientific Reports* 14, 18374. https://doi.org/10.1038/s41598-024-68018-1
+
+Douillard, A., Rush, K., Donchev, Y., Charles, Z., Dubey, A., Woodworth, B., Gog, I., Dean, J., Fallen, N., & Garrett, Z. (2026). Decoupled DiLoCo: A new frontier for resilient, distributed AI training. Google DeepMind Technical Report, arXiv:2604.21428. https://deepmind.google/blog/decoupled-diloco/
 
 Dupraz, C., Marrou, H., Talbot, G., Dufour, L., Nogier, A., & Ferard, Y. (2011). Combining solar photovoltaic panels and food crops for optimising land use: towards new agrivoltaic schemes. *Renewable Energy* 36(10), 2725–2732.
 
@@ -371,15 +404,13 @@ Marrou, H., Guilioni, L., Dufour, L., Dupraz, C., & Wery, J. (2013). Microclimat
 
 OREGES. (2023). *Bilan énergétique de la Corse 2022*. Observatoire Régional de l'Énergie, des Gaz à effet de serre et de l'Air de Corse, Ajaccio.
 
-Robert, J.-H. N. (2026). Electricity in containers: A note on store-and-forward energy logistics. FractaVolta Working Paper. `github.com/JeanHuguesRobert/FractaVolta/blob/main/electricity_in_containers.md`
+Robert, J.-H. N. (2026). Electricity in containers: A note on store-and-forward energy logistics. FractaVolta Working Paper. https://github.com/JeanHuguesRobert/FractaVolta/blob/main/electricity_in_containers.md
 
-Robert, J.-H. N. (2026). FractaVolta: Distributed infrastructure for physical flow, sensing, and probabilistic inference. `github.com/JeanHuguesRobert/FractaVolta/blob/main/fractavolta_paper.md`
+Robert, J.-H. N. (2026b). Democratic Humans in the Loop (DHITL): Why infrastructure is all you need for AI safety. MareNostrum Working Paper. https://github.com/JeanHuguesRobert/marenostrum/blob/main/DHITL.md
 
-Robert, J.-H. N. (2026b). Democratic Humans in the Loop (DHITL): Why infrastructure is all you need for AI safety. MareNostrum Working Paper. `github.com/JeanHuguesRobert/marenostrum/blob/main/DHITL.md`
+Robert, J.-H. N., & Valdes, G. (2026). Constellia: A fractal architecture for energy, food, and digital sovereignty in island territories. *Proceedings of ICOME'26* (submitted). Université de Corse Pasquale Paoli, Corte. https://github.com/JeanHuguresRobert/marenostrum/blob/main/constellia.md
 
-Robert, J.-H. N., & Valdes, G. (2026). Constellia: A fractal architecture for energy, food, and digital sovereignty in island territories. *Proceedings of ICOME'26* (submitted, not yet accepted). Université de Corse Pasquale Paoli, Corte.
-
-Sentnet Engineering. (2026). SkyGre vertical agrivoltaic system. Product documentation and field data. https://www.sentnet-engineering.com/solutions/skygre.html
+Sentnet Engineering. (2026). SkyGre vertical agrivoltaic system. https://www.sentnet-engineering.com/solutions/skygre.html
 
 Szabo, L., et al. (2024). Impacts of large-scale deployment of vertical bifacial photovoltaics on European electricity market dynamics. *Nature Communications* 15, 6681.
 
@@ -395,21 +426,24 @@ Willockx, B., Lavaert, C., & Cappelle, J. (2023). Performance evaluation of vert
 
 ## Questions for Reviewers
 
-1. **Is the "compute as virtual storage" claim architecturally precise or merely analogical?** At what deferability rate and job-size distribution does the economic equivalence with BESS break down?
+1. **Is the "compute as virtual storage" claim architecturally precise or merely analogical?** At what deferability rate and job-size distribution does the economic equivalence with BESS break down? Does DiLoCo's demonstrated training-scale application change the answer?
 
-2. **Is the four-dimensional objective function $F$ tractable?** Or does combining market, grid, and computational value into a single scalar obscure important trade-offs that should remain as a Pareto front?
+2. **Is the outer optimizer governance gap (Section 4.5, Section 8) a real problem or a theoretical concern?** Under what conditions does the aggregator of DiLoCo gradient updates acquire effective control over training outcomes that is not addressable by the distributed hardware structure?
 
-3. **Is Grid Value Yield a useful concept or a restatement of existing externality pricing literature?** Does it add anything to what Hirth (2013) and others have already done on the "market value" of variable renewables?
+3. **Is the four-dimensional objective function $F$ tractable?** Or does combining market, grid, and computational value into a single scalar obscure important trade-offs that should remain as a Pareto front?
 
-4. **Does the vineyard framing help or narrow the paper's audience?** Mediterranean viticulture is a plausible testbed; is it convincing as a scientific setting or does it read as local interest advocacy?
+4. **Is Grid Value Yield a useful concept or a restatement of existing externality pricing literature?** Does it add anything to what Hirth (2013) and others have already done on the "market value" of variable renewables?
 
-5. **What is the correct relationship between this paper and the TerraWatt paper?** This paper proposes the *supply-side* complement (value-shaped generation) to TerraWatt's *demand-side* proposal (follow-the-power compute). Is this framing accurate and useful?
+5. **Does the vineyard framing help or narrow the paper's audience?** Mediterranean viticulture is a plausible testbed; is it convincing as a scientific setting or does it read as local interest advocacy?
 
-6. **Is the CXU integration (the $\eta_{gov}$ governance premium) a genuine contribution to the economics of CCA, or does it import too much of the DHITL framework?** Can the CCA proposition stand independently of the MareNostrum governance architecture?
+6. **What is the correct relationship between this paper and TerraWatt?** This paper proposes the *supply-side* complement (value-shaped generation) to TerraWatt's *demand-side* proposal (follow-the-power compute). DiLoCo provides the *training-scale* evidence that was missing. Is this triangulation accurate and useful?
+
+7. **Is the CXU integration a genuine contribution to CCA economics, or does it import too much of the DHITL framework?** Can the CCA proposition stand independently of the MareNostrum governance architecture?
 
 ---
 
 *© 2026 Jean Hugues Noël Robert, baron Mariani — Institut Mariani / C.O.R.S.I.C.A.*
 *Published under CC0-1.0 (as per FractaVolta repository licence).*
-*Repository: https://github.com/JeanHuguesRobert/FractaVolta*
+*Website: [fractavolta.com](https://fractavolta.com)*
+*Repository: [github.com/JeanHuguesRobert/FractaVolta](https://github.com/JeanHuguesRobert/FractaVolta)*
 *Contact: jhr@baronsmariani.org*
