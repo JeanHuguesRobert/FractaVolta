@@ -37,6 +37,20 @@ This includes:
 
 The system does not aim for perfect measurement, but for **usable inference under uncertainty**.
 
+## Repository Structure
+
+FractaVolta spans three layers, each documented separately:
+
+| File | Layer | Topic |
+|------|-------|-------|
+| `README.md` | Physical | Distributed sensing, weak signals, territorial inference |
+| `traceable_governance.md` | Governance | Fractal traceability, append-only registers, democratic accountability |
+| `safe_compute_exergy.md` | Economy | CXU, energy provenance certification, compute premium market |
+
+The three layers form a system: the physical layer produces signals and measurements; the governance layer certifies their provenance chain through cryptographically verifiable registers; the economic layer converts certified provenance into a market premium — the inference whose energy origin is fully attested is a qualitatively distinct product from one that is not.
+
+The architectural substrate common to all three layers is the fractal scale tower: the same governance mechanism applies at every level (node → cluster → regional federation → network), rescaled but not redesigned. See `traceable_governance.md` for the formal definition.
+
 ---
 
 # 3. Dual Interpretation Model
