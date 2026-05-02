@@ -1,327 +1,179 @@
 # FractaTera
-## Fractal Terrestrial Awareness Network  
-### Distributed Perception Infrastructure for Mobility, Safety, and Resource Tracking
 
-**Version:** 1.1  
-**Author:** Jean-Hugues Robert  
-**Repository:** github.com/JeanHuguesRobert/FractaVolta
-**Date:** 2026-04-17  
+**Fractal Terrestrial Awareness Network**
 
----
+*Jean Hugues Noël Robert — Institut Mariani / C.O.R.S.I.C.A. — Corte, Corsica*  
+*jhr@baronsmariani.org — github.com/JeanHuguesRobert/FractaVolta*
 
-# 1. Executive Summary
-
-FractaTera is a distributed systems architecture designed to transform heterogeneous, widely available consumer devices into a **multi-scale terrestrial perception network**.
-
-It enables the emergence of:
-
-- probabilistic environmental awareness
-- distributed sensing of moving entities
-- opportunistic communication between nodes
-- lightweight tracking of mobile resources
-- non-violent safety and coordination systems
-
-The system is built on a single principle:
-
-> Weak signals, when observed at scale and in motion, become structured information.
+> Living document. Priority established by commit timestamp.  
+> Challenge via issues. Fork to explore alternatives.
 
 ---
 
-# 2. System Overview
+## Start Here: A Road in Corsica
 
-FractaTera is not a single application but a **general architecture** composed of interacting layers:
+A vehicle moves through the maquis at night. Somewhere ahead, a boar or a horse has crossed the road. No camera covers this stretch. No sensor is embedded in the asphalt. The animal carries no GPS. The driver has no warning.
 
-- Physical mobility layer (vehicles, devices, energy units)
-- Perception layer (signal detection and observation)
-- Communication layer (opportunistic and hybrid networking)
-- Computation layer (edge + distributed inference)
-- Application layer (domain-specific systems)
+This is not a hypothetical. It is the default condition on most of Corsica's rural network — and on most rural roads everywhere. The standard infrastructure response is: more cameras, more sensors, more centralized monitoring. This response is expensive, fragile, and arrives a decade too late for the vehicle that hit the animal tonight.
 
----
+FractaTera proposes the opposite: a distributed perception system that uses the devices already present in the environment — vehicles, smartphones, low-cost radio tags — and extracts useful inference from their interactions, without requiring any individual device to be precise.
 
-# 3. Core Principle: Functional Fractality
+The core insight:
 
-A defining property of FractaTera is **functional reuse across scales**:
+> **Motion transforms noise into structure.**
 
-A single node may act as:
-- sensor
-- relay
-- computation unit
-- tracking agent
+A stationary receiver sees a static noise floor. A moving vehicle passing near a tagged animal sees the signal rise and fall — a characteristic signature that, combined with GPS velocity and heading, yields a probabilistic proximity estimate. No single observation is reliable. A thousand such observations, aggregated across a network of moving vehicles, produce a real-time risk map of the territory.
 
-This behavior is:
-- dynamic
-- context-dependent
-- scalable by density
-
-The same structure repeats across:
-
-- device scale
-- local cluster scale
-- territorial scale
-- regional scale
+This is FractaTera: distributed probabilistic awareness from existing devices, continuously revised, never exact, always useful.
 
 ---
 
-# 4. System Architecture
+## The Name
 
-## 4.1 Physical Layer
+*Fractal* — the same structure at every scale. A single vehicle, a local cluster of vehicles, a territorial network: each applies the same sensing and inference logic, rescaled by density.
 
-Includes all moving and static physical elements:
-
-- vehicles (thermal, electric, hybrid)
-- mobile energy containers (batteries, storage units)
-- smartphones and embedded devices
-- optional low-power beacons
+*Terra* — the earth, the land. FractaTera is grounded in physical territory: roads, landscapes, the actual movement of animals and vehicles and energy units through a specific place.
 
 ---
 
-## 4.2 Perception Layer
+## Core Principle: Motion Structures Noise
 
-Responsible for capturing weak signals:
+Traditional sensing asks: *what is the exact position of object X?* This requires precise, synchronized, infrastructure-heavy measurement.
 
-- radio signal detection (BLE, LoRa-class, etc.)
-- GPS trajectory streams
-- temporal variation of signal strength
-- opportunistic proximity inference
+FractaTera asks instead: *is object X probably near location Y, within the next few minutes, with sufficient confidence to trigger a warning?* This requires only:
 
----
+- a signal that varies with proximity (radio, optical, acoustic)
+- a receiver whose own position and velocity are known
+- enough receivers passing through the territory over time
 
-## 4.3 Communication Layer
+The mathematics of this are well understood in radar theory and mobile sensing literature. What FractaTera contributes is the architectural principle: **consumer-grade devices deployed at territorial scale, with no dedicated infrastructure, can collectively produce useful probabilistic awareness** — provided the inference layer is designed for uncertainty rather than precision.
 
-Hybrid networking model:
-
-- cellular networks (fallback backbone)
-- low-power radio links
-- device-to-device opportunistic exchange
-- delayed synchronization when connectivity is available
+Uncertainty is not a degraded form of precision. It is the native representation of a distributed, asynchronous observation system. A probability field of animal presence, continuously updated as new vehicles pass, is strictly more honest than a point estimate that pretends to precision it does not have.
 
 ---
 
-## 4.4 Computation Layer
+## Architecture
 
-- edge processing on mobile devices
-- local filtering of noisy signals
-- probabilistic fusion of observations
-- central aggregation for global inference
+FractaTera is layered. Each layer has a defined responsibility and a defined interface to the layers above and below.
 
----
+### Physical layer
 
-## 4.5 Application Layer
+Everything that moves or emits: vehicles, animals with beacon tags, mobile energy containers, smartphones, embedded low-cost radios. The physical layer is not designed or deployed by FractaTera — it is the territory as it already exists. FractaTera observes it.
 
-Domain-specific instantiations:
+### Perception layer
 
-- safety systems
-- mobility coordination
-- distributed logistics
-- mobile resource tracking
-- territorial awareness systems
+Signal capture: radio intensity variation (BLE, LoRa-class), GPS trajectory streams, temporal drift patterns, opportunistic proximity inference. The perception layer does not interpret signals — it records them with timestamps and position anchors, and passes them upward.
 
----
+### Communication layer
 
-# 5. Resilience Model
+Hybrid and opportunistic: cellular when available (backbone), device-to-device radio exchange when not, delayed synchronization when connectivity resumes. The design assumption is **intermittent connectivity** as the norm, not the exception. A system that requires continuous network access is fragile in exactly the environments FractaTera targets.
 
-FractaTera assumes:
+### Inference layer
 
-> System robustness emerges from redundancy, diversity, and distribution rather than individual reliability.
+The core computation: noisy signals → probabilistic fields, partial observations → trajectory estimates, sparse measurements → continuous risk models. The inference layer runs at the edge — on the vehicle's phone — and aggregates locally before contributing to the territorial model. Full centralization is neither required nor desirable: the territorial model is a consensus of distributed inferences, not a query against a central database.
 
-Properties:
+### Application layer
 
-- graceful degradation under partial failure
-- improvement with network density
-- absence of single point of failure
-- adaptability to heterogeneous environments
+Domain-specific instantiations built on the territorial probability field. Two are described below; the architecture supports others.
 
 ---
 
-# 6. Fractal Operating Model
+## Fractal Operating Model
 
-| Scale | Function |
-|------|----------|
-| Device | sensing / relay / local inference |
-| Local cluster | situational awareness |
-| Territory | probabilistic mapping |
-| Network | aggregated learning and optimization |
+The same logic applies at every scale, with density as the scaling parameter:
 
----
+| Scale | Node count | Inference quality | Primary function |
+|-------|-----------|-----------------|-----------------|
+| Device | 1 | Single observation | Local warning |
+| Local cluster | 10–100 | Situational awareness | Route-level risk map |
+| Territory | 100–10,000 | Probabilistic field | Regional coordination |
+| Network | 10,000+ | Aggregated learning | Pattern detection, optimization |
 
-# 7. VIGILIA: Operational Safety Layer
-
-## 7.1 Definition
-
-VIGILIA is the first operational application of FractaTera.
-
-It provides a **non-violent, distributed collision avoidance system** for rural and semi-rural environments.
+A single vehicle with a beacon receiver provides local warning. Ten vehicles on the same road provide situational awareness. A thousand vehicles across a territory produce a live risk map. The system improves continuously with density — no minimum threshold is required to be useful, and no maximum density degrades it.
 
 ---
 
-## 7.2 Use Case 1 — Animal / Vehicle Collision Avoidance (Corsica)
+## VIGILIA: Animal-Vehicle Collision Avoidance
 
-### Problem Context
+VIGILIA is the first operational instantiation of FractaTera, designed for the specific conditions of Corsican rural roads.
 
-Rural roads present a persistent risk due to:
+**The problem.** Corsica has approximately 40,000 semi-wild animals (horses, cattle, pigs, boars) with customary rights of way on public roads. Collisions cause deaths, serious injuries, and significant economic loss annually. Conventional solutions — fencing, reflectors, warning signs — address a linear infrastructure problem with linear infrastructure responses. They do not scale to a territory where animals move freely and roads are everywhere.
 
-- animal mobility across roads
-- lack of real-time visibility
-- fragmented infrastructure solutions
+**The approach.** Animals are equipped with low-cost, long-life beacon tags (BLE or LoRa-class, solar-charged where feasible). Vehicles carry a smartphone application that listens passively for beacon signals while driving. Each detection is processed locally: signal strength variation over the vehicle's trajectory yields a proximity estimate. When the estimate crosses a risk threshold, the driver receives a warning — not "an animal is at GPS coordinate X" but "an animal is probably within 200 meters ahead, confidence 80%."
 
----
+**Why this works where cameras do not.** A camera covers a fixed point. An animal-vehicle encounter can happen anywhere on thousands of kilometers of road. VIGILIA's coverage scales with the number of participating vehicles — which is already large and growing without any infrastructure investment. Every new vehicle improves coverage for every other vehicle.
 
-### System Design
+**The trace dimension.** Every detection event is a signed trace: vehicle identifier (pseudonymized), timestamp, signal characteristics, GPS position, derived risk estimate. These traces feed the territorial model and, aggregated over time, reveal patterns: habitual crossing zones, seasonal migration corridors, high-risk time windows. The trace record is also the evidence base for governance decisions — where to invest in fencing, which roads to target for speed reduction, how to allocate public funds.
 
-- animals equipped with low-power beacon tags
-- vehicles equipped with smartphone + low-cost radio receiver
-- continuous opportunistic signal detection
-- motion-based signal variation analysis
+This is where FractaTera connects to `traceable_governance.md`: the territorial awareness map is not just a safety tool. It is a governed, auditable record of the territory's physical behavior, produced by distributed observation, verifiable at every scale.
 
 ---
 
-### Mechanism
+## Mobile Resource Tracking
 
-Each vehicle observes:
+The second application class: tracking mobile assets whose position matters but whose exact location need not be known at all times.
 
-- signal presence
-- signal intensity variation over time
-- trajectory correlation with GPS movement
+Target assets: swappable electric vehicle batteries, mobile energy storage containers, logistics units in transit, the 1m³ self-storage coffres of the kind deployed for student and tourist markets.
 
-This produces:
+**The method.** Each asset carries a beacon. As vehicles and fixed infrastructure nodes pass nearby, they log detections. Over time, the aggregated detection record produces a probabilistic trajectory — not a live GPS track, but a useful model of where the asset probably is and where it has been.
 
-- probabilistic proximity fields
-- dynamic risk gradients
-- early warning alerts
+**Why this matters economically.** A battery container whose location is known within 500 meters and 30 minutes is recoverable. One whose location is unknown is lost. The difference between a functional mobile energy network and an expensive experiment in battery abandonment is exactly this: probabilistic tracking at low infrastructure cost.
+
+**The CXU connection.** Mobile energy units that are tracked generate a provenance record — their location history is part of the energy trace that feeds into CXU certification. A battery that moved from a solar farm in Corsica to a compute cluster, with a continuous detection record along the way, contributes to the η_traceability score of the inferences that battery powered. See `safe_compute_exergy.md`.
 
 ---
 
-### Outcome
+## Resilience by Design
 
-- reduced collision probability
-- reduced severity of accidents via speed adaptation
-- no need for physical containment or elimination of animals
+FractaTera assumes that individual components fail, connectivity drops, and devices are replaced. Robustness is not a property of any individual node — it emerges from the density and diversity of the network.
 
----
+Specific properties:
 
-## 7.3 Use Case 2 — Distributed Tracking of Mobile Resources
-
-### Objective
-
-Provide a lightweight system for tracking and coordinating mobile assets in a territory.
+- **No single point of failure.** The territorial model degrades gracefully as nodes drop out; it does not collapse.
+- **Density monotonicity.** Adding nodes never degrades performance. Coverage and inference quality improve monotonically with participation.
+- **Connectivity tolerance.** Useful local inference runs with no network at all. Territorial aggregation requires only intermittent synchronization.
+- **Heterogeneity tolerance.** Beacon tags from different manufacturers, phones of different generations, vehicles of different types — all contribute to the same inference layer without requiring standardization at the hardware level.
 
 ---
 
-### Targeted Resources
+## Ethical Constraints
 
-- electric vehicle batteries (swappable or mobile)
-- containerized battery units
-- mobile energy storage systems
-- transport containers
-- logistical assets in motion
+FractaTera is designed to be non-coercive and non-destructive.
 
----
+Animal beacon tags are designed for welfare: lightweight, solar-charged, no behavioral modification. The system warns drivers; it does not constrain animals.
 
-### System Design
+Vehicle participants are pseudonymized at the perception layer. Individual trajectories are not stored centrally. The territorial model is an aggregate — it reveals where animals tend to cross roads, not where a specific vehicle was at a specific time.
 
-- each mobile unit carries a low-cost beacon or identifier
-- vehicles and infrastructure nodes act as passive observers
-- movement inferred via repeated opportunistic detections
-- aggregation of partial observations into probabilistic trajectories
+The principle: **replace constraint with awareness**. A system that makes risk visible reduces the need for enforcement, fencing, or elimination.
 
 ---
 
-### Output Model
+## Open Problems
 
-The system does not produce exact positions but:
+**Beacon adoption.** VIGILIA works at territorial scale only if enough animals are tagged. Initial deployment requires coordination with pastoral communities and landowners. The governance of this coordination is not specified here.
 
-- probability fields of presence
-- movement trajectories with uncertainty bounds
-- temporal patterns of flow
+**Pseudonymization and re-identification.** Vehicle trajectories, even pseudonymized, can potentially be re-identified from distinctive patterns. The privacy guarantees of the perception layer require formal analysis.
 
----
+**Inference calibration.** The relationship between signal variation and proximity depends on terrain, vegetation, weather, and hardware. Calibration requires field data from Corsican environments specifically.
 
-### Outcome
+**Beacon durability.** Semi-wild animals in Corsican maquis subject beacons to conditions that laboratory testing does not replicate. Field durability data is needed.
 
-- improved resource visibility without centralized tracking infrastructure
-- reduced logistical friction
-- resilience in low-connectivity environments
+**Governance of the territorial model.** Who owns the aggregate map? Who can query it? Who can challenge an inference? These questions are addressed by the framework in `traceable_governance.md` but require instantiation for the specific context of territorial safety data.
 
 ---
 
-# 8. Economic Model
+## Status
 
-FractaTera relies on:
-
-- reuse of existing consumer devices
-- low-cost sensing components
-- incremental network effects
-
-System performance increases with:
-
-> the density of participating nodes
-
----
-
-# 9. Intelligence Model
-
-The system enables:
-
-- multi-scale pattern recognition
-- weak-signal aggregation
-- probabilistic inference of dynamic environments
-- emergent territorial intelligence
+| Component | Status |
+|-----------|--------|
+| Core sensing model | Formalized conceptually |
+| VIGILIA — animal collision avoidance | Designed, not yet deployed |
+| Mobile resource tracking | Designed, not yet deployed |
+| Beacon hardware specification | Pending |
+| Inference calibration (Corsica) | Pending field data |
+| Governance integration | Framework in `traceable_governance.md` |
+| CXU provenance link | Specified in `safe_compute_exergy.md` |
 
 ---
 
-# 10. Ethical Framework
-
-FractaTera and its applications, including VIGILIA, are designed as:
-
-- non-coercive systems
-- non-destructive systems
-- animal- and human-respecting infrastructures
-- alternatives to physical containment or elimination strategies
-
-Core principle:
-
-> Replace constraint with awareness.
-
----
-
-# 11. Conceptual Positioning
-
-FractaTera sits at the intersection of:
-
-- distributed systems engineering
-- opportunistic networking
-- edge AI and probabilistic inference
-- mobility and logistics systems
-- resilient infrastructure design
-
----
-
-# 12. Prior Art and Attribution
-
-This document establishes the conceptual authorship of:
-
-- fractal multi-scale terrestrial sensing architectures
-- opportunistic reuse of consumer mobility devices as infrastructure nodes
-- probabilistic tracking of mobile entities via weak signals
-- unified perception systems for safety and logistics
-
----
-
-# 13. Conclusion
-
-FractaTera defines a structural shift in infrastructure design:
-
-> replacing centralized, deterministic systems with distributed, probabilistic intelligence emerging from existing mobile and connected devices.
-
-VIGILIA is the first operational instantiation of this architecture, applied to rural safety and mobile resource coordination.
-
----
-
-# 14. License
-
-Open conceptual framework.
-
-Attribution required:
-
-**Jean-Hugues Robert — FractaTera / VIGILIA (2026)**
+*License: CC BY-SA 4.0 — Priority established by first commit timestamp.*
