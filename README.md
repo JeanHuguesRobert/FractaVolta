@@ -1,326 +1,133 @@
 # FractaVolta
-## Distributed Infrastructure for Physical Flow, Sensing, and Probabilistic Inference
 
-**Repository:** github.com/JeanHuguesRobert/FractaVolta  
-**Author:** Jean Hugues Noël Robert. 1 cours Paoli, F-20250 Corte
+**Physical inference, fractal governance, and the value of provenance**
+
+*Jean Hugues Noël Robert — Institut Mariani / C.O.R.S.I.C.A. — Corte, Corsica*  
+*jhr@baronsmariani.org — github.com/JeanHuguesRobert*
+
+> This repository is a living design space, not a finished product.  
+> Priority of ideas is established by commit timestamp.  
+> Challenge anything via issues. Fork to explore alternatives.
 
 ---
 
-# 1. Executive Summary
+## The Problem
 
-FractaVolta is a distributed infrastructure framework designed to transform **physical reality into actionable probabilistic inference systems for critical services**.
+Physical reality is not directly measured. It is inferred — from photons, radio signals, thermal gradients, motion patterns, partial observations. Every sensor is imperfect. Every network is intermittent. Every measurement carries uncertainty.
 
-It operates on a single fundamental principle:
+Standard infrastructure responds to this by demanding more sensors, more bandwidth, more centralization. FractaVolta goes the other way:
 
 > Physical systems do not need to be fully measured to be understood.  
-> They can be inferred from weak signals, motion, and distributed observation.
+> They can be governed from weak signals, distributed observation, and verified provenance.
 
-The system supports two simultaneous interpretations:
+The word "governed" is deliberate. The gap between sensing and action is not only technical — it is political. Who certifies a measurement? Who arbitrates a conflict between two sensors? Who decides when inference is good enough to act on? These are governance questions, and they need governance answers.
 
-- **Principle layer (theory):** photon-to-inference distributed AI architecture  
-- **Implementation layer (practice):** mobility, energy, and territorial infrastructure systems
-
----
-
-# 2. Core Idea: Photon-to-Inference Transformation
-
-At its core, FractaVolta defines a transformation pipeline:
-
-> Photons and physical emissions → weak signals → distributed sensing → probabilistic inference → actionable decisions
-
-This includes:
-
-- electromagnetic signals (radio, light, thermal)
-- motion-induced signal variation
-- partial and noisy observations
-- opportunistic data capture
-
-The system does not aim for perfect measurement, but for **usable inference under uncertainty**.
-
-## Repository Structure
-
-FractaVolta spans three layers, each documented separately:
-
-| File | Layer | Topic |
-|------|-------|-------|
-| `README.md` | Physical | Distributed sensing, weak signals, territorial inference |
-| `traceable_governance.md` | Governance | Fractal traceability, append-only registers, democratic accountability |
-| `safe_compute_exergy.md` | Economy | CXU, energy provenance certification, compute premium market |
-
-The three layers form a system: the physical layer produces signals and measurements; the governance layer certifies their provenance chain through cryptographically verifiable registers; the economic layer converts certified provenance into a market premium — the inference whose energy origin is fully attested is a qualitatively distinct product from one that is not.
-
-The architectural substrate common to all three layers is the fractal scale tower: the same governance mechanism applies at every level (node → cluster → regional federation → network), rescaled but not redesigned. See `traceable_governance.md` for the formal definition.
+FractaVolta addresses the full chain: from photon to inference, from inference to certified value, from certified value to democratic accountability.
 
 ---
 
-# 3. Dual Interpretation Model
+## The Name
 
-FractaVolta is intentionally designed for two levels of reading:
+*Fractal* — the same structure repeating at every scale. A node, a cluster, an island federation, a Mediterranean network: each governed by the same mechanism, rescaled but not redesigned.
 
-## 3.1 Scientific Model
-
-- distributed sensing of physical reality
-- probabilistic reconstruction of moving systems
-- weak-signal amplification through motion and density
-- edge-based inference and aggregation
-
-This layer defines FractaVolta as:
-
-> a physical-world inference architecture based on distributed weak signals
+*Volta* — turn, cycle (Italian/Corsican). Also: Alessandro Volta, whose work on electrical potential gave us the unit of electromotive force. Both readings apply. FractaVolta is about recursive governance cycles applied to the flow of energy and information.
 
 ---
 
-## 3.2 Territorial Systems
+## Three Layers
 
-- mobility infrastructure
-- energy distribution systems
-- logistics and tracking networks
-- territorial sensing and coordination systems
+FractaVolta is structured as three interdependent layers, each documented in a dedicated file.
 
-This layer defines FractaVolta as:
+### Physical layer — distributed sensing and inference
 
-> a modular infrastructure framework for real-world deployment in mobility, energy, and resource systems
+The world emits signals constantly: electromagnetic, thermal, kinetic. Consumer devices — smartphones, vehicles, embedded radios — can act as distributed sensors, capturing signal variation, temporal drift, and motion-induced distortion.
 
----
+The key insight is that **motion transforms noise into structure**. A stationary sensor sees a static noise floor. A moving sensor sees the geometry of the field it traverses. Distributed moving sensors, aggregated probabilistically, reconstruct reality without requiring any individual sensor to be precise.
 
-# 4. System Architecture
+Applications: collision avoidance, territorial risk mapping, mobility coordination, distributed energy tracking, logistics visibility. The inference target is not a perfect model of reality — it is a *usable* model, good enough to act on, continuously revised as new signals arrive.
 
-## 4.1 Photon Interaction Layer
+See: `tera.md` for the FractaTera reference architecture.
 
-The physical world is the origin of all signals:
+### Governance layer — fractal traceability
 
-- photons
-- radio waves
-- thermal emissions
-- reflections and attenuation patterns
+Distributed inference raises an immediate governance problem: how do you trust a measurement you did not make? How do you audit a decision whose inputs are distributed across hundreds of nodes you do not control?
 
-These signals are not directly controlled, only observed.
+The answer proposed here is to replace secrecy-based security with **traceability-based trust**. Every action is recorded in an append-only log. Logs are aggregated up the scale tower using Merkle trees: a higher level can verify the integrity of a lower level without reading its content. Privacy and accountability coexist because traceability applies to *actions*, not to data content.
 
----
+The governance structure is fractal: the same audit interface at every level, from individual node to Mediterranean network. A citizen who understands governance at the cluster level understands it at the regional level by substitution. Governance literacy does not increase with scale — this is the democratic dividend of fractality.
 
-## 4.2 Sensing Layer
+See: `traceable_governance.md` for the formal model.
 
-Consumer-grade devices act as distributed sensors:
+### Economic layer — the value of provenance
 
-- smartphones
-- vehicle systems
-- embedded low-cost radios
-- GPS-enabled mobile units
+A certified inference is worth more than an uncertified one. This is not a marketing claim; it is a structural property.
 
-They capture:
+An inference whose entire energy provenance chain is cryptographically attested — from solar photon to output token — is a qualitatively distinct product. The attestation chain is the premium. Without it, "green AI" is a label. With it, it is a proof.
 
-- signal intensity variation
-- temporal drift
-- movement-induced distortions
+The Compute eXergy Unit (CXU) formalizes this: usable compute denominated in verified energy, hardware efficiency, SLA compliance, and provenance completeness. A CXU with complete provenance commands a Sovereign-tier premium. A CXU with no provenance chain approaches zero certified value by definition — not by penalty.
+
+The Mediterranean deployment context (Corsica, Sardinia, Sicily, North Africa) makes this concrete: solar surplus converted to Sovereign-tier certified inference, held on the island as a high-value asset rather than exported as undifferentiated electricity through congested interconnections.
+
+See: `safe_compute_exergy.md` for the full specification.
 
 ---
 
-## 4.3 Inference Layer
+## How the Layers Connect
 
-Core transformation layer:
+```
+Physical layer           Governance layer          Economic layer
+──────────────────       ─────────────────────     ──────────────────────
+Solar panel meters  →    τ_solar signed        →   provenance link added
+Compute node runs   →    τ_compute signed       →   provenance link added
+Inference produced  →    τ_inference signed     →   CXU issued at tier T
+                         Merkle root published
+                         Regulator verifies L2
+                         without reading L0
+```
 
-- noisy signals → probabilistic fields
-- partial observations → trajectories
-- sparse measurements → continuous models
-
-Key property:
-
-> Motion transforms noise into structure.
-
----
-
-## 4.4 Network Layer
-
-Hybrid communication infrastructure:
-
-- cellular networks (backbone)
-- opportunistic device-to-device exchange
-- low-power radio systems
-- asynchronous synchronization
+The physical layer produces measurements. The governance layer certifies their provenance chain. The economic layer converts certified provenance into market value. Each layer is independently useful; together they close the loop from photon to democratic accountability.
 
 ---
 
-## 4.5 Application Layer
+## Design Principles
 
-Two classes of applications:
+**Inference under uncertainty, not measurement under control.** The system is designed for environments where perfect sensing is impossible: rural territories, intermittent connectivity, heterogeneous hardware. Graceful degradation is a first-class requirement.
 
-### A. Safety and Awareness Systems
-- collision avoidance
-- anomaly detection
-- territorial risk mapping
+**Traceability as architecture, not compliance.** Audit logs are not a regulatory afterthought. They are the primary security mechanism, replacing secrecy with accountability.
 
-### B. Infrastructure Systems
-- mobility networks
-- logistics coordination
-- energy flow tracking
-- mobile resource visibility
+**Fractal governance.** The same mechanism at every scale. No opaque layer reserved for higher levels. Subsidiarity enforced as a protocol constraint, not a political aspiration.
 
----
+**Continuous attestation.** Provenance is produced in real time, not reconstructed after the fact. Gaps in the attestation flow are themselves recorded — by the cluster observing the absence of node output.
 
-# 5. FractaTera Reference Architecture
+**Democratic closure.** Technical measurements are inputs to governance, not substitutes for it. The system accepts that democratic decisions may diverge from physical optima. Legitimacy is the guarantee; optimality is not.
 
-FractaVolta is structurally aligned with the FractaTera model (see `tera.md`), which defines:
-
-- multi-scale sensing networks
-- probabilistic territorial mapping
-- distributed inference models
-
-FractaVolta provides the **physical substrate and flow dynamics** for this architecture.
+**Possibilism.** This repository explores what is potentially possible. A falsified hypothesis is a result. An open problem is an invitation. The goal is to extend the frontier, not to defend a position.
 
 ---
 
-# 6. Territorial Deployment
+## Status
 
-FractaVolta is designed for real-world deployment in modular territorial systems.
-
-## 6.1 Corsica
-
-Initial deployment context includes:
-
-- rural mobility environments
-- mixed vehicle/animal interaction zones
-- distributed and low-density infrastructure conditions
-
----
-
-## 6.2 Mobility Infrastructure
-
-- electric mobility systems (light vehicles, shared fleets)
-- distributed charging and energy access points
-- mobile usage patterns and dynamic routing
+| Component | Status |
+|-----------|--------|
+| Physical inference model | Conceptual — `tera.md` |
+| Fractal governance model | Formalized — `traceable_governance.md` |
+| CXU / SCE specification | Formalized — `safe_compute_exergy.md` |
+| Reference inference v1 | Pending — `reference_inference_v1.md` |
+| Exergy Lock Protocol | Outlined — formalization pending |
+| Mediterranean deployment | Design phase — [MareNostrum](https://github.com/JeanHuguesRobert/marenostrum) |
 
 ---
 
-## 6.3 Energy Infrastructure
+## Engage
 
-- distributed energy production (including solar)
-- mobile energy storage units
-- battery logistics and movement tracking
+Open an issue to challenge a claim, propose a counter-example, or identify a gap.  
+Fork to implement an alternative model and link back.  
+PR to add a case study, a formal element, or a reference.  
+Cite a commit hash for priority on a specific idea.
 
----
-
-## 6.4 Resource Tracking Systems
-
-- mobile containers
-- energy units in transit
-- distributed logistical assets
-
-All tracked through probabilistic inference rather than centralized control.
+The review process is public, attributed, append-only.  
+It is, in that sense, an instance of what it describes.
 
 ---
 
-# 7. Resilience Model
-
-FractaVolta assumes:
-
-> infrastructure robustness emerges from redundancy and distribution, not centralization.
-
-Properties:
-
-- graceful degradation
-- no single point of failure
-- increasing performance with node density
-- tolerance to intermittent connectivity
-
----
-
-# 8. Computational Model
-
-The system relies on:
-
-- probabilistic inference under uncertainty
-- distributed sensor fusion
-- weak signal aggregation
-- time-correlated motion analysis
-
-There is no absolute state reconstruction:
-
-> only converging probability fields of reality.
-
----
-
-# 9. Emergent Intelligence
-
-As deployment density increases:
-
-- signal coverage increases
-- inference accuracy improves
-- system-wide intelligence emerges
-
-This creates a positive feedback loop:
-
-> more nodes → better inference → higher utility → more nodes
-
----
-
-# 10. Ethical Design Principles
-
-FractaVolta is designed as:
-
-- non-coercive infrastructure
-- non-destructive sensing system
-- safety-oriented distributed intelligence
-
-Core principle:
-
-> Replace enforcement with awareness.
-
----
-
-# 11. Governance and Sovereignty Layer
-
-FractaVolta is intended to support modular governance structures:
-
-- territorial autonomy in infrastructure management
-- distributed control of mobility and energy systems
-- resilience against central infrastructure failure
-
-It enables:
-
-> local sovereignty through technological distribution rather than central dependency.
-
----
-
-# 12. Licensing Model
-
-FractaVolta adopts a layered licensing approach:
-
-- software components: permissive open source (e.g., Apache 2.0)
-- documentation: Creative Commons Attribution (CC BY 4.0)
-- hardware designs (if applicable): CERN OHL (reciprocal licensing)
-- deployments: optionally commercial or institutional agreements
-
----
-
-# 13. Conceptual Positioning
-
-FractaVolta sits at the intersection of:
-
-- distributed systems engineering
-- edge AI and probabilistic inference
-- opportunistic networking
-- mobility and energy infrastructure systems
-- resilient territorial design
-
----
-
-# 14. Conclusion
-
-FractaVolta defines a structural inversion of traditional infrastructure:
-
-> from deterministic measurement systems  
-> to distributed probabilistic inference systems built on weak physical signals.
-
-At its core:
-
-> reality is not directly measured — it is inferred from photons, motion, and distributed observation.
-
----
-
-# 15. License
-
-Open conceptual framework.
-
-Attribution required:
-
-**Jean Hugues Noël Robert — FractaVolta (2026)**
+*License: CC BY-SA 4.0 — Priority established by first commit timestamp.*
