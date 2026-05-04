@@ -2,12 +2,35 @@
 
 **Physical inference, fractal governance, and the value of provenance**
 
-*Jean Hugues Noël Robert — Institut Mariani / C.O.R.S.I.C.A. — Corte, Corsica*  
-*jhr@baronsmariani.org — github.com/JeanHuguesRobert*
+> From photons to inferences
+
+*Jean Hugues Noël Robert, baron Mariani — Institut Mariani / C.O.R.S.I.C.A.*
+
+*1 cours Paoli, F-20250 Corte, Corsica*  
+
+*jhr@baronsmariani.org — github.com/JeanHuguesRobert — fractavolta.com*
 
 > This repository is a living design space, not a finished product.  
 > Priority of ideas is established by commit timestamp.  
 > Challenge anything via issues. Fork to explore alternatives.
+
+---
+
+## What FractaVolta Is
+
+FractaVolta is an **open-core impact startup** developing distributed infrastructure for physical sensing, certified inference, and fractal governance of energy and mobility systems.
+
+The business model is territorial and deliberate:
+
+> What is built pro bono in Corsica becomes a paid service elsewhere.  
+> Revenue generated outside Corsica funds the open infrastructure built inside it.
+
+Corsica is the proof-of-concept territory — island grid isolation, low infrastructure density, mixed mobility environments, strong sovereignty aspirations. Its constraints are extreme by design, which makes it the ideal stress test for any distributed energy-sensing architecture. What works in Corsica works anywhere.
+
+FractaVolta is the commercial and deployment arm of the [MareNostrum](https://github.com/JeanHuguesRobert/marenostrum) framework. It constitutes **Layer 1 (Physical/Energy)** of the [DHITL architecture](https://github.com/JeanHuguesRobert/marenostrum/blob/main/DHITL.md) for distributed AI governance.
+
+**Shareholders:** Jean Hugues Noël Robert (80%), C.O.R.S.I.C.A. association loi 1901 (20%).  
+The 20% stake ensures that net revenues flow structurally — not voluntarily — toward the Corsican public mission.
 
 ---
 
@@ -46,7 +69,7 @@ The key insight is that **motion transforms noise into structure**. A stationary
 
 Applications: collision avoidance, territorial risk mapping, mobility coordination, distributed energy tracking, logistics visibility. The inference target is not a perfect model of reality — it is a *usable* model, good enough to act on, continuously revised as new signals arrive.
 
-See: `tera.md` for the FractaTera reference architecture.
+See `tera.md` for the FractaTera reference architecture.
 
 ### Governance layer — fractal traceability
 
@@ -56,7 +79,7 @@ The answer proposed here is to replace secrecy-based security with **traceabilit
 
 The governance structure is fractal: the same audit interface at every level, from individual node to Mediterranean network. A citizen who understands governance at the cluster level understands it at the regional level by substitution. Governance literacy does not increase with scale — this is the democratic dividend of fractality.
 
-See: `traceable_governance.md` for the formal model.
+See `traceable_governance.md` for the formal model.
 
 ### Economic layer — the value of provenance
 
@@ -68,7 +91,7 @@ The Compute eXergy Unit (CXU) formalizes this: usable compute denominated in ver
 
 The Mediterranean deployment context (Corsica, Sardinia, Sicily, North Africa) makes this concrete: solar surplus converted to Sovereign-tier certified inference, held on the island as a high-value asset rather than exported as undifferentiated electricity through congested interconnections.
 
-See: `safe_compute_exergy.md` for the full specification.
+See `safe_compute_exergy.md` for the full CXU specification.
 
 ---
 
@@ -86,6 +109,39 @@ Inference produced  →    τ_inference signed     →   CXU issued at tier T
 ```
 
 The physical layer produces measurements. The governance layer certifies their provenance chain. The economic layer converts certified provenance into market value. Each layer is independently useful; together they close the loop from photon to democratic accountability.
+
+---
+
+## Position in the MareNostrum / DHITL Ecosystem
+
+FractaVolta is the physical substrate of a broader infrastructure sovereignty architecture.
+
+| Layer | Repository | Function |
+|---|---|---|
+| **L1 — Physical** | **FractaVolta** (this repo) | Photon-to-inference pipeline, distributed sensing, CXU production |
+| **L2 — Economic** | [MareNostrum](https://github.com/JeanHuguesRobert/marenostrum) | Sovereign energy fund, CXU markets, universal dividend |
+| **L3 — Political** | [MareNostrum / DHITL](https://github.com/JeanHuguesRobert/marenostrum/blob/main/DHITL.md) | Democratic governance, 1p1v, anti-capture provisions |
+| **L4 — Cognitive** | [Cogentia Commons](https://github.com/JeanHuguesRobert/cogentia) | Epistemic infrastructure, collective reasoning |
+| **L5 — Technical** | [DHITL](https://github.com/JeanHuguesRobert/marenostrum/blob/main/DHITL.md) | Open core, traceable decisions, AI safety |
+
+The FractaVolta photon-to-inference pipeline feeds the CXU definition formalized in DHITL:
+
+> **Xc = E × η_hw × η_sys × η_sla × η_gov**
+
+where E (available energy) originates from the sensing layer FractaVolta defines, and η_gov incorporates the democratic governance conditions MareNostrum establishes.
+
+---
+
+## Business Model
+
+| Offering | Client profile | Pricing logic |
+|---|---|---|
+| Distributed sensing deployment | Municipalities, regional energy authorities | Project-based |
+| Probabilistic inference engine (SaaS) | Utilities, mobility operators | Per-node subscription |
+| Sovereign infrastructure design | Island territories, remote regions | Consulting + IP license |
+| Training and transfer | Public institutions, cooperatives | Day-rate + materials |
+
+Revenue destinations: operational costs of the open Corsican deployment, Institut Mariani R&D, MareNostrum sovereign energy fund (Plan 2038).
 
 ---
 
@@ -108,7 +164,7 @@ The physical layer produces measurements. The governance layer certifies their p
 ## Status
 
 | Component | Status |
-|-----------|--------|
+|---|---|
 | Physical inference model | Conceptual — `tera.md` |
 | Fractal governance model | Formalized — `traceable_governance.md` |
 | CXU / SCE specification | Formalized — `safe_compute_exergy.md` |
@@ -130,4 +186,5 @@ It is, in that sense, an instance of what it describes.
 
 ---
 
-*License: CC BY-SA 4.0 — Priority established by first commit timestamp.*
+*License: CC BY 4.0 — Attribution required: Jean Hugues Noël Robert — FractaVolta (2026)*  
+*Priority established by first commit timestamp.*
