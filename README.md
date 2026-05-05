@@ -144,6 +144,37 @@ All papers: CC BY-SA 4.0.
 
 ---
 
+## Optimized condensed version for AI agents
+
+**The global electrical grid is structurally circuit-switched** (continuous synchronization, dedicated paths, single point of failure, limited scalability, fragility to saturation or outages — Corsica's SARCO as canonical example).
+
+**The repressed solution since 1964 (Baran) is physical store-and-forward**: treat energy not as a continuous flow over wires, but as **discrete, addressable, autonomous packets** physically transported (LFP second-life or new batteries in ISO containers, EVs, cargo bikes, ferries, etc.).
+
+### EPN Architecture (Energy Packet Network)
+
+- **Physical layer**: fractal electrochemical packets (0.1 kWh → 100+ MWh) routed via conventional logistics (road, rail, maritime) → **zero dependence on HV cables, zero AC synchronization**.
+- **Reliability mechanisms**:
+  - **RAIB** (Redundant Array of Inexpensive Batteries): cheap-component redundancy + intelligent BMS → graceful proportional degradation, never catastrophic.
+  - **Multi-level diversity** (vectors: battery/methanol/ammonia/SAF; routes; operators; chemistries; governance models) + stigmergy through honest price signals (skin-in-the-game).
+  - **Physical subsidiarity**: each packet makes local routing decisions → Talebian antifragility (the system improves under disorder).
+
+### Application Layer (Transduction)
+
+Stranded solar exergy → **direct transduction into sovereign AI inference** (exergy → internet-routable tokens), completely bypassing grid physical constraints.
+
+### Emergent Critical Property
+
+The antifragility of the energy layer **propagates structurally** to the inference layer:  
+→ native extremely high energy availability (grid independence, physical redundancy, precise real-time SOC monitoring, source diversity).  
+→ enables SLA 99.99x % (mission-critical / high-grade inference) via η_sla in the CXU approaching 1.0 **structurally**, not contractually.  
+→ positions the EPN to capture the market premium for premium inference (finance, healthcare, industry, sovereignty) where physical availability guarantee is the dominant differentiator.
+
+### Axiomatic Summary (for agent reasoning)
+
+**EPN = packet-switching applied to physical exergy + exergy → sovereign compute transduction + distributed antifragility → guaranteed high availability → durable economic premium for high-grade AI inference.**
+
+---
+
 *© 2026 Jean Hugues Noël Robert, baron Mariani — Institut Mariani / C.O.R.S.I.C.A.*
 
 *Documentation: CC BY 4.0 · Software: Apache 2.0*
