@@ -1,190 +1,149 @@
 # FractaVolta
 
-**Physical inference, fractal governance, and the value of provenance**
-
 > From photons to inferences
 
-*Jean Hugues Noël Robert, baron Mariani — Institut Mariani / C.O.R.S.I.C.A.*
+**Energy Packet Networks — from Mediterranean Sun to Sovereign Infrastructure**
 
-*1 cours Paoli, F-20250 Corte, Corsica*  
+*Jean Hugues Noël Robert, baron Mariani*
 
-*jhr@baronsmariani.org — github.com/JeanHuguesRobert — fractavolta.com*
+Institut Mariani / C.O.R.S.I.C.A. — 1 cours Paoli, F-20250 Corte, Corsica
 
-> This repository is a living design space, not a finished product.  
-> Priority of ideas is established by commit timestamp.  
-> Challenge anything via issues. Fork to explore alternatives.
+jhr@baronsmariani.org · fractavolta.com
 
 ---
 
-## What FractaVolta Is
+## The Core Insight
 
-FractaVolta is an **open-core impact startup** developing distributed infrastructure for physical sensing, certified inference, and fractal governance of energy and mobility systems.
+In 1964, Paul Baran proposed dividing communications into discrete packets — each carrying its own address, routed independently, reassembled at destination. By 1969, ARPANET had demonstrated the principle. By 2000, the circuit-switched telephone network was obsolete.
 
-The business model is territorial and deliberate:
+The global electrical grid has not noticed.
 
-> What is built pro bono in Corsica becomes a paid service elsewhere.  
-> Revenue generated outside Corsica funds the open infrastructure built inside it.
+It remains, structurally, a circuit-switched network: dedicated paths, continuous synchronisation, saturation that blocks all flow when any segment is full. The SARCO submarine cable connecting Corsica to continental France — saturated for significant portions of each year, while the island receives some of Europe's highest solar irradiation — is a textbook case.
 
-Corsica is the proof-of-concept territory — island grid isolation, low infrastructure density, mixed mobility environments, strong sovereignty aspirations. Its constraints are extreme by design, which makes it the ideal stress test for any distributed energy-sensing architecture. What works in Corsica works anywhere.
+**FractaVolta applies packet-switching to energy.**
 
-FractaVolta is the commercial and deployment arm of the [MareNostrum](https://github.com/JeanHuguesRobert/marenostrum) framework. It constitutes **Layer 1 (Physical/Energy)** of the [DHITL architecture](https://github.com/JeanHuguesRobert/marenostrum/blob/main/DHITL.md) for distributed AI governance.
+The insight is simple: a charged battery is an energy packet. The person carrying a mobile phone from one location to another is routing an energy packet. A twenty-foot shipping container of lithium iron phosphate cells, loaded onto a roll-on/roll-off ferry in Bastia and unloaded in Livorno, is a 2 MWh energy packet crossing 170 kilometres of sea with no cable, no synchronisation, and no saturated interconnection.
 
-**Shareholders:** Jean Hugues Noël Robert (80%), C.O.R.S.I.C.A. association loi 1901 (20%).  
-The 20% stake ensures that net revenues flow structurally — not voluntarily — toward the Corsican public mission.
+This architecture is fractal — self-similar from the mobile phone battery (0.1 kWh) to the container vessel carrying fifty containers (100 MWh). It is not a proposal. It already exists, practiced unconsciously. What is missing is the conscious protocol.
 
----
-
-## The Problem
-
-Physical reality is not directly measured. It is inferred — from photons, radio signals, thermal gradients, motion patterns, partial observations. Every sensor is imperfect. Every network is intermittent. Every measurement carries uncertainty.
-
-Standard infrastructure responds to this by demanding more sensors, more bandwidth, more centralization. FractaVolta goes the other way:
-
-> Physical systems do not need to be fully measured to be understood.  
-> They can be governed from weak signals, distributed observation, and verified provenance.
-
-The word "governed" is deliberate. The gap between sensing and action is not only technical — it is political. Who certifies a measurement? Who arbitrates a conflict between two sensors? Who decides when inference is good enough to act on? These are governance questions, and they need governance answers.
-
-FractaVolta addresses the full chain: from photon to inference, from inference to certified value, from certified value to democratic accountability.
+FractaVolta provides the protocol, the deployment framework, and the expertise to implement it.
 
 ---
 
-## The Name
+## The Architecture
 
-*Fractal* — the same structure repeating at every scale. A node, a cluster, an island federation, a Mediterranean network: each governed by the same mechanism, rescaled but not redesigned.
+FractaVolta is built on three interlocking principles:
 
-*Volta* — turn, cycle (Italian/Corsican). Also: Alessandro Volta, whose work on electrical potential gave us the unit of electromotive force. Both readings apply. FractaVolta is about recursive governance cycles applied to the flow of energy and information.
+### 1. Store-and-Forward at Every Scale
 
----
+Energy packets are discrete, addressable, and physically transportable. The routing decision — which packet goes where, when, at what price — is made locally by the carrying agent responding to price signals, not by a central dispatcher. This is stigmergy: the same coordination mechanism that termite colonies use to build cathedrals without an architect.
 
-## Three Layers
+| Scale | Packet | Carrier | Range |
+|---|---|---|---|
+| Personal | 0.1 kWh (phone battery) | Human | km |
+| Neighbourhood | 1 kWh (cargo bicycle) | EV | 30 km |
+| Mobility | 75 kWh (electric vehicle) | Road | 300 km |
+| Regional | 2 MWh (20' container) | Ferry / truck | 500 km |
+| Oceanic | 100 MWh (container vessel) | Ship | 2,000+ km |
 
-FractaVolta is structured as three interdependent layers, each documented in a dedicated file.
+### 2. Exergy, Not Energy
 
-### Physical layer — distributed sensing and inference
+All accounting in the FractaVolta framework is conducted in **exergy** — the capacity to perform useful work — not raw energy. A container of e-diesel holds 150–200 MWh of chemical energy but delivers only 60–70 MWh of electrical work, because the Carnot theorem places an absolute thermodynamic ceiling on heat-to-work conversion that no engineering can breach. A container of LFP batteries holds 2 MWh and delivers 1.9 MWh. The ratio is 33:1 in useful electrical work, not 100:1 in raw energy. The gap closes further as battery density improves and as thermal recovery from charge/discharge cycles is captured.
 
-The world emits signals constantly: electromagnetic, thermal, kinetic. Consumer devices — smartphones, vehicles, embedded radios — can act as distributed sensors, capturing signal variation, temporal drift, and motion-induced distortion.
+For non-electrical applications — maritime propulsion, long-haul aviation — denser energy vecteurs (methanol, ammonia, SAF) are appropriate. The EPN is multi-protocol at the physical layer, selecting the medium to match the application. A mixed container carrying both battery and synthetic fuel partitions can serve two markets in a single voyage, amortising repositioning costs across revenue streams with low price correlation.
 
-The key insight is that **motion transforms noise into structure**. A stationary sensor sees a static noise floor. A moving sensor sees the geometry of the field it traverses. Distributed moving sensors, aggregated probabilistically, reconstruct reality without requiring any individual sensor to be precise.
+### 3. AI Inference as the Application Layer
 
-Applications: collision avoidance, territorial risk mapping, mobility coordination, distributed energy tracking, logistics visibility. The inference target is not a perfect model of reality — it is a *usable* model, good enough to act on, continuously revised as new signals arrive.
+The highest-value use of an island's solar energy is not the export of electrons — constrained by cable capacity and priced at wholesale spot rates of €40–80/MWh — but the production of sovereign AI inference services, whose revenue per megawatt-hour is ×10 to ×40 greater.
 
-See `tera.md` for the FractaTera reference architecture.
+AI inference converts solar photons into internet-routable data packets. An inference token does not cross the SARCO cable. It crosses the internet. The bottleneck is bypassed entirely.
 
-### Governance layer — fractal traceability
-
-Distributed inference raises an immediate governance problem: how do you trust a measurement you did not make? How do you audit a decision whose inputs are distributed across hundreds of nodes you do not control?
-
-The answer proposed here is to replace secrecy-based security with **traceability-based trust**. Every action is recorded in an append-only log. Logs are aggregated up the scale tower using Merkle trees: a higher level can verify the integrity of a lower level without reading its content. Privacy and accountability coexist because traceability applies to *actions*, not to data content.
-
-The governance structure is fractal: the same audit interface at every level, from individual node to Mediterranean network. A citizen who understands governance at the cluster level understands it at the regional level by substitution. Governance literacy does not increase with scale — this is the democratic dividend of fractality.
-
-See `traceable_governance.md` for the formal model.
-
-### Economic layer — the value of provenance
-
-A certified inference is worth more than an uncertified one. This is not a marketing claim; it is a structural property.
-
-An inference whose entire energy provenance chain is cryptographically attested — from solar photon to output token — is a qualitatively distinct product. The attestation chain is the premium. Without it, "green AI" is a label. With it, it is a proof.
-
-The Compute eXergy Unit (CXU) formalizes this: usable compute denominated in verified energy, hardware efficiency, SLA compliance, and provenance completeness. A CXU with complete provenance commands a Sovereign-tier premium. A CXU with no provenance chain approaches zero certified value by definition — not by penalty.
-
-The Mediterranean deployment context (Corsica, Sardinia, Sicily, North Africa) makes this concrete: solar surplus converted to Sovereign-tier certified inference, held on the island as a high-value asset rather than exported as undifferentiated electricity through congested interconnections.
-
-See `safe_compute_exergy.md` for the full CXU specification.
+The Compute eXergy Unit (CXU = E × η_hw × η_sys × η_sla), defined in the [MareNostrum framework](https://github.com/JeanHuguesRobert/marenostrum), is the pricing unit for this transduction — measuring useful computational work produced per unit of primary solar exergy, priced honestly because every operator in the chain has skin in the game.
 
 ---
 
-## How the Layers Connect
+## Why Diversity Is the Source
 
-```
-Physical layer           Governance layer          Economic layer
-──────────────────       ─────────────────────     ──────────────────────
-Solar panel meters  →    τ_solar signed        →   provenance link added
-Compute node runs   →    τ_compute signed       →   provenance link added
-Inference produced  →    τ_inference signed     →   CXU issued at tier T
-                         Merkle root published
-                         Regulator verifies L2
-                         without reading L0
-```
+The FractaVolta framework is antifragile — in Taleb's precise sense — not because it is engineered for robustness, but because its packet-switched architecture naturally produces diversity, and diversity is the source of resilience.
 
-The physical layer produces measurements. The governance layer certifies their provenance chain. The economic layer converts certified provenance into market value. Each layer is independently useful; together they close the loop from photon to democratic accountability.
+Diversity of vecteurs (battery, methanol, ammonia, SAF) means no single price shock collapses the network. Diversity of form factors (phone to vessel) means no single technology failure interrupts service. Diversity of routes (ferry, road, rail, aircraft) means no single closure blocks flow. Diversity of cell chemistries (LFP, solid-state, second-life) means no single supply chain can hold the network captive. Diversity of governance (cooperative, municipal, academic, commercial) means no single institutional actor can capture the protocol.
+
+This is the same principle that made ARPANET survive and the telephone network obsolete. It is the same principle that made RAID storage viable and the expensive single disk unnecessary. FractaVolta applies it to energy: **RAIB — Redundant Array of Inexpensive Batteries.**
+
+Commodity-grade LFP cells cost €80–120/kWh. Second-life cells retired from electric vehicles at 70–80% residual capacity cost €30–60/kWh — five to fifteen times less than premium industrial cells. A fleet of inexpensive batteries managed by intelligent routing software is more resilient than a single premium system, for the same reason that ARPANET was more resilient than the telephone network: failure is distributed, graceful, and informative rather than catastrophic and silent.
 
 ---
 
-## Position in the MareNostrum / DHITL Ecosystem
+## The France Connection
 
-FractaVolta is the physical substrate of a broader infrastructure sovereignty architecture.
+France has been here before.
 
-| Layer | Repository | Function |
-|---|---|---|
-| **L1 — Physical** | **FractaVolta** (this repo) | Photon-to-inference pipeline, distributed sensing, CXU production |
-| **L2 — Economic** | [MareNostrum](https://github.com/JeanHuguesRobert/marenostrum) | Sovereign energy fund, CXU markets, universal dividend |
-| **L3 — Political** | [MareNostrum / DHITL](https://github.com/JeanHuguesRobert/marenostrum/blob/main/DHITL.md) | Democratic governance, 1p1v, anti-capture provisions |
-| **L4 — Cognitive** | [Cogentia Commons](https://github.com/JeanHuguesRobert/cogentia) | Epistemic infrastructure, collective reasoning |
-| **L5 — Technical** | [DHITL](https://github.com/JeanHuguesRobert/marenostrum/blob/main/DHITL.md) | Open core, traceable decisions, AI safety |
+In 1973, Louis Pouzin at IRIA designed CYCLADES — one of the world's first packet-switched networks, whose datagram architecture directly influenced Cerf and Kahn's TCP/IP. France then chose, for its national network, X.25 — a protocol that achieved packet-switching in form while preserving circuit-switching in spirit. The virtual circuit of X.25 established a path before sending data, maintained it for the session's duration, and coordinated it centrally. The umbilical cord to circuit logic was not cut — it was lengthened. Transpac and the Minitel were brilliant implementations of the wrong abstraction.
 
-The FractaVolta photon-to-inference pipeline feeds the CXU definition formalized in DHITL:
+The energy sector faces the same choice. The "smart grid" and digital interconnection literature proposes, with great sophistication, the X.25 of energy: smarter cables, better-managed HVDC links, demand-response systems — all of which preserve the circuit-switched substrate. FractaVolta proposes the datagram: autonomous packets, routerless transport, stigmergic self-organisation.
 
-> **Xc = E × η_hw × η_sys × η_sla × η_gov**
-
-where E (available energy) originates from the sensing layer FractaVolta defines, and η_gov incorporates the democratic governance conditions MareNostrum establishes.
+Pouzin was right. The datagram won for information. It will win for energy.
 
 ---
 
-## Business Model
+## The Business Model
 
-| Offering | Client profile | Pricing logic |
-|---|---|---|
-| Distributed sensing deployment | Municipalities, regional energy authorities | Project-based |
-| Probabilistic inference engine (SaaS) | Utilities, mobility operators | Per-node subscription |
-| Sovereign infrastructure design | Island territories, remote regions | Consulting + IP license |
-| Training and transfer | Public institutions, cooperatives | Day-rate + materials |
+FractaVolta operates on the Red Hat model.
 
-Revenue destinations: operational costs of the open Corsican deployment, Institut Mariani R&D, MareNostrum sovereign energy fund (Plan 2038).
+The intellectual foundations of the EPN architecture are open source — freely available, forkable, improvable by anyone. The protocol, the governance framework, the pricing units, the routing principles: all published under open licences, owned by no one, maintained by all who depend on them.
 
----
+What FractaVolta sells is the expertise to implement these foundations in real territorial deployments: feasibility studies for island and peripheral territories, regulatory navigation (particularly the IMDG maritime framework for battery containers), infrastructure design, procurement support, governance architecture, and operational training.
 
-## Design Principles
+The commercial proposition is precise: we have spent thirty years asking the question "how do autonomous agents coordinate without a capturable centre?" — in programming languages, sensor networks, communications protocols, and governance institutions. We know how to answer it for energy. We charge for that answer.
 
-**Inference under uncertainty, not measurement under control.** The system is designed for environments where perfect sensing is impossible: rural territories, intermittent connectivity, heterogeneous hardware. Graceful degradation is a first-class requirement.
-
-**Traceability as architecture, not compliance.** Audit logs are not a regulatory afterthought. They are the primary security mechanism, replacing secrecy with accountability.
-
-**Fractal governance.** The same mechanism at every scale. No opaque layer reserved for higher levels. Subsidiarity enforced as a protocol constraint, not a political aspiration.
-
-**Continuous attestation.** Provenance is produced in real time, not reconstructed after the fact. Gaps in the attestation flow are themselves recorded — by the cluster observing the absence of node output.
-
-**Democratic closure.** Technical measurements are inputs to governance, not substitutes for it. The system accepts that democratic decisions may diverge from physical optima. Legitimacy is the guarantee; optimality is not.
-
-**Possibilism.** This repository explores what is potentially possible. A falsified hypothesis is a result. An open problem is an invitation. The goal is to extend the frontier, not to defend a position.
+The first deployment context is Corsica. It is not the subject — it is the laboratory.
 
 ---
 
-## Status
+## Repository Contents
 
-| Component | Status |
+| File | Description |
 |---|---|
-| Physical inference model | Conceptual — `tera.md` |
-| Fractal governance model | Formalized — `traceable_governance.md` |
-| CXU / SCE specification | Formalized — `safe_compute_exergy.md` |
-| Reference inference v1 | Pending — `reference_inference_v1.md` |
-| Exergy Lock Protocol | Outlined — formalization pending |
-| Mediterranean deployment | Design phase — [MareNostrum](https://github.com/JeanHuguesRobert/marenostrum) |
+| [UNCONSCIOUS_GRID.md](./UNCONSCIOUS_GRID.md) | **Main theoretical paper** — *The Unconscious Grid: On Store-and-Forward as the Repressed Solution to Energy Sovereignty*. Academic paper submitted to *Energy Research & Social Science*. The complete theoretical foundation of FractaVolta. |
+| [electricity_in_containers.md](./electricity_in_containers.md) | Working note (April 2026) — the exploratory precursor to the full paper. |
+| [fractavolta_paper.md](./fractavolta_paper.md) | Commercial overview and deployment framework. |
+| [partner_brief.md](./partner_brief.md) | Partner engagement brief. |
+| [tera.md](./tera.md) | FractaTera reference architecture — multi-scale sensing and territorial mapping. |
 
 ---
 
-## Engage
+## Ecosystem
 
-Open an issue to challenge a claim, propose a counter-example, or identify a gap.  
-Fork to implement an alternative model and link back.  
-PR to add a case study, a formal element, or a reference.  
-Cite a commit hash for priority on a specific idea.
+FractaVolta is the deployment and commercial layer of a three-repository ecosystem:
 
-The review process is public, attributed, append-only.  
-It is, in that sense, an instance of what it describes.
+| Repository | Role |
+|---|---|
+| [MareNostrum](https://github.com/JeanHuguesRobert/marenostrum) | Protocol, governance, and institutional framework. CXU definition. DHITL. Mediterranean solar commons. |
+| **FractaVolta** | **EPN architecture, deployment, and commercial expertise.** |
+| [barons-Mariani](https://github.com/JeanHuguesRobert/barons-Mariani) | Political and institutional framework. Plan 2038. Corsican senatorial candidacy. |
 
 ---
 
-*License: CC BY 4.0 — Attribution required: Jean Hugues Noël Robert — FractaVolta (2026)*  
-*Priority established by first commit timestamp.*
+## Theoretical Foundations
+
+The FractaVolta framework rests on the following open-source academic corpus:
+
+- **[The Unconscious Grid](./UNCONSCIOUS_GRID.md)** (2026) — the main EPN theoretical paper. Baran, ARPANET, exergy, RAIB, stigmergy, antifragility, subsidiarity. Target journal: *Energy Research & Social Science*.
+- **[From Sun to Sovereignty](https://github.com/JeanHuguesRobert/marenostrum/blob/main/PAPER_SUN_TO_SOVEREIGNTY.md)** (2026) — Communal Sovereign Funds as the institutional vehicle for EPN revenues. Corsican empirical data (ATC, 2026). Target journals: *Ecological Economics*, *Land Use Policy*.
+- **[DHITL](https://github.com/JeanHuguesRobert/marenostrum/blob/main/DHITL.md)** (2025–2026) — Democratic Humans in the Loop: the governance architecture for sovereign AI infrastructure.
+
+All papers: CC BY-SA 4.0.
+
+---
+
+## Contact
+
+**Email:** jhr@baronsmariani.org · institutmariani@gmail.com
+**Web:** fractavolta.com
+**GitHub:** github.com/JeanHuguesRobert/FractaVolta
+
+---
+
+*© 2026 Jean Hugues Noël Robert, baron Mariani — Institut Mariani / C.O.R.S.I.C.A.*
+
+*Documentation: CC BY 4.0 · Software: Apache 2.0*
