@@ -1,9 +1,5 @@
 ![FractaVolta](./assets/banner.svg)
 
-# FractaVolta
-
-> From photons to inferences
-
 FractaVolta explores how to transform abundant solar energy into reliable, usable services.
 
 Instead of centralized infrastructure, it applies distributed system patterns to energy:
