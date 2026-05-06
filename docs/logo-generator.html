@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jana — Logo Generator</title>
+
+<!--
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  JANA LOGO — Source License v1.0
+  © 2025 Jean Hugues Noël Robert, baron Mariani
+  GitHub: https://github.com/jeanhuguesrobert
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+CONCEPT & AUTHORSHIP
+  The Jana logo concept — a disc quartered by a cross into four
+  coloured segments, derived from the Mondrian/Bauhaus primary palette
+  (red, yellow, blue, black, white) — is an original creation by
+  Jean Hugues Noël Robert, baron Mariani ("the Author").
+  This includes the visual identity, the variant-code system (QQQQSWWVE),
+  and the interactive generator tool.
+
+MORAL RIGHTS (droit moral)
+  Regardless of jurisdiction, the Author asserts the inalienable right:
+  (a) to be identified as the originator of the Jana concept;
+  (b) to object to any derogatory treatment, distortion, or mutilation
+      of the work that would harm the Author's honour or reputation;
+  (c) that the work shall never be presented under another name or
+      attributed to another author without explicit written consent.
+
+NON-COMMERCIAL USE — freely permitted
+  You may freely use, reproduce, adapt, and distribute the Jana logo
+  and this generator tool for any non-commercial purpose, provided that:
+  1. The Author is clearly credited in the following form:
+       "Jana concept by Jean Hugues Noël Robert, baron Mariani"
+       with a link to https://github.com/jeanhuguesrobert
+  2. Any derivative work is shared under equivalent terms (share-alike).
+  3. The Jana name is not used to imply endorsement by the Author.
+
+COMMERCIAL USE — prior written authorisation required
+  Any use for commercial purposes — including but not limited to:
+  corporate identity, product branding, paid publications, merchandise,
+  advertising, or any activity generating direct or indirect revenue —
+  requires prior written authorisation from the Author.
+  To request a commercial licence, contact: jean_hugues_robert@yahoo.com
+
+DERIVATIVE WORKS
+  Derivatives of the generator tool (code) are permitted under the
+  same non-commercial terms above. Derivatives of the logo mark as a
+  distinctive sign require separate written agreement.
+
+DISCLAIMER
+  This work is provided "as is", without warranty of any kind.
+  The Author shall not be liable for any claim, damages, or other
+  liability arising from its use.
+
+GOVERNING LAW
+  This licence is governed by French law. Any dispute shall fall under
+  the exclusive jurisdiction of the courts of France.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  JANA LOGO — Licence Source v1.0
+  © 2026 Jean Hugues Noël Robert, baron Mariani
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+CONCEPT & PATERNITÉ
+  Le concept du logo Jana — un disque découpé en croix en quatre
+  segments colorés, dérivé de la palette primaire Mondrian/Bauhaus
+  (rouge, jaune, bleu, noir, blanc) — est une création originale de
+  Jean Hugues Noël Robert, baron Mariani (« l'Auteur »).
+  Sont inclus : l'identité visuelle, le système de codes de variantes
+  (QQQQSWWVE) et l'outil générateur interactif.
+
+DROIT MORAL
+  Conformément au droit français et indépendamment de toute cession,
+  l'Auteur se réserve :
+  (a) le droit de revendiquer la paternité du concept Jana ;
+  (b) le droit de s'opposer à toute dénaturation, mutilation ou
+      modification portant atteinte à son honneur ou à sa réputation ;
+  (c) le droit à ce que l'œuvre ne soit jamais présentée sous un autre
+      nom sans accord écrit préalable.
+
+USAGE NON COMMERCIAL — librement autorisé
+  Vous êtes libre d'utiliser, reproduire, adapter et diffuser le logo
+  Jana et cet outil pour tout usage non commercial, sous réserve de :
+  1. Créditer l'Auteur de la manière suivante :
+       « Concept Jana par Jean Hugues Noël Robert, baron Mariani »
+       avec un lien vers https://github.com/jeanhuguesrobert
+  2. Partager toute œuvre dérivée sous des termes équivalents.
+  3. Ne pas utiliser le nom Jana pour suggérer un soutien de l'Auteur.
+
+USAGE COMMERCIAL — autorisation préalable requise
+  Tout usage à des fins commerciales — notamment : identité d'entreprise,
+  branding produit, publications payantes, merchandising, publicité,
+  ou toute activité générant un revenu direct ou indirect — requiert
+  une autorisation écrite préalable de l'Auteur.
+  Contact pour licence commerciale : jean_hugues_robert@yahoo.com
+
+ŒUVRES DÉRIVÉES
+  Les dérivés du code source du générateur sont autorisés dans les
+  mêmes conditions non commerciales. Les dérivés du signe distinctif
+  Jana font l'objet d'un accord séparé.
+
+DROIT APPLICABLE
+  Cette licence est régie par le droit français. Tout litige relève
+  de la compétence exclusive des juridictions françaises.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+-->
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Space+Mono:wght@400;700&display=swap');
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{--red:#D7141A;--yel:#F0C30F;--blu:#0046AD;--blk:#111;--muted:#888;--bg:#FAFAF8;--fg:#111;--surface:#fff;--border:#111;--border-light:rgba(0,0,0,.1);}
+@media(prefers-color-scheme:dark){:root{--bg:#141414;--fg:#FAFAF8;--surface:#1e1e1e;--border:#FAFAF8;--border-light:rgba(255,255,255,.1);}}
+body{background:var(--bg);color:var(--fg);font-family:'DM Sans',sans-serif;min-height:100vh;display:flex;justify-content:center;padding:32px 16px 48px;}
+#app{width:100%;max-width:560px;}
+.hdr{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;border-top:3px solid var(--fg);border-bottom:1px solid var(--fg);padding:9px 0;margin-bottom:20px;}
+.hdr-l{font-size:10px;font-weight:300;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);}
+.hdr-t{font-family:'Space Mono',monospace;font-size:38px;font-weight:700;letter-spacing:.22em;text-align:center;line-height:1;color:var(--fg);}
+.hdr-r{display:flex;gap:5px;justify-content:flex-end;align-items:center;}
+.pip{width:9px;height:9px;border-radius:50%;}
+.dual{display:flex;gap:10px;margin-bottom:16px;}
+.dc{flex:1;display:flex;justify-content:center;padding:16px;transition:transform .15s;}
+.dc.flash{transform:scale(1.03);}
+.code-strip{display:flex;align-items:stretch;border:1.5px solid var(--border);margin-bottom:16px;}
+.cs-lbl{background:var(--blu);color:#fff;font-size:9px;letter-spacing:.2em;text-transform:uppercase;padding:0 10px;display:flex;align-items:center;font-weight:500;white-space:nowrap;}
+.cs-val{font-family:'Space Mono',monospace;font-size:16px;font-weight:700;letter-spacing:.16em;flex:1;padding:8px 12px;display:flex;align-items:center;color:var(--fg);}
+.cs-copy{background:var(--fg);color:var(--bg);border:none;padding:0 14px;font-size:11px;font-family:inherit;font-weight:500;cursor:pointer;letter-spacing:.05em;transition:background .12s;}
+.cs-copy:hover{background:var(--blu);color:#fff;}
+.panel{border:1.5px solid var(--border);margin-bottom:9px;background:var(--surface);}
+.prow{padding:12px 15px;border-bottom:1px solid var(--border-light);}
+.prow:last-child{border-bottom:none;}
+.plbl{font-size:10px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:9px;}
+.plbl-note{font-size:10px;font-weight:300;letter-spacing:0;text-transform:none;color:var(--muted);margin-left:6px;}
+.qgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.qrow{display:flex;align-items:center;gap:8px;}
+.qname{font-family:'Space Mono',monospace;font-size:10px;font-weight:700;width:22px;color:var(--muted);}
+.swatches{display:flex;gap:5px;}
+.sw{width:22px;height:22px;border-radius:50%;cursor:pointer;border:2px solid transparent;transition:transform .1s,box-shadow .1s;}
+.sw:hover{transform:scale(1.18);}
+.sw.on{box-shadow:0 0 0 2px var(--surface),0 0 0 4px var(--fg);}
+.tbts{display:flex;}
+.tbt{padding:5px 16px;font-size:12px;border:1.5px solid var(--border);background:var(--surface);color:var(--fg);cursor:pointer;font-family:inherit;transition:all .12s;margin-right:-1.5px;}
+.tbt.on{background:var(--fg);color:var(--bg);z-index:1;}
+.slrow{display:flex;align-items:center;gap:12px;}
+.slrow input[type=range]{flex:1;accent-color:var(--red);cursor:pointer;height:3px;}
+.slval{font-family:'Space Mono',monospace;font-size:11px;color:var(--muted);min-width:38px;text-align:right;}
+.tagbtns{display:flex;gap:5px;flex-wrap:wrap;}
+.tagbtn{padding:4px 10px;font-size:11px;border:1.5px solid var(--border);background:var(--surface);color:var(--fg);cursor:pointer;font-family:inherit;transition:all .12s;line-height:1.4;}
+.tagbtn.on{background:var(--fg);color:var(--bg);}
+.bgbtns{display:flex;gap:6px;align-items:center;flex-wrap:wrap;}
+.bgbtn{width:24px;height:24px;cursor:pointer;border:1.5px solid rgba(128,128,128,.4);transition:transform .1s,box-shadow .1s;}
+.bgbtn:hover{transform:scale(1.12);}
+.bgbtn.on{box-shadow:0 0 0 2px var(--surface),0 0 0 3.5px var(--fg);}
+.bgbtn.checker{background:repeating-conic-gradient(#ccc 0% 25%,#f5f5f5 0% 50%) 0 0/8px 8px;}
+.btn{font-family:inherit;font-size:12px;font-weight:500;padding:8px 15px;border:none;cursor:pointer;letter-spacing:.04em;transition:opacity .12s;}
+.btn:hover{opacity:.82;}
+.btn-full{width:100%;}
+.btn-red{background:var(--red);color:#fff;}
+.btn-blu{background:var(--blu);color:#fff;}
+.btn-blk{background:var(--fg);color:var(--bg);}
+.btn-yel{background:var(--yel);color:#111;}
+.cinrow{display:flex;}
+.cin{flex:1;font-family:'Space Mono',monospace;font-size:13px;letter-spacing:.13em;padding:7px 10px;border:1.5px solid var(--border);border-right:none;background:var(--surface);color:var(--fg);text-transform:uppercase;outline:none;}
+.cin.err{border-color:var(--red);}
+.cerr{font-size:11px;color:var(--red);margin-top:5px;}
+.chint{font-size:10px;color:var(--muted);margin-top:7px;line-height:1.9;font-weight:300;}
+.exprow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;}
+select{font-family:'Space Mono',monospace;font-size:11px;padding:6px 8px;border:1.5px solid var(--border);background:var(--surface);color:var(--fg);cursor:pointer;}
+.exp-opts{display:flex;gap:14px;margin-top:9px;font-size:11px;color:var(--muted);align-items:center;flex-wrap:wrap;}
+.exp-opts label{display:flex;align-items:center;gap:5px;cursor:pointer;}
+.expnote{font-size:10px;color:var(--muted);margin-top:7px;line-height:1.7;font-weight:300;}
+.hist-wrap{margin-top:16px;border-top:1px solid var(--border-light);padding-top:11px;}
+.hist-lbl{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:8px;font-weight:500;}
+.hist-row{display:flex;gap:6px;overflow-x:auto;padding-bottom:4px;}
+.hi{flex:0 0 40px;height:40px;cursor:pointer;border:1.5px solid transparent;transition:border-color .12s;}
+.hi:hover{border-color:var(--fg);}
+.legend{display:flex;justify-content:center;gap:14px;margin-top:14px;padding-top:11px;border-top:1px solid var(--border-light);}
+.lgi{display:flex;align-items:center;gap:4px;}
+.lgd{width:10px;height:10px;border-radius:50%;}
+.lgk{font-family:'Space Mono',monospace;font-size:9px;color:var(--muted);}
+.footer{margin-top:28px;padding-top:14px;border-top:1px solid var(--border-light);font-size:10px;color:var(--muted);line-height:1.9;font-weight:300;text-align:center;}
+.footer a{color:var(--muted);text-decoration:underline;}
+.footer strong{font-weight:500;color:var(--fg);}
+</style>
+
+<div id="app">
+  <div class="hdr">
+    <div class="hdr-l">Logo generator</div>
+    <div class="hdr-t">Jana</div>
+    <div class="hdr-r">
+      <div class="pip" style="background:var(--red)"></div>
+      <div class="pip" style="background:var(--yel)"></div>
+      <div class="pip" style="background:var(--blu)"></div>
+    </div>
+  </div>
+
+  <div class="dual">
+    <div class="dc" id="dc-w" style="background:#fff"><div id="pv-w"></div></div>
+    <div class="dc" id="dc-b" style="background:#111"><div id="pv-b"></div></div>
+  </div>
+
+  <div class="code-strip">
+    <div class="cs-lbl">Code</div>
+    <div class="cs-val" id="cs-val">RYBWN0690</div>
+    <button class="cs-copy" id="btn-copy" onclick="doCopy()">Copy</button>
+  </div>
+
+  <div class="panel">
+    <div class="prow"><div class="plbl">Quadrants</div><div class="qgrid" id="qgrid"></div></div>
+    <div class="prow">
+      <div class="plbl">Stroke</div>
+      <div class="tbts">
+        <button class="tbt on" id="st-N" onclick="setStroke('N')">● Black</button>
+        <button class="tbt"    id="st-W" onclick="setStroke('W')">○ White</button>
+      </div>
+    </div>
+    <div class="prow">
+      <div class="plbl">Weight</div>
+      <div class="slrow">
+        <input type="range" id="sl-w" min="2" max="18" value="6" step="1" oninput="setWeight(this.value)">
+        <span class="slval" id="vl-w">6%</span>
+      </div>
+    </div>
+    <div class="prow">
+      <div class="plbl">Saturation <span class="plbl-note" id="sat-note"></span></div>
+      <div class="slrow">
+        <input type="range" id="sl-s" min="0" max="9" value="9" step="1" oninput="setSat(this.value)">
+        <span class="slval" id="vl-s">100%</span>
+      </div>
+    </div>
+    <div class="prow"><div class="plbl">Texture</div><div class="tagbtns" id="txbtns"></div></div>
+    <div class="prow"><div class="plbl">Effect</div><div class="tagbtns" id="fxbtns"></div></div>
+    <div class="prow"><div class="plbl">Background</div><div class="bgbtns" id="bgbtns"></div></div>
+    <div class="prow"><button class="btn btn-red btn-full" onclick="doRandom()">Random variant</button></div>
+  </div>
+
+  <div class="panel">
+    <div class="prow">
+      <div class="plbl">Rebuild from code</div>
+      <div class="cinrow">
+        <input class="cin" id="cin" placeholder="e.g. RYBWN0690"
+          oninput="clearErr()" onkeydown="if(event.key==='Enter')applyCode()">
+        <button class="btn btn-blk" style="padding:8px 16px" onclick="applyCode()">→</button>
+      </div>
+      <div class="cerr" id="cerr" style="display:none">Invalid — 9 chars: colours(4) + stroke(1) + weight(2) + saturation(1) + effect(1)</div>
+      <div class="chint">
+        R=Red · Y=Yellow · B=Blue · W=White · N=Black<br>
+        Stroke N/W · Weight 02–18 · Saturation 0–9 · Effect 0–5
+      </div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="prow">
+      <div class="plbl">Export</div>
+      <div class="exprow">
+        <button class="btn btn-blu" onclick="dlSVG()">↓ SVG</button>
+        <button class="btn btn-blk" onclick="dlPNG()">↓ PNG</button>
+        <select id="pngsz">
+          <option value="256">256 px</option>
+          <option value="512" selected>512 px</option>
+          <option value="1024">1024 px</option>
+          <option value="2048">2048 px</option>
+        </select>
+        <button class="btn btn-yel" onclick="dlSheet()">↓ Sheet</button>
+      </div>
+      <div class="exp-opts">
+        <label><input type="checkbox" id="txsvg" checked> Texture in SVG</label>
+        <label><input type="checkbox" id="fxsvg" checked> Effect in SVG</label>
+      </div>
+      <div class="expnote">Sheet = both versions (white + black bg) with code. Transparent → PNG with alpha.</div>
+    </div>
+  </div>
+
+  <div class="hist-wrap">
+    <div class="hist-lbl">History</div>
+    <div class="hist-row" id="hist-row">
+      <span style="font-size:11px;color:var(--muted)">Generate some variants first</span>
+    </div>
+  </div>
+
+  <div class="legend" id="legend"></div>
+
+  <div class="footer">
+    <strong>Jana</strong> concept &amp; generator by
+    <a href="https://github.com/jeanhuguesrobert" target="_blank">Jean Hugues Noël Robert, baron Mariani</a><br>
+    Free for non-commercial use with attribution · Commercial use requires prior written authorisation<br>
+    Governed by French law · Jana Source License v1.0
+  </div>
+</div>
+
+<script>
+const PAL={R:{hex:'#D7141A',label:'Red'},Y:{hex:'#F0C30F',label:'Yellow'},B:{hex:'#0046AD',label:'Blue'},W:{hex:'#FFFFFF',label:'White'},N:{hex:'#1A1A1A',label:'Black'}};
+const CKEYS=['R','Y','B','W','N'];
+const QUADS=['nw','ne','sw','se'];
+const QLBL={nw:'NW',ne:'NE',sw:'SW',se:'SE'};
+const BGS=[{k:'T',hex:null,label:'Transparent'},{k:'W',hex:'#FFFFFF',label:'White'},{k:'N',hex:'#1A1A1A',label:'Black'},{k:'R',hex:'#D7141A',label:'Red'},{k:'Y',hex:'#F0C30F',label:'Yellow'},{k:'B',hex:'#0046AD',label:'Blue'}];
+const TXS=[
+  {k:0,label:'None',fn:null},
+  {k:1,label:'Grain',fn:(sz,u)=>{const bf=(0.65*260/sz).toFixed(4),sc=(sz*.012).toFixed(1);return`<filter id="ftx${u}" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency="${bf}" numOctaves="4" stitchTiles="stitch" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="${sc}" xChannelSelector="R" yChannelSelector="G"/></filter>`;}},
+  {k:2,label:'Oil',fn:(sz,u)=>{const bf=(0.013*260/sz).toFixed(4),sc=(sz*.046).toFixed(1);return`<filter id="ftx${u}" x="-6%" y="-6%" width="112%" height="112%"><feTurbulence type="turbulence" baseFrequency="${bf}" numOctaves="5" seed="4" result="t"/><feDisplacementMap in="SourceGraphic" in2="t" scale="${sc}" xChannelSelector="R" yChannelSelector="G"/></filter>`;}},
+  {k:3,label:'Watercolor',fn:(sz,u)=>{const bf=(0.022*260/sz).toFixed(4),sc=(sz*.076).toFixed(1);return`<filter id="ftx${u}" x="-8%" y="-8%" width="116%" height="116%"><feTurbulence type="fractalNoise" baseFrequency="${bf}" numOctaves="4" seed="11" result="t"/><feDisplacementMap in="SourceGraphic" in2="t" scale="${sc}" xChannelSelector="R" yChannelSelector="G"/></filter>`;}},
+  {k:4,label:'Chalk',fn:(sz,u)=>{const bf=(0.9*260/sz).toFixed(4),sc=(sz*.018).toFixed(1);return`<filter id="ftx${u}" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency="${bf}" numOctaves="5" stitchTiles="stitch" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="${sc}" xChannelSelector="R" yChannelSelector="G"/></filter>`;}},
+];
+const FXS=[
+  {k:0,label:'None',fn:null},
+  {k:1,label:'Patina',desc:'Aged yellowing',fn:(sz,u)=>`<filter id="ffx${u}" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="1.06 0.06 0.0 0 0.04 0.0 0.97 0.0 0 0.02 0.0 0.0 0.50 0 0.0 0 0 0 1 0"/></filter>`},
+  {k:2,label:'Riso',desc:'Risograph misregistration',fn:(sz,u)=>{const off=Math.max(2,Math.round(sz*0.008));return`<filter id="ffx${u}" x="-5%" y="-5%" width="110%" height="110%" color-interpolation-filters="sRGB"><feColorMatrix in="SourceGraphic" type="matrix" values="1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0" result="rCh"/><feOffset in="rCh" dx="${off}" dy="${off}" result="rOff"/><feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0" result="gbCh"/><feBlend in="gbCh" in2="rOff" mode="screen"/></filter>`;}},
+  {k:3,label:'Faded',desc:'Washed out, blacks lift',fn:(sz,u)=>`<filter id="ffx${u}" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB"><feColorMatrix type="saturate" values="0.38" result="ds"/><feComponentTransfer in="ds"><feFuncR type="linear" slope="0.80" intercept="0.10"/><feFuncG type="linear" slope="0.78" intercept="0.10"/><feFuncB type="linear" slope="0.72" intercept="0.12"/></feComponentTransfer></filter>`},
+  {k:4,label:'Screenprint',desc:'Soft edge roughness',fn:(sz,u)=>{const bf=(0.028*260/sz).toFixed(4),sc=(sz*0.009).toFixed(1);return`<filter id="ffx${u}" x="-5%" y="-5%" width="110%" height="110%" color-interpolation-filters="sRGB"><feTurbulence type="fractalNoise" baseFrequency="${bf}" numOctaves="3" seed="7" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="${sc}" xChannelSelector="R" yChannelSelector="G"/></filter>`;}},
+  {k:5,label:'Photocopy',desc:'High contrast, coarse grain',fn:(sz,u)=>{const bf=(0.55*260/sz).toFixed(4),sc=(sz*0.007).toFixed(1);return`<filter id="ffx${u}" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB"><feColorMatrix type="saturate" values="0" result="gr"/><feComponentTransfer in="gr" result="th"><feFuncR type="linear" slope="5" intercept="-1.6"/><feFuncG type="linear" slope="5" intercept="-1.6"/><feFuncB type="linear" slope="5" intercept="-1.6"/></feComponentTransfer><feTurbulence type="fractalNoise" baseFrequency="${bf}" numOctaves="3" stitchTiles="stitch" result="n"/><feDisplacementMap in="th" in2="n" scale="${sc}" xChannelSelector="R" yChannelSelector="G"/></filter>`;}},
+];
+
+let ST={colors:{nw:'R',ne:'Y',sw:'B',se:'W'},stroke:'N',weight:6,sat:9,bg:1,tx:0,fx:0};
+let HIST=[];
+
+const h2r=h=>[1,3,5].map(i=>parseInt(h.slice(i,i+2),16)/255);
+const r2hex=(r,g,b)=>'#'+[r,g,b].map(x=>Math.round(Math.min(1,Math.max(0,x))*255).toString(16).padStart(2,'0')).join('');
+function blendHex(h1,h2,t){const[r1,g1,b1]=h2r(h1),[r2,g2,b2]=h2r(h2);return r2hex(r1+(r2-r1)*t,g1+(g2-g1)*t,b1+(b2-b1)*t);}
+function r2hsl(r,g,b){const mx=Math.max(r,g,b),mn=Math.min(r,g,b);let h,s,l=(mx+mn)/2;if(mx===mn){h=s=0;}else{const d=mx-mn;s=l>.5?d/(2-mx-mn):d/(mx+mn);if(mx===r)h=((g-b)/d+(g<b?6:0))/6;else if(mx===g)h=((b-r)/d+2)/6;else h=((r-g)/d+4)/6;}return[h,s,l];}
+function hsl2r(h,s,l){if(!s)return[l,l,l];const q=l<.5?l*(1+s):l+s-l*s,p=2*l-q,hu2=(p,q,t)=>{if(t<0)t+=1;if(t>1)t-=1;if(t<1/6)return p+(q-p)*6*t;if(t<.5)return q;if(t<2/3)return p+(q-p)*(2/3-t)*6;return p;};return[hu2(p,q,h+1/3),hu2(p,q,h),hu2(p,q,h-1/3)];}
+function dominantTemp(colors){let w=0,c=0;QUADS.forEach(q=>{if(colors[q]==='R'||colors[q]==='Y')w++;if(colors[q]==='B')c++;});return w>c?'warm':c>w?'cool':'neutral';}
+function adjCols(colors,sat){
+  const temp=dominantTemp(colors),shift=1-sat/9;
+  const o={};
+  QUADS.forEach(q=>{
+    const k=colors[q],hex=PAL[k].hex;
+    if(k==='W'||k==='N'){
+      if(shift>0&&temp!=='neutral'){const targets={W:{warm:'#F7EDDA',cool:'#EDF1F8'},N:{warm:'#24180C',cool:'#0E1322'}};o[q]=blendHex(hex,targets[k][temp],shift*0.55);}
+      else o[q]=hex;
+    } else {
+      if(sat>=9){o[q]=hex;return;}
+      const[r,g,b]=h2r(hex);let[h,s,l]=r2hsl(r,g,b);s*=sat/9;o[q]=r2hex(...hsl2r(h,s,l));
+    }
+  });
+  return o;
+}
+
+function mkSVG(ac,strk,bgIdx,sz,cwr,txIdx,fxIdx,incTx,incFx,u=''){
+  const R=sz/2,sw=sz*cwr,hw=sw/2,pr=R-hw;
+  const sc=PAL[strk]?.hex||'#1A1A1A';
+  const bg=BGS[bgIdx];
+  const bgR=bg.hex?`<rect width="${sz}" height="${sz}" fill="${bg.hex}"/>`:'';
+  const txDef=incTx&&txIdx>0&&TXS[txIdx]?.fn?TXS[txIdx].fn(sz,u):'';
+  const fxDef=incFx&&fxIdx>0&&FXS[fxIdx]?.fn?FXS[fxIdx].fn(sz,u):'';
+  const txA=txDef?` filter="url(#ftx${u})"`:' ';
+  const fxA=fxDef?` filter="url(#ffx${u})"`:' ';
+  const s=u;
+  const cl=[`<clipPath id="cNW${s}"><rect x="0" y="0" width="${R-hw}" height="${R-hw}"/></clipPath>`,`<clipPath id="cNE${s}"><rect x="${R+hw}" y="0" width="${R-hw}" height="${R-hw}"/></clipPath>`,`<clipPath id="cSW${s}"><rect x="0" y="${R+hw}" width="${R-hw}" height="${R-hw}"/></clipPath>`,`<clipPath id="cSE${s}"><rect x="${R+hw}" y="${R+hw}" width="${R-hw}" height="${R-hw}"/></clipPath>`,`<clipPath id="cD${s}"><circle cx="${R}" cy="${R}" r="${R}"/></clipPath>`].join('');
+  const fills=QUADS.map((q,i)=>`<circle cx="${R}" cy="${R}" r="${R}" fill="${ac[q]}" clip-path="url(#${['cNW','cNE','cSW','cSE'].map(x=>x+s)[i]})"/>`).join('');
+  const cross=`<rect x="${R-hw}" y="0" width="${sw}" height="${sz}" fill="${sc}"/><rect x="0" y="${R-hw}" width="${sz}" height="${sw}" fill="${sc}"/>`;
+  return`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${sz} ${sz}" width="${sz}" height="${sz}"><defs>${cl}${txDef}${fxDef}</defs>${bgR}<g${fxA}><g${txA} clip-path="url(#cD${s})">${fills}${cross}</g><circle cx="${R}" cy="${R}" r="${pr}" fill="none" stroke="${sc}" stroke-width="${sw}"/></g></svg>`;
+}
+
+function enc(){const{colors,stroke,weight,sat,fx}=ST;return colors.nw+colors.ne+colors.sw+colors.se+stroke+String(weight).padStart(2,'0')+sat+fx;}
+function dec(s){s=s.trim().toUpperCase();if(s.length!==9)return null;const[a,b,c,d,e,f,g,h,i]=s;if(![a,b,c,d].every(x=>CKEYS.includes(x)))return null;if(!['N','W'].includes(e))return null;const w=parseInt(f+g);if(isNaN(w)||w<2||w>18)return null;const sat=parseInt(h);if(isNaN(sat)||sat<0||sat>9)return null;const fxk=parseInt(i);if(isNaN(fxk)||fxk<0||fxk>=FXS.length)return null;return{colors:{nw:a,ne:b,sw:c,se:d},stroke:e,weight:w,sat,fx:fxk};}
+function updateHash(){try{history.replaceState(null,'',`#${enc()}${ST.bg}${ST.tx}`);}catch(e){}}
+function loadHash(){try{const h=location.hash.slice(1);if(h.length<11)return false;const d=dec(h.slice(0,9));if(!d)return false;Object.assign(ST,d);ST.bg=Math.min(parseInt(h[9])||1,BGS.length-1);ST.tx=Math.min(parseInt(h[10])||0,TXS.length-1);return true;}catch(e){return false;}}
+
+function render(addH=false){
+  const ac=adjCols(ST.colors,ST.sat);
+  const incTx=document.getElementById('txsvg').checked;
+  const incFx=document.getElementById('fxsvg').checked;
+  document.getElementById('pv-w').innerHTML=mkSVG(ac,ST.stroke,1,200,ST.weight/100,ST.tx,ST.fx,incTx,incFx,'_W');
+  document.getElementById('pv-b').innerHTML=mkSVG(ac,ST.stroke,2,200,ST.weight/100,ST.tx,ST.fx,incTx,incFx,'_B');
+  document.getElementById('cs-val').textContent=enc();
+  const temp=dominantTemp(ST.colors),note=document.getElementById('sat-note');
+  if(ST.sat<9&&temp!=='neutral')note.textContent=`→ neutrals shift ${temp==='warm'?'warm ☀':'cool ❄'}`;
+  else note.textContent='';
+  updateHash();syncUI();
+  if(addH)addHist();
+}
+function syncUI(){
+  document.getElementById('sl-w').value=ST.weight;document.getElementById('vl-w').textContent=ST.weight+'%';
+  document.getElementById('sl-s').value=ST.sat;document.getElementById('vl-s').textContent=Math.round(ST.sat/9*100)+'%';
+  ['N','W'].forEach(s=>document.getElementById('st-'+s)?.classList.toggle('on',ST.stroke===s));
+  CKEYS.forEach(k=>QUADS.forEach(q=>{document.getElementById(`sw-${q}-${k}`)?.classList.toggle('on',ST.colors[q]===k);}));
+  BGS.forEach((_,i)=>document.getElementById('bg-'+i)?.classList.toggle('on',ST.bg===i));
+  TXS.forEach(t=>document.getElementById('tx-'+t.k)?.classList.toggle('on',ST.tx===t.k));
+  FXS.forEach(t=>document.getElementById('fx-'+t.k)?.classList.toggle('on',ST.fx===t.k));
+}
+function doFlash(){const d=document.getElementById('dc-w');d.classList.add('flash');setTimeout(()=>d.classList.remove('flash'),200);}
+function addHist(){const code=enc();if(HIST.length&&HIST[0].code===code)return;HIST.unshift({...ST,colors:{...ST.colors},code,ac:adjCols(ST.colors,ST.sat)});if(HIST.length>14)HIST.pop();renderHist();}
+function renderHist(){const row=document.getElementById('hist-row');if(!HIST.length){row.innerHTML='<span style="font-size:11px;color:var(--muted)">Generate some variants first</span>';return;}row.innerHTML='';HIST.forEach((s,i)=>{const mini=mkSVG(s.ac,s.stroke,s.bg,40,s.weight/100,0,0,false,false,`_h${i}`);const d=document.createElement('div');d.className='hi';d.title=s.code;d.innerHTML=mini;d.onclick=()=>{Object.assign(ST,{colors:{...s.colors},stroke:s.stroke,weight:s.weight,sat:s.sat,bg:s.bg,tx:s.tx,fx:s.fx});render(false);};row.appendChild(d);});}
+function setStroke(s){ST.stroke=s;render(false);}
+function setWeight(v){ST.weight=parseInt(v);render(false);}
+function setSat(v){ST.sat=parseInt(v);render(false);}
+function doRandom(){const r=()=>CKEYS[Math.floor(Math.random()*CKEYS.length)];ST.colors={nw:r(),ne:r(),sw:r(),se:r()};ST.stroke=Math.random()>.5?'N':'W';doFlash();render(true);}
+function buildQGrid(){const g=document.getElementById('qgrid');QUADS.forEach(q=>{const row=document.createElement('div');row.className='qrow';const sw=document.createElement('div');sw.className='swatches';sw.id='sw-'+q;row.innerHTML=`<span class="qname">${QLBL[q]}</span>`;row.appendChild(sw);g.appendChild(row);CKEYS.forEach(k=>{const b=document.createElement('button');b.className='sw'+(ST.colors[q]===k?' on':'');b.style.background=PAL[k].hex;if(k==='W')b.style.border='2px solid #bbb';b.id=`sw-${q}-${k}`;b.title=PAL[k].label;b.onclick=()=>{ST.colors[q]=k;render(false);};sw.appendChild(b);});});}
+function buildBG(){const c=document.getElementById('bgbtns');BGS.forEach((bg,i)=>{const b=document.createElement('button');b.className='bgbtn'+(ST.bg===i?' on':'')+(bg.hex?'':' checker');if(bg.hex)b.style.background=bg.hex;if(bg.k==='W')b.style.borderColor='#ccc';b.title=bg.label;b.id='bg-'+i;b.onclick=()=>{ST.bg=i;render(false);};c.appendChild(b);});}
+function buildTX(){const c=document.getElementById('txbtns');TXS.forEach(t=>{const b=document.createElement('button');b.className='tagbtn'+(ST.tx===t.k?' on':'');b.textContent=t.label;b.id='tx-'+t.k;b.onclick=()=>{ST.tx=t.k;render(false);};c.appendChild(b);});}
+function buildFX(){const c=document.getElementById('fxbtns');FXS.forEach(t=>{const b=document.createElement('button');b.className='tagbtn'+(ST.fx===t.k?' on':'');b.textContent=t.label;b.id='fx-'+t.k;if(t.desc)b.title=t.desc;b.onclick=()=>{ST.fx=t.k;render(false);};c.appendChild(b);});}
+function buildLegend(){const g=document.getElementById('legend');CKEYS.forEach(k=>{const d=document.createElement('div');d.className='lgi';d.innerHTML=`<span class="lgd" style="background:${PAL[k].hex};${k==='W'?'border:1px solid #bbb':''}"></span><span class="lgk">${k}</span>`;g.appendChild(d);});}
+function doCopy(){navigator.clipboard&&navigator.clipboard.writeText(enc());const b=document.getElementById('btn-copy');b.textContent='Copied!';setTimeout(()=>b.textContent='Copy',900);}
+function applyCode(){const r=dec(document.getElementById('cin').value);if(!r){document.getElementById('cerr').style.display='';document.getElementById('cin').classList.add('err');return;}Object.assign(ST,r);document.getElementById('cin').value='';clearErr();doFlash();render(true);}
+function clearErr(){document.getElementById('cerr').style.display='none';document.getElementById('cin').classList.remove('err');}
+function svgToPng(blob,w,h){return new Promise(res=>{const img=new Image(),url=URL.createObjectURL(blob);img.onload=()=>{const c=document.createElement('canvas');c.width=w;c.height=h;c.getContext('2d').drawImage(img,0,0,w,h);URL.revokeObjectURL(url);res(c.toDataURL('image/png'));};img.src=url;});}
+function mkBlob(sz,incTx,incFx){const ac=adjCols(ST.colors,ST.sat);return new Blob([mkSVG(ac,ST.stroke,ST.bg,sz,ST.weight/100,ST.tx,ST.fx,incTx,incFx)],{type:'image/svg+xml'});}
+function dlSVG(){const it=document.getElementById('txsvg').checked,ix=document.getElementById('fxsvg').checked;const a=document.createElement('a');a.href=URL.createObjectURL(mkBlob(800,it,ix));a.download=`jana-${enc()}.svg`;a.click();}
+function dlPNG(){const sz=parseInt(document.getElementById('pngsz').value),it=document.getElementById('txsvg').checked,ix=document.getElementById('fxsvg').checked;svgToPng(mkBlob(sz,it,ix),sz,sz).then(u=>{const a=document.createElement('a');a.href=u;a.download=`jana-${enc()}.png`;a.click();});}
+async function dlSheet(){
+  const sz=300,it=document.getElementById('txsvg').checked,ix=document.getElementById('fxsvg').checked;
+  const ac=adjCols(ST.colors,ST.sat);
+  const bW=new Blob([mkSVG(ac,ST.stroke,1,sz,ST.weight/100,ST.tx,ST.fx,it,ix,'_sw')],{type:'image/svg+xml'});
+  const bB=new Blob([mkSVG(ac,ST.stroke,2,sz,ST.weight/100,ST.tx,ST.fx,it,ix,'_sb')],{type:'image/svg+xml'});
+  const[pW,pB]=await Promise.all([svgToPng(bW,sz,sz),svgToPng(bB,sz,sz)]);
+  const W=sz*2+60,H=sz+80;const cv=document.createElement('canvas');cv.width=W;cv.height=H;
+  const ctx=cv.getContext('2d');
+  ctx.fillStyle='#FAFAF8';ctx.fillRect(0,0,W/2,H);ctx.fillStyle='#111';ctx.fillRect(W/2,0,W/2,H);
+  const li=new Image(),di=new Image();
+  await Promise.all([new Promise(r=>{li.onload=r;li.src=pW;}),new Promise(r=>{di.onload=r;di.src=pB;})]);
+  ctx.drawImage(li,20,20,sz,sz);ctx.drawImage(di,sz+40,20,sz,sz);
+  ctx.fillStyle='#F0C30F';ctx.fillRect(0,sz+20,W,60);
+  ctx.fillStyle='#111';ctx.font='bold 13px "Space Mono",monospace';ctx.textAlign='center';
+  ctx.fillText(enc(),W/2,sz+46);
+  ['#D7141A','#F0C30F','#0046AD'].forEach((col,i)=>{ctx.fillStyle=col;ctx.beginPath();ctx.arc(W/2-18+i*18,sz+64,4,0,Math.PI*2);ctx.fill();});
+  const a=document.createElement('a');a.href=cv.toDataURL('image/png');a.download=`jana-sheet-${enc()}.png`;a.click();
+}
+
+loadHash();buildQGrid();buildBG();buildTX();buildFX();buildLegend();render(false);
+document.getElementById('txsvg').addEventListener('change',()=>render(false));
+document.getElementById('fxsvg').addEventListener('change',()=>render(false));
+</script>
+</html>
