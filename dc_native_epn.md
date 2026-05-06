@@ -2,8 +2,11 @@
 ## How Far Can Electricity Return from Alternating Current to Direct Current?
 
 **Jean Hugues Noël Robert, baron Mariani**
+
 Institut Mariani / C.O.R.S.I.C.A.
+
 1 cours Paoli, F-20250 Corte, Corsica, France
+
 jhr@baronsmariani.org | fractavolta.com
 
 ---
@@ -451,6 +454,8 @@ The EPN does not require a universal DC revolution. It requires a more precise, 
 The old grid needed AC because it was a continuous synchronized circuit.
 
 The EPN needs DC because it is a **store-and-forward network of autonomous exergy packets**.
+
+The persistence of AC where it is no longer structurally necessary is not a technical failure. It is a case of what the companion paper [6] calls *amathia* — the Aristotelian term for the ignorance of one's own ignorance: the inability to formulate the question, not the inability to answer it. Grid engineers possess every piece of knowledge required to conceive the energy packet. What is missing is not information but the synthetic intelligence that assembles the pieces across domain boundaries. The DC-native EPN is not a technical proposal addressed to engineers who have considered and rejected it. It is a demonstration addressed to the amathia that has prevented the question from forming.
 
 That is the real return of direct current: not as the defeated current of Edison, but as the native current of packetized sovereignty — and the engineering foundation of FractaVolta's Mediterranean inference layer.
 
