@@ -2,6 +2,8 @@
 
 > From photons to inference
 
+> A distributed approach to solar energy, storage, and AI infrastructure.
+
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-FractaVolta-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/company/fractavolta)
 ![Status](https://img.shields.io/badge/status-early--stage-orange)
 ![Focus](https://img.shields.io/badge/focus-energy%20%2B%20compute%20%2B%20QoS-blue)
