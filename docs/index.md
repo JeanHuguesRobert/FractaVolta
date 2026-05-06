@@ -1,3 +1,5 @@
+![FractaVolta logo](./assets/jana.svg)
+
 # FractaVolta
 
 > From photons to inference
