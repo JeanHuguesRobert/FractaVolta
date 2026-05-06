@@ -1,8 +1,8 @@
-![FractaVolta logo](./assets/jana.svg)
+![FractaVolta](./assets/banner.svg)
 
 # FractaVolta
 
-> From photons to inference
+> From photons to inferences
 
 FractaVolta explores how to transform abundant solar energy into reliable, usable services.
 
