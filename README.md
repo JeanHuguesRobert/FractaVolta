@@ -6,6 +6,8 @@
 ![Status](https://img.shields.io/badge/status-early--stage-orange)
 ![Focus](https://img.shields.io/badge/focus-energy%20%2B%20compute%20%2B%20QoS-blue)
 
+🌐 https://fractavolta.com — public entry point
+
 ------
 
 ## TL;DR
