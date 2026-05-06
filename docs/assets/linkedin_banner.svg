@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1584 396">
+
+  <!-- Background -->
+  <rect width="1584" height="396" fill="#0B0B0B"/>
+
+  <!-- Subtle gradient -->
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B0B0B"/>
+      <stop offset="100%" stop-color="#111111"/>
+    </linearGradient>
+  </defs>
+  <rect width="1584" height="396" fill="url(#g)"/>
+
+  <!-- Logo (small, discreet) -->
+  <g transform="translate(80,100) scale(0.18)">
+    <defs>
+      <clipPath id="cNW"><rect x="0" y="0" width="376" height="376"/></clipPath>
+      <clipPath id="cNE"><rect x="424" y="0" width="376" height="376"/></clipPath>
+      <clipPath id="cSW"><rect x="0" y="424" width="376" height="376"/></clipPath>
+      <clipPath id="cSE"><rect x="424" y="424" width="376" height="376"/></clipPath>
+      <clipPath id="cD"><circle cx="400" cy="400" r="400"/></clipPath>
+    </defs>
+
+    <g clip-path="url(#cD)">
+      <circle cx="400" cy="400" r="400" fill="#D7141A" clip-path="url(#cNW)"/>
+      <circle cx="400" cy="400" r="400" fill="#F0C30F" clip-path="url(#cNE)"/>
+      <circle cx="400" cy="400" r="400" fill="#0046AD" clip-path="url(#cSW)"/>
+      <circle cx="400" cy="400" r="400" fill="#FFFFFF" clip-path="url(#cSE)"/>
+      <rect x="376" y="0" width="48" height="800" fill="#222222"/>
+      <rect x="0" y="376" width="800" height="48" fill="#222222"/>
+    </g>
+
+    <circle cx="400" cy="400" r="376" fill="none" stroke="#222222" stroke-width="48"/>
+  </g>
+
+  <!-- Main title -->
+  <text x="520" y="170"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="64"
+        fill="#FFFFFF"
+        font-weight="600">
+    FractaVolta
+  </text>
+
+  <!-- Key message -->
+  <text x="520" y="230"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="30"
+        fill="#CCCCCC">
+    Turning solar abundance into reliable infrastructure
+  </text>
+
+  <!-- Economic signal -->
+  <text x="520" y="280"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="22"
+        fill="#888888">
+    Energy · Compute · Quality of Service
+  </text>
+
+  <!-- Accent line -->
+  <rect x="520" y="300" width="400" height="2" fill="#444444"/>
+
+</svg>
