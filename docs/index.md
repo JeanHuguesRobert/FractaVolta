@@ -25,8 +25,8 @@ FractaVolta addresses this gap.
 
 ## Learn more
 
-- 📄 [Full README](../README.md)
-- 📚 [Papers](../README.md#repository-contents)
+- 📄 [Full README](https://github.com/JeanHuguesRobert/FractaVolta)
+- 📚 [Papers](https://github.com/JeanHuguesRobert/FractaVolta#repository-contents)
 - 🔗 [LinkedIn](https://www.linkedin.com/company/fractavolta)
 
 ---
