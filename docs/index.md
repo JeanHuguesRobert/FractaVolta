@@ -7,7 +7,7 @@ FractaVolta explores how to transform abundant solar energy into reliable, usabl
 Instead of centralized infrastructure, it applies distributed system patterns to energy:
 - modular storage
 - local decision-making
-- redundancy (RAIB)
+- redundancy
 - graceful degradation
 
 ---
