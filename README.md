@@ -1,26 +1,45 @@
 # FractaVolta
 
-> From photons to inferences
+> From photons to inference
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-FractaVolta-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/company/fractavolta)
+![Status](https://img.shields.io/badge/status-early--stage-orange)
+![Focus](https://img.shields.io/badge/focus-energy%20%2B%20compute%20%2B%20QoS-blue)
+
+------
+
+## TL;DR
+
+- The electrical grid is still **circuit-switched**
+- Solar energy is **abundant but poorly utilized**
+- FractaVolta applies **packet-switching to energy**
+- Batteries, vehicles, and containers become **energy packets**
+- Result: **resilient, distributed, scalable infrastructure**
+
+---
 
 **Energy Packet Networks — from Mediterranean Sun to Sovereign Infrastructure**
 
-*Jean Hugues Noël Robert, baron Mariani*
+FractaVolta applies **packet-switching principles to energy**, transforming solar abundance into reliable, high-value services.
 
-Institut Mariani / C.O.R.S.I.C.A. — 1 cours Paoli, F-20250 Corte, Corsica
+*Jean Hugues Noël Robert*  
+Institut Mariani / C.O.R.S.I.C.A. — Corte, Corsica  
 
-jhr@baronsmariani.org · fractavolta.com
+📧 jhr@baronsmariani.org  
+🌐 https://fractavolta.com
 
 ---
 
 ## The Core Insight
 
-In 1964, Paul Baran proposed dividing communications into discrete packets — each carrying its own address, routed independently, reassembled at destination. By 1969, ARPANET had demonstrated the principle. By 2000, the circuit-switched telephone network was obsolete.
+In 1964, Paul Baran introduced packet-switching.
+By 2000, it had replaced circuit-switched networks.
 
-The global electrical grid has not noticed.
+The electrical grid has not noticed.
 
 It remains, structurally, a circuit-switched network: dedicated paths, continuous synchronisation, saturation that blocks all flow when any segment is full. The SARCO submarine cable connecting Corsica to continental France — saturated for significant portions of each year, while the island receives some of Europe's highest solar irradiation — is a textbook case.
 
-**FractaVolta applies packet-switching to energy.**
+> **FractaVolta applies packet-switching to energy.**
 
 The insight is simple: a charged battery is an energy packet. The person carrying a mobile phone from one location to another is routing an energy packet. A twenty-foot shipping container of lithium iron phosphate cells, loaded onto a roll-on/roll-off ferry in Bastia and unloaded in Livorno, is a 2 MWh energy packet crossing 170 kilometres of sea with no cable, no synchronisation, and no saturated interconnection.
 
@@ -30,11 +49,26 @@ FractaVolta provides the protocol, the deployment framework, and the expertise t
 
 ---
 
+## Why it matters
+
+Solar energy is no longer scarce.
+
+What is scarce is:
+- reliability
+- timing
+- quality of service
+
+FractaVolta addresses this gap.
+
+---
+
 ## The Architecture
 
 FractaVolta is built on three interlocking principles:
 
 ### 1. Store-and-Forward at Every Scale
+
+> Energy is not a flow. It is a packet.
 
 Energy packets are discrete, addressable, and physically transportable. The routing decision — which packet goes where, when, at what price — is made locally by the carrying agent responding to price signals, not by a central dispatcher. This is stigmergy: the same coordination mechanism that termite colonies use to build cathedrals without an architect.
 
@@ -175,6 +209,6 @@ The antifragility of the energy layer **propagates structurally** to the inferen
 
 ---
 
-*© 2026 Jean Hugues Noël Robert, baron Mariani — Institut Mariani / C.O.R.S.I.C.A.*
+*© 2026 Jean Hugues Noël Robert — Institut Mariani / C.O.R.S.I.C.A.*
 
-*Documentation: CC BY 4.0 · Software: Apache 2.0*
+*Documentation: CC BY 4.0 · Software:TBD*
