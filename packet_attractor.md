@@ -1,5 +1,7 @@
 # The Packet as Evolutionary Attractor: Scale-Invariant Transitions in Complex Networks
 
+**Version 2 — Revised following peer critique**
+
 **Jean Hugues Noël Robert, baron Mariani**
 
 Institut Mariani / C.O.R.S.I.C.A. / FractaVolta
@@ -12,240 +14,219 @@ jhr@baronsmariani.org | fractavolta.com
 
 ## Abstract
 
-Complex networks — whether informational, monetary, energetic, or social — appear to undergo a recurrent structural transition as they mature: from continuous circuit-switched flow to discrete store-and-forward packet routing. This paper asks whether this convergence is accidental or reflects an underlying invariant. The question is deliberately narrow. It does not claim that the universe is computational, discrete, or information-theoretic — claims that have been made, debated, and remain unresolved. It asks something more tractable: is the circuit-to-packet transition a universal evolutionary attractor of complex networks, and if so, what are its scale-invariant properties?
+Complex networks — whether informational, monetary, energetic, or social — appear to undergo a recurrent structural transition as they mature: from continuous circuit-switched flow to discrete store-and-forward packet routing. This paper asks whether this convergence is accidental or reflects an underlying invariant.
 
-The observation motivating the question is a convergence across independent domains: physics has discovered that energy is quantized at the smallest known scales; biology has discovered that genetic information is encoded in discrete codons; linguistics has identified the phoneme as the irreducible discrete unit of spoken language; computer science has built its entire edifice on the discrete state transition; and network engineering has demonstrated that packet-switched architectures outperform circuit-switched architectures across every domain where both have been tried. Five independent disciplines. Five independent convergences. The same structure.
+Two levels of claim are carefully distinguished throughout. The first is a *structural observation*: discrete units appear independently as fundamental structures across multiple domains — physics, biology, linguistics, computer science, and network engineering. This observation is established and not contested. The second is a *causal hypothesis*: these discretizations may share a common underlying mechanism, and the circuit-to-packet transition in engineering may be a macroscopic instance of a discretization principle that operates across scales. This hypothesis is not established. It is the question this paper poses.
 
-This convergence is offered not as proof but as a question precisely formulated for physicists and complexity theorists: does the packet transition exhibit the formal properties of a phase transition — an order parameter, a critical point, scaling laws, universality classes? If so, the circuit-to-packet transition in engineering may be a macroscopic echo of a discretization principle that operates at every scale of observable reality.
+The paper does not claim that the universe is computational, discrete at a fundamental level, or information-theoretic. It does not assert that photons, codons, and IP packets are the same phenomenon. It asks whether the engineering transition from circuit to packet — observed independently in information, monetary, energy, and habitat networks — exhibits structural properties worth investigating formally. The mathematics required for that investigation is beyond the author's formation. The question is offered to those who have it.
 
-**Keywords:** packet switching; phase transition; scale invariance; complex networks; evolutionary attractor; universality; discretization; quantum; fractal; store-and-forward; FractaVolta; network evolution
+**Conflict of interest declared**: the author has a direct commercial interest in the packet energy thesis through FractaVolta and Mariani Village. This conflict is declared explicitly. The theoretical hypothesis should be evaluated independently of its commercial applications. The empirical instances (FractaVolta, Mariani Village) are offered as observable, measurable cases — not as proof of the theoretical claim.
+
+**Keywords:** packet switching; complex networks; evolutionary attractor; discretization; store-and-forward; scale invariance; network evolution; FractaVolta; Mariani Village; open question
 
 ---
 
-## 1. A Disclosure
+## 1. Two Disclosures
 
-The central intuition of this paper — that complex systems are fundamentally discrete, and that their evolution tends toward discrete packet architectures — originates in a career in computer science. This origin is disclosed not as a limitation but as a transparency requirement.
+### 1.1 The author's formation
 
-The computer scientist thinks in state transitions. The basic unit of computation is the bit: a system that is either 0 or 1, never continuously between them. Every algorithm is a sequence of discrete state changes under rule-governed control. The digital computer is the most successful engineering artifact in human history precisely because it imposes discretization on a physical substrate — the transistor — that is itself governed by continuous physics.
+The central intuition of this paper — that complex systems tend toward discrete packet architectures as they mature — originates in a career in computer science. The computer scientist thinks in state transitions. Every algorithm is a sequence of discrete state changes under rule-governed control. This formation creates a predisposition: the trained computer scientist tends to see discrete structures everywhere.
 
-This formation creates a cognitive predisposition: the trained computer scientist tends to see discrete states, transition rules, and packet structures everywhere. This predisposition may be a bias that projects discretization onto a continuous reality. Or it may be a sensitivity that detects a real structure that other disciplinary formations miss.
+This predisposition may be a bias that projects discretization onto a continuous reality. Or it may be a sensitivity that detects a real structure that other disciplinary formations miss. The argument for the latter is the convergence described in §3: physicists, biologists, linguists, and economists — none of them computer scientists — independently arrived at discrete structures as fundamental to their domains. When the same structure appears independently across disciplines with no shared formation, the probability that it is a projection of any single discipline's bias decreases. But it does not reach zero. The bias remains a possibility and is declared as such.
 
-The argument for the latter is the convergence described in this paper: physicists who were not computer scientists, biologists who were not computer scientists, linguists who were not computer scientists, and economists who were not computer scientists all arrived, independently, at discrete structures as the fundamental units of their respective domains. When the same structure appears independently across disciplines with no shared formation, the probability that it is a projection of any single discipline's bias decreases substantially.
+### 1.2 The author's interest
 
-This paper is therefore offered in the spirit of Schrödinger's *What is Life?* (1944) [1]: a practitioner stepping outside their domain of formation, posing a question with the precision their own discipline affords, and inviting specialists to determine whether the question is well-formed. Schrödinger was a physicist asking a biological question. The present author is a computer scientist asking a physical question. The risk of error is real. The potential value of the question justifies the attempt.
+FractaVolta and Mariani Village — both cited in this paper as empirical instances of the packet transition — are projects in which the author has a direct commercial and institutional interest. This conflict is not hidden. It is declared here, at the opening, so that the reader can weight the argument accordingly.
+
+The consequence is not that the hypothesis is wrong. It is that the hypothesis requires a higher standard of independent scrutiny than a paper without conflict of interest would require. The author accepts this asymmetry. The question stands or falls on its own merits, not on the author's interests.
 
 ---
 
 ## 2. What This Paper Does Not Claim
 
-The idea that reality is fundamentally computational or discrete has been proposed, in various forms, by several serious thinkers:
+Precision requires stating what is not claimed before stating what is.
 
-- **Zuse (1969)**: the universe as a cellular automaton running on a discrete computational substrate [2]
-- **Fredkin (1980s)**: digital physics — the universe as a finite-state machine [3]
-- **Wolfram (2002)**: all complexity generated by simple computational rules applied to discrete states [4]
-- **Wheeler (1990)**: "It from Bit" — information as the substrate of physical reality [5]
-- **Lloyd (2006)**: the universe as a quantum computer [6]
-- **Tegmark (2014)**: mathematical structures as the ultimate reality [7]
+**This paper does not claim** that the universe is computational, that reality is fundamentally discrete, or that information is more fundamental than matter. These claims have been made seriously by Zuse [1], Fredkin [2], Wolfram [3], Wheeler [4], Lloyd [5], and Tegmark [6]. They are contested and unresolved. This paper takes no position on them.
 
-These proposals are serious, contested, and unresolved. This paper takes no position on them. It does not claim that the universe is a computer, that information is more fundamental than matter, or that discreteness is a metaphysical truth about reality.
+**This paper does not claim** that photons, codons, and IP packets are the same phenomenon. They are not. The quantum of energy is a property of the electromagnetic field with no routing protocol, no address header, and no reassembly at the destination. The codon is a triplet of nucleotides that evolution did not *discover* through a transition from continuous to discrete — it *began* discrete. The IP packet is an engineering artifact with an explicit address, checksum, and time-to-live field. These are structurally analogous in one narrow sense — they are all discrete units — and radically different in every other sense.
 
-The question here is narrower and more tractable:
+**This paper does not offer** a formal model, equations, simulations, or empirical measurements. The author does not have the mathematical formation to produce these. Borrowing the vocabulary of phase transitions, order parameters, universality classes, and scaling laws without providing the corresponding formalism would be intellectually dishonest. Where this vocabulary appears, it is qualified explicitly as pointing toward questions, not asserting results.
 
-> *Across observable complex networks — information, money, energy, habitat — the circuit-to-packet transition appears as a recurrent evolutionary pattern. Is this convergence accidental, or does it reflect a structural invariant? And if it reflects an invariant, does that invariant share formal properties with known physical universality classes?*
-
-This question can be asked and potentially answered without committing to any position on the computational nature of reality. It is a question about the dynamics of complex networks, not about the ontology of the universe.
+**What this paper does claim** is narrow: the circuit-to-packet transition has been observed independently in information networks, monetary networks, energy networks, and habitat networks. This convergence is real, documented, and not yet formally explained. A formal investigation of whether it constitutes a universal evolutionary attractor — with the tools of complexity science, network theory, and statistical physics — seems warranted. The author cannot conduct that investigation. This paper is an invitation to those who can.
 
 ---
 
-## 3. The Convergence: Five Independent Discretizations
+## 3. The Structural Observation: Independent Convergences
 
-The observation motivating this paper is a convergence. Five independent disciplines, with no shared formation and no common historical lineage, have arrived at discretization as the fundamental structure of their domain.
+The following five convergences are offered as a *structural observation* — established facts, not hypotheses. The causal interpretation of these convergences is the hypothesis, addressed separately in §4.
 
-### 3.1 Physics: the quantum
+### 3.1 Physics: energy is quantized at small scales
 
-Classical physics described energy as a continuous quantity: a heated object radiated energy smoothly across all frequencies. In 1900, Max Planck introduced the hypothesis that energy is emitted in discrete quanta — multiples of *hν*, where *h* is Planck's constant and *ν* is frequency — to resolve the ultraviolet catastrophe in blackbody radiation [8].
+Classical physics described energy as a continuous quantity. Planck's 1900 hypothesis — that blackbody radiation could only be explained if energy is emitted in discrete quanta of magnitude *hν* — resolved the ultraviolet catastrophe [7]. Einstein's 1905 photoelectric paper established that light is composed of discrete photons [8]. Subsequent quantum mechanics generalized this: charge, spin, angular momentum are all quantized at small scales.
 
-Planck believed his quantization was a mathematical artifact, not a physical reality. Einstein's 1905 paper on the photoelectric effect established that light itself is composed of discrete quanta — photons — and that this discreteness is physically real [9].
+**Important distinction**: the quantum is not the result of an evolutionary transition from continuous to discrete. It is a fundamental property of matter at small scales, discovered by physicists who expected continuity and found discreteness. The continuous description of classical physics is an approximation that holds at large scales and breaks down at small ones.
 
-The subsequent development of quantum mechanics generalized this discovery: charge is quantized (the electron), spin is quantized, angular momentum is quantized. At the smallest known scales, the continuous is an approximation. The discrete is fundamental.
+This is noted not as an analogy with packet networks but as a datum: discreteness is not an artifact of engineering choices. It appears at the foundation of physical reality, at scales far below any engineering intervention.
 
-### 3.2 Biology: the codon
+### 3.2 Biology: genetic information is encoded discretely
 
-The genetic code encodes biological information in discrete triplets of nucleotides — codons — each specifying one of twenty amino acids or a stop signal. There is no continuous interpolation between codons. The mapping from codon to amino acid is discrete, redundant, and universal across all known life [10].
+The genetic code maps discrete triplets of nucleotides (codons) to discrete amino acids. There are 64 codons and 20 amino acids plus stop signals. The mapping is discrete, redundant, and universal across all known life [9].
 
-Watson, Crick, and Franklin were not computer scientists. They were not thinking about packet switching. They discovered that biological heredity is implemented as a discrete addressing system: a four-letter alphabet, three-letter words, twenty-letter output vocabulary. It is, structurally, a compression codec operating on a discrete packet.
+**Important distinction**: biology did not transition from continuous to discrete encoding. The discrete codon structure is as old as life itself — at least 3.5 billion years old. There is no known precursor continuous encoding system. Biology began with the packet.
 
-### 3.3 Linguistics: the phoneme
+Again, this is noted as a datum, not an analogy. The engineering packet was invented in 1964. The biological packet predates it by 3.5 billion years. If there is a connection, it is not one of historical influence.
 
-Spoken language is a continuous acoustic waveform. But meaning is not carried by the waveform continuously — it is carried by discrete units: phonemes, morphemes, words, sentences. The phoneme is the smallest discrete unit that distinguishes meaning. Continuous variation within a phoneme category is perceptually absorbed; crossing a category boundary changes meaning discontinuously [11].
+### 3.3 Linguistics: phonemes are discrete perceptual units
 
-The listener does not hear a continuous signal. They hear a sequence of discrete packets — phonemes — assembled by a routing algorithm (syntax) into a meaningful message. The voice is the carrier. The packet is the phoneme.
+Spoken language is a continuous acoustic waveform. Meaning is not carried continuously — it is carried by discrete phonemes, the smallest units that distinguish meaning in a given language. Continuous variation within a phoneme category is perceptually absorbed; crossing a category boundary changes meaning discontinuously [10].
 
-### 3.4 Computer science: the bit
+**Important distinction**: the phoneme is a perceptual category, not a physical object. It is the outcome of a perceptual system that discretizes a continuous acoustic signal. This is a different kind of discretization from the quantum or the codon — it is cognitive rather than physical.
 
-The entire edifice of computer science rests on a single discretization: the binary digit. Shannon's 1948 paper [12] established that any information channel can be characterized by its capacity in bits — discrete units of information — and that optimal coding approaches this capacity as a limit. The continuous analog signal is not the fundamental unit. The bit is.
+### 3.4 Computer science: the bit as optimal discrete unit
 
-This is not a choice made for convenience. Shannon proved it is optimal: discrete binary encoding achieves channel capacity that continuous analog encoding cannot exceed.
+Shannon's 1948 information theory [11] established that any information channel can be characterized by a capacity in bits — discrete binary units — and that optimal encoding approaches this capacity. The continuous analog signal is not the fundamental unit. The bit is. This was not a choice of convenience but a mathematical theorem.
 
-### 3.5 Network engineering: the packet
+### 3.5 Network engineering: packet architectures outperform circuit architectures
 
-Circuit-switched networks — telephone, electrical grid, water distribution — allocate a dedicated continuous path between source and destination for the duration of the communication. Packet-switched networks break the message into addressed discrete units, route them independently, and reassemble at the destination.
+In every domain where both circuit-switched and packet-switched architectures have been deployed at scale, the packet architecture has proven more robust, more efficient under variable load, and more resilient to partial failure:
 
-ARPANET demonstrated in 1969 that packet switching outperforms circuit switching for data communication [13]. The internet has since demonstrated it at planetary scale. Bitcoin demonstrated in 2009 that monetary value can be transferred as discrete signed packets without trusted intermediaries [14]. FractaVolta proposes that energy can be stored and routed as discrete battery packets [15].
+- **Information networks**: ARPANET (1969) → internet (2024). The telephone circuit-switched network coexisted with the packet-switched internet for thirty years before losing ground [12].
+- **Monetary networks**: correspondent banking (circuit) → Bitcoin and DeFi (packet, 2009–2024) [13]. The transition is ongoing and contested.
+- **Energy networks**: AC grid (circuit) → Energy Packet Network (packet, proposed) [14]. The transition is in early stages.
+- **Habitat**: permanent dwelling (circuit) → relocatable container unit (packet, proposed) [15]. The transition is in prototype stage.
 
-In every domain where both architectures have been tried, the packet architecture has proven more robust, more efficient under variable load, and more resilient to partial failure than the circuit architecture.
-
----
-
-## 4. The Formal Question
-
-The convergence described in §3 is an observation, not a proof. Five independent disciplines have arrived at discretization. The question is whether this convergence reflects a structural invariant — a property of complex systems that causes them to evolve toward discrete packet architectures regardless of their physical substrate.
-
-The language of physics offers a precise framework for this question: **phase transitions and universality**.
-
-### 4.1 Phase transitions
-
-A phase transition is a qualitative change in the macroscopic behavior of a system driven by a control parameter crossing a critical threshold. Water transitions from liquid to solid at 0°C; from liquid to gas at 100°C. At the critical point, the system exhibits scale-invariant behavior: fluctuations at every length scale, power-law distributions, diverging correlation lengths.
-
-The remarkable discovery of the renormalization group (Wilson, 1971) [16] is that systems with very different microscopic physics can exhibit *identical* critical behavior — the same scaling exponents, the same universality class — because the critical behavior depends only on a small number of macroscopic properties (dimensionality, symmetry) rather than on microscopic details.
-
-This is universality: the same mathematics describes the liquid-gas transition in water and the ferromagnetic transition in iron, despite their completely different physics.
-
-### 4.2 Is the circuit-to-packet transition a phase transition?
-
-The question this paper poses to physicists and complexity theorists is:
-
-> *Does the circuit-to-packet transition exhibit the formal properties of a phase transition?*
-
-Specifically:
-
-**Is there an order parameter?** In a ferromagnetic transition, the order parameter is magnetization — zero in the disordered phase, nonzero in the ordered phase. What is the analog in the circuit-to-packet transition? Candidates include: the fraction of traffic carried as packets versus continuous flow; the ratio of storage capacity to transmission capacity; the degree of asynchrony between production and consumption.
-
-**Is there a critical point?** Water becomes steam at a specific temperature and pressure. Is there a combination of storage cost, routing overhead, and demand variability at which a circuit network transitions discontinuously to a packet architecture? The historical record suggests there may be: the telephone network remained circuit-switched for nearly a century, then transitioned to packet switching over a period of roughly fifteen years. This is suggestive of a threshold rather than a gradual migration.
-
-**Are there scaling laws?** At a critical point, physical systems exhibit power-law distributions with characteristic exponents. Barabási and Albert demonstrated that many real-world networks — the internet, citation networks, biological networks — exhibit scale-free degree distributions following power laws [17]. Is the circuit-to-packet transition associated with a change in the network's degree distribution? Does the transition produce a scale-free topology?
-
-**Is there a universality class?** If the circuit-to-packet transition is a phase transition, do information networks, energy networks, and monetary networks belong to the same universality class — exhibiting the same critical exponents despite their different physical substrates? Or do they belong to different classes?
-
-These are precise, answerable questions. They are not philosophical claims about the nature of reality. They are research questions in the physics of complex networks.
-
-### 4.3 The fractal connection
-
-Mandelbrot's fractal geometry [18] and Feigenbaum's discovery of universal constants in the period-doubling route to chaos [19] established that self-similar structures — structures that look the same at every scale — appear throughout nature: coastlines, snowflakes, turbulent flows, heartbeat intervals.
-
-The packet structure appears at every scale of the systems discussed in this paper:
-
-```
-Scale 10⁻³⁵ m  →  Planck length (speculative discrete spacetime)
-Scale 10⁻¹⁵ m  →  quark confinement (discrete hadrons)
-Scale 10⁻¹⁰ m  →  atomic discreteness
-Scale 10⁻⁹ m   →  molecular discreteness (codons, proteins)
-Scale 10⁻¹ m   →  phoneme (acoustic packet)
-Scale 10⁰ m    →  bit (digital packet)
-Scale 10¹ m    →  ISO container (habitat/energy packet)
-Scale 10⁶ m    →  planetary network packet (satellite, submarine cable segment)
-```
-
-Is this scale-invariance accidental, or is the packet a fractal attractor — a structure that self-similarity selects at every scale because it is the optimal solution to the problem of routing discrete value through a noisy, resource-constrained environment?
-
-This is the deepest form of the question. It may be unanswerable with current tools. But it is precisely formulated — which is the precondition for being answerable at all.
+**The critical distinction between §3.1–3.4 and §3.5**: the first four convergences describe discreteness as a *discovered property* of natural systems. The fifth describes discreteness as an *engineering choice* that proves superior to the continuous alternative when tried. These are different kinds of convergence. The connection between them — if any — is the hypothesis of §4.
 
 ---
 
-## 5. The Perceptual Illusion of Continuity
+## 4. The Causal Hypothesis: A Question, Not an Answer
 
-A subsidiary observation, offered without formal claim.
+The structural observation of §3 raises a question. The five convergences involve different kinds of discreteness, different mechanisms, and different scales. Are they connected, or is their apparent similarity a coincidence — an artifact of the word "discrete" being applied to very different phenomena?
 
-The human perceptual system is an integrator. The retina integrates photons over approximately 50 milliseconds — the persistence of vision that makes cinema possible. The cochlea integrates acoustic compressions over approximately 20 milliseconds — the temporal resolution limit of auditory perception. Below these integration times, discrete events are perceived as continuous flow.
+This paper cannot answer that question. It can formulate it.
 
-This integration is not a limitation. It is adaptive: the organism does not need to process every photon independently. Integration reduces computational load while preserving sufficient information for survival.
+### 4.1 The engineering question (tractable)
 
-The consequence is that continuity, as experienced, is always an approximation — an integration of discrete events over a perceptual window. The question is not whether reality is discrete or continuous, but at what scale the discrete becomes imperceptible and the continuous approximation becomes adequate.
+Within the domain of engineering networks alone — setting aside quantum physics, biology, and linguistics — a well-defined question exists:
 
-This observation extends to institutional perception:
+> *Why does the packet architecture consistently outperform the circuit architecture in every domain where both have been tried, regardless of what the network carries?*
 
-- The electrical grid *feels* continuous to the consumer — the light comes on when the switch is flipped. The underlying reality is a synchronized dance of discrete generator outputs, transformer tap changes, and protection relay operations.
-- The monetary system *feels* continuous to the depositor — the balance changes smoothly. The underlying reality is a sequence of discrete ledger entries, clearing cycles, and settlement events.
-- The housing market *feels* permanent to the tenant — the address is fixed. The underlying reality is a sequence of discrete contractual events: lease signing, renewal, termination.
+This question does not require any claim about the nature of physical reality. It is a question about network dynamics. It has a partial answer in information theory (Shannon capacity, queuing theory, resilience under partial failure) but no unified formal account that applies across information, monetary, energy, and habitat networks simultaneously.
 
-In each case, the circuit model is the perceptual integration of a discrete substrate. The packet model makes the substrate visible.
+A unified formal account would be a contribution to network science. It would not require the physics of §4.2 and could stand independently.
 
-> *The continuous is what the observer perceives. The discrete is what the system computes. The circuit is the user interface. The packet is the implementation.*
+### 4.2 The physical question (speculative but precisely formulated)
+
+The more ambitious question is whether the engineering convergence toward packet architectures is related to the natural convergence toward discreteness observed in physics and biology.
+
+This question *resembles* questions that have been asked in statistical physics about universality: why do systems with very different microscopic physics exhibit identical macroscopic behavior near critical points? The renormalization group [16] provides a mathematical framework for answering such questions — but applying it to network transitions requires a formal model that this paper cannot provide.
+
+The question is therefore stated as an open invitation, not a claim:
+
+> *Does the circuit-to-packet transition in engineering networks exhibit structural properties — sharpness of transition, scaling behavior, independence from microscopic details — that would justify a formal investigation using the tools of statistical physics? If so, what is the appropriate model?*
+
+This is a question a complexity theorist or statistical physicist could evaluate. It may turn out to be well-formed and answerable. It may turn out to be a category error — applying physical concepts to social and engineering systems where they do not belong. The author cannot determine which. The invitation is genuine.
+
+### 4.3 What would falsify the hypothesis
+
+A hypothesis that cannot be falsified is not a scientific hypothesis. The following observations would weaken or falsify the claim that the packet transition is a universal evolutionary attractor:
+
+- A mature, large-scale network in which the circuit architecture outperforms the packet architecture under realistic operating conditions, after both have been optimized
+- Evidence that the packet transitions in information, monetary, and energy networks occurred through different mechanisms with no shared structural properties
+- A formal proof that the engineering packet transition cannot be mapped onto any known universality class in statistical physics, for principled mathematical reasons
+
+The author does not know whether any of these falsifying observations exist. Identifying them is part of the research program being invited.
 
 ---
 
-## 6. What the Physicist Should Look For
+## 5. The Perceptual Continuity Observation
 
-This paper cannot provide the formal analysis it calls for. The author does not have the mathematical formation required. What it can do — following the Einstein-Grossmann model of intellectual division of labor — is formulate the question precisely enough that a physicist or complexity theorist can determine whether it is well-formed, and if so, begin to answer it.
+A subsidiary observation, offered with less formal ambition.
 
-The specific research questions, in order of tractability:
+Human perception integrates discrete events into continuous experience. The retina integrates photons over approximately 50 milliseconds — producing the persistence of vision that makes cinema possible. The cochlea integrates acoustic compressions — producing the smooth experience of sound from discrete pressure waves. Below the integration threshold, events are discrete. Above it, they appear continuous.
 
-**Question 1 — The order parameter** (tractable with existing tools):
-Define a quantitative measure of "packetness" for a network — the degree to which its traffic is discretized, addressed, and asynchronously routed. Apply this measure to historical data on the information network transition (1969–2000) and the monetary network transition (2009–2024). Does the measure exhibit a sharp transition, or a gradual one?
+This is not a new observation. It is well-established in sensory neuroscience. What is less often noted is that the same integration pattern appears in institutional perception:
 
-**Question 2 — The critical point** (tractable):
-Identify the storage cost threshold below which the packet architecture becomes economically superior to the circuit architecture, as a function of demand variability and routing overhead. Does this threshold have universal properties, or is it domain-specific?
+- The electrical grid appears continuous to the consumer. The underlying reality is a sequence of discrete generator dispatch decisions, tap-changer operations, and protection relay events.
+- The monetary system appears continuous to the account holder. The underlying reality is a sequence of discrete ledger entries and settlement cycles.
+- The housing market appears permanent to the tenant. The underlying reality is a sequence of discrete contractual events.
 
-**Question 3 — Scaling laws** (tractable):
-Measure the degree distribution of packet networks at various stages of the circuit-to-packet transition. Does the transition produce a scale-free topology? If so, what are the exponents?
+In each case, the circuit model is the *experienced* form of a system whose underlying dynamics are discrete. The packet model makes those dynamics visible.
 
-**Question 4 — Universality class** (research-level):
-Compare the critical exponents of the circuit-to-packet transition across information, monetary, and energy networks. Do they belong to the same universality class? If so, what is the class, and what microscopic symmetry does it reflect?
+This observation does not prove the causal hypothesis of §4. It suggests that the distinction between circuit and packet may be, in part, a distinction between the observer's integration scale and the system's operational scale. When the observer's integration window is large relative to the packet duration, the system appears continuous. When it is small, the packets become visible.
 
-**Question 5 — Fractal structure** (speculative but precisely formulated):
-Is the appearance of packet structure at multiple scales — from the quantum to the container — a coincidence, a consequence of a shared optimization principle, or evidence of a genuine scale-invariant attractor? What would falsify the fractal hypothesis?
+This is offered as an observation worth noting, not as a conclusion.
+
+---
+
+## 6. The Research Program
+
+This paper has posed questions it cannot answer. What it can do is specify what a research program addressing these questions would look like.
+
+**Step 1 — The engineering question** (addressable with existing tools):
+
+Define a quantitative measure of "packetness" for a network — the fraction of traffic that is discretized, addressed, and asynchronously routed. Apply this measure to historical data on the information network transition (1969–2000) and the monetary network transition (2009–2024). Characterize the transition: is it sharp or gradual? Does it exhibit hysteresis? What are the control parameters?
+
+**Step 2 — Cross-domain comparison** (requires interdisciplinary collaboration):
+
+Apply the same measure to energy networks (FractaVolta deployment data, when available) and habitat networks (Mariani Village occupancy and routing data). Do the transitions in different domains share structural properties, or are they domain-specific?
+
+**Step 3 — The physical question** (requires statistical physics expertise):
+
+If Steps 1 and 2 reveal shared structural properties across domains, ask whether these properties can be mapped onto a known class of transitions in statistical physics. This step requires expertise the author does not have. It is the step for which a collaborator is sought.
+
+**Step 4 — Falsification**:
+
+Design observations that would falsify the hypothesis at each step. Conduct them before advancing to the next step.
 
 ---
 
 ## 7. Conclusion
 
-This paper has posed a question, not answered one.
+This paper has posed questions, acknowledged its limitations, and declared its conflicts of interest.
 
-The question is: is the circuit-to-packet transition a universal evolutionary attractor of complex networks, and if so, does it share formal properties with known physical universality classes?
+The structural observation is established: discrete units appear independently as fundamental structures across physics, biology, linguistics, computer science, and network engineering. This convergence is real.
 
-The motivation is a convergence: five independent disciplines — physics, biology, linguistics, computer science, and network engineering — have independently arrived at discretization as the fundamental structure of their domain. This convergence is striking enough to warrant a formal investigation.
+The causal hypothesis is not established: whether these convergences reflect a common underlying mechanism, and whether the engineering circuit-to-packet transition is a universal evolutionary attractor, remains an open question. The author cannot answer it. The mathematics required is beyond the author's formation — a situation analogous to Einstein's need for Grossmann's tensor calculus, without the Grossmann.
 
-The approach is deliberately modest. This paper does not claim that reality is computational, that the universe is a packet network, or that the convergence proves anything about the nature of matter. It claims only that the convergence is real, that it is precisely formulated, and that it invites a formal analysis that the present author cannot provide.
+The empirical program is concrete: FractaVolta and Mariani Village will generate measurable data on the packet transition in energy and habitat networks. That data will be made available. Whether it contributes to a formal theoretical account depends on whether the research program of §6 attracts the collaboration it requires.
 
-The invitation is open. The question is on the table.
-
-The FractaVolta project — energy packets routed through Mediterranean logistics networks — and the Mariani Village project — habitat packets repositioned by seasonal demand — are offered not as proofs of the theoretical claim but as empirical instances of the packet transition at human scale: observable, measurable, and falsifiable. If the packet transition is a universal attractor, these instances should exhibit the same structural properties as the information and monetary transitions that preceded them. If they do not, the theoretical claim is weakened.
-
-That is how science works. The container is in Corte. The measurement can begin.
+The question is on the table. The container is in Corte. The measurement can begin.
 
 ---
 
 ## References
 
-[1] Schrödinger, E. *What is Life? The Physical Aspect of the Living Cell*. Cambridge University Press, 1944.
+[1] Zuse, K. *Rechnender Raum*. Friedrich Vieweg & Sohn, 1969.
 
-[2] Zuse, K. *Rechnender Raum*. Friedrich Vieweg & Sohn, Braunschweig, 1969. English translation: *Calculating Space*. MIT Technical Translation AZT-70-164-GEMIT, 1970.
+[2] Fredkin, E. *Digital Mechanics*. Physica D, 45(1–3), 254–270, 1990.
 
-[3] Fredkin, E. *Digital Mechanics: An Information Process Based on Reversible Universal Cellular Automata*. Physica D, 45(1–3), 254–270, 1990.
+[3] Wolfram, S. *A New Kind of Science*. Wolfram Media, 2002.
 
-[4] Wolfram, S. *A New Kind of Science*. Wolfram Media, 2002.
+[4] Wheeler, J.A. *Information, Physics, Quantum: The Search for Links*. In Zurek, W.H. (ed.), *Complexity, Entropy, and the Physics of Information*. Addison-Wesley, 1990.
 
-[5] Wheeler, J.A. *Information, Physics, Quantum: The Search for Links*. In Zurek, W.H. (ed.), *Complexity, Entropy, and the Physics of Information*. Addison-Wesley, 1990.
+[5] Lloyd, S. *Programming the Universe*. Knopf, 2006.
 
-[6] Lloyd, S. *Programming the Universe: A Quantum Computer Scientist Takes on the Cosmos*. Knopf, 2006.
+[6] Tegmark, M. *Our Mathematical Universe*. Knopf, 2014.
 
-[7] Tegmark, M. *Our Mathematical Universe: My Quest for the Ultimate Nature of Reality*. Knopf, 2014.
+[7] Planck, M. *Zur Theorie des Gesetzes der Energieverteilung im Normalspektrum*. Verhandlungen der Deutschen Physikalischen Gesellschaft, 2, 237–245, 1900.
 
-[8] Planck, M. *Zur Theorie des Gesetzes der Energieverteilung im Normalspektrum*. Verhandlungen der Deutschen Physikalischen Gesellschaft, 2, 237–245, 1900.
+[8] Einstein, A. *Über einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt*. Annalen der Physik, 17, 132–148, 1905.
 
-[9] Einstein, A. *Über einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt*. Annalen der Physik, 17, 132–148, 1905.
+[9] Watson, J.D. and Crick, F.H.C. *Molecular Structure of Nucleic Acids*. Nature, 171, 737–738, 1953.
 
-[10] Watson, J.D. and Crick, F.H.C. *Molecular Structure of Nucleic Acids*. Nature, 171, 737–738, 1953.
+[10] Liberman, A.M. et al. *Perception of the Speech Code*. Psychological Review, 74(6), 431–461, 1967.
 
-[11] Liberman, A.M. et al. *Perception of the Speech Code*. Psychological Review, 74(6), 431–461, 1967.
+[11] Shannon, C.E. *A Mathematical Theory of Communication*. Bell System Technical Journal, 27, 379–423, 1948.
 
-[12] Shannon, C.E. *A Mathematical Theory of Communication*. Bell System Technical Journal, 27, 379–423, 623–656, 1948.
+[12] Leiner, B.M. et al. *A Brief History of the Internet*. ACM SIGCOMM Computer Communication Review, 39(5), 2009.
 
-[13] Leiner, B.M. et al. *A Brief History of the Internet*. ACM SIGCOMM Computer Communication Review, 39(5), 2009.
+[13] Nakamoto, S. *Bitcoin: A Peer-to-Peer Electronic Cash System*. 2008. https://bitcoin.org/bitcoin.pdf
 
-[14] Nakamoto, S. *Bitcoin: A Peer-to-Peer Electronic Cash System*. 2008. https://bitcoin.org/bitcoin.pdf
+[14] Robert, J.H.N. *The Unconscious Grid*. FractaVolta, 2024.
+https://github.com/JeanHuguesRobert/FractaVolta/blob/main/UNCONSCIOUS_GRID.md
 
-[15] Robert, J.H.N. *The Unconscious Grid: On Store-and-Forward as the Repressed Solution to Energy Sovereignty*. FractaVolta, 2024. https://github.com/JeanHuguesRobert/FractaVolta/blob/main/UNCONSCIOUS_GRID.md
+[15] Robert, J.H.N. *Mariani Village: A Relocatable DC-Native Housing Fleet*. Institut Mariani / Dilorta, 2026.
 
 [16] Wilson, K.G. *Renormalization Group and Critical Phenomena*. Physical Review B, 4(9), 3174–3205, 1971.
 
@@ -255,6 +236,6 @@ That is how science works. The container is in Corte. The measurement can begin.
 
 [19] Feigenbaum, M.J. *Quantitative Universality for a Class of Nonlinear Transformations*. Journal of Statistical Physics, 19(1), 25–52, 1978.
 
-[20] Prigogine, I. and Stengers, I. *Order Out of Chaos: Man's New Dialogue with Nature*. Bantam Books, 1984.
+[20] Schrödinger, E. *What is Life?* Cambridge University Press, 1944.
 
 [21] Baran, P. *On Distributed Communications*. RAND Corporation, RM-3420-PR, 1964.
