@@ -12,6 +12,11 @@
 ![Focus](https://img.shields.io/badge/focus-energy%20%2B%20compute%20%2B%20QoS-blue)
 
 🌐 https://fractavolta.com — public entry point
+📚 [research/index.md](research/index.md) — published papers and open possibilities
+📊 [research/corpus_status.md](research/corpus_status.md) — corpus status
+
+*Part of the [Cogentia Commons](https://github.com/JeanHuguesRobert/cogentia) distributed knowledge corpus.*
+*Methodology: [Discours de la seconde méthode](https://github.com/JeanHuguesRobert/barons-Mariani/blob/main/research/second_method.md)*
 
 ---
 
@@ -186,23 +191,26 @@ Pouzin was right. The datagram won for information. It will win for energy.
 |---|---|
 | [UNCONSCIOUS_GRID.md](./UNCONSCIOUS_GRID.md) | **Founding paper** — *The Unconscious Grid: On Store-and-Forward as the Repressed Solution to Energy Sovereignty*. The complete theoretical foundation of FractaVolta. |
 | [DC_NATIVE_EPN.md](./DC_NATIVE_EPN.md) | **DC architecture paper** — *DC-Native Energy Packet Networks*. Layered analysis from packet internals to HVDC. Quantitative efficiency case for 48V DC-first node design. |
+| [PGN.md](./PGN.md) | **Hydraulic paper** — *Packetized Gravity Networks*. Extending the exergy chain through gravitational storage. Historical canals as PGN substrate. Corsica case study. |
 | [MARIANI_VILLAGE.md](./MARIANI_VILLAGE.md) | **Habitat packet paper** — *Mariani Village: A Relocatable DC-Native Housing Fleet*. Single container and multi-unit fleet. Dilorta SAS. BLE packet tracking. |
 | [electricity_in_containers.md](./electricity_in_containers.md) | Working note (April 2026) — exploratory precursor to the full paper. |
 | [fractavolta_paper.md](./fractavolta_paper.md) | Commercial overview and deployment framework. |
 | [partner_brief.md](./partner_brief.md) | Partner engagement brief. |
 | [tera.md](./tera.md) | FractaTera reference architecture — multi-scale sensing and territorial mapping. |
+| [research/index.md](./research/index.md) | Research index — published papers, open possibilities, corpus map. |
 
 ---
 
 ## Ecosystem
 
-FractaVolta is the commercial and operational layer of a three-repository ecosystem:
+FractaVolta is the commercial and operational layer of a four-repository ecosystem:
 
 | Repository | Role |
 |---|---|
 | [MareNostrum](https://github.com/JeanHuguesRobert/marenostrum) | Strategic framework. Sovereign compute infrastructure for France and Europe. CXU. DHITL. Mediterranean solar commons. Circuit-to-packet transition theory. |
-| **FractaVolta** | **Engineering firm + software publisher. EPN design and implementation. DC-native nodes. Mariani Village / Dilorta.** |
-| [barons-Mariani](https://github.com/JeanHuguesRobert/barons-Mariani) | Political and institutional framework. Plan 2038. Corsican senatorial candidacy. |
+| **FractaVolta** | **Engineering firm + software publisher. EPN design and implementation. DC-native nodes. PGN. Mariani Village / Dilorta.** |
+| [Cogentia](https://github.com/JeanHuguesRobert/cogentia) | Knowledge methodology. Cogentia Commons framework. `cogentia.js` CLI. Distributed corpus infrastructure. |
+| [barons-Mariani](https://github.com/JeanHuguesRobert/barons-Mariani) | Political and institutional framework. Plan 2038. Corsican senatorial candidacy. *Discours de la seconde méthode.* |
 
 ---
 
@@ -210,10 +218,12 @@ FractaVolta is the commercial and operational layer of a three-repository ecosys
 
 - **[The Unconscious Grid](./UNCONSCIOUS_GRID.md)** (2024) — founding EPN paper.
 - **[DC-Native Energy Packet Networks](./DC_NATIVE_EPN.md)** (2026) — DC architecture, 48V node design, amathia of grid engineers.
+- **[Packetized Gravity Networks](./PGN.md)** (2026) — hydraulic exergy, IEV nodes, gravity as territorial memory, Corsica case study.
 - **[Mariani Village](./MARIANI_VILLAGE.md)** (2026) — habitat packet, Dilorta, BLE tracking, seasonal fleet routing.
 - **[The Packet Transition: A Lateral Reading](https://github.com/JeanHuguesRobert/marenostrum/blob/main/PACKET_TRANSITION.md)** (2026) — phronèsis, amathia, transition taxonomy. *In MareNostrum.*
 - **[The Packet as Evolutionary Attractor](https://github.com/JeanHuguesRobert/marenostrum/blob/main/PACKET_ATTRACTOR.md)** (2026) — complexity theory, open question. *In MareNostrum.*
 - **[DHITL](https://github.com/JeanHuguesRobert/marenostrum/blob/main/DHITL.md)** (2025–2026) — Democratic Humans in the Loop. *In MareNostrum.*
+- **[Discours de la seconde méthode](https://github.com/JeanHuguesRobert/barons-Mariani/blob/main/research/second_method.md)** (2026-05-08) — methodological foundation of the corpus. *In barons-Mariani.*
 
 All papers: CC BY-SA 4.0.
 
@@ -233,6 +243,8 @@ All papers: CC BY-SA 4.0.
 
 **Core architecture**: fractal electrochemical packets (0.1 kWh phone battery → 2 MWh ISO container → 100 MWh vessel) routed via conventional logistics. DC-native 48V SELV bus inside every autonomous node. USB-C PD 3.1 as human interface. AC as boundary adapter only.
 
+**Extended exergy chain**: photons → pumps → altitude → turbines → electrons → inference. Gravitational storage via Packetized Gravity Networks (PGN) — historical irrigation canals repurposed as programmable hydro-energetic infrastructure.
+
 **Software**: Cogentia — open-source energy routing, BLE fleet tracking, edge AI inference dispatch.
 
 **Flagship deployment**: Mariani Village — relocatable DC-native student/tourist housing in ISO containers, operated by Dilorta SAS, seasonal routing between Corte (students) and Corsican coast (tourists).
@@ -242,6 +254,8 @@ All papers: CC BY-SA 4.0.
 **Value proposition**: stranded Mediterranean solar exergy → sovereign AI inference tokens → ×10–×40 revenue premium over grid electricity export, bypassing cable bottlenecks entirely via internet routing.
 
 **RAIB** (Redundant Array of Inexpensive Batteries): commodity LFP cells (€80–120/kWh) + intelligent routing > single premium system. Antifragile by architecture, not by contract.
+
+**Knowledge methodology**: [Cogentia Commons](https://github.com/JeanHuguesRobert/cogentia) — traceable, auditable, AI-connectable. Governed by living persons alone.
 
 ---
 
