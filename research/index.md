@@ -1,7 +1,15 @@
+---
+title: "Research Index — FractaVolta"
+description: "A map of what is, what is in progress, and what could be."
+layout: default
+nav_order: 1
+last_modified_at: 2026-05-08
+---
+
 # Research Index — FractaVolta
 
 *A map of what is, what is in progress, and what could be.*
-*Every entry is a node in a distributed knowledge graph — see sibling indexes in [MareNostrum](https://github.com/JeanHuguesRobert/marenostrum/blob/main/research/index.md), [Cogentia](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/index.md), [barons-Mariani](https://github.com/JeanHuguesRobert/barons-Mariani/blob/main/research/index.md).*
+*See sibling indexes in [MareNostrum](https://github.com/JeanHuguesRobert/marenostrum/blob/main/research/index.md), [Cogentia](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/index.md), [barons-Mariani](https://github.com/JeanHuguesRobert/barons-Mariani/blob/main/research/index.md).*
 
 ---
 
@@ -21,11 +29,11 @@
 
 | Title | Location |
 |---|---|
+| [Discours de la seconde méthode](https://github.com/JeanHuguesRobert/barons-Mariani/blob/main/research/second_method.md) | barons-Mariani |
+
 | [DHITL — Democratic Humans in the Loop](https://github.com/JeanHuguesRobert/marenostrum/blob/main/DHITL.md) | marenostrum |
-| [MareNostrum README](https://github.com/JeanHuguesRobert/marenostrum/blob/main/README.md) | marenostrum |
-| [CXU Spec](https://github.com/JeanHuguesRobert/marenostrum/blob/main/CXU_SPEC.md) | marenostrum |
+| [CXU Specification](https://github.com/JeanHuguesRobert/marenostrum/blob/main/CXU_SPEC.md) | marenostrum |
 | [Cogentia Commons Working Paper](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/Cogentia_Commons_Working_Paper.md) | cogentia |
-| [Constellia](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/Constellia.md) | cogentia |
 
 ---
 
@@ -47,6 +55,7 @@
 - PGN × V2G: electric vehicle fleet as mobile hydraulic complement
 - Seasonal complementarity model: solar + hydraulic + wind at Mediterranean scale
 - `fracta-wiki` as distributed knowledge substrate for PGN territorial governance
+- SimpliJs revival: wiki + governance as interface layer for FractaVolta corpus
 
 ---
 
