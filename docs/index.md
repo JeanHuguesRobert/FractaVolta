@@ -2,7 +2,7 @@
 
 # FractaVolta
 
-> From photons to inference.
+> Photons to inference
 
 Engineering firm and software publisher for robust Energy Packet Network deployments.
 
