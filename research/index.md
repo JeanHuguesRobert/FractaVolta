@@ -1,5 +1,11 @@
 # Research Index — FractaVolta
 
+## Foundation
+
+This repository instantiates the **physical infrastructure layer** of the [DHITL](https://github.com/JeanHuguesRobert/marenostrum/blob/main/DHITL.md) AI Safety anti-capture proposal — packetized gravity networks, DC-native energy packet networks, traceable governance for matter-energy-compute. The architectural axiom lives in `marenostrum/DHITL.md`. The method lives in [`barons-Mariani/research/second_method.md`](https://github.com/JeanHuguesRobert/barons-Mariani/blob/main/research/second_method.md).
+
+---
+
 *A map of what is, what is in progress, and what could be.*
 *Every entry is a node in a distributed knowledge graph — see sibling indexes in [MareNostrum](https://github.com/JeanHuguesRobert/marenostrum/blob/main/research/index.md), [Cogentia](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/index.md), [barons-Mariani](https://github.com/JeanHuguesRobert/barons-Mariani/blob/main/research/index.md).*
 
@@ -10,8 +16,9 @@
 | Title | Location | Date |
 |---|---|---|
 | [Packetized Gravity Networks](../PGN.md) | this repo | 2026-05-08 |
-| [Fractal Architectures for Traceable Governance](../fractavolta.md) | this repo | 2026 |
-| [DC-Native Energy Packet Networks](../DC_Native_EPN.md) | this repo | 2026 |
+| [Fractal Architectures for Traceable Governance](../traceable_governance.md) | this repo | 2026 |
+| [DC-Native Energy Packet Networks](../dc_native_epn.md) | this repo | 2026 |
+| [FractaVolta White Paper](../fractavolta_paper.md) | this repo | 2026 |
 
 ---
 
@@ -25,7 +32,7 @@
 | [MareNostrum README](https://github.com/JeanHuguesRobert/marenostrum/blob/main/README.md) | marenostrum |
 | [CXU Spec](https://github.com/JeanHuguesRobert/marenostrum/blob/main/CXU_SPEC.md) | marenostrum |
 | [Cogentia Commons Working Paper](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/Cogentia_Commons_Working_Paper.md) | cogentia |
-| [Constellia](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/Constellia.md) | cogentia |
+| [Constellia](https://github.com/JeanHuguesRobert/marenostrum/blob/main/constellia.md) | marenostrum |
 
 ---
 
