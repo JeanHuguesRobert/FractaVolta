@@ -1,0 +1,8 @@
+# FractaVolta — non-research markdown files.
+# Built-in defaults (README, LICENSE, TODO, CHANGELOG, …) are always applied.
+
+# Project-internal status pages (not research deliverables).
+research/corpus_status.md
+
+# Engineering documentation.
+docs/tools.md
