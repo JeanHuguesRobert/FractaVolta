@@ -1,3 +1,7 @@
+---
+canonical_url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/mariani_village.md
+last_stamped_at: 2026-05-13
+---
 # Mariani Village: A Relocatable DC-Native Housing Fleet
 ## From Single Container to Regional Cooperative Mesh
 

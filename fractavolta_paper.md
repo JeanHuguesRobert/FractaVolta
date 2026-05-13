@@ -1,3 +1,7 @@
+---
+canonical_url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/fractavolta_paper.md
+last_stamped_at: 2026-05-13
+---
 # FractaVolta
 
 ## White Paper — Federated Democratic Infrastructure for Matter, Energy and Compute

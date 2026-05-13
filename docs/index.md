@@ -1,3 +1,7 @@
+---
+canonical_url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/docs/index.md
+last_stamped_at: 2026-05-13
+---
 ![FractaVolta](./assets/banner.svg)
 
 # FractaVolta

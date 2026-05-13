@@ -1,3 +1,7 @@
+---
+canonical_url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/traceable_governance.md
+last_stamped_at: 2026-05-13
+---
 # FractaVolta traceable gouvernance
 
 **Fractal Architectures for Traceable Governance**

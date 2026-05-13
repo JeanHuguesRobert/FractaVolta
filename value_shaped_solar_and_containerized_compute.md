@@ -1,3 +1,7 @@
+---
+canonical_url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/value_shaped_solar_and_containerized_compute.md
+last_stamped_at: 2026-05-13
+---
 # Value-Shaped Solar and Containerized Compute
 
 ## Toward Temporal Agrivoltaics as Infrastructure for Dispatchable Intelligence

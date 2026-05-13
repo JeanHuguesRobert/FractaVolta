@@ -1,3 +1,7 @@
+---
+canonical_url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/tera.md
+last_stamped_at: 2026-05-13
+---
 # FractaTera
 
 **Fractal Terrestrial Awareness Network**

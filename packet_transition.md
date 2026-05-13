@@ -1,3 +1,7 @@
+---
+canonical_url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/packet_transition.md
+last_stamped_at: 2026-05-13
+---
 # The Packet Transition: A Lateral Reading of Circuit Networks
 
 **Jean Hugues Noël Robert, baron Mariani**

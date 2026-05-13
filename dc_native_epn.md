@@ -1,3 +1,7 @@
+---
+canonical_url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/dc_native_epn.md
+last_stamped_at: 2026-05-13
+---
 # DC-Native Energy Packet Networks
 ## How Far Can Electricity Return from Alternating Current to Direct Current?
 

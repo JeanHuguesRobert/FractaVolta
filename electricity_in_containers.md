@@ -1,3 +1,7 @@
+---
+canonical_url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/electricity_in_containers.md
+last_stamped_at: 2026-05-13
+---
 # Electricity in Containers
 
 **Store-and-Forward Energy Logistics: A Complementary Infrastructure Layer**
