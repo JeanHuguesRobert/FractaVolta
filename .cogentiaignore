@@ -1,8 +1,9 @@
 # FractaVolta — non-research markdown files.
 # Built-in defaults (README, LICENSE, TODO, CHANGELOG, …) are always applied.
-
-# Project-internal status pages (not research deliverables).
-research/corpus_status.md
+#
+# Note: research/corpus-status.md IS research (auto-refreshed by
+# `cogentia.js corpus-status`; per Rule 4 — let the corpus be its own evidence).
+# It is intentionally NOT listed here.
 
 # Engineering documentation.
 docs/tools.md

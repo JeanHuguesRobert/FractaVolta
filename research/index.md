@@ -35,6 +35,7 @@ This repository instantiates the **physical infrastructure layer** of the [DHITL
 | [Fractal Architectures for Traceable Governance](../traceable_governance.md) | this repo | 2026 |
 | [FractaVolta White Paper](../fractavolta_paper.md) | this repo | 2026 |
 | [FractaVolta Partner Brief — Agrivoltaics Pilot Opportunity](../partner_brief.md) | this repo | 2026-05-06 |
+| [Corpus Status](corpus-status.md) *(living view — auto-refreshed by `cogentia.js corpus-status`)* | this repo | refreshable |
 
 ---
 

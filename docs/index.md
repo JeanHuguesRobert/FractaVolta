@@ -75,7 +75,7 @@ traceable, auditable, governed by living persons alone.
 
 Early-stage. Architecture documented. Papers published. Pilot sites identified.
 
-[Corpus status](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/corpus_status.md) — what is proved, what remains open.
+[Corpus status](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/corpus-status.md) — what is proved, what remains open.
 
 ---
 

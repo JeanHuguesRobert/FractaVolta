@@ -13,7 +13,7 @@
 
 🌐 https://fractavolta.com — public entry point
 📚 [research/index.md](research/index.md) — published papers and open possibilities
-📊 [research/corpus_status.md](research/corpus_status.md) — corpus status
+📊 [research/corpus-status.md](research/corpus-status.md) — corpus status
 
 *Part of the [Cogentia Commons](https://github.com/JeanHuguesRobert/cogentia) distributed knowledge corpus.*
 *Methodology: [Discours de la seconde méthode](https://github.com/JeanHuguesRobert/barons-Mariani/blob/main/research/second_method.md)*
