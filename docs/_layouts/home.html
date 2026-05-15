@@ -1,0 +1,33 @@
+---
+layout: default
+---
+<section class="hero">
+  <div class="hero-composition">
+    <div class="hero-block hero-block--text">
+      <p class="hero-tagline">
+        <span class="hero-tagline__line">Photons to inference.</span>
+        <span class="hero-tagline__line">Inference to deliberation.</span>
+      </p>
+      <p class="hero-subtitle">
+        Engineering firm, software publisher, and operator of an integrated
+        Mediterranean sovereignty stack — from packetized energy to civic intelligence.
+      </p>
+    </div>
+    <div class="hero-block hero-block--red"  aria-hidden="true"></div>
+    <div class="hero-block hero-block--yellow" aria-hidden="true"></div>
+    <div class="hero-block hero-block--blue" aria-hidden="true"></div>
+  </div>
+</section>
+
+<section class="audiences">
+  <h2 class="section-title">Pick your entry point</h2>
+  <div class="audience-grid">
+    {% for a in site.data.audiences %}
+      {% include audience-card.html audience=a %}
+    {% endfor %}
+  </div>
+</section>
+
+<section class="home-content">
+  {{ content }}
+</section>

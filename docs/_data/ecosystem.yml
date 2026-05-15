@@ -1,0 +1,25 @@
+# Five-repository corpus. Order is intentional — strategic → operational → tooling → platform → political.
+- name: MareNostrum
+  role: Strategic framework — sovereign compute infrastructure for France and Europe. CXU, DHITL, Mediterranean solar commons.
+  url: https://github.com/JeanHuguesRobert/marenostrum
+  self: false
+
+- name: FractaVolta
+  role: Engineering firm, software publisher, and stack operator. EPN, DC-native nodes, PGN, IPN, Mariani Village.
+  url: https://github.com/JeanHuguesRobert/FractaVolta
+  self: true
+
+- name: Cogentia
+  role: Cognitive infrastructure tooling. cogentia.js CLI, Cogentia Commons methodology, continuation protocol.
+  url: https://github.com/JeanHuguesRobert/cogentia
+  self: false
+
+- name: inseme
+  role: Platform — COP runtime, briques, Kudocracy.Survey, Inseme Agora, Ophélia AI mediator, Atlas of Biodiversity.
+  url: https://github.com/JeanHuguesRobert/inseme
+  self: false
+
+- name: barons-Mariani
+  role: Political and institutional framework. Plan 2038, Corsican senatorial candidacy, Discours de la seconde méthode.
+  url: https://github.com/JeanHuguesRobert/barons-Mariani
+  self: false

@@ -1,11 +1,8 @@
 ---
+title: For researchers
+subtitle: Papers, methodology, contestation as first-class contribution. The corpus is its own evidence — fork it, challenge it, build on it.
 canonical_url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/docs/for-researchers.md
 last_stamped_at: 2026-05-15
----
-# For researchers
-
-> Papers, methodology, contestation as first-class contribution. The corpus is its own evidence — fork it, challenge it, build on it.
-
 ---
 
 ## The corpus

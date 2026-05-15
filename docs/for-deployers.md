@@ -1,11 +1,8 @@
 ---
+title: For deployers
+subtitle: Concrete materials for getting a Mariani Village (or comparable DC-native deployment) off the ground.
 canonical_url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/docs/for-deployers.md
 last_stamped_at: 2026-05-15
----
-# For deployers
-
-> Concrete materials for getting a Mariani Village (or comparable DC-native deployment) off the ground.
-
 ---
 
 ## Mariani Village in one paragraph

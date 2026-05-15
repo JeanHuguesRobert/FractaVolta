@@ -1,0 +1,13 @@
+{% assign p = include.paper %}
+<li class="paper-row">
+  <div class="paper-row__main">
+    <a class="paper-row__title" href="{{ p.url }}">{{ p.title }}</a>
+    {% if p.subtitle %}
+      <span class="paper-row__subtitle">{{ p.subtitle }}</span>
+    {% endif %}
+  </div>
+  <div class="paper-row__meta">
+    {% if p.kind %}<span class="paper-row__kind">{{ p.kind | replace: '-', ' ' }}</span>{% endif %}
+    {% if p.date %}<span class="paper-row__date">{{ p.date }}</span>{% endif %}
+  </div>
+</li>

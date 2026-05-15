@@ -1,11 +1,8 @@
 ---
+title: For partners
+subtitle: Energy and compute as integrated sovereignty infrastructure, billed for avoided interruption and audited at every layer.
 canonical_url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/docs/for-partners.md
 last_stamped_at: 2026-05-15
----
-# For partners
-
-> Energy + compute as integrated sovereignty infrastructure, billed for avoided interruption and audited at every layer.
-
 ---
 
 ## The commercial proposition

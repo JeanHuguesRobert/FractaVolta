@@ -1,0 +1,476 @@
+// ============================================================================
+// FractaVolta — gently brutalist, Mondrian-inspired
+// ============================================================================
+//
+// Principles:
+// - System sans-serif. No web fonts. No web vanity.
+// - Off-white background, warm near-black text.
+// - Primary accents red/yellow/blue. No green.
+// - 2px black borders define structure. No rounded corners. No drop shadows.
+// - Generous spacing. Generous line-height. Readable first, decorated last.
+// - Sentence case. No uppercase transforms.
+
+// ---- 1. Variables ----------------------------------------------------------
+
+$bg:           #fbf7f0;
+$bg-alt:       #f3ede2;
+$ink:          #1a1a1a;
+$ink-soft:     #4a4a4a;
+$line:         #1a1a1a;
+$rule-soft:    #d8d0c0;
+
+// Mondrian accents — slightly warmed, not pure primaries
+$red:          #d63131;
+$yellow:       #fbcb1c;
+$blue:         #0a3fa0;
+
+$max-width:    72rem;
+$content-width: 44rem;
+$gutter:       1.5rem;
+
+$border:       2px solid $line;
+$border-thin:  1px solid $rule-soft;
+
+$font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue",
+            Helvetica, Arial, "Liberation Sans", sans-serif;
+$font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas,
+            "Liberation Mono", monospace;
+
+// ---- 2. Reset + base -------------------------------------------------------
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { font-size: 100%; -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  font-family: $font-sans;
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  color: $ink;
+  background: $bg;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: $blue;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 1px;
+  &:hover { color: $red; }
+  &:focus-visible { outline: 2px solid $blue; outline-offset: 2px; }
+}
+
+h1, h2, h3, h4 {
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  margin: 2rem 0 0.75rem;
+  color: $ink;
+}
+h1 { font-size: 2.25rem; }
+h2 { font-size: 1.6rem; margin-top: 2.5rem; padding-top: 0.5rem; }
+h3 { font-size: 1.25rem; }
+h4 { font-size: 1.0625rem; }
+
+p { margin: 0 0 1rem; }
+ul, ol { margin: 0 0 1rem; padding-left: 1.25rem; }
+li { margin-bottom: 0.25rem; }
+
+blockquote {
+  margin: 1.5rem 0;
+  padding: 0.5rem 1rem;
+  border-left: 4px solid $line;
+  font-style: normal;
+  color: $ink;
+  & > p:last-child { margin-bottom: 0; }
+}
+
+code {
+  font-family: $font-mono;
+  font-size: 0.95em;
+  background: $bg-alt;
+  padding: 0.1em 0.35em;
+  border: $border-thin;
+}
+pre {
+  font-family: $font-mono;
+  font-size: 0.9rem;
+  background: $bg-alt;
+  border: $border;
+  padding: 1rem;
+  overflow-x: auto;
+  margin: 1.25rem 0;
+  & code { background: none; border: none; padding: 0; }
+}
+
+hr {
+  border: none;
+  border-top: $border;
+  margin: 2.5rem 0;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1.25rem 0;
+  font-size: 0.95rem;
+}
+th, td {
+  border: $border-thin;
+  padding: 0.6rem 0.8rem;
+  text-align: left;
+  vertical-align: top;
+}
+th {
+  background: $bg-alt;
+  font-weight: 700;
+  border-bottom: $border;
+}
+
+::selection { background: $yellow; color: $ink; }
+
+// ---- 3. Layout shell -------------------------------------------------------
+
+.site-main {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 2rem $gutter 4rem;
+}
+
+// ---- 4. Header / nav -------------------------------------------------------
+
+.site-header {
+  border-bottom: $border;
+  background: $bg;
+}
+.site-header__inner {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 1rem $gutter;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.site-header__brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
+  color: $ink;
+  &:hover { color: $ink; }
+}
+.site-header__logo {
+  width: 36px;
+  height: 36px;
+  display: block;
+}
+.site-header__name {
+  font-weight: 700;
+  font-size: 1.25rem;
+  letter-spacing: -0.01em;
+}
+
+.site-nav__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1rem;
+}
+.site-nav__item { margin: 0; }
+.site-nav__link {
+  color: $ink;
+  text-decoration: none;
+  padding: 0.25rem 0.4rem;
+  border-bottom: 2px solid transparent;
+  font-size: 0.95rem;
+  &:hover {
+    color: $ink;
+    border-bottom-color: $red;
+  }
+  &.is-current {
+    border-bottom-color: $blue;
+    font-weight: 700;
+  }
+}
+
+// ---- 5. Hero (home) --------------------------------------------------------
+
+.hero {
+  margin-bottom: 3.5rem;
+}
+.hero-composition {
+  display: grid;
+  grid-template-columns: 2.4fr 1fr;
+  grid-template-rows: 1fr 0.5fr 1fr;
+  border: $border;
+  background: $bg;
+  min-height: 20rem;
+}
+.hero-block {
+  margin: 0;
+}
+.hero-block--text {
+  grid-column: 1;
+  grid-row: 1 / -1;
+  border-right: $border;
+  padding: 2rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: $bg;
+}
+.hero-block--yellow {
+  grid-column: 2;
+  grid-row: 1;
+  background: $yellow;
+  border-bottom: $border;
+}
+.hero-block--red {
+  grid-column: 2;
+  grid-row: 2;
+  background: $red;
+  border-bottom: $border;
+}
+.hero-block--blue {
+  grid-column: 2;
+  grid-row: 3;
+  background: $blue;
+}
+
+.hero-tagline {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin: 0 0 1rem;
+}
+.hero-tagline__line {
+  display: block;
+}
+.hero-subtitle {
+  font-size: 1rem;
+  color: $ink-soft;
+  max-width: 32rem;
+  margin: 0;
+}
+
+@media (max-width: 720px) {
+  .hero-composition {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 3rem 1.5rem 3rem;
+    min-height: 0;
+  }
+  .hero-block--text   { grid-column: 1; grid-row: 1; border-right: none; border-bottom: $border; padding: 1.5rem 1.25rem; }
+  .hero-block--yellow { grid-column: 1; grid-row: 2; border-bottom: $border; }
+  .hero-block--red    { grid-column: 1; grid-row: 3; border-bottom: $border; }
+  .hero-block--blue   { grid-column: 1; grid-row: 4; }
+}
+
+// ---- 6. Audience cards (home) ----------------------------------------------
+
+.section-title {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0 0 1rem;
+  color: $ink-soft;
+  border-bottom: $border;
+  padding-bottom: 0.4rem;
+}
+
+.audiences {
+  margin-bottom: 4rem;
+}
+.audience-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 1rem;
+}
+.audience-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.25rem 1.25rem 2.5rem;
+  background: $bg;
+  border: $border;
+  text-decoration: none;
+  color: $ink;
+  transition: transform 100ms ease, background 100ms ease;
+  &:hover {
+    color: $ink;
+    background: $bg-alt;
+    transform: translate(-2px, -2px);
+    box-shadow: 4px 4px 0 0 $line;
+  }
+}
+.audience-card__accent {
+  display: block;
+  height: 8px;
+  margin: -1.25rem -1.25rem 0.75rem;
+}
+.audience-card--red    .audience-card__accent { background: $red; }
+.audience-card--yellow .audience-card__accent { background: $yellow; }
+.audience-card--blue   .audience-card__accent { background: $blue; }
+.audience-card__title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 0;
+}
+.audience-card__blurb {
+  font-size: 0.95rem;
+  color: $ink-soft;
+  margin: 0;
+  line-height: 1.45;
+}
+.audience-card__arrow {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  font-size: 1.25rem;
+  color: $ink;
+}
+
+// ---- 7. Page body ----------------------------------------------------------
+
+.page-body {
+  display: grid;
+  grid-template-columns: minmax(0, $content-width) 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+@media (max-width: 900px) {
+  .page-body { grid-template-columns: 1fr; gap: 0; }
+}
+
+.page-header {
+  grid-column: 1 / -1;
+  padding-bottom: 0.75rem;
+  border-bottom: $border;
+  margin-bottom: 2rem;
+}
+.page-title {
+  margin: 0;
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  letter-spacing: -0.02em;
+}
+.page-subtitle {
+  margin: 0.4rem 0 0;
+  color: $ink-soft;
+  font-size: 1.05rem;
+}
+
+.page-content {
+  grid-column: 1;
+  min-width: 0;
+  & h2:first-child { margin-top: 0; }
+}
+
+.home-content {
+  max-width: $content-width;
+  & h2:first-child { margin-top: 0; }
+}
+
+// ---- 8. Papers page --------------------------------------------------------
+
+.papers-group {
+  margin: 2.5rem 0;
+  padding-top: 1rem;
+  border-top: $border;
+  &:first-of-type { border-top: none; padding-top: 0; }
+}
+.papers-group__label {
+  font-size: 1.4rem;
+  margin: 0 0 0.25rem;
+}
+.papers-group__description {
+  color: $ink-soft;
+  margin: 0 0 1rem;
+}
+.papers-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.paper-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.75rem 0;
+  border-bottom: $border-thin;
+  &:last-child { border-bottom: none; }
+}
+.paper-row__main { flex: 1; min-width: 0; }
+.paper-row__title {
+  font-weight: 700;
+  text-decoration: none;
+  color: $ink;
+  &:hover { color: $blue; text-decoration: underline; }
+}
+.paper-row__subtitle {
+  display: block;
+  color: $ink-soft;
+  font-size: 0.95rem;
+  margin-top: 0.15rem;
+}
+.paper-row__meta {
+  flex: 0 0 auto;
+  text-align: right;
+  font-size: 0.85rem;
+  color: $ink-soft;
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+.paper-row__kind {
+  color: $ink-soft;
+  font-variant: small-caps;
+  letter-spacing: 0.04em;
+}
+.paper-row__date { color: $ink-soft; }
+
+// ---- 9. Footer -------------------------------------------------------------
+
+.site-footer {
+  border-top: $border;
+  background: $bg;
+  margin-top: 3rem;
+}
+.site-footer__inner {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 2rem $gutter;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  gap: 2rem;
+}
+.site-footer__block { min-width: 0; }
+.site-footer__heading {
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin: 0 0 0.75rem;
+  color: $ink-soft;
+  border-bottom: $border-thin;
+  padding-bottom: 0.25rem;
+}
+.site-footer__line {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: $ink;
+  & a { color: $ink; text-decoration: underline; text-underline-offset: 2px; }
+  & a:hover { color: $red; }
+}
+.site-footer__tag {
+  font-size: 0.8rem;
+  color: $ink-soft;
+  border: $border-thin;
+  padding: 0 0.35em;
+}

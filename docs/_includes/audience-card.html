@@ -1,0 +1,7 @@
+{% assign a = include.audience %}
+<a class="audience-card audience-card--{{ a.accent }}" href="{{ a.url | relative_url }}">
+  <span class="audience-card__accent" aria-hidden="true"></span>
+  <h3 class="audience-card__title">{{ a.title }}</h3>
+  <p class="audience-card__blurb">{{ a.blurb }}</p>
+  <span class="audience-card__arrow" aria-hidden="true">→</span>
+</a>

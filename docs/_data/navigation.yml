@@ -1,0 +1,13 @@
+main:
+  - title: Home
+    url: /
+  - title: For partners
+    url: /for-partners
+  - title: For deployers
+    url: /for-deployers
+  - title: For researchers
+    url: /for-researchers
+  - title: For citizens
+    url: /for-citizens
+  - title: Papers
+    url: /papers

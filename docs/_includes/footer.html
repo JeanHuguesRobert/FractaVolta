@@ -1,0 +1,36 @@
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <div class="site-footer__block">
+      <h3 class="site-footer__heading">FractaVolta</h3>
+      <p class="site-footer__line">{{ site.author.name }}</p>
+      <p class="site-footer__line">{{ site.author.affiliation }}</p>
+      <p class="site-footer__line">{{ site.author.location }}</p>
+    </div>
+
+    <div class="site-footer__block">
+      <h3 class="site-footer__heading">Contact</h3>
+      <p class="site-footer__line"><a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></p>
+      <p class="site-footer__line"><a href="https://www.linkedin.com/{{ site.linkedin_username }}">LinkedIn</a></p>
+      <p class="site-footer__line"><a href="https://github.com/{{ site.repository }}">GitHub</a></p>
+      <p class="site-footer__line"><a href="{{ '/feed.xml' | relative_url }}">Atom feed</a></p>
+    </div>
+
+    <div class="site-footer__block">
+      <h3 class="site-footer__heading">Ecosystem</h3>
+      {% for repo in site.data.ecosystem %}
+        {% if repo.self %}
+          <p class="site-footer__line"><strong>{{ repo.name }}</strong> <span class="site-footer__tag">this site</span></p>
+        {% else %}
+          <p class="site-footer__line"><a href="{{ repo.url }}">{{ repo.name }}</a></p>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    <div class="site-footer__block">
+      <h3 class="site-footer__heading">License</h3>
+      <p class="site-footer__line">Documentation: <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></p>
+      <p class="site-footer__line">Software: MIT</p>
+      <p class="site-footer__line">&copy; 2026 {{ site.author.name }}</p>
+    </div>
+  </div>
+</footer>

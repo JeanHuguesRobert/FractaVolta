@@ -1,0 +1,29 @@
+---
+layout: default
+---
+<article class="page-body papers-body">
+  <header class="page-header">
+    <h1 class="page-title">{{ page.title }}</h1>
+    {% if page.subtitle %}
+      <p class="page-subtitle">{{ page.subtitle }}</p>
+    {% endif %}
+  </header>
+
+  <div class="page-content">
+    {{ content }}
+
+    {% for group in site.data.papers %}
+      <section class="papers-group" id="{{ group.key }}">
+        <h2 class="papers-group__label">{{ group.label }}</h2>
+        {% if group.description %}
+          <p class="papers-group__description">{{ group.description }}</p>
+        {% endif %}
+        <ul class="papers-list">
+          {% for p in group.papers %}
+            {% include paper-row.html paper=p %}
+          {% endfor %}
+        </ul>
+      </section>
+    {% endfor %}
+  </div>
+</article>

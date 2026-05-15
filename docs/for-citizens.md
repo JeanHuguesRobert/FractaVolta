@@ -1,11 +1,8 @@
 ---
+title: For citizens
+subtitle: Free, open-source, neutral digital infrastructure for citizen participation, augmented deliberation, and democratic transparency. Built around Corte, Corsica — usable anywhere.
 canonical_url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/docs/for-citizens.md
 last_stamped_at: 2026-05-15
----
-# For citizens
-
-> Free, open-source, neutral digital infrastructure for citizen participation, augmented deliberation, and democratic transparency. Built around Corte, Corsica — usable anywhere.
-
 ---
 
 ## What this layer of the stack is

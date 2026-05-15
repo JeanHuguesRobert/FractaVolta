@@ -1,0 +1,69 @@
+title: FractaVolta
+tagline: Photons to inference. Inference to deliberation.
+description: >-
+  Engineering firm, software publisher, and operator of an integrated
+  Mediterranean sovereignty stack — from packetized energy to civic intelligence.
+
+url: https://fractavolta.com
+repository: JeanHuguesRobert/FractaVolta
+github_username: JeanHuguesRobert
+linkedin_username: company/fractavolta
+
+author:
+  name: Jean Hugues Noël Robert
+  affiliation: Institut Mariani / C.O.R.S.I.C.A.
+  email: jhr@baronsmariani.org
+  location: Corte, Corsica
+
+# Build configuration
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  hard_wrap: false
+  smart_quotes: ["apos", "apos", "quot", "quot"]
+
+# Plugins (all supported on GitHub Pages)
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-relative-links
+
+# Feed: the papers, not arbitrary posts
+feed:
+  collections:
+    papers:
+      path: "feed.xml"
+
+# Collections — papers as first-class Jekyll docs
+collections:
+  papers:
+    output: false  # rendered via _data/papers.yml index, not as standalone pages
+
+# Front-matter defaults
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: page
+  - scope:
+      path: "index.md"
+    values:
+      layout: home
+  - scope:
+      path: "papers.md"
+    values:
+      layout: papers
+      title: Papers
+
+# Exclude scaffolding files from the build
+exclude:
+  - logo-generator.html  # external interactive tool, not part of the site nav
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor/
+  - .jekyll-cache/
+  - .jekyll-metadata
