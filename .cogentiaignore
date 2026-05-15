@@ -5,5 +5,7 @@
 # `cogentia.js corpus-status`; per Rule 4 — let the corpus be its own evidence).
 # It is intentionally NOT listed here.
 
-# Engineering documentation.
-docs/tools.md
+# The Jekyll site under docs/ is the public-facing landing — audience-oriented
+# pages, methodology overview, papers index, contact. These are not research
+# deliverables in themselves; they reference the actual research/ corpus.
+docs/**
