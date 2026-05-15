@@ -1,6 +1,6 @@
 ---
 canonical_url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/UNCONSCIOUS_GRID.md
-last_stamped_at: 2026-05-13
+last_stamped_at: 2026-05-15
 ---
 # The Unconscious Grid
 ## On Store-and-Forward as the Repressed Solution to Energy Sovereignty

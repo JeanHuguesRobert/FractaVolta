@@ -1,6 +1,6 @@
 ---
 canonical_url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/partner_brief.md
-last_stamped_at: 2026-05-13
+last_stamped_at: 2026-05-15
 ---
 # FractaVolta – Partner  Brief  
 ## Experimental Micro-Agrivoltaics Pilot Opportunity

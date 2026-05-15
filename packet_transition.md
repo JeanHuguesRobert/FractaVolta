@@ -1,6 +1,6 @@
 ---
 canonical_url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/packet_transition.md
-last_stamped_at: 2026-05-13
+last_stamped_at: 2026-05-15
 ---
 # The Packet Transition: A Lateral Reading of Circuit Networks
 

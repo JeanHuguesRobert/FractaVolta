@@ -1,6 +1,6 @@
 ---
 canonical_url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/fractavolta_paper.md
-last_stamped_at: 2026-05-13
+last_stamped_at: 2026-05-15
 ---
 # FractaVolta
 

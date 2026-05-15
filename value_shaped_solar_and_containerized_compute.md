@@ -1,6 +1,6 @@
 ---
 canonical_url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/value_shaped_solar_and_containerized_compute.md
-last_stamped_at: 2026-05-13
+last_stamped_at: 2026-05-15
 ---
 # Value-Shaped Solar and Containerized Compute
 

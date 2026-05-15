@@ -1,6 +1,6 @@
 ---
 canonical_url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/packet_attractor.md
-last_stamped_at: 2026-05-13
+last_stamped_at: 2026-05-15
 ---
 # The Packet as Evolutionary Attractor: Scale-Invariant Transitions in Complex Networks
 

@@ -1,6 +1,6 @@
 ---
 canonical_url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/electricity_in_containers.md
-last_stamped_at: 2026-05-13
+last_stamped_at: 2026-05-15
 ---
 # Electricity in Containers
 

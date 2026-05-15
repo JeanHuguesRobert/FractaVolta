@@ -1,3 +1,7 @@
+---
+canonical_url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/inference_packet_network.md
+last_stamped_at: 2026-05-15
+---
 # Inference Packet Networks
 
 ## A RAID/ARPANET Continuity Layer for Sovereign AI Infrastructure
