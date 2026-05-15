@@ -63,7 +63,20 @@ This is not required. You can run a Mariani Village as pure housing. But when yo
 2. **Read the DC architecture** — [dc_native_epn.md](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/dc_native_epn.md). Needed if your site engineer is going to do anything beyond bolt-on.
 3. **Read the founding EPN paper** — [UNCONSCIOUS_GRID.md](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/UNCONSCIOUS_GRID.md). The theory under the practice — useful when objections come in from grid-trained engineers.
 4. **For the platform side** — see the [inseme README](https://github.com/JeanHuguesRobert/inseme). Apps, briques, multi-instance configuration, Ophélia.
-5. **For the knowledge production side** — [cogentia.js](https://github.com/JeanHuguesRobert/cogentia) is the CLI; the Commons methodology is documented in the [working paper](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/Cogentia_Commons_Working_Paper.md).
+5. **For the methodology — and the operational toolchain** — see [methodology](./methodology). The corpus is governed by [Cogentia Commons](https://github.com/JeanHuguesRobert/cogentia); the operational CLI is [`cogentia.js`](https://github.com/JeanHuguesRobert/cogentia/blob/main/scripts/cogentia.js).
+
+## Your deployment as a tracked corpus
+
+A working Mariani Village is also a small Cogentia Commons corpus. The site folder (whether on your own GitHub organization or a private Git host) carries:
+
+- A `research/index.md` listing the canonical documents for the site (BOM, site plan, regulatory dossiers, BLE asset registry).
+- A `.cogentia.json` registering the corpus.
+- A `.cogentia/audit.jsonl` accumulating one JSONL line per state-changing operation — every commissioning step, every adjustment, every objection filed by residents or by the operator.
+- A `.cogentia/continuations/` directory of typed continuation records for any decision that required judgment.
+
+You can run `node cogentia.js scan` against this corpus to verify that every research-grade document is anchored. You can run `cogentia.js check` to validate cross-references. If you contract a different firm to extend the site in two years, they get a working corpus, not a folder of PDFs.
+
+This is optional. A Mariani Village runs perfectly well as housing alone. But when you take the corpus practice seriously, the deployment becomes contestable, auditable, and survivable across operator changes.
 
 ---
 

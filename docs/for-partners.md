@@ -54,6 +54,17 @@ The pricing logic is **avoided interruption** at every layer:
 
 This is a service model, not a licensing model. The product is integration and operations.
 
+## What you also receive — the audit trail
+
+Beyond the hardware and the running platform, every project ships with its own audit chain — produced live during the engagement, not assembled retroactively.
+
+- **Decisions are typed**, via the `cogentia.continuation.v1` protocol implemented in `cogentia.js`. When a deployment decision required judgment (which battery topology for site X; which inverter for that grid-tie context; how to size the inference cluster), the question, the alternatives we considered, the chosen path, and the reasoning are all preserved as JSON in the project's `.cogentia/continuations/`. You can replay them.
+- **Failed alternatives are not erased.** When we tried something and it didn't work, the failed branch is part of the record — with the reason. The next operator (us in two years, or a different firm if you change supplier) can read why we ruled options out.
+- **Claims are anchored.** Every datasheet number, every architectural assertion, every cost estimate points at a canonical document under version control. If we change a number, the change is visible in the git history.
+- **The AI we use is replaceable.** Any continuation we emit can be resumed by another agent — Claude today, ChatGPT tomorrow, a local model next year, a human operator at any point. No provider lock-in flows down to you through us.
+
+This is not compliance theater layered on top of normal work. It is how the work is done. See the [methodology page](./methodology) for the formal account.
+
 ---
 
 ## Pilot opportunities

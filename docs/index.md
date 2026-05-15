@@ -39,6 +39,12 @@ Solar energy is no longer scarce. Compute is no longer scarce. What is scarce:
 
 The highest-value use of stranded solar is not exporting electrons at €40–80/MWh. It is producing sovereign AI inference tokens at ×10–×40 that revenue — crossing the internet, not the SARCO cable. And the highest-value use of that inference is not vendor-locked SaaS — it is durable, replaceable, auditable cognition supporting durable, replaceable, auditable civic infrastructure.
 
+## How we work
+
+Every deployment produces its own typed audit trail. Every claim is anchored at a stable URL. Every AI agent we use is replaceable without modifying our toolchain. Every objection becomes a first-class contribution to the record, not noise to be erased.
+
+This is governed by the [Cogentia Commons methodology](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/Cogentia_Commons_Working_Paper.md), implemented operationally through the [`cogentia.js` CLI](https://github.com/JeanHuguesRobert/cogentia) and the [`cogentia.continuation.v1` protocol](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/agent_resumable_cli.md). For the working details, see [methodology](./methodology).
+
 ## Status
 
 Early-stage. Architecture documented across four layers. Papers published. Pilot sites identified. Continuation protocol live (`cogentia.js` v0.5.0). See [corpus status](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/corpus-status.md) for what is proved and what remains open.

@@ -22,6 +22,11 @@
 - 🧪 [For researchers](https://fractavolta.com/for-researchers) — papers, methodology, continuation protocol
 - 🗳️ [For citizens](https://fractavolta.com/for-citizens) — inseme, Kudocracy, Ophélia
 
+**Cross-cutting pages:**
+- 📐 [Methodology](https://fractavolta.com/methodology) — how Cogentia Commons + `cogentia.js` + continuations shape every deployment
+- 🌊 [MareNostrum](https://fractavolta.com/marenostrum) — the strategic framework above the operational layer (early-stage, awaiting consortium)
+- 📚 [Papers](https://fractavolta.com/papers) — cross-corpus reading list by layer
+
 *Part of the [Cogentia Commons](https://github.com/JeanHuguesRobert/cogentia) distributed knowledge corpus.*
 *Methodology: [Discours de la seconde méthode](https://github.com/JeanHuguesRobert/barons-Mariani/blob/main/research/second_method.md)*
 

@@ -84,7 +84,7 @@ Software for democratic participation has historically been built on three weak 
 inseme inverts all three:
 
 1. **You own your instance.** MIT license, your hardware, your Supabase, your domain.
-2. **The AI is auditable.** Ophélia's reasoning is captured as typed events; her contributions are part of the public record; she is replaceable by any other compliant AI or by a human moderator without modifying the platform (per the [continuation protocol](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/agent_resumable_cli.md)).
+2. **The AI is auditable.** Ophélia's reasoning is captured as typed events; her contributions are part of the public record; she is replaceable by any other compliant AI or by a human moderator without modifying the platform. Technically: she is bound by the same [continuation protocol](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/agent_resumable_cli.md) FractaVolta uses across the rest of the stack. See the [methodology page](./methodology) for the formal account of what that means and how to verify it.
 3. **Federation, not centralisation.** Every commune runs its own. Topics can be shared across instances when participants want to; otherwise they stay local.
 
 ---

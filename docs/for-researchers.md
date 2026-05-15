@@ -5,6 +5,8 @@ canonical_url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/docs/fo
 last_stamped_at: 2026-05-15
 ---
 
+For the operational summary of how the corpus governs itself — what `cogentia.js` does, how continuations work in practice, what the audit trail contains — see the [methodology page](./methodology).
+
 ## The corpus
 
 The work spans five repositories, each producing research-grade documents that cross-reference each other:

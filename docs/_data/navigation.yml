@@ -9,5 +9,9 @@ main:
     url: /for-researchers
   - title: For citizens
     url: /for-citizens
+  - title: Methodology
+    url: /methodology
   - title: Papers
     url: /papers
+  - title: MareNostrum
+    url: /marenostrum
