@@ -26,6 +26,7 @@ This repository instantiates the **physical infrastructure layer** of the [DHITL
 | [Packetized Gravity Networks](../PGN.md) | this repo | 2026-05-08 |
 | [The Packet as Evolutionary Attractor — Scale-Invariant Transitions in Complex Networks](../packet_attractor.md) | this repo | 2026-05-08 |
 | [The Packet Transition — A Lateral Reading of Circuit Networks](../packet_transition.md) | this repo | 2026-05-08 |
+| [Inference Packet Networks — A RAID/ARPANET Continuity Layer for Sovereign AI Infrastructure](inference_packet_network.md) | this repo | 2026-05-14 |
 | [DC-Native Energy Packet Networks](../dc_native_epn.md) | this repo | 2026 |
 | [Electricity in Containers — Store-and-Forward Energy Logistics](../electricity_in_containers.md) | this repo | 2026-05-06 |
 | [The Unconscious Grid — Store-and-Forward as the Repressed Solution](../UNCONSCIOUS_GRID.md) | this repo | 2026-05-06 |
