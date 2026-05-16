@@ -1,6 +1,6 @@
 ---
 canonical_url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/inference_packet_network.md
-last_stamped_at: 2026-05-15
+last_stamped_at: 2026-05-16
 ---
 # Inference Packet Networks
 
@@ -1003,3 +1003,13 @@ Future versions should:
 * and preserve failures as epistemic evidence.
 
 The corpus, rather than this single document, will determine what survives.
+
+
+<!-- BEGIN_AUTO: backlinks -->
+### Backlinks
+
+*These documents link to this file:*
+- [Corpus Status — FractaVolta](corpus-status.md)
+- [Research Index — FractaVolta](index.md)
+
+<!-- END_AUTO: backlinks -->

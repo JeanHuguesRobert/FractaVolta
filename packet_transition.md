@@ -1,6 +1,6 @@
 ---
 canonical_url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/packet_transition.md
-last_stamped_at: 2026-05-15
+last_stamped_at: 2026-05-16
 ---
 # The Packet Transition: A Lateral Reading of Circuit Networks
 
@@ -342,3 +342,13 @@ https://bitcoin.org/bitcoin.pdf
 [11] Gelenbe, E. *Energy Packet Networks: ICT-Based Energy Allocation and Storage*. Proceedings of the 2nd International Workshop on GreenCom, 2012.
 
 [12] Nardelli, P.H.J. et al. *Energy Internet via Packetized Management: Enabling Technologies and Deployment Challenges*. IEEE Access, 7, 2019.
+
+
+<!-- BEGIN_AUTO: backlinks -->
+### Backlinks
+
+*These documents link to this file:*
+- [Corpus Status — FractaVolta](research/corpus-status.md)
+- [Research Index — FractaVolta](research/index.md)
+
+<!-- END_AUTO: backlinks -->

@@ -1,6 +1,6 @@
 ---
 canonical_url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/tera.md
-last_stamped_at: 2026-05-15
+last_stamped_at: 2026-05-16
 ---
 # FractaTera
 
@@ -181,3 +181,13 @@ The principle: **replace constraint with awareness**. A system that makes risk v
 ---
 
 *License: CC BY-SA 4.0 — Priority established by first commit timestamp.*
+
+
+<!-- BEGIN_AUTO: backlinks -->
+### Backlinks
+
+*These documents link to this file:*
+- [Corpus Status — FractaVolta](research/corpus-status.md)
+- [Research Index — FractaVolta](research/index.md)
+
+<!-- END_AUTO: backlinks -->

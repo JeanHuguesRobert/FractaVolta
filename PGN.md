@@ -1,6 +1,6 @@
 ---
 canonical_url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/PGN.md
-last_stamped_at: 2026-05-15
+last_stamped_at: 2026-05-16
 ---
 # Packetized Gravity Networks: Distributed Hydro-Energetic Infrastructure for Resilient Renewable Integration
 
@@ -347,3 +347,13 @@ The future of resilient infrastructure lies not in larger centralized systems bu
 *1 cours Paoli, F-20250 Corte, Corsica*
 *Priority: first public commit timestamp*
 *License: CC BY-SA 4.0 — Fork to explore alternatives, challenge via issues*
+
+
+<!-- BEGIN_AUTO: backlinks -->
+### Backlinks
+
+*These documents link to this file:*
+- [Corpus Status — FractaVolta](research/corpus-status.md)
+- [Research Index — FractaVolta](research/index.md)
+
+<!-- END_AUTO: backlinks -->

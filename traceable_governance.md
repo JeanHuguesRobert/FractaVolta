@@ -1,6 +1,6 @@
 ---
 canonical_url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/traceable_governance.md
-last_stamped_at: 2026-05-15
+last_stamped_at: 2026-05-16
 ---
 # FractaVolta traceable gouvernance
 
@@ -276,3 +276,13 @@ The review process is public, attributed, append-only. It is, in that sense, an 
 
 *License: CC BY-SA 4.0 — Repository: github.com/JeanHuguesRobert/fractavolta*  
 *Priority established by first commit timestamp. Challenge via issues.*
+
+
+<!-- BEGIN_AUTO: backlinks -->
+### Backlinks
+
+*These documents link to this file:*
+- [Corpus Status — FractaVolta](research/corpus-status.md)
+- [Research Index — FractaVolta](research/index.md)
+
+<!-- END_AUTO: backlinks -->

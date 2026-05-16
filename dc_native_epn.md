@@ -1,6 +1,6 @@
 ---
 canonical_url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/dc_native_epn.md
-last_stamped_at: 2026-05-15
+last_stamped_at: 2026-05-16
 ---
 # DC-Native Energy Packet Networks
 ## How Far Can Electricity Return from Alternating Current to Direct Current?
@@ -502,3 +502,13 @@ That is the real return of direct current: not as the defeated current of Edison
 [17] IEC 62619. *Secondary Cells and Batteries Containing Alkaline or Other Non-Acid Electrolytes — Safety Requirements for Secondary Lithium Cells and Batteries, for Use in Industrial Applications*. IEC, 2022.
 
 [18] European Parliament. *Regulation (EU) 2023/1542 Concerning Batteries and Waste Batteries*. OJ L 191, 2023.
+
+
+<!-- BEGIN_AUTO: backlinks -->
+### Backlinks
+
+*These documents link to this file:*
+- [Corpus Status — FractaVolta](research/corpus-status.md)
+- [Research Index — FractaVolta](research/index.md)
+
+<!-- END_AUTO: backlinks -->

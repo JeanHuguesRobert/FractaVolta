@@ -1,6 +1,6 @@
 ---
 canonical_url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/UNCONSCIOUS_GRID.md
-last_stamped_at: 2026-05-15
+last_stamped_at: 2026-05-16
 ---
 # The Unconscious Grid
 ## On Store-and-Forward as the Repressed Solution to Energy Sovereignty
@@ -349,3 +349,13 @@ The antifragility of the energy layer **propagates structurally** to the inferen
 - *Joule* (Cell Press) — high-impact energy journal, receptive to conceptually original contributions that cross disciplinary boundaries
 - *Telecommunications Policy* (Elsevier) — for the network theory and regulatory dimensions
 - *IEEE Access* (IEEE) — broader scope, open access, faster publication timeline
+
+
+<!-- BEGIN_AUTO: backlinks -->
+### Backlinks
+
+*These documents link to this file:*
+- [Corpus Status — FractaVolta](research/corpus-status.md)
+- [Research Index — FractaVolta](research/index.md)
+
+<!-- END_AUTO: backlinks -->

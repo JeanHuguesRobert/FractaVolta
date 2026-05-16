@@ -1,6 +1,6 @@
 ---
 canonical_url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/value_shaped_solar_and_containerized_compute.md
-last_stamped_at: 2026-05-15
+last_stamped_at: 2026-05-16
 ---
 # Value-Shaped Solar and Containerized Compute
 
@@ -451,3 +451,13 @@ Willockx, B., Lavaert, C., & Cappelle, J. (2023). Performance evaluation of vert
 *Website: [fractavolta.com](https://fractavolta.com)*
 *Repository: [github.com/JeanHuguesRobert/FractaVolta](https://github.com/JeanHuguesRobert/FractaVolta)*
 *Contact: jhr@baronsmariani.org*
+
+
+<!-- BEGIN_AUTO: backlinks -->
+### Backlinks
+
+*These documents link to this file:*
+- [Corpus Status — FractaVolta](research/corpus-status.md)
+- [Research Index — FractaVolta](research/index.md)
+
+<!-- END_AUTO: backlinks -->

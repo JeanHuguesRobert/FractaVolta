@@ -37,6 +37,7 @@ This repository instantiates the **physical infrastructure layer** of the [DHITL
 | [FractaVolta White Paper](../fractavolta_paper.md) | this repo | 2026 |
 | [FractaVolta Partner Brief — Agrivoltaics Pilot Opportunity](../partner_brief.md) | this repo | 2026-05-06 |
 | [Corpus Status](corpus-status.md) *(living view — auto-refreshed by `cogentia.js corpus-status`)* | this repo | refreshable |
+| [Concept Index](concepts.md) *(typed concept registry — mapped by `cogentia.js concepts`)* | this repo | refreshable |
 
 ---
 

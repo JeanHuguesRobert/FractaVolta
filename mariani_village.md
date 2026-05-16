@@ -1,6 +1,6 @@
 ---
 canonical_url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/mariani_village.md
-last_stamped_at: 2026-05-15
+last_stamped_at: 2026-05-16
 ---
 # Mariani Village: A Relocatable DC-Native Housing Fleet
 ## From Single Container to Regional Cooperative Mesh
@@ -452,3 +452,13 @@ https://github.com/JeanHuguesRobert/FractaVolta/blob/main/UNCONSCIOUS_GRID.md
 [9] github.com/JeanHuguesRobert/cogentia — Cogentia open-source energy routing and inference layer, MIT licence.
 
 [10] ISO 668:2020. *Series 1 Freight Containers — Classification, Dimensions and Ratings*. ISO, 2020.
+
+
+<!-- BEGIN_AUTO: backlinks -->
+### Backlinks
+
+*These documents link to this file:*
+- [Corpus Status — FractaVolta](research/corpus-status.md)
+- [Research Index — FractaVolta](research/index.md)
+
+<!-- END_AUTO: backlinks -->

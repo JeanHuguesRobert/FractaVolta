@@ -1,6 +1,6 @@
 ---
 canonical_url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/packet_attractor.md
-last_stamped_at: 2026-05-15
+last_stamped_at: 2026-05-16
 ---
 # The Packet as Evolutionary Attractor: Scale-Invariant Transitions in Complex Networks
 
@@ -243,3 +243,13 @@ https://github.com/JeanHuguesRobert/FractaVolta/blob/main/UNCONSCIOUS_GRID.md
 [20] Schrödinger, E. *What is Life?* Cambridge University Press, 1944.
 
 [21] Baran, P. *On Distributed Communications*. RAND Corporation, RM-3420-PR, 1964.
+
+
+<!-- BEGIN_AUTO: backlinks -->
+### Backlinks
+
+*These documents link to this file:*
+- [Corpus Status — FractaVolta](research/corpus-status.md)
+- [Research Index — FractaVolta](research/index.md)
+
+<!-- END_AUTO: backlinks -->

@@ -1,6 +1,6 @@
 ---
 canonical_url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/partner_brief.md
-last_stamped_at: 2026-05-15
+last_stamped_at: 2026-05-16
 ---
 # FractaVolta – Partner  Brief  
 ## Experimental Micro-Agrivoltaics Pilot Opportunity
@@ -108,3 +108,13 @@ This pilot positions partners at the intersection of these trends with a concret
 **Contact**: Jean Hugues Noël Robert, FractaVolta  
 *Email*: jhr@baronsmariani.org | *Phone*: +33753976287
 
+
+
+<!-- BEGIN_AUTO: backlinks -->
+### Backlinks
+
+*These documents link to this file:*
+- [Corpus Status — FractaVolta](research/corpus-status.md)
+- [Research Index — FractaVolta](research/index.md)
+
+<!-- END_AUTO: backlinks -->

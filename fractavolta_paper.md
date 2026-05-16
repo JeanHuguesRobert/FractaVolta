@@ -1,6 +1,6 @@
 ---
 canonical_url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/fractavolta_paper.md
-last_stamped_at: 2026-05-15
+last_stamped_at: 2026-05-16
 ---
 # FractaVolta
 
@@ -22,6 +22,12 @@ C.O.R.S.I.C.A. / FractaVolta
 ---
 
 # Executive Thesis
+
+<!-- BEGIN_AUTO: trails -->
+> 🧭 **Trail: From Method to Machine**
+> ⬅️ Previous: [Infrastructure is All You Need](../marenostrum/infrastructure_is_all_you_need.md) | ➡️ Next: [The Sovereign Digital Twin](../cogentia/research/cogentia-digital-twin.md)
+
+<!-- END_AUTO: trails -->
 
 FractaVolta proposes a simple but radical hypothesis:
 
@@ -449,3 +455,13 @@ That is the wager.
 **FractaVolta**
 Distributed democratic infrastructure.
 Built from territory upward.
+
+
+<!-- BEGIN_AUTO: backlinks -->
+### Backlinks
+
+*These documents link to this file:*
+- [Corpus Status — FractaVolta](research/corpus-status.md)
+- [Research Index — FractaVolta](research/index.md)
+
+<!-- END_AUTO: backlinks -->

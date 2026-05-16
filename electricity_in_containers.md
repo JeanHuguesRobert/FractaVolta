@@ -1,6 +1,6 @@
 ---
 canonical_url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/electricity_in_containers.md
-last_stamped_at: 2026-05-15
+last_stamped_at: 2026-05-16
 ---
 # Electricity in Containers
 
@@ -216,3 +216,13 @@ The core logistical claim — that terrestrial delivery of containerized electri
 
 *Related documents: `tera.md` (mobile node architecture), `MODEL.md` (operational exergy), `safe_compute_exergy.md` (provenance certification), `traceable_governance.md` (logistics register).*  
 *License: CC BY-SA 4.0 — Priority established by first commit timestamp.*
+
+
+<!-- BEGIN_AUTO: backlinks -->
+### Backlinks
+
+*These documents link to this file:*
+- [Corpus Status — FractaVolta](research/corpus-status.md)
+- [Research Index — FractaVolta](research/index.md)
+
+<!-- END_AUTO: backlinks -->
