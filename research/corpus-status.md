@@ -3,7 +3,7 @@ title: "Corpus Status — FractaVolta"
 description: "Current state of the FractaVolta knowledge corpus — what is proved, what is open, what remains possible"
 layout: default
 nav_order: 2
-last_modified_at: 2026-05-16
+last_modified_at: 2026-05-18
 repository: "github.com/JeanHuguesRobert/FractaVolta"
 canonical_url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/corpus-status.md
 last_stamped_at: 2026-05-16
@@ -26,11 +26,11 @@ last_stamped_at: 2026-05-16
 <!-- BEGIN_AUTO: registered_repos -->
 | Repository | research/index.md | Branch | Last commit |
 |---|---|---|---|
-| cogentia | ✅ | main | 2026-05-15 |
-| FractaVolta | ✅ | main | 2026-05-15 |
-| marenostrum | ✅ | main | 2026-05-15 |
-| barons-Mariani | ✅ | main | 2026-05-15 |
-| inseme | ✅ | main | 2026-05-15 |
+| cogentia | ✅ | main | 2026-05-18 |
+| FractaVolta | ✅ | main | 2026-05-18 |
+| marenostrum | ✅ | main | 2026-05-16 |
+| barons-Mariani | ✅ | main | 2026-05-18 |
+| inseme | ✅ | main | 2026-05-17 |
 <!-- END_AUTO: registered_repos -->
 
 ---
@@ -65,6 +65,11 @@ graph LR
   inseme --> marenostrum
   inseme --> FractaVolta
   inseme --> barons-Mariani
+  click cogentia "https://github.com/JeanHuguesRobert/cogentia/blob/main/research/index.md" "Open research/index.md"
+  click FractaVolta "https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/index.md" "Open research/index.md"
+  click marenostrum "https://github.com/JeanHuguesRobert/marenostrum/blob/main/research/index.md" "Open research/index.md"
+  click barons-Mariani "https://github.com/JeanHuguesRobert/barons-Mariani/blob/main/research/index.md" "Open research/index.md"
+  click inseme "https://github.com/JeanHuguesRobert/inseme/blob/main/research/index.md" "Open research/index.md"
 ```
 <!-- END_AUTO: graph -->
 
@@ -171,6 +176,7 @@ graph LR
 | [The Packet as Evolutionary Attractor — Scale-Invariant Transitions in Complex Networks](../packet_attractor.md) | this repo | 2026-05-08 |
 | [The Packet Transition — A Lateral Reading of Circuit Networks](../packet_transition.md) | this repo | 2026-05-08 |
 | [Inference Packet Networks — A RAID/ARPANET Continuity Layer for Sovereign AI Infrastructure](inference_packet_network.md) | this repo | 2026-05-14 |
+| [Guaranteed Inference — A Resilient, Routable and Traceable Fallback Layer for Critical AI Workloads](garanteed_inference.md) *(working paper v0.3-market)* | this repo | 2026-05-18 |
 | [DC-Native Energy Packet Networks](../dc_native_epn.md) | this repo | 2026 |
 | [Electricity in Containers — Store-and-Forward Energy Logistics](../electricity_in_containers.md) | this repo | 2026-05-06 |
 | [The Unconscious Grid — Store-and-Forward as the Repressed Solution](../UNCONSCIOUS_GRID.md) | this repo | 2026-05-06 |
