@@ -25,7 +25,7 @@ C.O.R.S.I.C.A. / FractaVolta
 
 <!-- BEGIN_AUTO: trails -->
 > 🧭 **Trail: From Method to Machine**
-> ⬅️ Previous: [Infrastructure is All You Need](../marenostrum/infrastructure_is_all_you_need.md) | ➡️ Next: [The Sovereign Digital Twin](../cogentia/research/cogentia-digital-twin.md)
+> ⬅️ Previous: [Infrastructure is All You Need](https://github.com/JeanHuguesRobert/marenostrum/blob/main/infrastructure_is_all_you_need.md) | ➡️ Next: [The Sovereign Digital Twin](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/cogentia-digital-twin.md)
 
 <!-- END_AUTO: trails -->
 
