@@ -9,3 +9,7 @@
 # pages, methodology overview, papers index, contact. These are not research
 # deliverables in themselves; they reference the actual research/ corpus.
 docs/**
+
+# Intentional alias — canonical VIGILIA lives in barons-Mariani/vigilia.md.
+# This stub exists only to redirect readers landing in FractaVolta.
+vigilia.md
