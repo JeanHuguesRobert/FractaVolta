@@ -1,14 +1,16 @@
 main:
   - title: Home
     url: /
+  - title: Energy packets
+    url: /energy-packets
+  - title: Corse
+    url: /fr/
+  - title: Seconde Vie
+    url: /fr/seconde-vie
+  - title: Marchés
+    url: /fr/marches
   - title: For partners
     url: /for-partners
-  - title: For deployers
-    url: /for-deployers
-  - title: For researchers
-    url: /for-researchers
-  - title: For citizens
-    url: /for-citizens
   - title: Methodology
     url: /methodology
   - title: Papers
