@@ -1,6 +1,9 @@
 ---
 canonical_url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/UNCONSCIOUS_GRID.md
-last_stamped_at: 2026-05-16
+last_stamped_at: 2026-05-21
+translations:
+  fr: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/LE_RESEAU_INCONSCIENT.md
+role: "entry point for the packetization corpus"
 ---
 # The Unconscious Grid
 ## On Store-and-Forward as the Repressed Solution to Energy Sovereignty
@@ -244,7 +247,51 @@ At the application layer, sovereign AI inference services constitute the primary
 
 ---
 
-## 8. Conclusion: The Diversity Principle and the End of an Old Argument
+## 8. The Wider Family: From Energy to Cognition
+
+The unconscious grid was an energy story. It need not be only that.
+
+Once the diagnostic is named — *a circuit-switched system stuck in 1968, surrounded by datagram alternatives it has not yet recognised* — the pattern reveals itself wherever the symptom recurs. Each instance is a different patient with the same repression. Each requires its own analysis, its own resistances to work through, its own resolution. The packetization corpus, of which this paper is the entry point, is that gradual analysis.
+
+Four contemporary instances, briefly, to suggest the family.
+
+### 8.1 The Cognitive Grid
+
+The grid of contemporary artificial intelligence is, structurally, circuit-switched. A user connects to a single provider; the conversation establishes a dedicated path between them; the path is held for the duration; if the provider goes down, if the user changes provider, if the conversation must migrate to a different agent, the path collapses and the work it carried is lost. The session is the dedicated circuit. The cognitive work it transports is the captured energy that cannot leave it.
+
+The datagram in this domain is the **cognitive packet** — a transport-neutral unit of work composed of an *envelope* (kind-agnostic metadata that any receiver can route, queue, validate, archive, or acknowledge) and a *payload* (kind-specific content interpretable by an agent capable of handling the declared kind: continuation, objection, hypothesis, decision, failure, routing). A cognitive packet can be copied into a new conversation with a different provider, pasted into an issue, attached to a document, forwarded to a human collaborator, resumed by a different model. The work routes around the provider rather than being held captive by it.
+
+The implementation already exists in the `cogentia.continuation.v1` protocol (Agent-Resumable CLI, 2026) and its envelope/payload generalisation in [Cognitive Packets](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/cognitive_packets.md). The provider remains a useful node in the network. It is no longer the network.
+
+### 8.2 The Sociability Grid
+
+The grid of mobile data and battery is, structurally, circuit-switched. When a user runs out of data quota or battery at the wrong moment — at a hospital, at a border, after midnight on a remote road — the path to the carrier is broken and no fallback exists. The carrier is the dedicated circuit. When the circuit fails, the user is alone.
+
+The datagram in this domain is **proximate hospitality**: the data or battery a nearby phone can spare, voluntarily, through a brief peer-to-peer transfer. Mediterranean tradition has named this exchange for two millennia; it has only recently become digitisable. The `brique-auxilia` module of the Inseme platform ([spec, 2026](https://github.com/JeanHuguesRobert/inseme/blob/main/packages/brique-auxilia/AUXILIA.md)) is the protocol that makes the exchange auditable and transmissible — explicitly described in its README as the human instantiation of the store-and-forward principle from FractaVolta's Energy Packet Networks. The carrier remains useful where coverage is good and quota is sufficient. It is no longer the only available substrate.
+
+### 8.3 The Monetary Grid
+
+The currency layer of contemporary commercial exchange is, structurally, circuit-switched. The euro closes a transaction along a dedicated, irreversible path: settlement is final, the counter-party identity collapses into the price, the social reciprocity the exchange may have carried is severed at the moment of payment.
+
+The datagram in this domain is the **Maussian counter-gift** — a public, voluntary, nominative, transparent, traceable, and partially convertible layer of recognition superposed *on top of* the euro transaction, without substituting for it. The euro circuit closes the transaction; the gift packet opens a parallel layer of social memory. The [Kudos working paper](https://github.com/JeanHuguesRobert/barons-Mariani/blob/main/research/kudos.md) (2026) proposes this superposition explicitly: not currency substitution, but envelope-and-payload reasoning applied to value itself — the euro as carrier, the kudo as the cognitive packet of social reciprocity that travels on top.
+
+### 8.4 The Territorial Grid
+
+The contemporary debate on territorial autonomy is, structurally, circuit-switched. Autonomy is conceived as a statutory transfer along a dedicated political path: constitutional reform, special status, normative power devolved from one centre to another. The path is dedicated; nothing happens until the path is completed; if the path is blocked, the territory waits.
+
+The datagram in this domain is **autonomy of capacity** — the verifiable, documented, transmissible conversion of a territory's existing capital into effective collective capabilities, *independently of whatever statutory transfer has or has not occurred*. The [Autonomia working paper](https://github.com/JeanHuguesRobert/barons-Mariani/blob/main/research/autonomia.md) (2026) formalises this in the Corsican case: each capability built, each experiment documented, each public test conducted is a packet that does not depend on the statutory circuit being open. The territory routes around its own institutional dependence.
+
+### 8.5 The same diagnosis, the same cure
+
+These four instances — cognition, sociability, money, territory — do not exhaust the family. Distributed AI governance under [DHITL](https://github.com/JeanHuguesRobert/marenostrum/blob/main/DHITL.md), commons under Ostrom's principles, the [packet attractor](packet_attractor.md) as a scale-invariant transition mechanism, the [packet transition](packet_transition.md) as a lateral reading of circuit networks — each is a further instance of the same pattern at a different layer.
+
+What the four share is not the technology. It is the diagnostic shape: in every case the circuit-switched habit has been preserved past the point where its limitations were demonstrable, because the alternative — the datagram, the packet, the work that routes around any single dedicated path — has not yet been recognised as the natural state of the system. The unconscious grid was the energy version of this story. The story is the same wherever it is told.
+
+What was missing, in each case, was the protocol that made the alternative conscious.
+
+---
+
+## 9. Conclusion: The Diversity Principle and the End of an Old Argument
 
 Every section of this paper has, on examination, converged on a single underlying principle. It is time to name it.
 

@@ -3,7 +3,7 @@ title: "Corpus Status — FractaVolta"
 description: "Current state of the FractaVolta knowledge corpus — what is proved, what is open, what remains possible"
 layout: default
 nav_order: 2
-last_modified_at: 2026-05-20
+last_modified_at: 2026-05-21
 repository: "github.com/JeanHuguesRobert/FractaVolta"
 canonical_url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/corpus-status.md
 last_stamped_at: 2026-05-16
@@ -26,11 +26,11 @@ last_stamped_at: 2026-05-16
 <!-- BEGIN_AUTO: registered_repos -->
 | Repository | research/index.md | Branch | Last commit |
 |---|---|---|---|
-| cogentia | ✅ | main | 2026-05-20 |
-| FractaVolta | ✅ | main | 2026-05-20 |
-| marenostrum | ✅ | main | 2026-05-18 |
-| barons-Mariani | ✅ | main | 2026-05-20 |
-| inseme | ✅ | main | 2026-05-20 |
+| cogentia | ✅ | main | 2026-05-21 |
+| FractaVolta | ✅ | main | 2026-05-21 |
+| marenostrum | ✅ | main | 2026-05-21 |
+| barons-Mariani | ✅ | main | 2026-05-21 |
+| inseme | ✅ | main | 2026-05-21 |
 <!-- END_AUTO: registered_repos -->
 
 ---
@@ -179,7 +179,8 @@ graph LR
 | [Guaranteed Inference — A Resilient, Routable and Traceable Fallback Layer for Critical AI Workloads](garanteed_inference.md) *(working paper v0.3-market)* | this repo | 2026-05-18 |
 | [DC-Native Energy Packet Networks](../dc_native_epn.md) | this repo | 2026 |
 | [Electricity in Containers — Store-and-Forward Energy Logistics](../electricity_in_containers.md) | this repo | 2026-05-06 |
-| [The Unconscious Grid — Store-and-Forward as the Repressed Solution](../UNCONSCIOUS_GRID.md) | this repo | 2026-05-06 |
+| [The Unconscious Grid — Store-and-Forward as the Repressed Solution](../UNCONSCIOUS_GRID.md) *(entry point for the packetization corpus ; §8 extends the diagnosis from energy to cognition, sociability, money, and territory)* | this repo | 2026-05-21 |
+| [Le Réseau Inconscient — De la commutation *store-and-forward* comme solution refoulée (FR)](../LE_RESEAU_INCONSCIENT.md) *(version française sémantiquement identique à `UNCONSCIOUS_GRID.md`)* | this repo | 2026-05-21 |
 | [Value-Shaped Solar and Containerized Compute](../value_shaped_solar_and_containerized_compute.md) | this repo | 2026-05-06 |
 | [Mariani Village — A Relocatable DC-Native Housing Fleet](../mariani_village.md) | this repo | 2026-05-08 |
 | [FractaTera — Fractal Terrestrial Awareness Network](../tera.md) | this repo | 2026-05-06 |
