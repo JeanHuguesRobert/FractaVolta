@@ -30,6 +30,8 @@
 *Part of the [Cogentia Commons](https://github.com/JeanHuguesRobert/cogentia) distributed knowledge corpus.*
 *Methodology: [Discours de la seconde méthode](https://github.com/JeanHuguesRobert/barons-Mariani/blob/main/research/second_method.md)*
 
+*FractaVolta is one node of a wider **packetization corpus** — the same circuit-to-packet diagnostic, extended from energy to cognition ([Cognitive Packets](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/cognitive_packets.md)), sociability ([Auxilia brique](https://github.com/JeanHuguesRobert/inseme/blob/main/packages/brique-auxilia/AUXILIA.md)), money ([Kudos](https://github.com/JeanHuguesRobert/barons-Mariani/blob/main/research/kudos.md)), and territory ([Autonomia](https://github.com/JeanHuguesRobert/barons-Mariani/blob/main/research/autonomia.md)). The entry point is §8 of [UNCONSCIOUS_GRID.md](./UNCONSCIOUS_GRID.md) — also available in French as [LE_RESEAU_INCONSCIENT.md](./LE_RESEAU_INCONSCIENT.md).*
+
 ---
 
 ## What FractaVolta Is
