@@ -3,7 +3,7 @@ title: "Corpus Status — FractaVolta"
 description: "Current state of the FractaVolta knowledge corpus — what is proved, what is open, what remains possible"
 layout: default
 nav_order: 2
-last_modified_at: 2026-05-18
+last_modified_at: 2026-05-20
 repository: "github.com/JeanHuguesRobert/FractaVolta"
 canonical_url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/corpus-status.md
 last_stamped_at: 2026-05-16
@@ -26,11 +26,11 @@ last_stamped_at: 2026-05-16
 <!-- BEGIN_AUTO: registered_repos -->
 | Repository | research/index.md | Branch | Last commit |
 |---|---|---|---|
-| cogentia | ✅ | main | 2026-05-18 |
-| FractaVolta | ✅ | main | 2026-05-18 |
+| cogentia | ✅ | main | 2026-05-20 |
+| FractaVolta | ✅ | main | 2026-05-20 |
 | marenostrum | ✅ | main | 2026-05-18 |
-| barons-Mariani | ✅ | main | 2026-05-18 |
-| inseme | ✅ | main | 2026-05-18 |
+| barons-Mariani | ✅ | main | 2026-05-20 |
+| inseme | ✅ | main | 2026-05-20 |
 <!-- END_AUTO: registered_repos -->
 
 ---
