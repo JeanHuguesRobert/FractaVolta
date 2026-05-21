@@ -36,6 +36,7 @@ Each repository carries a [`research/index.md`](https://github.com/JeanHuguesRob
 
 **Cognition layer**
 - [Agent-Resumable CLI](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/agent_resumable_cli.md) — externalized judgment, continuations, provider-neutral resumption
+- [Cognitive Packets](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/cognitive_packets.md) (v0.3) — envelope-and-payload format generalising the continuation pattern beyond the CLI; six packet kinds (continuation, objection, hypothesis, decision, failure, routing)
 - [The COP Manifesto](https://github.com/JeanHuguesRobert/inseme/blob/main/packages/cop-core/Manifesto.md) — TCP/IP for intelligences
 - [COP Architecture](https://github.com/JeanHuguesRobert/inseme/blob/main/packages/cop-core/Architecture.md) — full protocol specification
 - [Cogentia Commons Working Paper](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/Cogentia_Commons_Working_Paper.md) — methodology for distributed knowledge production

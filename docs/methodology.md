@@ -21,13 +21,39 @@ These three commitments are operationalized through a small set of named instrum
 
 ## cogentia.js
 
-[**`cogentia.js`**](https://github.com/JeanHuguesRobert/cogentia/blob/main/scripts/cogentia.js) is the operational CLI. Zero-dependency Node.js. Multi-repository registry. Commands include:
+[**`cogentia.js`**](https://github.com/JeanHuguesRobert/cogentia/blob/main/scripts/cogentia.js) is the operational CLI. Zero-dependency Node.js. Multi-repository registry. Commands are organised by concern:
 
+**Sync & inspection.**
+
+- `drift` — fetch and report ahead/behind/diverged vs upstream across all repos; `--pull` fast-forwards behind repos; `--strict` exits non-zero on drift.
+- `lint` — single-table corpus health report: unreferenced, frontmatter issues, drift, in one pass.
 - `scan` — flag markdown files not referenced in `research/index.md` (rule 4: every claim must be anchored).
-- `check` — validate internal links across the corpus.
+- `check` — validate internal and external links across the corpus.
+
+**Derived views (one command refreshes all).**
+
+- `refresh` — runs `corpus-status`, `backlinks`, `trails`, and `documents` in canonical order.
+- `documents` — consolidated cross-corpus catalogue with reverse-chronological activity and chronological authorship; bulk-pass commits filtered out.
+- `corpus-status` — per-repository status page; structural sections auto-regenerated, curated sections preserved.
+- `backlinks` / `trails` — auto-inject "Mentioned in" lists and Previous/Next playlist navigation; cross-repo links use absolute GitHub URLs so they render on the web.
+
+**Frontmatter governance.**
+
+- `frontmatter check [repo]` — diagnose docs missing Level 2 fields, using deprecated names, or carrying a `status:` value outside the controlled vocabulary.
+- `frontmatter promote <file>` — add a Level 2 skeleton (title, author, affiliation, date, license, status).
+- `frontmatter promote --batch` — bulk-inject the three invariants (author, affiliation, license) across substantive docs; leaves judgment fields for human edit.
+- `frontmatter schema` — canonical schema reference.
+
+**Personal scheduler (fractal).**
+
+- `todo` — list, add, done, defer, drop. Each `.cogentia/SCHEDULE.md` is sovereign at its scope; `--global` aggregates across the workspace.
+- `next [--pick]` — apply scheduler policy (priority → overdue → FIFO) and surface the next item; `--pick` marks it Active and audits.
+
+**Authoring.**
+
 - `stamp` — insert `canonical_url` + `last_stamped_at` into a document's front-matter, anchored to its GitHub commit URL.
-- `corpus-status` — refresh the per-repository status page; structural sections auto-regenerated, manually-curated sections preserved.
 - `continuation` — emit / inspect / resume / fail / abort / queue typed continuation requests. See below.
+- `concepts` — typed concept registry: init, list, check (orphan validation), graph, ref, schema.
 
 Every state-changing call appends one JSONL line to `.cogentia/audit.jsonl`. The audit log is a first-class deliverable, not a compliance afterthought.
 
@@ -43,6 +69,17 @@ The soundness test is binding:
 > If yes, the protocol is sound. If no, it is contaminated.
 
 Every resumption produces a [Heraclitean follow-up](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/agent_resumable_cli.md#heraclitean-followup) — a dormant successor that keeps the chain non-terminal. History never 100% ends; the only constant is change.
+
+## Cognitive Packets
+
+[**Cognitive Packets**](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/cognitive_packets.md) (v0.3) generalise the continuation protocol beyond the CLI. A cognitive packet is composed of two layers:
+
+- an **envelope** carrying kind-agnostic metadata (protocol header, provenance, context reference, transmission mode, routing, traces) that any agent — human or machine — can read without interpreting the inner work;
+- a **payload** carrying kind-specific cognitive content (continuation, objection, hypothesis, decision, failure, or routing), validated by an agent that understands the declared kind.
+
+A routing agent (workflow engine, human dispatcher, queue manager) can validate, queue, archive, or acknowledge a packet by reading the envelope alone. Only an agent capable of handling the declared kind needs to interpret the payload. New kinds may be added without modifying the envelope.
+
+The `cogentia.continuation.v1` object **is** the canonical payload of a packet whose `packet_kind = continuation` — no semantic change to the CLI primitive, only a clearer transport story when the work needs to leave the CLI runtime (copied into a GitHub issue, attached to a document, pasted into a different AI conversation, resumed by a different agent).
 
 ## The Second Method
 

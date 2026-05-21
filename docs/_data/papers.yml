@@ -93,6 +93,12 @@
       kind: paper
       url: https://github.com/JeanHuguesRobert/cogentia/blob/main/research/agent_resumable_cli.md
 
+    - title: Cognitive Packets
+      subtitle: An envelope-and-payload format for human–AI and multi-agent cooperation — generalises the Agent-Resumable CLI continuation beyond the CLI (in Cogentia, v0.3)
+      date: 2026-05
+      kind: paper
+      url: https://github.com/JeanHuguesRobert/cogentia/blob/main/research/cognitive_packets.md
+
     - title: Cogentia Commons — Working Paper
       subtitle: Methodology for distributed knowledge production (in Cogentia)
       date: 2026
@@ -114,6 +120,36 @@
       date: 2026-05
       kind: founding-paper
       url: https://github.com/JeanHuguesRobert/barons-Mariani/blob/main/research/second_method.md
+
+    - title: Autonomia
+      subtitle: Capabilités collectives, capital territorial et flexibilité d'usage dans le cas corse — central concept of the Corsican senatorial campaign; §2.7 announces the 1755 test (in barons-Mariani, v0.12)
+      date: 2026-05
+      kind: working-paper
+      url: https://github.com/JeanHuguesRobert/barons-Mariani/blob/main/research/autonomia.md
+
+    - title: La pathologie du secret
+      subtitle: Imputabilité humaine, traçabilité démocratique et refus de l'irresponsabilité artificielle — legal-doctrinal companion to Democratic AI Safety, anchored in French/EU positive law, DataJust case study (in barons-Mariani, v0.4)
+      date: 2026-05
+      kind: working-paper
+      url: https://github.com/JeanHuguesRobert/barons-Mariani/blob/main/research/pathologie_du_secret.md
+
+    - title: Kudocracy
+      subtitle: Recommandation civique traçable, votations et démocratie liquide assistée par agents — traceable civic recommendation layer for votations, complementary to liquid democracy (in barons-Mariani, v0.1)
+      date: 2026-05
+      kind: working-paper
+      url: https://github.com/JeanHuguesRobert/barons-Mariani/blob/main/research/kudocracy.md
+
+    - title: Kudos
+      subtitle: A Maussian complementary currency, euro-backed — superposition rather than substitution; euro closes the transaction, Kudos opens the counter-gift layer (in barons-Mariani, v0.3)
+      date: 2026-05
+      kind: working-paper
+      url: https://github.com/JeanHuguesRobert/barons-Mariani/blob/main/research/kudos.md
+
+    - title: La méthode des terrains féconds
+      subtitle: Dépolariser par reconfiguration préalable des oppositions — a pre-deliberative protocol; founding example "common protocol, free operations" (in barons-Mariani, v0.4)
+      date: 2026-05
+      kind: working-paper
+      url: https://github.com/JeanHuguesRobert/barons-Mariani/blob/main/research/methode_terrains_feconds.md
 
 - key: site-and-region
   label: Site and region
