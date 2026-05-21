@@ -242,7 +242,23 @@ graph LR
 ### Backlinks
 
 *These documents link to this file:*
+- [Guaranteed Inference](garanteed_inference.md)
 - [Corpus Status — FractaVolta](corpus-status.md)
 - [Research Index — FractaVolta](index.md)
+- [The Unconscious Grid](../UNCONSCIOUS_GRID.md)
+- [The Packet Transition: A Lateral Reading of Circuit Networks](../packet_transition.md)
+- [The Packet as Evolutionary Attractor: Scale-Invariant Transitions in Complex Networks](../packet_attractor.md)
+- [Le Réseau Inconscient](../LE_RESEAU_INCONSCIENT.md)
+- [Electricity in Containers](../electricity_in_containers.md)
+- [Inference Packet Networks](inference_packet_network.md)
+- [FractaVolta – Partner  Brief](../partner_brief.md)
+- [DC-Native Energy Packet Networks](../dc_native_epn.md)
+- [FractaVolta](../fractavolta_paper.md)
+- [Mariani Village: A Relocatable DC-Native Housing Fleet](../mariani_village.md)
+- [Packetized Gravity Networks: Distributed Hydro-Energetic Infrastructure for Resilient Renewable Integration](../PGN.md)
+- [FractaTera](../tera.md)
+- [FractaVolta traceable gouvernance](../traceable_governance.md)
+- [Value-Shaped Solar and Containerized Compute](../value_shaped_solar_and_containerized_compute.md)
+- [Concept Index — FractaVolta](concepts.md)
 
 <!-- END_AUTO: backlinks -->

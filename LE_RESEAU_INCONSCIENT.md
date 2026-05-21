@@ -402,3 +402,15 @@ L'antifragilité de la couche énergétique **se propage structurellement** à l
 - *Joule* (Cell Press) — revue à fort impact, réceptive aux contributions conceptuellement originales qui traversent les frontières disciplinaires
 - *Telecommunications Policy* (Elsevier) — pour les dimensions de théorie des réseaux et réglementaires
 - *IEEE Access* (IEEE) — périmètre plus large, accès libre, calendrier de publication plus rapide
+
+
+<!-- BEGIN_AUTO: backlinks -->
+### Backlinks
+
+*These documents link to this file:*
+- [Corpus Status — FractaVolta](research/corpus-status.md)
+- [Research Index — FractaVolta](research/index.md)
+- [The Packet Transition: A Lateral Reading of Circuit Networks](packet_transition.md)
+- [The Packet as Evolutionary Attractor: Scale-Invariant Transitions in Complex Networks](packet_attractor.md)
+
+<!-- END_AUTO: backlinks -->

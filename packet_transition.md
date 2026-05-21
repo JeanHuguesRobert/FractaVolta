@@ -353,5 +353,7 @@ https://bitcoin.org/bitcoin.pdf
 *These documents link to this file:*
 - [Corpus Status — FractaVolta](research/corpus-status.md)
 - [Research Index — FractaVolta](research/index.md)
+- [The Unconscious Grid](UNCONSCIOUS_GRID.md)
+- [Le Réseau Inconscient](LE_RESEAU_INCONSCIENT.md)
 
 <!-- END_AUTO: backlinks -->
