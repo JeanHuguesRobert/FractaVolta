@@ -334,5 +334,5 @@ All papers: CC BY-SA 4.0. All software: MIT.
 
 ---
 
-*© 2026 Jean Hugues Noël Robert — Institut Mariani / C.O.R.S.I.C.A.*
-*Documentation: CC BY-SA 4.0 · Software: MIT*
+*License: MIT (code) · CC BY-SA 4.0 (research).*
+*Author: Jean Hugues Noël Robert, baron Mariani — Institut Mariani / C.O.R.S.I.C.A., 1 cours Paoli, F-20250 Corte, Corsica — jhr@baronsmariani.org*
