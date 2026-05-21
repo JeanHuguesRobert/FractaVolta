@@ -24,7 +24,7 @@ Each repository carries a [`research/index.md`](https://github.com/JeanHuguesRob
 ## Foundational papers by layer
 
 **Energy substrate**
-- [The Unconscious Grid](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/UNCONSCIOUS_GRID.md) — store-and-forward as the repressed solution to energy sovereignty
+- [The Unconscious Grid](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/UNCONSCIOUS_GRID.md) — store-and-forward as the repressed solution to energy sovereignty; §8 extends the diagnosis to cognition, sociability, money, and territory, making this the entry point to the wider packetization corpus ([FR](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/LE_RESEAU_INCONSCIENT.md))
 - [DC-Native Energy Packet Networks](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/dc_native_epn.md) — 48V SELV node architecture
 - [Packetized Gravity Networks](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/PGN.md) — hydraulic exergy
 - [The Packet Transition: A Lateral Reading](https://github.com/JeanHuguesRobert/marenostrum/blob/main/packet_transition.md) — phronèsis, amathia, transition taxonomy

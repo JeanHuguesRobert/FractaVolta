@@ -6,10 +6,12 @@
   description: Packetized energy at every scale — from phone battery to container vessel — and the hydraulic complement.
   papers:
     - title: The Unconscious Grid
-      subtitle: Store-and-forward as the repressed solution to energy sovereignty
-      date: 2024
+      subtitle: Store-and-forward as the repressed solution to energy sovereignty — and entry point to the packetization corpus (§8 extends the diagnosis to cognition, sociability, money, and territory)
+      date: 2026-05
       kind: founding-paper
       url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/UNCONSCIOUS_GRID.md
+      translations:
+        fr: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/LE_RESEAU_INCONSCIENT.md
 
     - title: DC-Native Energy Packet Networks
       subtitle: Layered analysis from packet internals to HVDC — quantitative efficiency case for 48V DC-first nodes

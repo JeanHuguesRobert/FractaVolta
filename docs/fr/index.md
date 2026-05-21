@@ -65,3 +65,9 @@ Ce prototype ne prouve pas la puissance industrielle. Il prouve la structure : s
 ## Niveau recherche
 
 La partie anglaise du site expose l’architecture générale : [Energy packets](../energy-packets), compute, inference, Cogentia et continuité cognitive.
+
+## Pour comprendre la théorie
+
+Le papier fondateur du *Energy Packet Network* est désormais disponible en français : [**Le Réseau Inconscient**](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/LE_RESEAU_INCONSCIENT.md) — *de la commutation* store-and-forward *comme solution refoulée à la souveraineté énergétique*.
+
+Son §8, *La famille élargie*, étend le diagnostic au-delà de l’énergie — vers la cognition, la sociabilité, la monnaie et le territoire — et positionne le papier comme **point d’entrée du corpus de *packetization***. Lecture théorique : ~620 lignes, registre psychanalytique assumé.
