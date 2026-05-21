@@ -89,11 +89,11 @@ This repository instantiates the **physical infrastructure layer** of the [DHITL
 
 *These documents link to this file:*
 - [Guaranteed Inference](garanteed_inference.md)
-- [Corpus Status — FractaVolta](corpus-status.md)
 - [The Unconscious Grid](../UNCONSCIOUS_GRID.md)
-- [The Packet Transition: A Lateral Reading of Circuit Networks](../packet_transition.md)
-- [The Packet as Evolutionary Attractor: Scale-Invariant Transitions in Complex Networks](../packet_attractor.md)
 - [Le Réseau Inconscient](../LE_RESEAU_INCONSCIENT.md)
+- [The Packet as Evolutionary Attractor: Scale-Invariant Transitions in Complex Networks](../packet_attractor.md)
+- [The Packet Transition: A Lateral Reading of Circuit Networks](../packet_transition.md)
+- [Corpus Status — FractaVolta](corpus-status.md)
 - [Electricity in Containers](../electricity_in_containers.md)
 - [Inference Packet Networks](inference_packet_network.md)
 - [FractaVolta – Partner  Brief](../partner_brief.md)
