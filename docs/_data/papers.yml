@@ -1,6 +1,16 @@
 # Papers index. Grouped by layer of the stack. Order is intentional.
 # All papers live as .md in the repo (linked); the canonical URL is on github.com.
 
+- key: language
+  label: Language and runtime substrate
+  description: The future *Fractanet* — agents and nodes that coordinate without a capturable centre — needs a runtime that descends gracefully from comfortable hosts to bare metal. Inox is that runtime, currently in TypeScript, headed for WASM, C/C++ and ESP32.
+  papers:
+    - title: The Inox Programming Language — Specification
+      subtitle: Concatenative stack VM, named values, control/data plane separation, dialects, actors — TypeScript reference implementation, headed for WASM/C/ESP32 (in Inox, working paper since 2021-06)
+      date: 2021–
+      kind: working-paper
+      url: https://github.com/JeanHuguesRobert/Inox/blob/master/research/inox-spec.md
+
 - key: energy
   label: Energy substrate
   description: Packetized energy at every scale — from phone battery to container vessel — and the hydraulic complement.

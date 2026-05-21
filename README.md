@@ -274,7 +274,7 @@ Pouzin was right. The datagram won for information. It will win for energy, for 
 
 ## Ecosystem
 
-FractaVolta operates the integrated stack across a five-repository ecosystem:
+FractaVolta operates the integrated stack across a six-repository ecosystem:
 
 | Repository | Role |
 |---|---|
@@ -283,6 +283,7 @@ FractaVolta operates the integrated stack across a five-repository ecosystem:
 | [Cogentia](https://github.com/JeanHuguesRobert/cogentia) | **Cognitive infrastructure tooling.** `cogentia.js` CLI, Cogentia Commons methodology, continuation protocol `cogentia.continuation.v1`. |
 | [inseme](https://github.com/JeanHuguesRobert/inseme) | **Platform: COP runtime + civic applications.** Cognitive Orchestration Protocol, briques (modular plugins), Kudocracy.Survey, Inseme Agora, Ophélia AI mediator, Atlas of Biodiversity. |
 | [barons-Mariani](https://github.com/JeanHuguesRobert/barons-Mariani) | **Political and institutional framework.** Plan 2038. Corsican senatorial candidacy. *Discours de la seconde méthode.* |
+| [Inox](https://github.com/JeanHuguesRobert/Inox) | **Language and runtime substrate.** Concatenative stack VM, strict control/data plane separation. Intended runtime for the agents and nodes of the future *Fractanet*. JS today, WASM and C/C++ next, ESP32 bare-metal eventually. |
 
 ---
 

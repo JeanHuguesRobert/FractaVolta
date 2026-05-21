@@ -31,6 +31,7 @@ last_stamped_at: 2026-05-16
 | marenostrum | ✅ | main | 2026-05-21 |
 | barons-Mariani | ✅ | main | 2026-05-21 |
 | inseme | ✅ | main | 2026-05-21 |
+| Inox | ✅ | master | 2026-04-19 |
 <!-- END_AUTO: registered_repos -->
 
 ---
@@ -45,6 +46,7 @@ graph LR
   marenostrum["📄 marenostrum"]
   barons-Mariani["📄 barons-Mariani"]
   inseme["📄 inseme"]
+  Inox["📄 Inox"]
   cogentia --> marenostrum
   cogentia --> barons-Mariani
   cogentia --> FractaVolta
@@ -65,11 +67,17 @@ graph LR
   inseme --> marenostrum
   inseme --> FractaVolta
   inseme --> barons-Mariani
+  Inox --> marenostrum
+  Inox --> FractaVolta
+  Inox --> cogentia
+  Inox --> barons-Mariani
+  Inox --> inseme
   click cogentia "https://github.com/JeanHuguesRobert/cogentia/blob/main/research/index.md" "Open research/index.md"
   click FractaVolta "https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/index.md" "Open research/index.md"
   click marenostrum "https://github.com/JeanHuguesRobert/marenostrum/blob/main/research/index.md" "Open research/index.md"
   click barons-Mariani "https://github.com/JeanHuguesRobert/barons-Mariani/blob/main/research/index.md" "Open research/index.md"
   click inseme "https://github.com/JeanHuguesRobert/inseme/blob/main/research/index.md" "Open research/index.md"
+  click Inox "https://github.com/JeanHuguesRobert/Inox/blob/main/research/index.md" "Open research/index.md"
 ```
 <!-- END_AUTO: graph -->
 
@@ -242,13 +250,13 @@ graph LR
 ### Backlinks
 
 *These documents link to this file:*
-- [Guaranteed Inference](garanteed_inference.md)
-- [The Unconscious Grid](../UNCONSCIOUS_GRID.md)
 - [Le Réseau Inconscient](../LE_RESEAU_INCONSCIENT.md)
 - [The Packet as Evolutionary Attractor: Scale-Invariant Transitions in Complex Networks](../packet_attractor.md)
 - [The Packet Transition: A Lateral Reading of Circuit Networks](../packet_transition.md)
 - [Corpus Status — FractaVolta](corpus-status.md)
 - [Research Index — FractaVolta](index.md)
+- [The Unconscious Grid](../UNCONSCIOUS_GRID.md)
+- [Guaranteed Inference](garanteed_inference.md)
 - [Electricity in Containers](../electricity_in_containers.md)
 - [Inference Packet Networks](inference_packet_network.md)
 - [FractaVolta – Partner  Brief](../partner_brief.md)
