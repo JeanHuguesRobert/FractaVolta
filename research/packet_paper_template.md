@@ -8,12 +8,12 @@ address: "1 cours Paoli, F-20250 Corte, Corsica, France"
 email: "jhr@baronsmariani.org"
 website: "https://fractavolta.com"
 repository: "https://github.com/JeanHuguesRobert/FractaVolta"
-canonical_url: "https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/packet_paper_template.md"
+canonical_url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/packet_paper_template.md
 version: "0.2"
 status: "method-template"
 date: "2026-05-22"
 last_modified_at: "2026-05-22"
-last_stamped_at: "2026-05-22"
+last_stamped_at: 2026-05-22
 license: "CC BY-SA 4.0"
 layout: default
 tags:
