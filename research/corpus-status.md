@@ -3,7 +3,7 @@ title: "Corpus Status — FractaVolta"
 description: "Current state of the FractaVolta knowledge corpus — what is proved, what is open, what remains possible"
 layout: default
 nav_order: 2
-last_modified_at: 2026-05-21
+last_modified_at: 2026-05-22
 repository: "github.com/JeanHuguesRobert/FractaVolta"
 canonical_url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/corpus-status.md
 last_stamped_at: 2026-05-16
@@ -31,7 +31,7 @@ last_stamped_at: 2026-05-16
 | marenostrum | ✅ | main | 2026-05-21 |
 | barons-Mariani | ✅ | main | 2026-05-21 |
 | inseme | ✅ | main | 2026-05-21 |
-| Inox | ✅ | master | 2026-04-19 |
+| Inox | ✅ | master | 2026-05-22 |
 <!-- END_AUTO: registered_repos -->
 
 ---
@@ -250,12 +250,12 @@ graph LR
 ### Backlinks
 
 *These documents link to this file:*
-- [Le Réseau Inconscient](../LE_RESEAU_INCONSCIENT.md)
-- [The Packet as Evolutionary Attractor: Scale-Invariant Transitions in Complex Networks](../packet_attractor.md)
-- [The Packet Transition: A Lateral Reading of Circuit Networks](../packet_transition.md)
 - [Corpus Status — FractaVolta](corpus-status.md)
 - [Research Index — FractaVolta](index.md)
 - [The Unconscious Grid](../UNCONSCIOUS_GRID.md)
+- [The Packet Transition: A Lateral Reading of Circuit Networks](../packet_transition.md)
+- [Le Réseau Inconscient](../LE_RESEAU_INCONSCIENT.md)
+- [The Packet as Evolutionary Attractor: Scale-Invariant Transitions in Complex Networks](../packet_attractor.md)
 - [Guaranteed Inference](garanteed_inference.md)
 - [Electricity in Containers](../electricity_in_containers.md)
 - [Inference Packet Networks](inference_packet_network.md)
