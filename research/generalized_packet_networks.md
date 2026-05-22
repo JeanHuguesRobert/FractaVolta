@@ -1,6 +1,51 @@
 ---
-canonical_url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/generalized_packet_networks.md
-last_stamped_at: 2026-05-22
+title: "Generalized Packet Networks"
+subtitle: "A Framework for Heterogeneous Packets, Resource Occupancy, and Cross-Domain Operational Recurrence"
+description: "Working paper v0.3 defining Generalized Packet Networks as a cross-domain framework for heterogeneous packets, resource occupancy, congestion elasticity, packet decay, cache-like hierarchies, backbone/last-mile decomposition, mesh resilience, and substrate-specific packet papers."
+author: "Jean Hugues Noël Robert, baron Mariani"
+affiliation: "Institut Mariani / C.O.R.S.I.C.A. / FractaVolta"
+address: "1 cours Paoli, F-20250 Corte, Corsica, France"
+email: "jhr@baronsmariani.org"
+website: "https://fractavolta.com"
+repository: "https://github.com/JeanHuguesRobert/FractaVolta"
+canonical_url: "https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/generalized_packet_networks.md"
+version: "0.3"
+status: "working-paper"
+date: "2026-05-22"
+last_modified_at: "2026-05-22"
+last_stamped_at: "2026-05-22"
+license: "CC BY-SA 4.0"
+layout: default
+tags:
+  - generalized-packet-networks
+  - fractanet
+  - fractavolta
+  - packet-networks
+  - resource-occupancy
+  - congestion-elasticity
+  - packet-decay
+  - cache-hierarchy
+  - mesh-networks
+  - seconde-methode
+keywords:
+  - Generalized Packet Networks
+  - Fractanet
+  - packet switching
+  - network science
+  - resource occupancy
+  - Erlang
+  - congestion elasticity
+  - cache hierarchy
+  - buffers
+  - hot data
+  - cold data
+  - logistics
+  - energy packets
+  - thermal packets
+  - inference packets
+  - cognitive packets
+  - governance
+  - mesh networks
 ---
 
 # Generalized Packet Networks
@@ -15,9 +60,9 @@ Institut Mariani / C.O.R.S.I.C.A. / FractaVolta
 
 jhr@baronsmariani.org | fractavolta.com
 
-*Working paper — v0.2 — May 2026*
+*Working paper — v0.3 — May 2026*
 *License: CC BY-SA 4.0*
-*Repository: github.com/JeanHuguesRobert/FractaVolta*
+*Repository: github.com/JeanHuguesRobert/FractaVolta — suggested path: `research/generalized_packet_networks.md`*
 
 ---
 
@@ -29,13 +74,15 @@ This paper proposes the **Generalized Packet Network (GPN)** as a cross-domain a
 
 The framework is positioned with deliberate epistemic discipline. It claims operational recurrence as an *observation*; it does not claim physical identity between heat, information, money, votes, and influence. It distinguishes the theoretical framework (GPN) from its infrastructural instance (Fractanet). It disambiguates its terminology from Gelenbe's *Cognitive Packet Network* (a routing protocol for communication networks) and from the corpus paper on cognitive packets (a continuation-payload format for human–AI cooperation).
 
+v0.3 adds an explicit **operational boundary rule**: a unit qualifies as a packet only when its primary operational identity is carried by bounded, addressable, storable, and independently routable discreteness rather than by the continuous medium itself. It also introduces a reusable **packet service metric template** for substrate-specific papers, covering capacity, occupancy, transfer, congestion, decay, hot/cold gradients, buffer/cache roles, interfaces, and governance.
+
 Minimal mathematical formulations are provided for resource occupancy (Erlang form), congestion elasticity, and exponential packet decay. The framework is offered as a vocabulary and a research programme, not as a finished theory.
 
 ---
 
 ## Keywords
 
-Generalized Packet Networks; Fractanet; packet switching; network science; resource occupancy; Erlang; traffic intensity; congestion elasticity; cache hierarchy; buffers; hot data; cold data; logistics; energy packets; thermal packets; inference packets; cognitive packets; social networks; governance; mandates; mesh networks; Seconde méthode.
+Generalized Packet Networks; Fractanet; packet switching; network science; operational boundary rule; packet service metric template; resource occupancy; Erlang; traffic intensity; congestion elasticity; cache hierarchy; buffers; hot data; cold data; logistics; energy packets; thermal packets; inference packets; cognitive packets; social networks; governance; mandates; mesh networks; Seconde méthode.
 
 ---
 
@@ -84,13 +131,18 @@ To our knowledge, however, no existing framework proposes:
 3. an explicit **separation between the theoretical framework (GPN) and its infrastructural instance (Fractanet)**, allowing each to be evaluated on its own terms;
 4. a **disciplined scope statement** that distinguishes operational recurrence (a defensible observation) from physical identity (an indefensible claim) and from political prescription (a separate normative question).
 
-These four contributions define the scope of the present paper. The framework is a *vocabulary and a programme*, not a finished theory.
+v0.3 adds two further operational contributions:
+
+5. a **boundary rule** distinguishing packets from continuous flows, based on bounded, addressable, storable, and independently routable discreteness;
+6. a reusable **packet service metric template** that every substrate-specific packet paper can fill in order to avoid metaphorical overreach.
+
+These six contributions define the scope of the present paper. The framework is a *vocabulary and a programme*, not a finished theory.
 
 ### 1.4 Methodological status
 
 This paper is published as a working draft under the *Seconde méthode* [18]. Claims are versioned. Objections are first-class contributions. The corpus is the evidence.
 
-v0.1 was an intuitive exposition. v0.2 adds disclosures, a "what this paper does not claim" section, explicit naming clarifications (§2), a research gap statement (§1.3), minimal mathematical formulations for the core metrics, scope statements on social and governance packets (§§6.5, 6.6), the GPN/Fractanet separation (§7), an enriched scientific positioning (§8), and a claim manifest (§11).
+v0.1 was an intuitive exposition. v0.2 added disclosures, a "what this paper does not claim" section, explicit naming clarifications (§2), a research gap statement (§1.3), minimal mathematical formulations for the core metrics, scope statements on social and governance packets (§§6.5, 6.6), the GPN/Fractanet separation (§7), an enriched scientific positioning (§8), and a claim manifest (§11). v0.3 adds the operational boundary rule (§3.2), the packet service metric template (§5.10), tighter social and governance boundary conditions (§§6.5, 6.6), an expanded related-work positioning (§8), and a revised claim manifest.
 
 ### 1.5 What this paper does not claim
 
@@ -202,6 +254,52 @@ A generalized packet has some or all of the following properties:
 | Governance | Who is responsible for it? |
 
 Not every packet exhibits every property. Operationally, the more of these a system can answer for its packets, the more *programmable* the system is.
+
+### 3.2 Operational boundary rule
+
+The definition above is deliberately broad. It therefore requires a boundary rule.
+
+A unit qualifies as a **packet**, rather than a continuous flow or diffuse condition, only when its primary operational identity is carried by **bounded, addressable, storable, and independently routable discreteness** rather than by the continuous medium itself.
+
+The primary test is:
+
+> Can the unit be delayed, cached, buffered, rerouted, transformed, audited, revoked, or retired independently of the substrate flow while preserving enough operational usefulness to remain identifiable as the same unit?
+
+If the answer is yes, the packet framing is justified. If the answer is no, the phenomenon should be treated primarily as a flow, field, atmosphere, relation, or continuous process.
+
+This rule prevents conceptual inflation. GPN is not a metaphor for everything discrete. It is a framework for bounded operational units whose discreteness changes how the system can be stored, routed, delayed, traced, governed, or optimized.
+
+Examples:
+
+| Domain | Qualifies as packet | Does not qualify unless further discretized |
+|---|---|---|
+| Data | IP packet, message, file chunk | undifferentiated analog signal |
+| Thermal | insulated bottle, hot-water tank, PCM module | hot water continuously circulating in a fixed pipe |
+| Electricity | battery module, powerbank, EV charge session | undifferentiated grid load |
+| Logistics | parcel, pallet, ISO container | bulk flow with no addressable unit |
+| Money | payment instruction, invoice, token, settlement | diffuse credit relation |
+| Social | post, invitation, endorsement, accusation | vague social atmosphere |
+| Governance | vote, mandate, authorization, signed act | informal influence or charisma |
+
+The boundary is not ontological. It is operational. A phenomenon may be continuous at one layer and packetized at another. Hot water in a pipe is a flow for the district network, but the same energy may become a packet when stored in an addressed tank, container, or exchangeable module. Social influence is diffuse until it is discretized as a recommendation, signature, message, mandate, or public act.
+
+### 3.3 Minimal packet test
+
+For every substrate-specific paper in the corpus, the first practical question should be:
+
+> What is the smallest concrete instance that satisfies the boundary rule?
+
+Examples include:
+
+- data packet: an IP datagram;
+- thermal packet: an insulated bottle;
+- electric packet: a charged powerbank;
+- logistics packet: a labeled parcel;
+- inference packet: a single queued prompt or batch;
+- cognitive packet: a continuation payload;
+- governance packet: a time-bounded mandate or signed authorization.
+
+This minimal-packet test prevents the general framework from floating above reality. It forces each domain to provide a concrete unit before it claims inclusion in GPN.
 
 ---
 
@@ -468,6 +566,31 @@ packet effect:  better packets → more programmable operations
 
 A mature system requires both.
 
+### 5.10 Packet service metric template
+
+Every substrate-specific packet paper should fill the same minimal service template. This is the practical bridge between the general framework and domain-specific engineering.
+
+**Table 6.** Minimal service template for substrate-specific packet papers.
+
+| Metric | Operational question | Generic form | Examples |
+|---|---|---|---|
+| Packet boundary | Why is this a packet rather than a flow? | boundary rule (§3.2) | IP datagram, thermos, parcel, mandate |
+| Packet capacity | What does the packet contain? | quantity per packet | bytes, kWh, kg, tokens, votes |
+| Addressability | How is the packet identified or routed? | address / label / registry | IP header, QR code, account, mandate ID |
+| Transfer interface | How does the packet change hands or state? | port / protocol / procedure | socket, charger, dock, signature |
+| Transfer rate | How fast can it move or be served? | quantity / time | packets/s, kW, parcels/h, cases/month |
+| Resource occupancy | What resource does it occupy, and for how long? | A = λ · h | server, GPU, road lane, port, office time |
+| Congestion elasticity | How fast does performance degrade near saturation? | (∂C/C)/(∂A/A) | delay, queue, cost, loss, backlog |
+| Decay / freshness | How fast does usefulness decline? | v(t), TTL, expiry | heat loss, news staleness, mandate expiry |
+| Hot/cold gradient | How close must it remain to use? | access latency / priority | cache, local stock, archive |
+| Buffer/cache role | Does it absorb mismatch or reduce access time? | layer position | tank, warehouse, memory cache, backlog |
+| Loss mode | How does it fail or degrade? | loss function | packet loss, spoilage, leakage, invalidity |
+| Governance | Who is responsible? | issuer / owner / operator / auditor | maintainer, delegate, court, ledger |
+
+The template has two functions. First, it disciplines analogy: a domain cannot merely say “this is like a packet”; it must specify capacity, interface, occupancy, loss, decay, and governance. Second, it enables comparison across substrates without erasing substrate-specific constraints.
+
+A substrate paper that cannot fill this table should remain exploratory. A substrate paper that fills it with measured or measurable quantities becomes operational.
+
 ---
 
 ## 6. Domain Instances
@@ -514,37 +637,59 @@ with freshness, decay, caching, buffering, priority, routing, traceability, comp
 
 Social systems are networks, but their packets are less obvious. Candidate packets include messages, posts, memes, rumors, endorsements, invitations, recommendations, reputational signals, accusations, narratives, moral frames, symbolic acts, and calls to action [9, 10, 11].
 
-These packets occupy attention and trust. They propagate through relationships, platforms, institutions, and media channels. Viral propagation can be analyzed as packet replication through a social topology. Influence networks can be analyzed as routing systems for legitimacy, access, and agenda-setting.
+The boundary rule is especially important here. A vague social atmosphere, ambient prestige, diffuse resentment, or unspoken influence is not a packet. It becomes packet-like only when discretized into an identifiable act or object: a post, message, recommendation, invitation, accusation, endorsement, public statement, ranking, share, signature, or recorded decision.
 
-A social packet exhibits content, emotional charge, credibility, source identity, timing, shareability, compatibility with existing beliefs, risk of distortion, and saturation effects.
+A social packet may exhibit content, emotional charge, credibility, source identity, timing, shareability, compatibility with existing beliefs, risk of distortion, and saturation effects. These packets occupy attention and trust. They propagate through relationships, platforms, institutions, and media channels. Viral propagation can be analyzed as packet replication through a social topology. Influence networks can be analyzed as routing systems for legitimacy, access, and agenda-setting.
 
-**Scope statement.** This section provides *vocabulary* for analysis, not a *predictive model* of social propagation. It does not claim:
+This remains a vocabulary for analysis, not a predictive model. It does not claim:
 
-- a quantitative theory of contagion equivalent to those in epidemiology;
-- a forecasting tool for political movements or market manipulation;
-- a normative justification for any platform-design choice (recommendation algorithms, content moderation, ranking).
+- a quantitative theory of contagion equivalent to epidemiology;
+- a forecasting tool for political movements, financial panics, or market manipulation;
+- a normative justification for any platform-design choice, recommendation algorithm, content-moderation regime, or ranking mechanism.
 
-Social packets are not neutral. They can manipulate, polarize, clarify, coordinate, or mobilize. This links packet theory to ethics and governance, not as a derivation, but as a connection that must be made *separately* with the appropriate ethical and political resources [18].
+Social packets are not neutral. They can manipulate, polarize, clarify, coordinate, or mobilize. This links packet theory to ethics and governance, not as a derivation, but as a connection that must be made separately with the appropriate ethical and political resources [18].
 
 ### 6.6 Governance packets — scope and limits
 
-Governance systems also circulate packets: votes, delegations, mandates, signatures, decisions, authorizations, claims, obligations, public acts, legal documents, budget allocations, reports, minutes, complaints, appeals.
+Governance systems circulate discrete units: votes, delegations, mandates, signatures, decisions, authorizations, claims, obligations, public acts, legal documents, budget allocations, reports, minutes, complaints, appeals.
 
-A mandate is a packet of authority. A vote is a packet of preference or decision. A public act is a packet of institutional responsibility.
+The boundary rule again matters. A governance phenomenon qualifies as a packet only when authority, responsibility, preference, or obligation is discretized into an auditable unit with at least some of the following properties:
 
-This framing makes traceability central: who authorized what, under which mandate, for which duration, with what accountability, with what revocation mechanism. A governance packet *should be* explicit, attributable, time-bounded, revocable when appropriate, auditable, linked to a source of legitimacy, and resistant to capture or opacity.
+- issuer;
+- recipient or addressee;
+- scope;
+- procedure;
+- validity period;
+- revocation or expiry condition;
+- trace;
+- accountability rule.
 
-The general rule:
+A mandate is a packet of authority when it is attributable, bounded, time-limited, and revocable or auditable. A vote is a packet of preference or decision when it is cast, counted, recorded, and governed by a procedure. A public act is a packet of institutional responsibility when it can be attributed to an office, decision chain, and legal effect.
+
+Diffuse power, charisma, personal prestige, informal pressure, or opaque influence are not governance packets unless they are operationally discretized into identifiable acts, endorsements, instructions, nominations, sanctions, authorizations, or decisions.
+
+This framing makes traceability central:
+
+```text
+who authorized what?
+under which mandate?
+for which duration?
+with what accountability?
+with what revocation mechanism?
+```
+
+The general normative rule is:
 
 > When authority circulates, it should circulate as a traceable packet, not as opaque influence.
 
-**Scope statement.** This section provides *vocabulary* for analysis of governance flows and a *normative principle* (traceability). It does not claim:
+**Scope statement.** This section provides vocabulary for analysis of governance flows and a normative principle of traceability. It does not claim:
 
-- to derive any particular political form (direct democracy, liquid democracy, representative democracy, technocracy) from the packet abstraction;
-- that all mandates *can* be packetized without remainder — some have irreducibly continuous or charismatic dimensions;
-- that traceability alone secures legitimacy. Legitimacy requires substantive sources beyond the packet [18].
+- to derive any particular political form — direct democracy, liquid democracy, representative democracy, or technocracy — from the packet abstraction;
+- that all authority can be packetized without remainder;
+- that traceability alone secures legitimacy;
+- that legality, justice, and legitimacy reduce to formal addressability.
 
-The packet framing makes certain governance pathologies *visible* (opaque mandates, untraceable delegation, expired authority still acting, captured intermediaries). It does not by itself resolve them. The political work — defended in [18, 23] — is distinct.
+Legitimacy requires substantive sources beyond the packet. GPN only clarifies what is being delegated, routed, revoked, attributed, or hidden [18, 35].
 
 ---
 
@@ -587,7 +732,7 @@ The purpose of Fractanet is not to make everything identical. It is to share a v
 
 GPN sits at the intersection of several established disciplines. Table 6 maps the principal contributions GPN inherits.
 
-**Table 6.** Disciplinary lineage.
+**Table 7.** Disciplinary lineage.
 
 | Discipline | Contribution inherited | Reference |
 |---|---|---|
@@ -597,17 +742,25 @@ GPN sits at the intersection of several established disciplines. Table 6 maps th
 | Queueing theory | arrival, service, delay, congestion | [6, 7] |
 | Computer networking | packet switching, routing, buffers, TTL | [16, 19, 30] |
 | Computer architecture | caches, memory hierarchy, locality | [8] |
-| Logistics | hubs, last mile, routing, storage, delivery | — |
+| Logistics | hubs, last mile, routing, storage, delivery | [37] |
 | Energy systems | grids, storage, exergy, load factor | [12, 13] |
 | Thermal systems | heat/cold storage, losses, transfer rates | [33, 34] |
 | Social network analysis | influence, propagation, weak ties, contagion | [9, 10, 11] |
-| Network economics | network effects, standardization, elasticity | — |
-| Governance theory | mandates, legitimacy, accountability, traceability | [35, 18] |
+| Network economics | network effects, standardization, elasticity | [38] |
+| Governance theory | mandates, legitimacy, accountability, traceability | [35, 18, 39] |
 | Complex systems | thresholds, cascades, emergence, resilience | [3] |
 
 GPN does not seek to replace any of these. It identifies a *cross-domain operational layer*: the management of heterogeneous packets under resource constraints, expressible in shared vocabulary while remaining accountable to substrate-specific constraints.
 
 The proposed contribution, in short: each discipline already analyzes its own packets. GPN provides a shared framing that lets analyses speak across boundaries without erasing the boundaries.
+
+Three related-work areas deserve particular strengthening in subsequent versions.
+
+First, logistics and supply-chain theory already treats parcels, pallets, containers, hubs, inventories, and last-mile routes as discrete operational units. The GPN contribution is not to rediscover logistics, but to connect its packet discipline with teletraffic, energy, inference, cognition, and governance.
+
+Second, Packetized Energy Management and Energy Packet Networks have already introduced packet language into electrical systems [12–15]. GPN treats these as established substrate-specific instances and asks what abstractions remain valid when the packet is no longer electrical: heat, hydraulic exergy, inference, mandate, or attention.
+
+Third, governance and digital-institutional systems already discretize authority through votes, signatures, smart contracts, registry entries, tickets, complaints, credentials, and permissions. GPN does not reduce governance to software. It uses the packet abstraction to make authority flows more explicit, auditable, revocable, and comparable.
 
 ---
 
@@ -639,13 +792,73 @@ The abstraction is useful only insofar as it remains constrained by domain-speci
 - the formal expressions (§5) do not survive substrate-specific modification — i.e. if the Erlang form, congestion elasticity, or exponential decay must be replaced by entirely unrelated machinery in each domain, rather than parameterized differently;
 - the scope statements (§§1.5, 6.5, 6.6, 9) prove insufficient to prevent misuse — i.e. if the framework is read as authorizing claims it explicitly disclaims (predictive social modeling, political prescription, physical identity between substrates).
 
-The corpus is the test. v0.2 stakes the claim. Subsequent versions and external critique will determine whether it survives.
+The corpus is the test. v0.3 stakes the sharper claim: the framework survives only if the boundary rule and service template can discipline future substrate papers. Subsequent versions and external critique will determine whether it survives.
 
 ---
 
-## 10. Research Agenda
 
-**10.1 Formal model.** Develop a minimal model for generalized packets:
+## 10. Candidate Substrate Papers: Robust First Instances
+
+The GPN framework should not try to enumerate every possible packet domain. An exhaustive list would weaken the paper by encouraging the very inflation the boundary rule is designed to prevent.
+
+Instead, candidate substrate papers should be selected by a stricter criterion:
+
+> include only candidates that have a strong prima facie chance of passing the operational boundary rule and filling the packet service metric template with measurable or auditable quantities.
+
+The purpose of the list is therefore not to close the space of possible applications. It is to provide robust first instances. Other cases should remain discoverable by the reader. This is methodologically useful: a framework becomes more convincing when the reader can extend it by applying the rule, rather than merely consuming a closed taxonomy.
+
+### 10.1 Selection criteria
+
+A candidate substrate paper belongs in the initial list only if it can plausibly answer the following questions:
+
+1. **Minimal packet.** What is the smallest concrete packet that anchors the domain?
+2. **Boundary rule.** Why is it a packet rather than a continuous flow, field, relation, or metaphor?
+3. **Service metrics.** Can capacity, transfer, occupancy, congestion, decay, and governance be at least approximately measured?
+4. **Failure modes.** Can we say when the packet model fails or becomes inferior to a continuous/circuit model?
+5. **Corpus link.** Does the candidate clarify an existing part of the FractaVolta / Cogentia / Fractanet corpus?
+
+### 10.2 High-confidence candidates
+
+**Table 7. Candidate substrate papers with strong boundary-rule plausibility.**
+
+| Candidate paper | Minimal packet | Why it is a strong candidate | Likely corpus link |
+|---|---|---|---|
+| **Thermal Packet Networks** | insulated bottle, domestic hot-water tank, thermal container | bounded heat/cold, measurable decay, clear storage and transfer interfaces | FractaVolta, low-exergy systems |
+| **Electric / Energy Packet Networks** | battery, powerbank, electric vehicle, battery container | bounded electrical storage, charge/discharge interface, strong existing literature | EPN, RAIB, FractaVolta |
+| **Packetized Gravity / Hydraulic Networks** | water mass at altitude, reservoir unit, hydraulic lift packet | bounded gravitational potential, measurable exergy, physical routing/storage | MareNostrum, mountain/island resilience |
+| **Inference Packet Networks** | AI request, batch, context window, executable inference job | measurable compute occupancy, latency, energy, queueing, freshness | Cogentia, sovereign inference, MareNostrum |
+| **Cognitive Packets** | continuation payload, structured context packet | bounded context, transferable state, provenance, resumption of work | Cogentia, human–AI cooperation |
+| **Hydric Packet Networks** | water bottle, potable-water tanker, irrigation module | bounded water quantity, sanitary status, routing, urgency, decay/quality | territorial resilience, agriculture, emergency systems |
+| **Material / Logistics Packet Networks** | parcel, pallet, container | already operationalized in logistics, clear metrics and failure modes | Fractanet transport layer |
+| **Cold-Chain Packet Networks** | vaccine dose, refrigerated parcel, ice/PCM module | bounded temperature-sensitive usefulness, clear TTL and quality thresholds | thermal packets, food/medical logistics |
+| **Monetary / Value Packet Networks** | payment, invoice, donation, token, credit claim | bounded value transfer, ledger, settlement, traceability, revocation rules | Kudos, transparent donations |
+| **Mandate Packet Networks** | vote, delegation, time-bounded mandate, authorization | bounded authority, issuer, scope, duration, revocation, auditability | Kudocracy, direct/liquid democracy |
+| **Legal / Administrative Packet Networks** | complaint, claim, permit, decision, registry entry | strongly bounded institutional packets with deadlines, validity, routing | traceability of acts, institutional reform |
+| **Emergency / Resilience Packet Networks** | alert, kit, battery, water, heat/cold module, medical supply | bounded high-priority packets, strict TTL, routing and prioritization | territorial resilience, Corsica, FractaVolta |
+
+### 10.3 Candidates deliberately left outside the initial list
+
+Some domains are attractive but riskier because the boundary between packet, relation, atmosphere, and metaphor is weaker. They should not be excluded permanently, but they should be approached later and only after the stronger candidates have stabilized the method.
+
+Examples:
+
+- diffuse social influence;
+- reputation without discrete signal;
+- ambient trust;
+- ideological climate;
+- cultural transmission without identifiable carriers;
+- informal power networks without traceable acts.
+
+These phenomena may contain packets — posts, endorsements, invitations, accusations, recommendations, symbolic acts — but the phenomenon as a whole is not automatically a packet network. It becomes one only where the boundary rule identifies bounded, addressable, traceable, and operationally relevant units.
+
+This restraint is intentional. The framework should invite readers to discover additional cases by applying the rule themselves. The first list should demonstrate the method, not exhaust the world.
+
+---
+## 11. Research Agenda
+
+**11.1 Boundary validation.** Test the operational boundary rule (§3.2) across substrate papers. Each paper should state why its minimal unit is a packet and not merely a flow, field, relation, or metaphor.
+
+**11.2 Formal model.** Develop a minimal model for generalized packets:
 
 ```text
 packet = content + carrier + address + validity + priority + decay + interface + governance
@@ -653,66 +866,72 @@ packet = content + carrier + address + validity + priority + decay + interface +
 
 with substrate-specific instantiations.
 
-**10.2 Resource occupancy metrics.** Generalize Erlang-form resource occupancy beyond teletraffic, with explicit substrate-specific arrival-process modeling (Poisson, bursty, self-similar, scheduled, strategic).
+**11.3 Packet service template.** Use Table 6 as a mandatory checklist for every substrate-specific packet paper: boundary, capacity, addressability, interface, transfer, occupancy, elasticity, decay, hot/cold gradient, buffer/cache role, loss mode, and governance.
 
-**10.3 Load elasticity.** Formalize congestion elasticity and fragility thresholds across packet systems. Empirical work needed: measure elasticity in deployed systems (thermal logistics, AI inference clusters, governance backlogs) and test whether the analytical form (5.3) survives.
+**11.4 Resource occupancy metrics.** Generalize Erlang-form resource occupancy beyond teletraffic, with explicit substrate-specific arrival-process modeling (Poisson, bursty, self-similar, scheduled, strategic).
 
-**10.4 Packet decay and freshness.** Model time-dependent usefulness in thermal, informational, social, computational, and institutional packets. Extend the exponential model (5.4) to non-exponential cases where appropriate.
+**11.5 Load elasticity.** Formalize congestion elasticity and fragility thresholds across packet systems. Empirical work needed: measure elasticity in deployed systems (thermal logistics, AI inference clusters, governance backlogs) and test whether the analytical form (§5.3) survives.
 
-**10.5 Cache and buffer analogies.** Develop disciplined cross-domain translations of caching, buffering, prefetching, eviction, replication, and consistency, with explicit limits (substrate-specific physics).
+**11.6 Packet decay and freshness.** Model time-dependent usefulness in thermal, informational, social, computational, and institutional packets. Extend the exponential model (§5.4) to non-exponential cases where appropriate.
 
-**10.6 Topology and resilience.** Compare hub-and-spoke, tree, ring, mesh, and hybrid structures across energy, data, logistics, and governance under common stress tests.
+**11.7 Cache and buffer analogies.** Develop disciplined cross-domain translations of caching, buffering, prefetching, eviction, replication, and consistency, with explicit limits.
 
-**10.7 Governance of packets.** Define traceability, responsibility, ownership, authority, and revocation for packets carrying value, mandate, or influence. Connect with [18].
+**11.8 Topology and resilience.** Compare hub-and-spoke, tree, ring, mesh, and hybrid structures across energy, data, logistics, and governance under common stress tests.
 
-**10.8 Fractanet implementation.** Explore how repositories, open standards, local hubs, AI agents, energy modules, and governance protocols instantiate GPN as a practical network of heterogeneous packets.
+**11.9 Governance of packets.** Define traceability, responsibility, ownership, authority, and revocation for packets carrying value, mandate, or influence. Connect with [18, 35, 39].
 
-**10.9 Empirical case studies.** Priority cases: thermal packets [28], inference packets [27], gravitational packets [26], cognitive packets [25], governance mandates [18, 23]. Each is a working paper in the corpus and each can yield measurement targets for v0.3.
+**11.10 Fractanet implementation.** Explore how repositories, open standards, local hubs, AI agents, energy modules, and governance protocols instantiate GPN as a practical network of heterogeneous packets.
+
+**11.11 Empirical case studies.** Priority cases: thermal packets [28], inference packets [27], gravitational packets [26], cognitive packets [25], governance mandates [18, 23]. Each is a working paper in the corpus and each should produce a filled service template.
 
 ---
 
-## 11. Claim Manifest
+## 12. Claim Manifest
 
 ```yaml
 paper_id: generalized_packet_networks
-version: 0.2
+version: 0.3
 
 claims:
   - id: C1
-    statement: "Many systems usually studied as networks share a common operational grammar — discrete units occupying constrained resources, with routing, decay, congestion, and governance — that can be formalized as a Generalized Packet Network framework."
-    status: definitional
+    statement: "Packet/network duality recurs across multiple domains as an operational pattern: packets reveal networks through resource occupancy, while networks reveal packets through what they store, route, delay, transform, amplify, or govern."
+    status: observation
 
   - id: C2
-    statement: "Packet/network duality (a packet reveals its network through occupancy; a network reveals its packets through what circulates) is a productive analytical move across information, energy, heat, gravity, inference, cognition, value, and governance substrates."
-    status: argued
+    statement: "A unit qualifies as a packet rather than a continuous flow only when its primary operational identity is carried by bounded, addressable, storable, and independently routable discreteness."
+    status: operational_rule
 
   - id: C3
-    statement: "Service-metric vocabulary — Erlang-form occupancy, congestion elasticity, exponential decay/freshness, hot-cold storage gradients, buffer-cache hierarchies, backbone/last-mile decomposition, mesh resilience — can be formally adapted across substrates while preserving substrate-specific constraints."
-    status: argued
+    statement: "The boundary rule is necessary to prevent GPN from becoming an everything-is-a-packet metaphor."
+    status: methodological_guardrail
 
   - id: C4
-    statement: "The minimal formal expressions (§5) — A = λh, ε_C = (∂C/C)/(∂A/A), v(t) = v_0 exp(-t/τ) — apply across domains via substrate-specific parameterization rather than requiring unrelated formal machinery in each domain."
-    status: hypothesis
+    statement: "Service-metric vocabulary — capacity, addressability, transfer rate, Erlang-form occupancy, congestion elasticity, decay/freshness, hot-cold gradients, buffer-cache roles, loss modes, and governance — can be adapted across substrates while preserving substrate-specific constraints."
+    status: argued_framework
 
   - id: C5
-    statement: "The framework should be distinguished from physical-identity claims, predictive social models, and normative political prescription. The scope statements in §§1.5, 6.5, 6.6, 9 are part of the framework, not optional."
-    status: scope
+    statement: "The minimal formal expressions (§5) — A = λh, ε_C = (∂C/C)/(∂A/A), v(t) = v_0 exp(-t/τ) — are proposed as reusable starting points, not universal laws; each requires substrate-specific parameterization and may fail where its assumptions fail."
+    status: hypothesis
 
   - id: C6
-    statement: "GPN (theoretical framework) and Fractanet (infrastructural instance) are distinct objects. Each can be evaluated and falsified independently."
-    status: terminological
+    statement: "Social and governance phenomena can be modeled as packet networks only when the boundary rule is satisfied: the relevant unit must be discretized into identifiable messages, acts, votes, mandates, signatures, claims, permissions, or traceable authorizations."
+    status: scoped_hypothesis
 
   - id: C7
-    statement: "Generalized packets in this paper are an abstract framework above specific instances: data packets, EPN, TPN, PGN, IPN, cognitive packets (Robert), and CPN (Gelenbe). The terminological proximities are clarified in §2."
-    status: terminological
+    statement: "GPN (theoretical framework) and Fractanet (infrastructural instance) are distinct objects. Each can be evaluated, criticized, improved, or falsified independently."
+    status: terminological_boundary
 
   - id: C8
-    statement: "Applying GPN to social and governance packets provides vocabulary for analysis and a principle (traceability) for governance design. It does not provide a predictive model of viral propagation or a derivation of any particular political form."
-    status: scope
+    statement: "Generalized packets in this paper are an abstract layer above specific instances: data packets, EPN, TPN, PGN, IPN, cognitive packets (Robert), and CPN (Gelenbe). Terminological proximity does not imply identity."
+    status: terminological_boundary
 
   - id: C9
-    statement: "GPN is offered as a vocabulary and a research programme, not as a finished theory. Subsequent versions will integrate corpus-wide critique and empirical case studies from the pilot deployments listed in §10.9."
-    status: methodological
+    statement: "GPN does not claim physical identity, universal packetization, predictive social modeling, or derivation of any political form. The non-claims are part of the framework, not defensive appendices."
+    status: non_claim
+
+  - id: C10
+    statement: "GPN is offered as a vocabulary and research programme. Its usefulness must be tested through substrate-specific papers, candidate substrate papers, metric templates, pilot deployments, and adversarial critique under the Seconde méthode."
+    status: methodological_claim
 ```
 
 ---
@@ -813,10 +1032,18 @@ Whether GPN is a useful framework will be determined by deployment, measurement,
 
 [36] J. H. N. Robert, *The Unconscious Grid: Why Infrastructure Is All You Need for AI Safety*, working paper, 2026.
 
+[37] G. B. Dantzig and J. H. Ramser, "The Truck Dispatching Problem," *Management Science*, vol. 6, no. 1, pp. 80–91, 1959.
+
+[38] M. L. Katz and C. Shapiro, "Network Externalities, Competition, and Compatibility," *The American Economic Review*, vol. 75, no. 3, pp. 424–440, 1985.
+
+[39] N. Szabo, "Formalizing and Securing Relationships on Public Networks," *First Monday*, 1997.
+
+[40] S. Nakamoto, *Bitcoin: A Peer-to-Peer Electronic Cash System*, 2008.
+
 ---
 
 *Comments, objections, and contributions are invited via the project repository. Each will be recorded and addressed in subsequent versions, per the Seconde méthode (Rule 2).*
 
-*Process note: v0.1 was an intuitive exposition. v0.2 introduces methodological framing, naming clarifications (Gelenbe CPN vs. corpus cognitive packets vs. generalized packets, GPN vs. Fractanet), explicit scope statements on social and governance packets, minimal mathematical formulations, an enriched scientific positioning, a research-gap statement, and a claim manifest.*
+*Process note: v0.1 was an intuitive exposition. v0.2 introduced methodological framing, naming clarifications (Gelenbe CPN vs. corpus cognitive packets vs. generalized packets, GPN vs. Fractanet), explicit scope statements on social and governance packets, minimal mathematical formulations, an enriched scientific positioning, a research-gap statement, and a claim manifest. v0.3 adds the operational boundary rule, minimal-packet test, packet service metric template, tightened social/governance boundary criteria, expanded related-work positioning, and revised claim manifest.*
 
 *The next version will be better. That is the point.*
