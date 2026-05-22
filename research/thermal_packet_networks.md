@@ -54,18 +54,6 @@ keywords:
 
 ## A Multi-Scale Store-and-Forward Architecture for Low-Exergy Heat and Cold Distribution
 
-**Jean Hugues Noël Robert, baron Mariani**
-
-Institut Mariani / C.O.R.S.I.C.A. / FractaVolta
-
-1 cours Paoli, F-20250 Corte, Corsica, France
-
-jhr@baronsmariani.org | fractavolta.com
-
-*Working paper — v0.2 — May 2026*
-*License: CC BY-SA 4.0*
-*Repository: github.com/JeanHuguesRobert/FractaVolta*
-
 ---
 
 ## Abstract
