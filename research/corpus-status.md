@@ -26,9 +26,9 @@ last_stamped_at: 2026-05-16
 <!-- BEGIN_AUTO: registered_repos -->
 | Repository | research/index.md | Branch | Last commit |
 |---|---|---|---|
-| cogentia | ✅ | main | 2026-05-21 |
-| FractaVolta | ✅ | main | 2026-05-21 |
-| marenostrum | ✅ | main | 2026-05-21 |
+| cogentia | ✅ | main | 2026-05-22 |
+| FractaVolta | ✅ | main | 2026-05-22 |
+| marenostrum | ✅ | main | 2026-05-22 |
 | barons-Mariani | ✅ | main | 2026-05-21 |
 | inseme | ✅ | main | 2026-05-21 |
 | Inox | ✅ | master | 2026-05-22 |
@@ -250,23 +250,23 @@ graph LR
 ### Backlinks
 
 *These documents link to this file:*
-- [Corpus Status — FractaVolta](corpus-status.md)
-- [Research Index — FractaVolta](index.md)
-- [The Unconscious Grid](../UNCONSCIOUS_GRID.md)
-- [The Packet Transition: A Lateral Reading of Circuit Networks](../packet_transition.md)
-- [Le Réseau Inconscient](../LE_RESEAU_INCONSCIENT.md)
-- [The Packet as Evolutionary Attractor: Scale-Invariant Transitions in Complex Networks](../packet_attractor.md)
-- [Guaranteed Inference](garanteed_inference.md)
-- [Electricity in Containers](../electricity_in_containers.md)
-- [Inference Packet Networks](inference_packet_network.md)
-- [FractaVolta – Partner  Brief](../partner_brief.md)
 - [DC-Native Energy Packet Networks](../dc_native_epn.md)
+- [Electricity in Containers](../electricity_in_containers.md)
 - [FractaVolta](../fractavolta_paper.md)
+- [Le Réseau Inconscient](../LE_RESEAU_INCONSCIENT.md)
 - [Mariani Village: A Relocatable DC-Native Housing Fleet](../mariani_village.md)
+- [The Packet as Evolutionary Attractor: Scale-Invariant Transitions in Complex Networks](../packet_attractor.md)
+- [The Packet Transition: A Lateral Reading of Circuit Networks](../packet_transition.md)
+- [FractaVolta – Partner  Brief](../partner_brief.md)
 - [Packetized Gravity Networks: Distributed Hydro-Energetic Infrastructure for Resilient Renewable Integration](../PGN.md)
+- [Concept Index — FractaVolta](concepts.md)
+- [Corpus Status — FractaVolta](corpus-status.md)
+- [Guaranteed Inference](garanteed_inference.md)
+- [Research Index — FractaVolta](index.md)
+- [Inference Packet Networks](inference_packet_network.md)
 - [FractaTera](../tera.md)
 - [FractaVolta traceable gouvernance](../traceable_governance.md)
+- [The Unconscious Grid](../UNCONSCIOUS_GRID.md)
 - [Value-Shaped Solar and Containerized Compute](../value_shaped_solar_and_containerized_compute.md)
-- [Concept Index — FractaVolta](concepts.md)
 
 <!-- END_AUTO: backlinks -->

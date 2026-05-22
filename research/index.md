@@ -88,22 +88,22 @@ This repository instantiates the **physical infrastructure layer** of the [DHITL
 ### Backlinks
 
 *These documents link to this file:*
-- [Corpus Status — FractaVolta](corpus-status.md)
-- [The Unconscious Grid](../UNCONSCIOUS_GRID.md)
-- [The Packet Transition: A Lateral Reading of Circuit Networks](../packet_transition.md)
-- [Le Réseau Inconscient](../LE_RESEAU_INCONSCIENT.md)
-- [The Packet as Evolutionary Attractor: Scale-Invariant Transitions in Complex Networks](../packet_attractor.md)
-- [Guaranteed Inference](garanteed_inference.md)
-- [Electricity in Containers](../electricity_in_containers.md)
-- [Inference Packet Networks](inference_packet_network.md)
-- [FractaVolta – Partner  Brief](../partner_brief.md)
 - [DC-Native Energy Packet Networks](../dc_native_epn.md)
+- [Electricity in Containers](../electricity_in_containers.md)
 - [FractaVolta](../fractavolta_paper.md)
+- [Le Réseau Inconscient](../LE_RESEAU_INCONSCIENT.md)
 - [Mariani Village: A Relocatable DC-Native Housing Fleet](../mariani_village.md)
+- [The Packet as Evolutionary Attractor: Scale-Invariant Transitions in Complex Networks](../packet_attractor.md)
+- [The Packet Transition: A Lateral Reading of Circuit Networks](../packet_transition.md)
+- [FractaVolta – Partner  Brief](../partner_brief.md)
 - [Packetized Gravity Networks: Distributed Hydro-Energetic Infrastructure for Resilient Renewable Integration](../PGN.md)
+- [Concept Index — FractaVolta](concepts.md)
+- [Corpus Status — FractaVolta](corpus-status.md)
+- [Guaranteed Inference](garanteed_inference.md)
+- [Inference Packet Networks](inference_packet_network.md)
 - [FractaTera](../tera.md)
 - [FractaVolta traceable gouvernance](../traceable_governance.md)
+- [The Unconscious Grid](../UNCONSCIOUS_GRID.md)
 - [Value-Shaped Solar and Containerized Compute](../value_shaped_solar_and_containerized_compute.md)
-- [Concept Index — FractaVolta](concepts.md)
 
 <!-- END_AUTO: backlinks -->
