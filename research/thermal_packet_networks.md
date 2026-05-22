@@ -1,6 +1,53 @@
 ---
-canonical_url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/thermal_packet_networks.md
-last_stamped_at: 2026-05-22
+title: "Thermal Packet Networks"
+subtitle: "A Multi-Scale Store-and-Forward Architecture for Low-Exergy Heat and Cold Distribution"
+description: "Working paper v0.2 defining Thermal Packet Networks as a multi-scale store-and-forward architecture in which heat and cold are stored, transported, addressed, exchanged, and delivered as discrete thermal packets."
+author: "Jean Hugues Noël Robert, baron Mariani"
+affiliation: "Institut Mariani / C.O.R.S.I.C.A. / FractaVolta"
+address: "1 cours Paoli, F-20250 Corte, Corsica, France"
+email: "jhr@baronsmariani.org"
+website: "https://fractavolta.com"
+repository: "https://github.com/JeanHuguesRobert/FractaVolta"
+canonical_url: "https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/thermal_packet_networks.md"
+version: "0.2"
+status: "working-paper"
+date: "2026-05-22"
+last_modified_at: "2026-05-22"
+last_stamped_at: "2026-05-22"
+license: "CC BY-SA 4.0"
+layout: default
+tags:
+  - thermal-packet-networks
+  - fractavolta
+  - fractanet
+  - energy-packet-networks
+  - heat-logistics
+  - cold-storage
+  - mobile-thermal-energy-storage
+  - exergy
+  - district-heating
+  - low-temperature-heating
+  - thermal-traffic-intensity
+  - seconde-methode
+keywords:
+  - Thermal Packet Networks
+  - mobile thermal energy storage
+  - heat logistics
+  - cold storage
+  - Energy Packet Networks
+  - packetized energy
+  - exergy
+  - district heating
+  - low-temperature heating
+  - waste heat recovery
+  - thermal traffic intensity
+  - Erlang
+  - storage hierarchy
+  - freshness
+  - CXU
+  - FractaVolta
+  - Mariani Village
+  - Seconde méthode
 ---
 
 # Thermal Packet Networks
