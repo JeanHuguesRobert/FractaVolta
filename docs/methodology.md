@@ -2,7 +2,7 @@
 title: Methodology
 subtitle: How we work — every decision auditable, every objection first-class, every AI agent replaceable. Not compliance theater; the way the platform fundamentally operates.
 canonical_url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/docs/methodology.md
-last_stamped_at: 2026-05-15
+last_stamped_at: 2026-05-26
 ---
 
 FractaVolta is an engineering firm and a stack operator. We design, build, and run infrastructure across four layers — energy, compute, cognition, civic. The methodology described on this page is not separate from the engineering. It is how the engineering is done.
@@ -80,6 +80,22 @@ Every resumption produces a [Heraclitean follow-up](https://github.com/JeanHugue
 A routing agent (workflow engine, human dispatcher, queue manager) can validate, queue, archive, or acknowledge a packet by reading the envelope alone. Only an agent capable of handling the declared kind needs to interpret the payload. New kinds may be added without modifying the envelope.
 
 The `cogentia.continuation.v1` object **is** the canonical payload of a packet whose `packet_kind = continuation` — no semantic change to the CLI primitive, only a clearer transport story when the work needs to leave the CLI runtime (copied into a GitHub issue, attached to a document, pasted into a different AI conversation, resumed by a different agent).
+
+## The Pipeline — packet-switching applied to method
+
+FractaVolta's TL;DR is *packet-switching to energy, COP to cognition, liquid democracy to deliberation*. The same insight applies recursively to the cognitive infrastructure layer's own working method.
+
+The [**Pipeline**](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/pipeline.md) (method note v0.4, 2026-05-25) is the corpus's operational method, captured in one phrase:
+
+> **Pipeline on the surface, packet network in depth.**
+
+Intuitions become cognitive packets, packets become versioned source documents, source documents derive into audience-specific products (papers, blogposts, parliamentary notes, public dashboards), public feedback reintegrates into the corpus. Not a linear circuit — a packet-switched cognitive network.
+
+The companion paper [**Derived Products**](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/derived_products.md) (v0.2) formalises the *source ↔ derived* split it implies: the substantive content belongs to a versioned source corpus; academic papers, public essays, social posts, video scripts, parliamentary notes are derived forms adapted to specific audiences/platforms/personas. Operating rule:
+
+> *Do not popularize from the academic paper; derive from the corpus.*
+
+This is the cognition-layer instance of the same packet/circuit diagnostic that drives the energy and civic layers. It is also the operational counterpart of the [Discours de la seconde méthode](https://github.com/JeanHuguesRobert/barons-Mariani/blob/main/research/second_method.md). The method survives being applied to itself: `pipeline.md` is *a self-describing artefact of the method it describes*.
 
 ## The Second Method
 

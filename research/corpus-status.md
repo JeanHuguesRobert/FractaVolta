@@ -3,7 +3,7 @@ title: "Corpus Status — FractaVolta"
 description: "Current state of the FractaVolta knowledge corpus — what is proved, what is open, what remains possible"
 layout: default
 nav_order: 2
-last_modified_at: 2026-05-22
+last_modified_at: 2026-05-26
 repository: "github.com/JeanHuguesRobert/FractaVolta"
 canonical_url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/corpus-status.md
 last_stamped_at: 2026-05-16
@@ -26,10 +26,10 @@ last_stamped_at: 2026-05-16
 <!-- BEGIN_AUTO: registered_repos -->
 | Repository | research/index.md | Branch | Last commit |
 |---|---|---|---|
-| cogentia | ✅ | main | 2026-05-23 |
+| cogentia | ✅ | main | 2026-05-25 |
 | FractaVolta | ✅ | main | 2026-05-23 |
 | marenostrum | ✅ | main | 2026-05-23 |
-| barons-Mariani | ✅ | main | 2026-05-23 |
+| barons-Mariani | ✅ | main | 2026-05-26 |
 | inseme | ✅ | main | 2026-05-23 |
 | Inox | ✅ | master | 2026-05-23 |
 <!-- END_AUTO: registered_repos -->
@@ -51,22 +51,27 @@ graph LR
   cogentia --> barons-Mariani
   cogentia --> FractaVolta
   cogentia --> inseme
+  cogentia --> Inox
   FractaVolta --> marenostrum
   FractaVolta --> barons-Mariani
   FractaVolta --> cogentia
   FractaVolta --> inseme
+  FractaVolta --> Inox
   marenostrum --> barons-Mariani
   marenostrum --> FractaVolta
   marenostrum --> cogentia
   marenostrum --> inseme
+  marenostrum --> Inox
   barons-Mariani --> marenostrum
   barons-Mariani --> FractaVolta
   barons-Mariani --> cogentia
   barons-Mariani --> inseme
+  barons-Mariani --> Inox
   inseme --> cogentia
   inseme --> marenostrum
   inseme --> FractaVolta
   inseme --> barons-Mariani
+  inseme --> Inox
   Inox --> marenostrum
   Inox --> FractaVolta
   Inox --> cogentia

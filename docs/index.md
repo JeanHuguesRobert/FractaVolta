@@ -2,7 +2,7 @@
 title: FractaVolta
 layout: home
 canonical_url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/docs/index.md
-last_stamped_at: 2026-05-20
+last_stamped_at: 2026-05-26
 ---
 
 ## Transition toward energy packets
@@ -75,7 +75,7 @@ The highest-value use of local solar is not always exporting electrons. It can b
 
 Every deployment should produce its own typed audit trail. Every claim should be anchored at a stable URL. Every AI agent we use should be replaceable without modifying the toolchain. Every objection becomes a first-class contribution to the record, not noise to be erased.
 
-This is governed by the [Cogentia Commons methodology](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/Cogentia_Commons_Working_Paper.md), implemented operationally through the [`cogentia.js` CLI](https://github.com/JeanHuguesRobert/cogentia) and the [`cogentia.continuation.v1` protocol](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/agent_resumable_cli.md). For the working details, see [methodology](./methodology).
+This is governed by the [Cogentia Commons methodology](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/Cogentia_Commons_Working_Paper.md), the operational [Pipeline](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/pipeline.md) method (*pipeline on the surface, packet network in depth*) with its source ↔ derived split formalised in [Derived Products](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/derived_products.md), implemented operationally through the [`cogentia.js` CLI](https://github.com/JeanHuguesRobert/cogentia) and the [`cogentia.continuation.v1` protocol](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/agent_resumable_cli.md). For the working details, see [methodology](./methodology).
 
 ## Status
 

@@ -15,7 +15,7 @@ This repository instantiates the **physical infrastructure layer** of the [DHITL
 ---
 
 *A map of what is, what is in progress, and what could be.*
-*See sibling indexes in [MareNostrum](https://github.com/JeanHuguesRobert/marenostrum/blob/main/research/index.md), [Cogentia](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/index.md), [barons-Mariani](https://github.com/JeanHuguesRobert/barons-Mariani/blob/main/research/index.md), [Inseme](https://github.com/JeanHuguesRobert/inseme/blob/main/research/index.md).*
+*See sibling indexes in [MareNostrum](https://github.com/JeanHuguesRobert/marenostrum/blob/main/research/index.md), [Cogentia](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/index.md), [barons-Mariani](https://github.com/JeanHuguesRobert/barons-Mariani/blob/main/research/index.md), [Inseme](https://github.com/JeanHuguesRobert/inseme/blob/main/research/index.md), [Inox](https://github.com/JeanHuguesRobert/Inox/blob/master/research/index.md).*
 
 ---
 
@@ -55,6 +55,7 @@ This repository instantiates the **physical infrastructure layer** of the [DHITL
 | [Cogentia Commons Working Paper](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/Cogentia_Commons_Working_Paper.md) | cogentia |
 | [Constellia](https://github.com/JeanHuguesRobert/marenostrum/blob/main/constellia.md) | marenostrum |
 | [Inseme — deployable platform + COP runtime](https://github.com/JeanHuguesRobert/inseme/blob/main/research/index.md) | inseme |
+| [Inox — language and runtime substrate](https://github.com/JeanHuguesRobert/Inox/blob/master/research/inox-spec.md) *(concatenative stack VM; the runtime the integrated stack may eventually run on at the edge — JS today, WASM and C/C++ next, ESP32 bare-metal eventually)* | Inox |
 
 ---
 

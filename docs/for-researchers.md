@@ -2,20 +2,21 @@
 title: For researchers
 subtitle: Papers, methodology, contestation as first-class contribution. The corpus is its own evidence — fork it, challenge it, build on it.
 canonical_url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/docs/for-researchers.md
-last_stamped_at: 2026-05-15
+last_stamped_at: 2026-05-26
 ---
 
 For the operational summary of how the corpus governs itself — what `cogentia.js` does, how continuations work in practice, what the audit trail contains — see the [methodology page](./methodology).
 
 ## The corpus
 
-The work spans five repositories, each producing research-grade documents that cross-reference each other:
+The work spans six repositories, each producing research-grade documents that cross-reference each other:
 
 - **[MareNostrum](https://github.com/JeanHuguesRobert/marenostrum)** — strategic framework, CXU specification, DHITL (Democratic Humans in the Loop), Mediterranean solar commons, circuit-to-packet transition theory
 - **[FractaVolta](https://github.com/JeanHuguesRobert/FractaVolta)** — physical infrastructure layer: EPN, PGN, DC-native nodes, IPN, Mariani Village
-- **[Cogentia](https://github.com/JeanHuguesRobert/cogentia)** — cognitive infrastructure tooling: cogentia.js, Cogentia Commons methodology, continuation protocol
+- **[Cogentia](https://github.com/JeanHuguesRobert/cogentia)** — cognitive infrastructure tooling: cogentia.js, Cogentia Commons methodology, Pipeline method, continuation protocol
 - **[inseme](https://github.com/JeanHuguesRobert/inseme)** — platform and COP runtime: Cognitive Orchestration Protocol, briques, applications
-- **[barons-Mariani](https://github.com/JeanHuguesRobert/barons-Mariani)** — political/institutional framework: Plan 2038, *Discours de la seconde méthode*
+- **[barons-Mariani](https://github.com/JeanHuguesRobert/barons-Mariani)** — political/institutional framework: Plan 2038, *Discours de la seconde méthode*, *Projet #1755*
+- **[Inox](https://github.com/JeanHuguesRobert/Inox)** — language and runtime substrate: concatenative stack VM with strict control/data plane separation, designed for nodes of the future *Fractanet*
 
 Each repository carries a [`research/index.md`](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/index.md) (this is FractaVolta's) and a [`research/corpus-status.md`](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/corpus-status.md). Together they constitute the navigable map.
 
