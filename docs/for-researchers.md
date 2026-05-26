@@ -38,6 +38,8 @@ Each repository carries a [`research/index.md`](https://github.com/JeanHuguesRob
 **Cognition layer**
 - [Agent-Resumable CLI](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/agent_resumable_cli.md) — externalized judgment, continuations, provider-neutral resumption
 - [Cognitive Packets](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/cognitive_packets.md) (v0.3) — envelope-and-payload format generalising the continuation pattern beyond the CLI; six packet kinds (continuation, objection, hypothesis, decision, failure, routing)
+- [Pipeline](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/pipeline.md) (method note v0.4) — *pipeline on the surface, packet network in depth.* The corpus's operational method note; self-applicative; operational counterpart of the *Discours de la seconde méthode*.
+- [Derived Products](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/derived_products.md) (v0.2) — source ↔ derived split: the substantive content belongs to a versioned source corpus; academic papers, blogposts, parliamentary notes, public dashboards are all derived forms of equal status. *Do not popularize from the academic paper; derive from the corpus.*
 
 **Language and runtime substrate**
 - [Inox — Programming Language Specification](https://github.com/JeanHuguesRobert/Inox/blob/master/research/inox-spec.md) — concatenative stack VM with strict control/data plane separation; runtime substrate for the future *Fractanet*; TS reference implementation today, heading for WASM, C/C++, and bare-metal ESP32
@@ -60,6 +62,8 @@ The corpus follows the **second method**:
 3. **Structure for machine readability from the start.** Stable identifiers, schemas, canonical URLs, append-only audit logs.
 4. **Let the corpus be its own evidence.** The repositories demonstrate the method on themselves: cogentia.js scans for unanchored claims; continuations process those decisions; the audit trail is part of the proof.
 5. **Encode the boundary in the architecture (Rule 0).** Epistemic participation vs political governance: AI agents may supply judgment, but binding decisions require signed human accountability.
+
+The **operational counterpart** of the second method is the [Pipeline](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/pipeline.md): *pipeline on the surface, packet network in depth.* Intuitions become cognitive packets; packets become versioned source documents; source documents derive into audience-specific products (papers, blogposts, parliamentary notes, public dashboards); public feedback reintegrates into the corpus. The method note is itself a self-describing artefact of the method it describes — Rule 4 applied to method-production. The companion paper [Derived Products](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/derived_products.md) formalises the source ↔ derived split.
 
 ---
 
