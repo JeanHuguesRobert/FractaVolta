@@ -1,21 +1,18 @@
 ---
 title: Pour les communes et collectivités
 subtitle: Transformer le solaire local en capacité communale.
-canonical_url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/docs/fr/collectivites.md
+description: "Pour les communes et collectivités corses : valorisation du solaire en capacité locale (stockage, services critiques, autonomie), audits de seconde vie, pilotes avec traçabilité et réversibilité."
+canonical_url: https://fractavolta.com/fr/collectivites
 last_stamped_at: 2026-05-20
 ---
 
 # Pour les communes et collectivités
 
-FractaVolta propose une lecture simple : une surface solaire locale ne doit pas seulement produire des kWh. Elle doit produire de la **capacité locale**.
+Beaucoup de communes corses disposent de surfaces solaires (bâtiments publics, parkings, ombrières). Aujourd’hui, cette énergie est majoritairement injectée dans le réseau à bas prix.
 
-Pour une commune ou un territoire, cela peut signifier :
+FractaVolta propose de transformer ces actifs en **capacité locale utile** : stockage, résilience des services publics, recharge, maintien de fonctions critiques, ou alimentation de sites techniques.
 
-- bâtiments publics plus résilients ;
-- stockage local ;
-- recharge de véhicules ;
-- maintien d’un service critique ;
-- alimentation d’un centre technique ;
+C’est une façon concrète de renforcer l’autonomie énergétique et la résilience du territoire, tout en générant de la valeur locale pour les habitants.
 - froid, eau ou pompage ;
 - secours en cas de crise ;
 - usage prioritaire pour les habitants ou services locaux ;

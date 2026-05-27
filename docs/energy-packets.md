@@ -1,7 +1,8 @@
 ---
 title: Energy packets
 subtitle: From electricity as flow to energy as traceable, routable, local capacity.
-canonical_url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/docs/energy-packets.md
+description: "FractaVolta transforme l’énergie solaire locale en paquets d’énergie mesurés, stockés, routés et tracés. Du flux continu vers des unités de capacité utiles, auditables et souveraines."
+canonical_url: https://fractavolta.com/energy-packets
 last_stamped_at: 2026-05-20
 ---
 
@@ -23,7 +24,18 @@ source -> measurement -> storage -> routing -> use -> trace
 
 An energy packet is not a labelled electron. It is a measured and attributable unit of useful energy, with a known source, path, custody history, destination, losses, and uncertainty.
 
-## Why this matters
+## Pourquoi c’est important (et concret en Corse)
+
+La valeur du solaire local est souvent diluée ou captée par le réseau. En transformant l’énergie en paquets traçables, on peut la stocker, l’orienter et l’utiliser localement (eau, froid, recharge, compute, services critiques).
+
+**Applications concrètes en Corse** (vitrine terrain) :
+- [Seconde Vie solaire](./fr/seconde-vie)
+- [Marchés locaux](./fr/marches)
+- [Pour les agriculteurs et propriétaires](./fr/agriculteurs)
+- [Pour les communes et collectivités](./fr/collectivites)
+- [Partenaires installateurs](./fr/installateurs)
+
+Ces pages sont écrites pour les acteurs locaux (propriétaires, collectivités, installateurs).
 
 Local solar value is often captured or diluted:
 
@@ -39,13 +51,13 @@ local sun -> local production -> local storage -> local priority uses -> auditab
 
 The grid remains useful, but it is no longer the invisible default substrate. It becomes one peer, one backup path, or one arbitrage layer among others.
 
-## Core principles
+## Principes concrets
 
-1. **Local-first value.** The territory receiving the sun should receive a visible share of its value.
-2. **Storage before blind export.** Surplus should first seek useful local storage or local work.
-3. **Grid as backup when useful.** The public grid remains valuable, but not as the automatic sink of every surplus.
-4. **Safe interfaces.** 48 V DC is treated as a human-facing modular interface, not as a universal internal voltage constraint.
-5. **Traceability.** Each packet should carry evidence: origin, amount, custody, destination, use, and uncertainty.
+1. **Priorité locale.** Le territoire qui reçoit le soleil doit en tirer un bénéfice visible et mesurable.
+2. **Stocker avant d’exporter aveuglément.** L’excédent doit d’abord chercher un usage utile local (stockage, eau, froid, recharge, compute).
+3. **Le réseau comme secours.** Le réseau public reste utile, mais il n’est plus l’évacuateur par défaut de tout surplus.
+4. **Interfaces sûres.** Le 48V DC est conçu comme une interface modulaire et sûre pour l’humain.
+5. **Traçabilité.** Chaque paquet d’énergie porte son origine, son trajet, sa destination et son usage. Rien n’est invisible.
 6. **Reversibility.** Owners and territories should not be trapped by opaque or excessive exit costs.
 7. **Open cognition.** Cogentia, the open-source cognitive layer of FractaVolta, applies the same packet logic to reasoning, continuations, and invention workflows.
 

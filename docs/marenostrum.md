@@ -1,7 +1,8 @@
 ---
 title: MareNostrum
 subtitle: Strategic framework for sovereign Mediterranean compute infrastructure. Early-stage — published as a corpus, awaiting a consortium.
-canonical_url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/docs/marenostrum.md
+description: "MareNostrum : cadre stratégique pour une infrastructure de calcul souveraine méditerranéenne (énergie, compute, cognition). Référentiel pour les futurs déploiements FractaVolta."
+canonical_url: https://fractavolta.com/marenostrum
 last_stamped_at: 2026-05-15
 ---
 

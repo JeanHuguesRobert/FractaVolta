@@ -1,7 +1,8 @@
 ---
 title: For partners
 subtitle: Energy and compute as integrated sovereignty infrastructure, billed for avoided interruption and audited at every layer.
-canonical_url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/docs/for-partners.md
+description: "FractaVolta travaille avec des partenaires publics et privés pour transformer du solaire local en capacité traçable et souveraine (énergie-paquet, inférence, civic tech). Modèle : intégration et opérations, pas de lock-in logiciel."
+canonical_url: https://fractavolta.com/for-partners
 last_stamped_at: 2026-05-15
 ---
 
@@ -11,29 +12,33 @@ Thirty years of asking "how do autonomous agents coordinate without a capturable
 
 We do not sell electrons on a grid, carbon credits, generic consulting, or closed-source SaaS lock-in. We do not license the software (it's MIT). We sell the deployment, the integration, the operations, and the regulatory and engineering judgment that makes the stack run on a real site.
 
+**En résumé :** Nous concevons, déployons et exploitons des infrastructures locales (énergie + compute + civic) en Corse et en Méditerranée, avec traçabilité complète et sans dépendance à un fournisseur logiciel.
+
 ---
 
-## What you buy
+## Ce que nous proposons concrètement
 
-### Energy substrate
+### Énergie locale (Energy substrate)
 
-- **Feasibility studies** for site-specific Energy Packet Network deployments — PV sizing, battery dimensioning, packet flow analysis, regulatory navigation (IMDG maritime, SELV electrical codes, RGPD for any installed sensing).
-- **DC-native node design** — 48V SELV bus, MPPT, LFP, edge compute, USB-C PD 3.1 interfaces.
-- **Battery container engineering** — 2 MWh ISO 20' LFP packets, certified to maritime freight standards, BLE-tracked, ferry-routable.
-- **PGN integration** where applicable — historical irrigation canals as gravitational storage substrate, IEV (Inverted Energy Vessel) node design, Corsica case study materials available.
+Nous aidons à transformer une installation solaire en source de capacité utile et traçable sur le territoire :
 
-### Compute substrate
+- Études de faisabilité spécifiques au site (dimensionnement, flux de paquets, cadre réglementaire).
+- Conception de nœuds DC-natifs 48V SELV (sécurisés, sans électricien agréé dans beaucoup de cas).
+- Ingénierie de containers batteries (2 MWh, certifiés transport maritime, traçables BLE).
+- Intégration de réseaux gravitationnels (PGN) quand le site s’y prête (cas Corse).
 
-- **CXU-priced sovereign inference** — Compute eXergy Unit accounting: energy × hardware efficiency × system efficiency × SLA premium = one auditable price per useful inference. See [CXU_SPEC](https://github.com/JeanHuguesRobert/marenostrum/blob/main/CXU_SPEC.md).
-- **Solar-backed edge inference nodes** — design, deployment, operations. Stranded Mediterranean exergy → inference tokens at ×10–×40 the revenue per MWh of grid export.
-- **Inference Packet Networks (IPN)** — bounded continuity layer for when hyperscale AI is degraded, unavailable, geopolitically disrupted, or energetically constrained. See [the IPN paper](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/inference_packet_network.md).
+### Compute souverain (si pertinent pour votre projet)
 
-### Integration
+- Inférence locale solaire avec tarification CXU (énergie × efficacité × SLA) — prix auditable par inférence utile.
+- Nœuds edge solaires avec continuité garantie via Inference Packet Networks quand les grands fournisseurs sont indisponibles ou trop chers.
+- Pas de dépendance à un hyperscaler pour les fonctions critiques.
 
-- **Stack assembly** — deploying the cognition layer (cogentia.js + Cogentia Commons + continuation protocol) and the civic layer (inseme) on FractaVolta hardware.
-- **Multi-instance configuration** for per-commune / per-site deployments of Kudocracy.Survey and Inseme Agora.
-- **Ophélia AI mediator** integration with sovereign inference backends — no vendor lock.
-- **Audit and observability** — every layer produces typed events; the audit trail is a first-class deliverable, not a compliance afterthought.
+### Intégration complète (si souhaité)
+
+- Assemblage de la pile complète : énergie + compute souverain + couche de cognition (cogentia.js) + outils citoyens (inseme).
+- Configuration multi-instances pour communes ou sites (Kudocracy.Survey, Inseme Agora).
+- Médiation IA Ophélia sur nœuds locaux, sans appel à des API externes.
+- Traçabilité et audit complets de toutes les décisions — livrables standards du projet.
 
 ### Operations
 
@@ -43,16 +48,16 @@ We do not sell electrons on a grid, carbon credits, generic consulting, or close
 
 ---
 
-## Value capture model
+## Notre logique de valeur : la continuité évitée
 
-The pricing logic is **avoided interruption** at every layer:
+Nous ne vendons pas de l’énergie ou des tokens. Nous vendons la **garantie de ne pas être bloqué**.
 
-- **Energy**: avoided downtime when the SARCO cable saturates or the grid trips. We sell the continuity guarantee, not the energy.
-- **Compute**: avoided inference outage when hyperscale degrades. The Inference Packet Network paper makes this explicit — premium cognitive backup priced by avoided cognitive interruption, not nominal token throughput.
-- **Cognition**: avoided reasoning loss when an AI provider changes terms, retires a model, or goes offline. Continuations preserve and replay the work.
-- **Civic**: avoided platform capture when a SaaS vendor changes terms or a political wind shifts. inseme is yours forever — it's MIT, it runs on your hardware, it produces auditable events.
+- Énergie : éviter les coupures quand le câble SARCO est saturé ou le réseau tombe.
+- Compute : garder de l’inférence locale quand les grands modèles deviennent indisponibles ou trop chers.
+- Cognition : ne pas perdre le raisonnement quand un fournisseur change ses conditions.
+- Civic : garder la main sur vos outils de délibération sans dépendre d’un éditeur SaaS.
 
-This is a service model, not a licensing model. The product is integration and operations.
+C’est un modèle de service et d’intégration, pas de licence logicielle.
 
 ## What you also receive — the audit trail
 
@@ -67,33 +72,48 @@ This is not compliance theater layered on top of normal work. It is how the work
 
 ---
 
-## Pilot opportunities
+## Projets et opportunités en Corse
 
-- **Mariani Village pilot** — Tavignano valley, Corte. ISO container DC-native housing fleet, seasonal routing Corte ↔ coast, full stack deployment (energy + compute + cognition + civic) on a single site. Operated by [Dilorta SAS](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/mariani_village.md).
-- **PGN pilot** — Tavignano valley hydraulic infrastructure, IEV node feasibility, gravity-as-territorial-memory case study.
-- **Sovereign inference cluster** — solar-backed Corsica node, IPN demonstrator, CXU-priced inference services for regional partners.
+Nous avançons actuellement sur plusieurs chantiers et discussions en Corse :
 
-See [partner_brief.md](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/partner_brief.md) for the detailed engagement brief.
+- Mariani Village (Tavignano) — habitat DC-natif repositionnable.
+- Valorisation de réseaux hydrauliques historiques (PGN).
+- Nœuds d’inférence solaires locaux.
 
----
+Pour les acteurs locaux (propriétaires, collectivités, installateurs), les pages pratiques sont ici :
+- [Seconde Vie solaire](./fr/seconde-vie)
+- [Marchés locaux](./fr/marches)
+- [Installateurs et mainteneurs](./fr/installateurs)
 
-## How to engage
-
-We work with:
-
-- **Public-sector partners** seeking sovereign infrastructure (collectivités, regional authorities, public universities)
-- **Cooperative housing** and community land trusts deploying off-grid residential infrastructure
-- **Industrial sites** with high-value local compute needs and stranded renewable generation
-- **Academic institutions** running deliberation infrastructure for student governance or research consultations
-
-We do not work with operations seeking vendor lock-in, opaque audit chains, or AI-as-extraction monetization.
+Les documents techniques plus approfondis sont disponibles sur demande ou via la page [Pour déployer](./for-deployers).
 
 ---
 
-## Contact
+## Avec qui nous travaillons
 
-📧 jhr@baronsmariani.org
-🔗 [LinkedIn](https://www.linkedin.com/company/fractavolta)
-🌐 [FractaVolta on GitHub](https://github.com/JeanHuguesRobert/FractaVolta)
+Nous privilégions les partenaires qui cherchent de la **véritable souveraineté locale** :
 
-*Engineering: Institut Mariani. Commercial vehicle: Dilorta SAS (housing). Knowledge governance: Cogentia Commons.*
+- Collectivités et autorités régionales
+- Exploitations agricoles et coopératives
+- Sites industriels ou touristiques avec besoins en autonomie énergétique et compute
+- Institutions qui veulent des outils de délibération sans dépendance à un éditeur
+
+Nous ne travaillons pas avec des structures qui recherchent du lock-in logiciel, des chaînes d’audit opaques, ou de l’IA comme outil d’extraction.
+
+---
+
+## Prochaines étapes
+
+Si vous êtes une collectivité, un exploitant agricole, un installateur ou un acteur de l’énergie en Corse ou en Méditerranée et que vous voulez transformer du solaire local en capacité réelle et traçable, contactez-nous directement.
+
+**Contact direct :**
+- 📧 [jhr@baronsmariani.org](mailto:jhr@baronsmariani.org)
+- 🔗 [LinkedIn – FractaVolta](https://www.linkedin.com/company/fractavolta/)
+
+Pour les opportunités concrètes en Corse (propriétaires, collectivités, installateurs), voir directement la section [En Corse](./fr/).
+
+Pour les aspects techniques (unités DC-natives, coûts, cadre réglementaire), consultez la page [Pour les porteurs de projet](./for-deployers).
+
+Nous répondons personnellement et dans les meilleurs délais.
+
+*Véhicule commercial : Dilorta SAS (Corse). Gouvernance des connaissances : Cogentia Commons.*

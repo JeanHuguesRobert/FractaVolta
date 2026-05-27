@@ -1,11 +1,15 @@
 ---
 title: For researchers
 subtitle: Papers, methodology, contestation as first-class contribution. The corpus is its own evidence — fork it, challenge it, build on it.
-canonical_url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/docs/for-researchers.md
+canonical_url: https://fractavolta.com/for-researchers
 last_stamped_at: 2026-05-26
 ---
 
-For the operational summary of how the corpus governs itself — what `cogentia.js` does, how continuations work in practice, what the audit trail contains — see the [methodology page](./methodology).
+Cette page s’adresse aux chercheurs et aux partenaires techniques qui souhaitent entrer dans la profondeur du travail. Si vous cherchez plutôt des opportunités concrètes, allez directement dans la section [En Corse](./fr/).
+
+Pour un résumé plus opérationnel de la méthode et des outils concrets, voir la page [Méthode](./methodology).
+
+Pour les opportunités et les chantiers concrets en Corse, voir directement la section [En Corse](./fr/).
 
 ## The corpus
 
@@ -114,9 +118,11 @@ The corpus is open source under CC BY-SA 4.0 (research) and MIT (code). Three wa
 
 ---
 
-## Contact
+## Contact & prochaines étapes
 
-📧 jhr@baronsmariani.org
-🌐 [FractaVolta on GitHub](https://github.com/JeanHuguesRobert/FractaVolta) · [research index](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/index.md)
+📧 [jhr@baronsmariani.org](mailto:jhr@baronsmariani.org)  
+🔗 [LinkedIn – FractaVolta](https://www.linkedin.com/company/fractavolta/)
+
+Pour les opportunités et les chantiers concrets en Corse, voir directement la section [En Corse](./fr/).
 
 *All papers: CC BY-SA 4.0. All software: MIT.*

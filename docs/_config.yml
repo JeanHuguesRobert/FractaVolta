@@ -9,11 +9,20 @@ repository: JeanHuguesRobert/FractaVolta
 github_username: JeanHuguesRobert
 linkedin_username: company/fractavolta
 
+lang: fr
+
 author:
-  name: Jean Hugues Noël Robert
+  name: Jean Hugues Noël Robert, baron Mariani
   affiliation: Institut Mariani / C.O.R.S.I.C.A.
   email: jhr@baronsmariani.org
   location: Corte, Corsica
+
+logo: /assets/jana.svg   # actual logo used on the site (header + favicon)
+
+social:
+  name: FractaVolta
+  links:
+    - https://www.linkedin.com/company/fractavolta/
 
 # Build configuration
 markdown: kramdown

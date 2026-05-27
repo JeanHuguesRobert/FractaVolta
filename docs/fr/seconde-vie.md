@@ -1,15 +1,26 @@
 ---
 title: FractaVolta Seconde Vie
 subtitle: Opérateur de seconde vie solaire pour hangars, toitures, ombrières et centrales existantes.
-canonical_url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/docs/fr/seconde-vie.md
+description: "Seconde vie des installations photovoltaïques en Corse : audits, maintenance, stockage local, non-injection quand pertinent, revenu lisible et réversibilité contractuelle pour les propriétaires et agriculteurs."
+canonical_url: https://fractavolta.com/fr/seconde-vie
 last_stamped_at: 2026-05-20
 ---
 
 # FractaVolta Seconde Vie
 
-**FractaVolta Seconde Vie** est une offre en construction pour les installations photovoltaïques existantes ou arrivant en fin de contrat.
+**FractaVolta Seconde Vie** est une offre pour les installations photovoltaïques existantes ou arrivant en fin de contrat en Corse.
 
-L’idée est de ne pas laisser ces actifs solaires vieillir, être sous-valorisés ou retomber dans une simple logique d’injection abstraite. Ils peuvent devenir des nœuds locaux de capacité : stockage, usages agricoles, recharge, froid, eau, secours, compute local, batteries mobiles.
+Plutôt que de laisser ces actifs vieillir ou injecter de l’énergie à bas prix dans le réseau, nous proposons de les transformer en nœuds locaux de capacité réelle : stockage, usages agricoles, recharge, froid, eau, secours, ou même du compute local.
+
+Le propriétaire garde un revenu lisible et une vraie possibilité de sortie réversible, sans tracas excessifs.
+
+Pour en savoir plus selon votre situation :
+- [Agriculteurs et propriétaires](./agriculteurs)
+- [Communes et collectivités](./collectivites)
+- [Installateurs et mainteneurs](./installateurs)
+
+Vous souhaitez lancer une discussion ?  
+Contactez-nous : [jhr@baronsmariani.org](mailto:jhr@baronsmariani.org) ou via [LinkedIn](https://www.linkedin.com/company/fractavolta/).
 
 ## Principe
 

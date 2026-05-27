@@ -1,21 +1,18 @@
 ---
 title: Marchés locaux
 subtitle: Où transformer le solaire local en paquets d’énergie utiles au territoire.
-canonical_url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/docs/fr/marches.md
+description: "Marchés prioritaires en Corse pour l’énergie-paquet : hangars agricoles, toitures professionnelles, ombrières de parking, centrales existantes, bâtiments avec besoins en eau/froid/recharge. Cibles : agriculteurs, collectivités, installateurs."
+canonical_url: https://fractavolta.com/fr/marches
 last_stamped_at: 2026-05-20
 ---
 
 # Marchés locaux
 
-FractaVolta ne se limite pas à une catégorie d’actif solaire.
+Nous ne cherchons pas tous les projets solaires.
 
-La question n’est pas seulement :
+La question qui nous intéresse est plutôt celle-ci :
 
-> Où peut-on produire de l’électricité solaire ?
-
-La question est plutôt :
-
-> Où la valeur solaire locale risque-t-elle d’être captée ou diluée, alors qu’elle pourrait devenir une capacité locale utile, stockée, routée et traçable ?
+> Où la valeur du solaire local risque-t-elle d’être captée ou diluée, alors qu’elle pourrait être transformée en capacité locale utile, stockée, orientée et traçable ?
 
 ## 1. Hangars agricoles
 
@@ -81,3 +78,11 @@ Un bon site pilote réunit plusieurs critères :
 ## Formule
 
 **Le solaire local ne doit pas devenir une rente captée. Il doit devenir une capacité locale.**
+
+---
+
+Vous avez un site qui correspond à ces critères ?
+
+Contactez-nous : [jhr@baronsmariani.org](mailto:jhr@baronsmariani.org) ou via [LinkedIn](https://www.linkedin.com/company/fractavolta/).
+
+Voir aussi : [Seconde Vie](./seconde-vie) • [Pour les agriculteurs](./agriculteurs) • [Pour les collectivités](./collectivites) • [Installateurs](./installateurs)

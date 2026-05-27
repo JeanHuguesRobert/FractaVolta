@@ -1,15 +1,21 @@
 ---
 title: For deployers
 subtitle: Concrete materials for getting a Mariani Village (or comparable DC-native deployment) off the ground.
-canonical_url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/docs/for-deployers.md
+description: "Mariani Village : unités containers DC-natives 48V SELV, hors CONSUEL, repositionnables. Conçues pour la Corse et les territoires méditerranéens. Documentation technique pour installateurs et porteurs de projet."
+canonical_url: https://fractavolta.com/for-deployers
 last_stamped_at: 2026-05-15
 ---
 
-## Mariani Village in one paragraph
+## Mariani Village en bref
 
-ISO 20-foot container units configured as DC-native minimal dwellings (<14 m²), deployed on host sites, repositioned annually between student occupancy (Corte, academic year) and tourist occupancy (Corsican coast, summer). No grid connection required. No licensed electrician. No CONSUEL. Total electrical cost per unit: €2,740–4,080. Commercialised through **Dilorta SAS** (*di l'Orta* — of the Orta river, Minesteggio, Corsica).
+Unités containers ISO 20 pieds en **DC-natif 48V SELV** (<14 m²), repositionnables, sans raccordement réseau obligatoire, sans électricien agréé, sans CONSUEL.
 
-Read the full habitat paper: [mariani_village.md](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/mariani_village.md).
+Coût électrique total par unité : 2 740 – 4 080 €.  
+Commercialisé via **Dilorta SAS** (Corse).
+
+Idéal pour sites isolés, saisonniers ou en autonomie en Corse et Méditerranée.
+
+Lire le document technique complet : [mariani_village.md](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/mariani_village.md).
 
 ---
 
@@ -44,28 +50,31 @@ What we navigate for you:
 
 ---
 
-## The full-stack option
+## Option "pile complète" (facultative)
 
-A Mariani Village is wired to be a complete sovereignty site. If you want to close the stack:
+Le Mariani Village est conçu pour pouvoir accueillir toute la pile de souveraineté si vous le souhaitez :
 
-- **Inseme Agora** locally — assemblies, instant voting, digital gestures for resident deliberation
-- **Kudocracy.Survey** for consultations across the village
-- **Ophélia AI mediator** — running on the on-site edge inference node, powered by the on-site PV-backed battery. No vendor API call leaves the site for the mediation work.
-- **Atlas of Biodiversity** — if your host site has biodiversity observation potential (Corsica almost always does)
+- Outils de délibération locale (Inseme Agora + Kudocracy)
+- Médiation IA Ophélia fonctionnant 100 % sur site (pas d’appel API externe)
+- Couche observation biodiversité (Atlas of Biodiversity)
 
-This is not required. You can run a Mariani Village as pure housing. But when you do close the stack, every layer is owned and auditable by the residents — and that's the differentiator.
+Vous pouvez très bien déployer les unités en mode "habitat seul". L’option full-stack apporte simplement un niveau supplémentaire d’autonomie et de traçabilité pour les résidents ou la collectivité.
 
 ---
 
-## Step-by-step pointers
+## Pour aller plus loin (documents techniques)
 
-1. **Read the habitat paper** — [mariani_village.md](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/mariani_village.md). It's the single source of truth on the deployment.
-2. **Read the DC architecture** — [dc_native_epn.md](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/dc_native_epn.md). Needed if your site engineer is going to do anything beyond bolt-on.
-3. **Read the founding EPN paper** — [UNCONSCIOUS_GRID.md](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/UNCONSCIOUS_GRID.md). The theory under the practice — useful when objections come in from grid-trained engineers.
-4. **For the platform side** — see the [inseme README](https://github.com/JeanHuguesRobert/inseme). Apps, briques, multi-instance configuration, Ophélia.
-5. **For the methodology — and the operational toolchain** — see [methodology](./methodology). The corpus is governed by [Cogentia Commons](https://github.com/JeanHuguesRobert/cogentia); the operational CLI is [`cogentia.js`](https://github.com/JeanHuguesRobert/cogentia/blob/main/scripts/cogentia.js).
+Ces documents sont destinés aux porteurs de projet et aux équipes techniques :
 
-## Your deployment as a tracked corpus
+1. Référence habitat : [mariani_village.md](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/mariani_village.md)
+2. Architecture DC-native : [dc_native_epn.md](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/dc_native_epn.md)
+3. Fondement de l’énergie-paquet : [UNCONSCIOUS_GRID.md](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/UNCONSCIOUS_GRID.md)
+
+Pour les aspects pratiques et les opportunités en Corse, voir directement la section [En Corse](./fr/).
+
+N’hésitez pas à nous contacter directement : [jhr@baronsmariani.org](mailto:jhr@baronsmariani.org) ou via [LinkedIn](https://www.linkedin.com/company/fractavolta/).
+
+## Votre déploiement comme corpus tracé
 
 A working Mariani Village is also a small Cogentia Commons corpus. The site folder (whether on your own GitHub organization or a private Git host) carries:
 

@@ -1,15 +1,18 @@
 ---
 title: Pour les agriculteurs et propriétaires
 subtitle: Revenu simple, énergie utile, maintenance organisée, sortie réversible.
-canonical_url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/docs/fr/agriculteurs.md
+description: "Agriculteurs et propriétaires corses : seconde vie solaire, revenu lisible, maintenance avec partenaires locaux, stockage et usages utiles (eau, froid, recharge), réversibilité contractuelle."
+canonical_url: https://fractavolta.com/fr/agriculteurs
 last_stamped_at: 2026-05-20
 ---
 
 # Pour les agriculteurs et propriétaires
 
-Vous possédez un hangar, une toiture, un bâtiment agricole ou une installation photovoltaïque existante ?
+Vous avez un hangar, une toiture agricole, ou une installation photovoltaïque existante ?
 
-FractaVolta étudie une offre de **seconde vie solaire** : prolonger l’usage de l’installation, organiser la maintenance, stocker l’énergie localement quand cela a du sens, et vous proposer un revenu simple, lisible et réversible.
+Plutôt que de laisser l’énergie partir dans le réseau à bas prix, nous proposons de la transformer en capacité utile sur votre exploitation : stockage, usages en eau/froid/recharge, et un revenu plus stable et lisible.
+
+C’est l’idée de la **seconde vie solaire** que nous développons en Corse : prolonger la vie des installations, créer de la valeur locale, et conserver le contrôle.
 
 ## Le principe
 

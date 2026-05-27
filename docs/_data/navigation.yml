@@ -1,19 +1,24 @@
 main:
-  - title: Home
+  - title: Accueil
     url: /
-  - title: Energy packets
-    url: /energy-packets
-  - title: Corse
+  - title: En Corse
     url: /fr/
   - title: Seconde Vie
     url: /fr/seconde-vie
-  - title: Marchés
+  - title: Marchés locaux
     url: /fr/marches
-  - title: For partners
+  - title: Pour les partenaires
     url: /for-partners
-  - title: Methodology
+  - title: Pour déployer
+    url: /for-deployers
+  - title: Énergie-paquet
+    url: /energy-packets
+  - title: Contact
+    url: /for-partners
+  # --- Méthode & documentation ---
+  - title: Méthode
     url: /methodology
-  - title: Papers
+  - title: Documentation
     url: /papers
-  - title: MareNostrum
+  - title: Cadre stratégique
     url: /marenostrum

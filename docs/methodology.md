@@ -1,47 +1,39 @@
 ---
 title: Methodology
 subtitle: How we work — every decision auditable, every objection first-class, every AI agent replaceable. Not compliance theater; the way the platform fundamentally operates.
-canonical_url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/docs/methodology.md
+canonical_url: https://fractavolta.com/methodology
 last_stamped_at: 2026-05-26
 ---
 
-FractaVolta is an engineering firm and a stack operator. We design, build, and run infrastructure across four layers — energy, compute, cognition, civic. The methodology described on this page is not separate from the engineering. It is how the engineering is done.
+FractaVolta conçoit, déploie et exploite des infrastructures locales en Corse et en Méditerranée. La méthode n’est pas une surcouche administrative : elle fait partie intégrante de la façon dont nous livrons les projets à nos partenaires.
 
-Three concrete commitments shape every project:
+Trois engagements concrets structurent chaque projet chez FractaVolta :
 
-1. **Every claim is anchored.** When we say "the LFP container delivers 1.9 MWh of useful work" or "the inference packet executes in under 30 seconds on a 50W node," there is a canonical document with a stable URL where that claim lives. We don't sell brochures of unsupported numbers.
-2. **Every objection becomes a first-class contribution.** If you disagree with a claim — file an issue. We will either convert it into a falsifiable claim, mark it as a feeling-of-certainty (with attribution), or request the specifics that would settle it. Disagreement is part of the record, not noise to be erased.
-3. **Every AI agent is replaceable.** When we use Claude, ChatGPT, a local model, or a human reviewer for any decision in the deployment, the work is captured as a typed [continuation](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/agent_resumable_cli.md). A different agent — or a different human — can pick up the same work from the same point, without modifying our tooling. No vendor can lock us in. No vendor can lock you in.
+1. **Chaque affirmation est traçable.** Si nous avançons un résultat technique ou économique, il existe un document stable et versionné qui le justifie.
 
-These three commitments are operationalized through a small set of named instruments.
+2. **Chaque objection compte.** Si vous n’êtes pas d’accord avec une hypothèse ou un choix, elle devient partie du dossier. Nous ne l’effaçons pas.
+
+3. **Aucun outil IA n’est indispensable.** Tout ce qui est produit avec une IA peut être repris par une autre (ou par un humain) sans tout refaire.
+
+La section ci-dessous présente les outils et concepts opérationnels en détail. Elle s’adresse principalement aux partenaires techniques et aux chercheurs qui souhaitent cette profondeur.
+
+Si vous êtes un acteur de terrain ou un partenaire commercial, vous pouvez passer directement à la section [En Corse](./fr/), qui présente les applications concrètes.
 
 ## Cogentia Commons
 
-[**Cogentia Commons**](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/Cogentia_Commons_Working_Paper.md) is the methodology for distributed knowledge production across the corpus. It is GitHub-anchored — every research-grade document carries a `canonical_url` in its front-matter pointing at its authoritative location on github.com. The corpus is its own evidence: forks, objections, and revisions are all visible in the git history.
+[**Cogentia Commons**](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/Cogentia_Commons_Working_Paper.md) est la méthode de gouvernance des connaissances à travers le corpus. Chaque document important porte une `canonical_url` stable. Le corpus est sa propre preuve : les forks, objections et évolutions restent visibles dans l’historique git.
 
 ## cogentia.js
 
-[**`cogentia.js`**](https://github.com/JeanHuguesRobert/cogentia/blob/main/scripts/cogentia.js) is the operational CLI. Zero-dependency Node.js. Multi-repository registry. Commands are organised by concern:
+[**`cogentia.js`**](https://github.com/JeanHuguesRobert/cogentia/blob/main/scripts/cogentia.js) est l’outil opérationnel (CLI Node.js sans dépendance). Il permet de piloter la gouvernance du corpus sur plusieurs dépôts.
 
-**Sync & inspection.**
+Les principales familles de commandes :
 
-- `drift` — fetch and report ahead/behind/diverged vs upstream across all repos; `--pull` fast-forwards behind repos; `--strict` exits non-zero on drift.
-- `lint` — single-table corpus health report: unreferenced, frontmatter issues, drift, in one pass.
-- `scan` — flag markdown files not referenced in `research/index.md` (rule 4: every claim must be anchored).
-- `check` — validate internal and external links across the corpus.
+- **Synchronisation et inspection** (`drift`, `lint`, `scan`, `check`)
+- **Vues dérivées** (`refresh`, `documents`, `corpus-status`, `backlinks`, `trails`)
+- **Gouvernance du frontmatter** (`frontmatter check`, `frontmatter promote`)
 
-**Derived views (one command refreshes all).**
-
-- `refresh` — runs `corpus-status`, `backlinks`, `trails`, and `documents` in canonical order.
-- `documents` — consolidated cross-corpus catalogue with reverse-chronological activity and chronological authorship; bulk-pass commits filtered out.
-- `corpus-status` — per-repository status page; structural sections auto-regenerated, curated sections preserved.
-- `backlinks` / `trails` — auto-inject "Mentioned in" lists and Previous/Next playlist navigation; cross-repo links use absolute GitHub URLs so they render on the web.
-
-**Frontmatter governance.**
-
-- `frontmatter check [repo]` — diagnose docs missing Level 2 fields, using deprecated names, or carrying a `status:` value outside the controlled vocabulary.
-- `frontmatter promote <file>` — add a Level 2 skeleton (title, author, affiliation, date, license, status).
-- `frontmatter promote --batch` — bulk-inject the three invariants (author, affiliation, license) across substantive docs; leaves judgment fields for human edit.
+Ces outils rendent la traçabilité et la maintenance du corpus concrètes et automatisables.
 - `frontmatter schema` — canonical schema reference.
 
 **Personal scheduler (fractal).**
@@ -124,4 +116,18 @@ The methodological foundation of the entire corpus is the [Discours de la second
 - Read the [Cogentia Commons Working Paper](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/Cogentia_Commons_Working_Paper.md) for the methodology's formal specification.
 - Read [Agent-Resumable CLI](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/agent_resumable_cli.md) for the continuation protocol's design rationale.
 
-The methodology is offered. It is not imposed. Operations that want compliance theater, opaque audit chains, or vendor-locked cognition will not find FractaVolta a useful partner.
+La méthode est proposée, pas imposée. Les structures qui cherchent du théâtre de conformité, des audits opaques ou de la cognition verrouillée par un fournisseur ne trouveront pas FractaVolta un partenaire adapté.
+
+**Travaux en Corse** : la plupart de nos déploiements et pilotes concrets se font actuellement en Corse (seconde vie solaire, habitat DC-natif, nœuds locaux).
+
+Pour les acteurs de terrain (agriculteurs, collectivités, installateurs), les pages les plus directement utiles sont :
+- [Seconde Vie solaire](./fr/seconde-vie)
+- [Marchés locaux](./fr/marches)
+- [Partenaires installateurs](./fr/installateurs)
+
+Ces pages sont écrites dans un registre plus opérationnel et ancré sur le territoire. Si vous êtes sur le terrain, commencez par là plutôt que par cette page.
+
+---
+
+**Vous souhaitez travailler avec nous ?**  
+Contact : [jhr@baronsmariani.org](mailto:jhr@baronsmariani.org) • [LinkedIn](https://www.linkedin.com/company/fractavolta/)

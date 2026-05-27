@@ -1,7 +1,8 @@
 ---
 title: FractaVolta en Corse
 subtitle: Transition vers l’énergie-paquet, au service du territoire.
-canonical_url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/docs/fr/index.md
+description: "FractaVolta en Corse : transformer le solaire local en capacité utile, stockée, tracée et réversible. Seconde vie des installations, audits, pilotes avec agriculteurs, collectivités et installateurs."
+canonical_url: https://fractavolta.com/fr/
 last_stamped_at: 2026-05-20
 ---
 
@@ -51,6 +52,9 @@ FractaVolta cherche des partenaires et des sites pilotes en Corse :
 - [communes et collectivités](./collectivites) ;
 - propriétaires de toitures, parkings, ombrières ou sites solaires ;
 - partenaires intéressés par un pilote.
+
+**Vous souhaitez lancer un échange ou un audit de seconde vie ?**  
+Écrivez-nous : [jhr@baronsmariani.org](mailto:jhr@baronsmariani.org) ou contactez-nous sur [LinkedIn](https://www.linkedin.com/company/fractavolta/).
 
 ## Marchés prioritaires
 

@@ -1,7 +1,8 @@
 ---
 title: Rossignol Node
 subtitle: Un nœud pastoral minimal pour tester l’énergie-paquet sur le terrain.
-canonical_url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/docs/fr/rossignol-node.md
+description: "Rossignol Node : prototype minimal en Corse (abreuvoir automatisé + météo) démontrant la chaîne complète source locale → stockage → usage utile → mesure → traçabilité."
+canonical_url: https://fractavolta.com/fr/rossignol-node
 last_stamped_at: 2026-05-20
 ---
 

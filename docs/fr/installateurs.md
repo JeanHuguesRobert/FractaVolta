@@ -1,15 +1,16 @@
 ---
 title: Partenaires installateurs
 subtitle: FractaVolta cherche des partenaires techniques corses pour transformer le solaire local en capacité locale.
-canonical_url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/docs/fr/installateurs.md
+description: "Appel à partenaires installateurs et mainteneurs corses : projets de seconde vie solaire, stockage, nœuds DC-natifs, maintenance organisée et déploiements d’énergie-paquet sur le territoire."
+canonical_url: https://fractavolta.com/fr/installateurs
 last_stamped_at: 2026-05-20
 ---
 
-# Partenaires installateurs
+# Partenaires installateurs et mainteneurs
 
-FractaVolta ne remplace pas les installateurs photovoltaïques, les mainteneurs, les bureaux d’études ou les acteurs du stockage.
+FractaVolta ne se substitue pas aux installateurs et mainteneurs.
 
-Au contraire : FractaVolta cherche des partenaires techniques capables d’aider à transformer une doctrine en sites pilotes réels.
+Nous recherchons au contraire des partenaires techniques corses pour réaliser ensemble des projets concrets de transformation du solaire en capacité locale (seconde vie, stockage, usages utiles, traçabilité).
 
 ## Ce que FractaVolta apporte
 

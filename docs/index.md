@@ -1,7 +1,8 @@
 ---
 title: FractaVolta
 layout: home
-canonical_url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/docs/index.md
+description: "FractaVolta — du solaire local à la capacité traçable. Énergie-paquet, nœuds DC-natifs, inférence souveraine et infrastructure civique en Corse et en Méditerranée."
+canonical_url: https://fractavolta.com/
 last_stamped_at: 2026-05-26
 ---
 
@@ -25,21 +26,29 @@ A charged battery is an energy packet. A mobile battery or EV can carry a packet
 
 The grid remains useful, but it is no longer the invisible default substrate. It becomes one peer, one backup path, or one arbitrage layer among others.
 
-## Local deployment in Corsica
+## Focus Corse — priorité terrain
 
 **Le soleil doit bénéficier d’abord à ceux qu’il arrose.**
 
-For local Corsican deployment, the entry point is in French: hangars, rooftops, parking canopies, existing solar fields, public buildings, storage, reversibility, and practical pilot sites.
+FractaVolta concentre une partie importante de ses efforts sur la Corse : seconde vie des installations existantes, nouveaux déploiements en énergie-paquet, et projets pilotes avec agriculteurs, collectivités et installateurs locaux.
 
-- [FractaVolta en Corse](./fr/)
-- [FractaVolta Seconde Vie](./fr/seconde-vie)
-- [Marchés locaux](./fr/marches)
-- [Partenaires installateurs](./fr/installateurs)
-- [Rossignol Node](./fr/rossignol-node)
+L’entrée pour les projets locaux est en français : hangars, toitures, ombrières, centrales existantes, bâtiments publics, stockage et réversibilité.
 
-## Research architecture
+**Vous avez un projet ou un site en Corse ?**  
 
-The deeper architecture remains open and research-oriented.
+Contactez-nous directement :  
+📧 [jhr@baronsmariani.org](mailto:jhr@baronsmariani.org)  
+🔗 [LinkedIn – FractaVolta](https://www.linkedin.com/company/fractavolta/)
+
+Vous trouverez les pages pratiques par type d’acteur (agriculteurs, collectivités, installateurs…) dans la section [En Corse](./fr/).
+
+Si vous êtes un partenaire ou un porteur de projet, n’hésitez pas à nous contacter directement. Nous répondons personnellement.
+
+## Architecture de fond (pour ceux qui veulent approfondir)
+
+Le travail s’appuie sur une architecture conceptuelle plus large, documentée de façon ouverte. Cette partie s’adresse principalement aux partenaires techniques et aux chercheurs.
+
+Si vous êtes un acteur de terrain ou un partenaire commercial, vous trouverez les pages les plus utiles dans la section [En Corse](./fr/). N’hésitez pas à prendre contact avec nous.
 
 In 1964, Paul Baran introduced packet-switching. By 2000, it had replaced circuit-switched networks. The electrical grid has not fully made that conceptual shift. Neither has cognitive infrastructure.
 

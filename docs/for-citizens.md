@@ -1,21 +1,22 @@
 ---
 title: For citizens
 subtitle: Free, open-source, neutral digital infrastructure for citizen participation, augmented deliberation, and democratic transparency. Built around Corte, Corsica — usable anywhere.
-canonical_url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/docs/for-citizens.md
+description: "Inseme et Kudocracy : outils open source (MIT) de démocratie liquide, consultation citoyenne et délibération augmentée. Multi-instances, souverains, sans vendor lock-in. Origine : Corte, Corse."
+canonical_url: https://fractavolta.com/for-citizens
 last_stamped_at: 2026-05-15
 ---
 
-## What this layer of the stack is
+## Une couche civique souveraine
 
-[**inseme**](https://github.com/JeanHuguesRobert/inseme) is the open-source platform that runs on top of the FractaVolta stack. Its identity is its own: it originates in the **#PERTITELLU** citizen movement (Corte, Corsica) and aims to provide free solutions to empower citizens — anywhere a community wants to deliberate, consult, or organise without being captured by a vendor.
+**inseme** est la plateforme open source (MIT) que FractaVolta peut déployer sur ses infrastructures locales. Elle est née du mouvement citoyen **#PERTITELLU** à Corte et a pour but de donner aux communautés des outils de délibération et de consultation libres, neutres et sans dépendance à un éditeur.
 
-inseme is:
+inseme propose :
 
-- **Open source** (MIT-licensed)
-- **Neutral and independent** — does not finance, promote, or support any political party, electoral campaign, candidate, or list
-- **Multi-instance** — every commune, school, association, or community can run its own instance
-- **Modular** — built from briques (functional modules) you can mix, replace, or extend
-- **Sovereign-by-design** — supports local LLMs, your own Supabase, your own hardware (including FractaVolta-deployed DC-native edge nodes)
+- Des outils **libres** (licence MIT)
+- Une plateforme **neutre** (aucun soutien à un parti ou candidat)
+- Une architecture **multi-instances** (chaque commune ou communauté peut avoir la sienne)
+- Un système **modulaire** (briques) que l’on peut assembler et faire évoluer
+- Une conception **souveraine** (compatible avec des modèles locaux et du matériel FractaVolta)
 
 ---
 
@@ -128,10 +129,13 @@ Per **Rule 0** of the corpus methodology: AI agents may participate in *epistemi
 
 ## Contact
 
-📧 jhr@baronsmariani.org · institutmariani@gmail.com
-🐙 [inseme on GitHub](https://github.com/JeanHuguesRobert/inseme)
-🌐 [FractaVolta on GitHub](https://github.com/JeanHuguesRobert/FractaVolta)
+Pour déployer ces outils en Corse ou sur infrastructure locale :
 
-Made with ❤️ in Corte, Corsica.
+📧 [jhr@baronsmariani.org](mailto:jhr@baronsmariani.org)  
+🔗 [LinkedIn – FractaVolta](https://www.linkedin.com/company/fractavolta/)
+
+🐙 [inseme sur GitHub](https://github.com/JeanHuguesRobert/inseme)
+
+Pour les projets terrain en Corse, voir directement la section [En Corse](./fr/).
 
 **#PERTITELLU | CORTI CAPITALE**
