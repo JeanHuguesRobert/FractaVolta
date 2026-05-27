@@ -511,6 +511,7 @@ That is the real return of direct current: not as the defeated current of Edison
 ### Backlinks
 
 *These documents link to this file:*
+- [Concept Index — FractaVolta](research/concepts.md)
 - [Corpus Status — FractaVolta](research/corpus-status.md)
 - [Research Index — FractaVolta](research/index.md)
 

@@ -925,7 +925,7 @@ Its role:
 
 - document the epistemic process;
 - preserve objections;
-- connect to `DHITL.md`;
+- connect to [`DHITL.md`](https://github.com/JeanHuguesRobert/marenostrum/blob/main/DHITL.md);
 - connect to Cogentia;
 - describe how AI agents contribute without governing;
 - make the corpus itself auditable.

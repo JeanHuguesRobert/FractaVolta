@@ -253,6 +253,7 @@ https://github.com/JeanHuguesRobert/FractaVolta/blob/main/UNCONSCIOUS_GRID.md
 
 *These documents link to this file:*
 - [Le Réseau Inconscient](LE_RESEAU_INCONSCIENT.md)
+- [Concept Index — FractaVolta](research/concepts.md)
 - [Corpus Status — FractaVolta](research/corpus-status.md)
 - [Research Index — FractaVolta](research/index.md)
 - [The Unconscious Grid](UNCONSCIOUS_GRID.md)

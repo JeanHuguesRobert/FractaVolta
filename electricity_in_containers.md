@@ -141,7 +141,7 @@ The following taxonomy organizes use cases by maturity and by the nature of the 
 
 **Maturity**: medium. Several Mediterranean islands have experimented with mobile storage as grid support. The service model layer is underdeveloped.
 
-**Strategic value**: high — this is where containerized electricity connects directly to the MareNostrum energy governance model. Mobile storage units are traceable assets whose energy provenance can be certified (see `safe_compute_exergy.md`). A battery charged from certified Corsican solar, delivered to a household, creates a traceable provenance chain for the service rendered.
+**Strategic value**: high — this is where containerized electricity connects directly to the MareNostrum energy governance model. Mobile storage units are traceable assets whose energy provenance can be certified (see [`safe_compute_exergy.md`](https://github.com/JeanHuguesRobert/marenostrum/blob/main/safe_compute_exergy.md)). A battery charged from certified Corsican solar, delivered to a household, creates a traceable provenance chain for the service rendered.
 
 ### 4.6 Industrial and Commercial Demand Response — Lower Maturity for Service Model
 
@@ -183,13 +183,13 @@ The analogy to settled practice: Butagaz and Total do not hold electricity suppl
 
 Containerized electricity is not an isolated concept. It connects to the broader MareNostrum architecture at multiple points:
 
-**FractaTera** (`tera.md`): mobile battery containers are nodes in the FractaTera network. Their GPS trajectory, detected by vehicles and fixed infrastructure, provides the physical tracking layer. VIGILIA-type beacon detection can be applied to container tracking. The logistics network is the physical instantiation of the mobile node layer.
+**FractaTera** ([`tera.md`](tera.md)): mobile battery containers are nodes in the FractaTera network. Their GPS trajectory, detected by vehicles and fixed infrastructure, provides the physical tracking layer. VIGILIA-type beacon detection can be applied to container tracking. The logistics network is the physical instantiation of the mobile node layer.
 
-**Operational exergy** (`MODEL.md`): a container charged during surplus (R(t) = 0, w(t) = 1) and delivered during scarcity (R(t) > 0, w(t) > 1) performs a time-shift that directly increases operational exergy E. The container is a physical arbitrageur of temporal value.
+**Operational exergy** ([`MODEL.md`](https://github.com/JeanHuguesRobert/marenostrum/blob/main/MODEL.md)): a container charged during surplus (R(t) = 0, w(t) = 1) and delivered during scarcity (R(t) > 0, w(t) > 1) performs a time-shift that directly increases operational exergy E. The container is a physical arbitrageur of temporal value.
 
-**Safe Compute Exergy** (`safe_compute_exergy.md`): a battery charged from certified Corsican solar, tracked through the logistics chain, and discharged into a compute node creates a provenance link in the τ-chain. The container's journey is a segment of the photon-to-inference chain. Its traceability contributes to η_traceability for the inference it ultimately powers.
+**Safe Compute Exergy** ([`safe_compute_exergy.md`](https://github.com/JeanHuguesRobert/marenostrum/blob/main/safe_compute_exergy.md)): a battery charged from certified Corsican solar, tracked through the logistics chain, and discharged into a compute node creates a provenance link in the τ-chain. The container's journey is a segment of the photon-to-inference chain. Its traceability contributes to η_traceability for the inference it ultimately powers.
 
-**Traceable governance** (`traceable_governance.md`): each container delivery is a signed trace event — charged at location X, delivered to location Y, discharged for service Z. The logistics register is an append-only record of energy provenance at the service level.
+**Traceable governance** ([`traceable_governance.md`](traceable_governance.md)): each container delivery is a signed trace event — charged at location X, delivered to location Y, discharged for service Z. The logistics register is an append-only record of energy provenance at the service level.
 
 ---
 
@@ -217,7 +217,7 @@ The core logistical claim — that terrestrial delivery of containerized electri
 
 ---
 
-*Related documents: `tera.md` (mobile node architecture), `MODEL.md` (operational exergy), `safe_compute_exergy.md` (provenance certification), `traceable_governance.md` (logistics register).*  
+*Related documents: [`tera.md`](tera.md) (mobile node architecture), [`MODEL.md`](https://github.com/JeanHuguesRobert/marenostrum/blob/main/MODEL.md) (operational exergy), [`safe_compute_exergy.md`](https://github.com/JeanHuguesRobert/marenostrum/blob/main/safe_compute_exergy.md) (provenance certification), [`traceable_governance.md`](traceable_governance.md) (logistics register).*  
 *License: CC BY-SA 4.0 — Priority established by first commit timestamp.*
 
 
@@ -225,7 +225,10 @@ The core logistical claim — that terrestrial delivery of containerized electri
 ### Backlinks
 
 *These documents link to this file:*
+- [Concept Index — FractaVolta](research/concepts.md)
 - [Corpus Status — FractaVolta](research/corpus-status.md)
 - [Research Index — FractaVolta](research/index.md)
+- [FractaTera](tera.md)
+- [FractaVolta traceable gouvernance](traceable_governance.md)
 
 <!-- END_AUTO: backlinks -->

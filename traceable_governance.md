@@ -285,7 +285,10 @@ The review process is public, attributed, append-only. It is, in that sense, an 
 ### Backlinks
 
 *These documents link to this file:*
+- [Electricity in Containers](electricity_in_containers.md)
+- [Concept Index — FractaVolta](research/concepts.md)
 - [Corpus Status — FractaVolta](research/corpus-status.md)
 - [Research Index — FractaVolta](research/index.md)
+- [FractaTera](tera.md)
 
 <!-- END_AUTO: backlinks -->

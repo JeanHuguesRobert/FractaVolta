@@ -78,7 +78,7 @@ A cogentigram is a structured, partial, auditable and revisable representation o
 A network methodology for routing intelligence securely and efficiently across a distributed topology.
 
 **Reference documents:**
-- `research/inference_packet_network.md`
+- [`research/inference_packet_network.md`](inference_packet_network.md)
 
 ---
 
@@ -92,7 +92,7 @@ A network methodology for routing intelligence securely and efficiently across a
 DC-native topology addressing power routing in containerized and localized contexts.
 
 **Reference documents:**
-- `dc_native_epn.md`
+- [`dc_native_epn.md`](../dc_native_epn.md)
 
 ---
 
@@ -106,7 +106,7 @@ DC-native topology addressing power routing in containerized and localized conte
 Decentralized nodes for local power generation, underpinning the IPN and EPN topologies.
 
 **Reference documents:**
-- `PGN.md`
+- [`PGN.md`](../PGN.md)
 
 ---
 
@@ -120,7 +120,7 @@ Decentralized nodes for local power generation, underpinning the IPN and EPN top
 Routing logic governing the geographical and thermodynamic attraction for power and data packets.
 
 **Reference documents:**
-- `packet_attractor.md`
+- [`packet_attractor.md`](../packet_attractor.md)
 
 ---
 
@@ -134,7 +134,7 @@ Routing logic governing the geographical and thermodynamic attraction for power 
 The array of network behaviors and implicit flows running silently beneath the conscious operations of the nodes.
 
 **Reference documents:**
-- `UNCONSCIOUS_GRID.md`
+- [`UNCONSCIOUS_GRID.md`](../UNCONSCIOUS_GRID.md)
 
 ---
 
@@ -148,7 +148,7 @@ The array of network behaviors and implicit flows running silently beneath the c
 The localized demonstrator and real-world grounding implementing these topologies in Corsica.
 
 **Reference documents:**
-- `mariani_village.md`
+- [`mariani_village.md`](../mariani_village.md)
 
 ---
 
@@ -162,7 +162,7 @@ The localized demonstrator and real-world grounding implementing these topologie
 A specific energy utilization strategy adapting computational consumption organically to the generation curve of localized solar arrays.
 
 **Reference documents:**
-- `value_shaped_solar_and_containerized_compute.md`
+- [`value_shaped_solar_and_containerized_compute.md`](../value_shaped_solar_and_containerized_compute.md)
 
 ---
 
@@ -176,8 +176,8 @@ A specific energy utilization strategy adapting computational consumption organi
 The physical, scalable form factor for deploying the inference nodes in tandem with localized power infrastructures (EPN).
 
 **Reference documents:**
-- `tera.md`
-- `electricity_in_containers.md`
+- [`tera.md`](../tera.md)
+- [`electricity_in_containers.md`](../electricity_in_containers.md)
 
 ---
 
@@ -191,14 +191,24 @@ The physical, scalable form factor for deploying the inference nodes in tandem w
 The administrative protocol tying physical node ownership and IPN packet routing directly to cryptographic and auditable trails.
 
 **Reference documents:**
-- `traceable_governance.md`
+- [`traceable_governance.md`](../traceable_governance.md)
 
 
 <!-- BEGIN_AUTO: backlinks -->
 ### Backlinks
 
 *These documents link to this file:*
+- [DC-Native Energy Packet Networks](../dc_native_epn.md)
+- [Electricity in Containers](../electricity_in_containers.md)
+- [Mariani Village: A Relocatable DC-Native Housing Fleet](../mariani_village.md)
+- [The Packet as Evolutionary Attractor: Scale-Invariant Transitions in Complex Networks](../packet_attractor.md)
+- [Packetized Gravity Networks: Distributed Hydro-Energetic Infrastructure for Resilient Renewable Integration](../PGN.md)
 - [Corpus Status — FractaVolta](corpus-status.md)
 - [Research Index — FractaVolta](index.md)
+- [Inference Packet Networks](inference_packet_network.md)
+- [FractaTera](../tera.md)
+- [FractaVolta traceable gouvernance](../traceable_governance.md)
+- [The Unconscious Grid](../UNCONSCIOUS_GRID.md)
+- [Value-Shaped Solar and Containerized Compute](../value_shaped_solar_and_containerized_compute.md)
 
 <!-- END_AUTO: backlinks -->

@@ -356,6 +356,7 @@ The future of resilient infrastructure lies not in larger centralized systems bu
 ### Backlinks
 
 *These documents link to this file:*
+- [Concept Index — FractaVolta](research/concepts.md)
 - [Corpus Status — FractaVolta](research/corpus-status.md)
 - [Research Index — FractaVolta](research/index.md)
 

@@ -112,7 +112,7 @@ VIGILIA is the first operational instantiation of FractaTera, designed for the s
 
 **The trace dimension.** Every detection event is a signed trace: vehicle identifier (pseudonymized), timestamp, signal characteristics, GPS position, derived risk estimate. These traces feed the territorial model and, aggregated over time, reveal patterns: habitual crossing zones, seasonal migration corridors, high-risk time windows. The trace record is also the evidence base for governance decisions — where to invest in fencing, which roads to target for speed reduction, how to allocate public funds.
 
-This is where FractaTera connects to `traceable_governance.md`: the territorial awareness map is not just a safety tool. It is a governed, auditable record of the territory's physical behavior, produced by distributed observation, verifiable at every scale.
+This is where FractaTera connects to [`traceable_governance.md`](traceable_governance.md): the territorial awareness map is not just a safety tool. It is a governed, auditable record of the territory's physical behavior, produced by distributed observation, verifiable at every scale.
 
 ---
 
@@ -126,7 +126,7 @@ Target assets: swappable electric vehicle batteries, mobile energy storage conta
 
 **Why this matters economically.** A battery container whose location is known within 500 meters and 30 minutes is recoverable. One whose location is unknown is lost. The difference between a functional mobile energy network and an expensive experiment in battery abandonment is exactly this: probabilistic tracking at low infrastructure cost.
 
-**The CXU connection.** Mobile energy units that are tracked generate a provenance record — their location history is part of the energy trace that feeds into CXU certification. A battery that moved from a solar farm in Corsica to a compute cluster, with a continuous detection record along the way, contributes to the η_traceability score of the inferences that battery powered. See `safe_compute_exergy.md`.
+**The CXU connection.** Mobile energy units that are tracked generate a provenance record — their location history is part of the energy trace that feeds into CXU certification. A battery that moved from a solar farm in Corsica to a compute cluster, with a continuous detection record along the way, contributes to the η_traceability score of the inferences that battery powered. See [`safe_compute_exergy.md`](https://github.com/JeanHuguesRobert/marenostrum/blob/main/safe_compute_exergy.md).
 
 ---
 
@@ -165,7 +165,7 @@ The principle: **replace constraint with awareness**. A system that makes risk v
 
 **Beacon durability.** Semi-wild animals in Corsican maquis subject beacons to conditions that laboratory testing does not replicate. Field durability data is needed.
 
-**Governance of the territorial model.** Who owns the aggregate map? Who can query it? Who can challenge an inference? These questions are addressed by the framework in `traceable_governance.md` but require instantiation for the specific context of territorial safety data.
+**Governance of the territorial model.** Who owns the aggregate map? Who can query it? Who can challenge an inference? These questions are addressed by the framework in [`traceable_governance.md`](traceable_governance.md) but require instantiation for the specific context of territorial safety data.
 
 ---
 
@@ -178,8 +178,8 @@ The principle: **replace constraint with awareness**. A system that makes risk v
 | Mobile resource tracking | Designed, not yet deployed |
 | Beacon hardware specification | Pending |
 | Inference calibration (Corsica) | Pending field data |
-| Governance integration | Framework in `traceable_governance.md` |
-| CXU provenance link | Specified in `safe_compute_exergy.md` |
+| Governance integration | Framework in [`traceable_governance.md`](traceable_governance.md) |
+| CXU provenance link | Specified in [`safe_compute_exergy.md`](https://github.com/JeanHuguesRobert/marenostrum/blob/main/safe_compute_exergy.md) |
 
 ---
 
@@ -190,7 +190,10 @@ The principle: **replace constraint with awareness**. A system that makes risk v
 ### Backlinks
 
 *These documents link to this file:*
+- [Electricity in Containers](electricity_in_containers.md)
+- [Concept Index — FractaVolta](research/concepts.md)
 - [Corpus Status — FractaVolta](research/corpus-status.md)
 - [Research Index — FractaVolta](research/index.md)
+- [FractaVolta traceable gouvernance](traceable_governance.md)
 
 <!-- END_AUTO: backlinks -->

@@ -407,6 +407,7 @@ The antifragility of the energy layer **propagates structurally** to the inferen
 *These documents link to this file:*
 - [The Packet as Evolutionary Attractor: Scale-Invariant Transitions in Complex Networks](packet_attractor.md)
 - [The Packet Transition: A Lateral Reading of Circuit Networks](packet_transition.md)
+- [Concept Index — FractaVolta](research/concepts.md)
 - [Corpus Status — FractaVolta](research/corpus-status.md)
 - [Research Index — FractaVolta](research/index.md)
 

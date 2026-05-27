@@ -1012,6 +1012,7 @@ The corpus, rather than this single document, will determine what survives.
 ### Backlinks
 
 *These documents link to this file:*
+- [Concept Index — FractaVolta](concepts.md)
 - [Corpus Status — FractaVolta](corpus-status.md)
 - [Research Index — FractaVolta](index.md)
 

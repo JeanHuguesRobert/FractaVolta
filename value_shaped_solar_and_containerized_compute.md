@@ -460,6 +460,7 @@ Willockx, B., Lavaert, C., & Cappelle, J. (2023). Performance evaluation of vert
 ### Backlinks
 
 *These documents link to this file:*
+- [Concept Index — FractaVolta](research/concepts.md)
 - [Corpus Status — FractaVolta](research/corpus-status.md)
 - [Research Index — FractaVolta](research/index.md)
 
