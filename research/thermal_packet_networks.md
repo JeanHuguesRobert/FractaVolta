@@ -4,10 +4,9 @@ subtitle: "A Multi-Scale Store-and-Forward Architecture for Low-Exergy Heat and 
 description: "Working paper v0.2 defining Thermal Packet Networks as a multi-scale store-and-forward architecture in which heat and cold are stored, transported, addressed, exchanged, and delivered as discrete thermal packets."
 author: "Jean Hugues Noël Robert, baron Mariani"
 affiliation: "Institut Mariani / C.O.R.S.I.C.A. / FractaVolta"
-address: "1 cours Paoli, F-20250 Corte, Corsica, France"
-email: "jhr@baronsmariani.org"
-website: "https://fractavolta.com"
-repository: "https://github.com/JeanHuguesRobert/FractaVolta"
+x-address: "1 cours Paoli, F-20250 Corte, Corsica, France"
+x-email: "jhr@baronsmariani.org"
+x-website: "https://fractavolta.com"
 canonical_url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/thermal_packet_networks.md
 version: "0.2"
 status: "working-paper"
@@ -29,7 +28,7 @@ tags:
   - low-temperature-heating
   - thermal-traffic-intensity
   - seconde-methode
-keywords:
+x-keywords:
   - Thermal Packet Networks
   - mobile thermal energy storage
   - heat logistics

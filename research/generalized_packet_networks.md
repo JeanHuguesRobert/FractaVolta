@@ -4,10 +4,9 @@ subtitle: "A Framework for Heterogeneous Packets, Resource Occupancy, and Cross-
 description: "Working paper v0.3 defining Generalized Packet Networks as a cross-domain framework for heterogeneous packets, resource occupancy, congestion elasticity, packet decay, cache-like hierarchies, backbone/last-mile decomposition, mesh resilience, and substrate-specific packet papers."
 author: "Jean Hugues Noël Robert, baron Mariani"
 affiliation: "Institut Mariani / C.O.R.S.I.C.A. / FractaVolta"
-address: "1 cours Paoli, F-20250 Corte, Corsica, France"
-email: "jhr@baronsmariani.org"
-website: "https://fractavolta.com"
-repository: "https://github.com/JeanHuguesRobert/FractaVolta"
+x-address: "1 cours Paoli, F-20250 Corte, Corsica, France"
+x-email: "jhr@baronsmariani.org"
+x-website: "https://fractavolta.com"
 canonical_url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/generalized_packet_networks.md
 version: "0.3"
 status: "working-paper"
@@ -27,7 +26,7 @@ tags:
   - cache-hierarchy
   - mesh-networks
   - seconde-methode
-keywords:
+x-keywords:
   - Generalized Packet Networks
   - Fractanet
   - packet switching

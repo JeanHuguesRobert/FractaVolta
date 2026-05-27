@@ -4,9 +4,12 @@ description: "Current state of the FractaVolta knowledge corpus — what is prov
 layout: default
 nav_order: 2
 last_modified_at: 2026-05-27
-repository: "github.com/JeanHuguesRobert/FractaVolta"
 canonical_url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/corpus-status.md
 last_stamped_at: 2026-05-26
+license: CC BY-SA 4.0
+affiliation: Institut Mariani / C.O.R.S.I.C.A., 1 cours Paoli, F-20250 Corte, Corsica
+date: 2026-05-27
+creator: Jean Hugues Noël Robert, baron Mariani (généré automatiquement par les outils du corpus)
 ---
 
 # Corpus Status — FractaVolta

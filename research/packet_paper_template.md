@@ -7,10 +7,9 @@ affiliation: "Institut Mariani / C.O.R.S.I.C.A. / FractaVolta"
 address: "1 cours Paoli, F-20250 Corte, Corsica, France"
 email: "jhr@baronsmariani.org"
 website: "https://fractavolta.com"
-repository: "https://github.com/JeanHuguesRobert/FractaVolta"
 canonical_url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/packet_paper_template.md
 version: "0.2"
-status: "method-template"
+status: working-paper — method-template
 date: "2026-05-22"
 last_modified_at: "2026-05-22"
 last_stamped_at: 2026-05-26
