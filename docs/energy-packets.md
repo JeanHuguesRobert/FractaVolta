@@ -4,6 +4,8 @@ subtitle: From electricity as flow to energy as traceable, routable, local capac
 description: "FractaVolta transforme l’énergie solaire locale en paquets d’énergie mesurés, stockés, routés et tracés. Du flux continu vers des unités de capacité utiles, auditables et souveraines."
 canonical_url: https://fractavolta.com/energy-packets
 last_stamped_at: 2026-05-20
+date: "2026-05-20"
+status: "draft — auto-filled (frontmatter cleanup)"
 ---
 
 ## The shift

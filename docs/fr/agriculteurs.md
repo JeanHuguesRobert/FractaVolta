@@ -4,6 +4,8 @@ subtitle: Revenu simple, énergie utile, maintenance organisée, sortie réversi
 description: "Agriculteurs et propriétaires corses : seconde vie solaire, revenu lisible, maintenance avec partenaires locaux, stockage et usages utiles (eau, froid, recharge), réversibilité contractuelle."
 canonical_url: https://fractavolta.com/fr/agriculteurs
 last_stamped_at: 2026-05-20
+date: "2026-05-20"
+status: "draft — auto-filled (frontmatter cleanup)"
 ---
 
 # Pour les agriculteurs et propriétaires

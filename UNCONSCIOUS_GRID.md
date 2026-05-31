@@ -7,6 +7,9 @@ last_stamped_at: 2026-05-26
 translations:
   fr: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/LE_RESEAU_INCONSCIENT.md
 role: "entry point for the packetization corpus"
+title: "The Unconscious Grid"
+date: "2026-05-05"
+status: "working-paper — auto-filled (frontmatter cleanup)"
 ---
 # The Unconscious Grid
 ## On Store-and-Forward as the Repressed Solution to Energy Sovereignty

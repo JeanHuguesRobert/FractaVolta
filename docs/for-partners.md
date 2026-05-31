@@ -4,6 +4,8 @@ subtitle: Energy and compute as integrated sovereignty infrastructure, billed fo
 description: "FractaVolta travaille avec des partenaires publics et privés pour transformer du solaire local en capacité traçable et souveraine (énergie-paquet, inférence, civic tech). Modèle : intégration et opérations, pas de lock-in logiciel."
 canonical_url: https://fractavolta.com/for-partners
 last_stamped_at: 2026-05-15
+date: "2026-05-15"
+status: "draft — auto-filled (frontmatter cleanup)"
 ---
 
 ## The commercial proposition

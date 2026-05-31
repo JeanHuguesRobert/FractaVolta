@@ -3,6 +3,8 @@ title: Papers
 subtitle: The full corpus — organised by layer of the stack. Every paper is hosted on GitHub under CC BY-SA 4.0. Filed objections are equally welcome via issues.
 canonical_url: https://fractavolta.com/papers
 last_stamped_at: 2026-05-26
+date: "2026-05-15"
+status: "draft — auto-filled (frontmatter cleanup)"
 ---
 
 Cette section donne accès à la documentation technique et aux travaux de fond. Si vous cherchez des opportunités concrètes en Corse, allez directement dans la section [En Corse](./fr/).

@@ -4,6 +4,8 @@ subtitle: Transformer le solaire local en capacité communale.
 description: "Pour les communes et collectivités corses : valorisation du solaire en capacité locale (stockage, services critiques, autonomie), audits de seconde vie, pilotes avec traçabilité et réversibilité."
 canonical_url: https://fractavolta.com/fr/collectivites
 last_stamped_at: 2026-05-20
+date: "2026-05-20"
+status: "draft — auto-filled (frontmatter cleanup)"
 ---
 
 # Pour les communes et collectivités

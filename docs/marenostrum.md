@@ -4,6 +4,8 @@ subtitle: Strategic framework for sovereign Mediterranean compute infrastructure
 description: "MareNostrum : cadre stratégique pour une infrastructure de calcul souveraine méditerranéenne (énergie, compute, cognition). Référentiel pour les futurs déploiements FractaVolta."
 canonical_url: https://fractavolta.com/marenostrum
 last_stamped_at: 2026-05-15
+date: "2026-05-15"
+status: "draft — auto-filled (frontmatter cleanup)"
 ---
 
 [**MareNostrum**](https://github.com/JeanHuguesRobert/marenostrum) is the strategic framework above the FractaVolta operational layer. It defines what FractaVolta builds toward: sovereign compute infrastructure for France and Europe, anchored in the Mediterranean basin, designed so that no single state, corporation, or technology shock can capture the substrate.

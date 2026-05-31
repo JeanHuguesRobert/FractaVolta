@@ -8,6 +8,9 @@ translations:
   en: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/UNCONSCIOUS_GRID.md
 role: "point d'entrée du corpus de packetization"
 lang: fr
+title: "Le Réseau Inconscient"
+date: "2026-05-21"
+status: "working-paper — auto-filled (frontmatter cleanup)"
 ---
 # Le Réseau Inconscient
 ## De la commutation *store-and-forward* comme solution refoulée à la souveraineté énergétique

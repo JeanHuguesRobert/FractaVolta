@@ -4,6 +4,8 @@ subtitle: Free, open-source, neutral digital infrastructure for citizen particip
 description: "Inseme et Kudocracy : outils open source (MIT) de démocratie liquide, consultation citoyenne et délibération augmentée. Multi-instances, souverains, sans vendor lock-in. Origine : Corte, Corse."
 canonical_url: https://fractavolta.com/for-citizens
 last_stamped_at: 2026-05-15
+date: "2026-05-15"
+status: "draft — auto-filled (frontmatter cleanup)"
 ---
 
 ## Une couche civique souveraine

@@ -4,6 +4,8 @@ subtitle: Concrete materials for getting a Mariani Village (or comparable DC-nat
 description: "Mariani Village : unités containers DC-natives 48V SELV, hors CONSUEL, repositionnables. Conçues pour la Corse et les territoires méditerranéens. Documentation technique pour installateurs et porteurs de projet."
 canonical_url: https://fractavolta.com/for-deployers
 last_stamped_at: 2026-05-15
+date: "2026-05-15"
+status: "draft — auto-filled (frontmatter cleanup)"
 ---
 
 ## Mariani Village en bref

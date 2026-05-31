@@ -3,6 +3,8 @@ title: For researchers
 subtitle: Papers, methodology, contestation as first-class contribution. The corpus is its own evidence — fork it, challenge it, build on it.
 canonical_url: https://fractavolta.com/for-researchers
 last_stamped_at: 2026-05-26
+date: "2026-05-15"
+status: "working-paper — auto-filled (frontmatter cleanup)"
 ---
 
 Cette page s’adresse aux chercheurs et aux partenaires techniques qui souhaitent entrer dans la profondeur du travail. Si vous cherchez plutôt des opportunités concrètes, allez directement dans la section [En Corse](./fr/).

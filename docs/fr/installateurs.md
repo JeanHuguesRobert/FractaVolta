@@ -4,6 +4,8 @@ subtitle: FractaVolta cherche des partenaires techniques corses pour transformer
 description: "Appel à partenaires installateurs et mainteneurs corses : projets de seconde vie solaire, stockage, nœuds DC-natifs, maintenance organisée et déploiements d’énergie-paquet sur le territoire."
 canonical_url: https://fractavolta.com/fr/installateurs
 last_stamped_at: 2026-05-20
+date: "2026-05-20"
+status: "draft — auto-filled (frontmatter cleanup)"
 ---
 
 # Partenaires installateurs et mainteneurs

@@ -3,6 +3,8 @@ title: Methodology
 subtitle: How we work — every decision auditable, every objection first-class, every AI agent replaceable. Not compliance theater; the way the platform fundamentally operates.
 canonical_url: https://fractavolta.com/methodology
 last_stamped_at: 2026-05-26
+date: "2026-05-15"
+status: "working-paper — auto-filled (frontmatter cleanup)"
 ---
 
 FractaVolta conçoit, déploie et exploite des infrastructures locales en Corse et en Méditerranée. La méthode n’est pas une surcouche administrative : elle fait partie intégrante de la façon dont nous livrons les projets à nos partenaires.

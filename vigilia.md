@@ -4,6 +4,8 @@ status: alias
 last_stamped_at: 2026-05-17
 canonical_document: https://github.com/JeanHuguesRobert/barons-Mariani/blob/main/vigilia.md
 parent_document: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/tera.md
+title: "VIGILIA — alias FractaVolta"
+date: "2026-05-16"
 ---
 
 # VIGILIA — alias FractaVolta

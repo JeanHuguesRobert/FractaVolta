@@ -4,6 +4,8 @@ subtitle: Opérateur de seconde vie solaire pour hangars, toitures, ombrières e
 description: "Seconde vie des installations photovoltaïques en Corse : audits, maintenance, stockage local, non-injection quand pertinent, revenu lisible et réversibilité contractuelle pour les propriétaires et agriculteurs."
 canonical_url: https://fractavolta.com/fr/seconde-vie
 last_stamped_at: 2026-05-20
+date: "2026-05-20"
+status: "draft — auto-filled (frontmatter cleanup)"
 ---
 
 # FractaVolta Seconde Vie

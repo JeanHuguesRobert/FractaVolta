@@ -4,6 +4,8 @@ subtitle: Où transformer le solaire local en paquets d’énergie utiles au ter
 description: "Marchés prioritaires en Corse pour l’énergie-paquet : hangars agricoles, toitures professionnelles, ombrières de parking, centrales existantes, bâtiments avec besoins en eau/froid/recharge. Cibles : agriculteurs, collectivités, installateurs."
 canonical_url: https://fractavolta.com/fr/marches
 last_stamped_at: 2026-05-20
+date: "2026-05-20"
+status: "draft — auto-filled (frontmatter cleanup)"
 ---
 
 # Marchés locaux
