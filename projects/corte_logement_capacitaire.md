@@ -6,6 +6,7 @@ license: "CC BY-SA 4.0"
 date: "2026-05-31"
 status: "draft — project case study"
 title: "Corte Logement Capacitaire — Remettre en capacité le parc ancien vacant"
+last_stamped_at: 2026-06-01
 ---
 
 # Corte Logement Capacitaire

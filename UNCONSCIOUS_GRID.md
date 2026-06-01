@@ -3,7 +3,7 @@ canonical_url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/UNCONSC
 author: "Jean Hugues Noël Robert, baron Mariani"
 affiliation: "Institut Mariani / C.O.R.S.I.C.A., 1 cours Paoli, F-20250 Corte, Corsica"
 license: "CC BY-SA 4.0"
-last_stamped_at: 2026-05-26
+last_stamped_at: 2026-06-01
 translations:
   fr: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/LE_RESEAU_INCONSCIENT.md
 role: "entry point for the packetization corpus"

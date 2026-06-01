@@ -10,7 +10,7 @@ author: "Jean Hugues Noël Robert"
 affiliation: "FractaVolta — Institut Mariani / C.O.R.S.I.C.A."
 license: "CC BY-SA 4.0 (text), MIT (code and schemas)"
 canonical_url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/garanteed_inference.md
-last_stamped_at: 2026-05-26
+last_stamped_at: 2026-06-01
 date: "2026-05-18"
 status: "working-paper — auto-filled (frontmatter cleanup)"
 ---
