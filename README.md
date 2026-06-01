@@ -263,6 +263,7 @@ Pouzin was right. The datagram won for information. It will win for energy, for 
 | [dc_native_epn.md](./dc_native_epn.md) | **DC architecture paper** — *DC-Native Energy Packet Networks*. |
 | [PGN.md](./PGN.md) | **Hydraulic paper** — *Packetized Gravity Networks*. |
 | [mariani_village.md](./mariani_village.md) | **Habitat paper** — *Mariani Village: A Relocatable DC-Native Housing Fleet*. |
+| [projects/corte_logement_capacitaire.md](./projects/corte_logement_capacitaire.md) | **Project case study (draft)** — *Corte Logement Capacitaire: Remettre en capacité le parc ancien vacant*. Cas d'usage exploratoire pour FractaVolta + Cogentia + autonomie de capacité : micro-résidences solidaires et éducatives, ordres de grandeur indicatifs, ni offre d'achat ni engagement opérationnel. |
 | [research/inference_packet_network.md](./research/inference_packet_network.md) | **Inference paper** — *Inference Packet Networks: A RAID/ARPANET Continuity Layer for Sovereign AI Infrastructure* (v2.0). |
 | [research/generalized_packet_networks.md](./research/generalized_packet_networks.md) | **Framework paper** — *Generalized Packet Networks: A Framework for Heterogeneous Packets, Resource Occupancy, and Cross-Domain Operational Recurrence* (v0.3). The cross-domain abstraction that EPN, PGN, IPN, Thermal, etc. instantiate. |
 | [research/thermal_packet_networks.md](./research/thermal_packet_networks.md) | **Thermal paper** — *Thermal Packet Networks: A Multi-Scale Store-and-Forward Architecture for Low-Exergy Heat and Cold Distribution* (v0.2). |
