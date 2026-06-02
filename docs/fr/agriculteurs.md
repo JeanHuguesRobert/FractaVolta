@@ -1,18 +1,19 @@
 ---
 title: Pour les agriculteurs et propriétaires
 subtitle: Revenu simple, énergie utile, maintenance organisée, sortie réversible.
-description: "Agriculteurs et propriétaires corses : seconde vie solaire, revenu lisible, maintenance avec partenaires locaux, stockage et usages utiles (eau, froid, recharge), réversibilité contractuelle."
+lang: fr
+description: "Agriculteurs et propriétaires corses : seconde vie solaire, revenu lisible, maintenance avec partenaires locaux, stockage et usages utiles pour eau, froid ou recharge, réversibilité contractuelle."
 canonical_url: https://fractavolta.com/fr/agriculteurs
-last_stamped_at: 2026-05-20
-date: "2026-05-20"
-status: "draft — auto-filled (frontmatter cleanup)"
+last_stamped_at: 2026-06-02
+date: "2026-06-02"
+status: "active — page française opérationnelle"
 ---
 
 # Pour les agriculteurs et propriétaires
 
-Vous avez un hangar, une toiture agricole, ou une installation photovoltaïque existante ?
+Vous avez un hangar, une toiture agricole ou une installation photovoltaïque existante ?
 
-Plutôt que de laisser l’énergie partir dans le réseau à bas prix, nous proposons de la transformer en capacité utile sur votre exploitation : stockage, usages en eau/froid/recharge, et un revenu plus stable et lisible.
+Plutôt que de laisser l’énergie partir dans le réseau à bas prix, nous proposons de la transformer en capacité utile sur votre exploitation : stockage, eau, froid, recharge, atelier, secours local, et revenu plus stable et lisible.
 
 C’est l’idée de la **seconde vie solaire** que nous développons en Corse : prolonger la vie des installations, créer de la valeur locale, et conserver le contrôle.
 
@@ -25,7 +26,7 @@ votre installation solaire
   -> énergie utilisée localement en priorité
   -> stockage si utile
   -> revenu clair
-  -> sortie possible chaque année avec préavis
+  -> sortie possible avec préavis
 ```
 
 ## Pourquoi maintenant ?
@@ -54,7 +55,7 @@ Selon le site :
 - batteries mobiles ;
 - secours local ;
 - usages communaux proches ;
-- compute local ou autres usages énergétiques différés.
+- calcul local ou autres usages énergétiques différés.
 
 ## Ce que cela ne doit pas être
 
@@ -77,3 +78,9 @@ La sortie doit être organisée : FractaVolta retire ou désactive ses équipeme
 ## Formule simple
 
 **Votre soleil ne doit pas seulement partir dans un réseau abstrait. Il peut devenir une capacité utile pour votre exploitation et votre territoire.**
+
+## Suite utile
+
+- Lire la page [Seconde Vie](./seconde-vie).
+- Consulter les [marchés locaux](./marches).
+- Nous contacter avec les informations disponibles : [jhr@baronsmariani.org](mailto:jhr@baronsmariani.org).
