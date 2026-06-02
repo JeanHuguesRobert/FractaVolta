@@ -1,12 +1,18 @@
 <header class="site-header">
   <div class="site-header__inner">
-    <a class="site-header__brand" href="{{ '/' | relative_url }}">
+    <a class="site-header__brand" href="{% if page.lang == 'fr' %}{{ '/fr/' | relative_url }}{% else %}{{ '/' | relative_url }}{% endif %}">
       <img class="site-header__logo" src="{{ '/assets/jana.svg' | relative_url }}" alt="FractaVolta" />
       <span class="site-header__name">FractaVolta</span>
     </a>
-    <nav class="site-nav" aria-label="Primary">
+
+    {% assign nav_items = site.data.navigation_en.main %}
+    {% if page.lang == 'fr' %}
+      {% assign nav_items = site.data.navigation_fr.main %}
+    {% endif %}
+
+    <nav class="site-nav" aria-label="{% if page.lang == 'fr' %}Navigation principale{% else %}Primary navigation{% endif %}">
       <ul class="site-nav__list">
-        {% for item in site.data.navigation.main %}
+        {% for item in nav_items %}
           {% assign current = false %}
           {% if page.url == item.url or page.url == item.url | append: '/' %}
             {% assign current = true %}
@@ -15,6 +21,13 @@
             <a class="site-nav__link {% if current %}is-current{% endif %}" href="{{ item.url | relative_url }}">{{ item.title }}</a>
           </li>
         {% endfor %}
+        <li class="site-nav__item site-nav__item--lang">
+          {% if page.lang == 'fr' %}
+            <a class="site-nav__link site-nav__link--lang" href="{{ page.alternate_url | default: '/' | relative_url }}" lang="en" hreflang="en">EN</a>
+          {% else %}
+            <a class="site-nav__link site-nav__link--lang" href="{{ page.alternate_url | default: '/fr/' | relative_url }}" lang="fr" hreflang="fr">FR</a>
+          {% endif %}
+        </li>
       </ul>
     </nav>
   </div>
