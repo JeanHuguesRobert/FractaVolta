@@ -43,6 +43,10 @@ This repository instantiates the **physical infrastructure layer** of the [DHITL
 | [Fractal Architectures for Traceable Governance](../traceable_governance.md) | this repo | 2026 |
 | [FractaVolta White Paper](../fractavolta_paper.md) | this repo | 2026 |
 | [FractaVolta Partner Brief — Agrivoltaics Pilot Opportunity](../partner_brief.md) | this repo | 2026-05-06 |
+| [Generalized Packet Networks — A Framework for Heterogeneous Packets, Resource Occupancy, and Cross-Domain Operational Recurrence](generalized_packet_networks.md) *(working paper v0.3 — the cross-domain abstraction that EPN, PGN, IPN, Thermal Packets all instantiate)* | this repo | 2026-05-22 |
+| [Thermal Packet Networks — A Multi-Scale Store-and-Forward Architecture for Low-Exergy Heat and Cold Distribution](thermal_packet_networks.md) *(working paper v0.2)* | this repo | 2026-05-22 |
+| [Packet Paper Template — A Minimal Method for Declining Generalized Packet Networks into Substrate-Specific Papers](packet_paper_template.md) *(method-template working paper v0.2)* | this repo | 2026-05-22 |
+| [Fractanet — Working paper](fractanet.md) *(working paper, draft v0.1)* | this repo | 2026-05-31 |
 | [Corpus Status](corpus-status.md) *(living view — auto-refreshed by `cogentia.js corpus-status`)* | this repo | refreshable |
 | [Concept Index](concepts.md) *(typed concept registry — mapped by `cogentia.js concepts`)* | this repo | refreshable |
 

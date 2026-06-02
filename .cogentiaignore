@@ -13,3 +13,7 @@ docs/**
 # Intentional alias — canonical VIGILIA lives in barons-Mariani/vigilia.md.
 # This stub exists only to redirect readers landing in FractaVolta.
 vigilia.md
+
+# Project case studies (project applications) — referenced from README,
+# not research deliverables in themselves.
+projects/**
