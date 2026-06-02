@@ -1,14 +1,28 @@
 ---
 title: FractaVolta
 layout: home
-description: "FractaVolta — du solaire local à la capacité traçable. Énergie-paquet, nœuds DC-natifs, inférence souveraine et infrastructure civique en Corse et en Méditerranée."
+lang: en
+alternate_url: /fr/
+description: "FractaVolta turns local energy into traceable capacity: packetized energy, DC-native nodes, sovereign inference, cognitive infrastructure, and civic continuity for Corsica and Mediterranean territories."
 canonical_url: https://fractavolta.com/
-last_stamped_at: 2026-05-26
+last_stamped_at: 2026-06-02
 ---
 
-## Transition toward energy packets
+## From photons to inference
 
-FractaVolta turns local energy into local capacity: **measured, stored, routed, used, and traced**.
+FractaVolta builds local-first infrastructure for turning solar energy into **traceable capacity**: measured, stored, routed, used, and audited.
+
+The starting point is energy. The same packet logic then extends upward to compute, cognition, and civic continuity.
+
+```text
+photons -> energy packets -> inference packets -> cognitive packets -> civic packets
+```
+
+FractaVolta is an engineering firm, software publisher, and operational vehicle for a broader Mediterranean sovereignty stack. It works at the interface between physical infrastructure and auditable knowledge systems.
+
+For the French operational entry point, especially for Corsica-based owners, farmers, municipalities, installers, and local partners, see [FractaVolta en Corse](./fr/).
+
+## The packet transition
 
 The dominant electrical model treats energy as a continuous, homogeneous flow:
 
@@ -16,76 +30,61 @@ The dominant electrical model treats energy as a continuous, homogeneous flow:
 production -> grid -> consumption -> abstract billing
 ```
 
-FractaVolta treats energy as a sequence of accountable packets:
+FractaVolta treats energy as accountable packets:
 
 ```text
 source -> measurement -> storage -> routing -> use -> trace
 ```
 
-A charged battery is an energy packet. A mobile battery or EV can carry a packet. A local solar installation can become a packet source. A compute node can turn those packets into attributable inference.
+A charged battery is an energy packet. A mobile battery or electric vehicle can carry a packet. A photovoltaic installation can become a packet source. A compute node can turn those packets into attributable inference.
 
 The grid remains useful, but it is no longer the invisible default substrate. It becomes one peer, one backup path, or one arbitrage layer among others.
 
-## Focus Corse — priorité terrain
+## What we build
 
-**Le soleil doit bénéficier d’abord à ceux qu’il arrose.**
+**Energy substrate.** Feasibility studies and system design for Energy Packet Network deployments: photovoltaics, batteries, mobile storage, DC-native nodes, safe 48 V interfaces where appropriate, local-first routing, and provenance-aware operations.
 
-FractaVolta concentre une partie importante de ses efforts sur la Corse : seconde vie des installations existantes, nouveaux déploiements en énergie-paquet, et projets pilotes avec agriculteurs, collectivités et installateurs locaux.
+**Compute substrate.** Sovereign AI inference infrastructure powered by local or Mediterranean solar. CXU-priced compute on solar-backed nodes. Inference Packet Networks for bounded continuity when hyperscale systems degrade, become unavailable, or become geopolitically fragile.
 
-L’entrée pour les projets locaux est en français : hangars, toitures, ombrières, centrales existantes, bâtiments publics, stockage et réversibilité.
+**Cognition layer.** Cogentia is the open-source cognitive layer of FractaVolta: cognitive packets, continuations, `cogentia.js`, provider-neutral orchestration, and auditable knowledge production.
 
-**Vous avez un projet ou un site en Corse ?**  
-
-Contactez-nous directement :  
-📧 [jhr@baronsmariani.org](mailto:jhr@baronsmariani.org)  
-🔗 [LinkedIn – FractaVolta](https://www.linkedin.com/company/fractavolta/)
-
-Vous trouverez les pages pratiques par type d’acteur (agriculteurs, collectivités, installateurs…) dans la section [En Corse](./fr/).
-
-Si vous êtes un partenaire ou un porteur de projet, n’hésitez pas à nous contacter directement. Nous répondons personnellement.
-
-## Architecture de fond (pour ceux qui veulent approfondir)
-
-Le travail s’appuie sur une architecture conceptuelle plus large, documentée de façon ouverte. Cette partie s’adresse principalement aux partenaires techniques et aux chercheurs.
-
-Si vous êtes un acteur de terrain ou un partenaire commercial, vous trouverez les pages les plus utiles dans la section [En Corse](./fr/). N’hésitez pas à prendre contact avec nous.
-
-In 1964, Paul Baran introduced packet-switching. By 2000, it had replaced circuit-switched networks. The electrical grid has not fully made that conceptual shift. Neither has cognitive infrastructure.
-
-FractaVolta applies packet-switching to energy. The same logic applies one layer up: a reasoning step is a cognitive packet. A judgment, suspended and serialized as a typed continuation, is a unit of cognitive work that survives across agents, providers, and process boundaries.
-
-And one layer up again: a vote, a delegation, a deliberation is a civic packet — atomic, traceable, revocable, federated.
-
-> photons -> energy packets -> inference packets -> cognitive packets -> civic packets
-
-## What we do
-
-**Energy substrate.** Feasibility studies and system design for Energy Packet Network deployments: PV, batteries, mobile storage, DC-native nodes, safe 48 V interfaces where appropriate, local-first routing, and provenance-aware operations.
-
-**Compute substrate.** Sovereign AI inference infrastructure powered by local or Mediterranean solar. CXU-priced compute on solar-backed nodes. Inference Packet Networks (IPN) for bounded continuity when hyperscale degrades.
-
-**Cognition layer.** Cogentia is the open-source cognitive layer of FractaVolta: cognitive packets, continuations, `cogentia.js`, provider-neutral orchestration and auditable knowledge production.
-
-**Civic layer.** Inseme platform deployment and operations. Multi-instance Kudocracy.Survey installation. Ophélia AI mediator integration on sovereign inference backends.
+**Civic layer.** Inseme platform deployment and operations: multi-instance Kudocracy.Survey, Inseme Agora, and Ophélia AI mediation on sovereign inference backends where appropriate.
 
 ## Why it matters
 
-Solar energy is no longer scarce. Compute is no longer scarce. What is scarce:
+Solar energy is no longer scarce. Compute is no longer scarce. What is scarce, at every layer, is dependable capacity:
 
-- **reliability** — when you need it, not when conditions align;
-- **timing** — arbitrage between generation, demand, storage, and decision;
-- **quality of service** — guaranteed uptime for compute, deliberation, and routing;
-- **auditability** — proof that the system did what it claims, at every layer;
-- **sovereignty** — the right to inspect, modify, and outlive every layer you depend on.
+- **reliability** — when needed, not only when conditions align;
+- **timing** — arbitrage between generation, demand, storage, routing, and decision;
+- **quality of service** — guaranteed uptime for compute, deliberation, and critical operations;
+- **auditability** — proof that the system did what it claims, at the energy, compute, cognitive, and civic layers;
+- **sovereignty** — the right to inspect, modify, operate, and outlive every layer one depends on.
 
 The highest-value use of local solar is not always exporting electrons. It can be storing, routing, and using energy locally as accountable capacity: water, cold, mobility, critical services, compute, inference, and civic continuity.
 
+## Entry points
+
+- [Energy packets](./energy-packets) — the basic shift from flow to accountable capacity.
+- [For partners](./for-partners) — commercial and institutional engagement.
+- [For deployers](./for-deployers) — concrete deployment patterns, including DC-native units and Mariani Village.
+- [For researchers](./for-researchers) — papers, methodology, continuation protocol, and corpus structure.
+- [For citizens](./for-citizens) — civic infrastructure, Inseme, Kudocracy, and Ophélia.
+- [Papers](./papers) — research-grade documents and cross-corpus references.
+
+## French operational pages
+
+FractaVolta does not maintain a full French mirror of every research document. English is the default language for research-grade source documents. French pages are created as **derived products** when a concrete French-speaking audience justifies them.
+
+The current French entry point is [FractaVolta en Corse](./fr/): local solar, second-life photovoltaic installations, farmers, municipalities, installers, owners, pilot sites, and concrete operations.
+
 ## How we work
 
-Every deployment should produce its own typed audit trail. Every claim should be anchored at a stable URL. Every AI agent we use should be replaceable without modifying the toolchain. Every objection becomes a first-class contribution to the record, not noise to be erased.
+Every deployment should produce its own typed audit trail. Every claim should be anchored at a stable URL. Every AI agent used in the process should be replaceable without modifying the toolchain. Every objection becomes a first-class contribution to the record, not noise to be erased.
 
-This is governed by the [Cogentia Commons methodology](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/Cogentia_Commons_Working_Paper.md), the operational [Pipeline](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/pipeline.md) method (*pipeline on the surface, packet network in depth*) with its source ↔ derived split formalised in [Derived Products](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/derived_products.md), implemented operationally through the [`cogentia.js` CLI](https://github.com/JeanHuguesRobert/cogentia) and the [`cogentia.continuation.v1` protocol](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/agent_resumable_cli.md). For the working details, see [methodology](./methodology).
+This is governed by the [Cogentia Commons methodology](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/Cogentia_Commons_Working_Paper.md), the operational [Pipeline](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/pipeline.md) method (*pipeline on the surface, packet network in depth*), and the source ↔ derived product distinction formalised in [Derived Products](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/derived_products.md). For the operational details, see [Methodology](./methodology).
 
 ## Status
 
-Early-stage. Architecture documented across energy, compute, cognition, and civic layers. New local deployment pages added for Corsica. Prototype work in progress through Rossignol Node. See [Energy packets](./energy-packets) and [FractaVolta en Corse](./fr/) for the current positioning.
+Early-stage. The architecture is documented across energy, compute, cognition, and civic layers. Local deployment pages have been added for Corsica. Prototype work is proceeding through Rossignol Node and related field-oriented experiments.
+
+Contact: [jhr@baronsmariani.org](mailto:jhr@baronsmariani.org) · [LinkedIn – FractaVolta](https://www.linkedin.com/company/fractavolta/)
