@@ -1,143 +1,144 @@
 ---
 title: For citizens
-subtitle: Free, open-source, neutral digital infrastructure for citizen participation, augmented deliberation, and democratic transparency. Built around Corte, Corsica — usable anywhere.
-description: "Inseme et Kudocracy : outils open source (MIT) de démocratie liquide, consultation citoyenne et délibération augmentée. Multi-instances, souverains, sans vendor lock-in. Origine : Corte, Corse."
+subtitle: Civic continuity on local-first, open, auditable infrastructure.
+lang: en
+description: "FractaVolta can host and operate open civic infrastructure such as Inseme, Kudocracy, and Ophélia on local-first, auditable, sovereign deployment patterns."
 canonical_url: https://fractavolta.com/for-citizens
-last_stamped_at: 2026-05-15
-date: "2026-05-15"
-status: "draft — auto-filled (frontmatter cleanup)"
+last_stamped_at: 2026-06-02
+date: "2026-06-02"
+status: "active — English civic entry point"
 ---
 
-## Une couche civique souveraine
+## Civic continuity
 
-**inseme** est la plateforme open source (MIT) que FractaVolta peut déployer sur ses infrastructures locales. Elle est née du mouvement citoyen **#PERTITELLU** à Corte et a pour but de donner aux communautés des outils de délibération et de consultation libres, neutres et sans dépendance à un éditeur.
+FractaVolta is primarily an infrastructure project: energy, compute, cognition, and operations.
 
-inseme propose :
+The civic layer enters when a community wants its deliberation tools to run on infrastructure it can inspect, operate, and outlive.
 
-- Des outils **libres** (licence MIT)
-- Une plateforme **neutre** (aucun soutien à un parti ou candidat)
-- Une architecture **multi-instances** (chaque commune ou communauté peut avoir la sienne)
-- Un système **modulaire** (briques) que l’on peut assembler et faire évoluer
-- Une conception **souveraine** (compatible avec des modèles locaux et du matériel FractaVolta)
+The relevant platform is **Inseme**: an open-source civic stack for participation, consultation, deliberation, and democratic transparency. FractaVolta can host or operate this layer on local-first energy and compute infrastructure when a deployment requires it.
 
----
+Deep product and developer documentation belongs in the [inseme repository](https://github.com/JeanHuguesRobert/inseme). This page only explains the FractaVolta interface.
 
-## The applications
+## What can be deployed
 
-### 🗳️ Inseme Agora
+### Inseme Agora
 
-The direct and liquid democracy tool. Designed for physical or remote assemblies. Instant voting. Digital gestures. AI-mediated by Ophélia (without imposing).
+A direct and liquid democracy tool for physical or remote assemblies:
 
-- Submit proposals
-- Vote on motions
-- Delegate your voice to a trusted person on a specific topic (liquid democracy / **Kudocracy**)
-- Participate from a physical assembly hall or remotely
-- Audit the full record afterwards — every gesture is an event, every event is replayable
+- proposals;
+- motions;
+- votes;
+- topic-specific delegation;
+- digital gestures;
+- replayable event records.
 
-### 📊 Kudocracy.Survey
+### Kudocracy.Survey
 
-The consultation and engagement platform. Multi-instance — every commune, university, or association runs its own.
+A consultation and engagement platform:
 
-- Citizen consultations
-- Collaborative wiki
-- Citizen gazette
-- Social café (informal exchange)
-- Deployed per-commune (Corte, Bastia, Università di Corsica, etc.)
+- citizen consultations;
+- collaborative wiki;
+- citizen gazette;
+- social café;
+- multi-instance deployment for communes, campuses, associations, or territories.
 
-### 🤖 Ophélia — the AI mediator
+### Ophélia
 
-Ophélia is the platform's AI. She:
+Ophélia is the AI mediation layer. It can help participants formulate, summarize, compare, and clarify positions.
 
-- Answers questions
-- Helps formulate ideas clearly
-- Guides users through processes
-- Facilitates consensus during debates
+It must not:
 
-She does **not**:
+- decide for citizens;
+- impose a political position;
+- absorb human responsibility;
+- make binding choices invisible.
 
-- Decide for anyone
-- Impose a position
-- Run on a vendor's servers if your instance prefers local inference (she can run on solar-backed sovereign edge nodes — the FractaVolta stack closes here)
+When hosted on FractaVolta infrastructure, Ophélia can run on sovereign or local inference backends where appropriate.
 
-### ☕ Cyrnea
+### Optional civic extensions
 
-Social and gamified experience for community spaces (bars, cafés). Citizen gazette integration. Local AI assistant. Lightweight PWA for clients of the establishment.
+Depending on the site, the civic layer can connect to:
 
-### 🌿 Atlas of Biodiversity
+- local knowledge bases;
+- citizen science;
+- biodiversity observation;
+- public dashboards;
+- issue tracking;
+- deliberation archives;
+- Cogentia continuation records.
 
-GIS layer for biodiversity observation and citizen science.
+## Why this matters
 
-- Interactive mapping with IGN integration
-- Submit and validate wildlife observations
-- Real-time filtering by species, date, location
-- GBIF/INPN data integration
-- Open data — GeoJSON API for external integrations
-- Specialized layers for biodiversity, with citizen contribution tools
+Software for democratic participation is often weakened by three dependencies:
 
----
+1. **Vendor lock-in.** The platform owner can change terms, extract data, or shut the service down.
+2. **Opaque AI mediation.** Summaries and recommendations can become politically consequential while remaining technically invisible.
+3. **Centralised hosting.** One server or provider failure can interrupt many communities at once.
 
-## Why this matters for citizens
+FractaVolta's answer is infrastructural:
 
-Software for democratic participation has historically been built on three weak foundations:
+1. **Own the instance.** Each community can run its own deployment.
+2. **Audit the process.** Events, summaries, objections, and decisions should be inspectable.
+3. **Federate without centralising.** Communities can interoperate without surrendering control.
+4. **Separate epistemic assistance from political authority.** AI may help produce knowledge; living humans alone govern.
 
-1. **Vendor-locked SaaS** — the platform owner can change terms, pull the plug, or hand over data on demand. Your deliberation is rented, not owned.
-2. **Opaque AI mediation** — when an AI summarizes a consultation, you cannot inspect how. The reasoning is hidden inside a service contract.
-3. **Centralised hosting** — when the central server goes down or gets compromised, every community using the platform goes down too.
+## Rule 0
 
-inseme inverts all three:
+The civic layer follows a strict boundary:
 
-1. **You own your instance.** MIT license, your hardware, your Supabase, your domain.
-2. **The AI is auditable.** Ophélia's reasoning is captured as typed events; her contributions are part of the public record; she is replaceable by any other compliant AI or by a human moderator without modifying the platform. Technically: she is bound by the same [continuation protocol](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/agent_resumable_cli.md) FractaVolta uses across the rest of the stack. See the [methodology page](./methodology) for the formal account of what that means and how to verify it.
-3. **Federation, not centralisation.** Every commune runs its own. Topics can be shared across instances when participants want to; otherwise they stay local.
+> AI agents may participate in epistemic production. Binding political decisions belong to living humans.
 
----
+This is not a slogan. It is an architectural constraint. The system should preserve who proposed, who voted, who delegated, who objected, who summarized, and who decided.
+
+## Relation to FractaVolta
+
+FractaVolta contributes:
+
+- local energy continuity;
+- sovereign or local compute when useful;
+- deployment and operational discipline;
+- audit trails through Cogentia-style continuations;
+- infrastructure that can host civic tools without depending on opaque SaaS providers.
+
+Inseme contributes the civic applications themselves.
+
+Cogentia contributes the method for preserving reasoning, objections, continuations, and derived products.
 
 ## How to use it
 
-**As a citizen using an existing instance:**
-- Visit the instance for your commune or community (e.g. `agora.<your-commune>.fr` or similar — your local operator can tell you).
-- Participate in consultations, votes, deliberations.
-- Read the audit trail — every decision is replayable.
+As a citizen using an existing instance:
 
-**As a community looking to deploy:**
-- Clone the [inseme repository](https://github.com/JeanHuguesRobert/inseme)
-- See the multi-instance documentation: [MULTI_INSTANCE](https://github.com/JeanHuguesRobert/inseme/blob/main/packages/cop-host/docs/MULTI_INSTANCE.md)
-- For full-stack (DC-native edge node, sovereign inference, off-grid capable): see the [for-deployers page](./for-deployers).
+- visit your community's instance;
+- participate in consultations, votes, and deliberations;
+- read the public records and audit trails where available.
 
-**As a developer:**
-- Briques are how you extend inseme — see [BRIQUE_SPEC](https://github.com/JeanHuguesRobert/inseme/blob/main/packages/cop-host/BRIQUE_SPEC.md).
-- Built on COP (Cognitive Orchestration Protocol). The [Manifesto](https://github.com/JeanHuguesRobert/inseme/blob/main/packages/cop-core/Manifesto.md) is the entry point.
+As a community looking to deploy:
 
----
+- start from the [inseme repository](https://github.com/JeanHuguesRobert/inseme);
+- review the multi-instance pattern;
+- consider whether local energy, local compute, or audit trails are required;
+- if the deployment should be full-stack, see [For deployers](./for-deployers).
 
-## Ethics, neutrality, legal framework
+As a developer:
 
-inseme is **neutral** and **independent**. It does not finance, promote, or support any political party, electoral campaign, candidate, or list. It provides digital tools usable by any citizen, collective, or institution wishing to strengthen local democracy.
+- read the [COP Manifesto](https://github.com/JeanHuguesRobert/inseme/blob/main/packages/cop-core/Manifesto.md);
+- review the [BRIQUE_SPEC](https://github.com/JeanHuguesRobert/inseme/blob/main/packages/cop-host/BRIQUE_SPEC.md);
+- contribute through issues, forks, or pull requests.
 
-The ethical principles, the governance of Ophélia, and the legal constraints (data protection, democratic processes, usage in social spaces like bars) are tracked in the inseme technical roadmap. See [ROADMAP-TECH.md](https://github.com/JeanHuguesRobert/inseme/blob/main/ROADMAP-TECH.md) (sections P2: Ophélia's ethics & governance; P3: applicative governance via Kudocracy).
+## Ethics and neutrality
 
-Per **Rule 0** of the corpus methodology: AI agents may participate in *epistemic* production (drafting, summarizing, mediating). *Political* governance — binding decisions, votes that count — belongs to living humans alone. The architecture enforces this distinction.
+Inseme is designed as neutral civic infrastructure. It should not finance, promote, or support a specific party, campaign, candidate, or list.
 
----
+The tool layer may assist deliberation. It must not replace democratic responsibility.
 
-## Ecosystem & support
-
-- **C.O.R.S.I.C.A. association** — supports the project's institutional anchor
-- **[LePP.fr community](https://lepp.fr)**
-- **#PERTITELLU** — the citizen movement of origin
-- **Cogentia Commons methodology** — knowledge production governance ([cogentia repo](https://github.com/JeanHuguesRobert/cogentia))
-
----
+Any deployment involving AI mediation, personal data, public consultation, or political participation requires explicit governance, data protection, and auditability.
 
 ## Contact
 
-Pour déployer ces outils en Corse ou sur infrastructure locale :
+For full-stack civic deployment on FractaVolta infrastructure:
 
-📧 [jhr@baronsmariani.org](mailto:jhr@baronsmariani.org)  
-🔗 [LinkedIn – FractaVolta](https://www.linkedin.com/company/fractavolta/)
+- [jhr@baronsmariani.org](mailto:jhr@baronsmariani.org)
+- [LinkedIn — FractaVolta](https://www.linkedin.com/company/fractavolta/)
+- [inseme on GitHub](https://github.com/JeanHuguesRobert/inseme)
 
-🐙 [inseme sur GitHub](https://github.com/JeanHuguesRobert/inseme)
-
-Pour les projets terrain en Corse, voir directement la section [En Corse](./fr/).
-
-**#PERTITELLU | CORTI CAPITALE**
+For Corsica-based field projects, see [FractaVolta en Corse](./fr/).
