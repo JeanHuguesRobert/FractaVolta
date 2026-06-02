@@ -1,121 +1,137 @@
 ---
 title: For partners
-subtitle: Energy and compute as integrated sovereignty infrastructure, billed for avoided interruption and audited at every layer.
-description: "FractaVolta travaille avec des partenaires publics et privés pour transformer du solaire local en capacité traçable et souveraine (énergie-paquet, inférence, civic tech). Modèle : intégration et opérations, pas de lock-in logiciel."
+subtitle: Energy, compute, cognition, and civic continuity as integrated sovereignty infrastructure.
+lang: en
+description: "FractaVolta works with public, private, and territorial partners to turn local solar energy into traceable capacity: packetized energy, sovereign inference, cognitive infrastructure, and civic continuity without software lock-in."
 canonical_url: https://fractavolta.com/for-partners
-last_stamped_at: 2026-05-15
-date: "2026-05-15"
-status: "draft — auto-filled (frontmatter cleanup)"
+last_stamped_at: 2026-06-02
+date: "2026-06-02"
+status: "active — English entry point"
 ---
 
 ## The commercial proposition
 
-Thirty years of asking "how do autonomous agents coordinate without a capturable centre?" — in programming languages, sensor networks, energy infrastructure, and democratic institutions. We know how to answer it as a stack. We charge for the engineering, integration, and operations — not for the answer.
+FractaVolta answers a long-standing question: **how can autonomous agents coordinate without a capturable centre?**
 
-We do not sell electrons on a grid, carbon credits, generic consulting, or closed-source SaaS lock-in. We do not license the software (it's MIT). We sell the deployment, the integration, the operations, and the regulatory and engineering judgment that makes the stack run on a real site.
+The same question appears in programming languages, sensor networks, energy infrastructure, cognitive tooling, and democratic institutions. FractaVolta treats it as an infrastructure problem and deploys a coherent stack across four layers: energy, compute, cognition, and civic continuity.
 
-**En résumé :** Nous concevons, déployons et exploitons des infrastructures locales (énergie + compute + civic) en Corse et en Méditerranée, avec traçabilité complète et sans dépendance à un fournisseur logiciel.
+We charge for engineering, integration, deployment, operations, and regulatory judgment. We do not charge for enclosing the underlying knowledge.
 
----
+## What we do not sell
 
-## Ce que nous proposons concrètement
+FractaVolta does not sell:
 
-### Énergie locale (Energy substrate)
+- electrons on a grid;
+- carbon credits;
+- generic consulting without operational responsibility;
+- closed-source SaaS lock-in;
+- proprietary licensing of the open-source software layer.
 
-Nous aidons à transformer une installation solaire en source de capacité utile et traçable sur le territoire :
+The software and research layers belong to an open corpus. The commercial value is in making the stack work on real sites, under real constraints, with auditable decisions and replaceable components.
 
-- Études de faisabilité spécifiques au site (dimensionnement, flux de paquets, cadre réglementaire).
-- Conception de nœuds DC-natifs 48V SELV (sécurisés, sans électricien agréé dans beaucoup de cas).
-- Ingénierie de containers batteries (2 MWh, certifiés transport maritime, traçables BLE).
-- Intégration de réseaux gravitationnels (PGN) quand le site s’y prête (cas Corse).
+## What we provide
 
-### Compute souverain (si pertinent pour votre projet)
+### Local energy substrate
 
-- Inférence locale solaire avec tarification CXU (énergie × efficacité × SLA) — prix auditable par inférence utile.
-- Nœuds edge solaires avec continuité garantie via Inference Packet Networks quand les grands fournisseurs sont indisponibles ou trop chers.
-- Pas de dépendance à un hyperscaler pour les fonctions critiques.
+We help transform solar installations and local energy assets into sources of useful, traceable capacity:
 
-### Intégration complète (si souhaité)
+- site-specific feasibility studies;
+- Energy Packet Network design;
+- photovoltaic, battery, and mobile storage architecture;
+- DC-native node design, including safe 48 V interfaces where appropriate;
+- battery container and mobile packet concepts when relevant;
+- provenance-aware operations and traceability of energy use.
 
-- Assemblage de la pile complète : énergie + compute souverain + couche de cognition (cogentia.js) + outils citoyens (inseme).
-- Configuration multi-instances pour communes ou sites (Kudocracy.Survey, Inseme Agora).
-- Médiation IA Ophélia sur nœuds locaux, sans appel à des API externes.
-- Traçabilité et audit complets de toutes les décisions — livrables standards du projet.
+### Sovereign compute substrate
 
-### Operations
+When useful, local or Mediterranean solar capacity can power sovereign inference:
 
-- Operational training for site staff
-- Deployment support
-- Cogentia Commons editor role (if you want the corpus methodology applied to your domain)
+- solar-backed edge inference nodes;
+- CXU-oriented cost modelling;
+- inference continuity when hyperscale providers degrade, become unavailable, or become geopolitically fragile;
+- local-first AI mediation for critical or civic use cases;
+- no dependency on a single hyperscaler for essential operations.
 
----
+### Cognitive infrastructure
 
-## Notre logique de valeur : la continuité évitée
+FractaVolta uses Cogentia as its open cognitive layer:
 
-Nous ne vendons pas de l’énergie ou des tokens. Nous vendons la **garantie de ne pas être bloqué**.
+- typed continuations;
+- cognitive packets;
+- `cogentia.js`-based audit trails;
+- provider-neutral AI-assisted knowledge production;
+- preservation of objections, alternatives, and failed branches.
 
-- Énergie : éviter les coupures quand le câble SARCO est saturé ou le réseau tombe.
-- Compute : garder de l’inférence locale quand les grands modèles deviennent indisponibles ou trop chers.
-- Cognition : ne pas perdre le raisonnement quand un fournisseur change ses conditions.
-- Civic : garder la main sur vos outils de délibération sans dépendre d’un éditeur SaaS.
+The result is not a folder of retrospective PDFs. It is a working, versioned, inspectable corpus of decisions.
 
-C’est un modèle de service et d’intégration, pas de licence logicielle.
+### Civic continuity
 
-## What you also receive — the audit trail
+For partners who need a civic layer, FractaVolta can integrate or operate the Inseme stack:
 
-Beyond the hardware and the running platform, every project ships with its own audit chain — produced live during the engagement, not assembled retroactively.
+- Inseme Agora;
+- Kudocracy.Survey;
+- Ophélia AI mediation;
+- multi-instance deployments;
+- local or sovereign inference backends where appropriate.
 
-- **Decisions are typed**, via the `cogentia.continuation.v1` protocol implemented in `cogentia.js`. When a deployment decision required judgment (which battery topology for site X; which inverter for that grid-tie context; how to size the inference cluster), the question, the alternatives we considered, the chosen path, and the reasoning are all preserved as JSON in the project's `.cogentia/continuations/`. You can replay them.
-- **Failed alternatives are not erased.** When we tried something and it didn't work, the failed branch is part of the record — with the reason. The next operator (us in two years, or a different firm if you change supplier) can read why we ruled options out.
-- **Claims are anchored.** Every datasheet number, every architectural assertion, every cost estimate points at a canonical document under version control. If we change a number, the change is visible in the git history.
-- **The AI we use is replaceable.** Any continuation we emit can be resumed by another agent — Claude today, ChatGPT tomorrow, a local model next year, a human operator at any point. No provider lock-in flows down to you through us.
+The civic layer remains governed by a strict boundary: AI may assist epistemic production, but binding political decisions belong to living humans.
 
-This is not compliance theater layered on top of normal work. It is how the work is done. See the [methodology page](./methodology) for the formal account.
+## The value model: avoided interruption
 
----
+FractaVolta does not primarily sell energy or tokens. It sells the capacity not to be blocked.
 
-## Projets et opportunités en Corse
+- **Energy:** continue operating when the grid is congested, unavailable, or economically unfavourable.
+- **Compute:** keep inference available when hyperscale systems are degraded, unavailable, or too expensive.
+- **Cognition:** preserve reasoning, decisions, alternatives, and objections across agents and providers.
+- **Civic:** keep deliberation infrastructure independent from opaque SaaS providers.
 
-Nous avançons actuellement sur plusieurs chantiers et discussions en Corse :
+This is a service, integration, and operations model, not a software licensing model.
 
-- Mariani Village (Tavignano) — habitat DC-natif repositionnable.
-- Valorisation de réseaux hydrauliques historiques (PGN).
-- Nœuds d’inférence solaires locaux.
+## What every serious engagement should produce
 
-Pour les acteurs locaux (propriétaires, collectivités, installateurs), les pages pratiques sont ici :
-- [Seconde Vie solaire](./fr/seconde-vie)
-- [Marchés locaux](./fr/marches)
-- [Installateurs et mainteneurs](./fr/installateurs)
+Beyond hardware and running platforms, every project should produce its own audit chain during the engagement, not after the fact.
 
-Les documents techniques plus approfondis sont disponibles sur demande ou via la page [Pour déployer](./for-deployers).
+- **Decisions are typed.** When a deployment decision requires judgment, the question, alternatives, chosen path, and reasoning are preserved.
+- **Failed alternatives are not erased.** They remain part of the operational record with the reason they were rejected.
+- **Claims are anchored.** Datasheet numbers, architectural assertions, and cost estimates point to stable documents under version control.
+- **AI assistance is replaceable.** Any compliant continuation can be resumed by another agent, a local model, or a human operator.
 
----
+This is not compliance theatre layered on top of ordinary consulting. It is how the work is done. See the [methodology page](./methodology) for the formal account.
 
-## Avec qui nous travaillons
+## Current opportunity fields
 
-Nous privilégions les partenaires qui cherchent de la **véritable souveraineté locale** :
+FractaVolta is especially relevant for:
 
-- Collectivités et autorités régionales
-- Exploitations agricoles et coopératives
-- Sites industriels ou touristiques avec besoins en autonomie énergétique et compute
-- Institutions qui veulent des outils de délibération sans dépendance à un éditeur
+- island territories and remote regions;
+- agricultural and cooperative sites;
+- campuses and student housing;
+- municipalities and local authorities;
+- industrial or tourist sites with energy autonomy needs;
+- institutions seeking deliberation tools without vendor lock-in;
+- partners working on Mediterranean energy, compute, and civic sovereignty.
 
-Nous ne travaillons pas avec des structures qui recherchent du lock-in logiciel, des chaînes d’audit opaques, ou de l’IA comme outil d’extraction.
+For Corsica-based owners, farmers, municipalities, installers, and local partners, the French operational entry point is [FractaVolta en Corse](./fr/).
 
----
+## Who we work with
 
-## Prochaines étapes
+We prioritise partners who want real local capacity rather than symbolic sovereignty:
 
-Si vous êtes une collectivité, un exploitant agricole, un installateur ou un acteur de l’énergie en Corse ou en Méditerranée et que vous voulez transformer du solaire local en capacité réelle et traçable, contactez-nous directement.
+- public authorities and territorial institutions;
+- agricultural holdings and cooperatives;
+- industrial, academic, or tourism sites;
+- energy and storage operators;
+- civic technology organisations;
+- research groups and open-source builders.
 
-**Contact direct :**
-- 📧 [jhr@baronsmariani.org](mailto:jhr@baronsmariani.org)
-- 🔗 [LinkedIn – FractaVolta](https://www.linkedin.com/company/fractavolta/)
+We do not work well with structures seeking software lock-in, opaque audit chains, or AI as an extraction mechanism.
 
-Pour les opportunités concrètes en Corse (propriétaires, collectivités, installateurs), voir directement la section [En Corse](./fr/).
+## How to engage
 
-Pour les aspects techniques (unités DC-natives, coûts, cadre réglementaire), consultez la page [Pour les porteurs de projet](./for-deployers).
+If you want to explore a deployment, pilot, study, or partnership, contact us directly.
 
-Nous répondons personnellement et dans les meilleurs délais.
+- [jhr@baronsmariani.org](mailto:jhr@baronsmariani.org)
+- [LinkedIn — FractaVolta](https://www.linkedin.com/company/fractavolta/)
 
-*Véhicule commercial : Dilorta SAS (Corse). Gouvernance des connaissances : Cogentia Commons.*
+For deployment details, see [For deployers](./for-deployers). For research and methodology, see [For researchers](./for-researchers) and [Papers](./papers).
+
+*Operational vehicle: Dilorta SAS where relevant for Corsica-based housing deployment. Knowledge governance: Cogentia Commons.*
