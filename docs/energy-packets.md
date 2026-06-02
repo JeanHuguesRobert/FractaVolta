@@ -1,11 +1,12 @@
 ---
 title: Energy packets
 subtitle: From electricity as flow to energy as traceable, routable, local capacity.
-description: "FractaVolta transforme l’énergie solaire locale en paquets d’énergie mesurés, stockés, routés et tracés. Du flux continu vers des unités de capacité utiles, auditables et souveraines."
+lang: en
+description: "FractaVolta turns local solar energy into measured, stored, routed, and traced energy packets: useful, auditable, sovereign units of capacity."
 canonical_url: https://fractavolta.com/energy-packets
-last_stamped_at: 2026-05-20
-date: "2026-05-20"
-status: "draft — auto-filled (frontmatter cleanup)"
+last_stamped_at: 2026-06-02
+date: "2026-06-02"
+status: "active — English concept entry point"
 ---
 
 ## The shift
@@ -24,20 +25,9 @@ FractaVolta treats energy as a sequence of accountable units:
 source -> measurement -> storage -> routing -> use -> trace
 ```
 
-An energy packet is not a labelled electron. It is a measured and attributable unit of useful energy, with a known source, path, custody history, destination, losses, and uncertainty.
+An energy packet is not a labelled electron. It is a measured and attributable unit of useful energy, with a known source, path, custody history, destination, losses, uncertainty, and use.
 
-## Pourquoi c’est important (et concret en Corse)
-
-La valeur du solaire local est souvent diluée ou captée par le réseau. En transformant l’énergie en paquets traçables, on peut la stocker, l’orienter et l’utiliser localement (eau, froid, recharge, compute, services critiques).
-
-**Applications concrètes en Corse** (vitrine terrain) :
-- [Seconde Vie solaire](./fr/seconde-vie)
-- [Marchés locaux](./fr/marches)
-- [Pour les agriculteurs et propriétaires](./fr/agriculteurs)
-- [Pour les communes et collectivités](./fr/collectivites)
-- [Partenaires installateurs](./fr/installateurs)
-
-Ces pages sont écrites pour les acteurs locaux (propriétaires, collectivités, installateurs).
+## Why this matters
 
 Local solar value is often captured or diluted:
 
@@ -53,14 +43,16 @@ local sun -> local production -> local storage -> local priority uses -> auditab
 
 The grid remains useful, but it is no longer the invisible default substrate. It becomes one peer, one backup path, or one arbitrage layer among others.
 
-## Principes concrets
+For Corsica-based owners, farmers, municipalities, installers, and local partners, the French operational entry point is [FractaVolta en Corse](./fr/).
 
-1. **Priorité locale.** Le territoire qui reçoit le soleil doit en tirer un bénéfice visible et mesurable.
-2. **Stocker avant d’exporter aveuglément.** L’excédent doit d’abord chercher un usage utile local (stockage, eau, froid, recharge, compute).
-3. **Le réseau comme secours.** Le réseau public reste utile, mais il n’est plus l’évacuateur par défaut de tout surplus.
-4. **Interfaces sûres.** Le 48V DC est conçu comme une interface modulaire et sûre pour l’humain.
-5. **Traçabilité.** Chaque paquet d’énergie porte son origine, son trajet, sa destination et son usage. Rien n’est invisible.
-6. **Reversibility.** Owners and territories should not be trapped by opaque or excessive exit costs.
+## Core principles
+
+1. **Local priority.** The territory that receives the sun should obtain visible and measurable benefit from it.
+2. **Storage before blind export.** Surplus should first seek useful local destinations: water, cold, recharge, storage, compute, critical services.
+3. **The grid as explicit peer.** The public grid remains useful, but it is no longer the default sink for every surplus.
+4. **Safe interfaces.** 48 V DC can serve as a modular, human-facing, low-voltage layer where appropriate.
+5. **Traceability.** Every energy packet should preserve its source, path, custody, destination, use, and uncertainty.
+6. **Reversibility.** Owners and territories should not be trapped by opaque contracts, excessive exit costs, or hidden dependencies.
 7. **Open cognition.** Cogentia, the open-source cognitive layer of FractaVolta, applies the same packet logic to reasoning, continuations, and invention workflows.
 
 ## Generic chain
@@ -109,8 +101,45 @@ Energy packets are not limited to one asset class. They apply wherever local pro
 - degraded land, quarries, and landfills;
 - critical infrastructure;
 - collective self-consumption systems;
-- mobile batteries and EVs;
+- mobile batteries and electric vehicles;
 - edge compute and sovereign inference nodes.
+
+## From energy packets to inference packets
+
+Once energy becomes measurable, attributable, and routable, compute can be treated in the same way.
+
+A solar-backed inference job can carry:
+
+- a known energy source;
+- a measured conversion path;
+- a compute device and efficiency profile;
+- a workload identity;
+- a result hash or provenance certificate;
+- a service-level record.
+
+The point is not to reduce cognition to electricity. The point is to make the physical substrate of inference visible, accountable, and locally steerable.
+
+## Relation to the wider stack
+
+Energy packets are the first layer of a broader packetization pattern:
+
+```text
+energy packets -> inference packets -> cognitive packets -> civic packets
+```
+
+At each layer, the same architectural question returns:
+
+> Can useful work be decomposed into accountable, routable, inspectable units without creating a capturable centre?
+
+FractaVolta answers this question physically, through energy and compute infrastructure. Cogentia answers it cognitively. Inseme answers it civically.
+
+## Further reading
+
+- [For deployers](./for-deployers) — concrete deployment patterns.
+- [For partners](./for-partners) — commercial and institutional engagement.
+- [Papers](./papers) — research-grade documents and cross-corpus references.
+- [UNCONSCIOUS_GRID.md](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/UNCONSCIOUS_GRID.md) — foundational source document.
+- [LE_RESEAU_INCONSCIENT.md](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/LE_RESEAU_INCONSCIENT.md) — French source/derived document for readers who need the French theoretical entry point.
 
 ## FractaVolta in one sentence
 
