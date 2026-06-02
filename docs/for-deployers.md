@@ -1,119 +1,146 @@
 ---
 title: For deployers
-subtitle: Concrete materials for getting a Mariani Village (or comparable DC-native deployment) off the ground.
-description: "Mariani Village : unités containers DC-natives 48V SELV, hors CONSUEL, repositionnables. Conçues pour la Corse et les territoires méditerranéens. Documentation technique pour installateurs et porteurs de projet."
+subtitle: Concrete materials for deploying Mariani Village or comparable DC-native, local-first infrastructure.
+lang: en
+description: "Deployment guidance for Mariani Village and comparable FractaVolta sites: DC-native units, 48 V SELV architecture, local energy packets, optional edge inference, audit trails, and operational continuity."
 canonical_url: https://fractavolta.com/for-deployers
-last_stamped_at: 2026-05-15
-date: "2026-05-15"
-status: "draft — auto-filled (frontmatter cleanup)"
+last_stamped_at: 2026-06-02
+date: "2026-06-02"
+status: "active — English deployment entry point"
 ---
 
-## Mariani Village en bref
+## Deployment scope
 
-Unités containers ISO 20 pieds en **DC-natif 48V SELV** (<14 m²), repositionnables, sans raccordement réseau obligatoire, sans électricien agréé, sans CONSUEL.
+This page is for partners, builders, site owners, and technical teams preparing a concrete FractaVolta deployment.
 
-Coût électrique total par unité : 2 740 – 4 080 €.  
-Commercialisé via **Dilorta SAS** (Corse).
+The reference case is **Mariani Village**: a repositionable, DC-native habitat or site unit based on ISO 20-foot containers, local solar, LFP storage, safe low-voltage distribution, and optional edge compute.
 
-Idéal pour sites isolés, saisonniers ou en autonomie en Corse et Méditerranée.
+The same deployment logic can also apply to:
 
-Lire le document technique complet : [mariani_village.md](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/mariani_village.md).
+- agricultural sites;
+- isolated or seasonal facilities;
+- cooperative housing;
+- campuses;
+- public buildings;
+- industrial or tourism sites;
+- pilot territories seeking energy, compute, and civic continuity.
 
----
+For Corsica-based owners, farmers, municipalities, installers, and local partners, the French operational entry point is [FractaVolta en Corse](./fr/).
+
+## Mariani Village in brief
+
+Mariani Village units are designed around:
+
+- ISO 20-foot containers or comparable modular structures;
+- DC-native 48 V SELV distribution where appropriate;
+- local photovoltaic production;
+- LFP battery storage;
+- optional portable battery packets;
+- optional edge inference node;
+- local-first operation with the grid treated as backup, peer, or arbitrage path.
+
+The goal is not off-grid ideology. The goal is **reversible local capacity**: a unit that can operate, move, be audited, and be extended without becoming dependent on an opaque infrastructure provider.
+
+Full technical reference: [mariani_village.md](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/mariani_village.md).
 
 ## What a unit contains
 
 | Component | Spec |
 |---|---|
-| Container | ISO 20-foot, structural; SELV-certified electrical fit-out |
-| PV array | Roof-mounted, sized to seasonal load |
-| Storage | LFP battery bank, 48V SELV bus |
-| Distribution | DC-first; USB-C PD 3.1 (240W) as the human interface |
-| AC capability | Portable 700 Wh battery packet, BLE-tracked, borrowed from a shared charging station |
-| Compute | Edge inference node when the stack closes (Ophélia + Agora on-site) |
-| Connectivity | Mesh-capable, low-power radio + opportunistic WAN |
+| Container | ISO 20-foot or comparable modular structure |
+| PV array | Roof-mounted or nearby photovoltaic source, sized to seasonal load |
+| Storage | LFP battery bank, 48 V SELV bus where appropriate |
+| Distribution | DC-first; USB-C PD 3.1 as a human-facing interface when suitable |
+| AC capability | Adapter layer or portable battery packet, not the primary substrate |
+| Compute | Optional edge inference node when the stack closes locally |
+| Connectivity | Mesh-capable, low-power radio plus opportunistic WAN where relevant |
+| Traceability | Metered energy flows, operational logs, and versioned deployment records |
 
-The 48V SELV bus is the spine. AC is an adapter protocol at the boundary, not the substrate. USB-C PD 3.1 — operating at exactly 48V DC, up to 240W — is touch-safe, power-negotiated, and already in every user's pocket.
+The 48 V SELV bus is the spine when it is appropriate. AC becomes an adapter protocol at the boundary, not the default substrate. USB-C PD 3.1 — operating at up to 48 V DC and up to 240 W — can serve as a safe, negotiated, widely understood user interface.
 
-See the full layered analysis in [dc_native_epn.md](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/dc_native_epn.md).
-
----
+See the layered analysis in [dc_native_epn.md](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/dc_native_epn.md).
 
 ## Regulatory navigation
 
-The reason the unit avoids the licensed-electrician / CONSUEL path is precisely because it stays below the SELV threshold. This is engineering, not loophole exploitation: a 48V DC bus with current-limited outlets is genuinely touch-safe and falls under different regulatory frameworks than a 230V AC installation.
+Deployment is not only hardware. It also requires regulatory judgment.
 
-What we navigate for you:
+Typical topics include:
 
-- **SELV electrical codes** (NF C 15-100 part 7-701 and related) — keeping the installation below the licensed-installation threshold while meeting safety standards
-- **IMDG maritime framework** for the LFP container packets traversing ferry routes
-- **RGPD/GDPR** for any installed sensing (BLE tracking, occupancy, the Atlas of Biodiversity layer if you choose to deploy it)
-- **Local zoning** — ISO container deployment, host-site agreements, seasonal repositioning permits
+- **SELV electrical frameworks** — keeping the low-voltage layer safe and legally coherent;
+- **grid interaction** — explicit backup, injection, non-injection, or arbitrage scenarios;
+- **IMDG maritime framework** — when LFP packets or battery containers cross ferry routes;
+- **GDPR / RGPD** — when sensing, BLE tracking, occupancy, or biodiversity observation layers are installed;
+- **local zoning** — container deployment, host-site agreements, seasonal repositioning, and land-use constraints;
+- **insurance and operational responsibility** — making the operator boundary explicit.
 
----
+The principle is not loophole exploitation. It is architectural discipline: keep each layer within its proper technical, legal, and operational boundary.
 
-## Option "pile complète" (facultative)
+## Optional full-stack layer
 
-Le Mariani Village est conçu pour pouvoir accueillir toute la pile de souveraineté si vous le souhaitez :
+A deployment can remain strictly energy-oriented. It can also host the full FractaVolta stack when useful.
 
-- Outils de délibération locale (Inseme Agora + Kudocracy)
-- Médiation IA Ophélia fonctionnant 100 % sur site (pas d’appel API externe)
-- Couche observation biodiversité (Atlas of Biodiversity)
+Optional extensions include:
 
-Vous pouvez très bien déployer les unités en mode "habitat seul". L’option full-stack apporte simplement un niveau supplémentaire d’autonomie et de traçabilité pour les résidents ou la collectivité.
+- local or solar-backed edge inference;
+- Inseme Agora;
+- Kudocracy.Survey;
+- Ophélia AI mediation;
+- biodiversity observation layer;
+- site-specific Cogentia Commons corpus;
+- typed audit trail for deployment decisions.
 
----
+The full-stack option adds autonomy and traceability for residents, operators, institutions, or local communities. It is not mandatory for the energy unit to make sense.
 
-## Pour aller plus loin (documents techniques)
+## Deployment as a traced corpus
 
-Ces documents sont destinés aux porteurs de projet et aux équipes techniques :
+A working deployment should not leave behind only folders of PDFs. It should produce a small, inspectable operational corpus.
 
-1. Référence habitat : [mariani_village.md](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/mariani_village.md)
-2. Architecture DC-native : [dc_native_epn.md](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/dc_native_epn.md)
-3. Fondement de l’énergie-paquet : [UNCONSCIOUS_GRID.md](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/UNCONSCIOUS_GRID.md)
+A site repository can contain:
 
-Pour les aspects pratiques et les opportunités en Corse, voir directement la section [En Corse](./fr/).
+- `research/index.md` listing canonical documents for the site: bill of materials, site plan, regulatory dossiers, BLE asset registry;
+- `.cogentia.json` registering the corpus;
+- `.cogentia/audit.jsonl` accumulating one JSONL line per state-changing operation;
+- `.cogentia/continuations/` storing typed continuation records for decisions requiring judgment.
 
-N’hésitez pas à nous contacter directement : [jhr@baronsmariani.org](mailto:jhr@baronsmariani.org) ou via [LinkedIn](https://www.linkedin.com/company/fractavolta/).
+With this pattern, commissioning steps, adjustments, objections, rejected alternatives, and operator decisions remain inspectable. If another firm extends the site later, it receives a working corpus, not an opaque archive.
 
-## Votre déploiement comme corpus tracé
+This is optional. A Mariani Village can run as housing or infrastructure alone. But when the corpus practice is adopted, the deployment becomes contestable, auditable, and survivable across operator changes.
 
-A working Mariani Village is also a small Cogentia Commons corpus. The site folder (whether on your own GitHub organization or a private Git host) carries:
+## Technical references
 
-- A `research/index.md` listing the canonical documents for the site (BOM, site plan, regulatory dossiers, BLE asset registry).
-- A `.cogentia.json` registering the corpus.
-- A `.cogentia/audit.jsonl` accumulating one JSONL line per state-changing operation — every commissioning step, every adjustment, every objection filed by residents or by the operator.
-- A `.cogentia/continuations/` directory of typed continuation records for any decision that required judgment.
+Core documents:
 
-You can run `node cogentia.js scan` against this corpus to verify that every research-grade document is anchored. You can run `cogentia.js check` to validate cross-references. If you contract a different firm to extend the site in two years, they get a working corpus, not a folder of PDFs.
-
-This is optional. A Mariani Village runs perfectly well as housing alone. But when you take the corpus practice seriously, the deployment becomes contestable, auditable, and survivable across operator changes.
-
----
+1. [mariani_village.md](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/mariani_village.md) — reference housing and modular deployment pattern.
+2. [dc_native_epn.md](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/dc_native_epn.md) — DC-native Energy Packet Network architecture.
+3. [UNCONSCIOUS_GRID.md](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/UNCONSCIOUS_GRID.md) — foundational energy packet paper.
+4. [Energy packets](./energy-packets) — public site introduction.
+5. [Methodology](./methodology) — Cogentia Commons and continuation-based operational method.
 
 ## Cost envelope
 
-Per-unit electrical: €2,740–4,080 (depending on PV/battery sizing). Per-unit total including container, fit-out, and tracking infrastructure varies by site.
+The current reference estimate for the electrical layer of one Mariani Village unit is approximately **€2,740–€4,080**, depending on photovoltaic and battery sizing.
 
-The full-stack option (edge inference + civic platform) adds an edge compute node and software integration — quoted per project, since the integration depth varies.
+The total per-unit cost including container, fit-out, installation, tracking, regulatory work, and site integration varies by deployment.
 
----
+The full-stack option — edge inference, civic platform, audit corpus, and integration work — is quoted per project because the useful depth varies.
 
 ## How to engage
 
-We help you with:
+FractaVolta can assist with:
 
-- Site survey and feasibility
-- DC-native node design and bill of materials
-- Deployment supervision and operational training
-- Integration with the cognitive and civic layers if you want the full stack
-- Ongoing operations (optional)
+- site survey and feasibility;
+- DC-native node design and bill of materials;
+- photovoltaic and storage sizing;
+- regulatory navigation;
+- deployment supervision;
+- operational training;
+- integration with cognitive and civic layers when useful;
+- ongoing operations when appropriate.
 
-Dilorta SAS is the commercial vehicle for the housing deployment specifically. For other deployment patterns (academic, industrial, cooperative), engagement is direct with FractaVolta.
+Dilorta SAS is the commercial vehicle where relevant for Corsica-based housing deployment. For other deployment patterns — academic, industrial, agricultural, cooperative, or institutional — engagement is direct with FractaVolta.
 
----
+Contact:
 
-## Contact
-
-📧 jhr@baronsmariani.org
-🌐 [FractaVolta on GitHub](https://github.com/JeanHuguesRobert/FractaVolta)
+- [jhr@baronsmariani.org](mailto:jhr@baronsmariani.org)
+- [FractaVolta on GitHub](https://github.com/JeanHuguesRobert/FractaVolta)
+- [LinkedIn — FractaVolta](https://www.linkedin.com/company/fractavolta/)
