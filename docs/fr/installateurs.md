@@ -1,18 +1,19 @@
 ---
 title: Partenaires installateurs
 subtitle: FractaVolta cherche des partenaires techniques corses pour transformer le solaire local en capacité locale.
+lang: fr
 description: "Appel à partenaires installateurs et mainteneurs corses : projets de seconde vie solaire, stockage, nœuds DC-natifs, maintenance organisée et déploiements d’énergie-paquet sur le territoire."
 canonical_url: https://fractavolta.com/fr/installateurs
-last_stamped_at: 2026-05-20
-date: "2026-05-20"
-status: "draft — auto-filled (frontmatter cleanup)"
+last_stamped_at: 2026-06-02
+date: "2026-06-02"
+status: "active — page française opérationnelle"
 ---
 
 # Partenaires installateurs et mainteneurs
 
 FractaVolta ne se substitue pas aux installateurs et mainteneurs.
 
-Nous recherchons au contraire des partenaires techniques corses pour réaliser ensemble des projets concrets de transformation du solaire en capacité locale (seconde vie, stockage, usages utiles, traçabilité).
+Nous recherchons au contraire des partenaires techniques corses pour réaliser ensemble des projets concrets de transformation du solaire en capacité locale : seconde vie, stockage, usages utiles, traçabilité.
 
 ## Ce que FractaVolta apporte
 
@@ -20,7 +21,7 @@ Nous recherchons au contraire des partenaires techniques corses pour réaliser e
 - recherche de propriétaires et sites pilotes ;
 - structuration commerciale : seconde vie, réversibilité, non-captation ;
 - couche logicielle de suivi et de traçabilité ;
-- modèles d’usage : stockage local, batteries mobiles, recharge, froid, eau, compute ;
+- modèles d’usage : stockage local, batteries mobiles, recharge, froid, eau, calcul local ;
 - coordination entre propriétaire, installateur, mainteneur et usager local.
 
 ## Ce que le partenaire apporte
@@ -65,3 +66,7 @@ FractaVolta vient proposer un nouveau marché : **opérer la seconde vie solaire
 ## Contact recherché
 
 FractaVolta cherche quelques installateurs ou mainteneurs corses prêts à discuter d’un pilote sans engagement lourd.
+
+Contact : [jhr@baronsmariani.org](mailto:jhr@baronsmariani.org) ou [LinkedIn — FractaVolta](https://www.linkedin.com/company/fractavolta/).
+
+Voir aussi : [Seconde Vie](./seconde-vie) • [Marchés locaux](./marches)
