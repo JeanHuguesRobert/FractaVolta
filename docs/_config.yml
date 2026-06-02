@@ -9,7 +9,11 @@ repository: JeanHuguesRobert/FractaVolta
 github_username: JeanHuguesRobert
 linkedin_username: company/fractavolta
 
-lang: fr
+lang: en
+default_lang: en
+available_langs:
+  - en
+  - fr
 
 author:
   name: Jean Hugues Noël Robert, baron Mariani
@@ -57,15 +61,29 @@ defaults:
       type: "pages"
     values:
       layout: page
+      lang: en
+  - scope:
+      path: "fr"
+      type: "pages"
+    values:
+      lang: fr
   - scope:
       path: "index.md"
     values:
       layout: home
+      lang: en
+      alternate_url: /fr/
+  - scope:
+      path: "fr/index.md"
+    values:
+      lang: fr
+      alternate_url: /
   - scope:
       path: "papers.md"
     values:
       layout: papers
       title: Papers
+      lang: en
 
 # Exclude scaffolding files from the build
 exclude:
