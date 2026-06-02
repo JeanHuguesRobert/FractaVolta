@@ -1,0 +1,19 @@
+main:
+  - title: Home
+    url: /
+  - title: Energy packets
+    url: /energy-packets
+  - title: Partners
+    url: /for-partners
+  - title: Deployers
+    url: /for-deployers
+  - title: Researchers
+    url: /for-researchers
+  - title: Citizens
+    url: /for-citizens
+  - title: Methodology
+    url: /methodology
+  - title: Papers
+    url: /papers
+  - title: Strategic framework
+    url: /marenostrum
