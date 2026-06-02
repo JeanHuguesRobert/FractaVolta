@@ -1,22 +1,24 @@
 ---
 title: FractaVolta Seconde Vie
 subtitle: Opérateur de seconde vie solaire pour hangars, toitures, ombrières et centrales existantes.
+lang: fr
 description: "Seconde vie des installations photovoltaïques en Corse : audits, maintenance, stockage local, non-injection quand pertinent, revenu lisible et réversibilité contractuelle pour les propriétaires et agriculteurs."
 canonical_url: https://fractavolta.com/fr/seconde-vie
-last_stamped_at: 2026-05-20
-date: "2026-05-20"
-status: "draft — auto-filled (frontmatter cleanup)"
+last_stamped_at: 2026-06-02
+date: "2026-06-02"
+status: "active — page française opérationnelle"
 ---
 
 # FractaVolta Seconde Vie
 
 **FractaVolta Seconde Vie** est une offre pour les installations photovoltaïques existantes ou arrivant en fin de contrat en Corse.
 
-Plutôt que de laisser ces actifs vieillir ou injecter de l’énergie à bas prix dans le réseau, nous proposons de les transformer en nœuds locaux de capacité réelle : stockage, usages agricoles, recharge, froid, eau, secours, ou même du compute local.
+Plutôt que de laisser ces actifs vieillir ou injecter de l’énergie à bas prix dans le réseau, nous proposons de les transformer en nœuds locaux de capacité réelle : stockage, usages agricoles, recharge, froid, eau, secours, ou calcul local quand cela a du sens.
 
 Le propriétaire garde un revenu lisible et une vraie possibilité de sortie réversible, sans tracas excessifs.
 
 Pour en savoir plus selon votre situation :
+
 - [Agriculteurs et propriétaires](./agriculteurs)
 - [Communes et collectivités](./collectivites)
 - [Installateurs et mainteneurs](./installateurs)
@@ -76,10 +78,16 @@ Les frais de sortie doivent être limités aux coûts techniques directs, néces
 - logique de stockage local ;
 - traçabilité des flux ;
 - modèles contractuels réversibles ;
-- lien vers des usages plus avancés : batteries mobiles, compute local, inférences garanties.
+- lien vers des usages plus avancés : batteries mobiles, calcul local, inférences garanties.
 
 ## Ce que FractaVolta ne remplace pas
 
 FractaVolta ne remplace pas les installateurs certifiés, les bureaux de contrôle, les obligations Enedis, Consuel ou assurantielles.
 
 La logique est partenariale : FractaVolta organise le modèle, les partenaires qualifiés sécurisent les opérations techniques.
+
+## Suite utile
+
+- Voir les [marchés locaux](./marches).
+- Préparer les informations de base : puissance installée, contrat existant, date de fin, propriétaire des panneaux, maintenance actuelle, usages locaux possibles.
+- Nous contacter : [jhr@baronsmariani.org](mailto:jhr@baronsmariani.org).
