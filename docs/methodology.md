@@ -1,135 +1,119 @@
 ---
 title: Methodology
 subtitle: How we work — every decision auditable, every objection first-class, every AI agent replaceable. Not compliance theater; the way the platform fundamentally operates.
+lang: en
 canonical_url: https://fractavolta.com/methodology
-last_stamped_at: 2026-05-26
-date: "2026-05-15"
-status: "working-paper — auto-filled (frontmatter cleanup)"
+last_stamped_at: 2026-06-02
+date: "2026-06-02"
+status: "active — English methodology entry point"
 ---
 
-FractaVolta conçoit, déploie et exploite des infrastructures locales en Corse et en Méditerranée. La méthode n’est pas une surcouche administrative : elle fait partie intégrante de la façon dont nous livrons les projets à nos partenaires.
+FractaVolta designs, deploys, and operates local infrastructure across energy, compute, cognition, and civic continuity. The method is not an administrative layer added afterwards. It is part of how projects are delivered.
 
-Trois engagements concrets structurent chaque projet chez FractaVolta :
+Three operational commitments structure each serious engagement:
 
-1. **Chaque affirmation est traçable.** Si nous avançons un résultat technique ou économique, il existe un document stable et versionné qui le justifie.
+1. **Every claim is traceable.** If we make a technical, economic, or architectural claim, it should be anchored in a stable, versioned document.
+2. **Every objection counts.** Disagreement is not treated as noise. It becomes part of the record.
+3. **No AI tool is indispensable.** Anything produced with AI assistance must be resumable by another AI agent or by a human without rebuilding the process.
 
-2. **Chaque objection compte.** Si vous n’êtes pas d’accord avec une hypothèse ou un choix, elle devient partie du dossier. Nous ne l’effaçons pas.
-
-3. **Aucun outil IA n’est indispensable.** Tout ce qui est produit avec une IA peut être repris par une autre (ou par un humain) sans tout refaire.
-
-La section ci-dessous présente les outils et concepts opérationnels en détail. Elle s’adresse principalement aux partenaires techniques et aux chercheurs qui souhaitent cette profondeur.
-
-Si vous êtes un acteur de terrain ou un partenaire commercial, vous pouvez passer directement à la section [En Corse](./fr/), qui présente les applications concrètes.
+This page presents the operational method and its tooling. For the research map, see [For researchers](./for-researchers). For concrete deployments, see [For deployers](./for-deployers). For local Corsica-based field projects, the French operational entry point is [FractaVolta en Corse](./fr/).
 
 ## Cogentia Commons
 
-[**Cogentia Commons**](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/Cogentia_Commons_Working_Paper.md) est la méthode de gouvernance des connaissances à travers le corpus. Chaque document important porte une `canonical_url` stable. Le corpus est sa propre preuve : les forks, objections et évolutions restent visibles dans l’historique git.
+[**Cogentia Commons**](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/Cogentia_Commons_Working_Paper.md) is the knowledge governance method used across the corpus.
+
+Every important document should have a stable `canonical_url`. The corpus is its own evidence: forks, objections, revisions, and changes remain visible in git history.
 
 ## cogentia.js
 
-[**`cogentia.js`**](https://github.com/JeanHuguesRobert/cogentia/blob/main/scripts/cogentia.js) est l’outil opérationnel (CLI Node.js sans dépendance). Il permet de piloter la gouvernance du corpus sur plusieurs dépôts.
+[**`cogentia.js`**](https://github.com/JeanHuguesRobert/cogentia/blob/main/scripts/cogentia.js) is the operational CLI used to maintain the corpus across repositories.
 
-Les principales familles de commandes :
+Core command families include:
 
-- **Synchronisation et inspection** (`drift`, `lint`, `scan`, `check`)
-- **Vues dérivées** (`refresh`, `documents`, `corpus-status`, `backlinks`, `trails`)
-- **Gouvernance du frontmatter** (`frontmatter check`, `frontmatter promote`)
+- **Synchronisation and inspection** — `drift`, `lint`, `scan`, `check`.
+- **Derived views** — `refresh`, `documents`, `corpus-status`, `backlinks`, `trails`.
+- **Front matter governance** — `frontmatter check`, `frontmatter promote`, `frontmatter schema`.
+- **Authoring and continuations** — `stamp`, `continuation`, `concepts`.
+- **Personal scheduler** — `todo`, `next`, and local `.cogentia/SCHEDULE.md` files where used.
 
-Ces outils rendent la traçabilité et la maintenance du corpus concrètes et automatisables.
-- `frontmatter schema` — canonical schema reference.
-
-**Personal scheduler (fractal).**
-
-- `todo` — list, add, done, defer, drop. Each `.cogentia/SCHEDULE.md` is sovereign at its scope; `--global` aggregates across the workspace.
-- `next [--pick]` — apply scheduler policy (priority → overdue → FIFO) and surface the next item; `--pick` marks it Active and audits.
-
-**Authoring.**
-
-- `stamp` — insert `canonical_url` + `last_stamped_at` into a document's front-matter, anchored to its GitHub commit URL.
-- `continuation` — emit / inspect / resume / fail / abort / queue typed continuation requests. See below.
-- `concepts` — typed concept registry: init, list, check (orphan validation), graph, ref, schema.
-
-Every state-changing call appends one JSONL line to `.cogentia/audit.jsonl`. The audit log is a first-class deliverable, not a compliance afterthought.
+Every state-changing call should append one JSONL line to `.cogentia/audit.jsonl`. The audit log is a first-class deliverable, not a compliance afterthought.
 
 ## The continuation protocol
 
-`cogentia.continuation.v1`, defined in the paper [Agent-Resumable CLI](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/agent_resumable_cli.md) and implemented in `cogentia.js` as of v0.5.0, is the typed protocol for suspended judgment.
+`cogentia.continuation.v1`, defined in [Agent-Resumable CLI](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/agent_resumable_cli.md), is the typed protocol for suspended judgment.
 
-When the CLI reaches a point where deterministic computation is insufficient, it does not call an AI API. It emits a continuation: a JSON object carrying the context, the alternatives, the expected result schema, and the resumption metadata. The surrounding system — a human reviewer, an AI agent, a script, a CI pipeline — supplies a structured `step_result`. The tool validates the response and resumes.
+When deterministic computation is insufficient, the tool does not need to call a specific AI API. It emits a continuation: a JSON object carrying context, alternatives, expected result schema, and resumption metadata. A human reviewer, AI agent, script, or CI pipeline supplies a structured `step_result`. The tool validates the response and resumes.
 
 The soundness test is binding:
 
-> Can the current AI agent be replaced by another agent or by a human, without modifying `cogentia.js`?
+> Can the current AI agent be replaced by another agent or by a human without modifying `cogentia.js`?
 > If yes, the protocol is sound. If no, it is contaminated.
 
-Every resumption produces a [Heraclitean follow-up](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/agent_resumable_cli.md#heraclitean-followup) — a dormant successor that keeps the chain non-terminal. History never 100% ends; the only constant is change.
+Every resumption produces a [Heraclitean follow-up](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/agent_resumable_cli.md#heraclitean-followup): a dormant successor that keeps the chain non-terminal.
 
-## Cognitive Packets
+## Cognitive packets
 
-[**Cognitive Packets**](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/cognitive_packets.md) (v0.3) generalise the continuation protocol beyond the CLI. A cognitive packet is composed of two layers:
+[**Cognitive Packets**](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/cognitive_packets.md) generalise the continuation protocol beyond the CLI.
 
-- an **envelope** carrying kind-agnostic metadata (protocol header, provenance, context reference, transmission mode, routing, traces) that any agent — human or machine — can read without interpreting the inner work;
-- a **payload** carrying kind-specific cognitive content (continuation, objection, hypothesis, decision, failure, or routing), validated by an agent that understands the declared kind.
+A cognitive packet has two layers:
 
-A routing agent (workflow engine, human dispatcher, queue manager) can validate, queue, archive, or acknowledge a packet by reading the envelope alone. Only an agent capable of handling the declared kind needs to interpret the payload. New kinds may be added without modifying the envelope.
+- an **envelope** carrying kind-agnostic metadata: protocol header, provenance, context reference, transmission mode, routing, traces;
+- a **payload** carrying kind-specific cognitive content: continuation, objection, hypothesis, decision, failure, or routing.
 
-The `cogentia.continuation.v1` object **is** the canonical payload of a packet whose `packet_kind = continuation` — no semantic change to the CLI primitive, only a clearer transport story when the work needs to leave the CLI runtime (copied into a GitHub issue, attached to a document, pasted into a different AI conversation, resumed by a different agent).
+A routing agent can validate, queue, archive, or acknowledge a packet by reading the envelope alone. Only an agent capable of handling the declared kind needs to interpret the payload.
 
-## The Pipeline — packet-switching applied to method
+The `cogentia.continuation.v1` object is the canonical payload of a packet whose `packet_kind = continuation`.
 
-FractaVolta's TL;DR is *packet-switching to energy, COP to cognition, liquid democracy to deliberation*. The same insight applies recursively to the cognitive infrastructure layer's own working method.
+## The Pipeline — packet switching applied to method
 
-The [**Pipeline**](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/pipeline.md) (method note v0.4, 2026-05-25) is the corpus's operational method, captured in one phrase:
+FractaVolta's TL;DR is: *packet switching to energy, COP to cognition, liquid democracy to deliberation*.
+
+The same insight applies recursively to the cognitive infrastructure layer's own working method.
+
+The [**Pipeline**](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/pipeline.md) is the corpus's operational method, captured in one phrase:
 
 > **Pipeline on the surface, packet network in depth.**
 
-Intuitions become cognitive packets, packets become versioned source documents, source documents derive into audience-specific products (papers, blogposts, parliamentary notes, public dashboards), public feedback reintegrates into the corpus. Not a linear circuit — a packet-switched cognitive network.
+Intuitions become cognitive packets. Packets become versioned source documents. Source documents derive into audience-specific products: papers, blogposts, parliamentary notes, public dashboards. Public feedback reintegrates into the corpus.
 
-The companion paper [**Derived Products**](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/derived_products.md) (v0.2) formalises the *source ↔ derived* split it implies: the substantive content belongs to a versioned source corpus; academic papers, public essays, social posts, video scripts, parliamentary notes are derived forms adapted to specific audiences/platforms/personas. Operating rule:
+This is not a linear circuit. It is a packet-switched cognitive network.
 
-> *Do not popularize from the academic paper; derive from the corpus.*
+The companion paper [**Derived Products**](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/derived_products.md) formalises the source ↔ derived split: substantive content belongs to a versioned source corpus; academic papers, public essays, social posts, video scripts, and institutional notes are derived forms adapted to specific audiences, platforms, and personas.
 
-This is the cognition-layer instance of the same packet/circuit diagnostic that drives the energy and civic layers. It is also the operational counterpart of the [Discours de la seconde méthode](https://github.com/JeanHuguesRobert/barons-Mariani/blob/main/research/second_method.md). The method survives being applied to itself: `pipeline.md` is *a self-describing artefact of the method it describes*.
+Operating rule:
+
+> Do not popularize from the academic paper; derive from the corpus.
 
 ## The Second Method
 
-The methodological foundation of the entire corpus is the [Discours de la seconde méthode](https://github.com/JeanHuguesRobert/barons-Mariani/blob/main/research/second_method.md). Five rules:
+The methodological foundation of the entire corpus is the [Discours de la seconde méthode](https://github.com/JeanHuguesRobert/barons-Mariani/blob/main/research/second_method.md).
 
-- **Rule 0 — Encode the boundary in the architecture.** AI agents may participate in epistemic production (drafting, summarizing, mediating). Political governance — binding decisions — belongs to living humans alone.
-- **Rule 1 — Publish the process, not only the result.** The audit log, the continuation log, the git history are part of the deliverable.
-- **Rule 2 — Make every objection a first-class contribution.** Falsifiable claims, marked feelings-of-certainty, requests for specifics — all are typed, all are recorded.
-- **Rule 3 — Structure for machine readability from the start.** Stable identifiers, schemas, canonical URLs, append-only audit logs.
+Five rules:
+
+- **Rule 0 — Encode the boundary in the architecture.** AI agents may participate in epistemic production. Political governance — binding decisions — belongs to living humans alone.
+- **Rule 1 — Publish the process, not only the result.** The audit log, continuation log, and git history are part of the deliverable.
+- **Rule 2 — Make every objection a first-class contribution.** Falsifiable claims, marked feelings of certainty, and requests for specifics are all typed and recorded.
+- **Rule 3 — Structure for machine readability from the start.** Stable identifiers, schemas, canonical URLs, and append-only audit logs.
 - **Rule 4 — Let the corpus be its own evidence.** The repositories demonstrate the method on themselves.
 
 ## What this means in practice
 
-**If you are a partner.** You don't have to take our word for what we delivered. The audit trail of the deployment is part of what you receive. If we ever can't be found, the next operator can pick up exactly where we left off — every decision recorded, every alternative considered, every objection filed.
+**If you are a partner.** You do not have to take our word for what we delivered. The audit trail of the deployment is part of what you receive. If we ever cannot be found, the next operator can pick up where we left off.
 
-**If you are a deployer.** Your installation produces its own typed audit trail. You can run `cogentia.js scan` against your site's documentation to verify it matches the canonical specification. Drift becomes visible.
+**If you are a deployer.** Your installation produces its own typed audit trail. You can run corpus checks against site documentation. Drift becomes visible.
 
-**If you are a researcher.** The corpus is open. Fork it. Contest a claim by filing an issue — it will be converted into a falsifiable form, marked as unfalsifiable with attribution, or escalated for more context. Your objection becomes part of the public record. Methods: see the [for-researchers page](./for-researchers).
+**If you are a researcher.** The corpus is open. Fork it. Contest a claim by filing an issue. Your objection becomes part of the public record. See [For researchers](./for-researchers).
 
-**If you are a citizen using a deployed Inseme instance.** The AI mediator Ophélia is bound by the same protocol. Her contributions are typed events; her reasoning is replayable; she is replaceable. The deliberation belongs to the assembly — not to a vendor, not to her.
+**If you are a citizen using a deployed Inseme instance.** The AI mediator Ophélia is bound by the same distinction: her contributions are typed events; the deliberation belongs to the assembly, not to a vendor or to the mediator.
 
 ## How to engage
 
-- File issues at any of the corpus repositories listed in the [ecosystem](#) footer. They are read.
-- Install `cogentia.js` locally — it's MIT-licensed, zero-dependency Node.js. The [README](https://github.com/JeanHuguesRobert/cogentia#readme) is the entry point.
-- Read the [Cogentia Commons Working Paper](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/Cogentia_Commons_Working_Paper.md) for the methodology's formal specification.
-- Read [Agent-Resumable CLI](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/agent_resumable_cli.md) for the continuation protocol's design rationale.
+- File issues in the relevant corpus repository.
+- Install `cogentia.js`; it is MIT-licensed and designed for local inspection.
+- Read the [Cogentia Commons Working Paper](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/Cogentia_Commons_Working_Paper.md) for the formal methodology.
+- Read [Agent-Resumable CLI](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/agent_resumable_cli.md) for the continuation protocol.
+- For local Corsica-based field pages, start from [FractaVolta en Corse](./fr/).
 
-La méthode est proposée, pas imposée. Les structures qui cherchent du théâtre de conformité, des audits opaques ou de la cognition verrouillée par un fournisseur ne trouveront pas FractaVolta un partenaire adapté.
+The method is proposed, not imposed. Structures seeking compliance theatre, opaque audits, or cognition locked into a single vendor will not find FractaVolta a suitable partner.
 
-**Travaux en Corse** : la plupart de nos déploiements et pilotes concrets se font actuellement en Corse (seconde vie solaire, habitat DC-natif, nœuds locaux).
-
-Pour les acteurs de terrain (agriculteurs, collectivités, installateurs), les pages les plus directement utiles sont :
-- [Seconde Vie solaire](./fr/seconde-vie)
-- [Marchés locaux](./fr/marches)
-- [Partenaires installateurs](./fr/installateurs)
-
-Ces pages sont écrites dans un registre plus opérationnel et ancré sur le territoire. Si vous êtes sur le terrain, commencez par là plutôt que par cette page.
-
----
-
-**Vous souhaitez travailler avec nous ?**  
-Contact : [jhr@baronsmariani.org](mailto:jhr@baronsmariani.org) • [LinkedIn](https://www.linkedin.com/company/fractavolta/)
+Contact: [jhr@baronsmariani.org](mailto:jhr@baronsmariani.org) · [LinkedIn — FractaVolta](https://www.linkedin.com/company/fractavolta/)
