@@ -32,8 +32,11 @@ Each repository carries a [`research/index.md`](https://github.com/JeanHuguesRob
 
 **Energy substrate**
 - [The Unconscious Grid](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/UNCONSCIOUS_GRID.md) — store-and-forward as the repressed solution to energy sovereignty; §8 extends the diagnosis to cognition, sociability, money, and territory, making this the entry point to the wider packetization corpus ([FR](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/LE_RESEAU_INCONSCIENT.md))
+- [Generalized Packet Networks](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/generalized_packet_networks.md) (v0.3) — the cross-domain framework: heterogeneous packets, resource occupancy, congestion elasticity, packet decay, cache hierarchies, backbone/last-mile decomposition, mesh resilience. EPN, PGN, IPN and Thermal Packets are instances of this.
 - [DC-Native Energy Packet Networks](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/dc_native_epn.md) — 48V SELV node architecture
 - [Packetized Gravity Networks](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/PGN.md) — hydraulic exergy
+- [Thermal Packet Networks](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/thermal_packet_networks.md) (v0.2) — multi-scale store-and-forward architecture for low-exergy heat and cold distribution
+- [Packet Paper Template](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/packet_paper_template.md) (v0.2) — methodological template for declining the Generalized Packet Networks framework into substrate-specific papers
 - [The Packet Transition: A Lateral Reading](https://github.com/JeanHuguesRobert/marenostrum/blob/main/packet_transition.md) — phronèsis, amathia, transition taxonomy
 - [The Packet as Evolutionary Attractor](https://github.com/JeanHuguesRobert/marenostrum/blob/main/packet_attractor.md) — complexity-theoretic framing
 
@@ -44,19 +47,27 @@ Each repository carries a [`research/index.md`](https://github.com/JeanHuguesRob
 **Cognition layer**
 - [Agent-Resumable CLI](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/agent_resumable_cli.md) — externalized judgment, continuations, provider-neutral resumption
 - [Cognitive Packets](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/cognitive_packets.md) (v0.3) — envelope-and-payload format generalising the continuation pattern beyond the CLI; six packet kinds (continuation, objection, hypothesis, decision, failure, routing)
+- [Cognitive Packet Switching](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/cognitive_packet_switching.md) (published source v1.0) — a protocol layer for routable ideas, continuations and agent orchestration: extends the envelope/payload model into a switching/routing layer. The same conceptual shift that took information networks from circuit-switched to packet-switched, applied to cognition.
+- [COP Reactive Cognitive Extension](https://github.com/JeanHuguesRobert/inseme/blob/main/packages/cop-core/REACTIVE_COGNITIVE_EXTENSION.md) (v0.1, operational note) — protocol surface for packet attractors, CogQueries and pressure strategies, derived from the [source document](https://github.com/JeanHuguesRobert/inseme/blob/main/research/reactive_cognitive_cop_extension.md); native implementation delegated to [Inox](https://github.com/JeanHuguesRobert/Inox/blob/master/research/reactive_sets_inox_cop_implementation.md).
+- [COP Implementation Profiles](https://github.com/JeanHuguesRobert/inseme/blob/main/packages/cop-core/ImplementationProfiles.md) — documentation convention for concrete COP implementations; the kernel reference profile lives in [`packages/cop-kernel/PROFILE.md`](https://github.com/JeanHuguesRobert/inseme/blob/main/packages/cop-kernel/PROFILE.md).
 - [Pipeline](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/pipeline.md) (method note v0.4) — *pipeline on the surface, packet network in depth.* The corpus's operational method note; self-applicative; operational counterpart of the *Discours de la seconde méthode*.
 - [Derived Products](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/derived_products.md) (v0.2) — source ↔ derived split: the substantive content belongs to a versioned source corpus; academic papers, blogposts, parliamentary notes, public dashboards are all derived forms of equal status. *Do not popularize from the academic paper; derive from the corpus.*
 - [cogentia.js — Tutorial and Near-Specification](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/cogentia_js_tutorial.md) (auto-generated, v0.1, targets `cogentia.js v0.10.0`) — core ideas, storage model, 14 workflows, command reference. Sufficient detail to seed a faithful re-implementation in another language, persistence layer, or rendering format.
 
 **Language and runtime substrate**
 - [Inox — Programming Language Specification](https://github.com/JeanHuguesRobert/Inox/blob/master/research/inox-spec.md) — concatenative stack VM with strict control/data plane separation; runtime substrate for the future *Fractanet*; TS reference implementation today, heading for WASM, C/C++, and bare-metal ESP32
+- [Reactive Sets in Inox — Native Implementation Path](https://github.com/JeanHuguesRobert/Inox/blob/master/research/reactive_sets_inox_cop_implementation.md) (v0.1) — implementation path from Toubkal-style dataflow toward the COP Reactive Cognitive Extension; positions Inox as the native runtime for the reactive cognitive layer
 - [The COP Manifesto](https://github.com/JeanHuguesRobert/inseme/blob/main/packages/cop-core/Manifesto.md) — TCP/IP for intelligences
 - [COP Architecture](https://github.com/JeanHuguesRobert/inseme/blob/main/packages/cop-core/Architecture.md) — full protocol specification
 - [Cogentia Commons Working Paper](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/Cogentia_Commons_Working_Paper.md) — methodology for distributed knowledge production
 
 **Civic layer**
 - [DHITL — Democratic Humans in the Loop](https://github.com/JeanHuguesRobert/marenostrum/blob/main/DHITL.md) — the axiom: AI may participate in epistemic production; living persons alone govern
+- [Democratic AI Safety](https://github.com/JeanHuguesRobert/barons-Mariani/blob/main/research/democratic_ai_safety.md) (v0.5) — the political layer of AI Safety: a model controllable by its deployer may still accelerate AI-augmented legal persons against the demos. Companion to DHITL.
 - [Discours de la seconde méthode](https://github.com/JeanHuguesRobert/barons-Mariani/blob/main/research/second_method.md) — methodology rules (publish process, objections as first-class, machine-readable structure, corpus as evidence)
+- [La méthode des terrains féconds](https://github.com/JeanHuguesRobert/barons-Mariani/blob/main/research/methode_terrains_feconds.md) (v0.4) — pre-deliberative protocol: depolarize conflicts of ideas by reconfiguring the oppositions before the argumentative confrontation
+- [Traçabilité des actes](https://github.com/JeanHuguesRobert/barons-Mariani/blob/main/research/traceabilite_des_actes.md) (v0.15.1) — governance doctrine of engaging acts: trace, imputation, justification, correction, revocation; an AI may assist deliberation but must not absorb imputability
+- [Test du critère Rossignol](https://github.com/JeanHuguesRobert/barons-Mariani/blob/main/research/test_critere_rossignol.md) (v0.1, working note) — doctrinal criterion for procedural stabilizers: a dispositif is valid iff it can produce a *Rossignol* (a point of attestation exposable outside its own frame). Applied to four candidate dispositifs (Cogentia, symmetric traceability, FractaVolta, Kudocracy) and to [Inox itself](https://github.com/JeanHuguesRobert/Inox/blob/master/research/test_critere_rossignol_inox.md)
 
 ---
 
