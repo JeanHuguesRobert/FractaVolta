@@ -1,11 +1,12 @@
 ---
 title: Marchés locaux
 subtitle: Où transformer le solaire local en paquets d’énergie utiles au territoire.
-description: "Marchés prioritaires en Corse pour l’énergie-paquet : hangars agricoles, toitures professionnelles, ombrières de parking, centrales existantes, bâtiments avec besoins en eau/froid/recharge. Cibles : agriculteurs, collectivités, installateurs."
+lang: fr
+description: "Marchés prioritaires en Corse pour l’énergie-paquet : hangars agricoles, toitures professionnelles, ombrières de parking, centrales existantes, bâtiments avec besoins en eau, froid ou recharge."
 canonical_url: https://fractavolta.com/fr/marches
-last_stamped_at: 2026-05-20
-date: "2026-05-20"
-status: "draft — auto-filled (frontmatter cleanup)"
+last_stamped_at: 2026-06-02
+date: "2026-06-02"
+status: "active — page française opérationnelle"
 ---
 
 # Marchés locaux
@@ -20,7 +21,7 @@ La question qui nous intéresse est plutôt celle-ci :
 
 Premier marché naturel : installations déjà construites, parfois financées par un contrat d’achat historique, avec des échéances prévisibles.
 
-Usage possible : seconde vie, stockage local, besoins agricoles, froid, eau, atelier, recharge, batteries mobiles.
+Usages possibles : seconde vie, stockage local, besoins agricoles, froid, eau, atelier, recharge, batteries mobiles.
 
 ## 2. Toitures professionnelles
 
@@ -42,7 +43,7 @@ Atout : transformer une toiture publique en capacité communale : secours, recha
 
 ## 5. Champs photovoltaïques existants
 
-Centrales au sol déjà construites ou en repowering.
+Centrales au sol déjà construites ou en renouvellement.
 
 Atout : volumes importants. Risque : captation de valeur et conflits d’usage. Réponse FractaVolta : stockage local, usages prioritaires, preuve de bénéfice territorial.
 
@@ -81,10 +82,10 @@ Un bon site pilote réunit plusieurs critères :
 
 **Le solaire local ne doit pas devenir une rente captée. Il doit devenir une capacité locale.**
 
----
+## Suite utile
 
 Vous avez un site qui correspond à ces critères ?
 
 Contactez-nous : [jhr@baronsmariani.org](mailto:jhr@baronsmariani.org) ou via [LinkedIn](https://www.linkedin.com/company/fractavolta/).
 
-Voir aussi : [Seconde Vie](./seconde-vie) • [Pour les agriculteurs](./agriculteurs) • [Pour les collectivités](./collectivites) • [Installateurs](./installateurs)
+Voir aussi : [Seconde Vie](./seconde-vie) • [Agriculteurs](./agriculteurs) • [Collectivités](./collectivites) • [Installateurs](./installateurs)
