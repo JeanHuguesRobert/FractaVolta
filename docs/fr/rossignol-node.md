@@ -1,11 +1,12 @@
 ---
 title: Rossignol Node
 subtitle: Un nœud pastoral minimal pour tester l’énergie-paquet sur le terrain.
-description: "Rossignol Node : prototype minimal en Corse (abreuvoir automatisé + météo) démontrant la chaîne complète source locale → stockage → usage utile → mesure → traçabilité."
+lang: fr
+description: "Rossignol Node : prototype minimal en Corse, abreuvoir automatisé et météo, démontrant la chaîne source locale, stockage, usage utile, mesure et traçabilité."
 canonical_url: https://fractavolta.com/fr/rossignol-node
-last_stamped_at: 2026-05-20
-date: "2026-05-20"
-status: "draft — auto-filled (frontmatter cleanup)"
+last_stamped_at: 2026-06-02
+date: "2026-06-02"
+status: "active — prototype terrain"
 ---
 
 # Rossignol Node
@@ -30,7 +31,7 @@ source locale
 
 Parce qu’un abreuvoir est un service local très concret : il doit fournir de l’eau, de manière fiable, dans un contexte météo réel, avec une énergie disponible localement.
 
-C’est une bonne preuve fractale de FractaVolta : petite échelle, mais même logique que pour un hangar, une ombrière ou une commune.
+C’est une bonne preuve fractale de FractaVolta : petite échelle, mais même logique que pour un hangar, une ombrière, une exploitation ou une commune.
 
 ## Chaîne minimale
 
@@ -54,7 +55,7 @@ panneau solaire
 - température ;
 - pluie ;
 - vent ;
-- événements d’ouverture / fermeture ;
+- événements d’ouverture ou fermeture ;
 - défauts ou alertes.
 
 ## Paquets produits
@@ -96,3 +97,9 @@ Il permet de tester :
 ## Formule
 
 **Ce qui fonctionne pour un abreuvoir peut s’agrandir vers une exploitation, une commune, puis un réseau de paquets d’énergie.**
+
+## Suite utile
+
+- Relier ce prototype aux [marchés locaux](./marches).
+- Examiner les cas agricoles dans [Agriculteurs et propriétaires](./agriculteurs).
+- Nous contacter : [jhr@baronsmariani.org](mailto:jhr@baronsmariani.org).
