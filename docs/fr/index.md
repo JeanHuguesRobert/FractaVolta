@@ -1,16 +1,18 @@
 ---
 title: FractaVolta en Corse
 subtitle: Transition vers l’énergie-paquet, au service du territoire.
+lang: fr
+alternate_url: /
 description: "FractaVolta en Corse : transformer le solaire local en capacité utile, stockée, tracée et réversible. Seconde vie des installations, audits, pilotes avec agriculteurs, collectivités et installateurs."
 canonical_url: https://fractavolta.com/fr/
-last_stamped_at: 2026-05-20
+last_stamped_at: 2026-06-02
 ---
 
 # FractaVolta en Corse
 
 **Le soleil doit bénéficier d’abord à ceux qu’il arrose.**
 
-FractaVolta étudie en Corse une nouvelle manière de valoriser l’énergie solaire locale : ne plus la traiter seulement comme un flux injecté dans le réseau, mais comme une capacité locale, stockée, orientée, utile et traçable.
+FractaVolta propose en Corse une manière concrète de valoriser l’énergie solaire locale : ne plus la traiter seulement comme un flux injecté dans le réseau, mais comme une **capacité locale**, stockée, orientée, utile, réversible et traçable.
 
 L’objectif est simple : transformer le solaire local en **paquets d’énergie**.
 
@@ -22,6 +24,8 @@ produire localement
   -> tracer les usages et les bénéfices
 ```
 
+Cette page est l’entrée française opérationnelle du site. Les documents de recherche restent majoritairement en anglais. Les pages françaises sont des produits déclinés lorsqu’un public local ou francophone concret le justifie.
+
 ## Ce que nous cherchons maintenant
 
 FractaVolta cherche des partenaires et des sites pilotes en Corse :
@@ -30,17 +34,19 @@ FractaVolta cherche des partenaires et des sites pilotes en Corse :
 - toitures professionnelles ou publiques ;
 - ombrières de parking ;
 - champs photovoltaïques existants ;
-- bâtiments agricoles avec besoins d’eau, de froid, de transformation ou de recharge ;
+- bâtiments agricoles avec besoins d’eau, de froid, de transformation, de recharge ou de stockage ;
 - communes souhaitant renforcer leur autonomie de capacité ;
-- installateurs, mainteneurs et acteurs du stockage.
+- installateurs, mainteneurs et acteurs du stockage ;
+- propriétaires ou exploitants souhaitant tester un modèle plus local, plus lisible et plus réversible.
 
 ## Ce que nous proposons
 
 - audit de seconde vie solaire ;
+- analyse des usages locaux possibles : eau, froid, recharge, stockage, services critiques, compute ;
 - maintenance organisée avec partenaires qualifiés ;
 - stockage local quand il est pertinent ;
 - non-injection par défaut lorsque c’est possible et utile ;
-- réseau utilisé comme secours ou appoint explicite ;
+- réseau utilisé comme secours, appoint ou arbitrage explicite ;
 - revenu simple et lisible pour le propriétaire ;
 - réversibilité contractuelle ;
 - traçabilité des flux d’énergie et de leurs usages.
@@ -60,6 +66,8 @@ FractaVolta cherche des partenaires et des sites pilotes en Corse :
 
 Voir la page [Marchés locaux](./marches).
 
+Elle recense les cas où l’énergie solaire locale risque d’être diluée ou captée si elle reste seulement pensée comme un flux réseau : hangars, toitures, parkings, bâtiments publics, sites agricoles, stockage, recharge, froid, eau et usages critiques.
+
 ## Prototype minimal
 
 FractaVolta avance aussi par un prototype de terrain : [Rossignol Node](./rossignol-node), un abreuvoir automatisé pour un âne, colocalisé avec une station météo et alimenté par une petite chaîne énergétique mesurable.
@@ -68,10 +76,8 @@ Ce prototype ne prouve pas la puissance industrielle. Il prouve la structure : s
 
 ## Niveau recherche
 
-La partie anglaise du site expose l’architecture générale : [Energy packets](../energy-packets), compute, inference, Cogentia et continuité cognitive.
+Pour l’architecture générale en anglais, voir [Energy packets](../energy-packets), [Papers](../papers) et [Methodology](../methodology).
 
-## Pour comprendre la théorie
+Le papier fondateur du *Energy Packet Network* existe aussi en français : [**Le Réseau Inconscient**](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/LE_RESEAU_INCONSCIENT.md) — *de la commutation* store-and-forward *comme solution refoulée à la souveraineté énergétique*.
 
-Le papier fondateur du *Energy Packet Network* est désormais disponible en français : [**Le Réseau Inconscient**](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/LE_RESEAU_INCONSCIENT.md) — *de la commutation* store-and-forward *comme solution refoulée à la souveraineté énergétique*.
-
-Son §8, *La famille élargie*, étend le diagnostic au-delà de l’énergie — vers la cognition, la sociabilité, la monnaie et le territoire — et positionne le papier comme **point d’entrée du corpus de *packetization***. Lecture théorique : ~620 lignes, registre psychanalytique assumé.
+Son §8, *La famille élargie*, étend le diagnostic au-delà de l’énergie — vers la cognition, la sociabilité, la monnaie et le territoire — et positionne le papier comme point d’entrée du corpus de *packetization*. Lecture théorique : environ 620 lignes, registre psychanalytique assumé.
