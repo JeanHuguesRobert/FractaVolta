@@ -1,22 +1,28 @@
 ---
 title: Pour les communes et collectivités
 subtitle: Transformer le solaire local en capacité communale.
-description: "Pour les communes et collectivités corses : valorisation du solaire en capacité locale (stockage, services critiques, autonomie), audits de seconde vie, pilotes avec traçabilité et réversibilité."
+lang: fr
+description: "Pour les communes et collectivités corses : valorisation du solaire en capacité locale, stockage, services critiques, autonomie, audits de seconde vie, pilotes avec traçabilité et réversibilité."
 canonical_url: https://fractavolta.com/fr/collectivites
-last_stamped_at: 2026-05-20
-date: "2026-05-20"
-status: "draft — auto-filled (frontmatter cleanup)"
+last_stamped_at: 2026-06-02
+date: "2026-06-02"
+status: "active — page française opérationnelle"
 ---
 
 # Pour les communes et collectivités
 
-Beaucoup de communes corses disposent de surfaces solaires (bâtiments publics, parkings, ombrières). Aujourd’hui, cette énergie est majoritairement injectée dans le réseau à bas prix.
+Beaucoup de communes corses disposent de surfaces solaires possibles : bâtiments publics, parkings, ombrières, équipements techniques, friches ou surfaces déjà artificialisées.
 
 FractaVolta propose de transformer ces actifs en **capacité locale utile** : stockage, résilience des services publics, recharge, maintien de fonctions critiques, ou alimentation de sites techniques.
 
 C’est une façon concrète de renforcer l’autonomie énergétique et la résilience du territoire, tout en générant de la valeur locale pour les habitants.
+
+Usages possibles :
+
 - froid, eau ou pompage ;
 - secours en cas de crise ;
+- recharge locale ;
+- continuité de service ;
 - usage prioritaire pour les habitants ou services locaux ;
 - traçabilité de la valeur solaire.
 
@@ -68,3 +74,9 @@ L’objectif n’est pas de tout résoudre immédiatement. L’objectif est de d
 ## Formule
 
 **Une commune capable ne se contente pas de produire. Elle sait stocker, orienter, prioriser et tracer l’énergie qu’elle reçoit.**
+
+## Suite utile
+
+- Voir les [marchés locaux](./marches).
+- Voir la logique [Seconde Vie](./seconde-vie).
+- Nous contacter pour un échange exploratoire : [jhr@baronsmariani.org](mailto:jhr@baronsmariani.org).
