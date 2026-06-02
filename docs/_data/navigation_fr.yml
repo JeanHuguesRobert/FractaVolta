@@ -1,0 +1,17 @@
+main:
+  - title: Accueil
+    url: /fr/
+  - title: En Corse
+    url: /fr/
+  - title: Seconde vie
+    url: /fr/seconde-vie
+  - title: Marchés locaux
+    url: /fr/marches
+  - title: Agriculteurs
+    url: /fr/agriculteurs
+  - title: Collectivités
+    url: /fr/collectivites
+  - title: Installateurs
+    url: /fr/installateurs
+  - title: Rossignol Node
+    url: /fr/rossignol-node
