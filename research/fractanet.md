@@ -126,7 +126,8 @@ The result is a system in which:
 See also:
 - `research/generalized_packet_networks.md` for the overarching GPN framework
 - `research/inference_packet_network.md` for the inference layer
-- The COP kernel (especially the bus and federation work in the `inseme` repository)
+- The COP kernel (especially the bus and federation work in the `inseme` repository) as the operational packet-switching substrate
+- `cogentia/research/cognitive_packet_switching.md` and `cogentia_continuation_packet_routing.md` (in the sibling Cogentia repo) for the integrative "Cognitive Packet Switching" / "Cogentia as method-governed router for continuation packets" framing that positions COP Bus + Scheduler as the Fractanet coordination layer.
 
 ---
 
