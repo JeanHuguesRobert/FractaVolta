@@ -3,7 +3,7 @@ title: "Corpus Status — FractaVolta"
 description: "Current state of the FractaVolta knowledge corpus — what is proved, what is open, what remains possible"
 layout: default
 nav_order: 2
-last_modified_at: 2026-06-02
+last_modified_at: 2026-06-08
 canonical_url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/corpus-status.md
 last_stamped_at: 2026-06-01
 license: CC BY-SA 4.0
@@ -29,13 +29,13 @@ creator: Jean Hugues Noël Robert, baron Mariani (généré automatiquement par 
 <!-- BEGIN_AUTO: registered_repos -->
 | Repository | research/index.md | Branch | Last commit |
 |---|---|---|---|
-| cogentia | ✅ | main | 2026-06-02 |
-| FractaVolta | ✅ | main | 2026-06-02 |
-| marenostrum | ✅ | main | 2026-06-02 |
-| barons-Mariani | ✅ | main | 2026-06-02 |
-| inseme | ✅ | main | 2026-06-02 |
-| Inox | ✅ | master | 2026-06-02 |
-| JeanHuguesRobert | ✅ | main | 2026-06-02 |
+| cogentia | ✅ | main | 2026-06-08 |
+| FractaVolta | ✅ | main | 2026-06-08 |
+| marenostrum | ✅ | main | 2026-06-08 |
+| barons-Mariani | ✅ | main | 2026-06-08 |
+| inseme | ✅ | main | 2026-06-08 |
+| Inox | ✅ | master | 2026-06-08 |
+| JeanHuguesRobert | ✅ | main | 2026-06-08 |
 <!-- END_AUTO: registered_repos -->
 
 ---
@@ -203,6 +203,7 @@ graph LR
 <!-- BEGIN_AUTO: published -->
 | Title | Location | Date |
 |---|---|---|
+| [Lien avec C.O.R.S.I.C.A. et l’Institut Mariani](acorsica-institut-mariani.md) *(institutional boundary note — documentary link without institutional confusion)* | this repo | 2026-06-03 |
 | [Packetized Gravity Networks](../PGN.md) | this repo | 2026-05-08 |
 | [The Packet as Evolutionary Attractor — Scale-Invariant Transitions in Complex Networks](../packet_attractor.md) | this repo | 2026-05-08 |
 | [The Packet Transition — A Lateral Reading of Circuit Networks](../packet_transition.md) | this repo | 2026-05-08 |
@@ -222,6 +223,7 @@ graph LR
 | [Thermal Packet Networks — A Multi-Scale Store-and-Forward Architecture for Low-Exergy Heat and Cold Distribution](thermal_packet_networks.md) *(working paper v0.2)* | this repo | 2026-05-22 |
 | [Packet Paper Template — A Minimal Method for Declining Generalized Packet Networks into Substrate-Specific Papers](packet_paper_template.md) *(method-template working paper v0.2)* | this repo | 2026-05-22 |
 | [Fractanet — Working paper](fractanet.md) *(working paper, draft v0.1)* | this repo | 2026-05-31 |
+| [Bonne Marque](bonne_marque_mvp.md) *(conceptual MVP source document v0.2)* | this repo | 2026-06-03 |
 | [Corpus Status](corpus-status.md) *(living view — auto-refreshed by `cogentia.js corpus-status`)* | this repo | refreshable |
 | [Concept Index](concepts.md) *(typed concept registry — mapped by `cogentia.js concepts`)* | this repo | refreshable |
 <!-- END_AUTO: published -->
