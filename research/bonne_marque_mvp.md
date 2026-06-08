@@ -600,3 +600,13 @@ Open one bounded continuation: market sizing and first categories, prompt testin
 
 Human validation needed: yes
 ```
+
+
+<!-- BEGIN_AUTO: backlinks -->
+### Backlinks
+
+*These documents link to this file:*
+- [Corpus Status — FractaVolta](corpus-status.md)
+- [Research Index — FractaVolta](index.md)
+
+<!-- END_AUTO: backlinks -->

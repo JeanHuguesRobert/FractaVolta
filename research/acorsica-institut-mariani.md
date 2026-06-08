@@ -47,3 +47,14 @@ Les liens entre FractaVolta, C.O.R.S.I.C.A., l’Institut Mariani, MareNostrum, 
 Ils ne valent ni fusion institutionnelle, ni exploitation commerciale par C.O.R.S.I.C.A., ni financement, ni portage juridique automatique, ni soutien politique ou électoral.
 
 > L’interconnexion documentaire ne vaut pas confusion institutionnelle.
+
+
+<!-- BEGIN_AUTO: backlinks -->
+### Backlinks
+
+*These documents link to this file:*
+- [Lien avec C.O.R.S.I.C.A. et l’Institut Mariani](../acorsica-institut-mariani.md)
+- [Corpus Status — FractaVolta](corpus-status.md)
+- [Research Index — FractaVolta](index.md)
+
+<!-- END_AUTO: backlinks -->

@@ -1046,3 +1046,13 @@ Whether GPN is a useful framework will be determined by deployment, measurement,
 *Process note: v0.1 was an intuitive exposition. v0.2 introduced methodological framing, naming clarifications (Gelenbe CPN vs. corpus cognitive packets vs. generalized packets, GPN vs. Fractanet), explicit scope statements on social and governance packets, minimal mathematical formulations, an enriched scientific positioning, a research-gap statement, and a claim manifest. v0.3 adds the operational boundary rule, minimal-packet test, packet service metric template, tightened social/governance boundary criteria, expanded related-work positioning, and revised claim manifest.*
 
 *The next version will be better. That is the point.*
+
+
+<!-- BEGIN_AUTO: backlinks -->
+### Backlinks
+
+*These documents link to this file:*
+- [Corpus Status — FractaVolta](corpus-status.md)
+- [Research Index — FractaVolta](index.md)
+
+<!-- END_AUTO: backlinks -->

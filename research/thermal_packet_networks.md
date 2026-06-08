@@ -854,3 +854,13 @@ Whether TPN is a useful architecture will be determined by deployment, measureme
 *Process note: This document results from an iterative drafting process. v0.1 was an intuitive exposition. v0.2 introduces methodological framing, scope claims, formal definitions, service metrics (TTI, congestion elasticity, packet decay), the CXU_th unit, two worked examples (thermos, Mariani Village), and a claim manifest. The history is in the repository.*
 
 *The next version will be better. That is the point.*
+
+
+<!-- BEGIN_AUTO: backlinks -->
+### Backlinks
+
+*These documents link to this file:*
+- [Corpus Status — FractaVolta](corpus-status.md)
+- [Research Index — FractaVolta](index.md)
+
+<!-- END_AUTO: backlinks -->

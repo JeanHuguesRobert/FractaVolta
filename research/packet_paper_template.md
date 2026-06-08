@@ -867,3 +867,13 @@ Cogentia Commons = infrastructure for continuation and improvement
 The template is not ancillary. It is the mechanism by which the corpus becomes generative without becoming incoherent.
 
 > A theory becomes productive when it can generate disciplined instances.
+
+
+<!-- BEGIN_AUTO: backlinks -->
+### Backlinks
+
+*These documents link to this file:*
+- [Corpus Status — FractaVolta](corpus-status.md)
+- [Research Index — FractaVolta](index.md)
+
+<!-- END_AUTO: backlinks -->

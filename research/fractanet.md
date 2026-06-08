@@ -186,3 +186,12 @@ These questions are being explored through continued kernel and bac-à-sable wor
 ---
 
 *Comments, objections, and contributions are welcome via the usual channels of the corpus.*
+
+<!-- BEGIN_AUTO: backlinks -->
+### Backlinks
+
+*These documents link to this file:*
+- [Corpus Status — FractaVolta](corpus-status.md)
+- [Research Index — FractaVolta](index.md)
+
+<!-- END_AUTO: backlinks -->
