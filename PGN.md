@@ -23,6 +23,22 @@ jhr@baronsmariani.org | fractavolta.com
 
 ---
 
+## Orientation
+
+Status: sovereign source document in draft form.
+
+Function in the corpus: introduce Packetized Gravity Networks as the hydraulic and energetic substrate that can buffer solar exergy before it becomes sovereign compute.
+
+Read before: [Carte globale du Corpus](https://github.com/JeanHuguesRobert/JeanHuguesRobert/blob/main/research/corpus-map.md), [DHITL](https://github.com/JeanHuguesRobert/marenostrum/blob/main/DHITL.md), and [Infrastructure is All You Need](https://github.com/JeanHuguesRobert/marenostrum/blob/main/infrastructure_is_all_you_need.md).
+
+Read after: [Inference Packet Network](research/inference_packet_network.md) and the FractaVolta research index.
+
+Depends on: the packet-switching analogy, distributed water infrastructure, territorial exergy storage, and the MareNostrum compute-governance layer.
+
+Continuation: clarify the connection from PGN to EPN/IPN and to concrete Mediterranean pilot sites.
+
+Last consolidation: 2026-06-09 — orientation block added during corpus digestion.
+
 ## Abstract
 
 This paper introduces Packetized Gravity Networks (PGN), a distributed hydro-energetic infrastructure architecture that repurposes existing water systems — irrigation canals, mountain reservoirs, gravity-fed conduits — as programmable exergy networks. The central claim is that gravitational potential energy, distributed across territorial relief, can function as a passive, multi-purpose memory layer for intermittent solar generation, provided it is governed through software-defined hydraulic routing nodes we term Intelligent Energy Valves (IEV).
