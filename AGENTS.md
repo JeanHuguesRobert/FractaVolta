@@ -52,7 +52,7 @@ The corpus remains the source of truth.
 Human authorization governs stabilization.
 ```
 
-Reference: `cogentia/research/agent_configuration_layer.md`.
+Reference: [`cogentia/research/agent_configuration_layer.md`](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/agent_configuration_layer.md).
 
 ## Technical discipline
 
