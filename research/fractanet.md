@@ -9,11 +9,11 @@ x-email: "jhr@baronsmariani.org"
 x-website: "https://fractavolta.com"
 canonical_path: "FractaVolta/research/fractanet.md"
 canonical_url: "https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/fractanet.md"
-version: "0.2-draft"
-status: "working-paper — redactor draft under human validation"
+version: "0.3.2-draft"
+status: "working-paper — redactor revised draft under human validation"
 date: "2026-06-10"
-last_modified_at: "2026-06-10"
-last_stamped_at: "2026-06-10"
+last_modified_at: "2026-06-14"
+last_stamped_at: "2026-06-14"
 license: "CC BY-SA 4.0"
 language: "en"
 type: "source-document"
@@ -35,7 +35,36 @@ related_documents:
   - "cogentia/research/pipeline.md"
   - "cogentia/prompts/redactor.md"
   - "cogentia/prompts/reviewer.md"
+  - "cogentia/prompts/cognitive_packet.md"
+  - "cogentia/research/cognitive_packets.md"
+  - "cogentia/research/cognitive_packet_switching.md"
+  - "cogentia/research/cogentia_continuation_packet_routing.md"
   - "inseme/packages/cop-core/Invariants.md"
+  - "inseme/packages/cop-core/ImplementationProfiles.md"
+  - "inseme/research/reactive_cognitive_cop_extension.md"
+  - "marenostrum/safe_compute_exergy.md"
+  - "marenostrum/compute-exergy-omitted-variable.md"
+  - "marenostrum/CXU_SPEC.md"
+related_document_urls:
+  - "https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/generalized_packet_networks.md"
+  - "https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/inference_packet_network.md"
+  - "https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/thermal_packet_networks.md"
+  - "https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/packet_paper_template.md"
+  - "https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/index.md"
+  - "https://github.com/JeanHuguesRobert/Inox/blob/main/research/inox-spec.md"
+  - "https://github.com/JeanHuguesRobert/cogentia/blob/main/research/pipeline.md"
+  - "https://github.com/JeanHuguesRobert/cogentia/blob/main/prompts/redactor.md"
+  - "https://github.com/JeanHuguesRobert/cogentia/blob/main/prompts/reviewer.md"
+  - "https://github.com/JeanHuguesRobert/cogentia/blob/main/prompts/cognitive_packet.md"
+  - "https://github.com/JeanHuguesRobert/cogentia/blob/main/research/cognitive_packets.md"
+  - "https://github.com/JeanHuguesRobert/cogentia/blob/main/research/cognitive_packet_switching.md"
+  - "https://github.com/JeanHuguesRobert/cogentia/blob/main/research/cogentia_continuation_packet_routing.md"
+  - "https://github.com/JeanHuguesRobert/inseme/blob/main/packages/cop-core/Invariants.md"
+  - "https://github.com/JeanHuguesRobert/inseme/blob/main/packages/cop-core/ImplementationProfiles.md"
+  - "https://github.com/JeanHuguesRobert/inseme/blob/main/research/reactive_cognitive_cop_extension.md"
+  - "https://github.com/JeanHuguesRobert/marenostrum/blob/main/safe_compute_exergy.md"
+  - "https://github.com/JeanHuguesRobert/marenostrum/blob/main/compute-exergy-omitted-variable.md"
+  - "https://github.com/JeanHuguesRobert/marenostrum/blob/main/CXU_SPEC.md"
 tags:
   - fractanet
   - generalized-packet-networks
@@ -76,6 +105,8 @@ x-keywords:
   - no single point of failure
   - no single point of capture
 human_validation_required: true
+review_status: "Grok constructive review completed 2026-06-13; high-signal points selectively integrated in v0.3; corpus anchors added in v0.3.1"
+revision_note: "v0.3 integrates selected reviewer objections: envelope comparison, exergy toy model, registry anti-capture, minimal verb schema, JavaScript/Inox boundary, and one cross-scale fractal example. v0.3.1 adds corpus anchors for open questions. Review remains advisory; human author arbitrates."
 validation_points:
   - "Confirm whether this v0.2 should replace the current FractaVolta/research/fractanet.md or be reviewed first as a separate draft."
   - "Validate the public definition of Fractanet as the infrastructural instance of Generalized Packet Networks."
@@ -85,6 +116,29 @@ validation_points:
   - "Validate all institutional references before public publication."
 ---
 
+## 0. Corpus navigation
+
+This draft uses clickable corpus anchors for easier review and continuation.
+
+### Primary source anchors
+
+| Role | Corpus document |
+|---|---|
+| General packet grammar | [FractaVolta/research/generalized_packet_networks.md](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/generalized_packet_networks.md) |
+| Inference packet sibling paper | [FractaVolta/research/inference_packet_network.md](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/inference_packet_network.md) |
+| Thermal packet sibling paper | [FractaVolta/research/thermal_packet_networks.md](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/thermal_packet_networks.md) |
+| Packet-paper discipline | [FractaVolta/research/packet_paper_template.md](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/packet_paper_template.md) |
+| FractaVolta research index | [FractaVolta/research/index.md](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/index.md) |
+| Inox specification | [Inox/research/inox-spec.md](https://github.com/JeanHuguesRobert/Inox/blob/main/research/inox-spec.md) |
+| Cogentia pipeline | [cogentia/research/pipeline.md](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/pipeline.md) |
+| Redactor prompt | [cogentia/prompts/redactor.md](https://github.com/JeanHuguesRobert/cogentia/blob/main/prompts/redactor.md) |
+| Reviewer prompt | [cogentia/prompts/reviewer.md](https://github.com/JeanHuguesRobert/cogentia/blob/main/prompts/reviewer.md) |
+| COP invariants | [inseme/packages/cop-core/Invariants.md](https://github.com/JeanHuguesRobert/inseme/blob/main/packages/cop-core/Invariants.md) |
+| COP implementation profiles | [inseme/packages/cop-core/ImplementationProfiles.md](https://github.com/JeanHuguesRobert/inseme/blob/main/packages/cop-core/ImplementationProfiles.md) |
+| Compute exergy | [marenostrum/safe_compute_exergy.md](https://github.com/JeanHuguesRobert/marenostrum/blob/main/safe_compute_exergy.md) |
+| CXU specification | [marenostrum/CXU_SPEC.md](https://github.com/JeanHuguesRobert/marenostrum/blob/main/CXU_SPEC.md) |
+
+
 # Fractanet
 
 ## Generalized Control Planes for Heterogeneous Packet Networks
@@ -93,9 +147,9 @@ validation_points:
 Institut Mariani / C.O.R.S.I.C.A. / FractaVolta  
 1 cours Paoli, F-20250 Corte, Corsica, France  
 
-*Working paper — v0.2 draft — June 2026*  
+*Working paper — v0.3 draft — June 2026*  
 *License: CC BY-SA 4.0*  
-*Repository: `JeanHuguesRobert/FractaVolta` — target path: `research/fractanet.md`*
+*Repository: `JeanHuguesRobert/FractaVolta` — target path: [research/fractanet.md](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/fractanet.md)*
 
 ---
 
@@ -114,6 +168,20 @@ Its execution substrate is **Inox**, especially in its minimal concatenative for
 The resulting promise is:
 
 > **No single point of failure. No single point of capture.**
+
+---
+
+## Reading guide — key architectural commitments
+
+This document is long because it is a source document, not a short public article. The following commitments are the load-bearing ones:
+
+1. **GPN vs. Fractanet** — Generalized Packet Networks provide the theoretical grammar; Fractanet is one infrastructural implementation of that grammar.
+2. **Envelope vs. payload** — the control plane governs envelopes; heterogeneous data planes carry payloads.
+3. **Verbs vs. endpoints** — clients call stable verbs; the gateway dispatches to the appropriate implementation.
+4. **COP/Inox core** — Inox executes capability-bound compositions; COP supervises long, streamable, resumable, or human-sensitive acts.
+5. **RAIX anti-capture** — redundancy must apply not only to data planes but also to registries, policies, traces, and other control surfaces.
+6. **Exergy first** — routing should maximize useful capacity under hard constraints, not merely minimize raw energy or cost.
+7. **Human arbitration** — dense Inox and agent-readable traces are acceptable only if the act remains explainable to humans.
 
 ---
 
@@ -139,6 +207,10 @@ Its purpose is to stabilize the current formulation of Fractanet after several c
 
 The document is deliberately written as a source document: its thesis, distinctions, boundaries, failure modes, and non-claims should be reconstructible from the text alone.
 
+### 1.1 Methodological stance
+
+This draft follows the corpus redactor/reviewer discipline: source before derived product, signal/noise classification, explicit non-claims, failure modes, open questions, and human validation. The external review of v0.2 is treated as advisory, not sovereign: it is used to increase testability and reduce ambiguity, while final naming, scope, and publication decisions remain human decisions.
+
 ---
 
 ## 2. Core thesis
@@ -156,6 +228,22 @@ A still shorter architectural test:
 > **No single point of failure. No single point of capture.**
 
 These formulas are not slogans substituting for design. They are compression devices for the architecture developed below.
+
+### 2.1 MVP constraint
+
+The first implementation should not attempt to cover all substrates. The MVP should be a programmable API gateway that demonstrates the invariants at small scale:
+
+- capability verbs rather than fixed endpoints;
+- a minimal script/verb registry;
+- Inox Core execution for the serious path;
+- a limited JavaScript adoption profile for short bounded scripts;
+- explicit capabilities and quotas;
+- programmable cache with TTL/freshness policy;
+- COP event tracing;
+- simple dispatch with fallback;
+- one small exergy-inspired scoring function applied only after hard constraints.
+
+The broader multi-substrate claim should be tested through this limited digital/API case before being generalized further.
 
 ---
 
@@ -318,6 +406,21 @@ The same invariant recurs:
 
 > **The envelope governs movement and accountability. The payload carries useful capacity.**
 
+### 6.5 Comparative envelope sketch
+
+The shared grammar must remain modest. It does not mean that all substrates share the same physics or legitimacy rules. It means that a minimal envelope can often expose enough control information for routing, authorization, supervision, and traceability.
+
+| Packet type | Minimal envelope fields | Payload | Specific degradation / risk | Validation question |
+|---|---|---|---|---|
+| **Data packet** | origin, destination, TTL, protocol, signature, confidentiality level | bytes, document, event | staleness, leakage, corruption | Is the data authentic, authorized, and still fresh? |
+| **Energy packet** | source, destination, time window, storage interface, exergy value, proof of origin | useful energy or claim on useful energy | conversion loss, storage loss, grid congestion | Is useful energy deliverable at the required place and time? |
+| **Water packet** | source, destination, volume, quality, time window, usage right, priority | water volume or allocation right | evaporation, contamination, scarcity conflict | Is the allocation legitimate, available, and fit for use? |
+| **Goods packet** | origin, destination, custody chain, handling constraints, deadline, proof of receipt | material item, component, parcel | loss, damage, delay, custody dispute | Is custody traceable and delivery verifiable? |
+| **Inference packet** | model policy, input disclosure level, cost budget, latency target, trace requirement | inference request or result | hallucination, privacy leak, model drift | Is the inference authorized, explainable, and useful enough? |
+| **Mandate packet** | delegator, delegate, scope, duration, revocation rule, legitimacy condition, trace | bounded authority to act | abuse, expiration, contested legitimacy | Is the action inside the mandate and still revocable? |
+
+This table is not a final schema. It is a test: if a substrate cannot expose a bounded envelope of this kind, it should not be forced into the packet model.
+
 ---
 
 ## 7. Verbs instead of endpoints
@@ -475,6 +578,59 @@ The registry should track:
 - continuation compatibility.
 
 The registry is not merely a deployment tool. It is a corpus of executable capabilities.
+
+### 10.1 Minimal verb record
+
+A minimal registry entry should be machine-readable and reviewable by humans. For a first MVP, a verb record could be no more than:
+
+```yaml
+verb: customer.summary
+version: 0.1.0
+namespace: /client/mobile
+status: draft
+runtime: inox-core
+entrypoint: verbs/customer_summary.inox
+input_schema: schemas/customer_summary.input.json
+output_schema: schemas/customer_summary.output.json
+capabilities:
+  read:
+    - /customers/{id}
+    - /orders?customer_id={id}
+  write: []
+cache:
+  ttl_seconds: 300
+  scope: tenant
+routing:
+  preferred_region: eu
+  fallback: stale-cache-if-authorized
+quotas:
+  max_runtime_ms: 500
+  max_api_calls: 25
+trace:
+  cop_required: true
+  include_candidate_routes: true
+owner: FractaVolta
+review_status: human-validation-required
+```
+
+The schema is intentionally conservative. It should be sufficient to test the model without pretending to solve all registry governance questions.
+
+### 10.2 Registry as capture surface
+
+The registry is itself a potential point of capture. Whoever controls naming, signing, capability grants, namespace allocation, or deprecation can influence the whole dispatch layer. Therefore RAIX must apply to the registry and not only to the data planes.
+
+Minimal anti-capture requirements for the registry:
+
+- append-only or versioned history;
+- signed verb records;
+- mirrorable registry state;
+- explicit namespace authority;
+- auditable capability grants;
+- reproducible script hashes;
+- visible deprecation and override rules;
+- at least one independent trace of registry changes.
+
+A centralized registry may be acceptable for an MVP. It is not acceptable as the mature Fractanet pattern unless it can be mirrored, audited, forked, and reconciled.
 
 ---
 
@@ -834,6 +990,40 @@ Formula:
 
 > **Capabilities bound the search space. Exergy ranks the admissible routes. Inox explores them. COP explains the decision.**
 
+### 19.1 Toy scoring example
+
+The following numbers are deliberately simple. They are not a formal model; they show the decision order.
+
+A client calls:
+
+```text
+customer.summary(customer_id=123)
+```
+
+Candidate routes:
+
+| Route | Hard constraints | Useful capacity | Cost bundle | Exergy score | Decision |
+|---|---:|---:|---:|---:|---|
+| A — direct source APIs | allowed | 90 | 60 | 1.50 | admissible |
+| B — regional synthetic endpoint | allowed | 85 | 35 | 2.43 | selected |
+| C — stale cache | allowed only if freshness > 5 min | 60 | 10 | 6.00 | rejected if freshness rule fails |
+| D — non-EU gateway | violates data-residency policy | 95 | 20 | n/a | rejected before scoring |
+
+The apparent best score may be route C, but if the freshness rule fails it is not admissible. Route D may look efficient, but it violates a hard constraint. The selected route is therefore B, not because it is globally cheapest, but because it produces the best useful capacity among admissible routes.
+
+In a COP trace, this should not appear as a mysterious “AI routing choice”. It should appear as:
+
+```text
+constraints.applied
+candidate.rejected(route=D, reason=data_residency)
+candidate.rejected(route=C, reason=freshness_policy)
+energy_score.estimated(route=A, score=1.50)
+energy_score.estimated(route=B, score=2.43)
+route.selected(route=B)
+```
+
+At this stage, exergy routing should therefore be framed as an **exergy-inspired scoring function under constraints**, not yet as a fully specified model family.
+
 ---
 
 ## 20. RAIX: generalized redundancy
@@ -866,6 +1056,24 @@ where `X` may be:
 RAIX is not redundancy for its own sake.
 
 It is redundancy as anti-capture and anti-fragility.
+
+A minimal RAIX taxonomy should distinguish:
+
+| RAIX type | What is redundant | Failure/capture resisted | Typical cost |
+|---|---|---|---|
+| **RAIX-data** | data copies, mirrors, archives | data loss, deletion, hostage platforms | storage, consistency |
+| **RAIX-compute** | runtimes, gateways, workers | cloud outage, compute monopoly | orchestration, scheduling |
+| **RAIX-cache** | local/regional caches | latency, upstream outage, quota pressure | freshness management |
+| **RAIX-route** | alternative paths and dispatch targets | network failure, endpoint capture | routing complexity |
+| **RAIX-policy** | policy mirrors and review authorities | opaque governance, unilateral rule change | reconciliation |
+| **RAIX-trace** | independent trace custody | audit capture, evidence loss | privacy and sealing |
+| **RAIX-institution** | multiple legitimate carriers of authority | political or administrative chokepoints | coordination |
+
+The minimum correctness condition is not “many copies”. It is:
+
+> **At least one independent admissible path must remain available when any single ordinary failure or capture surface is removed.**
+
+This condition must itself be tested against exergy: a redundant path that costs more capacity than it preserves is only redundancy theater.
 
 A centralized system may be efficient under ideal conditions but fragile under stress. A monopolized system may be convenient but capturable. Fractanet treats excessive centralization as both a technical and political risk.
 
@@ -1068,6 +1276,12 @@ Boundary rule:
 
 > A unit qualifies as a packet only when its operational identity is bounded, addressable, storable or delayable, and independently routable or governable.
 
+Positive examples: a signed inference request, a battery charging slot, a mandate limited in scope and duration.
+
+Negative examples: a permanent social relation, an unbounded cultural influence, a continuous physical flow with no addressable unit and no independent governance boundary.
+
+Related open question: #9, physical data-plane envelope compatibility.
+
 ### 27.2 Control-plane capture
 
 Even if data planes are distributed, the control plane may be captured by:
@@ -1080,19 +1294,19 @@ Even if data planes are distributed, the control plane may be captured by:
 - a legal chokepoint;
 - an opaque routing algorithm.
 
-Fractanet must therefore apply RAIX to control planes as well as data planes.
+Fractanet must therefore apply RAIX to control planes as well as data planes. Related open questions: #1, #2, #7.
 
 ### 27.3 Opaque optimization
 
-Energy-based or AI-assisted routing can become opaque. COP must make candidate routes, rejected routes, constraints, scores, and overrides inspectable.
+Energy-based or AI-assisted routing can become opaque. COP must make candidate routes, rejected routes, constraints, scores, and overrides inspectable. Related open questions: #5 and #6.
 
 ### 27.4 Redundancy noise
 
-Redundancy can become waste. RAIX is valid only when it increases useful capacity, resilience, sovereignty, or signal more than it increases cost, noise, or complexity.
+Redundancy can become waste. RAIX is valid only when it increases useful capacity, resilience, sovereignty, or signal more than it increases cost, noise, or complexity. Related open question: #7.
 
 ### 27.5 Human displacement
 
-AI agents may read dense Inox better than humans. This does not authorize removing human validation from decisions involving doctrine, law, identity, governance, irreversible data choices, or public commitments.
+AI agents may read dense Inox better than humans. This does not authorize removing human validation from decisions involving doctrine, law, identity, governance, irreversible data choices, or public commitments. Related open question: #8.
 
 ### 27.6 Security through complexity
 
@@ -1130,6 +1344,23 @@ It does not claim that exergy is a complete ethical or political criterion. Exer
 8. How should human approval be represented in the control plane?
 9. Can physical data planes — energy, water, goods — share enough envelope structure to justify a common registry?
 10. What is the first MVP: programmable API gateway, COP-supervised continuation router, or Inox Core Fractanet node?
+
+### 29.1 Corpus anchors for open questions
+
+The following anchors are not answers. They are the first corpus locations to consult before turning an open question into a new document, MVP issue, or derived product.
+
+| Open question | First corpus anchors | Expected contribution | Current status |
+|---|---|---|---|
+| Q1 — Minimal Fractanet verb | [FractaVolta/research/fractanet.md](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/fractanet.md); [FractaVolta/research/generalized_packet_networks.md](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/generalized_packet_networks.md); [Inox/research/inox-spec.md](https://github.com/JeanHuguesRobert/Inox/blob/main/research/inox-spec.md) | Formalize a verb as a capability-bound operation over generalized packets, executable or dispatchable through Inox/COP. | Needs a dedicated minimal schema. |
+| Q2 — Registry placement and governance | [FractaVolta/research/index.md](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/index.md); [cogentia/research/pipeline.md](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/pipeline.md); [cogentia/research/concepts.md](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/concepts.md); [cogentia/scripts/cogentia.js](https://github.com/JeanHuguesRobert/cogentia/blob/main/scripts/cogentia.js) | Reuse the existing corpus-indexing discipline before inventing a new registry. | Needs decision: FractaVolta first, then possibly dedicated Fractanet registry. |
+| Q3 — Minimal Inox Core | [Inox/research/inox-spec.md](https://github.com/JeanHuguesRobert/Inox/blob/main/research/inox-spec.md); [Inox/research/inox-docs-index.md](https://github.com/JeanHuguesRobert/Inox/blob/main/research/inox-docs-index.md); [Inox/research/inox-tutorial-basic.md](https://github.com/JeanHuguesRobert/Inox/blob/main/research/inox-tutorial-basic.md) | Identify the smallest concatenative runtime required for verbs, stacks, capabilities, continuations and dispatch. | Needs extraction into an Inox-side note. |
+| Q4 — Mandatory COP events | [inseme/packages/cop-core/Invariants.md](https://github.com/JeanHuguesRobert/inseme/blob/main/packages/cop-core/Invariants.md); [inseme/packages/cop-core/ImplementationProfiles.md](https://github.com/JeanHuguesRobert/inseme/blob/main/packages/cop-core/ImplementationProfiles.md); [inseme/research/reactive_cognitive_cop_extension.md](https://github.com/JeanHuguesRobert/inseme/blob/main/research/reactive_cognitive_cop_extension.md) | Define the mandatory event vocabulary for observation, pause, resume, approval, rejection, branch exploration and trace sealing. | Needs mapping from COP invariants to Fractanet node profile. |
+| Q5 — Exergy scoring without opacity | [marenostrum/safe_compute_exergy.md](https://github.com/JeanHuguesRobert/marenostrum/blob/main/safe_compute_exergy.md); [marenostrum/compute-exergy-omitted-variable.md](https://github.com/JeanHuguesRobert/marenostrum/blob/main/compute-exergy-omitted-variable.md); [marenostrum/CXU_SPEC.md](https://github.com/JeanHuguesRobert/marenostrum/blob/main/CXU_SPEC.md); [FractaVolta/research/fractanet.md](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/fractanet.md) | Keep exergy as useful capacity, not technocratic black-box optimization. | For now: cost/scoring function under hard constraints, not full model family. |
+| Q6 — Hard constraints before optimization | [inseme/packages/cop-core/Invariants.md](https://github.com/JeanHuguesRobert/inseme/blob/main/packages/cop-core/Invariants.md); [cogentia/prompts/redactor.md](https://github.com/JeanHuguesRobert/cogentia/blob/main/prompts/redactor.md); [FractaVolta/docs/methodology.md](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/docs/methodology.md) | Separate non-negotiable constraints from soft ranking criteria. | Needs invariant list: capability, legality, privacy, consent, sovereignty, safety. |
+| Q7 — RAIX and fault-tolerance | [FractaVolta/research/fractanet.md](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/fractanet.md); [FractaVolta/research/generalized_packet_networks.md](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/generalized_packet_networks.md); [FractaVolta/research/packet_paper_template.md](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/packet_paper_template.md) | Extend redundancy from storage to data, compute, policy, trace, route, institution and substrate. | RAIX remains a thesis needing taxonomy and metrics. |
+| Q8 — Human approval in control plane | [cogentia/research/pipeline.md](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/pipeline.md); [cogentia/prompts/redactor.md](https://github.com/JeanHuguesRobert/cogentia/blob/main/prompts/redactor.md); [cogentia/prompts/reviewer.md](https://github.com/JeanHuguesRobert/cogentia/blob/main/prompts/reviewer.md); [inseme/packages/cop-core/Invariants.md](https://github.com/JeanHuguesRobert/inseme/blob/main/packages/cop-core/Invariants.md) | Preserve human arbitration while allowing agent-readable and runtime-readable control events. | Needs lifecycle: request, grant, deny, revoke, trace, appeal. |
+| Q9 — Physical data-plane compatibility | [FractaVolta/research/generalized_packet_networks.md](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/generalized_packet_networks.md); [FractaVolta/research/inference_packet_network.md](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/inference_packet_network.md); [FractaVolta/research/thermal_packet_networks.md](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/thermal_packet_networks.md); [FractaVolta/research/packet_paper_template.md](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/packet_paper_template.md); [FractaVolta/dc_native_epn.md](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/dc_native_epn.md) | Test whether energy, thermal, inference and possibly water/goods packets share enough envelope structure. | Needs comparative packet papers, not only Fractanet. |
+| Q10 — First MVP | [FractaVolta/research/fractanet.md](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/fractanet.md); [FractaVolta/research/bonne_marque_mvp.md](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/bonne_marque_mvp.md); [cogentia/research/cogentia_continuation_packet_routing.md](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/cogentia_continuation_packet_routing.md); [Inox/research/inox-spec.md](https://github.com/JeanHuguesRobert/Inox/blob/main/research/inox-spec.md) | Start with a programmable API gateway rather than the full multi-substrate network. | Recommended MVP: Fractanet API gateway with Inox Core, COP trace, cache, dispatch and simple exergy scoring. |
 
 ---
 
@@ -1179,23 +1410,23 @@ A successful MVP should answer:
 
 The next useful actions are:
 
-1. submit this draft to review under `cogentia/prompts/reviewer.md`;
+1. submit this draft to review under [cogentia/prompts/reviewer.md](https://github.com/JeanHuguesRobert/cogentia/blob/main/prompts/reviewer.md);
 2. integrate only high-signal objections;
 3. produce a diagram of the architecture;
 4. define a minimal Fractanet verb schema;
 5. define the MVP programmable gateway;
-6. update `FractaVolta/research/index.md` only after human validation;
+6. update [FractaVolta/research/index.md](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/index.md) only after human validation;
 7. extract cognitive packets into `cogentia` if the draft stabilizes.
 
 ---
 
 ## Minimal completion report
 
-- **Target document:** `FractaVolta/research/fractanet.md`
+- **Target document:** [FractaVolta/research/fractanet.md](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/fractanet.md)
 - **Files produced or changed:** conversational draft prepared as `fractanet.md`; no GitHub repository write performed.
 - **Source or derived product:** source document draft.
 - **Critiques integrated:** none yet from Grok/reviewer; this is the redactor draft to be reviewed.
-- **Critiques rejected or deferred:** frontmatter-specific document not found; used observed corpus frontmatter conventions and `cogentia/prompts/redactor.md` requirements.
+- **Critiques rejected or deferred:** frontmatter-specific document not found; used observed corpus frontmatter conventions and [cogentia/prompts/redactor.md](https://github.com/JeanHuguesRobert/cogentia/blob/main/prompts/redactor.md) requirements.
 - **Known risks:** over-integration of too many concepts; possible need to split into a shorter working paper plus appendices; RAIX and exergy metrics require formalization.
 - **Human validation needed:** naming, public claims, RAIX scope, JavaScript positioning, exergy-routing formulation, repository update decision.
-- **Next useful action:** review this file with `cogentia/prompts/reviewer.md`, then integrate only high-signal corrections.
+- **Next useful action:** review this file with [cogentia/prompts/reviewer.md](https://github.com/JeanHuguesRobert/cogentia/blob/main/prompts/reviewer.md), then integrate only high-signal corrections.
