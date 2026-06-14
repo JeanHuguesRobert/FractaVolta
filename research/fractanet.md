@@ -249,458 +249,370 @@ The broader multi-substrate claim should be tested through this limited digital/
 
 ## 3. From packet switching to generalized packet networks
 
-The historical reference is packet switching. ARPANET and the Internet showed that communication could become more resilient when continuous circuits were replaced by discrete, addressed, routable packets.
+The historical reference is packet switching. ARPANET showed that communication could be made more resilient by avoiding a single centralized switching authority and by routing discrete packets through a distributed network.
 
-Generalized Packet Networks extend that intuition across substrates. A packet is not merely a sequence of bits. In the broader framework, a packet is a bounded unit of operational usefulness that can occupy constrained resources, be routed, delayed, transformed, cached, replicated, degraded, prioritized, audited, or delivered.
+Fractanet extends this intuition, but not by metaphor alone. The extension follows the grammar developed in **Generalized Packet Networks**: what matters is not that every substrate is identical to digital data, but that many operational domains can be analyzed through bounded, addressable, governable units that circulate, wait, degrade, occupy resources, require routing, and may be transformed or consumed.
 
-Examples include:
+Thus the candidate packet types are not only data packets. They may include:
 
-- a data packet;
-- an energy packet;
-- a thermal packet;
-- a containerized battery;
-- a parcel;
-- a water allocation;
-- an inference request;
-- an AI-generated answer;
-- a cognitive packet;
-- a continuation;
-- a vote;
-- a mandate;
-- a permission;
-- a responsibility.
+- energy packets;
+- thermal packets;
+- water packets;
+- goods or logistics packets;
+- inference packets;
+- cognitive packets;
+- continuation packets;
+- governance packets;
+- mandates, permissions, duties, responsibilities.
 
-The common claim is not physical identity. Heat, votes, water, bits, and AI prompts do not obey the same physical laws. The claim is operational recurrence: similar questions appear when a bounded useful unit circulates through a constrained network.
-
-The relevant questions are:
-
-- What is the packet?
-- What makes it bounded?
-- What makes it addressable?
-- What resource does it occupy?
-- How long can it wait?
-- What degrades with time?
-- What gives it priority?
-- Who or what routes it?
-- What validates it?
-- What is delivered?
-- What is lost?
-- What remains traceable?
-
-Fractanet is the infrastructural answer to this generalized packet grammar.
+This list is not a license to call everything a packet. It is a hypothesis: if a unit is bounded, addressable, delayable or storable, independently governable, and operationally measurable, then it may be packetized. If not, it should not be forced into the framework.
 
 ---
 
 ## 4. GPN and Fractanet
 
-The distinction between **Generalized Packet Networks** and **Fractanet** must remain stable.
+The distinction between **Generalized Packet Networks** and **Fractanet** should remain explicit.
 
-| Concept | Status | Function |
+| Layer | Role | Status |
 |---|---|---|
-| **Generalized Packet Networks** | theoretical framework | Provides the cross-domain grammar of packets, resource occupancy, routing, decay, cache, congestion, and delivery. |
-| **Fractanet** | infrastructural instance | Implements that grammar as a programmable, distributed, supervised network of capability verbs and heterogeneous data planes. |
+| Generalized Packet Networks | Theoretical grammar of packetization across substrates | Conceptual framework |
+| Fractanet | Programmable infrastructural implementation of that grammar | Working architectural proposal |
+| Inox | Execution substrate and micro-architecture | Language/runtime project |
+| COP | Supervision and control protocol | Control/supervision protocol |
+| RAIX | Redundancy principle across arbitrary X | Concept to formalize |
+| Exergy | Useful-capacity criterion | Cross-domain evaluation principle |
 
-GPN may be studied as theory without deploying Fractanet. Fractanet may be built incrementally without requiring every participant to adopt the full theoretical apparatus.
-
-The separation protects both sides:
-
-- GPN remains analytically useful even if a particular Fractanet implementation fails.
-- Fractanet remains operationally buildable even if some theoretical claims require revision.
+Fractanet therefore should not claim to replace all domain-specific networks. It proposes a shared control-plane grammar and programmable infrastructure through which heterogeneous packet networks can interoperate, be supervised, and be optimized for useful capacity.
 
 ---
 
-## 5. Control plane and data planes, generalized
+## 5. Generalized control plane and heterogeneous data planes
 
-In classical networking, one distinguishes:
+The classical distinction is:
 
-- the **control plane**, which decides how packets should move;
-- the **data plane**, which actually forwards packets.
+- **control plane** — the part of a network that decides how packets are routed;
+- **data plane** — the part that forwards the packets themselves.
 
-Fractanet generalizes this distinction.
+Fractanet generalizes this distinction beyond bits.
 
-### 5.1 The generalized control plane
-
-The control plane carries the envelope of operation:
+The **control plane** carries the envelope:
 
 - origin;
 - destination;
 - identity;
-- authorization;
-- capability;
+- rights;
+- capabilities;
 - priority;
 - TTL;
 - freshness;
-- routing constraints;
-- cost constraints;
-- exergy criteria;
+- decay policy;
 - signatures;
-- version;
-- namespace;
-- trace;
+- trace requirements;
+- routing constraints;
 - supervision events;
-- policies;
-- revocation rules;
-- disclosure level;
-- custody chain.
+- human approval requirements;
+- exergy/scoring metadata.
 
-It answers:
+The **data planes** carry payloads:
 
-> Under which rights, routes, constraints, and responsibilities may this packet move or act?
+- bits;
+- energy;
+- heat;
+- water;
+- goods;
+- compute;
+- inference;
+- cognition;
+- delegation;
+- institutional authority.
 
-### 5.2 Heterogeneous data planes
-
-The data plane carries or activates payloads. In Fractanet, there is not one data plane but many possible data planes:
-
-| Data plane | Payload example |
-|---|---|
-| Data | bits, documents, events, rows, streams |
-| Energy | useful energy, battery packets, charging slots |
-| Thermal | hot water, cold storage, thermal inertia |
-| Water | volume, allocation, reserve, delivery right |
-| Goods | parcel, tool, material, food, spare part |
-| Inference | prompt, model call, answer, fallback computation |
-| Cognition | cognitive packet, hypothesis, objection, continuation |
-| Governance | vote, mandate, delegation, permission, responsibility |
-
-The control plane may route, prioritize, validate, or audit a packet without unnecessarily opening or capturing the payload.
-
-This is central to anti-capture. A system that must inspect every payload to route every packet is structurally exposed to capture, surveillance, and platform lock-in.
+The same control plane must not pretend that all payloads are identical. Its role is not to erase substrate differences. Its role is to expose the common operational questions: who may route, where, under what constraints, with what trace, what freshness, what risk, what reversibility, and what useful capacity.
 
 ---
 
-## 6. Envelope and payload
+## 6. Packet = envelope + payload
 
-The operational form of the control/data distinction is:
+The generic form is:
 
 ```text
 packet = envelope + payload
 ```
 
-The **envelope** is what the network needs in order to route, authorize, trace, prioritize, cache, suspend, resume, revoke, or supervise the packet.
+The envelope is for governance, routing, tracing, and supervision. The payload is what is actually transported, delivered, transformed, consumed, activated, or revoked.
 
-The **payload** is the useful content, resource, or capacity transported, transformed, executed, delegated, or delivered.
+The control plane should be able to route and supervise the envelope without unnecessarily capturing the payload. This is essential for:
 
-This distinction must be preserved across substrates.
+- privacy;
+- sovereignty;
+- anti-capture;
+- security;
+- reduction of exposure;
+- multi-substrate interoperability.
 
-### 6.1 Example: data packet
+### 6.1 Comparative envelope sketch
 
-- Envelope: source, destination, TTL, protocol, route, signature.
-- Payload: bytes.
+The following table is not a finished schema. It is a test of the claim that heterogeneous packet types can share enough envelope structure to be governed by a common control plane while preserving substrate-specific fields.
 
-### 6.2 Example: energy packet
+| Packet type | Payload | Shared envelope fields | Substrate-specific fields |
+|---|---|---|---|
+| Data packet | file, message, event, API response | origin, destination, rights, TTL, signature, trace, freshness | encoding, size, checksum, confidentiality level |
+| Energy packet | useful energy allocation, battery slot, charging right | origin, destination, priority, rights, validity window, trace | kWh, power limit, voltage/current profile, storage losses, safety constraints |
+| Water packet | volume allocation, delivery, reserve access | origin, destination, rights, priority, validity window, trace | volume, potability, pressure, local scarcity, legal usage category |
+| Goods packet | physical item, spare part, food, material | origin, destination, custody, priority, trace | weight, volume, perishability, chain of custody, transport mode |
+| Inference packet | prompt, model call, result, continuation | origin, destination, rights, TTL, trace, cost limit | model, token budget, confidentiality, latency tolerance, context window |
+| Mandate packet | delegation, permission, responsibility | origin, destination, identity, rights, revocation, trace | duration, scope of authority, human approval, legal/institutional validity |
 
-- Envelope: source, destination, time window, storage constraints, priority, exergy value, proof of origin.
-- Payload: useful energy or claim on useful energy.
-
-### 6.3 Example: cognitive packet
-
-- Envelope: topic, author, version, disclosure level, continuation state, review status, relevance, intended repository.
-- Payload: hypothesis, objection, draft, proof fragment, transformation map, continuation.
-
-### 6.4 Example: mandate packet
-
-- Envelope: delegator, delegate, scope, duration, revocability, legitimacy condition, trace.
-- Payload: authority to act within a bounded domain.
-
-The same invariant recurs:
-
-> **The envelope governs movement and accountability. The payload carries useful capacity.**
-
-### 6.5 Comparative envelope sketch
-
-The shared grammar must remain modest. It does not mean that all substrates share the same physics or legitimacy rules. It means that a minimal envelope can often expose enough control information for routing, authorization, supervision, and traceability.
-
-| Packet type | Minimal envelope fields | Payload | Specific degradation / risk | Validation question |
-|---|---|---|---|---|
-| **Data packet** | origin, destination, TTL, protocol, signature, confidentiality level | bytes, document, event | staleness, leakage, corruption | Is the data authentic, authorized, and still fresh? |
-| **Energy packet** | source, destination, time window, storage interface, exergy value, proof of origin | useful energy or claim on useful energy | conversion loss, storage loss, grid congestion | Is useful energy deliverable at the required place and time? |
-| **Water packet** | source, destination, volume, quality, time window, usage right, priority | water volume or allocation right | evaporation, contamination, scarcity conflict | Is the allocation legitimate, available, and fit for use? |
-| **Goods packet** | origin, destination, custody chain, handling constraints, deadline, proof of receipt | material item, component, parcel | loss, damage, delay, custody dispute | Is custody traceable and delivery verifiable? |
-| **Inference packet** | model policy, input disclosure level, cost budget, latency target, trace requirement | inference request or result | hallucination, privacy leak, model drift | Is the inference authorized, explainable, and useful enough? |
-| **Mandate packet** | delegator, delegate, scope, duration, revocation rule, legitimacy condition, trace | bounded authority to act | abuse, expiration, contested legitimacy | Is the action inside the mandate and still revocable? |
-
-This table is not a final schema. It is a test: if a substrate cannot expose a bounded envelope of this kind, it should not be forced into the packet model.
+The table shows partial compatibility, not identity. A shared envelope does not imply a shared physics. It implies a shared control grammar.
 
 ---
 
 ## 7. Verbs instead of endpoints
 
-A conventional API exposes endpoints:
+A conventional API client calls endpoints:
 
 ```text
-GET /customers/{id}
-GET /orders?customer_id={id}
+GET /users/123/orders
+POST /tasks
 ```
 
-Fractanet abstracts over endpoints by exposing **verbs**.
-
-A verb is a named operational capability:
+A Fractanet client calls **verbs**:
 
 ```text
 customer.summary
-energy.dispatch
-inference.fallback
-continuation.resume
-mandate.delegate
-packet.trace
+route.energy.packet
+deliver.cognitive.packet
+approve.mandate
+resume.continuation
 ```
 
-The client calls a verb. The Fractanet control plane dispatches that verb to an implementation.
-
-The implementation may be:
-
-- a source API endpoint;
-- a synthetic endpoint;
-- a cached result;
-- an Inox script;
-- a COP task;
-- a continuation;
-- a streaming job;
-- a fallback route;
-- a physical operation;
-- a human validation step.
-
-The verb is stable. The endpoint is an implementation detail.
-
-This matters because stable verbs allow systems to evolve without forcing every client to track every infrastructure change.
-
----
-
-## 8. Dispatch as generalized method selection
-
-The analogy with object-oriented dispatch is useful.
-
-In object-oriented languages, a method call names an operation while the runtime chooses the concrete implementation according to the receiver type or dispatch table.
-
-In Fractanet, a verb call names an operation while the gateway or mesh selects the concrete implementation according to context.
-
-Dispatch may depend on:
+A verb is a named operational capacity. Its implementation may vary according to:
 
 - namespace;
 - tenant;
 - client type;
+- capability set;
 - region;
-- version;
-- capability;
+- data residency;
+- runtime;
+- cache state;
+- supervision requirement;
 - cost;
 - latency;
-- cache state;
-- data residency;
-- endpoint availability;
-- freshness requirement;
-- exergy criterion;
-- supervision requirement;
-- continuation affinity;
-- human approval requirement.
+- exergy;
+- fallback policy;
+- availability of gateways or endpoints.
 
-Example:
+Therefore:
 
-```text
-customer.summary(input)
-```
-
-may resolve to:
-
-- a public endpoint for a public client;
-- a tenant-specific synthetic endpoint;
-- a mobile-optimized version;
-- a cache-aware degraded version;
-- an EU-only route;
-- a supervised continuation if the operation is long;
-- a human-approved operation if the payload implies responsibility.
-
-Thus:
-
-> **The verb is the stable vocabulary. Dispatch chooses the admissible implementation.**
+> **The verb is the stable vocabulary. The endpoint is only one possible implementation.**
 
 ---
 
-## 9. Programmable gateway
+## 8. Dispatch
 
-The first concrete implementation layer is a programmable gateway.
+Calling a verb does not necessarily bind the caller to a fixed endpoint.
 
-Modern JSON APIs often require multiple round trips. A client asks for a user, then for orders, then for tickets, then for permissions, then for recent activity. The latency cost is large even when each endpoint is individually fast.
-
-A Fractanet gateway should support bounded API-side scripting:
+The Fractanet gateway resolves:
 
 ```text
-client → verb / script → gateway → local API calls → aggregate result
+verb + namespace + capabilities + policy + context -> implementation
 ```
 
-The script should be:
+This resembles dispatch tables in object-oriented languages. A method call names an operation; the runtime selects the concrete implementation. Likewise, a Fractanet call names a verb; the gateway selects the appropriate route, script, cache, endpoint, continuation, or fallback.
 
-- sandboxed;
-- quota-limited;
-- capability-bound;
-- traceable;
-- versioned when registered;
-- cache-aware;
-- optionally streamable;
-- optionally resumable;
-- supervised when long, costly, mutating, or critical.
+A possible dispatch sequence:
 
-At the simplest level, this is a batch endpoint. At the Fractanet level, it is the local execution point of a distributed control plane.
+```text
+call customer.summary
+  -> resolve namespace
+  -> check capabilities
+  -> reject forbidden routes
+  -> inspect cache and freshness
+  -> estimate exergy score of admissible routes
+  -> select implementation
+  -> execute through Inox/COP
+  -> return result, stream, or continuation
+```
+
+The dispatch decision must be traceable. It is itself an act.
 
 ---
 
-## 10. Script registry and synthetic endpoints
+## 9. Registry of verbs and scripts
 
-A script sent once is useful. A script registered, versioned, named, and governed becomes infrastructure.
-
-Fractanet therefore needs a **registry** of scripts and verbs.
-
-A registered script can become a synthetic endpoint:
-
-```text
-/x/public/customer-summary/v1
-/x/client/mobile/customer-summary/v2
-/x/private/acme/customer-summary/v3
-```
+Fractanet requires a registry of verbs, scripts, versions, policies, and namespaces.
 
 The registry should track:
 
 - verb name;
 - namespace;
 - version;
+- owner;
 - status;
-- runtime;
-- source script;
 - input schema;
 - output schema;
-- capabilities;
+- capabilities required;
+- APIs or data planes touched;
+- runtime profile;
 - cache policy;
-- routing policy;
-- quotas;
 - trace policy;
-- owner;
-- review status;
-- deprecation status;
-- continuation compatibility.
+- human validation requirement;
+- deprecation policy;
+- review status.
 
-The registry is not merely a deployment tool. It is a corpus of executable capabilities.
+A registered script may become a synthetic endpoint, but the more stable abstraction is the verb.
 
-### 10.1 Minimal verb record
+### 9.1 Minimal verb record
 
-A minimal registry entry should be machine-readable and reviewable by humans. For a first MVP, a verb record could be no more than:
+A minimal verb record could begin as follows:
 
 ```yaml
 verb: customer.summary
 version: 0.1.0
-namespace: /client/mobile
+namespace: public.demo
 status: draft
 runtime: inox-core
-entrypoint: verbs/customer_summary.inox
-input_schema: schemas/customer_summary.input.json
-output_schema: schemas/customer_summary.output.json
-capabilities:
-  read:
-    - /customers/{id}
-    - /orders?customer_id={id}
-  write: []
-cache:
-  ttl_seconds: 300
-  scope: tenant
+input_schema:
+  customer_id: string
+output_schema:
+  customer_id: string
+  summary: object
+capabilities_required:
+  api.read:
+    - /customers/{customer_id}
+    - /orders?customer_id={customer_id}
+  cache.write:
+    max_ttl_seconds: 300
 routing:
-  preferred_region: eu
-  fallback: stale-cache-if-authorized
-quotas:
-  max_runtime_ms: 500
-  max_api_calls: 25
+  default_policy: exergy_after_constraints
+  fallback: stale_cache_if_allowed
 trace:
-  cop_required: true
-  include_candidate_routes: true
-owner: FractaVolta
-review_status: human-validation-required
+  cop_events_required:
+    - verb.called
+    - capabilities.checked
+    - route.selected
+    - result.returned
+human_approval:
+  required: false
+capture_surface:
+  registry_raix_required: true
 ```
 
-The schema is intentionally conservative. It should be sufficient to test the model without pretending to solve all registry governance questions.
-
-### 10.2 Registry as capture surface
-
-The registry is itself a potential point of capture. Whoever controls naming, signing, capability grants, namespace allocation, or deprecation can influence the whole dispatch layer. Therefore RAIX must apply to the registry and not only to the data planes.
-
-Minimal anti-capture requirements for the registry:
-
-- append-only or versioned history;
-- signed verb records;
-- mirrorable registry state;
-- explicit namespace authority;
-- auditable capability grants;
-- reproducible script hashes;
-- visible deprecation and override rules;
-- at least one independent trace of registry changes.
-
-A centralized registry may be acceptable for an MVP. It is not acceptable as the mature Fractanet pattern unless it can be mirrored, audited, forked, and reconciled.
+This is intentionally small. It is not yet the Fractanet schema. It is a first test object.
 
 ---
 
-## 11. Namespaces and public/private capability surfaces
+## 10. Namespaces and local/private endpoints
 
-Fractanet must distinguish capability surfaces.
+Namespaces are not cosmetic. They are control surfaces.
 
-Possible namespaces:
+Fractanet should distinguish, at minimum:
+
+- public verbs;
+- tenant-private verbs;
+- client-type verbs;
+- partner verbs;
+- local gateway verbs;
+- experimental verbs;
+- deprecated verbs.
+
+Example:
 
 ```text
-/public/...
-/partner/{partner}/...
-/client/{client_type}/...
-/tenant/{tenant}/...
-/private/{organization}/...
-/local/{node}/...
-/experimental/...
+public.customer.summary@v1
+client.mobile.customer.summary@v2
+tenant.acme.customer.summary@v3
+local.gateway.eu-west.energy.buffer@v1
+experimental.cognitive.packet.route@v0
 ```
 
-The same verb may have several visible forms depending on the caller.
+Namespaces must be governed. Otherwise the registry itself becomes a capture surface.
 
-A public verb should not accidentally expose a private tenant implementation. A local verb should not silently become global. A partner-specific route should not become the default path for unknown clients.
+---
 
-Namespace is therefore not decoration. It is part of the security model.
+## 11. Registry as capture surface
+
+A distributed network can still be captured through its registry.
+
+If a single actor controls:
+
+- namespace allocation;
+- script signing;
+- capability grants;
+- version promotion;
+- deprecation;
+- routing policies;
+- trace custody;
+- model selection;
+- identity binding;
+
+then Fractanet has not removed capture. It has relocated it.
+
+Therefore the registry layer must itself satisfy RAIX principles:
+
+- mirrored registries;
+- transparent diffs;
+- signed records;
+- independent review paths;
+- local override under explicit policy;
+- auditable namespace governance;
+- exit and fork rights;
+- traceable promotion/deprecation;
+- no single registry authority for critical verbs.
+
+This is one of the central design constraints of Fractanet.
 
 ---
 
 ## 12. Inox as micro-architecture
 
-Inox is not only one possible language for scripts. It is the micro-architectural model of Fractanet.
+Inox is not merely an implementation language. It is the micro-architecture of Fractanet.
 
-The reason is structural.
+Its relevant properties are:
 
-Inox is a concatenative stack-based language and virtual machine with a strict separation between control and data planes. It has at least two fundamental stacks:
+- concatenative logic;
+- verb composition;
+- explicit control/data separation;
+- minimal core close to Forth;
+- expressive dialects;
+- potential for continuations;
+- suitability for backtracking;
+- compact representation readable by agents;
+- capacity-oriented execution.
 
-- a **control stack**, corresponding broadly to what is often called the call stack;
-- a **data stack**, carrying values, payloads, and active data.
+At the VM level, Inox already separates at least:
 
-This is not an incidental implementation detail. It mirrors the Fractanet architecture at a lower scale.
+- a control stack;
+- a data stack.
+
+This mirrors the Fractanet distinction:
 
 | Scale | Control plane | Data plane |
 |---|---|---|
-| Inox VM | control stack, verbs, execution state | data stack, named values, active data |
-| Gateway | dispatch, routing, policy, cache policy, registry | endpoints, payloads, scripts, streams, continuations |
-| Fractanet | COP, envelopes, capabilities, traces | data, energy, water, goods, inference, cognition, mandates |
+| Inox VM | control stack, verbs, continuation state | data stack, values, payload fragments |
+| Programmable gateway | dispatch, policies, registry, COP events | API results, cache values, streams |
+| Fractanet network | envelopes, rights, supervision, routing | heterogeneous packet payloads |
+| GPN substrate | governance of packets | data, energy, water, goods, inference, mandates |
 
-Thus:
-
-> **Inox implements at VM scale what Fractanet generalizes at network scale.**
-
-This is the meaning of “fracta” in Fractanet: invariants recur across scales.
+Thus Inox is to Fractanet what a cell is to an organism: the same organizational invariant appears at a smaller scale.
 
 ---
 
-## 13. Inox Core and dialects
+## 13. Inox Core, dialects, and Full Inox
 
-Inox should not be understood only as a maximal expressive language.
+Inox should not be understood as one monolithic runtime.
 
-It can exist in strata:
+A useful stratification is:
 
-1. **Inox Core** — a minimal Forth-like concatenative runtime, small enough to embed close to endpoints, devices, gateways, and edge nodes.
-2. **Inox dialects** — domain-specific forms for API composition, cache, routing, COP supervision, continuations, packet handling, and governance constraints.
-3. **Full Inox** — the highly expressive language suitable for complex compositions and AI-agent manipulation.
+| Layer | Role |
+|---|---|
+| Inox Core | minimal concatenative runtime, Forth-like, small enough for distributed gateways |
+| Inox API dialect | verbs, endpoint composition, schemas, cache, dispatch |
+| Inox COP dialect | supervision events, pause/resume, approval, traces |
+| Inox routing dialect | route exploration, fallback, exergy scoring, backtracking |
+| Full Inox | expressive language for complex authoring, agents, transformations |
 
-This stratification reconciles two needs:
-
-- very small runtimes close to physical or API endpoints;
-- very expressive representations for agents, authors, and advanced control logic.
-
-A Fractanet node does not need the whole language everywhere. It needs the smallest runtime capable of executing the local capacity safely.
+This solves a tension. Fractanet needs a runtime small enough to run near endpoints, but also expressive enough to define sophisticated verbs and be manipulated by agents.
 
 Formula:
 
@@ -708,479 +620,404 @@ Formula:
 
 ---
 
-## 14. JavaScript as adoption profile, not authority model
+## 14. JavaScript as adoption profile
 
-JavaScript may be useful at the beginning.
+JavaScript should be available at first, but only as an adoption profile.
 
-It is familiar, JSON-native, and easy for API developers to understand. A sandboxed JavaScript profile can support simple bounded scripts:
+It is useful for:
 
-- short API aggregation;
-- simple transformations;
-- cache-aware reads;
-- explicit-state resumable jobs;
-- synthetic endpoint prototypes.
+- short scripts;
+- JSON transformations;
+- simple API aggregation;
+- low-risk synthetic endpoints;
+- developer onboarding.
 
-But JavaScript should not become the authority model of Fractanet.
+It should not carry the deep Fractanet model:
 
-Beyond a certain level of complexity, Fractanet requires:
-
-- continuations;
-- streaming supervision;
+- full continuations;
 - backtracking;
-- capability-first execution;
-- strict control/data separation;
-- small runtimes;
-- inspectable dialects;
-- COP integration;
-- exergy-aware routing;
-- traceable dispatch.
+- complex routing;
+- streaming supervision;
+- exergy-oriented route exploration;
+- long-lived computation;
+- critical capability governance.
 
-At that level, the core should be COP/Inox.
+JavaScript can be sandboxed, especially through engines such as QuickJS or V8 isolates, but it does not naturally express the control/data separation and continuation logic that Fractanet needs.
 
-Formula:
+Recommended boundary:
 
-> **JavaScript can introduce the model. COP/Inox must carry the model.**
+| Profile | Use |
+|---|---|
+| `javascript-sandbox@1` | bounded adoption scripts, no full continuation, explicit state only |
+| `inox-core@1` | serious execution path, capability verbs, registry, compact runtime |
+| `inox-full@1` | complex composition, continuations, backtracking, agent-assisted generation |
+| `cop-inox@1` | supervised, streamable, resumable, human-sensitive acts |
+
+Thus:
+
+> **JavaScript may onboard. COP/Inox must govern.**
 
 ---
 
 ## 15. COP as supervision plane
 
-COP — Cognitive Orchestration Protocol — provides the supervision plane of Fractanet.
+COP is the supervision plane of Fractanet.
 
-A programmable network that supports long executions, continuations, streaming, cache, routing, and backtracking cannot remain a black box.
+It should describe and trace:
 
-It must expose events such as:
+- verb calls;
+- capability checks;
+- route selection;
+- cache hits and misses;
+- branch exploration;
+- backtracking;
+- continuation capture;
+- pause/resume;
+- human approval;
+- fallback;
+- failure;
+- explanation;
+- revocation.
+
+Example COP events:
 
 ```text
 verb.called
-capability.checked
-candidate.enumerated
+capabilities.checked
+route.candidate.enumerated
 route.rejected
 route.selected
 cache.hit
 cache.miss
-checkpoint.created
+branch.started
+branch.backtracked
 continuation.paused
 continuation.resumed
-stream.chunk.emitted
-branch.started
-branch.failed
-branch.backtracked
 human.approval.requested
 human.approval.granted
-execution.cancelled
-artifact.produced
+human.approval.denied
+result.returned
 ```
 
-COP does not replace the runtime. It supervises the act.
+COP is not the runtime. It is the control and supervision protocol that makes runtime acts inspectable.
 
-It should allow authorized actors to:
+### 15.1 Human approval lifecycle
 
-- observe;
-- inspect;
-- pause;
-- resume;
-- cancel;
-- approve;
-- deny;
-- retry;
-- fork;
-- checkpoint;
-- explain;
-- audit.
+For sensitive verbs, human approval should itself be a first-class control-plane object:
 
-Formula:
+```text
+approval.requested
+  -> approval.displayed
+  -> approval.granted | approval.denied | approval.expired
+  -> approval.bound_to_trace
+  -> approval.revoked? if policy allows
+```
 
-> **Inox executes. COP supervises. Agents explain. Humans arbitrate.**
+The approval envelope should include:
+
+- requested action;
+- requesting actor;
+- affected payload class;
+- time window;
+- risk level;
+- reversibility;
+- required explanation;
+- trace identifier;
+- revocation policy.
+
+This prevents human approval from becoming a vague checkbox.
 
 ---
 
-## 16. Long requests, continuations, and streaming
+## 16. Long-running executions, streaming, and continuations
 
-Fractanet must distinguish short execution from long execution.
+Fractanet should support at least three execution modes:
 
-### 16.1 Short execution
+| Mode | Description |
+|---|---|
+| sync | short request/response execution |
+| async job | long execution with later retrieval |
+| streaming | progressive results, trace, checkpoints, warnings |
+| continuation | suspendable/restartable execution context |
 
-A short execution returns within a normal request/response window.
+Long-running execution requires persistent state.
 
-Example:
+A continuation should preserve, at minimum:
 
-```text
-call verb → aggregate three endpoints → return result
-```
-
-### 16.2 Asynchronous job
-
-A long operation may become a job:
-
-```text
-submitted → running → completed / failed / cancelled
-```
-
-The client retrieves the result later.
-
-### 16.3 Continuation
-
-A deeper model captures execution state and resumes later.
-
-A continuation must preserve:
-
-- local state;
-- logical stack;
 - script version;
 - runtime version;
-- consumed quotas;
+- input;
+- local execution state;
+- logical stack or continuation point;
 - capabilities;
-- trace;
+- quotas consumed;
 - cache references;
-- checkpoint identity;
-- pending decisions.
+- trace state;
+- pending approvals;
+- route candidates or branch state.
 
-This is natural in Inox if the language and runtime are designed for persistable execution states. In JavaScript, full continuation capture is harder and should initially be replaced by explicit state-based resumable jobs.
-
-### 16.4 Streaming
-
-Some executions should emit progressive output:
-
-```text
-started
-progress
-partial_result
-warning
-checkpoint
-requires_approval
-completed
-```
-
-Streaming turns a request into an observable process. That is precisely why COP is needed.
+Inox is well suited to this because its execution model can be designed around serializable control/data structures. JavaScript should initially be limited to explicit state-based resumable jobs.
 
 ---
 
 ## 17. Programmable cache
 
-A Fractanet gateway should not only call APIs locally. It should know when not to call them.
-
-The cache must be programmable, but not uncontrolled.
+The cache should not be an opaque optimization. It should be a programmable, scoped, traceable capability.
 
 A script or verb may use:
 
 - TTL;
-- freshness policies;
-- ETag-like revalidation;
+- freshness policy;
 - stale-while-revalidate;
 - quota-aware caching;
 - cost-aware caching;
 - exergy-aware caching;
 - tenant-scoped cache;
-- script-local memoization;
+- gateway-local cache;
 - regional cache;
-- edge cache.
+- script-local memoization.
 
-The cache is a capability, not a free storage area.
+Cache operations should produce trace events:
 
-It should be:
+```text
+cache.lookup
+cache.hit
+cache.miss
+cache.set
+cache.revalidate
+cache.stale_used
+cache.invalidated
+```
 
-- scoped;
-- quota-limited;
-- TTL-bounded;
-- traceable;
-- purgeable;
-- non-shared by default across tenants;
-- governed by policy.
-
-Cache decisions should appear in the trace.
-
-A cache hit is not “nothing happened”. It is a technical act that chose not to spend capacity.
+The cache must not become a hidden data store. Its scope, TTL, sharing policy, and invalidation logic are part of the envelope.
 
 ---
 
 ## 18. Backtracking and exploratory routing
 
-Fractanet should not be limited to sequential execution, nor even to sequential execution with parallel calls.
+Fractanet should not be limited to sequential execution or simple parallelism.
 
-Because Inox can support continuation-like mechanisms, it can also support Prolog-like backtracking.
-
-This matters for routing.
-
-When a verb is called, there may be several admissible strategies:
-
-- direct endpoint;
-- synthetic endpoint;
-- fresh cache;
-- stale cache;
-- regional gateway;
-- tenant-specific route;
-- fallback model;
-- continuation;
-- human-supervised branch;
-- degraded answer.
-
-A simple router selects one. A Fractanet router may explore several.
-
-The execution can be seen as:
+With continuations and a concatenative model, Inox can support Prolog-like backtracking:
 
 ```text
-generate candidates
-apply hard constraints
-rank by exergy
 try best route
-if failure, backtrack
-try next admissible route
-trace every branch
-return result or explanation
+  if forbidden -> backtrack
+  if unavailable -> backtrack
+  if too costly -> backtrack
+  if stale unacceptable -> backtrack
+  try fallback route
 ```
 
-Backtracking is not an excuse for opacity. Every branch should be supervised.
+This makes dispatch exploratory rather than merely table-driven.
+
+A route is not just selected. It may be searched for under constraints.
+
+Backtracking is useful for:
+
+- fallback;
+- route optimization;
+- constraint satisfaction;
+- distributed gateway selection;
+- cache vs. recomputation decisions;
+- model selection;
+- continuation placement;
+- human approval alternatives.
+
+But it must be supervised. Each branch should be visible through COP.
 
 Formula:
 
-> **Inox enables exploration. COP prevents exploration from becoming a black box.**
+> **Inox explores. COP explains.**
 
 ---
 
 ## 19. Exergy-oriented routing
 
-Fractanet may use strategies inspired by energy-based models, but its core metric should be exergy.
+Fractanet should not optimize for raw energy alone.
 
-Energy alone is not enough. The corpus uses **exergy** as the central concept: useful energy, or more generally useful capacity capable of producing work, action, cognition, or resilience.
+The relevant concept is **exergy**: useful energy, or more generally useful capacity produced relative to cost, loss, risk, and noise.
 
-In routing, the question is not merely:
+In routing terms:
 
-> Which route consumes the least energy?
+> **Capabilities and policies define the admissible space. Exergy ranks the admissible routes.**
 
-but:
+Hard constraints come first:
 
-> Which admissible route produces the most useful capacity with the least global cost, latency, risk, noise, degradation, and capture exposure?
+- no capability, no route;
+- wrong jurisdiction, no route;
+- forbidden payload exposure, no route;
+- required human approval missing, no route;
+- tenant-private verb called by public client, no route.
 
-A route may be evaluated by a generalized score:
+Only then may the system compare routes using an exergy-inspired score.
 
-```text
-useful capacity produced
--------------------------------------------------------------
-energy + latency + monetary cost + risk + noise + staleness + quota + capture exposure
-```
-
-Or, in an energy-inspired formulation, one may minimize a generalized energy function that includes penalties and bonuses:
+A possible score:
 
 ```text
-E(route) =
-  latency penalty
-+ monetary cost penalty
-+ physical energy penalty
-+ quota penalty
-+ staleness penalty
-+ risk penalty
-+ capture exposure penalty
-+ complexity penalty
-- useful exergy bonus
-- signal bonus
-- sovereignty bonus
+score(route) = useful_capacity / (energy + latency + monetary_cost + risk + noise + staleness + quota + capture_exposure)
 ```
 
-But the order of decision is critical:
-
-1. Hard constraints first.
-2. Capabilities first.
-3. Policies first.
-4. Then exergy optimization.
-
-A route forbidden by capability, law, sovereignty, privacy, or explicit policy must not become admissible merely because it has low cost.
-
-Formula:
-
-> **Capabilities bound the search space. Exergy ranks the admissible routes. Inox explores them. COP explains the decision.**
-
-### 19.1 Toy scoring example
-
-The following numbers are deliberately simple. They are not a formal model; they show the decision order.
-
-A client calls:
+Or equivalently, an energy-based style objective:
 
 ```text
-customer.summary(customer_id=123)
+E(route) = penalties - useful_capacity_bonus
 ```
 
-Candidate routes:
+At this stage, it is safer to describe this as an **exergy-inspired scoring function under hard constraints**, not yet as a complete model family.
 
-| Route | Hard constraints | Useful capacity | Cost bundle | Exergy score | Decision |
-|---|---:|---:|---:|---:|---|
-| A — direct source APIs | allowed | 90 | 60 | 1.50 | admissible |
-| B — regional synthetic endpoint | allowed | 85 | 35 | 2.43 | selected |
-| C — stale cache | allowed only if freshness > 5 min | 60 | 10 | 6.00 | rejected if freshness rule fails |
-| D — non-EU gateway | violates data-residency policy | 95 | 20 | n/a | rejected before scoring |
+### 19.1 Toy exergy scoring example
 
-The apparent best score may be route C, but if the freshness rule fails it is not admissible. Route D may look efficient, but it violates a hard constraint. The selected route is therefore B, not because it is globally cheapest, but because it produces the best useful capacity among admissible routes.
+Assume three admissible routes remain after hard constraints:
 
-In a COP trace, this should not appear as a mysterious “AI routing choice”. It should appear as:
+| Route | Useful capacity | Energy | Latency | Risk | Capture exposure | Score sketch |
+|---|---:|---:|---:|---:|---:|---:|
+| A direct endpoint | 90 | 20 | 10 | 5 | 8 | 90 / 43 = 2.09 |
+| B regional cache | 75 | 5 | 3 | 4 | 4 | 75 / 16 = 4.68 |
+| C recomposition | 95 | 35 | 25 | 8 | 12 | 95 / 80 = 1.18 |
 
-```text
-constraints.applied
-candidate.rejected(route=D, reason=data_residency)
-candidate.rejected(route=C, reason=freshness_policy)
-energy_score.estimated(route=A, score=1.50)
-energy_score.estimated(route=B, score=2.43)
-route.selected(route=B)
-```
+A pure quality maximizer might choose C. A pure latency optimizer might choose B. An exergy-oriented router chooses B if freshness is acceptable, because it produces the most useful capacity per combined cost and exposure.
 
-At this stage, exergy routing should therefore be framed as an **exergy-inspired scoring function under constraints**, not yet as a fully specified model family.
+This is only a toy example. It illustrates the ordering principle, not a final metric.
 
 ---
 
-## 20. RAIX: generalized redundancy
+## 20. RAIX — Redundant Array of Independent X
 
-RAID made storage more resilient by using redundant arrays of independent disks.
+RAIX generalizes RAID.
 
-Fractanet generalizes the pattern as **RAIX**:
+Where RAID originally concerns redundant arrays of independent disks, RAIX concerns redundant arrays of independent X, where X may be:
 
-> **Redundant Array of Independent X**
-
-where `X` may be:
-
-- disks;
 - nodes;
 - gateways;
+- routes;
+- APIs;
 - caches;
+- storage;
 - energy sources;
-- batteries;
-- water reserves;
 - models;
 - agents;
-- scripts;
-- routes;
+- registries;
 - policies;
 - traces;
 - jurisdictions;
-- communities;
-- institutions.
+- institutions;
+- communities.
 
-RAIX is not redundancy for its own sake.
+RAIX is justified only if redundancy increases useful capacity, resilience, sovereignty, or anti-capture more than it increases cost, noise, and complexity.
 
-It is redundancy as anti-capture and anti-fragility.
+### 20.1 Minimal RAIX taxonomy
 
-A minimal RAIX taxonomy should distinguish:
+| X | Redundancy question | Capture risk reduced |
+|---|---|---|
+| Data | Are there independent copies or derivable reconstructions? | storage monopoly, data loss |
+| Gateway | Can another gateway execute or supervise the verb? | infrastructure choke point |
+| Route | Can traffic or execution be rerouted? | network or provider lock-in |
+| Cache | Can stale/fresh alternatives preserve service? | endpoint dependency |
+| Registry | Can verbs and policies survive registry capture? | namespace/capability monopoly |
+| Trace | Can audit evidence survive local deletion or tampering? | accountability capture |
+| Model | Can another model or agent evaluate the act? | AI vendor capture |
+| Energy | Can another source provide useful capacity? | energy dependency |
+| Institution | Can authority be checked or forked? | political capture |
 
-| RAIX type | What is redundant | Failure/capture resisted | Typical cost |
-|---|---|---|---|
-| **RAIX-data** | data copies, mirrors, archives | data loss, deletion, hostage platforms | storage, consistency |
-| **RAIX-compute** | runtimes, gateways, workers | cloud outage, compute monopoly | orchestration, scheduling |
-| **RAIX-cache** | local/regional caches | latency, upstream outage, quota pressure | freshness management |
-| **RAIX-route** | alternative paths and dispatch targets | network failure, endpoint capture | routing complexity |
-| **RAIX-policy** | policy mirrors and review authorities | opaque governance, unilateral rule change | reconciliation |
-| **RAIX-trace** | independent trace custody | audit capture, evidence loss | privacy and sealing |
-| **RAIX-institution** | multiple legitimate carriers of authority | political or administrative chokepoints | coordination |
+RAIX remains underdefined at this stage. It needs its own taxonomy and metrics. But it already acts as a design test:
 
-The minimum correctness condition is not “many copies”. It is:
-
-> **At least one independent admissible path must remain available when any single ordinary failure or capture surface is removed.**
-
-This condition must itself be tested against exergy: a redundant path that costs more capacity than it preserves is only redundancy theater.
-
-A centralized system may be efficient under ideal conditions but fragile under stress. A monopolized system may be convenient but capturable. Fractanet treats excessive centralization as both a technical and political risk.
-
-Formula:
-
-> **A non-redundant capacity is fragile. A centralized capacity is capturable.**
-
-However, RAIX must remain exergetic. Redundancy that produces more noise, cost, and complexity than useful capacity is not Fractanet; it is waste.
+> **Where is the single point of failure? Where is the single point of capture?**
 
 ---
 
-## 21. No single point of failure, no single point of capture
+## 21. Anti-capture
 
-Classical resilience often focuses on avoiding a **single point of failure**.
+Fractanet's finality is anti-capture as much as resilience.
 
-Fractanet adds the symmetrical requirement:
+A system may be technically redundant and politically capturable. A system may be politically plural but technically fragile. Fractanet should avoid both.
 
-> **No single point of capture.**
+Capture surfaces include:
 
-A system can be technically redundant and politically capturable. It can have many servers but one proprietary registry, one cloud account, one identity provider, one opaque model, one payment rail, one administrative chokepoint, or one platform controlling visibility.
-
-Fractanet should therefore avoid capture points in:
-
-- compute;
-- storage;
-- routing;
-- identity;
-- cache;
-- policy;
+- cloud provider;
+- API provider;
+- model provider;
+- identity provider;
 - registry;
-- model selection;
+- namespace;
+- cache;
+- routing policy;
 - trace custody;
-- energy supply;
-- water control;
+- energy source;
 - institutional authority;
-- publication channels.
+- publication platform;
+- governance process.
 
-Anti-capture is not an afterthought. It is an architectural invariant.
+The architectural test is:
+
+> **No single point of failure. No single point of capture.**
+
+This requires not only technical redundancy, but also traceability, exit rights, forkability, and explicit control-plane governance.
 
 ---
 
-## 22. Distributed gateways close to target endpoints
+## 22. Fractanet as distributed gateway mesh
 
-Because Fractanet begins as a gateway, the gateway should not be imagined as a single central proxy.
+Fractanet can begin as a programmable gateway, but it should not remain a centralized gateway.
 
-It can be deployed close to target endpoints:
+Because it is a gateway architecture, instances can be placed near target endpoints:
 
-```text
-client
-  → global routing layer
-    → regional gateway
-      → local API / cache / energy node / inference node / COP node
-```
+- near APIs;
+- near compute clusters;
+- near energy controllers;
+- near caches;
+- near institutions;
+- near communities;
+- near users.
 
-This enables:
+A Fractanet mesh should support:
 
-- lower latency;
-- better cache locality;
-- reduced cross-region traffic;
-- data residency control;
-- failover;
-- multi-instance redundancy;
-- local execution near physical substrates;
-- programmable routing;
-- continuation affinity;
-- edge supervision.
+- multi-instance deployment;
+- load balancing;
+- routing policy;
+- redundancy;
+- local cache;
+- regional routing;
+- continuation placement;
+- trace replication;
+- fallback;
+- local autonomy under policy.
 
-The gateway becomes a distributed capability plane.
-
-It does not merely forward requests. It decides where and how bounded scripts, verbs, caches, continuations, streams, and physical packet operations should execute.
+This is why RAIX and anti-capture must apply to control surfaces, not only payload paths.
 
 ---
 
 ## 23. Signal/noise for humans and agents
 
-Fractanet must increase the signal/noise ratio for two populations:
+Fractanet aims to increase the signal/noise ratio for two populations:
 
-1. humans;
-2. AI agents.
+- humans;
+- AI agents.
 
-They do not need the same representation.
-
-For agents, signal is:
+For agents, signal means:
 
 - structure;
 - types;
+- verbs;
 - capabilities;
-- versions;
+- schemas;
 - traces;
 - policies;
-- schemas;
-- dependencies;
-- constraints;
-- continuations.
+- versions;
+- constraints.
 
-For humans, signal is:
+For humans, signal means:
 
 - intention;
-- effect;
 - responsibility;
 - risk;
+- effect;
+- reversibility;
 - explanation;
-- justification;
-- decision point;
-- possibility of control.
+- approval;
+- appeal;
+- memory.
 
-Inox can be extremely concise and expressive. That may reduce readability for humans but increase manipulability for agents. This is acceptable only if the act remains humanly intelligible through COP traces, generated explanations, metadata, tests, and reviewable policies.
+Inox can be ultra-concise and agent-readable. COP must make the act human-intelligible.
 
 Formula:
 
@@ -1190,233 +1027,255 @@ Formula:
 
 ## 24. Fractal invariants
 
-The “fracta” in Fractanet refers to multi-scale invariants.
+The "fracta" in Fractanet refers to multi-scale invariants.
 
-The same forms recur across levels:
+The same structures recur:
 
-| Invariant | Inox scale | Gateway scale | Fractanet scale |
-|---|---|---|---|
-| Control/data separation | control stack / data stack | dispatch / payloads | envelopes / heterogeneous data planes |
-| Verbs | concatenative words | synthetic endpoints | capability verbs |
-| Packetization | stack values | requests, jobs, streams | data, energy, water, goods, cognition, mandates |
-| Continuation | captured execution state | resumable jobs | long-lived workflows and cognitive packets |
-| Backtracking | branch/retry | route exploration | adaptive multi-substrate dispatch |
-| Cache | local memoization | programmable cache | RAIX of storage and useful capacity |
-| Trace | execution state | logs/events | COP supervision |
-| Exergy | useful computation | useful response | useful territorial/cognitive capacity |
+| Invariant | Inox scale | Gateway scale | Network scale | Institutional scale |
+|---|---|---|---|---|
+| Control/data | control stack / data stack | registry / payload | envelope / data plane | mandate / act |
+| Verb | word / operation | API verb | routed capacity | institutional action |
+| Packet | value / stack item | API result / cache entry | data, energy, inference | mandate, responsibility |
+| Continuation | captured execution | resumable job | long-lived route/workflow | deferred decision |
+| Trace | execution state | COP events | audit stream | accountability record |
+| Redundancy | alternative branch | fallback gateway | RAIX mesh | plural authority |
+| Exergy | useful operation | efficient route | useful capacity | legitimate effect |
 
-Fractanet is fractal not because it uses a decorative metaphor, but because its invariants are intended to survive changes of scale and substrate.
+### 24.1 Cross-scale example: continuation
+
+A continuation appears at several scales:
+
+1. **Inox VM:** execution state can be suspended and resumed.
+2. **Gateway:** a long-running verb becomes a resumable job.
+3. **COP:** pause/resume events make the suspended act inspectable.
+4. **Cognitive packet:** a reasoning process is packaged for later continuation.
+5. **Institutional process:** a pending mandate or approval remains valid only under explicit conditions.
+
+The invariant is not a metaphor. It is the repeated structure: preserve enough state to resume an act under controlled conditions.
 
 ---
 
-## 25. Relationship to existing work
+## 25. Generalized packet boundary rule
 
-Fractanet does not invent each of its components from nothing. It synthesizes several lineages:
+The packet metaphor must be constrained.
 
-- packet switching and ARPANET;
-- RAID and generalized redundancy;
-- active networks;
-- software-defined networking;
-- cyber-physical systems;
-- energy packet networks;
-- packetized energy management;
-- cognitive packet networks;
-- information-centric and named-data networking;
-- delay-tolerant networking;
-- combinatorial optimization;
-- energy-based models;
-- exergy theory;
-- capability-based security;
-- workflow orchestration;
-- actor systems;
-- continuation-based computation;
-- versioned knowledge corpora.
+A candidate packet should satisfy most of the following:
 
-The distinctive claim is not that no prior work touches any part of the architecture. The claim is that Fractanet composes these lines into a single anti-capture, exergy-oriented, multi-substrate, COP/Inox-supervised architecture.
+- bounded;
+- identifiable;
+- addressable;
+- storable, delayable, or bufferable;
+- independently routable or governable;
+- measurable or auditable;
+- transformable, consumable, executable, validable, or revocable;
+- capable of carrying an envelope distinct from its payload.
+
+Positive examples:
+
+- an API request;
+- a cached result;
+- a battery charging slot;
+- an inference request;
+- a signed delegation;
+- a task continuation.
+
+Negative or borderline examples:
+
+- continuous rainfall before measurement;
+- an ongoing friendship;
+- a vague political aspiration;
+- diffuse cultural influence;
+- unbounded institutional legitimacy;
+- sensor noise before sampling.
+
+This rule protects the framework from conceptual inflation.
 
 ---
 
 ## 26. Minimal Fractanet node
 
-A minimal Fractanet node should probably include:
+A minimal Fractanet node should support:
 
-1. a small execution runtime, ideally Inox Core;
-2. a capability model;
-3. a local registry of verbs or scripts;
-4. a local cache with explicit policy;
-5. a COP-compatible event interface;
-6. a routing table or dispatch policy;
-7. a trace log;
-8. a way to advertise capabilities;
-9. a way to receive, execute, pause, resume, or reject packets;
-10. a way to verify versions and signatures.
+- receiving a verb call;
+- resolving the verb in a registry;
+- checking capabilities;
+- selecting a route or implementation;
+- executing a bounded Inox script or compatible profile;
+- using a scoped cache;
+- emitting COP trace events;
+- returning a result, stream, or continuation;
+- rejecting unauthorized or unbounded execution;
+- exposing enough explanation for human review.
 
-A larger node may add:
-
-- AI-agent explanation;
-- energy-aware routing;
-- exergy-aware scheduling;
-- physical packet interfaces;
-- streaming supervision;
-- distributed continuation storage;
-- human approval workflows;
-- federation.
+The first MVP should not attempt to implement physical packets. It should prove the digital/API control-plane invariant first.
 
 ---
 
 ## 27. Failure modes
 
-The concept is powerful. Therefore its failure modes must be explicit.
+### 27.1 Packet metaphor over-extension
 
-### 27.1 Metaphorical overreach
+If everything becomes a packet, the framework loses precision.
 
-The packet abstraction may be stretched too far. Not every flow should be packetized. Not every relation is a packet. Not every analogy is operational.
-
-Boundary rule:
-
-> A unit qualifies as a packet only when its operational identity is bounded, addressable, storable or delayable, and independently routable or governable.
-
-Positive examples: a signed inference request, a battery charging slot, a mandate limited in scope and duration.
-
-Negative examples: a permanent social relation, an unbounded cultural influence, a continuous physical flow with no addressable unit and no independent governance boundary.
-
-Related open question: #9, physical data-plane envelope compatibility.
+Mitigation: apply the boundary rule in section 25.
 
 ### 27.2 Control-plane capture
 
-Even if data planes are distributed, the control plane may be captured by:
+A distributed data plane can still be captured by a centralized registry, identity provider, model provider, or routing authority.
 
-- a proprietary registry;
-- a central identity provider;
-- a model vendor;
-- a cloud account;
-- a dominant policy engine;
-- a legal chokepoint;
-- an opaque routing algorithm.
+Mitigation: apply RAIX to control surfaces, not only data paths.
 
-Fractanet must therefore apply RAIX to control planes as well as data planes. Related open questions: #1, #2, #7.
+### 27.3 Opaque exergy optimization
 
-### 27.3 Opaque optimization
+A scoring function may become an opaque technocratic authority.
 
-Energy-based or AI-assisted routing can become opaque. COP must make candidate routes, rejected routes, constraints, scores, and overrides inspectable. Related open questions: #5 and #6.
+Mitigation: hard constraints first, inspectable candidate routes, COP explanation, human override where relevant.
 
 ### 27.4 Redundancy noise
 
-Redundancy can become waste. RAIX is valid only when it increases useful capacity, resilience, sovereignty, or signal more than it increases cost, noise, or complexity. Related open question: #7.
+Redundancy can become waste, complexity, and maintenance burden.
 
-### 27.5 Human displacement
+Mitigation: require exergetic accounting for RAIX.
 
-AI agents may read dense Inox better than humans. This does not authorize removing human validation from decisions involving doctrine, law, identity, governance, irreversible data choices, or public commitments. Related open question: #8.
+### 27.5 Human displacement by agent-readable code
 
-### 27.6 Security through complexity
+Dense Inox may become legible to agents but opaque to humans.
 
-A system of scripts, gateways, registries, caches, continuations, and routes can hide vulnerabilities. Minimal runtimes, explicit capabilities, sandboxing, testable policies, and traceable execution are required.
+Mitigation: every critical act must have a human-readable COP explanation and review path.
+
+### 27.6 Registry as chokepoint
+
+The registry may become the new central point of capture.
+
+Mitigation: registry RAIX, signed records, mirrored registries, transparent diffs, local override under explicit policy.
 
 ---
 
 ## 28. Non-claims
 
-This document does not claim that all substrates are physically equivalent.
+This document does not claim that:
 
-It does not claim that all systems should be packetized.
+- every flow should become a packet;
+- all substrates are equivalent;
+- Fractanet is already implemented;
+- RAIX is already formally defined;
+- exergy routing is already a complete model family;
+- JavaScript can safely carry complex continuations;
+- physical packet networks can be governed with no domain-specific law or engineering;
+- anti-capture can be solved by architecture alone;
+- COP/Inox eliminates the need for human validation.
 
-It does not claim that Fractanet is already implemented as a complete working network.
-
-It does not claim that JavaScript is unsuitable for all uses. It claims only that JavaScript should not carry the complex core of Fractanet when continuations, backtracking, supervision, routing, cache, and exergy become central.
-
-It does not claim that AI-based routing should decide outside capability constraints.
-
-It does not claim that anti-capture is automatically achieved by distribution. Distribution can still be captured if control surfaces are centralized.
-
-It does not claim that exergy is a complete ethical or political criterion. Exergy measures useful capacity; the question of what should count as useful remains governed by doctrine, legitimacy, and human arbitration.
+The document claims only that a shared architectural grammar is emerging and that a limited programmable gateway MVP can test it.
 
 ---
 
 ## 29. Open questions
 
-1. What is the minimal formal definition of a Fractanet verb?
-2. Should the verb registry be part of FractaVolta, Cogentia, Inox, or a dedicated Fractanet repository?
-3. What is the minimal Inox Core needed for edge execution?
-4. Which COP events are mandatory for a Fractanet node?
-5. How should exergy scores be represented without producing opaque technocratic optimization?
-6. What are the hard constraints that must always precede exergy ranking?
-7. What is the relation between RAIX and existing fault-tolerance taxonomies?
-8. How should human approval be represented in the control plane?
-9. Can physical data planes — energy, water, goods — share enough envelope structure to justify a common registry?
-10. What is the first MVP: programmable API gateway, COP-supervised continuation router, or Inox Core Fractanet node?
+1. What is the minimal canonical schema for a Fractanet verb?
+2. How should registry governance avoid capture?
+3. What is the smallest viable Inox Core runtime?
+4. Which COP events are mandatory for a minimal node?
+5. How should exergy scoring be formalized without opacity?
+6. How can RAIX be measured rather than merely named?
+7. Which data-plane substrates should be tested first after the API gateway MVP?
+8. How should human approval, revocation, and appeal be represented in the control plane?
+9. How much of the generalized envelope can be shared across data, energy, water, goods, inference, and mandates?
+10. What is the minimum demo that proves the fractal invariant without overbuilding?
 
 ### 29.1 Corpus anchors for open questions
 
-The following anchors are not answers. They are the first corpus locations to consult before turning an open question into a new document, MVP issue, or derived product.
+The following anchors should be consulted before turning each open question into a new specification or article.
 
-| Open question | First corpus anchors | Expected contribution | Current status |
-|---|---|---|---|
-| Q1 — Minimal Fractanet verb | [FractaVolta/research/fractanet.md](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/fractanet.md); [FractaVolta/research/generalized_packet_networks.md](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/generalized_packet_networks.md); [Inox/research/inox-spec.md](https://github.com/JeanHuguesRobert/Inox/blob/main/research/inox-spec.md) | Formalize a verb as a capability-bound operation over generalized packets, executable or dispatchable through Inox/COP. | Needs a dedicated minimal schema. |
-| Q2 — Registry placement and governance | [FractaVolta/research/index.md](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/index.md); [cogentia/research/pipeline.md](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/pipeline.md); [cogentia/research/concepts.md](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/concepts.md); [cogentia/scripts/cogentia.js](https://github.com/JeanHuguesRobert/cogentia/blob/main/scripts/cogentia.js) | Reuse the existing corpus-indexing discipline before inventing a new registry. | Needs decision: FractaVolta first, then possibly dedicated Fractanet registry. |
-| Q3 — Minimal Inox Core | [Inox/research/inox-spec.md](https://github.com/JeanHuguesRobert/Inox/blob/main/research/inox-spec.md); [Inox/research/inox-docs-index.md](https://github.com/JeanHuguesRobert/Inox/blob/main/research/inox-docs-index.md); [Inox/research/inox-tutorial-basic.md](https://github.com/JeanHuguesRobert/Inox/blob/main/research/inox-tutorial-basic.md) | Identify the smallest concatenative runtime required for verbs, stacks, capabilities, continuations and dispatch. | Needs extraction into an Inox-side note. |
-| Q4 — Mandatory COP events | [inseme/packages/cop-core/Invariants.md](https://github.com/JeanHuguesRobert/inseme/blob/main/packages/cop-core/Invariants.md); [inseme/packages/cop-core/ImplementationProfiles.md](https://github.com/JeanHuguesRobert/inseme/blob/main/packages/cop-core/ImplementationProfiles.md); [inseme/research/reactive_cognitive_cop_extension.md](https://github.com/JeanHuguesRobert/inseme/blob/main/research/reactive_cognitive_cop_extension.md) | Define the mandatory event vocabulary for observation, pause, resume, approval, rejection, branch exploration and trace sealing. | Needs mapping from COP invariants to Fractanet node profile. |
-| Q5 — Exergy scoring without opacity | [marenostrum/safe_compute_exergy.md](https://github.com/JeanHuguesRobert/marenostrum/blob/main/safe_compute_exergy.md); [marenostrum/compute-exergy-omitted-variable.md](https://github.com/JeanHuguesRobert/marenostrum/blob/main/compute-exergy-omitted-variable.md); [marenostrum/CXU_SPEC.md](https://github.com/JeanHuguesRobert/marenostrum/blob/main/CXU_SPEC.md); [FractaVolta/research/fractanet.md](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/fractanet.md) | Keep exergy as useful capacity, not technocratic black-box optimization. | For now: cost/scoring function under hard constraints, not full model family. |
-| Q6 — Hard constraints before optimization | [inseme/packages/cop-core/Invariants.md](https://github.com/JeanHuguesRobert/inseme/blob/main/packages/cop-core/Invariants.md); [cogentia/prompts/redactor.md](https://github.com/JeanHuguesRobert/cogentia/blob/main/prompts/redactor.md); [FractaVolta/docs/methodology.md](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/docs/methodology.md) | Separate non-negotiable constraints from soft ranking criteria. | Needs invariant list: capability, legality, privacy, consent, sovereignty, safety. |
-| Q7 — RAIX and fault-tolerance | [FractaVolta/research/fractanet.md](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/fractanet.md); [FractaVolta/research/generalized_packet_networks.md](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/generalized_packet_networks.md); [FractaVolta/research/packet_paper_template.md](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/packet_paper_template.md) | Extend redundancy from storage to data, compute, policy, trace, route, institution and substrate. | RAIX remains a thesis needing taxonomy and metrics. |
-| Q8 — Human approval in control plane | [cogentia/research/pipeline.md](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/pipeline.md); [cogentia/prompts/redactor.md](https://github.com/JeanHuguesRobert/cogentia/blob/main/prompts/redactor.md); [cogentia/prompts/reviewer.md](https://github.com/JeanHuguesRobert/cogentia/blob/main/prompts/reviewer.md); [inseme/packages/cop-core/Invariants.md](https://github.com/JeanHuguesRobert/inseme/blob/main/packages/cop-core/Invariants.md) | Preserve human arbitration while allowing agent-readable and runtime-readable control events. | Needs lifecycle: request, grant, deny, revoke, trace, appeal. |
-| Q9 — Physical data-plane compatibility | [FractaVolta/research/generalized_packet_networks.md](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/generalized_packet_networks.md); [FractaVolta/research/inference_packet_network.md](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/inference_packet_network.md); [FractaVolta/research/thermal_packet_networks.md](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/thermal_packet_networks.md); [FractaVolta/research/packet_paper_template.md](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/packet_paper_template.md); [FractaVolta/dc_native_epn.md](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/dc_native_epn.md) | Test whether energy, thermal, inference and possibly water/goods packets share enough envelope structure. | Needs comparative packet papers, not only Fractanet. |
-| Q10 — First MVP | [FractaVolta/research/fractanet.md](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/fractanet.md); [FractaVolta/research/bonne_marque_mvp.md](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/bonne_marque_mvp.md); [cogentia/research/cogentia_continuation_packet_routing.md](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/cogentia_continuation_packet_routing.md); [Inox/research/inox-spec.md](https://github.com/JeanHuguesRobert/Inox/blob/main/research/inox-spec.md) | Start with a programmable API gateway rather than the full multi-substrate network. | Recommended MVP: Fractanet API gateway with Inox Core, COP trace, cache, dispatch and simple exergy scoring. |
+| Open question | Corpus anchors |
+|---|---|
+| Minimal verb schema | [Inox/research/inox-spec.md](https://github.com/JeanHuguesRobert/Inox/blob/main/research/inox-spec.md); [FractaVolta/research/generalized_packet_networks.md](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/generalized_packet_networks.md); [cogentia/research/cognitive_packets.md](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/cognitive_packets.md) |
+| Registry governance and capture | [FractaVolta/research/generalized_packet_networks.md](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/generalized_packet_networks.md); [FractaVolta/research/index.md](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/index.md); [cogentia/research/pipeline.md](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/pipeline.md) |
+| Inox Core minimal runtime | [Inox/research/inox-spec.md](https://github.com/JeanHuguesRobert/Inox/blob/main/research/inox-spec.md) |
+| Mandatory COP events | [inseme/packages/cop-core/Invariants.md](https://github.com/JeanHuguesRobert/inseme/blob/main/packages/cop-core/Invariants.md); [inseme/packages/cop-core/ImplementationProfiles.md](https://github.com/JeanHuguesRobert/inseme/blob/main/packages/cop-core/ImplementationProfiles.md); [inseme/research/reactive_cognitive_cop_extension.md](https://github.com/JeanHuguesRobert/inseme/blob/main/research/reactive_cognitive_cop_extension.md) |
+| Exergy scoring | [marenostrum/safe_compute_exergy.md](https://github.com/JeanHuguesRobert/marenostrum/blob/main/safe_compute_exergy.md); [marenostrum/compute-exergy-omitted-variable.md](https://github.com/JeanHuguesRobert/marenostrum/blob/main/compute-exergy-omitted-variable.md); [marenostrum/CXU_SPEC.md](https://github.com/JeanHuguesRobert/marenostrum/blob/main/CXU_SPEC.md) |
+| RAIX measurement | [FractaVolta/research/generalized_packet_networks.md](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/generalized_packet_networks.md); [FractaVolta/research/packet_paper_template.md](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/packet_paper_template.md) |
+| Physical data planes | [FractaVolta/research/thermal_packet_networks.md](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/thermal_packet_networks.md); [FractaVolta/research/inference_packet_network.md](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/inference_packet_network.md); [FractaVolta/research/generalized_packet_networks.md](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/generalized_packet_networks.md) |
+| Cognitive packets and continuations | [cogentia/prompts/cognitive_packet.md](https://github.com/JeanHuguesRobert/cogentia/blob/main/prompts/cognitive_packet.md); [cogentia/research/cognitive_packets.md](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/cognitive_packets.md); [cogentia/research/cognitive_packet_switching.md](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/cognitive_packet_switching.md); [cogentia/research/cogentia_continuation_packet_routing.md](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/cogentia_continuation_packet_routing.md) |
+| MVP gateway | [FractaVolta/research/packet_paper_template.md](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/packet_paper_template.md); [Inox/research/inox-spec.md](https://github.com/JeanHuguesRobert/Inox/blob/main/research/inox-spec.md); [inseme/packages/cop-core/ImplementationProfiles.md](https://github.com/JeanHuguesRobert/inseme/blob/main/packages/cop-core/ImplementationProfiles.md) |
 
 ---
 
 ## 30. First MVP direction
 
-The most realistic MVP is not the full multi-substrate Fractanet.
+The first MVP should be digital and narrow.
 
-The first MVP should be a programmable API gateway that demonstrates the core invariants at small scale:
+A good candidate:
 
-- verbs instead of endpoints;
-- script registry;
-- Inox-first execution;
-- limited JavaScript adoption profile;
-- programmable cache;
-- traceable dispatch;
-- COP event stream;
-- optional long-running job;
-- explicit capabilities;
-- small RAIX-style redundancy between two gateways or routes;
-- simple exergy-inspired routing score.
+> **A Fractanet programmable API gateway exposing capability verbs over existing JSON APIs, executed by Inox Core, supervised by COP, with a small registry, scoped cache, simple fallback, and exergy-inspired routing after hard constraints.**
 
-This MVP would not prove the whole theory. It would instantiate the invariants.
+The MVP should demonstrate:
 
-A successful MVP should answer:
+- one verb registry;
+- two or three source APIs;
+- one synthetic verb;
+- one cache policy;
+- one fallback branch;
+- one continuation or resumable job;
+- one COP trace stream;
+- one JavaScript adoption script;
+- one Inox core script;
+- one exergy score example;
+- one registry anti-capture mechanism, even if only by mirrored signed records.
 
-> Can a verb be called, dispatched, executed near target endpoints, cached, traced, supervised, and explained without creating a new point of capture?
+Success criterion:
+
+> A reviewer should be able to inspect the trace and understand why the gateway selected one route rather than another.
 
 ---
 
 ## 31. Claim manifest
 
-| Claim | Status | Validation level |
-|---|---|---|
-| Fractanet is the infrastructural instance of GPN | corpus thesis | human validation required |
-| Control/data separation can be generalized beyond bits | strong conceptual claim | supported by GPN framework; requires further examples |
-| Inox is the micro-architecture of Fractanet | corpus architectural claim | supported by Inox control/data stack design; requires technical formalization |
-| COP is the supervision plane | corpus architectural claim | supported by COP event/task/continuation model; requires implementation mapping |
-| RAIX generalizes RAID to arbitrary X | conceptual extension | promising but needs formal definition |
-| Exergy is the correct routing criterion | doctrinal/technical claim | strong within corpus; needs operational metrics |
-| JavaScript should remain an adoption profile | design recommendation | pragmatic; subject to implementation feedback |
-| No single point of capture is as important as no single point of failure | core doctrine | stable; requires architectural checklist |
-| Fractanet increases signal/noise for humans and AI agents | design goal | requires evaluation criteria |
+| Claim | Status |
+|---|---|
+| Fractanet is the infrastructural instance of GPN | provisional but central |
+| Fractanet generalizes control/data plane beyond bits | central claim |
+| Inox is the micro-architecture of Fractanet | strong internal claim |
+| COP is the supervision plane | strong internal claim |
+| JavaScript is adoption-only | recommendation |
+| RAIX prevents both failure and capture | promising but underformalized |
+| Exergy is the correct optimization concept | central but requires metrics |
+| Physical packet compatibility is plausible | to be demonstrated |
+| Anti-capture requires control-plane redundancy | strong claim |
+| MVP should begin as programmable API gateway | recommended next step |
 
 ---
 
 ## 32. Continuation
 
-The next useful actions are:
+Useful next documents:
 
-1. submit this draft to review under [cogentia/prompts/reviewer.md](https://github.com/JeanHuguesRobert/cogentia/blob/main/prompts/reviewer.md);
-2. integrate only high-signal objections;
-3. produce a diagram of the architecture;
-4. define a minimal Fractanet verb schema;
-5. define the MVP programmable gateway;
-6. update [FractaVolta/research/index.md](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/index.md) only after human validation;
+1. `fractanet_mvp_gateway_spec.md`
+2. `raix_taxonomy.md`
+3. `exergy_routing_note.md`
+4. `fractanet_minimal_verb_schema.md`
+5. `fractanet_registry_anti_capture.md`
+6. `fractanet_cop_event_profile.md`
+7. `fractanet_envelope_payload_examples.md`
+
+Recommended next action:
+
+1. validate whether this v0.3.2 remains the canonical working draft;
+2. update `FractaVolta/research/index.md`;
+3. produce a narrow MVP gateway specification;
+4. extract a shorter technical note on envelope/payload/verbs;
+5. ask a second reviewer to test whether the scope is now clearer;
+6. avoid public manifesto-style publication until RAIX, exergy, and registry governance are better scoped;
 7. extract cognitive packets into `cogentia` if the draft stabilizes.
 
 ---
 
+## Minimal completion report
+
+- **Target document:** [FractaVolta/research/fractanet.md](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/fractanet.md).
+- **Files produced or changed:** `FractaVolta/research/fractanet.md` updated in GitHub as v0.3.2-draft.
+- **Source or derived product:** source document draft.
+- **Critiques integrated:** high-signal points from Grok/reviewer selectively integrated: envelope comparison, minimal verb record, registry capture surface, JavaScript/COP-Inox boundary, exergy toy example, RAIX taxonomy, corpus anchors for open questions, clickable references.
+- **Critiques rejected or deferred:** full RAIX formalization, full exergy model, registry governance, physical packet compatibility, and MVP specification deferred to dedicated follow-up documents.
+- **Known risks:** over-integration of concepts; registry capture; opaque optimization; redundancy noise; physical data-plane compatibility still to be demonstrated.
+- **Human validation needed:** public definition, RAIX scope, JavaScript positioning, exergy-routing formulation, MVP boundary, institutional references.
+- **Next useful action:** update `FractaVolta/research/index.md`, then produce either the MVP gateway spec or a short derived technical note.
