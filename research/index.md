@@ -49,6 +49,7 @@ This repository instantiates the **physical infrastructure layer** of the [DHITL
 | [Packet Paper Template — A Minimal Method for Declining Generalized Packet Networks into Substrate-Specific Papers](packet_paper_template.md) *(method-template working paper v0.2)* | this repo | 2026-05-22 |
 | [Fractanet — Working paper](fractanet.md) *(working paper, draft v0.1)* | this repo | 2026-05-31 |
 | [Bonne Marque](bonne_marque_mvp.md) *(conceptual MVP source document v0.2)* | this repo | 2026-06-03 |
+| [AGENTS.md — FractaVolta agent mandate](../AGENTS.md) *(local operational mandate for AI agents working in this repository)* | this repo | 2026-06-13 |
 | [Corpus Status](corpus-status.md) *(living view — auto-refreshed by `cogentia.js corpus-status`)* | this repo | refreshable |
 | [Concept Index](concepts.md) *(typed concept registry — mapped by `cogentia.js concepts`)* | this repo | refreshable |
 
@@ -100,22 +101,13 @@ This repository instantiates the **physical infrastructure layer** of the [DHITL
 ### Backlinks
 
 *These documents link to this file:*
-- [DC-Native Energy Packet Networks](../dc_native_epn.md)
-- [Electricity in Containers](../electricity_in_containers.md)
-- [FractaVolta](../fractavolta_paper.md)
-- [Le Réseau Inconscient](../LE_RESEAU_INCONSCIENT.md)
-- [Mariani Village: A Relocatable DC-Native Housing Fleet](../mariani_village.md)
-- [The Packet as Evolutionary Attractor: Scale-Invariant Transitions in Complex Networks](../packet_attractor.md)
-- [The Packet Transition: A Lateral Reading of Circuit Networks](../packet_transition.md)
-- [FractaVolta – Partner  Brief](../partner_brief.md)
-- [Packetized Gravity Networks: Distributed Hydro-Energetic Infrastructure for Resilient Renewable Integration](../PGN.md)
-- [Concept Index — FractaVolta](concepts.md)
+- [Research Index — barons-Mariani](https://github.com/JeanHuguesRobert/barons-Mariani/blob/main/research/index.md)
+- [Research Index — Cogentia](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/index.md)
 - [Corpus Status — FractaVolta](corpus-status.md)
-- [Guaranteed Inference](garanteed_inference.md)
-- [Inference Packet Networks](inference_packet_network.md)
-- [FractaTera](../tera.md)
-- [FractaVolta traceable gouvernance](../traceable_governance.md)
-- [The Unconscious Grid](../UNCONSCIOUS_GRID.md)
-- [Value-Shaped Solar and Containerized Compute](../value_shaped_solar_and_containerized_compute.md)
-
+- [Fractanet — Generalized Control Planes for Heterogeneous Packet Networks](fractanet.md)
+- [FractaVolta](../README.md)
+- [Research Index — Inox](https://github.com/JeanHuguesRobert/Inox/blob/master/research/index.md)
+- [Research Index — Inseme](https://github.com/JeanHuguesRobert/inseme/blob/main/research/index.md)
+- [Research Index — Jean Hugues Noël Robert (Profile / Entry Point)](https://github.com/JeanHuguesRobert/JeanHuguesRobert/blob/main/research/index.md)
+- [Research Index — MareNostrum](https://github.com/JeanHuguesRobert/marenostrum/blob/main/research/index.md)
 <!-- END_AUTO: backlinks -->
