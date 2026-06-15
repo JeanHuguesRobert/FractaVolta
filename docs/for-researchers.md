@@ -36,8 +36,8 @@ Each repository carries a `research/index.md` and a `research/corpus-status.md` 
 - [Packetized Gravity Networks](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/PGN.md) — hydraulic exergy.
 - [Thermal Packet Networks](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/thermal_packet_networks.md) — multi-scale store-and-forward architecture for low-exergy heat and cold distribution.
 - [Packet Paper Template](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/packet_paper_template.md) — methodological template for deriving substrate-specific papers from the Generalized Packet Networks framework.
-- [The Packet Transition: A Lateral Reading](https://github.com/JeanHuguesRobert/marenostrum/blob/main/packet_transition.md) — phronèsis, amathia, transition taxonomy.
-- [The Packet as Evolutionary Attractor](https://github.com/JeanHuguesRobert/marenostrum/blob/main/packet_attractor.md) — complexity-theoretic framing.
+- [The Packet Transition: A Lateral Reading](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/packet_transition.md) — phronèsis, amathia, transition taxonomy.
+- [The Packet as Evolutionary Attractor](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/packet_attractor.md) — complexity-theoretic framing.
 
 ### Compute substrate
 

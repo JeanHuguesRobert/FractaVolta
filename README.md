@@ -300,8 +300,8 @@ FractaVolta operates the integrated stack across a six-repository ecosystem:
 - **[Thermal Packet Networks](./research/thermal_packet_networks.md)** (v0.2, 2026-05) — heat and cold as discrete thermal packets stored, transported, addressed, exchanged.
 - **[Inference Packet Networks](./research/inference_packet_network.md)** (v2.0, 2026-05) — packet logic applied to AI inference continuity.
 - **[Mariani Village](./mariani_village.md)** — habitat packet, Dilorta, BLE tracking.
-- **[The Packet Transition: A Lateral Reading](https://github.com/JeanHuguesRobert/marenostrum/blob/main/packet_transition.md)** — phronèsis, amathia, transition taxonomy. *In MareNostrum.*
-- **[The Packet as Evolutionary Attractor](https://github.com/JeanHuguesRobert/marenostrum/blob/main/packet_attractor.md)** — complexity theory, open question. *In MareNostrum.*
+- **[The Packet Transition: A Lateral Reading](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/packet_transition.md)** — phronèsis, amathia, transition taxonomy. *In FractaVolta.*
+- **[The Packet as Evolutionary Attractor](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/packet_attractor.md)** — complexity theory, open question. *In FractaVolta.*
 - **[DHITL](https://github.com/JeanHuguesRobert/marenostrum/blob/main/DHITL.md)** — Democratic Humans in the Loop. *In MareNostrum.*
 - **[Agent-Resumable CLI](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/agent_resumable_cli.md)** — continuation protocol, externalized judgment. *In Cogentia.*
 - **[The COP Manifesto](https://github.com/JeanHuguesRobert/inseme/blob/main/packages/cop-core/Manifesto.md)** — TCP/IP for intelligences. *In inseme.*

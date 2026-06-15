@@ -255,10 +255,13 @@ https://github.com/JeanHuguesRobert/FractaVolta/blob/main/UNCONSCIOUS_GRID.md
 ### Backlinks
 
 *These documents link to this file:*
-- [Le Réseau Inconscient](LE_RESEAU_INCONSCIENT.md)
 - [Concept Index — FractaVolta](research/concepts.md)
 - [Corpus Status — FractaVolta](research/corpus-status.md)
+- [For researchers](docs/for-researchers.md)
+- [FractaVolta](README.md)
+- [Le Réseau Inconscient](LE_RESEAU_INCONSCIENT.md)
+- [MareNostrum](docs/marenostrum.md)
 - [Research Index — FractaVolta](research/index.md)
 - [The Unconscious Grid](UNCONSCIOUS_GRID.md)
-
+- [Documents - All Tracked Repos](https://github.com/JeanHuguesRobert/JeanHuguesRobert/blob/main/research/documents.md)
 <!-- END_AUTO: backlinks -->

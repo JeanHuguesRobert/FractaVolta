@@ -354,9 +354,11 @@ https://bitcoin.org/bitcoin.pdf
 ### Backlinks
 
 *These documents link to this file:*
+- [For researchers](docs/for-researchers.md)
+- [FractaVolta](README.md)
 - [Le Réseau Inconscient](LE_RESEAU_INCONSCIENT.md)
-- [Corpus Status — FractaVolta](research/corpus-status.md)
+- [MareNostrum](docs/marenostrum.md)
 - [Research Index — FractaVolta](research/index.md)
 - [The Unconscious Grid](UNCONSCIOUS_GRID.md)
-
+- [Documents - All Tracked Repos](https://github.com/JeanHuguesRobert/JeanHuguesRobert/blob/main/research/documents.md)
 <!-- END_AUTO: backlinks -->
