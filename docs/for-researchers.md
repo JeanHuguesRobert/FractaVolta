@@ -15,7 +15,7 @@ For concrete deployment opportunities, see [For deployers](./for-deployers). For
 
 ## The corpus
 
-The work spans six repositories, each producing research-grade documents that cross-reference each other:
+The work spans a public corpus of repositories, each producing research-grade documents that cross-reference each other:
 
 - **[MareNostrum](https://github.com/JeanHuguesRobert/marenostrum)** — strategic framework, CXU specification, DHITL (Democratic Humans in the Loop), Mediterranean solar commons, circuit-to-packet transition theory.
 - **[FractaVolta](https://github.com/JeanHuguesRobert/FractaVolta)** — physical infrastructure layer: EPN, PGN, DC-native nodes, IPN, Mariani Village.
@@ -23,6 +23,7 @@ The work spans six repositories, each producing research-grade documents that cr
 - **[inseme](https://github.com/JeanHuguesRobert/inseme)** — platform and COP runtime: Cognitive Orchestration Protocol, briques, applications.
 - **[barons-Mariani](https://github.com/JeanHuguesRobert/barons-Mariani)** — political and institutional framework: Plan 2038, *Discours de la seconde méthode*, *Projet #1755*.
 - **[Inox](https://github.com/JeanHuguesRobert/Inox)** — language and runtime substrate: concatenative stack VM with strict control/data plane separation, designed for nodes of the future *Fractanet*.
+- **[Ubikia](https://github.com/JeanHuguesRobert/ubikia)** — editorial derivation and publication layer: source-first derived products, personas, platform packages, and publication ledger.
 
 Each repository carries a `research/index.md` and a `research/corpus-status.md` when applicable. Together they form the navigable map of the research corpus.
 
