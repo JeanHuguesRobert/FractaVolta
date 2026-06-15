@@ -82,6 +82,10 @@ tags:
   - streaming
   - backtracking
   - second-method
+  - capability-regimes
+  - decision-under-uncertainty
+  - allostasis
+  - crisis-regime
 x-keywords:
   - Fractanet
   - Generalized Packet Networks
@@ -104,6 +108,11 @@ x-keywords:
   - exergy-based routing
   - no single point of failure
   - no single point of capture
+  - capability regimes
+  - decision under uncertainty
+  - graded regimes
+  - crisis regime
+  - allostasis
 human_validation_required: true
 review_status: "Grok constructive review completed 2026-06-13; high-signal points selectively integrated in v0.3; corpus anchors added in v0.3.1"
 revision_note: "v0.3 integrates selected reviewer objections: envelope comparison, exergy toy model, registry anti-capture, minimal verb schema, JavaScript/Inox boundary, and one cross-scale fractal example. v0.3.1 adds corpus anchors for open questions. Review remains advisory; human author arbitrates."
@@ -161,7 +170,7 @@ Where the Internet routes packets of bits, Fractanet aims to route, supervise, c
 
 Its core architectural thesis is that the classical distinction between **control plane** and **data plane** can be generalized beyond digital networks. The control plane carries envelopes: identity, origin, destination, rights, policy, priority, TTL, freshness, signatures, routing constraints, traceability, and supervision events. The data planes carry heterogeneous payloads: bits, energy, water, heat, goods, compute, inference, cognition, delegation, or institutional authority.
 
-Fractanet is not a single platform, protocol, cloud, or product. It is a fractal architecture of capacity: the same invariants recur at several scales — inside the Inox virtual machine, inside a programmable gateway, across a mesh of gateways, across energy and compute infrastructures, and across human/AI cognitive workflows.
+Fractanet is not a single platform, protocol, cloud, or product. It is a fractal architecture of capacity: the same invariants recur at several scales — inside the Inox virtual machine, inside a programmable gateway, across a mesh of gateways, across energy and compute infrastructures, and across /AI cognitive workflows.
 
 Its execution substrate is **Inox**, especially in its minimal concatenative form and its richer dialects. Its supervision layer is **COP**. Its redundancy model is **RAIX**, a generalization of RAID where `X` may be data, energy, cache, compute, model, route, policy, trace, jurisdiction, agent, or institution. Its optimization criterion is not raw energy minimization but **exergy**: useful capacity produced per unit of cost, latency, risk, noise, capture exposure, and irreversible loss.
 
@@ -178,11 +187,11 @@ This document is long because it is a source document, not a short public articl
 1. **GPN vs. Fractanet** — Generalized Packet Networks provide the theoretical grammar; Fractanet is one infrastructural implementation of that grammar.
 2. **Envelope vs. payload** — the control plane governs envelopes; heterogeneous data planes carry payloads.
 3. **Verbs vs. endpoints** — clients call stable verbs; the gateway dispatches to the appropriate implementation.
-4. **COP/Inox core** — Inox executes capability-bound compositions; COP supervises long, streamable, resumable, or human-sensitive acts.
+4. **COP/Inox core** — Inox executes capability-bound compositions; COP supervises long, streamable, resumable, or -sensitive acts.
 5. **RAIX anti-capture** — redundancy must apply not only to data planes but also to registries, policies, traces, and other control surfaces.
 6. **Exergy first** — routing should maximize useful capacity under hard constraints, not merely minimize raw energy or cost.
 7. **Human arbitration** — dense Inox and agent-readable traces are acceptable only if the act remains explainable to humans.
-
+8. **Capability regimes** — Fractanet does not route capacity in an abstract vacuum. Every packet circulates under a regime of constraints: ordinary, perturbed, degraded, critical, vital or recovery. COP must qualify the regime, route accordingly, preserve local safety invariants, escalate when needed, and reinforce traces as stakes and uncertainty increase.
 ---
 
 ## Keywords
@@ -435,6 +444,16 @@ call customer.summary
 ```
 
 The dispatch decision must be traceable. It is itself an act.
+
+---
+
+## 8.1 Capability regimes and decision under uncertainty
+
+Fractanet does not route capacity in an abstract vacuum. A capability is always exercised under constraints: time available, uncertainty, stakes, reversibility, locality, mandate, available resources, preemption rights, trace requirements and fallback options.
+
+The binary distinction between normal and crisis is therefore insufficient. A Fractanet packet may circulate under ordinary, perturbed, degraded, critical, vital or recovery regimes. COP should qualify the regime, route the packet accordingly, preserve local safety invariants, escalate when needed, and reinforce traces as uncertainty and stakes increase.
+
+This doctrine should be developed in a dedicated companion source document, provisionally titled `capability_regimes.md`, before being turned into a packet schema or implementation profile.
 
 ---
 
@@ -1242,6 +1261,7 @@ Success criterion:
 | Physical packet compatibility is plausible | to be demonstrated |
 | Anti-capture requires control-plane redundancy | strong claim |
 | MVP should begin as programmable API gateway | recommended next step |
+| Fractanet routes capacity under graded capability regimes | new source claim; to be developed in `capability_regimes.md` after review |
 
 ---
 
@@ -1256,6 +1276,7 @@ Useful next documents:
 5. `fractanet_registry_anti_capture.md`
 6. `fractanet_cop_event_profile.md`
 7. `fractanet_envelope_payload_examples.md`
+8. `capability_regimes.md` — graded regimes, decision under uncertainty, preemption, fallback and trace reinforcement.
 
 Recommended next action:
 
