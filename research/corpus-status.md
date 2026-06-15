@@ -27,15 +27,17 @@ creator: Jean Hugues Noël Robert, baron Mariani (généré automatiquement par 
 ## Registered Repositories
 
 <!-- BEGIN_AUTO: registered_repos -->
-| Repository | research/index.md | Branch | Policy |
-|---|---|---|---|
-| cogentia | yes | main | all |
-| FractaVolta | yes | main | all |
-| marenostrum | yes | main | all |
-| barons-Mariani | yes | main | all |
-| inseme | yes | main | research |
-| Inox | yes | master | all |
-| JeanHuguesRobert | yes | main | all |
+| Repository | research/index.md | Branch | Policy | Visibility | Public presence |
+|---|---|---|---|---|---|
+| cogentia | yes | main | all | public | full |
+| FractaVolta | yes | main | all | public | full |
+| marenostrum | yes | main | all | public | full |
+| barons-Mariani | yes | main | all | public | full |
+| inseme | yes | main | research | public | full |
+| Inox | yes | master | all | public | full |
+| registre-mariani | yes | main | all | private | stub |
+| ubikia | yes | main | all | public | full |
+| JeanHuguesRobert | yes | main | all | public | full |
 <!-- END_AUTO: registered_repos -->
 
 ---
@@ -51,38 +53,41 @@ graph LR
   r_barons_mariani["barons-Mariani"]
   r_inseme["inseme"]
   r_inox["Inox"]
+  r_registre_mariani["registre-mariani"]
+  r_ubikia["ubikia"]
   r_jeanhuguesrobert["JeanHuguesRobert"]
-  r_jeanhuguesrobert -->|149| r_barons_mariani
-  r_cogentia -->|104| r_barons_mariani
-  r_jeanhuguesrobert -->|91| r_cogentia
-  r_jeanhuguesrobert -->|40| r_marenostrum
-  r_jeanhuguesrobert -->|34| r_fractavolta
-  r_fractavolta -->|33| r_marenostrum
-  r_jeanhuguesrobert -->|33| r_inox
-  r_fractavolta -->|32| r_cogentia
-  r_barons_mariani -->|29| r_cogentia
-  r_cogentia -->|21| r_inseme
-  r_cogentia -->|20| r_marenostrum
+  r_jeanhuguesrobert -->|143| r_barons_mariani
+  r_cogentia -->|101| r_barons_mariani
+  r_jeanhuguesrobert -->|99| r_cogentia
+  r_jeanhuguesrobert -->|43| r_marenostrum
+  r_fractavolta -->|40| r_cogentia
+  r_fractavolta -->|37| r_marenostrum
+  r_jeanhuguesrobert -->|36| r_fractavolta
+  r_jeanhuguesrobert -->|30| r_inox
+  r_barons_mariani -->|27| r_cogentia
+  r_cogentia -->|22| r_inseme
+  r_cogentia -->|19| r_marenostrum
+  r_fractavolta -->|18| r_inseme
   r_fractavolta -->|18| r_barons_mariani
-  r_jeanhuguesrobert -->|17| r_inseme
+  r_jeanhuguesrobert -->|16| r_inseme
   r_inseme -->|14| r_cogentia
-  r_barons_mariani -->|13| r_marenostrum
-  r_marenostrum -->|13| r_fractavolta
-  r_fractavolta -->|12| r_inseme
-  r_marenostrum -->|12| r_barons_mariani
+  r_marenostrum -->|12| r_fractavolta
+  r_marenostrum -->|12| r_cogentia
+  r_barons_mariani -->|11| r_marenostrum
   r_inox -->|11| r_barons_mariani
   r_inox -->|11| r_cogentia
+  r_marenostrum -->|11| r_barons_mariani
   r_inox -->|10| r_fractavolta
-  r_marenostrum -->|10| r_cogentia
+  r_fractavolta -->|8| r_inox
   r_inox -->|8| r_marenostrum
   r_inox -->|7| r_inseme
   r_inseme -->|7| r_inox
+  r_jeanhuguesrobert -->|7| r_ubikia
   r_barons_mariani -->|6| r_fractavolta
-  r_cogentia -->|6| r_fractavolta
-  r_cogentia -->|5| r_jeanhuguesrobert
+  r_cogentia -->|5| r_fractavolta
   r_barons_mariani -->|4| r_inox
   r_barons_mariani -->|4| r_jeanhuguesrobert
-  r_fractavolta -->|4| r_inox
+  r_cogentia -->|4| r_jeanhuguesrobert
   r_inseme -->|3| r_barons_mariani
   r_inseme -->|3| r_jeanhuguesrobert
   r_barons_mariani -->|2| r_inseme
@@ -493,6 +498,7 @@ graph LR
 | [Packet Paper Template — A Minimal Method for Declining Generalized Packet Networks into Substrate-Specific Papers](packet_paper_template.md) *(method-template working paper v0.2)* | this repo | 2026-05-22 |
 | [Fractanet — Working paper](fractanet.md) *(working paper, draft v0.1)* | this repo | 2026-05-31 |
 | [Bonne Marque](bonne_marque_mvp.md) *(conceptual MVP source document v0.2)* | this repo | 2026-06-03 |
+| [AGENTS.md — FractaVolta agent mandate](../AGENTS.md) *(local operational mandate for AI agents working in this repository)* | this repo | 2026-06-13 |
 | [Corpus Status](corpus-status.md) *(living view — auto-refreshed by `cogentia.js corpus-status`)* | this repo | refreshable |
 | [Concept Index](concepts.md) *(typed concept registry — mapped by `cogentia.js concepts`)* | this repo | refreshable |
 <!-- END_AUTO: published -->
@@ -536,23 +542,16 @@ graph LR
 - Seasonal complementarity model: solar + hydraulic + wind at Mediterranean scale
 - `fracta-wiki` as distributed knowledge substrate for PGN territorial governance
 - SimpliJs revival: wiki + governance as interface layer for FractaVolta corpus
-- [DC-Native Energy Packet Networks](../dc_native_epn.md)
-- [Electricity in Containers](../electricity_in_containers.md)
-- [FractaVolta](../fractavolta_paper.md)
-- [Le Réseau Inconscient](../LE_RESEAU_INCONSCIENT.md)
-- [Mariani Village: A Relocatable DC-Native Housing Fleet](../mariani_village.md)
-- [The Packet as Evolutionary Attractor: Scale-Invariant Transitions in Complex Networks](../packet_attractor.md)
-- [The Packet Transition: A Lateral Reading of Circuit Networks](../packet_transition.md)
-- [FractaVolta – Partner  Brief](../partner_brief.md)
-- [Packetized Gravity Networks: Distributed Hydro-Energetic Infrastructure for Resilient Renewable Integration](../PGN.md)
-- [Concept Index — FractaVolta](concepts.md)
+- [Research Index — barons-Mariani](https://github.com/JeanHuguesRobert/barons-Mariani/blob/main/research/index.md)
+- [Research Index — Cogentia](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/index.md)
 - [Corpus Status — FractaVolta](corpus-status.md)
-- [Guaranteed Inference](garanteed_inference.md)
-- [Inference Packet Networks](inference_packet_network.md)
-- [FractaTera](../tera.md)
-- [FractaVolta traceable gouvernance](../traceable_governance.md)
-- [The Unconscious Grid](../UNCONSCIOUS_GRID.md)
-- [Value-Shaped Solar and Containerized Compute](../value_shaped_solar_and_containerized_compute.md)
+- [Fractanet — Generalized Control Planes for Heterogeneous Packet Networks](fractanet.md)
+- [FractaVolta](../README.md)
+- [Research Index — Inox](https://github.com/JeanHuguesRobert/Inox/blob/master/research/index.md)
+- [Research Index — Inseme](https://github.com/JeanHuguesRobert/inseme/blob/main/research/index.md)
+- [Documents - All Tracked Repos](https://github.com/JeanHuguesRobert/JeanHuguesRobert/blob/main/research/documents.md)
+- [Research Index — Jean Hugues Noël Robert (Profile / Entry Point)](https://github.com/JeanHuguesRobert/JeanHuguesRobert/blob/main/research/index.md)
+- [Research Index — MareNostrum](https://github.com/JeanHuguesRobert/marenostrum/blob/main/research/index.md)
 <!-- END_AUTO: possibilities -->
 
 ---
@@ -565,23 +564,7 @@ graph LR
 ### Backlinks
 
 *These documents link to this file:*
-- [DC-Native Energy Packet Networks](../dc_native_epn.md)
-- [Electricity in Containers](../electricity_in_containers.md)
-- [FractaVolta](../fractavolta_paper.md)
-- [Le Réseau Inconscient](../LE_RESEAU_INCONSCIENT.md)
-- [Mariani Village: A Relocatable DC-Native Housing Fleet](../mariani_village.md)
-- [The Packet as Evolutionary Attractor: Scale-Invariant Transitions in Complex Networks](../packet_attractor.md)
-- [The Packet Transition: A Lateral Reading of Circuit Networks](../packet_transition.md)
-- [FractaVolta – Partner  Brief](../partner_brief.md)
-- [Packetized Gravity Networks: Distributed Hydro-Energetic Infrastructure for Resilient Renewable Integration](../PGN.md)
-- [Concept Index — FractaVolta](concepts.md)
-- [Corpus Status — FractaVolta](corpus-status.md)
-- [Guaranteed Inference](garanteed_inference.md)
+- [FractaVolta](../README.md)
 - [Research Index — FractaVolta](index.md)
-- [Inference Packet Networks](inference_packet_network.md)
-- [FractaTera](../tera.md)
-- [FractaVolta traceable gouvernance](../traceable_governance.md)
-- [The Unconscious Grid](../UNCONSCIOUS_GRID.md)
-- [Value-Shaped Solar and Containerized Compute](../value_shaped_solar_and_containerized_compute.md)
-
+- [Documents - All Tracked Repos](https://github.com/JeanHuguesRobert/JeanHuguesRobert/blob/main/research/documents.md)
 <!-- END_AUTO: backlinks -->
