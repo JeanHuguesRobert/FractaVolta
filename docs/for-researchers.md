@@ -52,6 +52,7 @@ Each repository carries a `research/index.md` and a `research/corpus-status.md` 
 - [Cognitive Packet Switching](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/cognitive_packet_switching.md) — a protocol layer for routable ideas, continuations, and agent orchestration.
 - [COP Reactive Cognitive Extension](https://github.com/JeanHuguesRobert/inseme/blob/main/packages/cop-core/REACTIVE_COGNITIVE_EXTENSION.md) — protocol surface for packet attractors, CogQueries, and pressure strategies.
 - [COP Implementation Profiles](https://github.com/JeanHuguesRobert/inseme/blob/main/packages/cop-core/ImplementationProfiles.md) — documentation convention for concrete COP implementations.
+- [Capability Regimes](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/capability_regimes.md) — graded operating regimes for Fractanet decisions under uncertainty, urgency, mandate, traceability and recovery constraints.
 - [Pipeline](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/pipeline.md) — operational method note: *pipeline on the surface, packet network in depth*.
 - [Derived Products](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/derived_products.md) — source ↔ derived split: papers, blogposts, public dashboards, and institutional notes are derived products from a versioned source corpus.
 - [cogentia.js — Tutorial and Near-Specification](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/cogentia_js_tutorial.md) — CLI concepts, storage model, workflows, and command reference.

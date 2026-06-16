@@ -1052,7 +1052,11 @@ Whether GPN is a useful framework will be determined by deployment, measurement,
 ### Backlinks
 
 *These documents link to this file:*
-- [Corpus Status — FractaVolta](corpus-status.md)
+- [Cognitive Packet Switching](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/cognitive_packet_switching.md)
+- [For researchers](../docs/for-researchers.md)
+- [Fractanet — Generalized Control Planes for Heterogeneous Packet Networks](fractanet.md)
+- [FractaVolta](../README.md)
 - [Research Index — FractaVolta](index.md)
-
+- [Library packets — when the library is a specification, not code](https://github.com/JeanHuguesRobert/Inox/blob/master/research/library_packets.md)
+- [Documents - All Tracked Repos](https://github.com/JeanHuguesRobert/JeanHuguesRobert/blob/main/research/documents.md)
 <!-- END_AUTO: backlinks -->

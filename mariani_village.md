@@ -465,7 +465,8 @@ https://github.com/JeanHuguesRobert/FractaVolta/blob/main/UNCONSCIOUS_GRID.md
 
 *These documents link to this file:*
 - [Concept Index — FractaVolta](research/concepts.md)
-- [Corpus Status — FractaVolta](research/corpus-status.md)
+- [For deployers](docs/for-deployers.md)
+- [FractaVolta](README.md)
 - [Research Index — FractaVolta](research/index.md)
-
+- [Documents - All Tracked Repos](https://github.com/JeanHuguesRobert/JeanHuguesRobert/blob/main/research/documents.md)
 <!-- END_AUTO: backlinks -->

@@ -202,17 +202,5 @@ The administrative protocol tying physical node ownership and IPN packet routing
 ### Backlinks
 
 *These documents link to this file:*
-- [DC-Native Energy Packet Networks](../dc_native_epn.md)
-- [Electricity in Containers](../electricity_in_containers.md)
-- [Mariani Village: A Relocatable DC-Native Housing Fleet](../mariani_village.md)
-- [The Packet as Evolutionary Attractor: Scale-Invariant Transitions in Complex Networks](../packet_attractor.md)
-- [Packetized Gravity Networks: Distributed Hydro-Energetic Infrastructure for Resilient Renewable Integration](../PGN.md)
-- [Corpus Status — FractaVolta](corpus-status.md)
 - [Research Index — FractaVolta](index.md)
-- [Inference Packet Networks](inference_packet_network.md)
-- [FractaTera](../tera.md)
-- [FractaVolta traceable gouvernance](../traceable_governance.md)
-- [The Unconscious Grid](../UNCONSCIOUS_GRID.md)
-- [Value-Shaped Solar and Containerized Compute](../value_shaped_solar_and_containerized_compute.md)
-
 <!-- END_AUTO: backlinks -->

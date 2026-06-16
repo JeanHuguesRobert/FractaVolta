@@ -873,7 +873,10 @@ The template is not ancillary. It is the mechanism by which the corpus becomes g
 ### Backlinks
 
 *These documents link to this file:*
-- [Corpus Status — FractaVolta](corpus-status.md)
+- [Cogentia Commons](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/cogentia_commons_method_packets.md)
+- [For researchers](../docs/for-researchers.md)
+- [Fractanet — Generalized Control Planes for Heterogeneous Packet Networks](fractanet.md)
+- [FractaVolta](../README.md)
 - [Research Index — FractaVolta](index.md)
-
+- [Documents - All Tracked Repos](https://github.com/JeanHuguesRobert/JeanHuguesRobert/blob/main/research/documents.md)
 <!-- END_AUTO: backlinks -->

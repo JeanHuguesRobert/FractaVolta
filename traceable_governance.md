@@ -288,10 +288,12 @@ The review process is public, attributed, append-only. It is, in that sense, an 
 ### Backlinks
 
 *These documents link to this file:*
-- [Electricity in Containers](electricity_in_containers.md)
 - [Concept Index — FractaVolta](research/concepts.md)
-- [Corpus Status — FractaVolta](research/corpus-status.md)
-- [Research Index — FractaVolta](research/index.md)
+- [Electricity in Containers](electricity_in_containers.md)
 - [FractaTera](tera.md)
-
+- [Research Index — FractaVolta](research/index.md)
+- [Documents - All Tracked Repos](https://github.com/JeanHuguesRobert/JeanHuguesRobert/blob/main/research/documents.md)
+- [MareNostrum — Energy Availability Contracts](https://github.com/JeanHuguesRobert/marenostrum/blob/main/CONTRACTS.md)
+- [MareNostrum — Governance of the Energy System](https://github.com/JeanHuguesRobert/marenostrum/blob/main/GOVERNANCE.md)
+- [MareNostrum — System Architecture](https://github.com/JeanHuguesRobert/marenostrum/blob/main/ARCHITECTURE.md)
 <!-- END_AUTO: backlinks -->

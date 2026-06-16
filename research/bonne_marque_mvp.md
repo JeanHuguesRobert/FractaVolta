@@ -606,7 +606,6 @@ Human validation needed: yes
 ### Backlinks
 
 *These documents link to this file:*
-- [Corpus Status — FractaVolta](corpus-status.md)
 - [Research Index — FractaVolta](index.md)
-
+- [Documents - All Tracked Repos](https://github.com/JeanHuguesRobert/JeanHuguesRobert/blob/main/research/documents.md)
 <!-- END_AUTO: backlinks -->

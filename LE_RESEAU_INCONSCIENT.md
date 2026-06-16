@@ -411,9 +411,11 @@ L'antifragilité de la couche énergétique **se propage structurellement** à l
 ### Backlinks
 
 *These documents link to this file:*
-- [The Packet as Evolutionary Attractor: Scale-Invariant Transitions in Complex Networks](packet_attractor.md)
-- [The Packet Transition: A Lateral Reading of Circuit Networks](packet_transition.md)
-- [Corpus Status — FractaVolta](research/corpus-status.md)
+- [Stigmergie sans limite haute](https://github.com/JeanHuguesRobert/barons-Mariani/blob/main/research/stigmergie_sans_limite_haute.md)
+- [Energy packets](docs/energy-packets.md)
+- [For researchers](docs/for-researchers.md)
+- [FractaVolta](README.md)
+- [FractaVolta en Corse](docs/fr/index.md)
 - [Research Index — FractaVolta](research/index.md)
-
+- [Documents - All Tracked Repos](https://github.com/JeanHuguesRobert/JeanHuguesRobert/blob/main/research/documents.md)
 <!-- END_AUTO: backlinks -->

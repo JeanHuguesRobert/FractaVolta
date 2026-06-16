@@ -375,8 +375,19 @@ The future of resilient infrastructure lies not in larger centralized systems bu
 ### Backlinks
 
 *These documents link to this file:*
+- [Corsica2038 — De la prospective subie à l’autonomie de capacité](https://github.com/JeanHuguesRobert/barons-Mariani/blob/main/research/autonomia/corsica2038_contre_rapport_pruspettiva2050.md)
+- [Research Index — Cogentia](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/index.md)
 - [Concept Index — FractaVolta](research/concepts.md)
 - [Corpus Status — FractaVolta](research/corpus-status.md)
+- [For researchers](docs/for-researchers.md)
+- [FractaVolta](README.md)
 - [Research Index — FractaVolta](research/index.md)
-
+- [VIGILIA — alias FractaVolta](vigilia.md)
+- [The Inox Programming Language — Specification](https://github.com/JeanHuguesRobert/Inox/blob/master/research/inox-spec.md)
+- [Research Index — Inseme](https://github.com/JeanHuguesRobert/inseme/blob/main/research/index.md)
+- [Carte globale du Corpus](https://github.com/JeanHuguesRobert/JeanHuguesRobert/blob/main/research/corpus-map.md)
+- [Documents - All Tracked Repos](https://github.com/JeanHuguesRobert/JeanHuguesRobert/blob/main/research/documents.md)
+- [Research Index — Jean Hugues Noël Robert (Profile / Entry Point)](https://github.com/JeanHuguesRobert/JeanHuguesRobert/blob/main/research/index.md)
+- [DHITL, Democratic Humans In The Loop](https://github.com/JeanHuguesRobert/marenostrum/blob/main/DHITL.md)
+- [Research Index — MareNostrum](https://github.com/JeanHuguesRobert/marenostrum/blob/main/research/index.md)
 <!-- END_AUTO: backlinks -->

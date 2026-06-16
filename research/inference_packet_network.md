@@ -1016,7 +1016,11 @@ The corpus, rather than this single document, will determine what survives.
 
 *These documents link to this file:*
 - [Concept Index — FractaVolta](concepts.md)
-- [Corpus Status — FractaVolta](corpus-status.md)
+- [For researchers](../docs/for-researchers.md)
+- [Fractanet — Generalized Control Planes for Heterogeneous Packet Networks](fractanet.md)
+- [FractaVolta](../README.md)
+- [Packetized Gravity Networks: Distributed Hydro-Energetic Infrastructure for Resilient Renewable Integration](../PGN.md)
 - [Research Index — FractaVolta](index.md)
-
+- [Carte globale du Corpus](https://github.com/JeanHuguesRobert/JeanHuguesRobert/blob/main/research/corpus-map.md)
+- [Documents - All Tracked Repos](https://github.com/JeanHuguesRobert/JeanHuguesRobert/blob/main/research/documents.md)
 <!-- END_AUTO: backlinks -->

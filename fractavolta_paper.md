@@ -467,7 +467,9 @@ Built from territory upward.
 ### Backlinks
 
 *These documents link to this file:*
-- [Corpus Status — FractaVolta](research/corpus-status.md)
+- [Test du critère Rossignol](https://github.com/JeanHuguesRobert/barons-Mariani/blob/main/research/test_critere_rossignol.md)
+- [Trail: From Method to Machine](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/trails/from_method_to_machine.md)
+- [FractaVolta](README.md)
 - [Research Index — FractaVolta](research/index.md)
-
+- [Documents - All Tracked Repos](https://github.com/JeanHuguesRobert/JeanHuguesRobert/blob/main/research/documents.md)
 <!-- END_AUTO: backlinks -->

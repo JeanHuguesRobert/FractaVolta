@@ -120,7 +120,7 @@ This pilot positions partners at the intersection of these trends with a concret
 ### Backlinks
 
 *These documents link to this file:*
-- [Corpus Status — FractaVolta](research/corpus-status.md)
+- [FractaVolta](README.md)
 - [Research Index — FractaVolta](research/index.md)
-
+- [Documents - All Tracked Repos](https://github.com/JeanHuguesRobert/JeanHuguesRobert/blob/main/research/documents.md)
 <!-- END_AUTO: backlinks -->

@@ -408,10 +408,16 @@ The antifragility of the energy layer **propagates structurally** to the inferen
 ### Backlinks
 
 *These documents link to this file:*
-- [The Packet as Evolutionary Attractor: Scale-Invariant Transitions in Complex Networks](packet_attractor.md)
-- [The Packet Transition: A Lateral Reading of Circuit Networks](packet_transition.md)
 - [Concept Index — FractaVolta](research/concepts.md)
 - [Corpus Status — FractaVolta](research/corpus-status.md)
+- [Energy packets](docs/energy-packets.md)
+- [For deployers](docs/for-deployers.md)
+- [For researchers](docs/for-researchers.md)
+- [FractaVolta](README.md)
 - [Research Index — FractaVolta](research/index.md)
-
+- [Concept Index — Inox](https://github.com/JeanHuguesRobert/Inox/blob/master/research/concepts.md)
+- [Research Index — Inox](https://github.com/JeanHuguesRobert/Inox/blob/master/research/index.md)
+- The Iɴᴏx programming language
+- [Documents - All Tracked Repos](https://github.com/JeanHuguesRobert/JeanHuguesRobert/blob/main/research/documents.md)
+- [Pacte anti-capture solaire et inférentielle](https://github.com/JeanHuguesRobert/marenostrum/blob/main/research/pacte_anti_capture_solaire_inferentielle.md)
 <!-- END_AUTO: backlinks -->

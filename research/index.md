@@ -3,7 +3,7 @@ title: "Research Index — FractaVolta"
 description: "A map of what is, what is in progress, and what could be."
 layout: default
 nav_order: 1
-last_modified_at: 2026-05-13
+last_modified_at: 2026-06-16
 license: CC BY-SA 4.0
 affiliation: Institut Mariani / C.O.R.S.I.C.A., 1 cours Paoli, F-20250 Corte, Corsica
 date: 2026-05-13
@@ -48,6 +48,7 @@ This repository instantiates the **physical infrastructure layer** of the [DHITL
 | [Thermal Packet Networks — A Multi-Scale Store-and-Forward Architecture for Low-Exergy Heat and Cold Distribution](thermal_packet_networks.md) *(working paper v0.2)* | this repo | 2026-05-22 |
 | [Packet Paper Template — A Minimal Method for Declining Generalized Packet Networks into Substrate-Specific Papers](packet_paper_template.md) *(method-template working paper v0.2)* | this repo | 2026-05-22 |
 | [Fractanet — Working paper](fractanet.md) *(working paper, draft v0.1)* | this repo | 2026-05-31 |
+| [Capability Regimes](capability_regimes.md) *(source working paper v0.1-draft — fractal decision under uncertainty for RAIX-COP-Fractanet architectures)* | this repo | 2026-06-15 |
 | [Bonne Marque](bonne_marque_mvp.md) *(conceptual MVP source document v0.2)* | this repo | 2026-06-03 |
 | [AGENTS.md — FractaVolta agent mandate](../AGENTS.md) *(local operational mandate for AI agents working in this repository)* | this repo | 2026-06-13 |
 | [Corpus Status](corpus-status.md) *(living view — auto-refreshed by `cogentia.js corpus-status`)* | this repo | refreshable |

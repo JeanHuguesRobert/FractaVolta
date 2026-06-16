@@ -466,5 +466,6 @@ Willockx, B., Lavaert, C., & Cappelle, J. (2023). Performance evaluation of vert
 - [Concept Index — FractaVolta](research/concepts.md)
 - [Corpus Status — FractaVolta](research/corpus-status.md)
 - [Research Index — FractaVolta](research/index.md)
-
+- [Documents - All Tracked Repos](https://github.com/JeanHuguesRobert/JeanHuguesRobert/blob/main/research/documents.md)
+- [Pacte anti-capture solaire et inférentielle](https://github.com/JeanHuguesRobert/marenostrum/blob/main/research/pacte_anti_capture_solaire_inferentielle.md)
 <!-- END_AUTO: backlinks -->

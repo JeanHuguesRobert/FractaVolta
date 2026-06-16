@@ -63,7 +63,7 @@ graph LR
   r_fractavolta -->|41| r_cogentia
   r_barons_mariani -->|39| r_cogentia
   r_fractavolta -->|37| r_marenostrum
-  r_jeanhuguesrobert -->|34| r_fractavolta
+  r_jeanhuguesrobert -->|36| r_fractavolta
   r_jeanhuguesrobert -->|24| r_inox
   r_cogentia -->|22| r_inseme
   r_cogentia -->|19| r_marenostrum
@@ -499,6 +499,7 @@ graph LR
 | [Thermal Packet Networks — A Multi-Scale Store-and-Forward Architecture for Low-Exergy Heat and Cold Distribution](thermal_packet_networks.md) *(working paper v0.2)* | this repo | 2026-05-22 |
 | [Packet Paper Template — A Minimal Method for Declining Generalized Packet Networks into Substrate-Specific Papers](packet_paper_template.md) *(method-template working paper v0.2)* | this repo | 2026-05-22 |
 | [Fractanet — Working paper](fractanet.md) *(working paper, draft v0.1)* | this repo | 2026-05-31 |
+| [Capability Regimes](capability_regimes.md) *(source working paper v0.1-draft — fractal decision under uncertainty for RAIX-COP-Fractanet architectures)* | this repo | 2026-06-15 |
 | [Bonne Marque](bonne_marque_mvp.md) *(conceptual MVP source document v0.2)* | this repo | 2026-06-03 |
 | [AGENTS.md — FractaVolta agent mandate](../AGENTS.md) *(local operational mandate for AI agents working in this repository)* | this repo | 2026-06-13 |
 | [Corpus Status](corpus-status.md) *(living view — auto-refreshed by `cogentia.js corpus-status`)* | this repo | refreshable |

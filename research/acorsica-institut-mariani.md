@@ -58,7 +58,7 @@ Ils ne valent ni fusion institutionnelle, ni exploitation commerciale par C.O.R.
 
 *These documents link to this file:*
 - [Lien avec C.O.R.S.I.C.A. et l’Institut Mariani](../acorsica-institut-mariani.md)
-- [Corpus Status — FractaVolta](corpus-status.md)
 - [Research Index — FractaVolta](index.md)
-
+- [C.O.R.S.I.C.A., Institut Mariani et corpus personnel](https://github.com/JeanHuguesRobert/JeanHuguesRobert/blob/main/research/acorsica-et-corpus.md)
+- [Documents - All Tracked Repos](https://github.com/JeanHuguesRobert/JeanHuguesRobert/blob/main/research/documents.md)
 <!-- END_AUTO: backlinks -->

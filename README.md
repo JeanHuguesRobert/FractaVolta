@@ -268,6 +268,7 @@ Pouzin was right. The datagram won for information. It will win for energy, for 
 | [research/generalized_packet_networks.md](./research/generalized_packet_networks.md) | **Framework paper** — *Generalized Packet Networks: A Framework for Heterogeneous Packets, Resource Occupancy, and Cross-Domain Operational Recurrence* (v0.3). The cross-domain abstraction that EPN, PGN, IPN, Thermal, etc. instantiate. |
 | [research/thermal_packet_networks.md](./research/thermal_packet_networks.md) | **Thermal paper** — *Thermal Packet Networks: A Multi-Scale Store-and-Forward Architecture for Low-Exergy Heat and Cold Distribution* (v0.2). |
 | [research/packet_paper_template.md](./research/packet_paper_template.md) | **Methodological template** — *A Minimal Method for Declining Generalized Packet Networks into Substrate-Specific Papers.* |
+| [research/capability_regimes.md](./research/capability_regimes.md) | **Fractanet operating-regimes paper** — *Capability Regimes: Fractal Decision Under Constraints of Uncertainty in RAIX-COP-Fractanet Architectures* (v0.1-draft). |
 | [tera.md](./tera.md) | FractaTera reference architecture — multi-scale sensing and territorial mapping. |
 | [fractavolta_paper.md](./fractavolta_paper.md) | Commercial overview and deployment framework. |
 | [partner_brief.md](./partner_brief.md) | Partner engagement brief. |
@@ -300,6 +301,7 @@ FractaVolta operates the integrated stack across a multi-repository public ecosy
 - **[Packetized Gravity Networks](./PGN.md)** — hydraulic exergy, IEV nodes, gravity as territorial memory, Corsica case study.
 - **[Thermal Packet Networks](./research/thermal_packet_networks.md)** (v0.2, 2026-05) — heat and cold as discrete thermal packets stored, transported, addressed, exchanged.
 - **[Inference Packet Networks](./research/inference_packet_network.md)** (v2.0, 2026-05) — packet logic applied to AI inference continuity.
+- **[Capability Regimes](./research/capability_regimes.md)** (v0.1-draft, 2026-06) — graded operating regimes for Fractanet decisions under uncertainty, urgency, mandate, traceability and recovery constraints.
 - **[Mariani Village](./mariani_village.md)** — habitat packet, Dilorta, BLE tracking.
 - **[The Packet Transition: A Lateral Reading](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/packet_transition.md)** — phronèsis, amathia, transition taxonomy. *In FractaVolta.*
 - **[The Packet as Evolutionary Attractor](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/packet_attractor.md)** — complexity theory, open question. *In FractaVolta.*

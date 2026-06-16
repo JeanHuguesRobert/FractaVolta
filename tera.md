@@ -193,10 +193,10 @@ The principle: **replace constraint with awareness**. A system that makes risk v
 ### Backlinks
 
 *These documents link to this file:*
-- [Electricity in Containers](electricity_in_containers.md)
 - [Concept Index — FractaVolta](research/concepts.md)
-- [Corpus Status — FractaVolta](research/corpus-status.md)
+- [Electricity in Containers](electricity_in_containers.md)
+- [FractaVolta](README.md)
 - [Research Index — FractaVolta](research/index.md)
-- [FractaVolta traceable gouvernance](traceable_governance.md)
-
+- [VIGILIA — alias FractaVolta](vigilia.md)
+- [Documents - All Tracked Repos](https://github.com/JeanHuguesRobert/JeanHuguesRobert/blob/main/research/documents.md)
 <!-- END_AUTO: backlinks -->
