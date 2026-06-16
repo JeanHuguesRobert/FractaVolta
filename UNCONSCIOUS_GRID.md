@@ -408,6 +408,7 @@ The antifragility of the energy layer **propagates structurally** to the inferen
 ### Backlinks
 
 *These documents link to this file:*
+- [Rendre capable — noyau doctrinal provisoire](https://github.com/JeanHuguesRobert/barons-Mariani/blob/main/research/noyau_doctrinal_rendre_capable.md)
 - [Concept Index — FractaVolta](research/concepts.md)
 - [Corpus Status — FractaVolta](research/corpus-status.md)
 - [Energy packets](docs/energy-packets.md)

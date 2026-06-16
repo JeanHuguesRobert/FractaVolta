@@ -860,6 +860,7 @@ Whether TPN is a useful architecture will be determined by deployment, measureme
 ### Backlinks
 
 *These documents link to this file:*
+- [Rendre capable — noyau doctrinal provisoire](https://github.com/JeanHuguesRobert/barons-Mariani/blob/main/research/noyau_doctrinal_rendre_capable.md)
 - [For researchers](../docs/for-researchers.md)
 - [Fractanet — Generalized Control Planes for Heterogeneous Packet Networks](fractanet.md)
 - [FractaVolta](../README.md)

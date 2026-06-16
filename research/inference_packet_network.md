@@ -1015,6 +1015,7 @@ The corpus, rather than this single document, will determine what survives.
 ### Backlinks
 
 *These documents link to this file:*
+- [Rendre capable — noyau doctrinal provisoire](https://github.com/JeanHuguesRobert/barons-Mariani/blob/main/research/noyau_doctrinal_rendre_capable.md)
 - [Concept Index — FractaVolta](concepts.md)
 - [For researchers](../docs/for-researchers.md)
 - [Fractanet — Generalized Control Planes for Heterogeneous Packet Networks](fractanet.md)
