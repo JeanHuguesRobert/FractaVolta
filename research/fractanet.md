@@ -1,7 +1,7 @@
 ---
 title: "Fractanet — Generalized Control Planes for Heterogeneous Packet Networks"
 subtitle: "Verbs, packets, COP/Inox, RAIX, exergy and anti-capture infrastructure"
-description: "Working draft refactoring Fractanet as the infrastructural instance of Generalized Packet Networks: a programmable, distributed, anti-capture network of capability verbs governing heterogeneous data planes through COP/Inox, RAIX redundancy and exergy-oriented routing."
+description: "Working draft refactoring Fractanet as the infrastructural instance of Generalized Packet Networks: a programmable, distributed, anti-capture network of capability verbs governing heterogeneous data planes through COP/Inox, RAIX redundancy, capability regimes and exergy-oriented routing."
 author: "Jean Hugues Noël Robert, baron Mariani"
 affiliation: "Institut Mariani / C.O.R.S.I.C.A. / FractaVolta"
 x-address: "1 cours Paoli, F-20250 Corte, Corsica, France"
@@ -9,11 +9,11 @@ x-email: "jhr@baronsmariani.org"
 x-website: "https://fractavolta.com"
 canonical_path: "FractaVolta/research/fractanet.md"
 canonical_url: "https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/fractanet.md"
-version: "0.3.2-draft"
-status: "working-paper — redactor revised draft under human validation"
+version: "0.3.3-draft"
+status: "working-paper — capability-regimes integration pass under human validation"
 date: "2026-06-10"
-last_modified_at: "2026-06-14"
-last_stamped_at: "2026-06-14"
+last_modified_at: "2026-06-15"
+last_stamped_at: "2026-06-15"
 license: "CC BY-SA 4.0"
 language: "en"
 type: "source-document"
@@ -27,6 +27,7 @@ related_repositories:
   - "JeanHuguesRobert/marenostrum"
 related_documents:
   - "FractaVolta/research/generalized_packet_networks.md"
+  - "FractaVolta/research/capability_regimes.md"
   - "FractaVolta/research/inference_packet_network.md"
   - "FractaVolta/research/thermal_packet_networks.md"
   - "FractaVolta/research/packet_paper_template.md"
@@ -47,6 +48,7 @@ related_documents:
   - "marenostrum/CXU_SPEC.md"
 related_document_urls:
   - "https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/generalized_packet_networks.md"
+  - "https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/capability_regimes.md"
   - "https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/inference_packet_network.md"
   - "https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/thermal_packet_networks.md"
   - "https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/packet_paper_template.md"
@@ -74,6 +76,10 @@ tags:
   - cop
   - inox
   - raix
+  - capability-regimes
+  - decision-under-uncertainty
+  - crisis-regime
+  - allostasis
   - exergy
   - anti-capture
   - programmable-gateway
@@ -82,10 +88,6 @@ tags:
   - streaming
   - backtracking
   - second-method
-  - capability-regimes
-  - decision-under-uncertainty
-  - allostasis
-  - crisis-regime
 x-keywords:
   - Fractanet
   - Generalized Packet Networks
@@ -106,20 +108,21 @@ x-keywords:
   - backtracking
   - energy-based routing
   - exergy-based routing
-  - no single point of failure
-  - no single point of capture
   - capability regimes
   - decision under uncertainty
-  - graded regimes
+  - cognitive deadlines
   - crisis regime
-  - allostasis
+  - regime-aware routing
+  - no single point of failure
+  - no single point of capture
 human_validation_required: true
 review_status: "Grok constructive review completed 2026-06-13; high-signal points selectively integrated in v0.3; corpus anchors added in v0.3.1"
-revision_note: "v0.3 integrates selected reviewer objections: envelope comparison, exergy toy model, registry anti-capture, minimal verb schema, JavaScript/Inox boundary, and one cross-scale fractal example. v0.3.1 adds corpus anchors for open questions. Review remains advisory; human author arbitrates."
+revision_note: "v0.3 integrates selected reviewer objections: envelope comparison, exergy toy model, registry anti-capture, minimal verb schema, JavaScript/Inox boundary, and one cross-scale fractal example. v0.3.1 adds corpus anchors for open questions. v0.3.3 anchors capability regimes as the regime layer for decision under uncertainty, with a companion source document. Review remains advisory; human author arbitrates."
 validation_points:
   - "Confirm whether this v0.3.2 should remain the canonical working draft."
   - "Validate the public definition of Fractanet as the infrastructural instance of Generalized Packet Networks."
   - "Validate the naming and scope of RAIX."
+  - "Validate capability regimes as the Fractanet layer for decision under uncertainty."
   - "Validate the claim that JavaScript should remain an adoption profile while COP/Inox carries complex Fractanet execution."
   - "Validate whether exergy-based routing should be framed as a true model family or as an energy-inspired cost function at this stage."
   - "Validate all institutional references before public publication."
@@ -134,6 +137,7 @@ This draft uses clickable corpus anchors for easier review and continuation.
 | Role | Corpus document |
 |---|---|
 | General packet grammar | [FractaVolta/research/generalized_packet_networks.md](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/generalized_packet_networks.md) |
+| Capability regimes | [FractaVolta/research/capability_regimes.md](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/capability_regimes.md) |
 | Inference packet sibling paper | [FractaVolta/research/inference_packet_network.md](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/inference_packet_network.md) |
 | Thermal packet sibling paper | [FractaVolta/research/thermal_packet_networks.md](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/thermal_packet_networks.md) |
 | Packet-paper discipline | [FractaVolta/research/packet_paper_template.md](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/packet_paper_template.md) |
@@ -170,7 +174,9 @@ Where the Internet routes packets of bits, Fractanet aims to route, supervise, c
 
 Its core architectural thesis is that the classical distinction between **control plane** and **data plane** can be generalized beyond digital networks. The control plane carries envelopes: identity, origin, destination, rights, policy, priority, TTL, freshness, signatures, routing constraints, traceability, and supervision events. The data planes carry heterogeneous payloads: bits, energy, water, heat, goods, compute, inference, cognition, delegation, or institutional authority.
 
-Fractanet is not a single platform, protocol, cloud, or product. It is a fractal architecture of capacity: the same invariants recur at several scales — inside the Inox virtual machine, inside a programmable gateway, across a mesh of gateways, across energy and compute infrastructures, and across /AI cognitive workflows.
+Fractanet is not a single platform, protocol, cloud, or product. It is a fractal architecture of capacity: the same invariants recur at several scales — inside the Inox virtual machine, inside a programmable gateway, across a mesh of gateways, across energy and compute infrastructures, and across human/AI cognitive workflows.
+
+Fractanet must also be regime-aware. A packet of useful capacity is not routed in an abstract vacuum: it is routed under constraints of time, uncertainty, stakes, reversibility, mandate, preemption, fallback and traceability. Capability regimes name this layer: normal, perturbed, degraded, critical, vital and recovery modes in which different actions become admissible.
 
 Its execution substrate is **Inox**, especially in its minimal concatenative form and its richer dialects. Its supervision layer is **COP**. Its redundancy model is **RAIX**, a generalization of RAID where `X` may be data, energy, cache, compute, model, route, policy, trace, jurisdiction, agent, or institution. Its optimization criterion is not raw energy minimization but **exergy**: useful capacity produced per unit of cost, latency, risk, noise, capture exposure, and irreversible loss.
 
@@ -187,11 +193,12 @@ This document is long because it is a source document, not a short public articl
 1. **GPN vs. Fractanet** — Generalized Packet Networks provide the theoretical grammar; Fractanet is one infrastructural implementation of that grammar.
 2. **Envelope vs. payload** — the control plane governs envelopes; heterogeneous data planes carry payloads.
 3. **Verbs vs. endpoints** — clients call stable verbs; the gateway dispatches to the appropriate implementation.
-4. **COP/Inox core** — Inox executes capability-bound compositions; COP supervises long, streamable, resumable, or -sensitive acts.
+4. **COP/Inox core** — Inox executes capability-bound compositions; COP supervises long, streamable, resumable, or human-sensitive acts.
 5. **RAIX anti-capture** — redundancy must apply not only to data planes but also to registries, policies, traces, and other control surfaces.
 6. **Exergy first** — routing should maximize useful capacity under hard constraints, not merely minimize raw energy or cost.
 7. **Human arbitration** — dense Inox and agent-readable traces are acceptable only if the act remains explainable to humans.
-8. **Capability regimes** — Fractanet does not route capacity in an abstract vacuum. Every packet circulates under a regime of constraints: ordinary, perturbed, degraded, critical, vital or recovery. COP must qualify the regime, route accordingly, preserve local safety invariants, escalate when needed, and reinforce traces as stakes and uncertainty increase.
+8. **Capability regimes** — Fractanet routes capacities under regimes of constraint and uncertainty; COP must qualify the regime, route accordingly, preserve local safety invariants, escalate when needed, and reinforce traces as stakes increase.
+
 ---
 
 ## Keywords
@@ -211,8 +218,9 @@ Its purpose is to stabilize the current formulation of Fractanet after several c
 3. **Inox** provides a micro-architecture and execution substrate.
 4. **COP** provides the supervision and orchestration plane.
 5. **RAIX** provides generalized redundancy.
-6. **Exergy** provides the criterion of useful capacity.
-7. **Anti-capture** provides the political and architectural finality.
+6. **Capability regimes** provide the decision layer under constraint and uncertainty.
+7. **Exergy** provides the criterion of useful capacity.
+8. **Anti-capture** provides the political and architectural finality.
 
 The document is deliberately written as a source document: its thesis, distinctions, boundaries, failure modes, and non-claims should be reconstructible from the text alone.
 
@@ -226,7 +234,7 @@ This draft follows the corpus redactor/reviewer discipline: source before derive
 
 Fractanet can be defined as follows:
 
-> **Fractanet is the programmable infrastructural instance of Generalized Packet Networks: a distributed, anti-capture, exergy-oriented network of capability verbs governing heterogeneous data planes through COP/Inox, RAIX redundancy, and traceable control-plane supervision.**
+> **Fractanet is the programmable infrastructural instance of Generalized Packet Networks: a distributed, anti-capture, regime-aware and exergy-oriented network of capability verbs governing heterogeneous data planes through COP/Inox, RAIX redundancy, capability regimes and traceable control-plane supervision.**
 
 A shorter operational formulation:
 
@@ -444,16 +452,6 @@ call customer.summary
 ```
 
 The dispatch decision must be traceable. It is itself an act.
-
----
-
-## 8.1 Capability regimes and decision under uncertainty
-
-Fractanet does not route capacity in an abstract vacuum. A capability is always exercised under constraints: time available, uncertainty, stakes, reversibility, locality, mandate, available resources, preemption rights, trace requirements and fallback options.
-
-The binary distinction between normal and crisis is therefore insufficient. A Fractanet packet may circulate under ordinary, perturbed, degraded, critical, vital or recovery regimes. COP should qualify the regime, route the packet accordingly, preserve local safety invariants, escalate when needed, and reinforce traces as uncertainty and stakes increase.
-
-This doctrine should be developed in a dedicated companion source document, provisionally titled `capability_regimes.md`, before being turned into a packet schema or implementation profile.
 
 ---
 
@@ -944,7 +942,100 @@ RAIX remains underdefined at this stage. It needs its own taxonomy and metrics. 
 
 ---
 
-## 21. Anti-capture
+## 21. Capability regimes and decision under uncertainty
+
+Fractanet does not route capacity in an abstract vacuum. Every packet circulates under a regime of constraints.
+
+A capability is not defined only by what it can do. It is also defined by the regime in which it must act:
+
+- how much time remains;
+- how much uncertainty is tolerable;
+- what is at stake;
+- whether the action is reversible;
+- whether the decision may remain local;
+- which capacities are available;
+- which mandate authorizes action;
+- whether ordinary priorities may be preempted;
+- which fallback must be preserved;
+- which trace must be retained.
+
+The old binary distinction between "normal" and "crisis" is too crude. Fractanet should treat regimes as graded and fractal:
+
+```text
+normal
+→ perturbed
+→ degraded
+→ critical
+→ vital
+→ recovery
+```
+
+A system becomes capable when it can recognize that the regime has changed, mobilize the right level of capacity, and preserve the relevant invariants.
+
+### 21.1 Regime-aware packet routing
+
+A regime-aware packet should carry, or be associated with, enough metadata to let COP route it correctly:
+
+```yaml
+regime:
+  level: normal | perturbed | degraded | critical | vital | recovery
+  uncertainty: low | medium | high | extreme
+  deadline_ms:
+  stakes: comfort | cost | safety | life | sovereignty | legitimacy
+  reversibility: reversible | partially_reversible | irreversible
+  locality: local | edge | regional | federated | global
+  preemption_allowed:
+  fallback_required:
+  trace_level: minimal | ordinary | reinforced | forensic
+```
+
+This does not make the packet "intelligent". It makes the decision context inspectable.
+
+### 21.2 Local invariants and networked crisis capacity
+
+Capability regimes avoid two symmetrical failures:
+
+```text
+over-embedding
+= putting maximal intelligence everywhere, all the time
+
+cloud dependency
+= relying on remote intelligence exactly when latency and trust are critical
+```
+
+Fractanet proposes a third path:
+
+```text
+embed hard local safety invariants;
+mobilize networked crisis capacities when deadlines and mandates allow;
+fall back safely if external help does not arrive.
+```
+
+For an autonomous vehicle, this means that braking and minimal-risk manoeuvres must remain local. But rare, abnormal, ambiguous scenes may mobilize nearby edge compute, other vehicles, infrastructure, human assistance or larger models if the cognitive deadline allows it.
+
+For an ambulance, it means that a moving vital packet may create a temporary corridor of priority, but only under explicit mandate, bounded preemption and trace.
+
+For a hospital during a power failure, it means that an operating room is not merely another electrical load: it becomes a protected vital capacity, causing non-critical loads to be shed and backup resources to be reserved.
+
+### 21.3 Fractal invariant
+
+The same motif recurs at multiple scales:
+
+```text
+perceive
+qualify regime
+route capacity
+act
+trace
+fallback
+review
+learn
+```
+
+This is why the companion document `FractaVolta/research/capability_regimes.md` should be treated as part of the Fractanet source layer. It defines the regime vocabulary that later specifications can embed into COP events, cognitive packets, capability verbs and Fractanet gateways.
+
+---
+## 22. Anti-capture
 
 Fractanet's finality is anti-capture as much as resilience.
 
@@ -974,7 +1065,7 @@ This requires not only technical redundancy, but also traceability, exit rights,
 
 ---
 
-## 22. Fractanet as distributed gateway mesh
+## 23. Fractanet as distributed gateway mesh
 
 Fractanet can begin as a programmable gateway, but it should not remain a centralized gateway.
 
@@ -1005,7 +1096,7 @@ This is why RAIX and anti-capture must apply to control surfaces, not only paylo
 
 ---
 
-## 23. Signal/noise for humans and agents
+## 24. Signal/noise for humans and agents
 
 Fractanet aims to increase the signal/noise ratio for two populations:
 
@@ -1044,7 +1135,7 @@ Formula:
 
 ---
 
-## 24. Fractal invariants
+## 25. Fractal invariants
 
 The "fracta" in Fractanet refers to multi-scale invariants.
 
@@ -1060,7 +1151,7 @@ The same structures recur:
 | Redundancy | alternative branch | fallback gateway | RAIX mesh | plural authority |
 | Exergy | useful operation | efficient route | useful capacity | legitimate effect |
 
-### 24.1 Cross-scale example: continuation
+### 25.1 Cross-scale example: continuation
 
 A continuation appears at several scales:
 
@@ -1074,7 +1165,7 @@ The invariant is not a metaphor. It is the repeated structure: preserve enough s
 
 ---
 
-## 25. Generalized packet boundary rule
+## 26. Generalized packet boundary rule
 
 The packet metaphor must be constrained.
 
@@ -1111,7 +1202,7 @@ This rule protects the framework from conceptual inflation.
 
 ---
 
-## 26. Minimal Fractanet node
+## 27. Minimal Fractanet node
 
 A minimal Fractanet node should support:
 
@@ -1130,39 +1221,39 @@ The first MVP should not attempt to implement physical packets. It should prove 
 
 ---
 
-## 27. Failure modes
+## 28. Failure modes
 
-### 27.1 Packet metaphor over-extension
+### 28.1 Packet metaphor over-extension
 
 If everything becomes a packet, the framework loses precision.
 
 Mitigation: apply the boundary rule in section 25.
 
-### 27.2 Control-plane capture
+### 28.2 Control-plane capture
 
 A distributed data plane can still be captured by a centralized registry, identity provider, model provider, or routing authority.
 
 Mitigation: apply RAIX to control surfaces, not only data paths.
 
-### 27.3 Opaque exergy optimization
+### 28.3 Opaque exergy optimization
 
 A scoring function may become an opaque technocratic authority.
 
 Mitigation: hard constraints first, inspectable candidate routes, COP explanation, human override where relevant.
 
-### 27.4 Redundancy noise
+### 28.4 Redundancy noise
 
 Redundancy can become waste, complexity, and maintenance burden.
 
 Mitigation: require exergetic accounting for RAIX.
 
-### 27.5 Human displacement by agent-readable code
+### 28.5 Human displacement by agent-readable code
 
 Dense Inox may become legible to agents but opaque to humans.
 
 Mitigation: every critical act must have a human-readable COP explanation and review path.
 
-### 27.6 Registry as chokepoint
+### 28.6 Registry as chokepoint
 
 The registry may become the new central point of capture.
 
@@ -1170,7 +1261,7 @@ Mitigation: registry RAIX, signed records, mirrored registries, transparent diff
 
 ---
 
-## 28. Non-claims
+## 29. Non-claims
 
 This document does not claim that:
 
@@ -1188,7 +1279,7 @@ The document claims only that a shared architectural grammar is emerging and tha
 
 ---
 
-## 29. Open questions
+## 30. Open questions
 
 1. What is the minimal canonical schema for a Fractanet verb?
 2. How should registry governance avoid capture?
@@ -1200,8 +1291,9 @@ The document claims only that a shared architectural grammar is emerging and tha
 8. How should human approval, revocation, and appeal be represented in the control plane?
 9. How much of the generalized envelope can be shared across data, energy, water, goods, inference, and mandates?
 10. What is the minimum demo that proves the fractal invariant without overbuilding?
+11. What is the minimal capability-regime vocabulary that should enter the Fractanet envelope?
 
-### 29.1 Corpus anchors for open questions
+### 30.1 Corpus anchors for open questions
 
 The following anchors should be consulted before turning each open question into a new specification or article.
 
@@ -1219,7 +1311,7 @@ The following anchors should be consulted before turning each open question into
 
 ---
 
-## 30. First MVP direction
+## 31. First MVP direction
 
 The first MVP should be digital and narrow.
 
@@ -1247,7 +1339,7 @@ Success criterion:
 
 ---
 
-## 31. Claim manifest
+## 32. Claim manifest
 
 | Claim | Status |
 |---|---|
@@ -1257,15 +1349,15 @@ Success criterion:
 | COP is the supervision plane | strong internal claim |
 | JavaScript is adoption-only | recommendation |
 | RAIX prevents both failure and capture | promising but underformalized |
+| Capability regimes make routing decision-aware under uncertainty | central integration claim |
 | Exergy is the correct optimization concept | central but requires metrics |
 | Physical packet compatibility is plausible | to be demonstrated |
 | Anti-capture requires control-plane redundancy | strong claim |
 | MVP should begin as programmable API gateway | recommended next step |
-| Fractanet routes capacity under graded capability regimes | new source claim; to be developed in `capability_regimes.md` after review |
 
 ---
 
-## 32. Continuation
+## 33. Continuation
 
 Useful next documents:
 
@@ -1276,7 +1368,6 @@ Useful next documents:
 5. `fractanet_registry_anti_capture.md`
 6. `fractanet_cop_event_profile.md`
 7. `fractanet_envelope_payload_examples.md`
-8. `capability_regimes.md` — graded regimes, decision under uncertainty, preemption, fallback and trace reinforcement.
 
 Recommended next action:
 
@@ -1300,3 +1391,4 @@ Recommended next action:
 - **Known risks:** over-integration of concepts; registry capture; opaque optimization; redundancy noise; physical data-plane compatibility still to be demonstrated.
 - **Human validation needed:** public definition, RAIX scope, JavaScript positioning, exergy-routing formulation, MVP boundary, institutional references.
 - **Next useful action:** update `FractaVolta/research/index.md`, then produce either the MVP gateway spec or a short derived technical note.
+
