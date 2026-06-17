@@ -196,8 +196,6 @@ The administrative protocol tying physical node ownership and IPN packet routing
 
 **Reference documents:**
 - [`traceable_governance.md`](../traceable_governance.md)
-
-
 <!-- BEGIN_AUTO: backlinks -->
 ### Backlinks
 

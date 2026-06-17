@@ -113,9 +113,6 @@ This pilot positions partners at the intersection of these trends with a concret
 
 **Contact**: Jean Hugues Noël Robert, FractaVolta  
 *Email*: jhr@baronsmariani.org | *Phone*: +33753976287
-
-
-
 <!-- BEGIN_AUTO: backlinks -->
 ### Backlinks
 

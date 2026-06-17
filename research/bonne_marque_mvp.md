@@ -600,8 +600,6 @@ Open one bounded continuation: market sizing and first categories, prompt testin
 
 Human validation needed: yes
 ```
-
-
 <!-- BEGIN_AUTO: backlinks -->
 ### Backlinks
 

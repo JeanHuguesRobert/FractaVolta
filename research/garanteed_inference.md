@@ -984,8 +984,6 @@ Critical conditions require resilience.
 FractaVolta's space is the layer between the two:
 
 > an ARPANET-like infrastructure for critical AI inference.
-
-
 <!-- BEGIN_AUTO: backlinks -->
 ### Backlinks
 

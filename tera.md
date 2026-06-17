@@ -187,8 +187,6 @@ The principle: **replace constraint with awareness**. A system that makes risk v
 ---
 
 *License: CC BY-SA 4.0 — Priority established by first commit timestamp.*
-
-
 <!-- BEGIN_AUTO: backlinks -->
 ### Backlinks
 

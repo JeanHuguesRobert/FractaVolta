@@ -282,8 +282,6 @@ The review process is public, attributed, append-only. It is, in that sense, an 
 
 *License: CC BY-SA 4.0 — Repository: github.com/JeanHuguesRobert/fractavolta*  
 *Priority established by first commit timestamp. Challenge via issues.*
-
-
 <!-- BEGIN_AUTO: backlinks -->
 ### Backlinks
 

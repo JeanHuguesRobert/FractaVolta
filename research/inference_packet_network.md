@@ -1009,8 +1009,6 @@ Future versions should:
 * and preserve failures as epistemic evidence.
 
 The corpus, rather than this single document, will determine what survives.
-
-
 <!-- BEGIN_AUTO: backlinks -->
 ### Backlinks
 

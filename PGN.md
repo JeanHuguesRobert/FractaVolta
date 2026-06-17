@@ -369,8 +369,6 @@ The future of resilient infrastructure lies not in larger centralized systems bu
 *1 cours Paoli, F-20250 Corte, Corsica*
 *Priority: first public commit timestamp*
 *License: CC BY-SA 4.0 — Fork to explore alternatives, challenge via issues*
-
-
 <!-- BEGIN_AUTO: backlinks -->
 ### Backlinks
 

@@ -3,8 +3,8 @@ title: Methodology
 subtitle: How we work — every decision auditable, every objection first-class, every AI agent replaceable. Not compliance theater; the way the platform fundamentally operates.
 lang: en
 canonical_url: https://fractavolta.com/methodology
-last_stamped_at: 2026-06-02
-date: "2026-06-02"
+last_stamped_at: 2026-06-17
+date: "2026-06-17"
 status: "active — English methodology entry point"
 ---
 
@@ -30,13 +30,13 @@ Every important document should have a stable `canonical_url`. The corpus is its
 
 Core command families include:
 
-- **Synchronisation and inspection** — `drift`, `lint`, `scan`, `check`.
-- **Derived views** — `refresh`, `documents`, `corpus-status`, `backlinks`, `trails`.
-- **Front matter governance** — `frontmatter check`, `frontmatter promote`, `frontmatter schema`.
-- **Authoring and continuations** — `stamp`, `continuation`, `concepts`.
-- **Personal scheduler** — `todo`, `next`, and local `.cogentia/SCHEDULE.md` files where used.
+- **Corpus planning and verification** — `corpus plan`, `corpus apply`, `corpus verify`, `corpus privacy`.
+- **Document navigation** — `docs summary`, `docs query`, `docs search`, `docs gaps`, `docs inspect`, `docs trails`.
+- **Concept governance** — `concepts list`, `concepts check`.
+- **Continuations and issue packets** — `continuation list`, `continuation inspect`, `continuation resolve`, `issues list`, `issues packet`.
+- **Git and consolidation checks** — `git verify`, `git classify`, `consolidate`.
 
-Every state-changing call should append one JSONL line to `.cogentia/audit.jsonl`. The audit log is a first-class deliverable, not a compliance afterthought.
+The current v2 surface is deliberately conservative: deterministic commands refresh generated views, while judgment-bearing work is externalized as continuations or GitHub issue packets. No issue command closes, labels, or comments on GitHub.
 
 ## The continuation protocol
 

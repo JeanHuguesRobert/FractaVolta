@@ -458,8 +458,6 @@ https://github.com/JeanHuguesRobert/FractaVolta/blob/main/UNCONSCIOUS_GRID.md
 [9] github.com/JeanHuguesRobert/cogentia — Cogentia open-source energy routing and inference layer, MIT licence.
 
 [10] ISO 668:2020. *Series 1 Freight Containers — Classification, Dimensions and Ratings*. ISO, 2020.
-
-
 <!-- BEGIN_AUTO: backlinks -->
 ### Backlinks
 

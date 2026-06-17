@@ -222,8 +222,6 @@ The core logistical claim — that terrestrial delivery of containerized electri
 
 *Related documents: [`tera.md`](tera.md) (mobile node architecture), [`MODEL.md`](https://github.com/JeanHuguesRobert/marenostrum/blob/main/MODEL.md) (operational exergy), [`safe_compute_exergy.md`](https://github.com/JeanHuguesRobert/marenostrum/blob/main/safe_compute_exergy.md) (provenance certification), [`traceable_governance.md`](traceable_governance.md) (logistics register).*  
 *License: CC BY-SA 4.0 — Priority established by first commit timestamp.*
-
-
 <!-- BEGIN_AUTO: backlinks -->
 ### Backlinks
 

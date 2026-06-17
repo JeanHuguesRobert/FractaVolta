@@ -348,8 +348,6 @@ https://bitcoin.org/bitcoin.pdf
 [11] Gelenbe, E. *Energy Packet Networks: ICT-Based Energy Allocation and Storage*. Proceedings of the 2nd International Workshop on GreenCom, 2012.
 
 [12] Nardelli, P.H.J. et al. *Energy Internet via Packetized Management: Enabling Technologies and Deployment Challenges*. IEEE Access, 7, 2019.
-
-
 <!-- BEGIN_AUTO: backlinks -->
 ### Backlinks
 

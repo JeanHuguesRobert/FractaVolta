@@ -28,13 +28,10 @@ C.O.R.S.I.C.A. / FractaVolta
 ---
 
 # Executive Thesis
-
 <!-- BEGIN_AUTO: trails -->
 > 🧭 **Trail: From Method to Machine**
-> ⬅️ Previous: [Infrastructure is All You Need](https://github.com/JeanHuguesRobert/marenostrum/blob/main/infrastructure_is_all_you_need.md) | ➡️ Next: [The Sovereign Digital Twin](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/cogentia-digital-twin.md)
-
+> ⬅️ Previous: [Infrastructure Is All You Need](https://github.com/JeanHuguesRobert/marenostrum/blob/main/infrastructure_is_all_you_need.md) | ➡️ Next: [The Sovereign Digital Twin: Cogentia, Cogentigram, Cogentiscope](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/cogentia-digital-twin.md)
 <!-- END_AUTO: trails -->
-
 FractaVolta proposes a simple but radical hypothesis:
 
 **A sufficiently replicated network of autonomous territorial nodes can become more resilient than centralized infrastructure, while generating local prosperity, democratic capacity, and strategic sovereignty.**
@@ -461,8 +458,6 @@ That is the wager.
 **FractaVolta**
 Distributed democratic infrastructure.
 Built from territory upward.
-
-
 <!-- BEGIN_AUTO: backlinks -->
 ### Backlinks
 

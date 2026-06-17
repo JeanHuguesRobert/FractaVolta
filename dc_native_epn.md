@@ -508,8 +508,6 @@ That is the real return of direct current: not as the defeated current of Edison
 [17] IEC 62619. *Secondary Cells and Batteries Containing Alkaline or Other Non-Acid Electrolytes — Safety Requirements for Secondary Lithium Cells and Batteries, for Use in Industrial Applications*. IEC, 2022.
 
 [18] European Parliament. *Regulation (EU) 2023/1542 Concerning Batteries and Waste Batteries*. OJ L 191, 2023.
-
-
 <!-- BEGIN_AUTO: backlinks -->
 ### Backlinks
 

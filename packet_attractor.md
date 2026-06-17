@@ -249,8 +249,6 @@ https://github.com/JeanHuguesRobert/FractaVolta/blob/main/UNCONSCIOUS_GRID.md
 [20] Schrödinger, E. *What is Life?* Cambridge University Press, 1944.
 
 [21] Baran, P. *On Distributed Communications*. RAND Corporation, RM-3420-PR, 1964.
-
-
 <!-- BEGIN_AUTO: backlinks -->
 ### Backlinks
 

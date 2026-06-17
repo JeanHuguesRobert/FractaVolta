@@ -402,8 +402,6 @@ The antifragility of the energy layer **propagates structurally** to the inferen
 - *Joule* (Cell Press) — high-impact energy journal, receptive to conceptually original contributions that cross disciplinary boundaries
 - *Telecommunications Policy* (Elsevier) — for the network theory and regulatory dimensions
 - *IEEE Access* (IEEE) — broader scope, open access, faster publication timeline
-
-
 <!-- BEGIN_AUTO: backlinks -->
 ### Backlinks
 

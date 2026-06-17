@@ -4,8 +4,8 @@ subtitle: Papers, methodology, contestation as first-class contribution. The cor
 lang: en
 description: "Research entry point for FractaVolta: packetized energy, inference continuity, Cogentia Commons methodology, continuations, open corpus governance, and cross-repository research map."
 canonical_url: https://fractavolta.com/for-researchers
-last_stamped_at: 2026-06-02
-date: "2026-06-02"
+last_stamped_at: 2026-06-17
+date: "2026-06-17"
 status: "active — English research entry point"
 ---
 
@@ -125,7 +125,7 @@ The corpus is open source under CC BY-SA 4.0 for research and MIT for code.
 
 ## Toolchain
 
-- **`cogentia.js`** — Cogentia Commons CLI: multi-repo scan, link validation, canonical URL stamping, continuation protocol.
+- **`cogentia.js`** — Cogentia Commons CLI: multi-repo document navigation, generated corpus views, trails, continuations, read-only GitHub issue packets, git drift and consolidation checks.
 - **inseme + COP** — deployable platform and cognitive orchestration protocol runtime.
 - **`.cogentia.json`** — per-corpus registry of repositories.
 - **`.cogentiaignore`** — per-repo ignore patterns for operational artifacts that should not be flagged as unanchored claims.

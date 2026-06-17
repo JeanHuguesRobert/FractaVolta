@@ -457,8 +457,6 @@ Willockx, B., Lavaert, C., & Cappelle, J. (2023). Performance evaluation of vert
 *Website: [fractavolta.com](https://fractavolta.com)*
 *Repository: [github.com/JeanHuguesRobert/FractaVolta](https://github.com/JeanHuguesRobert/FractaVolta)*
 *Contact: jhr@baronsmariani.org*
-
-
 <!-- BEGIN_AUTO: backlinks -->
 ### Backlinks
 

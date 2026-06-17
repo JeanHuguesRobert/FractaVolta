@@ -96,8 +96,6 @@ This repository instantiates the **physical infrastructure layer** of the [DHITL
 
 *Priority established by first public commit. License: CC BY-SA 4.0.*
 *Fork to explore alternatives. Challenge via issues.*
-
-
 <!-- BEGIN_AUTO: backlinks -->
 ### Backlinks
 

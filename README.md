@@ -12,9 +12,12 @@
 ![Status](https://img.shields.io/badge/status-early--stage-orange)
 ![Focus](https://img.shields.io/badge/focus-energy%20%2B%20compute%20%2B%20cognition%20%2B%20civic-blue)
 
-🌐 https://fractavolta.com — public entry point
-📚 [research/index.md](research/index.md) — published papers and open possibilities
-📊 [research/corpus-status.md](research/corpus-status.md) — corpus status
+## Quick Orientation
+
+- 🌐 https://fractavolta.com — public entry point
+- 📚 [research/index.md](research/index.md) — generated catalog of published papers and open possibilities
+- 📊 [research/corpus-status.md](research/corpus-status.md) — generated corpus status, backlinks, and navigation checks
+- ⚡ [UNCONSCIOUS_GRID.md](UNCONSCIOUS_GRID.md) — packetization argument at the energy layer
 
 **Audience-oriented pages on fractavolta.com:**
 - 🤝 [For partners](https://fractavolta.com/for-partners) — energy + compute commercial pitch
