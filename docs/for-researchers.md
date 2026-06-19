@@ -31,18 +31,18 @@ Each repository carries a `research/index.md` and a `research/corpus-status.md` 
 
 ### Energy substrate
 
-- [The Unconscious Grid](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/UNCONSCIOUS_GRID.md) — store-and-forward as the repressed solution to energy sovereignty; §8 extends the diagnosis to cognition, sociability, money, and territory, making this the entry point to the wider packetization corpus. A French version exists: [Le Réseau Inconscient](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/LE_RESEAU_INCONSCIENT.md).
+- [The Unconscious Grid](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/UNCONSCIOUS_GRID.md) — store-and-forward as the repressed solution to energy sovereignty; §8 extends the diagnosis to cognition, sociability, money, and territory, making this the entry point to the wider packetization corpus. A French version exists: [Le Réseau Inconscient](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/LE_RESEAU_INCONSCIENT.md).
 - [Generalized Packet Networks](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/generalized_packet_networks.md) — the cross-domain framework: heterogeneous packets, resource occupancy, congestion elasticity, packet decay, cache hierarchies, backbone/last-mile decomposition, mesh resilience.
-- [DC-Native Energy Packet Networks](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/dc_native_epn.md) — 48 V SELV node architecture.
-- [Packetized Gravity Networks](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/PGN.md) — hydraulic exergy.
+- [DC-Native Energy Packet Networks](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/dc_native_epn.md) — 48 V SELV node architecture.
+- [Packetized Gravity Networks](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/PGN.md) — hydraulic exergy.
 - [Thermal Packet Networks](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/thermal_packet_networks.md) — multi-scale store-and-forward architecture for low-exergy heat and cold distribution.
 - [Packet Paper Template](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/packet_paper_template.md) — methodological template for deriving substrate-specific papers from the Generalized Packet Networks framework.
-- [The Packet Transition: A Lateral Reading](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/packet_transition.md) — phronèsis, amathia, transition taxonomy.
-- [The Packet as Evolutionary Attractor](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/packet_attractor.md) — complexity-theoretic framing.
+- [The Packet Transition: A Lateral Reading](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/packet_transition.md) — phronèsis, amathia, transition taxonomy.
+- [The Packet as Evolutionary Attractor](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/packet_attractor.md) — complexity-theoretic framing.
 
 ### Compute substrate
 
-- [CXU Specification](https://github.com/JeanHuguesRobert/marenostrum/blob/main/CXU_SPEC.md) — Compute eXergy Unit pricing primitive.
+- [CXU Specification](https://github.com/JeanHuguesRobert/marenostrum/blob/main/research/CXU_SPEC.md) — Compute eXergy Unit pricing primitive.
 - [Inference Packet Networks](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/inference_packet_network.md) — packet logic applied to inference continuity.
 
 ### Cognition layer
@@ -67,7 +67,7 @@ Each repository carries a `research/index.md` and a `research/corpus-status.md` 
 
 ### Civic layer
 
-- [DHITL — Democratic Humans in the Loop](https://github.com/JeanHuguesRobert/marenostrum/blob/main/DHITL.md) — the axiom: AI may participate in epistemic production; living persons alone govern.
+- [DHITL — Democratic Humans in the Loop](https://github.com/JeanHuguesRobert/marenostrum/blob/main/research/DHITL.md) — the axiom: AI may participate in epistemic production; living persons alone govern.
 - [Democratic AI Safety](https://github.com/JeanHuguesRobert/barons-Mariani/blob/main/research/democratic_ai_safety.md) — the political layer of AI safety.
 - [Discours de la seconde méthode](https://github.com/JeanHuguesRobert/barons-Mariani/blob/main/research/second_method.md) — methodology rules: publish process, objections as first-class, machine-readable structure, corpus as evidence.
 - [La méthode des terrains féconds](https://github.com/JeanHuguesRobert/barons-Mariani/blob/main/research/methode_terrains_feconds.md) — pre-deliberative protocol for reconfiguring oppositions before argumentative confrontation.

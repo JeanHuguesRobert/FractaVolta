@@ -19,45 +19,45 @@
       subtitle: Store-and-forward as the repressed solution to energy sovereignty — and entry point to the packetization corpus (§8 extends the diagnosis to cognition, sociability, money, and territory)
       date: 2026-05
       kind: founding-paper
-      url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/UNCONSCIOUS_GRID.md
+      url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/UNCONSCIOUS_GRID.md
       translations:
-        fr: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/LE_RESEAU_INCONSCIENT.md
+        fr: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/LE_RESEAU_INCONSCIENT.md
 
     - title: DC-Native Energy Packet Networks
       subtitle: Layered analysis from packet internals to HVDC — quantitative efficiency case for 48V DC-first nodes
       date: 2026
       kind: paper
-      url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/dc_native_epn.md
+      url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/dc_native_epn.md
 
     - title: Packetized Gravity Networks
       subtitle: Extending the exergy chain through gravitational storage — historical canals as PGN substrate, Corsica case study
       date: 2026
       kind: paper
-      url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/PGN.md
+      url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/PGN.md
 
     - title: Mariani Village
       subtitle: A relocatable DC-native housing fleet — Dilorta SAS, BLE packet tracking, seasonal routing
       date: 2026
       kind: paper
-      url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/mariani_village.md
+      url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/mariani_village.md
 
     - title: Electricity in Containers
       subtitle: Store-and-forward energy logistics — working note
       date: 2026-05
       kind: working-note
-      url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/electricity_in_containers.md
+      url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/electricity_in_containers.md
 
     - title: The Packet as Evolutionary Attractor
-      subtitle: Scale-invariant transitions in complex networks — in MareNostrum
+      subtitle: Scale-invariant transitions in complex networks — in FractaVolta
       date: 2026
       kind: paper
-      url: https://github.com/JeanHuguesRobert/marenostrum/blob/main/packet_attractor.md
+      url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/packet_attractor.md
 
     - title: The Packet Transition — A Lateral Reading
-      subtitle: Phronèsis, amathia, transition taxonomy — in MareNostrum
+      subtitle: Phronèsis, amathia, transition taxonomy — in FractaVolta
       date: 2026
       kind: paper
-      url: https://github.com/JeanHuguesRobert/marenostrum/blob/main/packet_transition.md
+      url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/packet_transition.md
 
 - key: compute
   label: Compute substrate
@@ -67,7 +67,7 @@
       subtitle: Compute eXergy Unit — pricing primitive for sovereign inference (in MareNostrum)
       date: 2026
       kind: spec
-      url: https://github.com/JeanHuguesRobert/marenostrum/blob/main/CXU_SPEC.md
+      url: https://github.com/JeanHuguesRobert/marenostrum/blob/main/research/CXU_SPEC.md
 
     - title: Inference Packet Networks
       subtitle: A RAID/ARPANET continuity layer for sovereign AI infrastructure (v2.0)
@@ -79,7 +79,7 @@
       subtitle: Matching photovoltaic generation to compute demand
       date: 2026
       kind: paper
-      url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/value_shaped_solar_and_containerized_compute.md
+      url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/value_shaped_solar_and_containerized_compute.md
 
 - key: cognition
   label: Cognition layer
@@ -123,7 +123,7 @@
       subtitle: The axiom — AI may participate in epistemic production; living persons alone govern (in MareNostrum)
       date: 2025–2026
       kind: axiom
-      url: https://github.com/JeanHuguesRobert/marenostrum/blob/main/DHITL.md
+      url: https://github.com/JeanHuguesRobert/marenostrum/blob/main/research/DHITL.md
 
     - title: Discours de la seconde méthode
       subtitle: Methodology rules — publish process, objections as first-class, machine-readable structure, corpus as evidence (in barons-Mariani)
@@ -169,22 +169,22 @@
       subtitle: Multi-scale sensing and territorial mapping reference architecture
       date: 2026
       kind: reference-architecture
-      url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/tera.md
+      url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/tera.md
 
     - title: FractaVolta — Commercial Overview
       subtitle: Commercial overview and deployment framework
       date: 2026
       kind: overview
-      url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/fractavolta_paper.md
+      url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/fractavolta_paper.md
 
     - title: Partner Brief
       subtitle: Agrivoltaics pilot opportunity — Corsica
       date: 2026-05
       kind: brief
-      url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/partner_brief.md
+      url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/partner_brief.md
 
     - title: Traceable Governance
       subtitle: Fractal architectures for traceable governance
       date: 2026
       kind: paper
-      url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/traceable_governance.md
+      url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/traceable_governance.md

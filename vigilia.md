@@ -2,8 +2,8 @@
 canonical_url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/vigilia.md
 status: alias
 last_stamped_at: 2026-05-17
-canonical_document: https://github.com/JeanHuguesRobert/barons-Mariani/blob/main/vigilia.md
-parent_document: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/tera.md
+canonical_document: https://github.com/JeanHuguesRobert/barons-Mariani/blob/main/research/vigilia.md
+parent_document: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/tera.md
 title: "VIGILIA — alias FractaVolta"
 date: "2026-05-16"
 ---
@@ -12,7 +12,7 @@ date: "2026-05-16"
 
 Le document canonique VIGILIA se trouve dans le dépôt `barons-Mariani` :
 
-https://github.com/JeanHuguesRobert/barons-Mariani/blob/main/vigilia.md
+https://github.com/JeanHuguesRobert/barons-Mariani/blob/main/research/vigilia.md
 
 Ce fichier n'est plus une seconde version du document. Il sert d'alias depuis le dépôt `FractaVolta`, afin d'éviter la divergence du corpus.
 
@@ -32,9 +32,9 @@ Dans FractaVolta, VIGILIA est référencé comme cas d'usage de FractaTera :
 
 Voir aussi :
 
-- [`tera.md`](./tera.md) — FractaTera, réseau fractal de perception territoriale probabiliste ;
-- [`PGN.md`](./PGN.md) — Packetized Gravity Networks ;
-- [`electricity_in_containers.md`](./electricity_in_containers.md) — store-and-forward énergétique.
+- [`tera.md`](./research/tera.md) — FractaTera, réseau fractal de perception territoriale probabiliste ;
+- [`PGN.md`](./research/PGN.md) — Packetized Gravity Networks ;
+- [`electricity_in_containers.md`](./research/electricity_in_containers.md) — store-and-forward énergétique.
 
 ---
 

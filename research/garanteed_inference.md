@@ -13,6 +13,14 @@ canonical_url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/researc
 last_stamped_at: 2026-06-01
 date: "2026-05-18"
 status: "working-paper — auto-filled (frontmatter cleanup)"
+document_role: "source"
+document_kind: "research-paper"
+visibility: "public"
+lifecycle_state: "working"
+classification_source: "cogentia.js"
+classification_version: "1"
+classification_rule: "research-paper"
+classification_confidence: "medium"
 ---
 
 # Guaranteed Inference
@@ -927,7 +935,7 @@ Its role:
 
 - document the epistemic process;
 - preserve objections;
-- connect to [`DHITL.md`](https://github.com/JeanHuguesRobert/marenostrum/blob/main/DHITL.md);
+- connect to [`DHITL.md`](https://github.com/JeanHuguesRobert/marenostrum/blob/main/research/DHITL.md);
 - connect to Cogentia;
 - describe how AI agents contribute without governing;
 - make the corpus itself auditable.

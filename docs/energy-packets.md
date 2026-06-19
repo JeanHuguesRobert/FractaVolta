@@ -138,8 +138,8 @@ FractaVolta answers this question physically, through energy and compute infrast
 - [For deployers](./for-deployers) — concrete deployment patterns.
 - [For partners](./for-partners) — commercial and institutional engagement.
 - [Papers](./papers) — research-grade documents and cross-corpus references.
-- [UNCONSCIOUS_GRID.md](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/UNCONSCIOUS_GRID.md) — foundational source document.
-- [LE_RESEAU_INCONSCIENT.md](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/LE_RESEAU_INCONSCIENT.md) — French source/derived document for readers who need the French theoretical entry point.
+- [UNCONSCIOUS_GRID.md](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/UNCONSCIOUS_GRID.md) — foundational source document.
+- [LE_RESEAU_INCONSCIENT.md](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/LE_RESEAU_INCONSCIENT.md) — French source/derived document for readers who need the French theoretical entry point.
 
 ## FractaVolta in one sentence
 

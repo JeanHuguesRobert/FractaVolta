@@ -20,6 +20,8 @@ photons -> energy packets -> inference packets -> cognitive packets -> civic pac
 
 FractaVolta is an engineering firm, software publisher, and operational vehicle for a broader Mediterranean sovereignty stack. It works at the interface between physical infrastructure and auditable knowledge systems.
 
+FractaVolta is currently incubated by [Institut Mariani](https://github.com/acorsica/institut-mariani), the R&D organ of the [C.O.R.S.I.C.A. association](https://acorsica.org/). This means shared research, doctrine, methods, and corpus navigation. It does not mean institutional merger or commercial operation by the association. See [Institutional context](./institutional-context) for the precise boundary.
+
 For the French operational entry point, especially for Corsica-based owners, farmers, municipalities, installers, and local partners, see [FractaVolta en Corse](./fr/).
 
 ## The packet transition
@@ -69,6 +71,7 @@ The highest-value use of local solar is not always exporting electrons. It can b
 - [For deployers](./for-deployers) — concrete deployment patterns, including DC-native units and Mariani Village.
 - [For researchers](./for-researchers) — papers, methodology, continuation protocol, and corpus structure.
 - [For citizens](./for-citizens) — civic infrastructure, Inseme, Kudocracy, and Ophélia.
+- [Institutional context](./institutional-context) — how FractaVolta relates to C.O.R.S.I.C.A. and Institut Mariani.
 - [Papers](./papers) — research-grade documents and cross-corpus references.
 
 ## French operational pages

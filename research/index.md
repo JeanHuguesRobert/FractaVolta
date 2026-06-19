@@ -9,13 +9,21 @@ affiliation: Institut Mariani / C.O.R.S.I.C.A., 1 cours Paoli, F-20250 Corte, Co
 date: 2026-05-13
 creator: Jean Hugues Noël Robert, baron Mariani
 canonical_url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/index.md
+document_role: "index"
+document_kind: "research-index"
+visibility: "public"
+lifecycle_state: "active"
+classification_source: "cogentia.js"
+classification_version: "1"
+classification_rule: "research-index"
+classification_confidence: "strong"
 ---
 
 # Research Index — FractaVolta
 
 ## Foundation
 
-This repository instantiates the **physical infrastructure layer** of the [DHITL](https://github.com/JeanHuguesRobert/marenostrum/blob/main/DHITL.md) AI Safety anti-capture proposal — packetized gravity networks, DC-native energy packet networks, traceable governance for matter-energy-compute. The architectural axiom lives in [`marenostrum/DHITL.md`](https://github.com/JeanHuguesRobert/marenostrum/blob/main/DHITL.md). The method lives in [`barons-Mariani/research/second_method.md`](https://github.com/JeanHuguesRobert/barons-Mariani/blob/main/research/second_method.md).
+This repository instantiates the **physical infrastructure layer** of the [DHITL](https://github.com/JeanHuguesRobert/marenostrum/blob/main/research/DHITL.md) AI Safety anti-capture proposal — packetized gravity networks, DC-native energy packet networks, traceable governance for matter-energy-compute. The architectural axiom lives in [`marenostrum/DHITL.md`](https://github.com/JeanHuguesRobert/marenostrum/blob/main/research/DHITL.md). The method lives in [`barons-Mariani/research/second_method.md`](https://github.com/JeanHuguesRobert/barons-Mariani/blob/main/research/second_method.md).
 
 ---
 
@@ -29,21 +37,21 @@ This repository instantiates the **physical infrastructure layer** of the [DHITL
 | Title | Location | Date |
 |---|---|---|
 | [Lien avec C.O.R.S.I.C.A. et l’Institut Mariani](acorsica-institut-mariani.md) *(institutional boundary note — documentary link without institutional confusion)* | this repo | 2026-06-03 |
-| [Packetized Gravity Networks](../PGN.md) | this repo | 2026-05-08 |
-| [The Packet as Evolutionary Attractor — Scale-Invariant Transitions in Complex Networks](../packet_attractor.md) | this repo | 2026-05-08 |
-| [The Packet Transition — A Lateral Reading of Circuit Networks](../packet_transition.md) | this repo | 2026-05-08 |
+| [Packetized Gravity Networks](PGN.md) | this repo | 2026-05-08 |
+| [The Packet as Evolutionary Attractor — Scale-Invariant Transitions in Complex Networks](packet_attractor.md) | this repo | 2026-05-08 |
+| [The Packet Transition — A Lateral Reading of Circuit Networks](packet_transition.md) | this repo | 2026-05-08 |
 | [Inference Packet Networks — A RAID/ARPANET Continuity Layer for Sovereign AI Infrastructure](inference_packet_network.md) | this repo | 2026-05-14 |
 | [Guaranteed Inference — A Resilient, Routable and Traceable Fallback Layer for Critical AI Workloads](garanteed_inference.md) *(working paper v0.3-market)* | this repo | 2026-05-18 |
-| [DC-Native Energy Packet Networks](../dc_native_epn.md) | this repo | 2026 |
-| [Electricity in Containers — Store-and-Forward Energy Logistics](../electricity_in_containers.md) | this repo | 2026-05-06 |
-| [The Unconscious Grid — Store-and-Forward as the Repressed Solution](../UNCONSCIOUS_GRID.md) *(entry point for the packetization corpus ; §8 extends the diagnosis from energy to cognition, sociability, money, and territory)* | this repo | 2026-05-21 |
-| [Le Réseau Inconscient — De la commutation *store-and-forward* comme solution refoulée (FR)](../LE_RESEAU_INCONSCIENT.md) *(version française sémantiquement identique à [`UNCONSCIOUS_GRID.md`](../UNCONSCIOUS_GRID.md))* | this repo | 2026-05-21 |
-| [Value-Shaped Solar and Containerized Compute](../value_shaped_solar_and_containerized_compute.md) | this repo | 2026-05-06 |
-| [Mariani Village — A Relocatable DC-Native Housing Fleet](../mariani_village.md) | this repo | 2026-05-08 |
-| [FractaTera — Fractal Terrestrial Awareness Network](../tera.md) | this repo | 2026-05-06 |
-| [Fractal Architectures for Traceable Governance](../traceable_governance.md) | this repo | 2026 |
-| [FractaVolta White Paper](../fractavolta_paper.md) | this repo | 2026 |
-| [FractaVolta Partner Brief — Agrivoltaics Pilot Opportunity](../partner_brief.md) | this repo | 2026-05-06 |
+| [DC-Native Energy Packet Networks](dc_native_epn.md) | this repo | 2026 |
+| [Electricity in Containers — Store-and-Forward Energy Logistics](electricity_in_containers.md) | this repo | 2026-05-06 |
+| [The Unconscious Grid — Store-and-Forward as the Repressed Solution](UNCONSCIOUS_GRID.md) *(entry point for the packetization corpus ; §8 extends the diagnosis from energy to cognition, sociability, money, and territory)* | this repo | 2026-05-21 |
+| [Le Réseau Inconscient — De la commutation *store-and-forward* comme solution refoulée (FR)](LE_RESEAU_INCONSCIENT.md) *(version française sémantiquement identique à [`UNCONSCIOUS_GRID.md`](UNCONSCIOUS_GRID.md))* | this repo | 2026-05-21 |
+| [Value-Shaped Solar and Containerized Compute](value_shaped_solar_and_containerized_compute.md) | this repo | 2026-05-06 |
+| [Mariani Village — A Relocatable DC-Native Housing Fleet](mariani_village.md) | this repo | 2026-05-08 |
+| [FractaTera — Fractal Terrestrial Awareness Network](tera.md) | this repo | 2026-05-06 |
+| [Fractal Architectures for Traceable Governance](traceable_governance.md) | this repo | 2026 |
+| [FractaVolta White Paper](fractavolta_paper.md) | this repo | 2026 |
+| [FractaVolta Partner Brief — Agrivoltaics Pilot Opportunity](partner_brief.md) | this repo | 2026-05-06 |
 | [Generalized Packet Networks — A Framework for Heterogeneous Packets, Resource Occupancy, and Cross-Domain Operational Recurrence](generalized_packet_networks.md) *(working paper v0.3 — the cross-domain abstraction that EPN, PGN, IPN, Thermal Packets all instantiate)* | this repo | 2026-05-22 |
 | [Thermal Packet Networks — A Multi-Scale Store-and-Forward Architecture for Low-Exergy Heat and Cold Distribution](thermal_packet_networks.md) *(working paper v0.2)* | this repo | 2026-05-22 |
 | [Packet Paper Template — A Minimal Method for Declining Generalized Packet Networks into Substrate-Specific Papers](packet_paper_template.md) *(method-template working paper v0.2)* | this repo | 2026-05-22 |
@@ -63,10 +71,10 @@ This repository instantiates the **physical infrastructure layer** of the [DHITL
 | Title | Location |
 |---|---|
 | [Discours de la seconde méthode](https://github.com/JeanHuguesRobert/barons-Mariani/blob/main/research/second_method.md) | barons-Mariani |
-| [DHITL — Democratic Humans in the Loop](https://github.com/JeanHuguesRobert/marenostrum/blob/main/DHITL.md) | marenostrum |
-| [CXU Specification](https://github.com/JeanHuguesRobert/marenostrum/blob/main/CXU_SPEC.md) | marenostrum |
+| [DHITL — Democratic Humans in the Loop](https://github.com/JeanHuguesRobert/marenostrum/blob/main/research/DHITL.md) | marenostrum |
+| [CXU Specification](https://github.com/JeanHuguesRobert/marenostrum/blob/main/research/CXU_SPEC.md) | marenostrum |
 | [Cogentia Commons Working Paper](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/Cogentia_Commons_Working_Paper.md) | cogentia |
-| [Constellia](https://github.com/JeanHuguesRobert/marenostrum/blob/main/constellia.md) | marenostrum |
+| [Constellia](https://github.com/JeanHuguesRobert/marenostrum/blob/main/research/constellia.md) | marenostrum |
 | [Inseme — deployable platform + COP runtime](https://github.com/JeanHuguesRobert/inseme/blob/main/research/index.md) | inseme |
 | [Inox — language and runtime substrate](https://github.com/JeanHuguesRobert/Inox/blob/master/research/inox-spec.md) *(concatenative stack VM; the runtime the integrated stack may eventually run on at the edge — JS today, WASM and C/C++ next, ESP32 bare-metal eventually)* | Inox |
 

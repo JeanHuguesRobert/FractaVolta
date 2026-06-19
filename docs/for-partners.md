@@ -125,6 +125,12 @@ We prioritise partners who want real local capacity rather than symbolic soverei
 
 We do not work well with structures seeking software lock-in, opaque audit chains, or AI as an extraction mechanism.
 
+## Institutional frame
+
+FractaVolta is incubated by [Institut Mariani](https://github.com/acorsica/institut-mariani), the R&D organ of [C.O.R.S.I.C.A.](https://acorsica.org/). This provides research continuity, open corpus discipline, and a civic-autonomy frame for the early architecture.
+
+Commercial engagements remain explicit FractaVolta engagements. The association and the institute are not treated as automatic commercial operators or contracting substitutes. For the public-facing boundary, see [Institutional context](./institutional-context).
+
 ## How to engage
 
 If you want to explore a deployment, pilot, study, or partnership, contact us directly.

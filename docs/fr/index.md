@@ -14,6 +14,8 @@ last_stamped_at: 2026-06-02
 
 FractaVolta propose en Corse une manière concrète de valoriser l’énergie solaire locale : ne plus la traiter seulement comme un flux injecté dans le réseau, mais comme une **capacité locale**, stockée, orientée, utile, réversible et traçable.
 
+FractaVolta est actuellement incubée par l'[Institut Mariani](https://github.com/acorsica/institut-mariani), organe de R&D de l'association [C.O.R.S.I.C.A.](https://acorsica.org/). Cette incubation porte sur la recherche, la doctrine, les méthodes et la navigation du corpus ; elle ne confond pas FractaVolta avec l'association et ne fait pas de C.O.R.S.I.C.A. l'opérateur commercial de FractaVolta. Voir le [contexte institutionnel](./contexte-institutionnel).
+
 L’objectif est simple : transformer le solaire local en **paquets d’énergie**.
 
 ```text
@@ -78,6 +80,6 @@ Ce prototype ne prouve pas la puissance industrielle. Il prouve la structure : s
 
 Pour l’architecture générale en anglais, voir [Energy packets](../energy-packets), [Papers](../papers) et [Methodology](../methodology).
 
-Le papier fondateur du *Energy Packet Network* existe aussi en français : [**Le Réseau Inconscient**](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/LE_RESEAU_INCONSCIENT.md) — *de la commutation* store-and-forward *comme solution refoulée à la souveraineté énergétique*.
+Le papier fondateur du *Energy Packet Network* existe aussi en français : [**Le Réseau Inconscient**](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/LE_RESEAU_INCONSCIENT.md) — *de la commutation* store-and-forward *comme solution refoulée à la souveraineté énergétique*.
 
 Son §8, *La famille élargie*, étend le diagnostic au-delà de l’énergie — vers la cognition, la sociabilité, la monnaie et le territoire — et positionne le papier comme point d’entrée du corpus de *packetization*. Lecture théorique : environ 620 lignes, registre psychanalytique assumé.

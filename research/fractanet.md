@@ -64,9 +64,9 @@ related_document_urls:
   - "https://github.com/JeanHuguesRobert/inseme/blob/main/packages/cop-core/Invariants.md"
   - "https://github.com/JeanHuguesRobert/inseme/blob/main/packages/cop-core/ImplementationProfiles.md"
   - "https://github.com/JeanHuguesRobert/inseme/blob/main/research/reactive_cognitive_cop_extension.md"
-  - "https://github.com/JeanHuguesRobert/marenostrum/blob/main/safe_compute_exergy.md"
-  - "https://github.com/JeanHuguesRobert/marenostrum/blob/main/compute-exergy-omitted-variable.md"
-  - "https://github.com/JeanHuguesRobert/marenostrum/blob/main/CXU_SPEC.md"
+  - "https://github.com/JeanHuguesRobert/marenostrum/blob/main/research/safe_compute_exergy.md"
+  - "https://github.com/JeanHuguesRobert/marenostrum/blob/main/research/compute-exergy-omitted-variable.md"
+  - "https://github.com/JeanHuguesRobert/marenostrum/blob/main/research/CXU_SPEC.md"
 tags:
   - fractanet
   - generalized-packet-networks
@@ -126,6 +126,14 @@ validation_points:
   - "Validate the claim that JavaScript should remain an adoption profile while COP/Inox carries complex Fractanet execution."
   - "Validate whether exergy-based routing should be framed as a true model family or as an energy-inspired cost function at this stage."
   - "Validate all institutional references before public publication."
+document_role: "source"
+document_kind: "research-paper"
+visibility: "public"
+lifecycle_state: "working"
+classification_source: "cogentia.js"
+classification_version: "1"
+classification_rule: "research-paper"
+classification_confidence: "medium"
 ---
 
 ## 0. Corpus navigation
@@ -148,8 +156,8 @@ This draft uses clickable corpus anchors for easier review and continuation.
 | Reviewer prompt | [cogentia/prompts/reviewer.md](https://github.com/JeanHuguesRobert/cogentia/blob/main/prompts/reviewer.md) |
 | COP invariants | [inseme/packages/cop-core/Invariants.md](https://github.com/JeanHuguesRobert/inseme/blob/main/packages/cop-core/Invariants.md) |
 | COP implementation profiles | [inseme/packages/cop-core/ImplementationProfiles.md](https://github.com/JeanHuguesRobert/inseme/blob/main/packages/cop-core/ImplementationProfiles.md) |
-| Compute exergy | [marenostrum/safe_compute_exergy.md](https://github.com/JeanHuguesRobert/marenostrum/blob/main/safe_compute_exergy.md) |
-| CXU specification | [marenostrum/CXU_SPEC.md](https://github.com/JeanHuguesRobert/marenostrum/blob/main/CXU_SPEC.md) |
+| Compute exergy | [marenostrum/safe_compute_exergy.md](https://github.com/JeanHuguesRobert/marenostrum/blob/main/research/safe_compute_exergy.md) |
+| CXU specification | [marenostrum/CXU_SPEC.md](https://github.com/JeanHuguesRobert/marenostrum/blob/main/research/CXU_SPEC.md) |
 
 
 # Fractanet
@@ -1303,7 +1311,7 @@ The following anchors should be consulted before turning each open question into
 | Registry governance and capture | [FractaVolta/research/generalized_packet_networks.md](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/generalized_packet_networks.md); [FractaVolta/research/index.md](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/index.md); [cogentia/research/pipeline.md](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/pipeline.md) |
 | Inox Core minimal runtime | [Inox/research/inox-spec.md](https://github.com/JeanHuguesRobert/Inox/blob/main/research/inox-spec.md) |
 | Mandatory COP events | [inseme/packages/cop-core/Invariants.md](https://github.com/JeanHuguesRobert/inseme/blob/main/packages/cop-core/Invariants.md); [inseme/packages/cop-core/ImplementationProfiles.md](https://github.com/JeanHuguesRobert/inseme/blob/main/packages/cop-core/ImplementationProfiles.md); [inseme/research/reactive_cognitive_cop_extension.md](https://github.com/JeanHuguesRobert/inseme/blob/main/research/reactive_cognitive_cop_extension.md) |
-| Exergy scoring | [marenostrum/safe_compute_exergy.md](https://github.com/JeanHuguesRobert/marenostrum/blob/main/safe_compute_exergy.md); [marenostrum/compute-exergy-omitted-variable.md](https://github.com/JeanHuguesRobert/marenostrum/blob/main/compute-exergy-omitted-variable.md); [marenostrum/CXU_SPEC.md](https://github.com/JeanHuguesRobert/marenostrum/blob/main/CXU_SPEC.md) |
+| Exergy scoring | [marenostrum/safe_compute_exergy.md](https://github.com/JeanHuguesRobert/marenostrum/blob/main/research/safe_compute_exergy.md); [marenostrum/compute-exergy-omitted-variable.md](https://github.com/JeanHuguesRobert/marenostrum/blob/main/research/compute-exergy-omitted-variable.md); [marenostrum/CXU_SPEC.md](https://github.com/JeanHuguesRobert/marenostrum/blob/main/research/CXU_SPEC.md) |
 | RAIX measurement | [FractaVolta/research/generalized_packet_networks.md](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/generalized_packet_networks.md); [FractaVolta/research/packet_paper_template.md](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/packet_paper_template.md) |
 | Physical data planes | [FractaVolta/research/thermal_packet_networks.md](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/thermal_packet_networks.md); [FractaVolta/research/inference_packet_network.md](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/inference_packet_network.md); [FractaVolta/research/generalized_packet_networks.md](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/generalized_packet_networks.md) |
 | Cognitive packets and continuations | [cogentia/prompts/cognitive_packet.md](https://github.com/JeanHuguesRobert/cogentia/blob/main/prompts/cognitive_packet.md); [cogentia/research/cognitive_packets.md](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/cognitive_packets.md); [cogentia/research/cognitive_packet_switching.md](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/cognitive_packet_switching.md); [cogentia/research/cogentia_continuation_packet_routing.md](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/cogentia_continuation_packet_routing.md) |

@@ -1,4 +1,14 @@
-# Five-repository corpus. Order is intentional — strategic → operational → tooling → platform → political.
+# Corpus links. Order is intentional: association frame -> R&D organ -> operational stack -> strategic/tooling/platform context.
+- name: C.O.R.S.I.C.A.
+  role: Non-profit association frame for autonomous competence networks, governance, and public-interest orientation.
+  url: https://acorsica.org/
+  self: false
+
+- name: Institut Mariani
+  role: R&D organ of C.O.R.S.I.C.A.; incubates FractaVolta through research, methods, prototypes, and corpus discipline.
+  url: https://github.com/acorsica/institut-mariani
+  self: false
+
 - name: MareNostrum
   role: Strategic framework — sovereign compute infrastructure for France and Europe. CXU, DHITL, Mediterranean solar commons.
   url: https://github.com/JeanHuguesRobert/marenostrum

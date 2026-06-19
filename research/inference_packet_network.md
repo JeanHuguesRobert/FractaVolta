@@ -7,6 +7,14 @@ last_stamped_at: 2026-06-01
 title: "Inference Packet Networks"
 date: "2026-05-14"
 status: "working-paper — auto-filled (frontmatter cleanup)"
+document_role: "source"
+document_kind: "research-paper"
+visibility: "public"
+lifecycle_state: "working"
+classification_source: "cogentia.js"
+classification_version: "1"
+classification_rule: "research-paper"
+classification_confidence: "medium"
 ---
 # Inference Packet Networks
 
@@ -1018,7 +1026,6 @@ The corpus, rather than this single document, will determine what survives.
 - [For researchers](../docs/for-researchers.md)
 - [Fractanet — Generalized Control Planes for Heterogeneous Packet Networks](fractanet.md)
 - [FractaVolta](../README.md)
-- [Packetized Gravity Networks: Distributed Hydro-Energetic Infrastructure for Resilient Renewable Integration](../PGN.md)
 - [Research Index — FractaVolta](index.md)
 - [Corpus Start Here — Carte globale du Corpus](https://github.com/JeanHuguesRobert/JeanHuguesRobert/blob/main/research/corpus-map.md)
 - [Documents - All Tracked Repos](https://github.com/JeanHuguesRobert/JeanHuguesRobert/blob/main/research/documents.md)

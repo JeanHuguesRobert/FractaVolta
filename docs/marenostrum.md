@@ -17,12 +17,12 @@ The framework is **early-stage and intentionally so**. It is a corpus of papers,
 
 The corpus carries the architectural concepts that FractaVolta implements:
 
-- [**DHITL — Democratic Humans in the Loop**](https://github.com/JeanHuguesRobert/marenostrum/blob/main/DHITL.md) — the axiom of the whole stack. AI agents may participate in epistemic production; living persons alone govern. Foundational reading.
-- [**CXU — Compute eXergy Unit**](https://github.com/JeanHuguesRobert/marenostrum/blob/main/CXU_SPEC.md) — the pricing primitive for sovereign AI inference. Energy × hardware efficiency × system efficiency × SLA premium = one auditable price per useful inference.
-- [**Sun-to-Sovereignty**](https://github.com/JeanHuguesRobert/marenostrum/blob/main/PAPER_SUN_TO_SOVEREIGNTY.md) — the umbrella narrative. Why stranded Mediterranean solar exergy is the strategic substrate for European AI sovereignty.
-- [**Packet Transition — A Lateral Reading**](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/packet_transition.md) — the broader theoretical context. Phronèsis, amathia, the circuit-to-packet transition as a category of social-technical change.
-- [**Packet as Evolutionary Attractor**](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/packet_attractor.md) — complexity-theoretic framing of why packet architectures keep winning.
-- [**Constellia**](https://github.com/JeanHuguesRobert/marenostrum/blob/main/constellia.md) — the cross-Mediterranean coordination concept.
+- [**DHITL — Democratic Humans in the Loop**](https://github.com/JeanHuguesRobert/marenostrum/blob/main/research/DHITL.md) — the axiom of the whole stack. AI agents may participate in epistemic production; living persons alone govern. Foundational reading.
+- [**CXU — Compute eXergy Unit**](https://github.com/JeanHuguesRobert/marenostrum/blob/main/research/CXU_SPEC.md) — the pricing primitive for sovereign AI inference. Energy × hardware efficiency × system efficiency × SLA premium = one auditable price per useful inference.
+- [**Sun-to-Sovereignty**](https://github.com/JeanHuguesRobert/marenostrum/blob/main/research/PAPER_SUN_TO_SOVEREIGNTY.md) — the umbrella narrative. Why stranded Mediterranean solar exergy is the strategic substrate for European AI sovereignty.
+- [**Packet Transition — A Lateral Reading**](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/packet_transition.md) — the broader theoretical context. Phronèsis, amathia, the circuit-to-packet transition as a category of social-technical change.
+- [**Packet as Evolutionary Attractor**](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/packet_attractor.md) — complexity-theoretic framing of why packet architectures keep winning.
+- [**Constellia**](https://github.com/JeanHuguesRobert/marenostrum/blob/main/research/constellia.md) — the cross-Mediterranean coordination concept.
 
 See the [research/index.md](https://github.com/JeanHuguesRobert/marenostrum/blob/main/research/index.md) for the full corpus.
 
@@ -47,7 +47,7 @@ A different operator implementing the same framework in Sicily, Sardinia, the Ba
 
 ## How to engage
 
-- **Read the corpus.** Start with [DHITL](https://github.com/JeanHuguesRobert/marenostrum/blob/main/DHITL.md), then [Sun-to-Sovereignty](https://github.com/JeanHuguesRobert/marenostrum/blob/main/PAPER_SUN_TO_SOVEREIGNTY.md), then the [CXU spec](https://github.com/JeanHuguesRobert/marenostrum/blob/main/CXU_SPEC.md).
+- **Read the corpus.** Start with [DHITL](https://github.com/JeanHuguesRobert/marenostrum/blob/main/research/DHITL.md), then [Sun-to-Sovereignty](https://github.com/JeanHuguesRobert/marenostrum/blob/main/research/PAPER_SUN_TO_SOVEREIGNTY.md), then the [CXU spec](https://github.com/JeanHuguesRobert/marenostrum/blob/main/research/CXU_SPEC.md).
 - **File objections.** The MareNostrum repository accepts issues. Per [the methodology](./methodology), every objection is a first-class contribution.
 - **Express consortium interest.** Email [jhr@baronsmariani.org](mailto:jhr@baronsmariani.org). The consortium is intentionally underspecified at this stage; its shape remains negotiable.
 

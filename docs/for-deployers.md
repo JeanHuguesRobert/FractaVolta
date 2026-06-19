@@ -41,7 +41,7 @@ Mariani Village units are designed around:
 
 The goal is not off-grid ideology. The goal is **reversible local capacity**: a unit that can operate, move, be audited, and be extended without becoming dependent on an opaque infrastructure provider.
 
-Full technical reference: [mariani_village.md](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/mariani_village.md).
+Full technical reference: [mariani_village.md](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/mariani_village.md).
 
 ## What a unit contains
 
@@ -58,7 +58,7 @@ Full technical reference: [mariani_village.md](https://github.com/JeanHuguesRobe
 
 The 48 V SELV bus is the spine when it is appropriate. AC becomes an adapter protocol at the boundary, not the default substrate. USB-C PD 3.1 — operating at up to 48 V DC and up to 240 W — can serve as a safe, negotiated, widely understood user interface.
 
-See the layered analysis in [dc_native_epn.md](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/dc_native_epn.md).
+See the layered analysis in [dc_native_epn.md](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/dc_native_epn.md).
 
 ## Regulatory navigation
 
@@ -110,9 +110,9 @@ This is optional. A Mariani Village can run as housing or infrastructure alone. 
 
 Core documents:
 
-1. [mariani_village.md](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/mariani_village.md) — reference housing and modular deployment pattern.
-2. [dc_native_epn.md](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/dc_native_epn.md) — DC-native Energy Packet Network architecture.
-3. [UNCONSCIOUS_GRID.md](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/UNCONSCIOUS_GRID.md) — foundational energy packet paper.
+1. [mariani_village.md](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/mariani_village.md) — reference housing and modular deployment pattern.
+2. [dc_native_epn.md](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/dc_native_epn.md) — DC-native Energy Packet Network architecture.
+3. [UNCONSCIOUS_GRID.md](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/UNCONSCIOUS_GRID.md) — foundational energy packet paper.
 4. [Energy packets](./energy-packets) — public site introduction.
 5. [Methodology](./methodology) — Cogentia Commons and continuation-based operational method.
 

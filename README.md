@@ -17,7 +17,7 @@
 - 🌐 https://fractavolta.com — public entry point
 - 📚 [research/index.md](research/index.md) — generated catalog of published papers and open possibilities
 - 📊 [research/corpus-status.md](research/corpus-status.md) — generated corpus status, backlinks, and navigation checks
-- ⚡ [UNCONSCIOUS_GRID.md](UNCONSCIOUS_GRID.md) — packetization argument at the energy layer
+- ⚡ [UNCONSCIOUS_GRID.md](research/UNCONSCIOUS_GRID.md) — packetization argument at the energy layer
 
 **Audience-oriented pages on fractavolta.com:**
 - 🤝 [For partners](https://fractavolta.com/for-partners) — energy + compute commercial pitch
@@ -33,7 +33,7 @@
 *Part of the [Cogentia Commons](https://github.com/JeanHuguesRobert/cogentia) distributed knowledge corpus.*
 *Methodology: [Discours de la seconde méthode](https://github.com/JeanHuguesRobert/barons-Mariani/blob/main/research/second_method.md)*
 
-*FractaVolta is one node of a wider **packetization corpus** — the same circuit-to-packet diagnostic, extended from energy to cognition ([Cognitive Packets](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/cognitive_packets.md)), method ([Pipeline](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/pipeline.md) + [Derived Products](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/derived_products.md)), sociability ([Auxilia brique](https://github.com/JeanHuguesRobert/inseme/blob/main/packages/brique-auxilia/AUXILIA.md)), money ([Kudos](https://github.com/JeanHuguesRobert/barons-Mariani/blob/main/research/kudos.md)), and territory ([Autonomia](https://github.com/JeanHuguesRobert/barons-Mariani/blob/main/research/autonomia.md)). The entry point is §8 of [UNCONSCIOUS_GRID.md](./UNCONSCIOUS_GRID.md) — also available in French as [LE_RESEAU_INCONSCIENT.md](./LE_RESEAU_INCONSCIENT.md).*
+*FractaVolta is one node of a wider **packetization corpus** — the same circuit-to-packet diagnostic, extended from energy to cognition ([Cognitive Packets](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/cognitive_packets.md)), method ([Pipeline](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/pipeline.md) + [Derived Products](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/derived_products.md)), sociability ([Auxilia brique](https://github.com/JeanHuguesRobert/inseme/blob/main/packages/brique-auxilia/AUXILIA.md)), money ([Kudos](https://github.com/JeanHuguesRobert/barons-Mariani/blob/main/research/kudos.md)), and territory ([Autonomia](https://github.com/JeanHuguesRobert/barons-Mariani/blob/main/research/autonomia.md)). The entry point is §8 of [UNCONSCIOUS_GRID.md](./research/UNCONSCIOUS_GRID.md) — also available in French as [LE_RESEAU_INCONSCIENT.md](./research/LE_RESEAU_INCONSCIENT.md).*
 
 ---
 
@@ -152,13 +152,13 @@ Energy packets are discrete, addressable, and physically transportable. The rout
 
 All accounting is conducted in **exergy** — the capacity to perform useful work — not raw energy. Nodes are DC-native: photovoltaics generate DC, batteries store DC, electronic loads consume DC. Avoidable AC/DC conversion stages introduce 10–20% systemic overhead in conventional chains. The 48V SELV bus is the spine. USB-C PD 3.1 is the human-facing interface.
 
-Foundational papers: [UNCONSCIOUS_GRID.md](./UNCONSCIOUS_GRID.md), [DC_NATIVE_EPN.md](./dc_native_epn.md), [PGN.md](./PGN.md), [tera.md](./tera.md).
+Foundational papers: [UNCONSCIOUS_GRID.md](./research/UNCONSCIOUS_GRID.md), [DC_NATIVE_EPN.md](./research/dc_native_epn.md), [PGN.md](./research/PGN.md), [tera.md](./research/tera.md).
 
 ### Layer 2 — Compute
 
 Sovereign AI inference is the highest-value application of stranded Mediterranean solar exergy. Where exporting electrons through the SARCO cable yields €40–80/MWh, the same exergy converted into inference tokens yields ×10–×40 the revenue — and the bottleneck is bypassed: inference tokens travel the internet, not the cable.
 
-The pricing unit is the **CXU** (Compute eXergy Unit) — defined in the [MareNostrum framework](https://github.com/JeanHuguesRobert/marenostrum/blob/main/CXU_SPEC.md) — which incorporates hardware efficiency, system efficiency, and SLA premium into a single auditable price per unit of useful inference.
+The pricing unit is the **CXU** (Compute eXergy Unit) — defined in the [MareNostrum framework](https://github.com/JeanHuguesRobert/marenostrum/blob/main/research/CXU_SPEC.md) — which incorporates hardware efficiency, system efficiency, and SLA premium into a single auditable price per unit of useful inference.
 
 The new [Inference Packet Networks](research/inference_packet_network.md) paper extends the packet logic to cognition itself: inference workloads as versioned, signed, locally executable units providing bounded continuity when hyperscale systems are degraded, unavailable, or geopolitically disrupted.
 
@@ -209,7 +209,7 @@ FractaVolta nodes are designed DC-first:
 
 The 48V SELV bus is the spine. AC is an adapter protocol at the boundary, not the substrate. The USB-C PD 3.1 connector — operating at exactly 48V DC, up to 240W — becomes the human-facing interface of the DC bus: touch-safe, power-negotiated, and already in every user's pocket.
 
-See [dc_native_epn.md](./dc_native_epn.md) for the full layered analysis.
+See [dc_native_epn.md](./research/dc_native_epn.md) for the full layered analysis.
 
 ---
 
@@ -223,7 +223,7 @@ The 230V AC capability travels as a portable 700 Wh battery packet — borrowed 
 
 When a Mariani Village runs Inseme Agora locally for resident deliberation, with Ophélia as the AI mediator running on sovereign inference powered by the on-site PV-backed nodes, the full stack closes: photons enter at the array, deliberation exits at the assembly, every layer is owned and auditable by the residents.
 
-See [mariani_village.md](./mariani_village.md).
+See [mariani_village.md](./research/mariani_village.md).
 
 ---
 
@@ -262,20 +262,20 @@ Pouzin was right. The datagram won for information. It will win for energy, for 
 
 | File | Description |
 |---|---|
-| [UNCONSCIOUS_GRID.md](./UNCONSCIOUS_GRID.md) | **Founding paper** — *The Unconscious Grid: On Store-and-Forward as the Repressed Solution to Energy Sovereignty*. |
-| [dc_native_epn.md](./dc_native_epn.md) | **DC architecture paper** — *DC-Native Energy Packet Networks*. |
-| [PGN.md](./PGN.md) | **Hydraulic paper** — *Packetized Gravity Networks*. |
-| [mariani_village.md](./mariani_village.md) | **Habitat paper** — *Mariani Village: A Relocatable DC-Native Housing Fleet*. |
+| [UNCONSCIOUS_GRID.md](./research/UNCONSCIOUS_GRID.md) | **Founding paper** — *The Unconscious Grid: On Store-and-Forward as the Repressed Solution to Energy Sovereignty*. |
+| [dc_native_epn.md](./research/dc_native_epn.md) | **DC architecture paper** — *DC-Native Energy Packet Networks*. |
+| [PGN.md](./research/PGN.md) | **Hydraulic paper** — *Packetized Gravity Networks*. |
+| [mariani_village.md](./research/mariani_village.md) | **Habitat paper** — *Mariani Village: A Relocatable DC-Native Housing Fleet*. |
 | [projects/corte_logement_capacitaire.md](./projects/corte_logement_capacitaire.md) | **Project case study (draft)** — *Corte Logement Capacitaire: Remettre en capacité le parc ancien vacant*. Cas d'usage exploratoire pour FractaVolta + Cogentia + autonomie de capacité : micro-résidences solidaires et éducatives, ordres de grandeur indicatifs, ni offre d'achat ni engagement opérationnel. |
 | [research/inference_packet_network.md](./research/inference_packet_network.md) | **Inference paper** — *Inference Packet Networks: A RAID/ARPANET Continuity Layer for Sovereign AI Infrastructure* (v2.0). |
 | [research/generalized_packet_networks.md](./research/generalized_packet_networks.md) | **Framework paper** — *Generalized Packet Networks: A Framework for Heterogeneous Packets, Resource Occupancy, and Cross-Domain Operational Recurrence* (v0.3). The cross-domain abstraction that EPN, PGN, IPN, Thermal, etc. instantiate. |
 | [research/thermal_packet_networks.md](./research/thermal_packet_networks.md) | **Thermal paper** — *Thermal Packet Networks: A Multi-Scale Store-and-Forward Architecture for Low-Exergy Heat and Cold Distribution* (v0.2). |
 | [research/packet_paper_template.md](./research/packet_paper_template.md) | **Methodological template** — *A Minimal Method for Declining Generalized Packet Networks into Substrate-Specific Papers.* |
 | [research/capability_regimes.md](./research/capability_regimes.md) | **Fractanet operating-regimes paper** — *Capability Regimes: Fractal Decision Under Constraints of Uncertainty in RAIX-COP-Fractanet Architectures* (v0.1-draft). |
-| [tera.md](./tera.md) | FractaTera reference architecture — multi-scale sensing and territorial mapping. |
-| [fractavolta_paper.md](./fractavolta_paper.md) | Commercial overview and deployment framework. |
-| [partner_brief.md](./partner_brief.md) | Partner engagement brief. |
-| [electricity_in_containers.md](./electricity_in_containers.md) | Working note — exploratory precursor to the full paper. |
+| [tera.md](./research/tera.md) | FractaTera reference architecture — multi-scale sensing and territorial mapping. |
+| [fractavolta_paper.md](./research/fractavolta_paper.md) | Commercial overview and deployment framework. |
+| [partner_brief.md](./research/partner_brief.md) | Partner engagement brief. |
+| [electricity_in_containers.md](./research/electricity_in_containers.md) | Working note — exploratory precursor to the full paper. |
 | [research/index.md](./research/index.md) | Research index — published papers, open possibilities, corpus map. |
 
 ---
@@ -299,16 +299,16 @@ FractaVolta operates the integrated stack across a multi-repository public ecosy
 ## Theoretical Foundations
 
 - **[Generalized Packet Networks](./research/generalized_packet_networks.md)** (v0.3, 2026-05) — the cross-domain framework; heterogeneous packets, resource occupancy, congestion elasticity, packet decay, cache hierarchies, backbone/last-mile decomposition, mesh resilience. EPN, PGN, IPN, Thermal Packets are instances of this.
-- **[The Unconscious Grid](./UNCONSCIOUS_GRID.md)** — founding EPN paper.
-- **[DC-Native Energy Packet Networks](./dc_native_epn.md)** — DC architecture, 48V node design.
-- **[Packetized Gravity Networks](./PGN.md)** — hydraulic exergy, IEV nodes, gravity as territorial memory, Corsica case study.
+- **[The Unconscious Grid](./research/UNCONSCIOUS_GRID.md)** — founding EPN paper.
+- **[DC-Native Energy Packet Networks](./research/dc_native_epn.md)** — DC architecture, 48V node design.
+- **[Packetized Gravity Networks](./research/PGN.md)** — hydraulic exergy, IEV nodes, gravity as territorial memory, Corsica case study.
 - **[Thermal Packet Networks](./research/thermal_packet_networks.md)** (v0.2, 2026-05) — heat and cold as discrete thermal packets stored, transported, addressed, exchanged.
 - **[Inference Packet Networks](./research/inference_packet_network.md)** (v2.0, 2026-05) — packet logic applied to AI inference continuity.
 - **[Capability Regimes](./research/capability_regimes.md)** (v0.1-draft, 2026-06) — graded operating regimes for Fractanet decisions under uncertainty, urgency, mandate, traceability and recovery constraints.
-- **[Mariani Village](./mariani_village.md)** — habitat packet, Dilorta, BLE tracking.
-- **[The Packet Transition: A Lateral Reading](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/packet_transition.md)** — phronèsis, amathia, transition taxonomy. *In FractaVolta.*
-- **[The Packet as Evolutionary Attractor](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/packet_attractor.md)** — complexity theory, open question. *In FractaVolta.*
-- **[DHITL](https://github.com/JeanHuguesRobert/marenostrum/blob/main/DHITL.md)** — Democratic Humans in the Loop. *In MareNostrum.*
+- **[Mariani Village](./research/mariani_village.md)** — habitat packet, Dilorta, BLE tracking.
+- **[The Packet Transition: A Lateral Reading](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/packet_transition.md)** — phronèsis, amathia, transition taxonomy. *In FractaVolta.*
+- **[The Packet as Evolutionary Attractor](https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/packet_attractor.md)** — complexity theory, open question. *In FractaVolta.*
+- **[DHITL](https://github.com/JeanHuguesRobert/marenostrum/blob/main/research/DHITL.md)** — Democratic Humans in the Loop. *In MareNostrum.*
 - **[Agent-Resumable CLI](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/agent_resumable_cli.md)** — continuation protocol, externalized judgment. *In Cogentia.*
 - **[The COP Manifesto](https://github.com/JeanHuguesRobert/inseme/blob/main/packages/cop-core/Manifesto.md)** — TCP/IP for intelligences. *In inseme.*
 - **[Discours de la seconde méthode](https://github.com/JeanHuguesRobert/barons-Mariani/blob/main/research/second_method.md)** — methodological foundation of the corpus. *In barons-Mariani.*

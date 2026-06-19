@@ -8,6 +8,14 @@ status: "published"
 corpus_role: "source"
 keywords: "FractaVolta, C.O.R.S.I.C.A., Institut Mariani, Fractanet, séparation institutionnelle"
 summary: "Note de clarification institutionnelle sur les liens documentaires entre FractaVolta, C.O.R.S.I.C.A. et l’Institut Mariani."
+document_role: "source"
+document_kind: "research-paper"
+visibility: "public"
+lifecycle_state: "stable"
+classification_source: "cogentia.js"
+classification_version: "1"
+classification_rule: "research-paper"
+classification_confidence: "medium"
 ---
 # Lien avec C.O.R.S.I.C.A. et l’Institut Mariani
 
@@ -55,6 +63,8 @@ Ils ne valent ni fusion institutionnelle, ni exploitation commerciale par C.O.R.
 ### Backlinks
 
 *These documents link to this file:*
+- [Contexte institutionnel](../docs/fr/contexte-institutionnel.md)
+- [Institutional context](../docs/institutional-context.md)
 - [Lien avec C.O.R.S.I.C.A. et l’Institut Mariani](../acorsica-institut-mariani.md)
 - [Research Index — FractaVolta](index.md)
 - [C.O.R.S.I.C.A., Institut Mariani et corpus personnel](https://github.com/JeanHuguesRobert/JeanHuguesRobert/blob/main/research/acorsica-et-corpus.md)

@@ -48,6 +48,14 @@ tags:
   - fallback
 human_validation_required: true
 review_status: "initial ChatGPT-assisted draft produced from conversation on 2026-06-15; human validation remains required"
+document_role: "source"
+document_kind: "research-paper"
+visibility: "public"
+lifecycle_state: "working"
+classification_source: "cogentia.js"
+classification_version: "1"
+classification_rule: "research-paper"
+classification_confidence: "medium"
 ---
 
 # Capability Regimes

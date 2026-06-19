@@ -67,9 +67,9 @@ graph LR
   r_kudos["Kudos"]
   r_github[".github"]
   r_acorsica_org["acorsica.org"]
-  r_jeanhuguesrobert -->|166| r_barons_mariani
-  r_jeanhuguesrobert -->|100| r_cogentia
+  r_jeanhuguesrobert -->|165| r_barons_mariani
   r_cogentia -->|98| r_barons_mariani
+  r_jeanhuguesrobert -->|96| r_cogentia
   r_barons_mariani -->|62| r_cogentia
   r_jeanhuguesrobert -->|45| r_marenostrum
   r_fractavolta -->|41| r_cogentia
@@ -121,6 +121,7 @@ graph LR
   r_institut_mariani -->|2| r_barons_mariani
   r_institut_mariani -->|2| r_fractavolta
   r_jeanhuguesrobert -->|2| r_github
+  r_jeanhuguesrobert -->|2| r_acorsica_org
   r_marenostrum -->|2| r_jeanhuguesrobert
   r_marenostrum -->|2| r_inseme
   r_marenostrum -->|2| r_inox
@@ -517,21 +518,21 @@ graph LR
 | Title | Location | Date |
 |---|---|---|
 | [Lien avec C.O.R.S.I.C.A. et l’Institut Mariani](acorsica-institut-mariani.md) *(institutional boundary note — documentary link without institutional confusion)* | this repo | 2026-06-03 |
-| [Packetized Gravity Networks](../PGN.md) | this repo | 2026-05-08 |
-| [The Packet as Evolutionary Attractor — Scale-Invariant Transitions in Complex Networks](../packet_attractor.md) | this repo | 2026-05-08 |
-| [The Packet Transition — A Lateral Reading of Circuit Networks](../packet_transition.md) | this repo | 2026-05-08 |
+| [Packetized Gravity Networks](PGN.md) | this repo | 2026-05-08 |
+| [The Packet as Evolutionary Attractor — Scale-Invariant Transitions in Complex Networks](packet_attractor.md) | this repo | 2026-05-08 |
+| [The Packet Transition — A Lateral Reading of Circuit Networks](packet_transition.md) | this repo | 2026-05-08 |
 | [Inference Packet Networks — A RAID/ARPANET Continuity Layer for Sovereign AI Infrastructure](inference_packet_network.md) | this repo | 2026-05-14 |
 | [Guaranteed Inference — A Resilient, Routable and Traceable Fallback Layer for Critical AI Workloads](garanteed_inference.md) *(working paper v0.3-market)* | this repo | 2026-05-18 |
-| [DC-Native Energy Packet Networks](../dc_native_epn.md) | this repo | 2026 |
-| [Electricity in Containers — Store-and-Forward Energy Logistics](../electricity_in_containers.md) | this repo | 2026-05-06 |
-| [The Unconscious Grid — Store-and-Forward as the Repressed Solution](../UNCONSCIOUS_GRID.md) *(entry point for the packetization corpus ; §8 extends the diagnosis from energy to cognition, sociability, money, and territory)* | this repo | 2026-05-21 |
-| [Le Réseau Inconscient — De la commutation *store-and-forward* comme solution refoulée (FR)](../LE_RESEAU_INCONSCIENT.md) *(version française sémantiquement identique à [`UNCONSCIOUS_GRID.md`](../UNCONSCIOUS_GRID.md))* | this repo | 2026-05-21 |
-| [Value-Shaped Solar and Containerized Compute](../value_shaped_solar_and_containerized_compute.md) | this repo | 2026-05-06 |
-| [Mariani Village — A Relocatable DC-Native Housing Fleet](../mariani_village.md) | this repo | 2026-05-08 |
-| [FractaTera — Fractal Terrestrial Awareness Network](../tera.md) | this repo | 2026-05-06 |
-| [Fractal Architectures for Traceable Governance](../traceable_governance.md) | this repo | 2026 |
-| [FractaVolta White Paper](../fractavolta_paper.md) | this repo | 2026 |
-| [FractaVolta Partner Brief — Agrivoltaics Pilot Opportunity](../partner_brief.md) | this repo | 2026-05-06 |
+| [DC-Native Energy Packet Networks](dc_native_epn.md) | this repo | 2026 |
+| [Electricity in Containers — Store-and-Forward Energy Logistics](electricity_in_containers.md) | this repo | 2026-05-06 |
+| [The Unconscious Grid — Store-and-Forward as the Repressed Solution](UNCONSCIOUS_GRID.md) *(entry point for the packetization corpus ; §8 extends the diagnosis from energy to cognition, sociability, money, and territory)* | this repo | 2026-05-21 |
+| [Le Réseau Inconscient — De la commutation *store-and-forward* comme solution refoulée (FR)](LE_RESEAU_INCONSCIENT.md) *(version française sémantiquement identique à [`UNCONSCIOUS_GRID.md`](UNCONSCIOUS_GRID.md))* | this repo | 2026-05-21 |
+| [Value-Shaped Solar and Containerized Compute](value_shaped_solar_and_containerized_compute.md) | this repo | 2026-05-06 |
+| [Mariani Village — A Relocatable DC-Native Housing Fleet](mariani_village.md) | this repo | 2026-05-08 |
+| [FractaTera — Fractal Terrestrial Awareness Network](tera.md) | this repo | 2026-05-06 |
+| [Fractal Architectures for Traceable Governance](traceable_governance.md) | this repo | 2026 |
+| [FractaVolta White Paper](fractavolta_paper.md) | this repo | 2026 |
+| [FractaVolta Partner Brief — Agrivoltaics Pilot Opportunity](partner_brief.md) | this repo | 2026-05-06 |
 | [Generalized Packet Networks — A Framework for Heterogeneous Packets, Resource Occupancy, and Cross-Domain Operational Recurrence](generalized_packet_networks.md) *(working paper v0.3 — the cross-domain abstraction that EPN, PGN, IPN, Thermal Packets all instantiate)* | this repo | 2026-05-22 |
 | [Thermal Packet Networks — A Multi-Scale Store-and-Forward Architecture for Low-Exergy Heat and Cold Distribution](thermal_packet_networks.md) *(working paper v0.2)* | this repo | 2026-05-22 |
 | [Packet Paper Template — A Minimal Method for Declining Generalized Packet Networks into Substrate-Specific Papers](packet_paper_template.md) *(method-template working paper v0.2)* | this repo | 2026-05-22 |
@@ -550,13 +551,13 @@ graph LR
 
 | Claim | Status | Evidence |
 |---|---|---|
-| Gravity as territorial memory (PGN framework) | ✅ Documented | [PGN.md](../PGN.md) |
-| Hydraulic CXU extends MareNostrum exergy chain | ✅ Documented | [PGN.md](../PGN.md) § Hydraulic CXU |
-| IEV node model (turbine + pump + control + comms) | ✅ Documented | [PGN.md](../PGN.md) § IEV Architecture |
-| Corsica as PGN case study | ✅ Documented | [PGN.md](../PGN.md) § Corsica |
-| Packet-as-evolutionary-attractor framework | ✅ Documented | [packet_attractor.md](../packet_attractor.md) |
-| Store-and-forward as repressed energy-sovereignty solution | ✅ Documented | [UNCONSCIOUS_GRID.md](../UNCONSCIOUS_GRID.md), [electricity_in_containers.md](../electricity_in_containers.md) |
-| Value-shaped solar + containerized compute | ✅ Documented | [value_shaped_solar_and_containerized_compute.md](../value_shaped_solar_and_containerized_compute.md) |
+| Gravity as territorial memory (PGN framework) | ✅ Documented | [PGN.md](PGN.md) |
+| Hydraulic CXU extends MareNostrum exergy chain | ✅ Documented | [PGN.md](PGN.md) § Hydraulic CXU |
+| IEV node model (turbine + pump + control + comms) | ✅ Documented | [PGN.md](PGN.md) § IEV Architecture |
+| Corsica as PGN case study | ✅ Documented | [PGN.md](PGN.md) § Corsica |
+| Packet-as-evolutionary-attractor framework | ✅ Documented | [packet_attractor.md](packet_attractor.md) |
+| Store-and-forward as repressed energy-sovereignty solution | ✅ Documented | [UNCONSCIOUS_GRID.md](UNCONSCIOUS_GRID.md), [electricity_in_containers.md](electricity_in_containers.md) |
+| Value-shaped solar + containerized compute | ✅ Documented | [value_shaped_solar_and_containerized_compute.md](value_shaped_solar_and_containerized_compute.md) |
 | IEV prototype deployed | ❌ Not yet | Hardware V0 pending |
 | Tavignano valley pilot operational | ❌ Not yet | Site identified, not built |
 

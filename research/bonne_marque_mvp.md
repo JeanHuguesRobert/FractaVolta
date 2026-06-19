@@ -29,6 +29,14 @@ related_projects:
   - "Ubikia"
   - "FractaVolta"
 canonical_url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/bonne_marque_mvp.md
+document_role: "source"
+document_kind: "concept-note"
+visibility: "public"
+lifecycle_state: "active"
+classification_source: "cogentia.js"
+classification_version: "1"
+classification_rule: "concept-note"
+classification_confidence: "medium"
 ---
 
 # Bonne Marque

@@ -47,6 +47,14 @@ x-keywords:
   - FractaVolta
   - Mariani Village
   - Seconde méthode
+document_role: "source"
+document_kind: "research-paper"
+visibility: "public"
+lifecycle_state: "working"
+classification_source: "cogentia.js"
+classification_version: "1"
+classification_rule: "research-paper"
+classification_confidence: "medium"
 ---
 
 # Thermal Packet Networks
@@ -817,7 +825,7 @@ Whether TPN is a useful architecture will be determined by deployment, measureme
 
 [10] L. A. Duffaut Espinosa, M. Almassalkhi, P. Hines, and J. Frolik, "System properties of Packetized Energy Management for aggregated diverse resources," *Power Systems Computation Conference*.
 
-[11] J. H. N. Robert, *Packetized Gravity Networks: Distributed Hydro-Energetic Infrastructure for Resilient Renewable Integration*, FractaVolta working paper, 2026. `github.com/JeanHuguesRobert/FractaVolta/blob/main/PGN.md`.
+[11] J. H. N. Robert, *Packetized Gravity Networks: Distributed Hydro-Energetic Infrastructure for Resilient Renewable Integration*, FractaVolta working paper, 2026. `github.com/JeanHuguesRobert/FractaVolta/blob/main/research/PGN.md`.
 
 [12] J. H. N. Robert, *Discours de la seconde méthode*, Institut Mariani, 2026. `github.com/JeanHuguesRobert/barons-Mariani`.
 
@@ -841,11 +849,11 @@ Whether TPN is a useful architecture will be determined by deployment, measureme
 
 [22] J. L. Hennessy and D. A. Patterson, *Computer Architecture: A Quantitative Approach*, 6th ed., Morgan Kaufmann, 2017, esp. Chapters 2 and 5.
 
-[23] J. H. N. Robert, *CXU Specification: The Compute eXergy Unit*, MareNostrum repository, 2026. `github.com/JeanHuguesRobert/marenostrum/blob/main/CXU_SPEC.md`.
+[23] J. H. N. Robert, *CXU Specification: The Compute eXergy Unit*, MareNostrum repository, 2026. `github.com/JeanHuguesRobert/marenostrum/blob/main/research/CXU_SPEC.md`.
 
 [24] J. H. N. Robert, *Cognitive Packets: A Minimal Continuation Payload for Human–AI and Multi-Agent Cooperation*, Institut Mariani working paper, 2026.
 
-[25] J. H. N. Robert, *The Packet Transition: A Lateral Reading of Circuit Networks*, FractaVolta working paper, 2026. `github.com/JeanHuguesRobert/FractaVolta/blob/main/packet_transition.md`.
+[25] J. H. N. Robert, *The Packet Transition: A Lateral Reading of Circuit Networks*, FractaVolta working paper, 2026. `github.com/JeanHuguesRobert/FractaVolta/blob/main/research/packet_transition.md`.
 
 ---
 
