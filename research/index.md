@@ -51,6 +51,7 @@ This repository instantiates the **physical infrastructure layer** of the [DHITL
 | [FractaTera — Fractal Terrestrial Awareness Network](tera.md) | this repo | 2026-05-06 |
 | [Fractal Architectures for Traceable Governance](traceable_governance.md) | this repo | 2026 |
 | [FractaVolta White Paper](fractavolta_paper.md) | this repo | 2026 |
+| [FractaVolta Seconde Vie — Corse](fractavolta_seconde_vie_corse.md) *(source note — Corse photovoltaic second life, territorial value capture, and pilot framing)* | this repo | 2026-06-20 |
 | [FractaVolta Partner Brief — Agrivoltaics Pilot Opportunity](partner_brief.md) | this repo | 2026-05-06 |
 | [Generalized Packet Networks — A Framework for Heterogeneous Packets, Resource Occupancy, and Cross-Domain Operational Recurrence](generalized_packet_networks.md) *(working paper v0.3 — the cross-domain abstraction that EPN, PGN, IPN, Thermal Packets all instantiate)* | this repo | 2026-05-22 |
 | [Thermal Packet Networks — A Multi-Scale Store-and-Forward Architecture for Low-Exergy Heat and Cold Distribution](thermal_packet_networks.md) *(working paper v0.2)* | this repo | 2026-05-22 |
