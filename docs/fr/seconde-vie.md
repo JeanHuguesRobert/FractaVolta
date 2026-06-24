@@ -86,6 +86,16 @@ FractaVolta ne remplace pas les installateurs certifiés, les bureaux de contrô
 
 La logique est partenariale : FractaVolta organise le modèle, les partenaires qualifiés sécurisent les opérations techniques.
 
+## Augmentation logistique
+
+Certaines installations solaires en seconde vie peuvent devenir des nœuds de mobilité et de logistique locale.
+
+Lorsque l’accès, la sécurité et le profil de production le permettent, FractaVolta peut étudier l’ajout de recharge pour véhicules électriques, de stockage stationnaire ou mobile, et d’une boucle de collecte / livraison / mobilité flexible.
+
+L’objectif n’est pas seulement de produire un kWh moins cher. L’objectif est de transformer ce kWh en capacité utile : livraison, collecte, transport de personnes, froid, eau, secours, ou recharge de véhicules professionnels.
+
+Le propriétaire n’a pas à devenir énergéticien, logisticien ou opérateur de recharge. FractaVolta organise le modèle avec des partenaires qualifiés, des contrats réversibles et une traçabilité des flux.
+
 ## Suite utile
 
 - Voir les [marchés locaux](./marches).
