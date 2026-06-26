@@ -64,6 +64,19 @@ FractaVolta uses Cogentia as its open cognitive layer:
 
 The result is not a folder of retrospective PDFs. It is a working, versioned, inspectable corpus of decisions.
 
+### AI-assisted R&D traceability
+
+For partners using AI in research, invention, design, engineering, creative work, or institutional decision-making, FractaVolta can deploy Cogentia private or restricted modes for:
+
+- governed private corpora;
+- AI-assisted exploration with preserved objections and failed branches;
+- Human Contribution Views;
+- prior-art and adverse-review loops;
+- patent, trade-secret, defensive-publication, public-source, suspension, or abandonment routing;
+- KYS-compatible contribution disclosure under future PrivaAI governance.
+
+This service does not sell automatic invention or AI authorship. It preserves the human contribution and the responsibility chain inside AI-assisted work. See [Cogentia R&D Traceability](./cogentia-rd-traceability).
+
 ### Civic continuity
 
 For partners who need a civic layer, FractaVolta can integrate or operate the Inseme stack:
@@ -107,6 +120,7 @@ FractaVolta is especially relevant for:
 - campuses and student housing;
 - municipalities and local authorities;
 - industrial or tourist sites with energy autonomy needs;
+- companies, laboratories, and institutions using AI in R&D or decision-making;
 - institutions seeking deliberation tools without vendor lock-in;
 - partners working on Mediterranean energy, compute, and civic sovereignty.
 
