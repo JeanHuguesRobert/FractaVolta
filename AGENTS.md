@@ -1,6 +1,6 @@
 ---
 canonical_url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/AGENTS.md
-last_stamped_at: 2026-06-13
+last_stamped_at: 2026-06-26
 document_role: "operational"
 document_kind: "agent-mandate"
 visibility: "public"
@@ -60,7 +60,18 @@ The corpus remains the source of truth.
 Human authorization governs stabilization.
 ```
 
-Reference: [`cogentia/research/agent_configuration_layer.md`](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/agent_configuration_layer.md).
+References:
+
+- [`cogentia/research/agent_configuration_layer.md`](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/agent_configuration_layer.md)
+- [`cogentia/research/optimistic_mainline_governance.md`](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/optimistic_mainline_governance.md)
+
+## Direct-main rule
+
+This repository follows **Optimistic Mainline Governance** by reference, not by copying the doctrine here.
+
+Small direct commits to `main` are acceptable when explicitly authorized, scoped, reversible, inspectable by diff, and reported after completion.
+
+Because this repository may contain technical, operational, economic and strategic claims, direct-main work must not overstate maturity, partnerships, financing, feasibility, regulatory status or production readiness. Code or configuration changes require available checks, or an explicit report of missing checks and residual risk.
 
 ## Technical discipline
 
@@ -113,6 +124,7 @@ Assumptions:
 Calculations or checks run:
 Facts still to verify:
 Known risks:
+Reversibility:
 Next step:
 Human validation needed: yes/no
 ```
