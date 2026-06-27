@@ -367,5 +367,4 @@ https://bitcoin.org/bitcoin.pdf
 - [Research Index — FractaVolta](index.md)
 - [The Packet Transition — moved](../packet_transition.md)
 - [The Unconscious Grid](UNCONSCIOUS_GRID.md)
-- [Documents - All Tracked Repos](https://github.com/JeanHuguesRobert/JeanHuguesRobert/blob/main/research/documents.md)
 <!-- END_AUTO: backlinks -->

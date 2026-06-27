@@ -111,7 +111,6 @@ This repository instantiates the **physical infrastructure layer** of the [DHITL
 *These documents link to this file:*
 - [Research Index — barons-Mariani](https://github.com/JeanHuguesRobert/barons-Mariani/blob/main/research/index.md)
 - [Research Index — Cogentia](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/index.md)
-- [Corpus Status — FractaVolta](corpus-status.md)
 - [Fractanet — Generalized Control Planes for Heterogeneous Packet Networks](fractanet.md)
 - [FractaVolta](../README.md)
 - [Research Index — Inox](https://github.com/JeanHuguesRobert/Inox/blob/master/research/index.md)

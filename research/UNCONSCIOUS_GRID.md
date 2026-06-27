@@ -417,7 +417,6 @@ The antifragility of the energy layer **propagates structurally** to the inferen
 *These documents link to this file:*
 - [Rendre capable — noyau doctrinal provisoire](https://github.com/JeanHuguesRobert/barons-Mariani/blob/main/research/noyau_doctrinal_rendre_capable.md)
 - [Concept Index — FractaVolta](concepts.md)
-- [Corpus Status — FractaVolta](corpus-status.md)
 - [Energy packets](../docs/energy-packets.md)
 - [For deployers](../docs/for-deployers.md)
 - [For researchers](../docs/for-researchers.md)
@@ -427,6 +426,5 @@ The antifragility of the energy layer **propagates structurally** to the inferen
 - [Concept Index — Inox](https://github.com/JeanHuguesRobert/Inox/blob/master/research/concepts.md)
 - [Research Index — Inox](https://github.com/JeanHuguesRobert/Inox/blob/master/research/index.md)
 - The Iɴᴏx programming language
-- [Documents - All Tracked Repos](https://github.com/JeanHuguesRobert/JeanHuguesRobert/blob/main/research/documents.md)
 - [Pacte anti-capture solaire et inférentielle](https://github.com/JeanHuguesRobert/marenostrum/blob/main/research/pacte_anti_capture_solaire_inferentielle.md)
 <!-- END_AUTO: backlinks -->

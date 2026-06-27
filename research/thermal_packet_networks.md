@@ -871,5 +871,4 @@ Whether TPN is a useful architecture will be determined by deployment, measureme
 - [Fractanet — Generalized Control Planes for Heterogeneous Packet Networks](fractanet.md)
 - [FractaVolta](../README.md)
 - [Research Index — FractaVolta](index.md)
-- [Documents - All Tracked Repos](https://github.com/JeanHuguesRobert/JeanHuguesRobert/blob/main/research/documents.md)
 <!-- END_AUTO: backlinks -->

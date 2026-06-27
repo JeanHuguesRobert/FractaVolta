@@ -262,7 +262,6 @@ https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/UNCONSCIOUS_G
 
 *These documents link to this file:*
 - [Concept Index — FractaVolta](concepts.md)
-- [Corpus Status — FractaVolta](corpus-status.md)
 - [For researchers](../docs/for-researchers.md)
 - [FractaVolta](../README.md)
 - [Le Réseau Inconscient](LE_RESEAU_INCONSCIENT.md)
@@ -270,5 +269,4 @@ https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/UNCONSCIOUS_G
 - [Research Index — FractaVolta](index.md)
 - [The Packet as Evolutionary Attractor — moved](../packet_attractor.md)
 - [The Unconscious Grid](UNCONSCIOUS_GRID.md)
-- [Documents - All Tracked Repos](https://github.com/JeanHuguesRobert/JeanHuguesRobert/blob/main/research/documents.md)
 <!-- END_AUTO: backlinks -->

@@ -235,11 +235,9 @@ The core logistical claim — that terrestrial delivery of containerized electri
 
 *These documents link to this file:*
 - [Concept Index — FractaVolta](concepts.md)
-- [Corpus Status — FractaVolta](corpus-status.md)
 - [Electricity in Containers — moved](../electricity_in_containers.md)
 - [FractaVolta](../README.md)
 - [Research Index — FractaVolta](index.md)
 - [Value-Shaped Solar and Containerized Compute](value_shaped_solar_and_containerized_compute.md)
 - [VIGILIA — alias FractaVolta](../vigilia.md)
-- [Documents - All Tracked Repos](https://github.com/JeanHuguesRobert/JeanHuguesRobert/blob/main/research/documents.md)
 <!-- END_AUTO: backlinks -->

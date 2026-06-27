@@ -426,5 +426,4 @@ L'antifragilité de la couche énergétique **se propage structurellement** à l
 - [FractaVolta en Corse](../docs/fr/index.md)
 - [Le Reseau Inconscient — moved](../LE_RESEAU_INCONSCIENT.md)
 - [Research Index — FractaVolta](index.md)
-- [Documents - All Tracked Repos](https://github.com/JeanHuguesRobert/JeanHuguesRobert/blob/main/research/documents.md)
 <!-- END_AUTO: backlinks -->

@@ -205,5 +205,4 @@ The principle: **replace constraint with awareness**. A system that makes risk v
 - [FractaVolta](../README.md)
 - [Research Index — FractaVolta](index.md)
 - [VIGILIA — alias FractaVolta](../vigilia.md)
-- [Documents - All Tracked Repos](https://github.com/JeanHuguesRobert/JeanHuguesRobert/blob/main/research/documents.md)
 <!-- END_AUTO: backlinks -->

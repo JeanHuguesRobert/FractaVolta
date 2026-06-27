@@ -299,7 +299,6 @@ The review process is public, attributed, append-only. It is, in that sense, an 
 - [Fractal Architectures for Traceable Governance — moved](../traceable_governance.md)
 - [FractaTera](tera.md)
 - [Research Index — FractaVolta](index.md)
-- [Documents - All Tracked Repos](https://github.com/JeanHuguesRobert/JeanHuguesRobert/blob/main/research/documents.md)
 - [MareNostrum — Energy Availability Contracts](https://github.com/JeanHuguesRobert/marenostrum/blob/main/research/CONTRACTS.md)
 - [MareNostrum — Governance of the Energy System](https://github.com/JeanHuguesRobert/marenostrum/blob/main/research/GOVERNANCE.md)
 - [MareNostrum — System Architecture](https://github.com/JeanHuguesRobert/marenostrum/blob/main/research/ARCHITECTURE.md)

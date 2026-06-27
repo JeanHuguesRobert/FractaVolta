@@ -997,5 +997,4 @@ FractaVolta's space is the layer between the two:
 
 *These documents link to this file:*
 - [Research Index — FractaVolta](index.md)
-- [Documents - All Tracked Repos](https://github.com/JeanHuguesRobert/JeanHuguesRobert/blob/main/research/documents.md)
 <!-- END_AUTO: backlinks -->

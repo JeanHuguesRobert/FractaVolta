@@ -1065,5 +1065,4 @@ Whether GPN is a useful framework will be determined by deployment, measurement,
 - [FractaVolta](../README.md)
 - [Research Index — FractaVolta](index.md)
 - [Library packets — when the library is a specification, not code](https://github.com/JeanHuguesRobert/Inox/blob/master/research/library_packets.md)
-- [Documents - All Tracked Repos](https://github.com/JeanHuguesRobert/JeanHuguesRobert/blob/main/research/documents.md)
 <!-- END_AUTO: backlinks -->
