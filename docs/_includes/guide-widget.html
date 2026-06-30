@@ -1,0 +1,42 @@
+{% assign guide_endpoint = site.guide_endpoint | default: 'https://cogentia.fractavolta.com/guide/chat' %}
+{% assign guide_lang = page.lang | default: site.lang | default: 'en' %}
+<section class="guide-widget" data-guide-endpoint="{{ guide_endpoint }}" data-guide-locale="{{ guide_lang }}" aria-label="{% if guide_lang == 'fr' %}Guide public FractaVolta{% else %}Public FractaVolta Guide{% endif %}">
+  <button class="guide-widget__toggle" type="button" aria-expanded="false" aria-controls="fractavolta-guide-panel">
+    <span class="guide-widget__toggle-mark" aria-hidden="true">?</span>
+    <span>{% if guide_lang == 'fr' %}Guide{% else %}Guide{% endif %}</span>
+  </button>
+
+  <div class="guide-widget__panel" id="fractavolta-guide-panel" hidden>
+    <div class="guide-widget__head">
+      <div>
+        <h2 class="guide-widget__title">{% if guide_lang == 'fr' %}Guide public{% else %}Public Guide{% endif %}</h2>
+        <p class="guide-widget__note">{% if guide_lang == 'fr' %}Reponses fondees sur le corpus public.{% else %}Answers grounded in the public corpus.{% endif %}</p>
+      </div>
+      <button class="guide-widget__close" type="button" aria-label="{% if guide_lang == 'fr' %}Fermer le Guide{% else %}Close Guide{% endif %}">x</button>
+    </div>
+
+    <div class="guide-widget__prompts" aria-label="{% if guide_lang == 'fr' %}Questions suggerees{% else %}Suggested questions{% endif %}">
+      {% if guide_lang == 'fr' %}
+        <button type="button" data-guide-prompt="Qu'est-ce que FractaVolta ?">FractaVolta ?</button>
+        <button type="button" data-guide-prompt="Quel est le lien entre Cogentia et FractaVolta ?">Cogentia</button>
+        <button type="button" data-guide-prompt="Propose un parcours de lecture public en 10 minutes.">Lire 10 min</button>
+      {% else %}
+        <button type="button" data-guide-prompt="What is FractaVolta?">FractaVolta?</button>
+        <button type="button" data-guide-prompt="How does Cogentia relate to FractaVolta?">Cogentia</button>
+        <button type="button" data-guide-prompt="Give me a 10-minute public reading path.">10 min read</button>
+      {% endif %}
+    </div>
+
+    <div class="guide-widget__log" aria-live="polite"></div>
+
+    <form class="guide-widget__form">
+      <label class="guide-widget__label" for="fractavolta-guide-question">
+        {% if guide_lang == 'fr' %}Question{% else %}Question{% endif %}
+      </label>
+      <textarea id="fractavolta-guide-question" class="guide-widget__input" name="question" rows="3" maxlength="1200" required></textarea>
+      <button class="guide-widget__submit" type="submit">
+        {% if guide_lang == 'fr' %}Demander{% else %}Ask{% endif %}
+      </button>
+    </form>
+  </div>
+</section>

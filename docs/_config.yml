@@ -22,6 +22,7 @@ author:
   location: Corte, Corsica
 
 logo: /assets/jana.svg   # actual logo used on the site (header + favicon)
+guide_endpoint: https://cogentia.fractavolta.com/guide/chat
 
 social:
   name: FractaVolta

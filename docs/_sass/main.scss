@@ -474,3 +474,221 @@ th {
   border: $border-thin;
   padding: 0 0.35em;
 }
+
+// ---- 10. Public Guide ------------------------------------------------------
+
+.guide-widget {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 40;
+  font-size: 0.95rem;
+}
+
+.guide-widget__toggle,
+.guide-widget__close,
+.guide-widget__submit,
+.guide-widget__prompts button {
+  font: inherit;
+  color: $ink;
+  background: $bg;
+  border: $border;
+  cursor: pointer;
+}
+
+.guide-widget__toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.55rem 0.75rem;
+  font-weight: 700;
+  background: $yellow;
+}
+
+.guide-widget__toggle-mark {
+  display: inline-grid;
+  place-items: center;
+  width: 1.35rem;
+  height: 1.35rem;
+  border: $border;
+  background: $bg;
+}
+
+.guide-widget__panel {
+  position: absolute;
+  right: 0;
+  bottom: 3.25rem;
+  width: min(26rem, calc(100vw - 2rem));
+  max-height: min(40rem, calc(100vh - 6rem));
+  display: flex;
+  flex-direction: column;
+  background: $bg;
+  border: $border;
+}
+
+.guide-widget__panel[hidden] {
+  display: none;
+}
+
+.guide-widget__head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.8rem;
+  border-bottom: $border;
+  background: linear-gradient(90deg, $blue 0 1rem, $bg 1rem);
+}
+
+.guide-widget__title {
+  margin: 0;
+  padding-left: 1rem;
+  font-size: 1.05rem;
+  letter-spacing: 0;
+}
+
+.guide-widget__note {
+  margin: 0.15rem 0 0;
+  padding-left: 1rem;
+  color: $ink-soft;
+  font-size: 0.86rem;
+  line-height: 1.35;
+}
+
+.guide-widget__close {
+  flex: 0 0 auto;
+  width: 2rem;
+  height: 2rem;
+  font-weight: 700;
+  line-height: 1;
+  background: $bg-alt;
+}
+
+.guide-widget__prompts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  padding: 0.7rem 0.8rem;
+  border-bottom: $border-thin;
+}
+
+.guide-widget__prompts button {
+  padding: 0.25rem 0.45rem;
+  border-width: 1px;
+  background: $bg-alt;
+}
+
+.guide-widget__log {
+  min-height: 8rem;
+  max-height: 20rem;
+  overflow-y: auto;
+  padding: 0.8rem;
+}
+
+.guide-widget__message,
+.guide-widget__answer {
+  margin: 0 0 0.75rem;
+  padding: 0.65rem 0.75rem;
+  border: $border-thin;
+  background: $bg-alt;
+  line-height: 1.4;
+}
+
+.guide-widget__message--user {
+  border-left: 0.5rem solid $blue;
+}
+
+.guide-widget__message--status {
+  color: $ink-soft;
+}
+
+.guide-widget__message--error,
+.guide-widget__warning {
+  border-color: $red;
+  color: $red;
+}
+
+.guide-widget__answer {
+  border-left: 0.5rem solid $yellow;
+  background: $bg;
+}
+
+.guide-widget__answer-text {
+  white-space: pre-wrap;
+  margin: 0 0 0.75rem;
+}
+
+.guide-widget__sources-title {
+  margin: 0 0 0.35rem;
+  font-size: 0.95rem;
+  letter-spacing: 0;
+}
+
+.guide-widget__sources {
+  margin: 0;
+  padding-left: 1.25rem;
+  font-size: 0.82rem;
+  line-height: 1.35;
+}
+
+.guide-widget__sources span {
+  display: block;
+  color: $ink-soft;
+  font-family: $font-mono;
+  overflow-wrap: anywhere;
+}
+
+.guide-widget__warning {
+  margin: 0.75rem 0 0;
+  font-size: 0.86rem;
+}
+
+.guide-widget__form {
+  display: grid;
+  gap: 0.45rem;
+  padding: 0.8rem;
+  border-top: $border;
+  background: $bg;
+}
+
+.guide-widget__label {
+  font-weight: 700;
+  font-size: 0.86rem;
+}
+
+.guide-widget__input {
+  width: 100%;
+  min-height: 5rem;
+  resize: vertical;
+  font: inherit;
+  color: $ink;
+  background: $bg-alt;
+  border: $border;
+  padding: 0.55rem;
+}
+
+.guide-widget__submit {
+  justify-self: end;
+  padding: 0.45rem 0.7rem;
+  font-weight: 700;
+  background: $yellow;
+}
+
+.guide-widget__submit:disabled {
+  cursor: progress;
+  background: $bg-alt;
+  color: $ink-soft;
+}
+
+@media (max-width: 560px) {
+  .guide-widget {
+    right: 0.75rem;
+    bottom: 0.75rem;
+  }
+
+  .guide-widget__panel {
+    right: -0.25rem;
+    bottom: 3rem;
+    max-height: calc(100vh - 5rem);
+  }
+}
