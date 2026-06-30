@@ -602,6 +602,50 @@ th {
   color: $ink-soft;
 }
 
+.guide-widget__progress {
+  margin: 0 0 0.75rem;
+  padding: 0.65rem 0.75rem;
+  border: $border-thin;
+  border-left: 0.5rem solid $blue;
+  background: $bg-alt;
+  line-height: 1.35;
+}
+
+.guide-widget__progress-head {
+  font-weight: 700;
+  margin: 0 0 0.25rem;
+}
+
+.guide-widget__progress-status {
+  margin: 0;
+  color: $ink-soft;
+  font-size: 0.86rem;
+}
+
+.guide-widget__progress-list {
+  margin: 0.5rem 0 0;
+  padding-left: 1.1rem;
+  color: $ink-soft;
+  font-size: 0.8rem;
+}
+
+.guide-widget__progress-step {
+  margin: 0.2rem 0;
+  overflow-wrap: anywhere;
+}
+
+.guide-widget__progress-step--done {
+  color: $ink;
+}
+
+.guide-widget__progress-step--muted {
+  color: $ink-soft;
+}
+
+.guide-widget__progress--error {
+  border-color: $red;
+}
+
 .guide-widget__message--error,
 .guide-widget__warning {
   border-color: $red;

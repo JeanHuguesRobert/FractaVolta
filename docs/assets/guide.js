@@ -40,6 +40,91 @@
       return block;
     }
 
+    function addProgress() {
+      var block = document.createElement("section");
+      block.className = "guide-widget__progress";
+
+      var head = document.createElement("div");
+      head.className = "guide-widget__progress-head";
+      head.textContent = text("Working on it", "Traitement en cours");
+      block.appendChild(head);
+
+      var status = document.createElement("p");
+      status.className = "guide-widget__progress-status";
+      status.textContent = text("Looking in the public corpus...", "Recherche dans le corpus public...");
+      block.appendChild(status);
+
+      var list = document.createElement("ol");
+      list.className = "guide-widget__progress-list";
+      block.appendChild(list);
+
+      log.appendChild(block);
+      log.scrollTop = log.scrollHeight;
+
+      return {
+        root: block,
+        head: head,
+        status: status,
+        list: list,
+        steps: {},
+        remove: function () { block.remove(); },
+      };
+    }
+
+    function updateProgress(progress, event) {
+      if (!progress || !event || !event.data) return;
+      var data = event.data;
+      if (data.message) progress.status.textContent = data.message;
+
+      if (event.name === "guide_plan") {
+        progress.head.textContent = text("Plan ready", "Plan pret");
+        setProgressStep(progress, "plan", text("Prepared public corpus searches", "Recherches publiques preparees"), "done");
+      } else if (event.name === "guide_retrieval_query") {
+        var query = data.query || text("Corpus query", "Recherche corpus");
+        var count = typeof data.count === "number" ? data.count : 0;
+        setProgressStep(
+          progress,
+          "query:" + query,
+          text("Found " + count + " source(s): ", count + " source(s) trouvee(s) : ") + shorten(query, 54),
+          count > 0 ? "done" : "muted"
+        );
+      } else if (event.name === "guide_retrieval") {
+        setProgressStep(
+          progress,
+          "retrieval",
+          text("Selected " + (data.source_count || 0) + " public source(s)", (data.source_count || 0) + " source(s) publique(s) selectionnee(s)"),
+          "done"
+        );
+      } else if (event.name === "guide_answer") {
+        progress.head.textContent = text("Answer ready", "Reponse prete");
+        progress.status.textContent = text("Answer prepared from public sources.", "Reponse preparee a partir des sources publiques.");
+        setProgressStep(progress, "answer", text("Prepared the answer", "Reponse preparee"), "done");
+      } else if (event.name === "guide_error") {
+        progress.head.textContent = text("Guide unavailable", "Guide indisponible");
+        progress.status.textContent = data.message || text("The Guide is unavailable.", "Le Guide est indisponible.");
+        progress.root.classList.add("guide-widget__progress--error");
+      }
+
+      log.scrollTop = log.scrollHeight;
+    }
+
+    function setProgressStep(progress, key, label, state) {
+      var item = progress.steps[key];
+      if (!item) {
+        item = document.createElement("li");
+        progress.steps[key] = item;
+        progress.list.appendChild(item);
+      }
+      item.className = "guide-widget__progress-step guide-widget__progress-step--" + (state || "active");
+      item.textContent = label;
+    }
+
+    function shorten(value, max) {
+      var clean = String(value || "").replace(/\s+/g, " ").trim();
+      if (clean.length <= max) return clean;
+      return clean.slice(0, Math.max(1, max - 1)).trim() + "...";
+    }
+
     function addAnswer(data) {
       var block = document.createElement("article");
       block.className = "guide-widget__answer";
@@ -91,7 +176,7 @@
 
     async function ask(question) {
       addMessage("user", question);
-      var pending = addMessage("status", text("Looking in the public corpus...", "Recherche dans le corpus public..."));
+      var pending = addProgress();
       submit.disabled = true;
       try {
         var response = await fetch(endpoint, {
@@ -104,7 +189,6 @@
           body: JSON.stringify({ question: question, locale: locale, stream: true }),
         });
         var data = await readGuideResponse(response, pending);
-        pending.remove();
         if (!response.ok || !data || data.ok === false) {
           throw new Error((data && data.message) || text("The Guide is unavailable.", "Le Guide est indisponible."));
         }
@@ -120,6 +204,7 @@
     async function readGuideResponse(response, pending) {
       var contentType = response.headers.get("content-type") || "";
       if (contentType.indexOf("text/event-stream") === -1 || !response.body || !window.TextDecoder) {
+        pending.status.textContent = text("Reading the answer...", "Lecture de la reponse...");
         return response.json().catch(function () { return null; });
       }
       var reader = response.body.getReader();
@@ -136,10 +221,7 @@
         blocks.forEach(function (block) {
           var event = parseGuideEvent(block);
           if (!event) return;
-          if ((event.name === "guide_status" || event.name === "guide_plan" || event.name === "guide_retrieval" || event.name === "guide_retrieval_query") && event.data.message) {
-            pending.textContent = event.data.message;
-            log.scrollTop = log.scrollHeight;
-          }
+          updateProgress(pending, event);
           if (event.name === "guide_answer") answer = event.data;
           if (event.name === "guide_error") streamError = event.data;
         });
