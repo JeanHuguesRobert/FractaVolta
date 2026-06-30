@@ -2,7 +2,7 @@
 title: "Plan site — Guide chatbot FractaVolta"
 subtitle: "Roadmap agile pour un guide public du corpus FractaVolta/Cogentia"
 status: "implementation started"
-version: "0.2"
+version: "0.3"
 date: "2026-06-30"
 language: "fr"
 document_role: "operational"
@@ -22,12 +22,14 @@ related:
 Ajouter au site public `fractavolta.com` un **Guide** capable d'orienter les
 visiteurs dans le corpus public FractaVolta/Cogentia.
 
-Ce Guide n'est pas le jumeau numérique privé du propriétaire. C'est une face
-publique infant/child au sens du modèle de maturité Cogentia :
+Ce Guide est une **instance publique, immature et strictement limitee** du
+jumeau numerique du proprietaire. Il n'est pas le noyau prive du jumeau, et il
+ne parle pas avec toute l'autorite du proprietaire. C'est une face publique
+infant/child au sens du modele de maturite Cogentia :
 
 ```text
 autorisé : orienter, chercher, citer, expliquer, proposer une lecture
-interdit : agir, muter, publier, dépenser du quota, exposer du privé
+interdit : agir, muter, publier, depenser du quota hors politique, exposer du prive
 ```
 
 Le Guide doit aider un visiteur à comprendre :
@@ -56,6 +58,10 @@ publique gouvernee `POST /guide/chat`. Cette route reste cote serveur, utilise
 la vue publique Cogentia et peut appeler Magistral comme routeur d'intelligence
 sans exposer de cle API au navigateur.
 
+Mise a jour v0.3 : le Guide est decrit comme une instance publique du jumeau,
+pas comme un simple chatbot separe. Cette instance a son propre mandat, sa vue
+du corpus, sa maturite et son autorite.
+
 ## Contraintes de confiance
 
 Le Guide public :
@@ -76,6 +82,7 @@ Le Guide public :
 fractavolta.com
   -> widget Guide public
   -> endpoint public Cogentia /guide/chat
+  -> mandat d'instance public: infant, read-only, public corpus
   -> Cogentia Context Gateway sur Fracta
   -> index public du corpus
   -> Magistral local si synthese conversationnelle disponible
@@ -134,7 +141,7 @@ Acceptation :
 
 - ce plan existe ;
 - les frontières public/privé/action sont explicites ;
-- le Guide est défini comme face publique, pas comme jumeau privé ;
+- le Guide est defini comme instance publique du jumeau, pas comme noyau prive ;
 - les prompts de test sont listés.
 
 Statut : fait.
