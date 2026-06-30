@@ -97,10 +97,13 @@
         var response = await fetch(endpoint, {
           method: "POST",
           mode: "cors",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ question: question, locale: locale }),
+          headers: {
+            "Content-Type": "application/json",
+            "Accept": "text/event-stream, application/json",
+          },
+          body: JSON.stringify({ question: question, locale: locale, stream: true }),
         });
-        var data = await response.json().catch(function () { return null; });
+        var data = await readGuideResponse(response, pending);
         pending.remove();
         if (!response.ok || !data || data.ok === false) {
           throw new Error((data && data.message) || text("The Guide is unavailable.", "Le Guide est indisponible."));
@@ -111,6 +114,52 @@
         addMessage("error", error.message || text("The Guide is unavailable.", "Le Guide est indisponible."));
       } finally {
         submit.disabled = false;
+      }
+    }
+
+    async function readGuideResponse(response, pending) {
+      var contentType = response.headers.get("content-type") || "";
+      if (contentType.indexOf("text/event-stream") === -1 || !response.body || !window.TextDecoder) {
+        return response.json().catch(function () { return null; });
+      }
+      var reader = response.body.getReader();
+      var decoder = new TextDecoder();
+      var buffer = "";
+      var answer = null;
+      var streamError = null;
+      while (true) {
+        var part = await reader.read();
+        if (part.done) break;
+        buffer += decoder.decode(part.value, { stream: true });
+        var blocks = buffer.split("\n\n");
+        buffer = blocks.pop() || "";
+        blocks.forEach(function (block) {
+          var event = parseGuideEvent(block);
+          if (!event) return;
+          if ((event.name === "guide_status" || event.name === "guide_plan" || event.name === "guide_retrieval" || event.name === "guide_retrieval_query") && event.data.message) {
+            pending.textContent = event.data.message;
+            log.scrollTop = log.scrollHeight;
+          }
+          if (event.name === "guide_answer") answer = event.data;
+          if (event.name === "guide_error") streamError = event.data;
+        });
+      }
+      if (!answer && streamError) return streamError;
+      return answer;
+    }
+
+    function parseGuideEvent(block) {
+      var name = "message";
+      var data = [];
+      block.split(/\r?\n/).forEach(function (line) {
+        if (line.indexOf("event:") === 0) name = line.slice(6).trim();
+        if (line.indexOf("data:") === 0) data.push(line.slice(5).trim());
+      });
+      if (!data.length) return null;
+      try {
+        return { name: name, data: JSON.parse(data.join("\n")) };
+      } catch (error) {
+        return null;
       }
     }
 
