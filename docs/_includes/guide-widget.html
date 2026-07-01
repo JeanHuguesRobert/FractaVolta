@@ -1,6 +1,7 @@
 {% assign guide_endpoint = site.guide_endpoint | default: 'https://cogentia.fractavolta.com/guide/chat' %}
 {% assign guide_lang = page.lang | default: site.lang | default: 'en' %}
-<section class="guide-widget" data-guide-endpoint="{{ guide_endpoint }}" data-guide-locale="{{ guide_lang }}" aria-label="{% if guide_lang == 'fr' %}Guide public FractaVolta{% else %}Public FractaVolta Guide{% endif %}">
+{% assign guide_path = page.url | default: '/' %}
+<section class="guide-widget" data-guide-endpoint="{{ guide_endpoint }}" data-guide-locale="{{ guide_lang }}" data-guide-page-title="{{ page.title | default: site.title | escape }}" data-guide-page-path="{{ guide_path | escape }}" aria-label="{% if guide_lang == 'fr' %}Guide public FractaVolta{% else %}Public FractaVolta Guide{% endif %}">
   <button class="guide-widget__toggle" type="button" aria-expanded="false" aria-controls="fractavolta-guide-panel">
     <span class="guide-widget__toggle-mark" aria-hidden="true">?</span>
     <span>{% if guide_lang == 'fr' %}Guide{% else %}Guide{% endif %}</span>
@@ -25,13 +26,47 @@
 
     <div class="guide-widget__prompts" aria-label="{% if guide_lang == 'fr' %}Questions suggerees{% else %}Suggested questions{% endif %}">
       {% if guide_lang == 'fr' %}
-        <button type="button" data-guide-prompt="Explique FractaVolta en Corse a un proprietaire ou a une commune.">FractaVolta en Corse</button>
-        <button type="button" data-guide-prompt="Comment une ancienne installation solaire peut-elle avoir une seconde vie locale ?">Seconde vie solaire</button>
+        {% if guide_path contains '/collectivites' %}
+          <button type="button" data-guide-prompt="Explique comment une commune corse peut demarrer un pilote FractaVolta sobre et verifiable.">Pilote communal</button>
+          <button type="button" data-guide-prompt="Quels services publics locaux peuvent beneficier d'une capacite solaire stockee et tracable ?">Services critiques</button>
+        {% elsif guide_path contains '/agriculteurs' %}
+          <button type="button" data-guide-prompt="Explique FractaVolta a un agriculteur ou proprietaire corse qui possede un actif solaire.">Proprietaire agricole</button>
+          <button type="button" data-guide-prompt="Comment une ancienne installation solaire agricole peut-elle avoir une seconde vie locale ?">Seconde vie agricole</button>
+        {% elsif guide_path contains '/installateurs' %}
+          <button type="button" data-guide-prompt="Quel role peut jouer un installateur corse dans un projet FractaVolta Seconde Vie ?">Installateur local</button>
+          <button type="button" data-guide-prompt="Comment separer le travail technique certifie et l'operation territoriale FractaVolta ?">Partage des roles</button>
+        {% elsif guide_path contains '/marches' %}
+          <button type="button" data-guide-prompt="Quels marches locaux corses sont les plus naturels pour FractaVolta ?">Marches locaux</button>
+          <button type="button" data-guide-prompt="Ou la valeur solaire locale risque-t-elle d'etre captee ou diluee ?">Anti-capture</button>
+        {% elsif guide_path contains '/rossignol-node' %}
+          <button type="button" data-guide-prompt="Explique le Rossignol Node comme prototype FractaVolta minimal en Corse.">Rossignol Node</button>
+          <button type="button" data-guide-prompt="Que demontre un abreuvoir automatise sur l'energie-paquet ?">Preuve terrain</button>
+        {% else %}
+          <button type="button" data-guide-prompt="Explique FractaVolta en Corse a un proprietaire ou a une commune.">FractaVolta en Corse</button>
+          <button type="button" data-guide-prompt="Comment une ancienne installation solaire peut-elle avoir une seconde vie locale ?">Seconde vie solaire</button>
+        {% endif %}
         <button type="button" data-guide-prompt="Quels usages locaux peut-on alimenter avec des paquets d'energie ?">Usages locaux</button>
         <button type="button" data-guide-prompt="Propose un parcours de lecture public en 10 minutes sur FractaVolta en Corse.">Parcours 10 min</button>
       {% else %}
-        <button type="button" data-guide-prompt="Explain FractaVolta simply for a first-time visitor.">Understand FractaVolta</button>
-        <button type="button" data-guide-prompt="Why does FractaVolta talk about energy packets?">Energy packets</button>
+        {% if guide_path contains 'energy-packets' %}
+          <button type="button" data-guide-prompt="Explain energy packets from first principles, using only public FractaVolta sources.">Energy packets</button>
+          <button type="button" data-guide-prompt="How do energy packets connect electricity, compute, and local autonomy?">Energy + compute</button>
+        {% elsif guide_path contains 'for-partners' %}
+          <button type="button" data-guide-prompt="Explain the FractaVolta partner story in practical terms.">Partner story</button>
+          <button type="button" data-guide-prompt="What kind of partner should talk to FractaVolta first?">Partner fit</button>
+        {% elsif guide_path contains 'for-deployers' %}
+          <button type="button" data-guide-prompt="Give a deployer-oriented first path through the FractaVolta corpus.">Deploy path</button>
+          <button type="button" data-guide-prompt="What does local-first deployment mean for FractaVolta infrastructure?">Local-first</button>
+        {% elsif guide_path contains 'for-researchers' %}
+          <button type="button" data-guide-prompt="Give a research-oriented path through the public FractaVolta corpus.">Research path</button>
+          <button type="button" data-guide-prompt="Which public papers are central to the energy, compute, cognition, and civic stack?">Core papers</button>
+        {% elsif guide_path contains 'papers' %}
+          <button type="button" data-guide-prompt="Give a research-oriented path through the public FractaVolta corpus.">Research path</button>
+          <button type="button" data-guide-prompt="Which public papers are central to the energy, compute, cognition, and civic stack?">Core papers</button>
+        {% else %}
+          <button type="button" data-guide-prompt="Explain FractaVolta simply for a first-time visitor.">Understand FractaVolta</button>
+          <button type="button" data-guide-prompt="Why does FractaVolta talk about energy packets?">Energy packets</button>
+        {% endif %}
         <button type="button" data-guide-prompt="How do Cogentia, FractaVolta, and the public digital twin relate?">Cogentia + twin</button>
         <button type="button" data-guide-prompt="Give me a 10-minute public reading path.">10 min path</button>
       {% endif %}

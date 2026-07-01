@@ -192,6 +192,14 @@ et des suggestions de suivi apres chaque reponse. Ces suggestions restent
 simples et publiques : elles guident doucement le visiteur vers un prochain
 angle de lecture, sans pretendre personnaliser ou decider a sa place.
 
+Mise a jour v0.5 : les suggestions de depart tiennent compte de la page et de
+la langue. La version francaise reste orientee Corse, communes, agriculteurs,
+installateurs, marches locaux et prototypes terrain. La version anglaise guide
+plus directement vers les couches recherche, partenaires, deployeurs, papiers
+et jumeau public. Les suggestions de suivi utilisent aussi le sujet detecte et
+signalent explicitement quand une recherche web n'a pas apporte de resultat
+exploitable.
+
 ### Tranche 3 — Context packs et lignes citées
 
 Objectif : permettre au Guide de construire une réponse plus utile sans

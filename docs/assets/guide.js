@@ -22,6 +22,8 @@
     var input = root.querySelector(".guide-widget__input");
     var log = root.querySelector(".guide-widget__log");
     var submit = root.querySelector(".guide-widget__submit");
+    var pageTitle = root.getAttribute("data-guide-page-title") || "";
+    var pagePath = root.getAttribute("data-guide-page-path") || "";
     var memoryKey = "fractavolta.guide.v1." + locale;
     var memoryTtlMs = 7 * 24 * 60 * 60 * 1000;
     var maxMemoryEntries = 20;
@@ -115,6 +117,16 @@
           "retrieval",
           text("Selected " + (data.source_count || 0) + " public source(s)", (data.source_count || 0) + " source(s) publique(s) selectionnee(s)"),
           "done"
+        );
+      } else if (event.name === "guide_web_search") {
+        var webCount = Array.isArray(data.source_ids) ? data.source_ids.length : 0;
+        setProgressStep(
+          progress,
+          "web",
+          data.ok
+            ? text("Checked the web: " + webCount + " result(s)", "Recherche web : " + webCount + " resultat(s)")
+            : text("Web search did not add usable results", "La recherche web n'a pas ajoute de resultat exploitable"),
+          data.ok ? "done" : "muted"
         );
       } else if (event.name === "guide_answer") {
         progress.head.textContent = text("Answer ready", "Reponse prete");
@@ -346,32 +358,108 @@
     function guideSuggestions(data) {
       var question = String((data && data.question) || "").toLowerCase();
       var sourceCount = Array.isArray(data && data.sources) ? data.sources.length : 0;
+      var topic = guideTopic(question);
+      var webSearch = data && data.context && data.context.web_search;
       var suggestions = [];
+
+      if (topic === "collectivites") {
+        suggestions.push({
+          label: text("Show public services", "Services communaux"),
+          prompt: text(
+            "Which local public services could a FractaVolta pilot support first?",
+            "Quels services publics locaux une commune corse pourrait-elle soutenir en premier avec un pilote FractaVolta ?"
+          ),
+        });
+        suggestions.push({
+          label: text("Pilot checklist", "Checklist pilote"),
+          prompt: text(
+            "Give a cautious public checklist for a small FractaVolta municipal pilot.",
+            "Donne une checklist publique et prudente pour demarrer un petit pilote communal FractaVolta."
+          ),
+        });
+      } else if (topic === "agriculteurs") {
+        suggestions.push({
+          label: text("Owner value", "Valeur proprietaire"),
+          prompt: text(
+            "Explain the owner value proposition for a Corsican agricultural solar second-life site.",
+            "Explique la proposition de valeur pour un proprietaire agricole corse avec un site solaire en seconde vie."
+          ),
+        });
+      } else if (topic === "installateurs") {
+        suggestions.push({
+          label: text("Roles", "Roles"),
+          prompt: text(
+            "How should FractaVolta and local installers divide responsibilities?",
+            "Comment FractaVolta et les installateurs locaux devraient-ils partager les responsabilites ?"
+          ),
+        });
+      } else if (topic === "packets") {
+        suggestions.push({
+          label: text("Make it concrete", "Rendre concret"),
+          prompt: text(
+            "Give a concrete local example of energy packets in operation.",
+            "Donne un exemple local concret de paquets d'energie en fonctionnement."
+          ),
+        });
+      } else if (topic === "research") {
+        suggestions.push({
+          label: text("Core papers", "Textes centraux"),
+          prompt: text(
+            "Which public corpus documents should a researcher read first, and why?",
+            "Quels documents publics du corpus un chercheur devrait-il lire en premier, et pourquoi ?"
+          ),
+        });
+      } else if (topic === "partners") {
+        suggestions.push({
+          label: text("Partner fit", "Bon partenaire"),
+          prompt: text(
+            "What makes a good first FractaVolta partner?",
+            "Qu'est-ce qui fait un bon premier partenaire FractaVolta ?"
+          ),
+        });
+      } else if (topic === "cogentia") {
+        suggestions.push({
+          label: text("Traceability", "Tracabilite"),
+          prompt: text(
+            "How does Cogentia make the public FractaVolta story traceable?",
+            "Comment Cogentia rend-il l'histoire publique de FractaVolta tracable ?"
+          ),
+        });
+      }
 
       if (question.indexOf("cogentia") === -1 && question.indexOf("jumeau") === -1 && question.indexOf("twin") === -1) {
         suggestions.push({
-          label: text("Connect this to Cogentia", "Relier au corpus"),
+          label: text("Connect to Cogentia", "Relier a Cogentia"),
           prompt: text(
             "How does Cogentia help explain or operate this FractaVolta idea?",
             "Quel lien avec Cogentia, le corpus public et la methode de tracabilite ?"
           ),
         });
       }
-      if (question.indexOf("read") === -1 && question.indexOf("lecture") === -1 && sourceCount > 0) {
+      if (sourceCount > 0 && question.indexOf("read") === -1 && question.indexOf("lecture") === -1 && question.indexOf("parcours") === -1) {
         suggestions.push({
-          label: text("Give me a reading path", "Proposer un parcours"),
+          label: text("Reading path", "Parcours de lecture"),
           prompt: text(
             "Turn these sources into a 10-minute public reading path.",
             "Transforme ces sources en parcours de lecture public de 10 minutes pour comprendre FractaVolta en Corse."
           ),
         });
       }
-      if (question.indexOf("packet") === -1 && question.indexOf("paquet") === -1) {
+      if (question.indexOf("packet") === -1 && question.indexOf("paquet") === -1 && topic !== "packets") {
         suggestions.push({
-          label: text("Explain energy packets", "Expliquer les paquets"),
+          label: text("Energy packets", "Paquets d'energie"),
           prompt: text(
             "Why does FractaVolta use the packet idea for energy and compute?",
             "Pourquoi FractaVolta parle-t-il de paquets d'energie pour les usages locaux en Corse ?"
+          ),
+        });
+      }
+      if (webSearch && webSearch.attempted && !webSearch.ok) {
+        suggestions.push({
+          label: text("Corpus only", "Corpus seul"),
+          prompt: text(
+            "Answer again using only the public corpus, without relying on current web search.",
+            "Reponds a nouveau uniquement avec le corpus public, sans dependance a la recherche web actuelle."
           ),
         });
       }
@@ -384,6 +472,22 @@
       });
 
       return dedupeSuggestions(suggestions);
+    }
+
+    function guideTopic(question) {
+      var haystack = [pagePath, pageTitle, question].join(" ").toLowerCase();
+      if (/collectiv|commune|municipal/.test(haystack)) return "collectivites";
+      if (/agric|propriet|owner|vigne|rural/.test(haystack)) return "agriculteurs";
+      if (/installateur|installer/.test(haystack)) return "installateurs";
+      if (/paquet|packet|energy-packet/.test(haystack)) return "packets";
+      if (/paper|research|chercheur|papers|methodology/.test(haystack)) return "research";
+      if (/partner|partenaire/.test(haystack)) return "partners";
+      if (/deploy|deployer|deploi/.test(haystack)) return "deployers";
+      if (/cogentia|jumeau|twin|trace/.test(haystack)) return "cogentia";
+      if (/rossignol/.test(haystack)) return "rossignol";
+      if (/marche|market/.test(haystack)) return "marches";
+      if (/seconde|second-life|second life|logistique/.test(haystack)) return "second_life";
+      return "general";
     }
 
     function dedupeSuggestions(suggestions) {
