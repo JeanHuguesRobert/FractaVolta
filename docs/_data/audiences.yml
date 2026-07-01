@@ -1,24 +1,24 @@
 # Audience cards on the home page. Color is a Mondrian primary.
 - key: partners
   title: For partners
-  blurb: Energy and compute commercial pitch — CXU pricing, pilot sites, what we sell and what we don't.
+  blurb: You have a site, territory, institution, or project and want local capacity that can be operated and audited.
   url: /for-partners
   accent: red
 
 - key: deployers
   title: For deployers
-  blurb: How to install a Mariani Village — DC-native nodes, BLE tracking, regulatory framework, Dilorta turnkey.
+  blurb: You need the concrete pattern: solar, storage, DC-native nodes, local services, regulation, and operations.
   url: /for-deployers
   accent: yellow
 
 - key: researchers
   title: For researchers
-  blurb: Papers, methodology, the continuation protocol, the second method, contributing objections as first-class.
+  blurb: You want the papers, the method, the objections, and the public corpus behind the claims.
   url: /for-researchers
   accent: blue
 
 - key: citizens
   title: For citizens
-  blurb: Inseme, Kudocracy, Ophélia the AI mediator, the Atlas of Biodiversity — free, open, neutral, federated.
+  blurb: You care about civic tools that remain inspectable, local-first, and governed by living humans.
   url: /for-citizens
   accent: red

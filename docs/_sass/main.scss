@@ -288,6 +288,131 @@ th {
 .audiences {
   margin-bottom: 4rem;
 }
+
+.story-path {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.6fr);
+  gap: 1.25rem;
+  margin: 0 0 3.5rem;
+  align-items: stretch;
+}
+
+.story-path__intro {
+  border: $border;
+  padding: 1.25rem;
+  background: $bg;
+}
+
+.section-kicker {
+  margin: 0 0 0.5rem;
+  color: $ink-soft;
+  font-size: 0.86rem;
+  font-weight: 700;
+}
+
+.story-path__intro h2 {
+  margin: 0 0 0.75rem;
+  padding: 0;
+  font-size: clamp(1.35rem, 2.3vw, 1.9rem);
+  letter-spacing: 0;
+}
+
+.story-path__intro p:last-child {
+  margin-bottom: 0;
+}
+
+.story-path__steps {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  border: $border;
+  border-left: none;
+  background: $bg;
+}
+
+.story-path__steps li {
+  position: relative;
+  min-height: 13rem;
+  margin: 0;
+  padding: 1rem 1rem 3.25rem;
+  border-left: $border;
+  border-bottom: $border;
+}
+
+.story-path__steps li:nth-last-child(-n + 2) {
+  border-bottom: none;
+}
+
+.story-path__number {
+  display: inline-grid;
+  place-items: center;
+  width: 1.8rem;
+  height: 1.8rem;
+  margin-bottom: 0.75rem;
+  border: $border;
+  background: $yellow;
+  font-weight: 700;
+}
+
+.story-path__steps li:nth-child(2) .story-path__number { background: $red; color: $bg; }
+.story-path__steps li:nth-child(3) .story-path__number { background: $blue; color: $bg; }
+
+.story-path__steps h3 {
+  margin: 0 0 0.45rem;
+  font-size: 1.05rem;
+  letter-spacing: 0;
+}
+
+.story-path__steps p {
+  margin: 0;
+  color: $ink-soft;
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+.story-path__steps a,
+.story-path__guide {
+  position: absolute;
+  left: 1rem;
+  bottom: 1rem;
+  font: inherit;
+  font-weight: 700;
+  color: $ink;
+  background: $bg-alt;
+  border: $border-thin;
+  padding: 0.25rem 0.45rem;
+  text-decoration: none;
+}
+
+.story-path__steps a:hover,
+.story-path__guide:hover {
+  color: $ink;
+  background: $yellow;
+}
+
+.story-path__guide {
+  cursor: pointer;
+}
+
+@media (max-width: 800px) {
+  .story-path {
+    grid-template-columns: 1fr;
+  }
+  .story-path__steps {
+    border-left: $border;
+    grid-template-columns: 1fr;
+  }
+  .story-path__steps li {
+    border-left: none;
+  }
+  .story-path__steps li:nth-last-child(2) {
+    border-bottom: $border;
+  }
+}
+
 .audience-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));

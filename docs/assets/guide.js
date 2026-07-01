@@ -343,5 +343,15 @@
         ask(button.getAttribute("data-guide-prompt"));
       });
     });
+    document.querySelectorAll("[data-open-guide]").forEach(function (button) {
+      button.addEventListener("click", function () {
+        setOpen(true);
+        input.value = text(
+          "Give me a 10-minute public reading path through the FractaVolta story.",
+          "Propose un parcours public de 10 minutes dans l'histoire FractaVolta."
+        );
+        input.focus();
+      });
+    });
   });
 }());
