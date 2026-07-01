@@ -16,10 +16,16 @@
     var toggle = root.querySelector(".guide-widget__toggle");
     var panel = root.querySelector(".guide-widget__panel");
     var close = root.querySelector(".guide-widget__close");
+    var expand = root.querySelector(".guide-widget__expand");
+    var clear = root.querySelector(".guide-widget__clear");
     var form = root.querySelector(".guide-widget__form");
     var input = root.querySelector(".guide-widget__input");
     var log = root.querySelector(".guide-widget__log");
     var submit = root.querySelector(".guide-widget__submit");
+    var memoryKey = "fractavolta.guide.v1." + locale;
+    var memoryTtlMs = 7 * 24 * 60 * 60 * 1000;
+    var maxMemoryEntries = 20;
+    var conversation = loadConversation();
 
     function text(en, fr) {
       return locale.indexOf("fr") === 0 ? fr : en;
@@ -31,12 +37,27 @@
       if (open) input.focus();
     }
 
-    function addMessage(kind, value) {
+    function setExpanded(open) {
+      root.classList.toggle("guide-widget--expanded", open);
+      expand.setAttribute("aria-pressed", open ? "true" : "false");
+      expand.textContent = open ? text("Dock", "Reduire") : text("Full", "Agrandir");
+      expand.setAttribute("aria-label", open ? text("Dock Guide", "Reduire le Guide") : text("Expand Guide", "Agrandir le Guide"));
+      if (open) setOpen(true);
+      if (!panel.hidden) input.focus();
+    }
+
+    function closeGuide() {
+      if (root.classList.contains("guide-widget--expanded")) setExpanded(false);
+      setOpen(false);
+    }
+
+    function addMessage(kind, value, remember) {
       var block = document.createElement("div");
       block.className = "guide-widget__message guide-widget__message--" + kind;
       block.textContent = value;
       log.appendChild(block);
       log.scrollTop = log.scrollHeight;
+      if (remember) rememberEntry({ type: kind, text: value });
       return block;
     }
 
@@ -125,13 +146,13 @@
       return clean.slice(0, Math.max(1, max - 1)).trim() + "...";
     }
 
-    function addAnswer(data) {
+    function addAnswer(data, remember) {
       var block = document.createElement("article");
       block.className = "guide-widget__answer";
 
-      var body = document.createElement("p");
+      var body = document.createElement("div");
       body.className = "guide-widget__answer-text";
-      body.textContent = data.answer || text("No answer returned.", "Aucune reponse retournee.");
+      renderMarkdown(body, data.answer || text("No answer returned.", "Aucune reponse retournee."));
       block.appendChild(body);
 
       if (Array.isArray(data.sources) && data.sources.length) {
@@ -174,6 +195,124 @@
 
       log.appendChild(block);
       log.scrollTop = log.scrollHeight;
+      if (remember) rememberEntry({ type: "answer", data: compactAnswer(data) });
+    }
+
+    function renderMarkdown(target, markdown) {
+      target.textContent = "";
+      var lines = String(markdown || "").replace(/\r\n/g, "\n").split("\n");
+      var index = 0;
+      while (index < lines.length) {
+        var line = lines[index];
+        if (!line.trim()) {
+          index += 1;
+          continue;
+        }
+        if (/^```/.test(line.trim())) {
+          var code = [];
+          index += 1;
+          while (index < lines.length && !/^```/.test(lines[index].trim())) {
+            code.push(lines[index]);
+            index += 1;
+          }
+          if (index < lines.length) index += 1;
+          var pre = document.createElement("pre");
+          var codeEl = document.createElement("code");
+          codeEl.textContent = code.join("\n");
+          pre.appendChild(codeEl);
+          target.appendChild(pre);
+          continue;
+        }
+        var heading = line.match(/^(#{1,3})\s+(.+)$/);
+        if (heading) {
+          var h = document.createElement("h" + Math.min(4, heading[1].length + 2));
+          appendInlineMarkdown(h, heading[2]);
+          target.appendChild(h);
+          index += 1;
+          continue;
+        }
+        if (/^\s*[-*]\s+/.test(line)) {
+          var ul = document.createElement("ul");
+          while (index < lines.length && /^\s*[-*]\s+/.test(lines[index])) {
+            var li = document.createElement("li");
+            appendInlineMarkdown(li, lines[index].replace(/^\s*[-*]\s+/, ""));
+            ul.appendChild(li);
+            index += 1;
+          }
+          target.appendChild(ul);
+          continue;
+        }
+        if (/^\s*\d+\.\s+/.test(line)) {
+          var ol = document.createElement("ol");
+          while (index < lines.length && /^\s*\d+\.\s+/.test(lines[index])) {
+            var oli = document.createElement("li");
+            appendInlineMarkdown(oli, lines[index].replace(/^\s*\d+\.\s+/, ""));
+            ol.appendChild(oli);
+            index += 1;
+          }
+          target.appendChild(ol);
+          continue;
+        }
+        if (/^>\s?/.test(line)) {
+          var quote = document.createElement("blockquote");
+          var quoteLines = [];
+          while (index < lines.length && /^>\s?/.test(lines[index])) {
+            quoteLines.push(lines[index].replace(/^>\s?/, ""));
+            index += 1;
+          }
+          appendInlineMarkdown(quote, quoteLines.join(" "));
+          target.appendChild(quote);
+          continue;
+        }
+        var paragraph = [];
+        while (index < lines.length && lines[index].trim() && !/^```/.test(lines[index].trim()) && !/^(#{1,3})\s+/.test(lines[index]) && !/^\s*[-*]\s+/.test(lines[index]) && !/^\s*\d+\.\s+/.test(lines[index]) && !/^>\s?/.test(lines[index])) {
+          paragraph.push(lines[index]);
+          index += 1;
+        }
+        var p = document.createElement("p");
+        appendInlineMarkdown(p, paragraph.join(" "));
+        target.appendChild(p);
+      }
+    }
+
+    function appendInlineMarkdown(target, textValue) {
+      var source = String(textValue || "");
+      var pattern = /(\*\*[^*]+\*\*|`[^`]+`|\[[^\]]+\]\([^)]+\))/g;
+      var last = 0;
+      var match;
+      while ((match = pattern.exec(source))) {
+        if (match.index > last) target.appendChild(document.createTextNode(source.slice(last, match.index)));
+        var token = match[0];
+        if (token.indexOf("**") === 0) {
+          var strong = document.createElement("strong");
+          strong.textContent = token.slice(2, -2);
+          target.appendChild(strong);
+        } else if (token.indexOf("`") === 0) {
+          var code = document.createElement("code");
+          code.textContent = token.slice(1, -1);
+          target.appendChild(code);
+        } else {
+          var parts = token.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+          var href = parts ? safeHref(parts[2]) : "";
+          if (href) {
+            var link = document.createElement("a");
+            link.href = href;
+            link.target = "_blank";
+            link.rel = "noopener";
+            link.textContent = parts[1];
+            target.appendChild(link);
+          } else {
+            target.appendChild(document.createTextNode(parts ? parts[1] : token));
+          }
+        }
+        last = pattern.lastIndex;
+      }
+      if (last < source.length) target.appendChild(document.createTextNode(source.slice(last)));
+    }
+
+    function safeHref(value) {
+      var href = String(value || "").trim();
+      return /^(https?:|mailto:|\/|#)/i.test(href) ? href : "";
     }
 
     function addSuggestions(block, data) {
@@ -258,7 +397,8 @@
     }
 
     async function ask(question) {
-      addMessage("user", question);
+      var history = guideHistoryPayload();
+      addMessage("user", question, true);
       var pending = addProgress();
       submit.disabled = true;
       try {
@@ -269,13 +409,13 @@
             "Content-Type": "application/json",
             "Accept": "text/event-stream, application/json",
           },
-          body: JSON.stringify({ question: question, locale: locale, stream: true }),
+          body: JSON.stringify({ question: question, locale: locale, stream: true, history: history }),
         });
         var data = await readGuideResponse(response, pending);
         if (!response.ok || !data || data.ok === false) {
           throw new Error((data && data.message) || text("The Guide is unavailable.", "Le Guide est indisponible."));
         }
-        addAnswer(data);
+        addAnswer(data, true);
       } catch (error) {
         pending.remove();
         addMessage("error", error.message || text("The Guide is unavailable.", "Le Guide est indisponible."));
@@ -328,8 +468,71 @@
       }
     }
 
+    function loadConversation() {
+      var now = Date.now();
+      try {
+        var parsed = JSON.parse(localStorage.getItem(memoryKey) || "[]");
+        if (!Array.isArray(parsed)) return [];
+        return parsed.filter(function (entry) {
+          return entry && typeof entry.at === "number" && now - entry.at < memoryTtlMs;
+        }).slice(-maxMemoryEntries);
+      } catch (error) {
+        return [];
+      }
+    }
+
+    function saveConversation() {
+      try {
+        localStorage.setItem(memoryKey, JSON.stringify(conversation.slice(-maxMemoryEntries)));
+      } catch (error) {}
+    }
+
+    function rememberEntry(entry) {
+      conversation.push(Object.assign({ at: Date.now() }, entry));
+      conversation = conversation.slice(-maxMemoryEntries);
+      saveConversation();
+    }
+
+    function compactAnswer(data) {
+      return {
+        ok: true,
+        question: data.question,
+        answer: data.answer,
+        sources: Array.isArray(data.sources) ? data.sources.slice(0, 5) : [],
+        warnings: Array.isArray(data.warnings) ? data.warnings.slice(0, 5) : [],
+      };
+    }
+
+    function guideHistoryPayload() {
+      return conversation.slice(-10).map(function (entry) {
+        if (entry.type === "user") return { role: "user", content: entry.text || "" };
+        if (entry.type === "answer") return { role: "assistant", content: (entry.data && entry.data.answer) || "" };
+        return null;
+      }).filter(function (entry) {
+        return entry && entry.content && entry.content.trim();
+      });
+    }
+
+    function renderStoredConversation() {
+      conversation.forEach(function (entry) {
+        if (entry.type === "user") addMessage("user", entry.text || "", false);
+        if (entry.type === "answer" && entry.data) addAnswer(entry.data, false);
+      });
+    }
+
+    function clearConversation() {
+      conversation = [];
+      try {
+        localStorage.removeItem(memoryKey);
+      } catch (error) {}
+      log.textContent = "";
+      input.focus();
+    }
+
     toggle.addEventListener("click", function () { setOpen(panel.hidden); });
-    close.addEventListener("click", function () { setOpen(false); });
+    close.addEventListener("click", closeGuide);
+    expand.addEventListener("click", function () { setExpanded(!root.classList.contains("guide-widget--expanded")); });
+    clear.addEventListener("click", clearConversation);
     form.addEventListener("submit", function (event) {
       event.preventDefault();
       var question = input.value.trim();
@@ -353,5 +556,6 @@
         input.focus();
       });
     });
+    renderStoredConversation();
   });
 }());

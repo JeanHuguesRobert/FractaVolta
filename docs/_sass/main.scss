@@ -612,6 +612,8 @@ th {
 
 .guide-widget__toggle,
 .guide-widget__close,
+.guide-widget__clear,
+.guide-widget__expand,
 .guide-widget__submit,
 .guide-widget__prompts button,
 .guide-widget__suggestions button {
@@ -652,6 +654,21 @@ th {
   border: $border;
 }
 
+.guide-widget--expanded {
+  inset: 0.75rem;
+}
+
+.guide-widget--expanded .guide-widget__toggle {
+  display: none;
+}
+
+.guide-widget--expanded .guide-widget__panel {
+  position: fixed;
+  inset: 0.75rem;
+  width: auto;
+  max-height: none;
+}
+
 .guide-widget__panel[hidden] {
   display: none;
 }
@@ -690,6 +707,23 @@ th {
   background: $bg-alt;
 }
 
+.guide-widget__actions {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: flex-start;
+  gap: 0.4rem;
+}
+
+.guide-widget__clear,
+.guide-widget__expand {
+  min-height: 2rem;
+  padding: 0.3rem 0.45rem;
+  border-width: 1px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  background: $bg-alt;
+}
+
 .guide-widget__prompts {
   display: flex;
   flex-wrap: wrap;
@@ -709,6 +743,11 @@ th {
   max-height: 20rem;
   overflow-y: auto;
   padding: 0.8rem;
+}
+
+.guide-widget--expanded .guide-widget__log {
+  max-height: none;
+  flex: 1 1 auto;
 }
 
 .guide-widget__message,
@@ -784,8 +823,48 @@ th {
 }
 
 .guide-widget__answer-text {
-  white-space: pre-wrap;
   margin: 0 0 0.75rem;
+}
+
+.guide-widget__answer-text > :first-child {
+  margin-top: 0;
+}
+
+.guide-widget__answer-text > :last-child {
+  margin-bottom: 0;
+}
+
+.guide-widget__answer-text h4 {
+  margin: 1rem 0 0.4rem;
+  font-size: 0.98rem;
+  letter-spacing: 0;
+}
+
+.guide-widget__answer-text p,
+.guide-widget__answer-text ul,
+.guide-widget__answer-text ol,
+.guide-widget__answer-text blockquote,
+.guide-widget__answer-text pre {
+  margin-bottom: 0.65rem;
+}
+
+.guide-widget__answer-text blockquote {
+  padding-left: 0.75rem;
+  border-left: 0.25rem solid $blue;
+  color: $ink-soft;
+}
+
+.guide-widget__answer-text pre {
+  overflow-x: auto;
+  padding: 0.55rem;
+  border: $border-thin;
+  background: $bg-alt;
+  font-size: 0.82rem;
+}
+
+.guide-widget__answer-text code {
+  font-family: $font-mono;
+  font-size: 0.9em;
 }
 
 .guide-widget__sources-title {

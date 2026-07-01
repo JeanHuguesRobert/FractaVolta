@@ -12,7 +12,15 @@
         <h2 class="guide-widget__title">{% if guide_lang == 'fr' %}Guide public{% else %}Public Guide{% endif %}</h2>
         <p class="guide-widget__note">{% if guide_lang == 'fr' %}Reponses fondees sur le corpus public.{% else %}Answers grounded in the public corpus.{% endif %}</p>
       </div>
-      <button class="guide-widget__close" type="button" aria-label="{% if guide_lang == 'fr' %}Fermer le Guide{% else %}Close Guide{% endif %}">x</button>
+      <div class="guide-widget__actions">
+        <button class="guide-widget__clear" type="button" aria-label="{% if guide_lang == 'fr' %}Effacer la conversation{% else %}Clear conversation{% endif %}">
+          {% if guide_lang == 'fr' %}Effacer{% else %}Clear{% endif %}
+        </button>
+        <button class="guide-widget__expand" type="button" aria-pressed="false" aria-label="{% if guide_lang == 'fr' %}Agrandir le Guide{% else %}Expand Guide{% endif %}">
+          {% if guide_lang == 'fr' %}Agrandir{% else %}Full{% endif %}
+        </button>
+        <button class="guide-widget__close" type="button" aria-label="{% if guide_lang == 'fr' %}Fermer le Guide{% else %}Close Guide{% endif %}">x</button>
+      </div>
     </div>
 
     <div class="guide-widget__prompts" aria-label="{% if guide_lang == 'fr' %}Questions suggerees{% else %}Suggested questions{% endif %}">

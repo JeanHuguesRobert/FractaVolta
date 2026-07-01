@@ -232,6 +232,21 @@ Acceptation :
 - les réponses non sourcées sont refusées ou marquées comme orientation ;
 - quota et provider calls passent par la politique Cogentia/Magistral prévue.
 
+Mise a jour v0.4 :
+
+- le widget peut etre agrandi a la taille de la fenetre ;
+- les reponses du Guide sont rendues en Markdown cote client, sans `innerHTML`
+  arbitraire ;
+- la conversation est memorisee dans `localStorage` cote visiteur, avec TTL
+  d'environ une semaine et bouton d'effacement ;
+- le client transmet un historique borne au serveur pour la continuite
+  conversationnelle ; cet historique n'est pas une source probante ;
+- la route `/guide/chat` peut enrichir une question actuelle par une recherche
+  web Brave bornee. Cette recherche est configuree cote serveur par
+  `BRAVE_SEARCH_API_KEY`, `COGENTIA_BRAVE_SEARCH_API_KEY` ou
+  `COGENTIA_GUIDE_WEB_SEARCH_API_KEY`; elle reste separee du corpus et cite des
+  sources `web:*`.
+
 ### Tranche 5 — Feedback public
 
 Objectif : recueillir les corrections sans ouvrir un canal de capture.
