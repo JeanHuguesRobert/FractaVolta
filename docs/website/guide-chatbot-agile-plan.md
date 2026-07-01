@@ -187,6 +187,11 @@ Acceptation :
 Statut : premiere version via `POST /guide/chat`, avec fallback extractif cote
 serveur si la synthese conversationnelle n'est pas disponible.
 
+Mise a jour : le widget propose aussi des questions de depart plus explicites
+et des suggestions de suivi apres chaque reponse. Ces suggestions restent
+simples et publiques : elles guident doucement le visiteur vers un prochain
+angle de lecture, sans pretendre personnaliser ou decider a sa place.
+
 ### Tranche 3 — Context packs et lignes citées
 
 Objectif : permettre au Guide de construire une réponse plus utile sans

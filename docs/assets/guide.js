@@ -170,8 +170,91 @@
         block.appendChild(warn);
       }
 
+      addSuggestions(block, data);
+
       log.appendChild(block);
       log.scrollTop = log.scrollHeight;
+    }
+
+    function addSuggestions(block, data) {
+      var suggestions = guideSuggestions(data).slice(0, 3);
+      if (!suggestions.length) return;
+
+      var section = document.createElement("div");
+      section.className = "guide-widget__suggestions";
+
+      var title = document.createElement("h3");
+      title.className = "guide-widget__suggestions-title";
+      title.textContent = text("Continue with", "Continuer avec");
+      section.appendChild(title);
+
+      var list = document.createElement("div");
+      list.className = "guide-widget__suggestions-list";
+      suggestions.forEach(function (suggestion) {
+        var button = document.createElement("button");
+        button.type = "button";
+        button.textContent = suggestion.label;
+        button.setAttribute("data-guide-prompt", suggestion.prompt);
+        button.addEventListener("click", function () {
+          ask(suggestion.prompt);
+        });
+        list.appendChild(button);
+      });
+      section.appendChild(list);
+      block.appendChild(section);
+    }
+
+    function guideSuggestions(data) {
+      var question = String((data && data.question) || "").toLowerCase();
+      var sourceCount = Array.isArray(data && data.sources) ? data.sources.length : 0;
+      var suggestions = [];
+
+      if (question.indexOf("cogentia") === -1 && question.indexOf("jumeau") === -1 && question.indexOf("twin") === -1) {
+        suggestions.push({
+          label: text("Connect this to Cogentia", "Relier a Cogentia"),
+          prompt: text(
+            "How does Cogentia help explain or operate this FractaVolta idea?",
+            "Comment Cogentia aide-t-il a expliquer ou operer cette idee FractaVolta ?"
+          ),
+        });
+      }
+      if (question.indexOf("read") === -1 && question.indexOf("lecture") === -1 && sourceCount > 0) {
+        suggestions.push({
+          label: text("Give me a reading path", "Proposer un parcours"),
+          prompt: text(
+            "Turn these sources into a 10-minute public reading path.",
+            "Transforme ces sources en parcours de lecture public de 10 minutes."
+          ),
+        });
+      }
+      if (question.indexOf("packet") === -1 && question.indexOf("paquet") === -1) {
+        suggestions.push({
+          label: text("Explain energy packets", "Expliquer les packets"),
+          prompt: text(
+            "Why does FractaVolta use the packet idea for energy and compute?",
+            "Pourquoi FractaVolta utilise-t-il l'idee de packet pour l'energie et le calcul ?"
+          ),
+        });
+      }
+      suggestions.push({
+        label: text("What should I ask next?", "Que demander ensuite ?"),
+        prompt: text(
+          "Suggest three good public questions I should ask next about FractaVolta.",
+          "Suggere trois bonnes questions publiques a poser ensuite sur FractaVolta."
+        ),
+      });
+
+      return dedupeSuggestions(suggestions);
+    }
+
+    function dedupeSuggestions(suggestions) {
+      var seen = {};
+      return suggestions.filter(function (item) {
+        var key = item.prompt;
+        if (seen[key]) return false;
+        seen[key] = true;
+        return true;
+      });
     }
 
     async function ask(question) {

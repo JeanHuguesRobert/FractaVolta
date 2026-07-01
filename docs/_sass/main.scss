@@ -488,7 +488,8 @@ th {
 .guide-widget__toggle,
 .guide-widget__close,
 .guide-widget__submit,
-.guide-widget__prompts button {
+.guide-widget__prompts button,
+.guide-widget__suggestions button {
   font: inherit;
   color: $ink;
   background: $bg;
@@ -680,6 +681,32 @@ th {
   color: $ink-soft;
   font-family: $font-mono;
   overflow-wrap: anywhere;
+}
+
+.guide-widget__suggestions {
+  margin-top: 0.85rem;
+  padding-top: 0.65rem;
+  border-top: $border-thin;
+}
+
+.guide-widget__suggestions-title {
+  margin: 0 0 0.4rem;
+  font-size: 0.86rem;
+  letter-spacing: 0;
+  color: $ink-soft;
+}
+
+.guide-widget__suggestions-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.guide-widget__suggestions button {
+  padding: 0.25rem 0.45rem;
+  border-width: 1px;
+  background: $bg-alt;
+  font-size: 0.82rem;
 }
 
 .guide-widget__warning {
