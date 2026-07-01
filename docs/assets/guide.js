@@ -400,6 +400,7 @@
       var question = String((data && data.question) || "").trim();
       var answer = String((data && data.answer) || "").trim();
       var sources = Array.isArray(data && data.sources) ? data.sources.slice(0, 8) : [];
+      var excerpts = guideSourceExcerpts(data);
       var webSearch = data && data.context && data.context.web_search;
       var lines = [
         text("# FractaVolta public Guide handoff", "# Passage depuis le Guide public FractaVolta"),
@@ -429,6 +430,16 @@
       } else {
         lines.push(text("No source list was captured.", "Aucune liste de sources n'a ete capturee."));
       }
+      if (excerpts.length) {
+        lines.push("", text("## Relevant public excerpts", "## Extraits publics utiles"));
+        excerpts.forEach(function (item, index) {
+          lines.push(
+            "",
+            "### " + (index + 1) + ". " + item.source_id,
+            item.text
+          );
+        });
+      }
       if (webSearch && webSearch.attempted) {
         lines.push(
           "",
@@ -451,6 +462,25 @@
         endpoint
       );
       return lines.join("\n");
+    }
+
+    function guideSourceExcerpts(data) {
+      var raw = data && data.context && Array.isArray(data.context.excerpts) ? data.context.excerpts : [];
+      var seen = {};
+      return raw.map(function (item) {
+        var sourceId = String(item && item.source_id || "").trim();
+        var textValue = compactPromptText(item && item.text, 700);
+        if (!sourceId || !textValue || seen[sourceId]) return null;
+        seen[sourceId] = true;
+        return { source_id: sourceId, text: textValue };
+      }).filter(Boolean).slice(0, 6);
+    }
+
+    function compactPromptText(value, maxChars) {
+      var clean = String(value || "").replace(/\s+/g, " ").trim();
+      if (!clean) return "";
+      if (clean.length <= maxChars) return clean;
+      return clean.slice(0, Math.max(1, maxChars - 3)).trim() + "...";
     }
 
     function guideReturnPrompt(data) {

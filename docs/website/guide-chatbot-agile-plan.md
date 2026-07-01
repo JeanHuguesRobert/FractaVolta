@@ -208,6 +208,11 @@ prudence. Le prompt demande aussi a l'agent externe de finir par une question
 precise que l'usager pourra recoller dans le Guide, afin de garder une boucle
 utile entre exploration personnelle et corpus public.
 
+Mise a jour v0.7 : le prompt portable embarque aussi des extraits publics
+courts quand Cogentia les fournit. Cela rend le copier-coller utile meme quand
+l'agent externe du visiteur n'a pas acces au MCP ou ne peut pas ouvrir les liens
+du corpus.
+
 ### Tranche 3 — Context packs et lignes citées
 
 Objectif : permettre au Guide de construire une réponse plus utile sans
