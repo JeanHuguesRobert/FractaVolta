@@ -913,6 +913,69 @@ th {
   font-size: 0.82rem;
 }
 
+.guide-widget__handoff {
+  margin-top: 0.85rem;
+  padding-top: 0.65rem;
+  border-top: $border-thin;
+}
+
+.guide-widget__handoff-toggle,
+.guide-widget__handoff-actions button {
+  font: inherit;
+  color: $ink;
+  background: $bg-alt;
+  border: $border-thin;
+  cursor: pointer;
+}
+
+.guide-widget__handoff-toggle {
+  width: 100%;
+  padding: 0.45rem 0.55rem;
+  font-weight: 700;
+  text-align: left;
+}
+
+.guide-widget__handoff-panel {
+  display: grid;
+  gap: 0.5rem;
+  margin-top: 0.55rem;
+}
+
+.guide-widget__handoff-panel[hidden] {
+  display: none;
+}
+
+.guide-widget__handoff-help {
+  margin: 0;
+  color: $ink-soft;
+  font-size: 0.84rem;
+  line-height: 1.4;
+}
+
+.guide-widget__handoff-prompt {
+  width: 100%;
+  min-height: 9rem;
+  max-height: 18rem;
+  resize: vertical;
+  padding: 0.55rem;
+  color: $ink;
+  background: $bg-alt;
+  border: $border-thin;
+  font: 0.8rem/1.35 $font-mono;
+}
+
+.guide-widget__handoff-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.guide-widget__handoff-actions button {
+  padding: 0.3rem 0.45rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
 .guide-widget__warning {
   margin: 0.75rem 0 0;
   font-size: 0.86rem;

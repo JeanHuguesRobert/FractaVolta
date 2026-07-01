@@ -200,6 +200,14 @@ et jumeau public. Les suggestions de suivi utilisent aussi le sujet detecte et
 signalent explicitement quand une recherche web n'a pas apporte de resultat
 exploitable.
 
+Mise a jour v0.6 : le Guide propose aussi un passage vers l'agent du visiteur
+avec "Approfondir avec votre propre agent". Le site ne paie pas une synthese
+longue et couteuse pour chaque visite ; il produit un prompt portable qui
+embarque la question, la reponse, les sources publiques et les consignes de
+prudence. Le prompt demande aussi a l'agent externe de finir par une question
+precise que l'usager pourra recoller dans le Guide, afin de garder une boucle
+utile entre exploration personnelle et corpus public.
+
 ### Tranche 3 — Context packs et lignes citées
 
 Objectif : permettre au Guide de construire une réponse plus utile sans

@@ -203,6 +203,7 @@
         block.appendChild(warn);
       }
 
+      addAgentHandoff(block, data);
       addSuggestions(block, data);
 
       log.appendChild(block);
@@ -325,6 +326,149 @@
     function safeHref(value) {
       var href = String(value || "").trim();
       return /^(https?:|mailto:|\/|#)/i.test(href) ? href : "";
+    }
+
+    function addAgentHandoff(block, data) {
+      var section = document.createElement("div");
+      section.className = "guide-widget__handoff";
+
+      var button = document.createElement("button");
+      button.type = "button";
+      button.className = "guide-widget__handoff-toggle";
+      button.textContent = text("Deepen with your own agent", "Approfondir avec votre propre agent");
+      section.appendChild(button);
+
+      var panel = document.createElement("div");
+      panel.className = "guide-widget__handoff-panel";
+      panel.hidden = true;
+
+      var intro = document.createElement("p");
+      intro.className = "guide-widget__handoff-help";
+      intro.textContent = text(
+        "First time: copy this prompt, paste it into ChatGPT, Claude, Grok or another agent, then continue there. The prompt asks your agent to stay grounded and to bring you back here with a useful follow-up question.",
+        "Premiere fois : copiez ce prompt, collez-le dans ChatGPT, Claude, Grok ou un autre agent, puis continuez la-bas. Le prompt demande a votre agent de rester ancre dans les sources et de vous proposer un retour utile vers ce Guide."
+      );
+      panel.appendChild(intro);
+
+      var textarea = document.createElement("textarea");
+      textarea.className = "guide-widget__handoff-prompt";
+      textarea.rows = 9;
+      textarea.readOnly = true;
+      textarea.value = buildAgentPrompt(data);
+      panel.appendChild(textarea);
+
+      var actions = document.createElement("div");
+      actions.className = "guide-widget__handoff-actions";
+
+      var copy = document.createElement("button");
+      copy.type = "button";
+      copy.textContent = text("Copy prompt", "Copier le prompt");
+      copy.addEventListener("click", function () {
+        copyText(textarea.value).then(function (ok) {
+          if (!ok) textarea.select();
+          copy.textContent = ok ? text("Copied", "Copie") : text("Select and copy", "Selectionnez puis copiez");
+          setTimeout(function () {
+            copy.textContent = text("Copy prompt", "Copier le prompt");
+          }, 1800);
+        });
+      });
+      actions.appendChild(copy);
+
+      var useHere = document.createElement("button");
+      useHere.type = "button";
+      useHere.textContent = text("Ask the Guide again", "Revenir au Guide");
+      useHere.addEventListener("click", function () {
+        var prompt = guideReturnPrompt(data);
+        input.value = prompt;
+        setOpen(true);
+        input.focus();
+      });
+      actions.appendChild(useHere);
+
+      panel.appendChild(actions);
+      section.appendChild(panel);
+
+      button.addEventListener("click", function () {
+        panel.hidden = !panel.hidden;
+        if (!panel.hidden) textarea.focus();
+      });
+
+      block.appendChild(section);
+    }
+
+    function buildAgentPrompt(data) {
+      var question = String((data && data.question) || "").trim();
+      var answer = String((data && data.answer) || "").trim();
+      var sources = Array.isArray(data && data.sources) ? data.sources.slice(0, 8) : [];
+      var webSearch = data && data.context && data.context.web_search;
+      var lines = [
+        text("# FractaVolta public Guide handoff", "# Passage depuis le Guide public FractaVolta"),
+        "",
+        text(
+          "You are helping me deepen a public FractaVolta Guide answer. Stay grounded in the supplied public sources. Distinguish corpus sources from web sources. If evidence is insufficient, say so.",
+          "Aidez-moi a approfondir une reponse du Guide public FractaVolta. Restez ancre dans les sources publiques fournies. Distinguez les sources du corpus des sources web. Si les preuves sont insuffisantes, dites-le."
+        ),
+        "",
+        text("## My question", "## Ma question"),
+        question || text("No question captured.", "Aucune question capturee."),
+        "",
+        text("## Guide answer", "## Reponse du Guide"),
+        answer || text("No answer captured.", "Aucune reponse capturee."),
+        "",
+        text("## Public sources", "## Sources publiques"),
+      ];
+      if (sources.length) {
+        sources.forEach(function (source, index) {
+          var parts = [
+            (index + 1) + ". " + (source.title || source.path || source.source_id || text("Untitled source", "Source sans titre")),
+            "source_id=" + (source.source_id || ""),
+          ];
+          if (source.url) parts.push("url=" + source.url);
+          lines.push(parts.join(" | "));
+        });
+      } else {
+        lines.push(text("No source list was captured.", "Aucune liste de sources n'a ete capturee."));
+      }
+      if (webSearch && webSearch.attempted) {
+        lines.push(
+          "",
+          text("## Web search note", "## Note de recherche web"),
+          text(
+            "The Guide attempted web search. Treat web results as current external context, not as corpus authority.",
+            "Le Guide a tente une recherche web. Traitez les resultats web comme un contexte externe actuel, pas comme l'autorite du corpus."
+          )
+        );
+      }
+      lines.push(
+        "",
+        text("## What I want from you", "## Ce que j'attends de vous"),
+        text(
+          "1. Explain the answer more deeply.\n2. Keep citations to the source ids or URLs above.\n3. Separate what is certain, plausible, and missing.\n4. End by proposing one precise follow-up question I can paste back into the FractaVolta Guide.",
+          "1. Approfondissez la reponse.\n2. Citez les source_id ou URL ci-dessus.\n3. Separez ce qui est certain, plausible et manquant.\n4. Terminez en proposant une question de suivi precise que je pourrai recoller dans le Guide FractaVolta."
+        ),
+        "",
+        text("Public Guide endpoint:", "Endpoint du Guide public :"),
+        endpoint
+      );
+      return lines.join("\n");
+    }
+
+    function guideReturnPrompt(data) {
+      var question = String((data && data.question) || "").trim();
+      return text(
+        "Help me go one level deeper than this previous question, using the public corpus and sources: " + question,
+        "Aide-moi a aller un niveau plus loin que cette question precedente, en utilisant le corpus public et les sources : " + question
+      );
+    }
+
+    async function copyText(value) {
+      try {
+        if (navigator.clipboard && window.isSecureContext) {
+          await navigator.clipboard.writeText(value);
+          return true;
+        }
+      } catch (error) {}
+      return false;
     }
 
     function addSuggestions(block, data) {
