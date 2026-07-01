@@ -28,6 +28,21 @@ produire localement
 
 Cette page est l’entrée française opérationnelle du site. Les documents de recherche restent majoritairement en anglais. Les pages françaises sont des produits déclinés lorsqu’un public local ou francophone concret le justifie.
 
+## L'histoire corse
+
+Le point de départ n'est pas abstrait. C'est un site réel : un hangar agricole, une toiture publique, une ombrière, une petite installation photovoltaïque, un bâtiment isolé ou un lieu qui a besoin d'eau, de froid, de recharge, de continuité ou de calcul local.
+
+Beaucoup de ces sites produisent déjà de l'énergie, ou pourraient en produire. Pourtant cette énergie peut rester mal valorisée : injectée au mauvais moment, diluée dans le réseau, enfermée dans un ancien contrat, ou déconnectée des besoins concrets du territoire.
+
+FractaVolta raconte une autre trajectoire :
+
+1. **Identifier la capacité locale.** Quelle énergie existe déjà ? Quels usages locaux sont mal servis ?
+2. **Stocker et orienter.** L'énergie devient un paquet utilisable : mesurable, stocké, routé, affecté à un besoin.
+3. **Servir d'abord le lieu.** Eau, froid, recharge, mobilité, transformation agricole, secours, données ou calcul local.
+4. **Garder la trace.** Le propriétaire, la commune, l'installateur et le territoire doivent pouvoir comprendre ce qui a été fait, pourquoi, et avec quel bénéfice.
+
+La version française du site part donc de la Corse : ses toitures, ses hangars, ses communes, ses agriculteurs, ses contraintes réseau, ses bateaux, ses vallées, ses besoins d'autonomie concrète. La recherche générale reste disponible, mais elle vient après cette histoire locale.
+
 ## Ce que nous cherchons maintenant
 
 FractaVolta cherche des partenaires et des sites pilotes en Corse :

@@ -211,10 +211,10 @@
 
       if (question.indexOf("cogentia") === -1 && question.indexOf("jumeau") === -1 && question.indexOf("twin") === -1) {
         suggestions.push({
-          label: text("Connect this to Cogentia", "Relier a Cogentia"),
+          label: text("Connect this to Cogentia", "Relier au corpus"),
           prompt: text(
             "How does Cogentia help explain or operate this FractaVolta idea?",
-            "Comment Cogentia aide-t-il a expliquer ou operer cette idee FractaVolta ?"
+            "Quel lien avec Cogentia, le corpus public et la methode de tracabilite ?"
           ),
         });
       }
@@ -223,16 +223,16 @@
           label: text("Give me a reading path", "Proposer un parcours"),
           prompt: text(
             "Turn these sources into a 10-minute public reading path.",
-            "Transforme ces sources en parcours de lecture public de 10 minutes."
+            "Transforme ces sources en parcours de lecture public de 10 minutes pour comprendre FractaVolta en Corse."
           ),
         });
       }
       if (question.indexOf("packet") === -1 && question.indexOf("paquet") === -1) {
         suggestions.push({
-          label: text("Explain energy packets", "Expliquer les packets"),
+          label: text("Explain energy packets", "Expliquer les paquets"),
           prompt: text(
             "Why does FractaVolta use the packet idea for energy and compute?",
-            "Pourquoi FractaVolta utilise-t-il l'idee de packet pour l'energie et le calcul ?"
+            "Pourquoi FractaVolta parle-t-il de paquets d'energie pour les usages locaux en Corse ?"
           ),
         });
       }
@@ -240,7 +240,7 @@
         label: text("What should I ask next?", "Que demander ensuite ?"),
         prompt: text(
           "Suggest three good public questions I should ask next about FractaVolta.",
-          "Suggere trois bonnes questions publiques a poser ensuite sur FractaVolta."
+          "Suggere trois bonnes questions publiques a poser ensuite sur FractaVolta en Corse."
         ),
       });
 
@@ -348,7 +348,7 @@
         setOpen(true);
         input.value = text(
           "Give me a 10-minute public reading path through the FractaVolta story.",
-          "Propose un parcours public de 10 minutes dans l'histoire FractaVolta."
+          "Propose un parcours public de 10 minutes pour comprendre FractaVolta en Corse."
         );
         input.focus();
       });
