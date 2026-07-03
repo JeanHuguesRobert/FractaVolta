@@ -840,9 +840,7 @@
       });
     });
     if (isPageMode) {
-      root.classList.add("guide-widget--expanded");
       setOpen(true);
-      setExpanded(true);
     }
 
     var queryParams = new URLSearchParams(window.location.search);
