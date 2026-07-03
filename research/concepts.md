@@ -122,14 +122,29 @@ Decentralized nodes for local power generation, underpinning the IPN and EPN top
 
 ---
 
-## Packet Attractors
+## Packet Attractors (Fractanet routing)
 
 **Type:** system dynamics
 **Scope:** Global
 **Status:** Working
 
 **Short definition:**
-Routing logic governing the geographical and thermodynamic attraction for power and data packets.
+Declarative demand primitive: a Fractanet node attracts governed packets it is **capable and
+legitimate** to handle — the distributed-blackboard mechanism for capability routing (not fixed URLs).
+
+**Reference documents:**
+- [`packet_attractor_fractanet.md`](https://github.com/JeanHuguesRobert/inseme/blob/main/research/packet_attractor_fractanet.md) (canonical COP-side source)
+- [Reactive Cognitive COP Extension](https://github.com/JeanHuguesRobert/inseme/blob/main/research/reactive_cognitive_cop_extension.md)
+
+## Packet as evolutionary attractor
+
+**Type:** complexity science
+**Scope:** Global
+**Status:** Working
+
+**Short definition:**
+Hypothesis that mature complex networks independently converge from circuit-switched flow toward
+discrete store-and-forward packet structures.
 
 **Reference documents:**
 - [`packet_attractor.md`](packet_attractor.md)
