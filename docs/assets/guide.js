@@ -24,6 +24,8 @@
     var submit = root.querySelector(".guide-widget__submit");
     var pageTitle = root.getAttribute("data-guide-page-title") || "";
     var pagePath = root.getAttribute("data-guide-page-path") || "";
+    var guideMode = root.getAttribute("data-guide-mode") || "floating";
+    var isPageMode = guideMode === "page";
     var memoryKey = "fractavolta.guide.v1." + locale;
     var memoryTtlMs = 7 * 24 * 60 * 60 * 1000;
     var maxMemoryEntries = 20;
@@ -35,20 +37,23 @@
 
     function setOpen(open) {
       panel.hidden = !open;
-      toggle.setAttribute("aria-expanded", open ? "true" : "false");
+      if (toggle) toggle.setAttribute("aria-expanded", open ? "true" : "false");
       if (open) input.focus();
     }
 
     function setExpanded(open) {
       root.classList.toggle("guide-widget--expanded", open);
-      expand.setAttribute("aria-pressed", open ? "true" : "false");
-      expand.textContent = open ? text("Dock", "Reduire") : text("Full", "Agrandir");
-      expand.setAttribute("aria-label", open ? text("Dock Guide", "Reduire le Guide") : text("Expand Guide", "Agrandir le Guide"));
+      if (expand) {
+        expand.setAttribute("aria-pressed", open ? "true" : "false");
+        expand.textContent = open ? text("Dock", "Reduire") : text("Full", "Agrandir");
+        expand.setAttribute("aria-label", open ? text("Dock Guide", "Reduire le Guide") : text("Expand Guide", "Agrandir le Guide"));
+      }
       if (open) setOpen(true);
       if (!panel.hidden) input.focus();
     }
 
     function closeGuide() {
+      if (isPageMode) return;
       if (root.classList.contains("guide-widget--expanded")) setExpanded(false);
       setOpen(false);
     }
@@ -807,9 +812,9 @@
       input.focus();
     }
 
-    toggle.addEventListener("click", function () { setOpen(panel.hidden); });
-    close.addEventListener("click", closeGuide);
-    expand.addEventListener("click", function () { setExpanded(!root.classList.contains("guide-widget--expanded")); });
+    if (toggle) toggle.addEventListener("click", function () { setOpen(panel.hidden); });
+    if (close) close.addEventListener("click", closeGuide);
+    if (expand) expand.addEventListener("click", function () { setExpanded(!root.classList.contains("guide-widget--expanded")); });
     clear.addEventListener("click", clearConversation);
     form.addEventListener("submit", function (event) {
       event.preventDefault();
@@ -834,6 +839,22 @@
         input.focus();
       });
     });
+    if (isPageMode) {
+      root.classList.add("guide-widget--expanded");
+      setOpen(true);
+      setExpanded(true);
+    }
+
+    var queryParams = new URLSearchParams(window.location.search);
+    var prefillQuestion = (queryParams.get("q") || "").trim();
+    if (prefillQuestion) {
+      input.value = prefillQuestion;
+      if (queryParams.get("ask") === "1") ask(prefillQuestion);
+      else input.focus();
+    } else if (isPageMode) {
+      input.focus();
+    }
+
     renderStoredConversation();
   });
 }());

@@ -43,6 +43,12 @@ FractaVolta raconte une autre trajectoire :
 
 La version française du site part donc de la Corse : ses toitures, ses hangars, ses communes, ses agriculteurs, ses contraintes réseau, ses bateaux, ses vallées, ses besoins d'autonomie concrète. La recherche générale reste disponible, mais elle vient après cette histoire locale.
 
+## Guide public
+
+Le [Guide public](./guide) aide les visiteurs à poser des questions ancrées dans le corpus public FractaVolta, sans avoir à connaître d'abord toute l'architecture du site.
+
+Chaque réponse cite des sources. Pour aller plus loin, le Guide prépare un prompt à copier vers ChatGPT, Claude, Grok ou un autre agent, puis à faire revenir ici avec une question de suivi.
+
 ## Ce que nous cherchons maintenant
 
 FractaVolta cherche des partenaires et des sites pilotes en Corse :

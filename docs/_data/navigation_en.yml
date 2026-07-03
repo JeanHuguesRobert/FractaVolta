@@ -1,6 +1,8 @@
 main:
   - title: Home
     url: /
+  - title: Guide
+    url: /guide
   - title: Energy packets
     url: /energy-packets
   - title: Partners

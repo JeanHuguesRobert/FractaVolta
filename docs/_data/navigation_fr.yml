@@ -1,6 +1,8 @@
 main:
   - title: Accueil
     url: /fr/
+  - title: Guide
+    url: /fr/guide
   - title: En Corse
     url: /fr/
   - title: Seconde vie

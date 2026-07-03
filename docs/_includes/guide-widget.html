@@ -1,13 +1,14 @@
 {% assign guide_endpoint = site.guide_endpoint | default: 'https://cogentia.fractavolta.com/guide/chat' %}
 {% assign guide_lang = page.lang | default: site.lang | default: 'en' %}
 {% assign guide_path = page.url | default: '/' %}
-<section class="guide-widget" data-guide-endpoint="{{ guide_endpoint }}" data-guide-locale="{{ guide_lang }}" data-guide-page-title="{{ page.title | default: site.title | escape }}" data-guide-page-path="{{ guide_path | escape }}" aria-label="{% if guide_lang == 'fr' %}Guide public FractaVolta{% else %}Public FractaVolta Guide{% endif %}">
-  <button class="guide-widget__toggle" type="button" aria-expanded="false" aria-controls="fractavolta-guide-panel">
+{% assign guide_mode = include.guide_mode | default: 'floating' %}
+<section class="guide-widget{% if guide_mode == 'page' %} guide-widget--page{% endif %}" data-guide-mode="{{ guide_mode }}" data-guide-endpoint="{{ guide_endpoint }}" data-guide-locale="{{ guide_lang }}" data-guide-page-title="{{ page.title | default: site.title | escape }}" data-guide-page-path="{{ guide_path | escape }}" aria-label="{% if guide_lang == 'fr' %}Guide public FractaVolta{% else %}Public FractaVolta Guide{% endif %}">
+  <button class="guide-widget__toggle" type="button" aria-expanded="{% if guide_mode == 'page' %}true{% else %}false{% endif %}" aria-controls="fractavolta-guide-panel"{% if guide_mode == 'page' %} hidden{% endif %}>
     <span class="guide-widget__toggle-mark" aria-hidden="true">?</span>
     <span>{% if guide_lang == 'fr' %}Guide{% else %}Guide{% endif %}</span>
   </button>
 
-  <div class="guide-widget__panel" id="fractavolta-guide-panel" hidden>
+  <div class="guide-widget__panel" id="fractavolta-guide-panel"{% unless guide_mode == 'page' %} hidden{% endunless %}>
     <div class="guide-widget__head">
       <div>
         <h2 class="guide-widget__title">{% if guide_lang == 'fr' %}Guide public{% else %}Public Guide{% endif %}</h2>
@@ -17,10 +18,12 @@
         <button class="guide-widget__clear" type="button" aria-label="{% if guide_lang == 'fr' %}Effacer la conversation{% else %}Clear conversation{% endif %}">
           {% if guide_lang == 'fr' %}Effacer{% else %}Clear{% endif %}
         </button>
-        <button class="guide-widget__expand" type="button" aria-pressed="false" aria-label="{% if guide_lang == 'fr' %}Agrandir le Guide{% else %}Expand Guide{% endif %}">
-          {% if guide_lang == 'fr' %}Agrandir{% else %}Full{% endif %}
-        </button>
-        <button class="guide-widget__close" type="button" aria-label="{% if guide_lang == 'fr' %}Fermer le Guide{% else %}Close Guide{% endif %}">x</button>
+        {% unless guide_mode == 'page' %}
+          <button class="guide-widget__expand" type="button" aria-pressed="false" aria-label="{% if guide_lang == 'fr' %}Agrandir le Guide{% else %}Expand Guide{% endif %}">
+            {% if guide_lang == 'fr' %}Agrandir{% else %}Full{% endif %}
+          </button>
+          <button class="guide-widget__close" type="button" aria-label="{% if guide_lang == 'fr' %}Fermer le Guide{% else %}Close Guide{% endif %}">x</button>
+        {% endunless %}
       </div>
     </div>
 
@@ -41,6 +44,10 @@
         {% elsif guide_path contains '/rossignol-node' %}
           <button type="button" data-guide-prompt="Explique le Rossignol Node comme prototype FractaVolta minimal en Corse.">Rossignol Node</button>
           <button type="button" data-guide-prompt="Que demontre un abreuvoir automatise sur l'energie-paquet ?">Preuve terrain</button>
+        {% elsif guide_path contains '/guide' %}
+          <button type="button" data-guide-prompt="Explique FractaVolta en Corse a un proprietaire ou a une commune.">FractaVolta en Corse</button>
+          <button type="button" data-guide-prompt="Comment une commune corse peut-elle demarrer un pilote FractaVolta sobre et verifiable ?">Pilote communal</button>
+          <button type="button" data-guide-prompt="Comment une ancienne installation solaire peut-elle avoir une seconde vie locale ?">Seconde vie solaire</button>
         {% else %}
           <button type="button" data-guide-prompt="Explique FractaVolta en Corse a un proprietaire ou a une commune.">FractaVolta en Corse</button>
           <button type="button" data-guide-prompt="Comment une ancienne installation solaire peut-elle avoir une seconde vie locale ?">Seconde vie solaire</button>
@@ -63,6 +70,10 @@
         {% elsif guide_path contains 'papers' %}
           <button type="button" data-guide-prompt="Give a research-oriented path through the public FractaVolta corpus.">Research path</button>
           <button type="button" data-guide-prompt="Which public papers are central to the energy, compute, cognition, and civic stack?">Core papers</button>
+        {% elsif guide_path contains '/guide' %}
+          <button type="button" data-guide-prompt="Explain FractaVolta simply for a first-time visitor.">Understand FractaVolta</button>
+          <button type="button" data-guide-prompt="How could a Corsican municipality start a cautious FractaVolta pilot?">Municipal pilot</button>
+          <button type="button" data-guide-prompt="How can an older solar installation get a local second life?">Solar second life</button>
         {% else %}
           <button type="button" data-guide-prompt="Explain FractaVolta simply for a first-time visitor.">Understand FractaVolta</button>
           <button type="button" data-guide-prompt="Why does FractaVolta talk about energy packets?">Energy packets</button>

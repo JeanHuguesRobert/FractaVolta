@@ -19,12 +19,31 @@
   <body>
     {% include header.html %}
 
-    <main class="site-main">
-      {{ content }}
+    <main class="site-main{% if page.guide_page %} site-main--guide{% endif %}">
+      {% if page.guide_page %}
+        <article class="guide-page">
+          {% if page.title %}
+            <header class="page-header guide-page__header">
+              <h1 class="page-title">{{ page.title }}</h1>
+              {% if page.subtitle %}
+                <p class="page-subtitle">{{ page.subtitle }}</p>
+              {% endif %}
+            </header>
+          {% endif %}
+          <div class="guide-page__intro page-content">
+            {{ content }}
+          </div>
+          {% include guide-widget.html guide_mode='page' %}
+        </article>
+      {% else %}
+        {{ content }}
+      {% endif %}
     </main>
 
     {% include footer.html %}
-    {% include guide-widget.html %}
+    {% unless page.guide_page %}
+      {% include guide-widget.html %}
+    {% endunless %}
     <script src="{{ '/assets/guide.js' | relative_url }}" defer></script>
   </body>
 </html>
