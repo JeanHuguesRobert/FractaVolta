@@ -224,4 +224,5 @@ The administrative protocol tying physical node ownership and IPN packet routing
 
 *These documents link to this file:*
 - [Research Index — FractaVolta](index.md)
+- [Packet Attractor — Fractanet Distributed Demand and Capability Routing](https://github.com/JeanHuguesRobert/inseme/blob/main/research/packet_attractor_fractanet.md)
 <!-- END_AUTO: backlinks -->

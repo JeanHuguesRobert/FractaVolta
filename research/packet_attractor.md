@@ -269,4 +269,5 @@ https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/UNCONSCIOUS_G
 - [Research Index — FractaVolta](index.md)
 - [The Packet as Evolutionary Attractor — moved](../packet_attractor.md)
 - [The Unconscious Grid](UNCONSCIOUS_GRID.md)
+- [Packet Attractor — Fractanet Distributed Demand and Capability Routing](https://github.com/JeanHuguesRobert/inseme/blob/main/research/packet_attractor_fractanet.md)
 <!-- END_AUTO: backlinks -->
