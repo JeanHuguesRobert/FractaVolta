@@ -1,6 +1,6 @@
 ---
 canonical_url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/AGENTS.md
-last_stamped_at: 2026-06-26
+last_stamped_at: 2026-07-06
 document_role: "operational"
 document_kind: "agent-mandate"
 visibility: "public"
@@ -136,3 +136,9 @@ Agents may prepare, draft, summarize, route, compare, calculate, and propose.
 Agents must not commit, push, publish, send, sign, spend, make commercial commitments, or otherwise stabilize an action unless Jean Hugues Robert has given explicit, scoped authorization for that operation.
 
 When authorization is ambiguous, prepare the batch and ask before acting.
+
+## Blocked-tool rule
+
+If a GitHub, connector, permission, policy check, API limit, repository access problem, or other tool failure blocks an intended operation, apply the Cogentia blocked-tool rule by reference.
+
+Do not imply success. Report the blockage, preserve the partial work, and ask whether Jean Hugues Robert wants to intervene manually when manual intervention could unblock the operation.
