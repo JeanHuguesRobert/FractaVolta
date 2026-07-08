@@ -81,11 +81,11 @@ graph LR
   r_jeanhuguesrobert -->|34| r_cogentia
   r_barons_mariani -->|22| r_marenostrum
   r_cogentia -->|22| r_inseme
-  r_fractavolta -->|20| r_inseme
+  r_fractavolta -->|22| r_inseme
   r_inseme -->|20| r_cogentia
   r_cogentia -->|19| r_marenostrum
+  r_fractavolta -->|18| r_barons_mariani
   r_barons_mariani -->|17| r_fractavolta
-  r_fractavolta -->|17| r_barons_mariani
   r_barons_mariani -->|16| r_inseme
   r_jeanhuguesrobert -->|16| r_marenostrum
   r_marenostrum -->|14| r_cogentia
@@ -99,7 +99,7 @@ graph LR
   r_jeanhuguesrobert -->|9| r_fractavolta
   r_fractavolta -->|8| r_inox
   r_inox -->|8| r_marenostrum
-  r_inseme -->|6| r_fractavolta
+  r_inseme -->|8| r_fractavolta
   r_jeanhuguesrobert -->|6| r_inseme
   r_jeanhuguesrobert -->|6| r_inox
   r_barons_mariani -->|5| r_inox
@@ -556,6 +556,7 @@ graph LR
 | [Thermal Packet Networks — A Multi-Scale Store-and-Forward Architecture for Low-Exergy Heat and Cold Distribution](thermal_packet_networks.md) *(working paper v0.2)* | this repo | 2026-05-22 |
 | [Packet Paper Template — A Minimal Method for Declining Generalized Packet Networks into Substrate-Specific Papers](packet_paper_template.md) *(method-template working paper v0.2)* | this repo | 2026-05-22 |
 | [Fractanet — Working paper](fractanet.md) *(working paper, draft v0.1)* | this repo | 2026-05-31 |
+| [FractaLog](fractalog.md) *(working paper — Fractanet log substrate for COP and distributed agent accountability)* | this repo | 2026-07-06 |
 | [Capability Regimes](capability_regimes.md) *(source working paper v0.1-draft — fractal decision under uncertainty for RAIX-COP-Fractanet architectures)* | this repo | 2026-06-15 |
 | [Bonne Marque](bonne_marque_mvp.md) *(conceptual MVP source document v0.2)* | this repo | 2026-06-03 |
 | [AGENTS.md — FractaVolta agent mandate](../AGENTS.md) *(local operational mandate for AI agents working in this repository)* | this repo | 2026-06-13 |
@@ -600,15 +601,6 @@ graph LR
 - Seasonal complementarity model: solar + hydraulic + wind at Mediterranean scale
 - `fracta-wiki` as distributed knowledge substrate for PGN territorial governance
 - SimpliJs revival: wiki + governance as interface layer for FractaVolta corpus
-- [Research Index — barons-Mariani](https://github.com/JeanHuguesRobert/barons-Mariani/blob/main/research/index.md)
-- [Research Index — Cogentia](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/index.md)
-- [Fractanet — Generalized Control Planes for Heterogeneous Packet Networks](fractanet.md)
-- [FractaVolta](../README.md)
-- [Research Index — Inox](https://github.com/JeanHuguesRobert/Inox/blob/master/research/index.md)
-- [Research Index — Inseme](https://github.com/JeanHuguesRobert/inseme/blob/main/research/index.md)
-- [Public Corpus Navigation](https://github.com/JeanHuguesRobert/JeanHuguesRobert/blob/main/research/public-navigation.md)
-- [Research Index — Jean Hugues Noël Robert (Profile / Entry Point)](https://github.com/JeanHuguesRobert/JeanHuguesRobert/blob/main/research/index.md)
-- [Research Index — MareNostrum](https://github.com/JeanHuguesRobert/marenostrum/blob/main/research/index.md)
 <!-- END_AUTO: possibilities -->
 ---
 

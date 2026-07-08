@@ -1061,6 +1061,7 @@ Whether GPN is a useful framework will be determined by deployment, measurement,
 - [Rendre capable — noyau doctrinal provisoire](https://github.com/JeanHuguesRobert/barons-Mariani/blob/main/research/noyau_doctrinal_rendre_capable.md)
 - [Cognitive Packet Switching](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/cognitive_packet_switching.md)
 - [For researchers](../docs/for-researchers.md)
+- [FractaLog — Fractal Append-Only Logs for Agents, Mandates, Custody, Inheritance and Delayed Transparency](fractalog.md)
 - [Fractanet — Generalized Control Planes for Heterogeneous Packet Networks](fractanet.md)
 - [FractaVolta](../README.md)
 - [Research Index — FractaVolta](index.md)

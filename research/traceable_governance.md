@@ -297,6 +297,7 @@ The review process is public, attributed, append-only. It is, in that sense, an 
 - [Concept Index — FractaVolta](concepts.md)
 - [Electricity in Containers](electricity_in_containers.md)
 - [Fractal Architectures for Traceable Governance — moved](../traceable_governance.md)
+- [FractaLog — Fractal Append-Only Logs for Agents, Mandates, Custody, Inheritance and Delayed Transparency](fractalog.md)
 - [FractaTera](tera.md)
 - [Research Index — FractaVolta](index.md)
 - [MareNostrum — Energy Availability Contracts](https://github.com/JeanHuguesRobert/marenostrum/blob/main/research/CONTRACTS.md)
