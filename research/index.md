@@ -106,3 +106,7 @@ This repository instantiates the **physical infrastructure layer** of the [DHITL
 
 *Priority established by first public commit. License: CC BY-SA 4.0.*
 *Fork to explore alternatives. Challenge via issues.*
+
+## Newly indexed working corpus (July 2026)
+
+- [Ownership Packets and the Cognitive Orchestration Protocol](ownership_packets_and_cop.md)
