@@ -1,6 +1,6 @@
 ---
 canonical_url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/AGENTS.md
-last_stamped_at: 2026-07-06
+last_stamped_at: 2026-07-13
 document_role: "operational"
 document_kind: "agent-mandate"
 visibility: "public"
@@ -16,6 +16,17 @@ classification_confidence: "strong"
 This file gives operational instructions to AI agents and human assistants working in the `JeanHuguesRobert/FractaVolta` repository.
 
 It is not the full doctrine. It is a compact mandate for acting inside this repository without confusing operational design, public doctrine, and implementation detail.
+
+## Shared baseline and read order
+
+Before acting here:
+
+1. read this repository-local `AGENTS.md`;
+2. read the shared [`cogentia/AGENTS.md`](https://github.com/JeanHuguesRobert/cogentia/blob/main/AGENTS.md);
+3. apply this local mandate wherever it is more specific or more restrictive;
+4. consult the linked source doctrine when interpretation is needed.
+
+The shared baseline supplies the default workflow. This file specializes it for FractaVolta; it does not silently widen permissions.
 
 ## Repository role
 
@@ -62,6 +73,7 @@ Human authorization governs stabilization.
 
 References:
 
+- [`cogentia/AGENTS.md`](https://github.com/JeanHuguesRobert/cogentia/blob/main/AGENTS.md)
 - [`cogentia/research/agent_configuration_layer.md`](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/agent_configuration_layer.md)
 - [`cogentia/research/optimistic_mainline_governance.md`](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/optimistic_mainline_governance.md)
 
@@ -70,6 +82,8 @@ References:
 This repository follows **Optimistic Mainline Governance** by reference, not by copying the doctrine here.
 
 Small direct commits to `main` are acceptable when explicitly authorized, scoped, reversible, inspectable by diff, and reported after completion.
+
+Do not create a branch or PR by default. Use one only when explicit instruction, collaboration, repository protection, high risk, or genuine isolation value justifies it.
 
 Because this repository may contain technical, operational, economic and strategic claims, direct-main work must not overstate maturity, partnerships, financing, feasibility, regulatory status or production readiness. Code or configuration changes require available checks, or an explicit report of missing checks and residual risk.
 
