@@ -3,7 +3,7 @@ title: "Research Index — FractaVolta"
 description: "A map of what is, what is in progress, and what could be."
 layout: default
 nav_order: 1
-last_modified_at: 2026-07-06
+last_modified_at: 2026-07-17
 license: CC BY-SA 4.0
 affiliation: Institut Mariani / C.O.R.S.I.C.A., 1 cours Paoli, F-20250 Corte, Corsica
 date: 2026-05-13
@@ -41,7 +41,7 @@ This repository instantiates the **physical infrastructure layer** of the [DHITL
 | [The Packet as Evolutionary Attractor — Scale-Invariant Transitions in Complex Networks](packet_attractor.md) | this repo | 2026-05-08 |
 | [The Packet Transition — A Lateral Reading of Circuit Networks](packet_transition.md) | this repo | 2026-05-08 |
 | [Inference Packet Networks — A RAID/ARPANET Continuity Layer for Sovereign AI Infrastructure](inference_packet_network.md) | this repo | 2026-05-14 |
-| [Guaranteed Inference — A Resilient, Routable and Traceable Fallback Layer for Critical AI Workloads](garanteed_inference.md) *(working paper v0.3-market)* | this repo | 2026-05-18 |
+| [Guaranteed Inference — A Resilient, Routable and Traceable Fallback Layer for Critical AI Workloads](garanteed_inference.md) *(working paper v0.3-market)* | this repo | 2026-05-18 |\n| [Assured Capacity Reservations](assured-capacity-reservations.md) *(source architecture and market-design note v0.1-draft — SLA priority, insurance chains, degraded delivery, and anti-arson invariants)* | this repo | 2026-07-17 |
 | [DC-Native Energy Packet Networks](dc_native_epn.md) | this repo | 2026 |
 | [Electricity in Containers — Store-and-Forward Energy Logistics](electricity_in_containers.md) | this repo | 2026-05-06 |
 | [The Unconscious Grid — Store-and-Forward as the Repressed Solution](UNCONSCIOUS_GRID.md) *(entry point for the packetization corpus ; §8 extends the diagnosis from energy to cognition, sociability, money, and territory)* | this repo | 2026-05-21 |
