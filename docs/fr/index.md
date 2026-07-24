@@ -3,9 +3,21 @@ title: FractaVolta en Corse
 subtitle: Transition vers l’énergie-paquet, au service du territoire.
 lang: fr
 alternate_url: /
-description: "FractaVolta en Corse : transformer le solaire local en capacité utile, stockée, tracée et réversible. Seconde vie des installations, audits, pilotes avec agriculteurs, collectivités et installateurs."
+description: 'FractaVolta en Corse : transformer le solaire local en capacité utile, stockée, tracée et réversible. Seconde vie des installations, audits, pilotes avec agriculteurs, collectivités et installateurs.'
 canonical_url: https://fractavolta.com/fr/
-last_stamped_at: 2026-06-02
+last_stamped_at: 2026-06-02T00:00:00.000Z
+author: unknown
+date: unknown
+provenance:
+  origin_type: unknown
+  origin_repository: unknown
+  origin_ref: unknown
+  origin_date: unknown
+  derived_from: []
+review:
+  status: unreviewed
+  reviewed_by: []
+update_policy: UP-DEFAULT-REVIEWED
 ---
 
 # FractaVolta en Corse

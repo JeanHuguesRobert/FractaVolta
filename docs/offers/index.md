@@ -1,11 +1,22 @@
 ---
-title: "Offres FractaVolta"
-subtitle: "Déconnexion, Seconde Vie, Vignes IA"
-status: "derived navigation page — draft"
-version: "0.1"
-date: "2026-06-20"
-language: "fr"
+title: Offres FractaVolta
+subtitle: Déconnexion, Seconde Vie, Vignes IA
+status: derived navigation page — draft
+version: '0.1'
+date: '2026-06-20'
+language: fr
 human_validation_required: true
+author: unknown
+provenance:
+  origin_type: unknown
+  origin_repository: unknown
+  origin_ref: unknown
+  origin_date: unknown
+  derived_from: []
+review:
+  status: unreviewed
+  reviewed_by: []
+update_policy: UP-DEFAULT-REVIEWED
 ---
 
 # Offres FractaVolta

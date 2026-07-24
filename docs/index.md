@@ -3,9 +3,21 @@ title: FractaVolta
 layout: home
 lang: en
 alternate_url: /fr/
-description: "FractaVolta turns local energy into traceable capacity: packetized energy, DC-native nodes, sovereign inference, cognitive infrastructure, and civic continuity for Corsica and Mediterranean territories."
+description: 'FractaVolta turns local energy into traceable capacity: packetized energy, DC-native nodes, sovereign inference, cognitive infrastructure, and civic continuity for Corsica and Mediterranean territories.'
 canonical_url: https://fractavolta.com/
-last_stamped_at: 2026-06-02
+last_stamped_at: 2026-06-02T00:00:00.000Z
+author: unknown
+date: unknown
+provenance:
+  origin_type: unknown
+  origin_repository: unknown
+  origin_ref: unknown
+  origin_date: unknown
+  derived_from: []
+review:
+  status: unreviewed
+  reviewed_by: []
+update_policy: UP-DEFAULT-REVIEWED
 ---
 
 ## From photons to inference
