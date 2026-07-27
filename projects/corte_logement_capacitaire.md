@@ -58,7 +58,13 @@ Il constitue un cas d'usage matériel de FractaVolta : non plus seulement packet
 
 ### 2.1. Le déficit de petites unités habitables
 
-Hypothèse de travail : Corte manque d'au moins **un millier de studios ou quasi-studios** adaptés aux étudiants, stagiaires, jeunes actifs, chercheurs invités, saisonniers sobres et personnes en mobilité temporaire.
+> **Point de situation documenté — sources publiques 2025–2026.**  
+> Le plan territorial de relance du logement en Corse indique environ 5 000 étudiants, environ 850 logements CROUS à Corte, environ 2 000 demandes annuelles dont environ 400 satisfaites, des logements privés rapidement pris d’assaut dès le printemps, et des loyers indicatifs d’environ 450 € pour un studio et jusqu’à 800 € pour un T3. Il annonce également 100 studios supplémentaires en 2027. La page du CROUS de Corse consultée en juillet 2026 fait état de 836 logements rénovés ; l’écart avec l’ordre de grandeur de 850 doit être conservé comme différence de date ou de périmètre, non artificiellement effacé.  
+> Sources : [plan territorial 2025](https://www.corse.developpement-durable.gouv.fr/IMG/pdf/r_scil_plan_territorialise_logement_t11_090226_.pdf) ; [CROUS de Corse](https://www.crous-corse.fr/se-loger/).
+
+Hypothèse de travail : Corte manque d’au moins **un millier de studios ou quasi-studios** adaptés aux étudiants, stagiaires, jeunes actifs, chercheurs invités, saisonniers sobres et personnes en mobilité temporaire.
+
+Cette estimation est une **hypothèse prudente de dimensionnement**, éclairée notamment par l’écart entre les demandes CROUS et les attributions. Elle ne résulte pas mécaniquement des 1 600 demandes non satisfaites : il faut isoler les doubles demandes, les étudiants déjà logés, les navetteurs et les besoins relevant d’autres solutions.
 
 Cette estimation doit être documentée par :
 
