@@ -64,6 +64,16 @@ C.O.R.S.I.C.A. (loi 1901, non-commercial)
              + C.O.R.S.I.C.A.              local sovereign partner
 ```
 
+
+### 1.2 Documented public recognition (TROPH'énergies)
+
+An official article published by the Agence d'Aménagement durable, d'Urbanisme et d'Énergie de la Corse (AUE) records that **Association C.O.R.S.I.C.A.** received a **“Coup de Pouce”** award for Mariani Village in the TROPH'énergies 2020 edition. The article identifies the project as a student eco-responsible residence built from recycled shipping containers and states that it was developed by **Loreleï Depoilly** with interested professionals.
+
+The official award photograph accompanying the article shows the cheque awarded to Association C.O.R.S.I.C.A.; its amount is **€5,000**. This is a historical source for the project's public recognition and does not, by itself, establish any later institutional relationship or outcome.
+
+Source: AUE, *Concours TROPH’énergies: les lauréats ont été récompensés!*
+https://www.aue.corsica/%F0%9F%8F%86-Concours-TROPH-energies-les-laureats-ont-ete-recompenses_a357.html
+
 ### 1.2 The target market
 
 Mariani Village serves two primary occupancy profiles:
