@@ -85,6 +85,12 @@ Each container performs at most one return journey per year. A container occupie
 
 This deliberate annual repositioning — not a frequent rotation — is the operational expression of the Energy Packet Network principle at its slowest tempo: **the container is a packet, the annual move is the routing event, demand is the routing metric.** The low frequency of moves is a constraint that imposes discipline on site selection: each deployment is a considered commitment, not an opportunistic placement.
 
+### 1.2 Seasonal cross-subsidy and territorial stabilisation
+
+The annual relocation also carries a social and territorial purpose. The historical Mariani Village proposition was not to maximise tourist revenue as an end in itself, but to redirect part of seasonal coastal revenue towards affordable student occupancy in Corte during the academic year. In this model, tourist demand finances part of the student rent rather than displacing students from the housing market.
+
+The intended stabilisation effect is dual: reduce pressure on student housing in Corte and avoid responding to summer demand through permanent coastal construction. This remains a model to be tested under applicable planning, transport, insurance, tax and operating rules; it is not a claim that the effect has already been achieved.
+
 ---
 
 ## 2. The Container as Housing Packet
