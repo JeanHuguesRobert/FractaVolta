@@ -74,7 +74,7 @@ The official award photograph accompanying the article shows the cheque awarded 
 Source: AUE, *Concours TROPH’énergies: les lauréats ont été récompensés!*
 https://www.aue.corsica/%F0%9F%8F%86-Concours-TROPH-energies-les-laureats-ont-ete-recompenses_a357.html
 
-### 1.2 The target market
+### 1.3 The target market
 
 Mariani Village serves two primary occupancy profiles:
 
