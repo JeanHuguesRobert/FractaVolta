@@ -84,6 +84,7 @@ This repository instantiates the **physical infrastructure layer** of the [DHITL
 | Title | Location |
 |---|---|
 | [Discours de la seconde méthode](https://github.com/JeanHuguesRobert/barons-Mariani/blob/main/research/second_method.md) | barons-Mariani |
+| [Potentics of Compute — From Dormant Capacity to Collective Capability](https://github.com/JeanHuguesRobert/barons-Mariani/blob/main/research/potentics_of_compute.md) *(source working paper v0.3 — theoretical laboratory for RAIX compute, trust and capacity forecasting)* | barons-Mariani |
 | [DHITL — Democratic Humans in the Loop](https://github.com/JeanHuguesRobert/marenostrum/blob/main/research/DHITL.md) | marenostrum |
 | [CXU Specification](https://github.com/JeanHuguesRobert/marenostrum/blob/main/research/CXU_SPEC.md) | marenostrum |
 | [Cogentia Commons Working Paper](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/Cogentia_Commons_Working_Paper.md) | cogentia |
