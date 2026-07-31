@@ -1,13 +1,14 @@
 # Papers index. Grouped by layer of the stack. Order is intentional.
 # All papers live as .md in the repo (linked); the canonical URL is on github.com.
+# Auto-generated & expanded by Operium autonomous site worker.
 
 - key: language
   label: Language and runtime substrate
-  description: The future *Fractanet* — agents and nodes that coordinate without a capturable centre — needs a runtime that descends gracefully from comfortable hosts to bare metal. Inox is that runtime, currently in TypeScript, headed for WASM, C/C++ and ESP32.
+  description: The future *Fractanet* — agents and nodes that coordinate without a capturable centre — needs a runtime that descends gracefully from comfortable hosts to bare metal. Inox is that runtime.
   papers:
     - title: The Inox Programming Language — Specification
-      subtitle: Concatenative stack VM, named values, control/data plane separation, dialects, actors — TypeScript reference implementation, headed for WASM/C/ESP32 (in Inox, working paper since 2021-06)
-      date: 2021–
+      subtitle: Concatenative stack VM, named values, control/data plane separation, dialects, actors (working paper)
+      date: "2021–2026"
       kind: working-paper
       url: https://github.com/JeanHuguesRobert/Inox/blob/master/research/inox-spec.md
 
@@ -16,8 +17,8 @@
   description: Packetized energy at every scale — from phone battery to container vessel — and the hydraulic complement.
   papers:
     - title: The Unconscious Grid
-      subtitle: Store-and-forward as the repressed solution to energy sovereignty — and entry point to the packetization corpus (§8 extends the diagnosis to cognition, sociability, money, and territory)
-      date: 2026-05
+      subtitle: Store-and-forward as the repressed solution to energy sovereignty (§8 extends to cognition and territory)
+      date: "2026-05"
       kind: founding-paper
       url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/UNCONSCIOUS_GRID.md
       translations:
@@ -25,37 +26,43 @@
 
     - title: DC-Native Energy Packet Networks
       subtitle: Layered analysis from packet internals to HVDC — quantitative efficiency case for 48V DC-first nodes
-      date: 2026
+      date: "2026"
       kind: paper
       url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/dc_native_epn.md
 
     - title: Packetized Gravity Networks
-      subtitle: Extending the exergy chain through gravitational storage — historical canals as PGN substrate, Corsica case study
-      date: 2026
+      subtitle: Extending the exergy chain through gravitational storage — historical canals as PGN substrate
+      date: "2026"
       kind: paper
       url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/PGN.md
 
     - title: Mariani Village
       subtitle: A relocatable DC-native housing fleet — Dilorta SAS, BLE packet tracking, seasonal routing
-      date: 2026
+      date: "2026"
       kind: paper
       url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/mariani_village.md
 
     - title: Electricity in Containers
       subtitle: Store-and-forward energy logistics — working note
-      date: 2026-05
+      date: "2026-05"
       kind: working-note
       url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/electricity_in_containers.md
 
+    - title: Thermal Packet Networks
+      subtitle: Thermal energy routing, storage, and exergy harvesting
+      date: "2026"
+      kind: paper
+      url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/thermal_packet_networks.md
+
     - title: The Packet as Evolutionary Attractor
-      subtitle: Scale-invariant transitions in complex networks — in FractaVolta
-      date: 2026
+      subtitle: Scale-invariant transitions in complex networks
+      date: "2026"
       kind: paper
       url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/packet_attractor.md
 
     - title: The Packet Transition — A Lateral Reading
-      subtitle: Phronèsis, amathia, transition taxonomy — in FractaVolta
-      date: 2026
+      subtitle: Phronèsis, amathia, transition taxonomy
+      date: "2026"
       kind: paper
       url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/packet_transition.md
 
@@ -65,19 +72,37 @@
   papers:
     - title: CXU Specification
       subtitle: Compute eXergy Unit — pricing primitive for sovereign inference (in MareNostrum)
-      date: 2026
+      date: "2026"
       kind: spec
       url: https://github.com/JeanHuguesRobert/marenostrum/blob/main/research/CXU_SPEC.md
 
     - title: Inference Packet Networks
       subtitle: A RAID/ARPANET continuity layer for sovereign AI infrastructure (v2.0)
-      date: 2026-05
+      date: "2026-05"
       kind: paper
       url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/inference_packet_network.md
 
+    - title: Guaranteed Inference
+      subtitle: Hardware-backed SLAs and deterministic execution bounds for compute nodes
+      date: "2026"
+      kind: paper
+      url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/garanteed_inference.md
+
+    - title: Safe Compute Exergy (SCE)
+      subtitle: Safety metrics and energy bounds for sovereign inference workloads (in MareNostrum)
+      date: "2026"
+      kind: paper
+      url: https://github.com/JeanHuguesRobert/marenostrum/blob/main/research/safe_compute_exergy.md
+
+    - title: Infrastructure Is All You Need
+      subtitle: Empirical foundation for physical compute sovereignty (in MareNostrum)
+      date: "2026"
+      kind: paper
+      url: https://github.com/JeanHuguesRobert/marenostrum/blob/main/research/infrastructure_is_all_you_need.md
+
     - title: Value-Shaped Solar and Containerized Compute
       subtitle: Matching photovoltaic generation to compute demand
-      date: 2026
+      date: "2026"
       kind: paper
       url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/value_shaped_solar_and_containerized_compute.md
 
@@ -85,33 +110,51 @@
   label: Cognition layer
   description: Durable, replayable, replaceable cognition. COP as substrate; continuations as the unit of suspended judgment.
   papers:
+    - title: What is Potentics? — Toward a Science of the Possible
+      subtitle: Systemic modeling of political and algorithmic capability (in barons-Mariani)
+      date: "2026-05"
+      kind: founding-paper
+      url: https://github.com/JeanHuguesRobert/barons-Mariani/blob/main/research/potentics.md
+
     - title: The COP Manifesto
       subtitle: TCP/IP for intelligences — in inseme
-      date: 2025–2026
+      date: "2025–2026"
       kind: manifesto
       url: https://github.com/JeanHuguesRobert/inseme/blob/main/packages/cop-core/Manifesto.md
 
     - title: COP Architecture
       subtitle: Full protocol specification — events, topics, tasks, steps, artifacts, continuations
-      date: 2026
+      date: "2026"
       kind: spec
       url: https://github.com/JeanHuguesRobert/inseme/blob/main/packages/cop-core/Architecture.md
 
     - title: Agent-Resumable CLI
-      subtitle: Externalized judgment, continuations, and provider-neutral resumption for AI-compatible CLI tools (in Cogentia)
-      date: 2026-05
+      subtitle: Externalized judgment, continuations, and provider-neutral resumption (in Cogentia)
+      date: "2026-05"
       kind: paper
       url: https://github.com/JeanHuguesRobert/cogentia/blob/main/research/agent_resumable_cli.md
 
     - title: Cognitive Packets
-      subtitle: An envelope-and-payload format for human–AI and multi-agent cooperation — generalises the Agent-Resumable CLI continuation beyond the CLI (in Cogentia, v0.3)
-      date: 2026-05
+      subtitle: Envelope-and-payload format for human–AI and multi-agent cooperation (in Cogentia, v0.3)
+      date: "2026-05"
       kind: paper
       url: https://github.com/JeanHuguesRobert/cogentia/blob/main/research/cognitive_packets.md
 
+    - title: Cogentia Workflows & Multi-Agent Execution
+      subtitle: Operational execution models for multi-agent network pipelines (in Cogentia)
+      date: "2026-06"
+      kind: paper
+      url: https://github.com/JeanHuguesRobert/cogentia/blob/main/research/cogentia_workflows.md
+
+    - title: Derived Products Methodology
+      subtitle: Formalization of source ↔ derived product boundary in knowledge networks (in Cogentia)
+      date: "2026"
+      kind: paper
+      url: https://github.com/JeanHuguesRobert/cogentia/blob/main/research/derived_products.md
+
     - title: Cogentia Commons — Working Paper
       subtitle: Methodology for distributed knowledge production (in Cogentia)
-      date: 2026
+      date: "2026"
       kind: working-paper
       url: https://github.com/JeanHuguesRobert/cogentia/blob/main/research/Cogentia_Commons_Working_Paper.md
 
@@ -120,44 +163,50 @@
   description: Democratic infrastructure built on the cognition layer — auditable, neutral, federated.
   papers:
     - title: DHITL — Democratic Humans in the Loop
-      subtitle: The axiom — AI may participate in epistemic production; living persons alone govern (in MareNostrum)
-      date: 2025–2026
+      subtitle: Axiom — AI may participate in epistemic production; living persons alone govern (in MareNostrum)
+      date: "2025–2026"
       kind: axiom
       url: https://github.com/JeanHuguesRobert/marenostrum/blob/main/research/DHITL.md
 
     - title: Discours de la seconde méthode
-      subtitle: Methodology rules — publish process, objections as first-class, machine-readable structure, corpus as evidence (in barons-Mariani)
-      date: 2026-05
+      subtitle: Methodology rules — publish process, objections as first-class, machine-readable structure (in barons-Mariani)
+      date: "2026-05"
       kind: founding-paper
       url: https://github.com/JeanHuguesRobert/barons-Mariani/blob/main/research/second_method.md
 
     - title: Autonomia
-      subtitle: Capacités collectives, capital territorial et flexibilité d'usage dans le cas corse — central concept of the Corsican senatorial campaign; §2.7 announces the 1755 test (in barons-Mariani, v0.12)
-      date: 2026-05
+      subtitle: Capacités collectives, capital territorial et flexibilité d'usage dans le cas corse (in barons-Mariani)
+      date: "2026-05"
       kind: working-paper
       url: https://github.com/JeanHuguesRobert/barons-Mariani/blob/main/research/autonomia.md
 
     - title: La pathologie du secret
-      subtitle: Imputabilité humaine, traçabilité démocratique et refus de l'irresponsabilité artificielle — legal-doctrinal companion to Democratic AI Safety, anchored in French/EU positive law, DataJust case study (in barons-Mariani, v0.4)
-      date: 2026-05
+      subtitle: Imputabilité humaine, traçabilité démocratique et refus de l'irresponsabilité artificielle (in barons-Mariani)
+      date: "2026-05"
       kind: working-paper
       url: https://github.com/JeanHuguesRobert/barons-Mariani/blob/main/research/pathologie_du_secret.md
 
+    - title: Pacte Anti-Capture Solaire et Inférentielle
+      subtitle: Protection against regional inferential and energy capture (in MareNostrum)
+      date: "2026-06"
+      kind: manifesto
+      url: https://github.com/JeanHuguesRobert/marenostrum/blob/main/research/pacte_anti_capture_solaire_inferentielle.md
+
     - title: Kudocracy
-      subtitle: Recommandation civique traçable, votations et démocratie liquide assistée par agents — traceable civic recommendation layer for votations, complementary to liquid democracy (in barons-Mariani, v0.1)
-      date: 2026-05
+      subtitle: Recommandation civique traçable, votations et démocratie liquide assistée (in barons-Mariani)
+      date: "2026-05"
       kind: working-paper
       url: https://github.com/JeanHuguesRobert/barons-Mariani/blob/main/research/kudocracy.md
 
     - title: Kudos
-      subtitle: A Maussian complementary currency, euro-backed — superposition rather than substitution; euro closes the transaction, Kudos opens the counter-gift layer (in barons-Mariani, v0.3)
-      date: 2026-05
+      subtitle: Maussian complementary currency, euro-backed — counter-gift counter-layer (in barons-Mariani)
+      date: "2026-05"
       kind: working-paper
       url: https://github.com/JeanHuguesRobert/barons-Mariani/blob/main/research/kudos.md
 
     - title: La méthode des terrains féconds
-      subtitle: Dépolariser par reconfiguration préalable des oppositions — a pre-deliberative protocol; founding example "common protocol, free operations" (in barons-Mariani, v0.4)
-      date: 2026-05
+      subtitle: Dépolariser par reconfiguration préalable des oppositions (in barons-Mariani)
+      date: "2026-05"
       kind: working-paper
       url: https://github.com/JeanHuguesRobert/barons-Mariani/blob/main/research/methode_terrains_feconds.md
 
@@ -165,26 +214,44 @@
   label: Site and region
   description: FractaVolta's territorial anchor — multi-scale sensing, partner engagement, commercial framing.
   papers:
+    - title: FractaLog — Fractal Append-Only Logs
+      subtitle: Append-only logs for agents, mandates, custody, inheritance and delayed transparency
+      date: "2026-06"
+      kind: paper
+      url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/fractalog.md
+
+    - title: Fractanet — Generalized Control Planes
+      subtitle: Generalized control planes for heterogeneous packet networks
+      date: "2026-06"
+      kind: paper
+      url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/fractanet.md
+
+    - title: FractaVolta Seconde Vie — Corse
+      subtitle: Operational deployment strategy for second-life photovoltaics in Corsica
+      date: "2026-06"
+      kind: paper
+      url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/fractavolta_seconde_vie_corse.md
+
     - title: FractaTera
       subtitle: Multi-scale sensing and territorial mapping reference architecture
-      date: 2026
+      date: "2026"
       kind: reference-architecture
       url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/tera.md
 
     - title: FractaVolta — Commercial Overview
       subtitle: Commercial overview and deployment framework
-      date: 2026
+      date: "2026"
       kind: overview
       url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/fractavolta_paper.md
 
     - title: Partner Brief
       subtitle: Agrivoltaics pilot opportunity — Corsica
-      date: 2026-05
+      date: "2026-05"
       kind: brief
       url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/partner_brief.md
 
     - title: Traceable Governance
       subtitle: Fractal architectures for traceable governance
-      date: 2026
+      date: "2026"
       kind: paper
       url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/traceable_governance.md
