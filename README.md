@@ -371,3 +371,13 @@ All papers: CC BY-SA 4.0. All software: MIT.
 
 *License: MIT (code) · CC BY-SA 4.0 (research).*
 *Author: Jean Hugues Noël Robert, baron Mariani — Institut Mariani / C.O.R.S.I.C.A., 1 cours Paoli, F-20250 Corte, Corsica — jhr@baronsmariani.org*
+
+
+
+## Public Guide & Corpus Stack (v2026.07)
+
+- **Website & Papers Index**: [https://fractavolta.com/papers](https://fractavolta.com/papers) — 38 curated papers across 6 stack layers (*Language*, *Energy*, *Compute*, *Cognition*, *Civic*, *Site & Region*).
+- **Public Web Guide**: [https://cogentia.fractavolta.com/guide](https://cogentia.fractavolta.com/guide) — Interactive S7 layered search & real-time streaming Q&A.
+- **FractaLog**: [research/fractalog.md](research/fractalog.md) — Fractal append-only logs for agents, mandates, custody, and delayed transparency.
+- **Fractanet**: [research/fractanet.md](research/fractanet.md) — Generalized control planes for heterogeneous packet networks.
+- **FractaVolta Seconde Vie — Corse**: [research/fractavolta_seconde_vie_corse.md](research/fractavolta_seconde_vie_corse.md) — Operational deployment strategy for second-life photovoltaics in Corsica.
