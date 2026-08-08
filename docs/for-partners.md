@@ -5,6 +5,7 @@ lang: en
 description: "FractaVolta works with public, private, and territorial partners to turn local solar energy into traceable capacity: packetized energy, sovereign inference, cognitive infrastructure, and civic continuity without software lock-in."
 canonical_url: https://fractavolta.com/for-partners
 last_stamped_at: 2026-06-02
+last_modified_at: 2026-08-08
 date: "2026-06-02"
 status: "active — English entry point"
 ---
@@ -16,6 +17,8 @@ FractaVolta answers a long-standing question: **how can autonomous agents coordi
 The same question appears in programming languages, sensor networks, energy infrastructure, cognitive tooling, and democratic institutions. FractaVolta treats it as an infrastructure problem and deploys a coherent stack across four layers: energy, compute, cognition, and civic continuity.
 
 We charge for engineering, integration, deployment, operations, and regulatory judgment. We do not charge for enclosing the underlying knowledge.
+
+A complementary economic objective is to let paid professional and institutional deployments help finance a broadly accessible individual Digital Twin baseline. The exact free/individual service boundary remains to be defined; it is a product objective, not a current contractual promise.
 
 ## What we do not sell
 
@@ -64,6 +67,33 @@ FractaVolta uses Cogentia as its open cognitive layer:
 
 The result is not a folder of retrospective PDFs. It is a working, versioned, inspectable corpus of decisions.
 
+### Accountable Digital Twins
+
+FractaVolta is developing a professional Digital Twin proposition around a stricter accountability chain than ordinary assistant logs:
+
+```text
+Principal
+→ Mandate
+→ LogicalAgent / Actor
+→ CapabilityInvocation
+→ Act
+→ Effect / Evidence
+→ Accounting transaction
+→ Analytical imputation
+→ Reconciliation
+```
+
+Two layers are deliberately joined:
+
+- **Archia / act traceability** preserves who authorized an act, who executed it, under which mandate, what external effect occurred, and which evidence supports it;
+- **COP/Accounting** preserves resource budgets, reservations, commitments, measured usage, balanced transactions, analytical cost allocation, and later reconciliation against stronger financial evidence such as supplier invoices.
+
+The commercial hypothesis is that this combination matters in environments where organizations cannot responsibly delegate consequential work to AI systems unless authority, effects, resource use, cost attribution, and corrections remain reconstructible.
+
+Potential professional services include private deployment, mandate/access integration, evidence retention, provider-neutral usage adapters, invoice reconciliation, analytical allocation, statutory-accounting integration, and accountable operational support.
+
+This is a developing capability and market thesis. We do not currently claim certified accounting software, automatic legal compliance, or competitive uniqueness. See [Accountable Digital Twins](./offers/accountable-digital-twins) and the [commercial source thesis](../research/accountable_digital_twin_commercial_thesis).
+
 ### AI-assisted R&D traceability
 
 For partners using AI in research, invention, design, engineering, creative work, or institutional decision-making, FractaVolta can deploy Cogentia private or restricted modes for:
@@ -96,6 +126,7 @@ FractaVolta does not primarily sell energy or tokens. It sells the capacity not 
 - **Energy:** continue operating when the grid is congested, unavailable, or economically unfavourable.
 - **Compute:** keep inference available when hyperscale systems are degraded, unavailable, or too expensive.
 - **Cognition:** preserve reasoning, decisions, alternatives, and objections across agents and providers.
+- **Accountability:** preserve mandate, act, effect evidence, resource use, analytical imputation, and correction history across providers and handlers.
 - **Civic:** keep deliberation infrastructure independent from opaque SaaS providers.
 
 This is a service, integration, and operations model, not a software licensing model.
@@ -108,6 +139,7 @@ Beyond hardware and running platforms, every project should produce its own audi
 - **Failed alternatives are not erased.** They remain part of the operational record with the reason they were rejected.
 - **Claims are anchored.** Datasheet numbers, architectural assertions, and cost estimates point to stable documents under version control.
 - **AI assistance is replaceable.** Any compliant continuation can be resumed by another agent, a local model, or a human operator.
+- **Consequential Acts are attributable.** Where the governed runtime supports it, authority, mandate, actor/handler, effect evidence, resource consequences, and later corrections remain distinguishable rather than collapsed into a generic log.
 
 This is not compliance theatre layered on top of ordinary consulting. It is how the work is done. See the [methodology page](./methodology) for the formal account.
 
@@ -121,6 +153,7 @@ FractaVolta is especially relevant for:
 - municipalities and local authorities;
 - industrial or tourist sites with energy autonomy needs;
 - companies, laboratories, and institutions using AI in R&D or decision-making;
+- organizations delegating bounded operational work to AI-assisted systems while retaining mandate, cost, and evidence control;
 - institutions seeking deliberation tools without vendor lock-in;
 - partners working on Mediterranean energy, compute, and civic sovereignty.
 
