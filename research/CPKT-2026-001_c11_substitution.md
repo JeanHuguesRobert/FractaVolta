@@ -8,6 +8,14 @@ subscribing_homes:
   - "the author's working conversation of 2026-07-21"
 carrier: "the human author (physical transport between providers)"
 status: "complete — consolidated and returned home (2026-07-21); one decorrelated non-LLM hop remains open as continuation"
+document_role: "source"
+document_kind: "experiment-log"
+visibility: "public"
+lifecycle_state: "active"
+classification_source: "cogentia.js"
+classification_version: "1"
+classification_rule: "experiment-log"
+classification_confidence: "medium"
 ---
 
 # CPKT-2026-001 — Substitution Experiment on Claim C11

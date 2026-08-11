@@ -31,6 +31,10 @@ tags:
   - anti-capture
   - comptabilité analytique
   - traçabilité
+classification_source: "cogentia.js"
+classification_version: "1"
+classification_rule: "explicit-metadata"
+classification_confidence: "medium"
 ---
 
 # FractaVolta — modèle commercial de subvention croisée

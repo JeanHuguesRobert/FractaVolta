@@ -23,6 +23,10 @@ document_kind: "architecture-note"
 visibility: "public"
 lifecycle_state: "working"
 ai_readability: "high"
+classification_source: "cogentia.js"
+classification_version: "1"
+classification_rule: "explicit-metadata"
+classification_confidence: "medium"
 ---
 
 # Ownership Packets and the Cognitive Orchestration Protocol

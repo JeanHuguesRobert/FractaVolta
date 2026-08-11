@@ -56,6 +56,10 @@ tags:
   - anti-arson
   - degraded-mode
   - fractanet
+classification_source: "cogentia.js"
+classification_version: "1"
+classification_rule: "explicit-metadata"
+classification_confidence: "medium"
 ---
 
 # Assured Capacity Reservations

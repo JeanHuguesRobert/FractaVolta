@@ -41,6 +41,10 @@ tags:
   - auditability
   - commercial-offer
   - open-source
+classification_source: "cogentia.js"
+classification_version: "1"
+classification_rule: "explicit-metadata"
+classification_confidence: "medium"
 ---
 
 # Accountable Digital Twins — Commercial Thesis for FractaVolta

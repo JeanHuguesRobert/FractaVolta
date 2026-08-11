@@ -20,6 +20,10 @@ tags: [fractanet, packetization, cpsn, xpsn, potentics]
 related:
   - "research/when_cognition_became_traffic.md"
   - "research/UNCONSCIOUS_GRID.md"
+classification_source: "cogentia.js"
+classification_version: "1"
+classification_rule: "explicit-metadata"
+classification_confidence: "medium"
 ---
 
 # From Quantum to Vote
