@@ -51,6 +51,19 @@ Principe FractaVolta :
 
 > **Faire payer ce qui possède une forte valeur économique afin de contribuer à rendre accessible ce qui possède une forte valeur humaine.**
 
+Dans cette doctrine, la subvention croisée n'est pas seulement un mécanisme de financement. Elle est une forme de **redirection de captation** : une partie de la valeur captée sur des marchés solvables est transformée en infrastructures, communs et capacités accessibles aux habitants, individus et collectifs.
+
+```text
+activité commerciale
+→ captation de valeur
+→ marge / ressources mutualisées
+→ redirection gouvernée
+→ capacités communes et individuelles
+→ Autonomie de Capacité des habitants
+```
+
+Cette redirection doit rester observable. À mesure que le modèle devient matériellement significatif, FractaVolta doit pouvoir montrer non seulement ce qu'elle vend et ce qu'elle gagne, mais aussi **quelles capacités concrètes cette captation rend accessibles à d'autres**.
+
 ---
 
 ## Deux surfaces économiques distinctes
@@ -252,9 +265,14 @@ Cette mécanique est cohérente avec FractaVolta comme journal fractal des évé
 - contribution nette des offres professionnelles à ces capacités ;
 - coût moyen par bénéficiaire actif ;
 - part couverte par mutualisation, dons, subventions ou autres ressources ;
-- réserves consacrées à la continuité future du service gratuit.
+- réserves consacrées à la continuité future du service gratuit ;
+- part de la valeur captée effectivement redirigée vers des capacités communes ou individuelles ;
+- nombre d'habitants, individus ou collectifs bénéficiant effectivement de ces capacités ;
+- capacités nouvelles rendues accessibles grâce à cette redirection.
 
 Ces indicateurs sont analytiques. Ils ne préjugent pas du traitement juridique, fiscal ou comptable des flux entre personnes morales distinctes.
+
+Le but est de rendre falsifiable la doctrine elle-même : **la redirection ne doit pas être seulement affirmée ; elle doit pouvoir être observée dans les flux et dans les capacités produites.**
 
 ---
 
@@ -307,7 +325,8 @@ Le différenciateur visé est plus structurel :
 3. la traçabilité permet de montrer comment la valeur est produite et réallouée ;
 4. la comptabilité analytique relie les coûts aux actes, paquets, fournisseurs et bénéficiaires ;
 5. les financeurs ne reçoivent pas automatiquement de souveraineté sur les communs ou les personnes ;
-6. les capacités individuelles gratuites ne sont pas financées par l'exploitation cachée de leurs bénéficiaires.
+6. les capacités individuelles gratuites ne sont pas financées par l'exploitation cachée de leurs bénéficiaires ;
+7. une part observable de la valeur captée peut être convertie en capacités territoriales ou communes au bénéfice des habitants.
 
 La proposition commerciale et la doctrine d'intérêt général cessent ainsi d'être deux discours séparés : elles deviennent deux faces du même mécanisme.
 
@@ -320,6 +339,8 @@ La proposition commerciale et la doctrine d'intérêt général cessent ainsi d'
 > **Le capital peut financer la capacité ; il ne doit pas acheter la souveraineté.**
 
 > **Faire payer ce qui possède une forte valeur économique afin de contribuer à rendre accessible ce qui possède une forte valeur humaine.**
+
+> **Rediriger les captations vers l'Autonomie de Capacité des habitants.**
 
 > **Gratuit pour l'individu ne doit jamais vouloir dire payé par sa capture.**
 
