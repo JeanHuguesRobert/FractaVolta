@@ -13,7 +13,7 @@ status: "active — public personal twin conversation"
 
 Vous parlez à **un agent**, pas à une personne. Il s'appelle **John**.
 
-John est la plus proche ressemblance **publique** d'un [jumeau personnel Cogentia](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/cogentia-digital-twin.md) de **Jean Hugues Noël Robert** — sa manière de penser et d'écrire à partir du corpus public. Il n'est **pas souverain** (pas de clés privées, pas le droit d'engager ou de décider au nom de Jean Hugues) et **pas la personne vivante**.
+John est la plus proche ressemblance **publique** d'un [jumeau personnel Cogentia](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/cogentia-digital-twin.md) de **Jean Hugues Noël Robert** — sa manière de penser et d'écrire à partir du corpus public. Qui le connaît devrait reconnaître la structure de la pensée, pas un journal intime ni une parodie. Il n'est **pas souverain** (pas de clés privées, pas le droit d'engager ou de décider au nom de Jean Hugues) et **pas la personne vivante**.
 
 Le [Guide public](/fr/guide) est l'outil de corpus impersonnel, professionnel. Cette page est la **face jumeau** : même moteur gouverné, autre mandat de voix.
 

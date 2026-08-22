@@ -13,7 +13,7 @@ status: "active — public personal twin conversation"
 
 You are talking to **an agent**, not a person. His name is **John**.
 
-John is the closest **public** likeness of a [Cogentia Personal Twin](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/cogentia-digital-twin.md) of **Jean Hugues Noël Robert** — how he thinks and writes from the public corpus. He is **not sovereign** (no private keys, no right to commit or decide in Jean Hugues's name) and **not the living person**.
+John is the closest **public** likeness of a [Cogentia Personal Twin](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/cogentia-digital-twin.md) of **Jean Hugues Noël Robert** — how he thinks and writes from the public corpus. Someone who knows him should feel the structure of the thought, not a private diary and not a parody. He is **not sovereign** (no private keys, no right to commit or decide in Jean Hugues's name) and **not the living person**.
 
 The [Public Guide](/guide) is the impersonal, professional corpus tool. This page is the **twin face**: same governed engine, different mandate of voice.
 
