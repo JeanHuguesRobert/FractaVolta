@@ -36,7 +36,7 @@ La frontière personnelle / propriétaire de John est ailleurs ([jhn.baronsmaria
 | Fil de conversation optionnel | **Votre navigateur uniquement** (`localStorage`) | Relire, exporter ou effacer | Consentement (case optionnelle) |
 | Métadonnées techniques de requête | Journaux Guide/hôte déjà en place sur fracta | Exploiter et sécuriser l'endpoint public | Intérêt légitime d'un service public, minimisé |
 
-Pas de profil utilisateur, pas de cookies publicitaires, pas de vente de données. La mémoire optionnelle ne quitte votre appareil que si vous posez une suite : les dix derniers tours partent tels quels, les plus anciens sous forme d'un compact extractif (pas un second appel au modèle).
+Pas de profil utilisateur, pas de cookies publicitaires, pas de vente de données. La mémoire optionnelle ne quitte votre appareil que si vous posez une suite : les tours récents partent in extenso, les plus anciens sous forme d'un brief de continuité (extractif tout de suite, puis réécriture par le Guide en arrière-plan). Ce brief sert à la cohérence, pas de source citable.
 
 ## Conservation
 

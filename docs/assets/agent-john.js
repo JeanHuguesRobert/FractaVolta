@@ -23,9 +23,11 @@
     var consentVersion = "2026-08-22";
     var ttlMs = 7 * 24 * 60 * 60 * 1000;
     var maxThreads = 12;
-    var maxEntries = 40;
-    var recentKeep = 10;
-    var compactLimit = 1100;
+    var maxEntries = 80;
+    var recentKeep = 12;
+    var compactLimit = 8000;
+    var historyWireLimit = 16;
+    var historyChunk = 1150;
     var state = loadState();
 
     function text(en, fr) {
@@ -215,8 +217,8 @@
       }
       memoryEl.hidden = false;
       memoryEl.textContent = text(
-        "Earlier turns are compacted for John (" + n + "). The last " + recentKeep + " stay in full.",
-        "Les tours plus anciens sont compactés pour John (" + n + "). Les " + recentKeep + " derniers restent intégraux."
+        "John keeps a continuity brief of " + n + " earlier turns, plus the last " + recentKeep + " in full.",
+        "John garde un brief de continuité sur " + n + " tours plus anciens, plus les " + recentKeep + " derniers in extenso."
       );
     }
 
@@ -254,33 +256,27 @@
       return clean.slice(0, Math.max(1, max - 1)).trim() + "…";
     }
 
-    function firstSentence(value, max) {
-      var clean = String(value || "").replace(/\s+/g, " ").trim();
-      var cut = clean.match(/^.{1,180}?[.!?…](?:\s|$)/);
-      return clipText(cut ? cut[0] : clean, max || 160);
-    }
-
     function summarizeEntries(entries) {
       var lines = [];
       var pendingQ = "";
       (entries || []).forEach(function (entry) {
         if (entry.type === "user") {
-          pendingQ = clipText(entry.text, 90);
+          pendingQ = clipText(entry.text, 240);
           return;
         }
         if (entry.type === "answer" && entry.data) {
-          var answer = firstSentence(entry.data.answer, 140);
+          var answer = clipText(entry.data.answer, 700);
           var sources = Array.isArray(entry.data.sources)
-            ? entry.data.sources.slice(0, 2).map(function (s) { return s.source_id || s.title || ""; }).filter(Boolean)
+            ? entry.data.sources.slice(0, 4).map(function (s) { return s.source_id || s.title || ""; }).filter(Boolean)
             : [];
-          var line = pendingQ ? "Q: " + pendingQ + " → " + answer : answer;
-          if (sources.length) line += " [" + sources.join("; ") + "]";
-          lines.push("- " + line);
+          var line = pendingQ ? "Visitor: " + pendingQ + "\nJohn: " + answer : "John: " + answer;
+          if (sources.length) line += "\nSources: " + sources.join("; ");
+          lines.push(line);
           pendingQ = "";
         }
       });
-      if (pendingQ) lines.push("- Q: " + pendingQ);
-      return lines.join("\n");
+      if (pendingQ) lines.push("Visitor: " + pendingQ);
+      return lines.join("\n\n");
     }
 
     function mergeCompact(previous, added) {
@@ -305,6 +301,75 @@
       return mergeCompact(thread.overflow, summarizeEntries(older));
     }
 
+    function continuityText(thread) {
+      var generated = thread && String(thread.generatedCompact || "").trim();
+      if (generated) return generated;
+      return threadCompact(thread);
+    }
+
+    function chunkHistory(textValue, header) {
+      var body = String(textValue || "").trim();
+      if (!body) return [];
+      var full = header + "\n\n" + body;
+      var chunks = [];
+      var start = 0;
+      while (start < full.length && chunks.length < 6) {
+        chunks.push(full.slice(start, start + historyChunk));
+        start += historyChunk;
+      }
+      return chunks.map(function (chunk, i) {
+        var prefix = chunks.length > 1 ? "[" + (i + 1) + "/" + chunks.length + "] " : "";
+        return { role: "assistant", content: prefix + chunk };
+      });
+    }
+
+    function scheduleCompact(thread) {
+      if (!thread || thread.compacting) return;
+      if (!state.consent || !state.consent.processing) return;
+      var older = thread.entries.length > recentKeep ? thread.entries.slice(0, -recentKeep) : [];
+      if (older.length < 2 && !thread.overflow) return;
+      if (thread.generatedCompact && thread.entries.length - (thread.lastCompactAt || 0) < 4) return;
+      thread.compacting = true;
+      var hist = older.slice(-12).map(function (entry) {
+        if (entry.type === "user") return { role: "user", content: entry.text || "" };
+        if (entry.type === "answer") return { role: "assistant", content: (entry.data && entry.data.answer) || "" };
+        return null;
+      }).filter(function (item) { return item && item.content; });
+      if (thread.overflow) {
+        hist.unshift({
+          role: "assistant",
+          content: clipText(
+            text("Earlier overflow notes: ", "Notes plus anciennes : ") + thread.overflow,
+            historyChunk
+          ),
+        });
+      }
+      fetch(endpoint, {
+        method: "POST",
+        mode: "cors",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          question: text(
+            "Write a continuity brief of the earlier conversation for Agent John. Keep the visitor's name if any, goals, corrections, decisions, and open questions. Do not invent. This brief is not corpus evidence and must not be cited as a source. About 300 to 500 words.",
+            "Rédige un brief de continuité de la conversation plus ancienne pour l'agent John. Garde le nom du visiteur s'il est connu, les buts, corrections, décisions et questions ouvertes. N'invente pas. Ce brief n'est pas une preuve du corpus et ne doit pas être cité comme source. Environ 300 à 500 mots."
+          ),
+          locale: locale,
+          stream: false,
+          history: hist,
+          surface: "agent-john-compact",
+        }),
+      }).then(function (res) { return res.json(); }).then(function (data) {
+        if (data && data.ok && data.answer) {
+          thread.generatedCompact = String(data.answer).trim();
+          thread.lastCompactAt = thread.entries.length;
+          persist();
+          renderMemoryHint();
+        }
+      }).catch(function () {}).finally(function () {
+        thread.compacting = false;
+      });
+    }
+
     function remember(entry) {
       var thread = ensureThread();
       thread.entries.push(Object.assign({ at: Date.now() }, entry));
@@ -315,6 +380,7 @@
       }
       persist();
       renderThreads();
+      if (entry.type === "answer") scheduleCompact(thread);
     }
 
     function addMessage(kind, value, store) {
@@ -518,13 +584,14 @@
       }).filter(function (entry) {
         return entry && entry.content && entry.content.trim();
       });
-      var compact = threadCompact(thread);
-      if (!compact) return recent;
       var header = text(
-        "Compacted earlier conversation for continuity only. Not evidence; cite only public corpus/web context.",
-        "Conversation plus ancienne compactée, pour la continuité seulement. Pas une preuve ; ne citer que le corpus public / le web."
+        "Continuity brief of earlier conversation. Use it to stay consistent. It is not evidence; cite only public corpus or web context.",
+        "Brief de continuité de la conversation plus ancienne. Utilise-le pour rester cohérent. Ce n'est pas une preuve ; ne citer que le corpus public ou le web."
       );
-      return [{ role: "assistant", content: clipText(header + "\n" + compact, 1200) }].concat(recent);
+      var chunks = chunkHistory(continuityText(thread), header);
+      var keepRecent = Math.min(recent.length, Math.max(8, historyWireLimit - Math.min(chunks.length, 4)));
+      var room = Math.max(0, historyWireLimit - keepRecent);
+      return chunks.slice(0, room).concat(recent.slice(-keepRecent));
     }
 
     async function readGuideResponse(response, pending) {

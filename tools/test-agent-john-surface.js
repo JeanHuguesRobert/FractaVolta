@@ -31,6 +31,9 @@ assert.match(js, /agent-john-immersive/);
 assert.match(js, /requestFullscreen/);
 assert.match(js, /threadCompact/);
 assert.match(js, /recentKeep/);
+assert.match(js, /agent-john-compact/);
+assert.match(js, /generatedCompact/);
+assert.match(js, /historyWireLimit/);
 assert.match(include, /data-john-memory/);
 
 const legalEn = read("legal/agent-john.md");
