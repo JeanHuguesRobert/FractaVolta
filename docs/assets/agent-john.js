@@ -14,6 +14,7 @@
     var appBox = root.querySelector("[data-john-app]");
     var log = root.querySelector("[data-john-log]");
     var threadsEl = root.querySelector("[data-john-threads]");
+    var memoryEl = root.querySelector("[data-john-memory]");
     var form = root.querySelector("[data-john-form]");
     var input = root.querySelector(".agent-john__input");
     var submit = root.querySelector("[data-john-submit]");
@@ -23,6 +24,8 @@
     var ttlMs = 7 * 24 * 60 * 60 * 1000;
     var maxThreads = 12;
     var maxEntries = 40;
+    var recentKeep = 10;
+    var compactLimit = 1100;
     var state = loadState();
 
     function text(en, fr) {
@@ -173,6 +176,7 @@
         agent: "john",
         locale: locale,
         exported_at: new Date().toISOString(),
+        compact: threadCompact(thread),
         thread: thread,
       }, null, 2)], { type: "application/json" });
       var url = URL.createObjectURL(blob);
@@ -197,7 +201,27 @@
       ask(question);
     });
 
+    function renderMemoryHint() {
+      if (!memoryEl) return;
+      var thread = activeThread();
+      var compact = threadCompact(thread);
+      var older = thread && thread.entries.length > recentKeep ? thread.entries.length - recentKeep : 0;
+      var dropped = thread && thread.compactedTurns ? thread.compactedTurns : 0;
+      var n = older + dropped;
+      if (!compact || n < 1) {
+        memoryEl.hidden = true;
+        memoryEl.textContent = "";
+        return;
+      }
+      memoryEl.hidden = false;
+      memoryEl.textContent = text(
+        "Earlier turns are compacted for John (" + n + "). The last " + recentKeep + " stay in full.",
+        "Les tours plus anciens sont compactés pour John (" + n + "). Les " + recentKeep + " derniers restent intégraux."
+      );
+    }
+
     function renderThreads() {
+      renderMemoryHint();
       threadsEl.textContent = "";
       state.threads.forEach(function (thread) {
         var btn = document.createElement("button");
@@ -224,10 +248,67 @@
       });
     }
 
+    function clipText(value, max) {
+      var clean = String(value || "").replace(/\s+/g, " ").trim();
+      if (clean.length <= max) return clean;
+      return clean.slice(0, Math.max(1, max - 1)).trim() + "…";
+    }
+
+    function firstSentence(value, max) {
+      var clean = String(value || "").replace(/\s+/g, " ").trim();
+      var cut = clean.match(/^.{1,180}?[.!?…](?:\s|$)/);
+      return clipText(cut ? cut[0] : clean, max || 160);
+    }
+
+    function summarizeEntries(entries) {
+      var lines = [];
+      var pendingQ = "";
+      (entries || []).forEach(function (entry) {
+        if (entry.type === "user") {
+          pendingQ = clipText(entry.text, 90);
+          return;
+        }
+        if (entry.type === "answer" && entry.data) {
+          var answer = firstSentence(entry.data.answer, 140);
+          var sources = Array.isArray(entry.data.sources)
+            ? entry.data.sources.slice(0, 2).map(function (s) { return s.source_id || s.title || ""; }).filter(Boolean)
+            : [];
+          var line = pendingQ ? "Q: " + pendingQ + " → " + answer : answer;
+          if (sources.length) line += " [" + sources.join("; ") + "]";
+          lines.push("- " + line);
+          pendingQ = "";
+        }
+      });
+      if (pendingQ) lines.push("- Q: " + pendingQ);
+      return lines.join("\n");
+    }
+
+    function mergeCompact(previous, added) {
+      var parts = [String(previous || "").trim(), String(added || "").trim()].filter(Boolean);
+      if (!parts.length) return "";
+      var merged = parts.join("\n");
+      if (merged.length <= compactLimit) return merged;
+      return "…" + merged.slice(-(compactLimit - 1));
+    }
+
+    function foldOverflow(thread) {
+      if (!thread || thread.entries.length <= maxEntries) return;
+      var dropped = thread.entries.slice(0, thread.entries.length - maxEntries);
+      thread.overflow = mergeCompact(thread.overflow, summarizeEntries(dropped));
+      thread.compactedTurns = (thread.compactedTurns || 0) + dropped.length;
+      thread.entries = thread.entries.slice(-maxEntries);
+    }
+
+    function threadCompact(thread) {
+      if (!thread) return "";
+      var older = thread.entries.length > recentKeep ? thread.entries.slice(0, -recentKeep) : [];
+      return mergeCompact(thread.overflow, summarizeEntries(older));
+    }
+
     function remember(entry) {
       var thread = ensureThread();
       thread.entries.push(Object.assign({ at: Date.now() }, entry));
-      thread.entries = thread.entries.slice(-maxEntries);
+      foldOverflow(thread);
       thread.updated = Date.now();
       if (entry.type === "user" && (!thread.title || thread.title === text("Conversation", "Conversation"))) {
         thread.title = String(entry.text || "").slice(0, 48);
@@ -430,13 +511,20 @@
     function historyPayload() {
       var thread = activeThread();
       if (!thread) return [];
-      return thread.entries.slice(-10).map(function (entry) {
+      var recent = thread.entries.slice(-recentKeep).map(function (entry) {
         if (entry.type === "user") return { role: "user", content: entry.text || "" };
         if (entry.type === "answer") return { role: "assistant", content: (entry.data && entry.data.answer) || "" };
         return null;
       }).filter(function (entry) {
         return entry && entry.content && entry.content.trim();
       });
+      var compact = threadCompact(thread);
+      if (!compact) return recent;
+      var header = text(
+        "Compacted earlier conversation for continuity only. Not evidence; cite only public corpus/web context.",
+        "Conversation plus ancienne compactée, pour la continuité seulement. Pas une preuve ; ne citer que le corpus public / le web."
+      );
+      return [{ role: "assistant", content: clipText(header + "\n" + compact, 1200) }].concat(recent);
     }
 
     async function readGuideResponse(response, pending) {

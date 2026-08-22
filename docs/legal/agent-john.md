@@ -36,7 +36,7 @@ The personal / owner boundary of John lives elsewhere ([jhn.baronsmariani.org](h
 | Optional conversation thread | **Your browser only** (`localStorage`) | Let you keep, reread, export, or delete the chat | Consent (optional checkbox) |
 | Technical request metadata | Existing Guide/host logs on fracta | Operate and secure the public endpoint | Legitimate interest in running a public service, minimised |
 
-We do **not** create a user profile, do **not** use advertising cookies, and do **not** sell data. Optional memory never leaves your device except when you send a follow-up question (recent turns may be attached as conversation history to the same endpoint).
+We do **not** create a user profile, do **not** use advertising cookies, and do **not** sell data. Optional memory never leaves your device except when you send a follow-up question: the last ten turns go verbatim, and older turns are sent as a short extractive compact (not a second model call).
 
 ## Retention
 

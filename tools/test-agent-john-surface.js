@@ -29,6 +29,9 @@ assert.match(js, /surface: "agent-john"/);
 assert.match(js, /localStorage/);
 assert.match(js, /agent-john-immersive/);
 assert.match(js, /requestFullscreen/);
+assert.match(js, /threadCompact/);
+assert.match(js, /recentKeep/);
+assert.match(include, /data-john-memory/);
 
 const legalEn = read("legal/agent-john.md");
 const legalFr = read("fr/legal/agent-john.md");
