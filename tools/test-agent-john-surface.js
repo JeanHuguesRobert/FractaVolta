@@ -11,12 +11,15 @@ const en = read("john.md");
 const fr = read("fr/john.md");
 assert.match(en, /an agent/i);
 assert.match(fr, /un agent/i);
+assert.match(en, /not sovereign/i);
+assert.match(fr, /pas souverain/i);
 assert.match(en, /C\.O\.R\.S\.I\.C\.A/);
 assert.match(fr, /C\.O\.R\.S\.I\.C\.A/);
 assert.match(en, /agent_page: true/);
 assert.match(fr, /agent_page: true/);
 
 const include = read("_includes/agent-john.html");
+assert.match(include, /Jumeau public|Public twin/);
 assert.match(include, /data-john-consent-processing/);
 assert.match(include, /data-john-expand/);
 assert.match(include, /data-john-consent-memory/);

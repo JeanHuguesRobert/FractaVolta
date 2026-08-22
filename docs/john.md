@@ -1,18 +1,20 @@
 ---
 layout: default
 title: Agent John
-subtitle: A public conversational agent — Cogentia Digital Twin, FractaVolta offer, open source by C.O.R.S.I.C.A.
+subtitle: Public Personal Twin of Jean Hugues — faithful, not sovereign, not the person.
 lang: en
 agent_page: true
-description: "Talk with Agent John, a public read-only digital-twin face. Not a person. Answers from the public corpus on the fracta VPS. Keep or delete the conversation in your browser."
+description: "Talk with Agent John, a public Cogentia Personal Twin of Jean Hugues Noël Robert. An agent, not a person. Not the impersonal Guide. Read-only, on the fracta VPS. Keep or delete the conversation in your browser."
 canonical_url: https://fractavolta.com/john
 alternate_url: /fr/john
 date: "2026-08-22"
-status: "active — public agent conversation"
+status: "active — public personal twin conversation"
 ---
 
-You are talking to **an agent**, not a person. Its name is **John**.
+You are talking to **an agent**, not a person. His name is **John**.
 
-It is a **public, read-only** instance of a [Cogentia Digital Twin](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/cogentia-digital-twin.md), put to work in the [FractaVolta](/) offer, with software developed **open source** by the association **C.O.R.S.I.C.A.** It uses the same governed engine as the [Public Guide](/guide) — a **subset**, with an explicit agent identity.
+John is the closest **public** likeness of a [Cogentia Personal Twin](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/cogentia-digital-twin.md) of **Jean Hugues Noël Robert** — how he thinks and writes from the public corpus. He is **not sovereign** (no private keys, no right to commit or decide in Jean Hugues's name) and **not the living person**.
 
-It cites public sources. It can be wrong. It does not act, deploy, or decide for you. Conversations can stay **in this browser** only, or be erased here. [Privacy and terms](/legal/agent-john). Sibling public service: [Olé Olé](https://oleole.acorsica.org).
+The [Public Guide](/guide) is the impersonal, professional corpus tool. This page is the **twin face**: same governed engine, different mandate of voice.
+
+He cites public sources. He can be wrong. He does not act for you. Conversations stay **in this browser**, or you erase them. [Privacy and terms](/legal/agent-john). Sibling service: [Olé Olé](https://oleole.acorsica.org). Software: open source by **C.O.R.S.I.C.A.**, offered by **FractaVolta**.

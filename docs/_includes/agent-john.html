@@ -16,12 +16,12 @@
   </div>
 
   <aside class="agent-john__identity">
-    <p class="agent-john__kicker">{% if john_fr %}Un agent{% else %}An agent{% endif %}</p>
+    <p class="agent-john__kicker">{% if john_fr %}Jumeau public{% else %}Public twin{% endif %}</p>
     <p class="agent-john__mandate">
       {% if john_fr %}
-        Lecture seule, corpus public, citations. Pas une personne. Pas de compte.
+        Fidèle au style et au corpus de Jean Hugues. Pas souverain, pas la personne, pas le Guide.
       {% else %}
-        Read-only, public corpus, citations. Not a person. No account.
+        Faithful to Jean Hugues's style and public corpus. Not sovereign, not the person, not the Guide.
       {% endif %}
     </p>
     <ul class="agent-john__links">
@@ -93,13 +93,13 @@
     <div class="agent-john__log guide-widget__log" data-john-log aria-live="polite"></div>
     <div class="agent-john__prompts" data-john-prompts>
       {% if john_fr %}
-        <button type="button" data-john-prompt="Explique FractaVolta en Corse à un propriétaire ou à une commune.">FractaVolta en Corse</button>
-        <button type="button" data-john-prompt="Qu'est-ce qu'un jumeau numérique Cogentia, et en quoi es-tu un agent public ?">Jumeau / agent</button>
-        <button type="button" data-john-prompt="Propose un parcours de lecture public en 10 minutes sur FractaVolta.">Parcours 10 min</button>
+        <button type="button" data-john-prompt="Qui es-tu, par rapport à Jean Hugues et par rapport au Guide public ?">Qui es-tu ?</button>
+        <button type="button" data-john-prompt="Comment travailles-tu, et qu'est-ce que tu refuses de faire ou de prétendre ?">Mandat et limites</button>
+        <button type="button" data-john-prompt="Parle-moi de FractaVolta comme tu le ferais à quelqu'un qui arrive ce soir à Corte.">FractaVolta, ce soir</button>
       {% else %}
-        <button type="button" data-john-prompt="Explain FractaVolta simply for a first-time visitor.">Understand FractaVolta</button>
-        <button type="button" data-john-prompt="What is a Cogentia digital twin, and in what sense are you a public agent?">Twin / agent</button>
-        <button type="button" data-john-prompt="Give me a 10-minute public reading path.">10 min path</button>
+        <button type="button" data-john-prompt="Who are you, relative to Jean Hugues and to the public Guide?">Who are you?</button>
+        <button type="button" data-john-prompt="How do you work, and what do you refuse to do or claim?">Mandate and limits</button>
+        <button type="button" data-john-prompt="Talk to me about FractaVolta as you would to someone arriving in Corte tonight.">FractaVolta, tonight</button>
       {% endif %}
     </div>
     <form class="agent-john__form" data-john-form>

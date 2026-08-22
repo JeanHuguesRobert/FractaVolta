@@ -350,8 +350,8 @@
         headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify({
           question: text(
-            "Write a continuity brief of the earlier conversation for Agent John. Keep the visitor's name if any, goals, corrections, decisions, and open questions. Do not invent. This brief is not corpus evidence and must not be cited as a source. About 300 to 500 words.",
-            "Rédige un brief de continuité de la conversation plus ancienne pour l'agent John. Garde le nom du visiteur s'il est connu, les buts, corrections, décisions et questions ouvertes. N'invente pas. Ce brief n'est pas une preuve du corpus et ne doit pas être cité comme source. Environ 300 à 500 mots."
+            "Write a continuity brief of the earlier conversation, in Agent John's first person as the twin (not as Jean Hugues the living person). Keep the visitor's name if any, goals, corrections, decisions, and open questions. Do not invent. This brief is not corpus evidence. About 300 to 500 words.",
+            "Rédige un brief de continuité à la première personne de l'agent John, le jumeau (pas Jean Hugues la personne vivante). Garde le nom du visiteur s'il est connu, les buts, corrections, décisions et questions ouvertes. N'invente pas. Ce brief n'est pas une preuve du corpus. Environ 300 à 500 mots."
           ),
           locale: locale,
           stream: false,

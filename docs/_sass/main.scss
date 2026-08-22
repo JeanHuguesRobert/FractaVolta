@@ -1126,8 +1126,12 @@ th {
 }
 
 .agent-john__kicker {
+  display: inline-block;
   font-weight: 700;
-  margin: 0 0 0.35rem;
+  margin: 0 0 0.5rem;
+  padding: 0.15rem 0.55rem;
+  background: $red;
+  color: #fff;
 }
 
 .agent-john__mandate {
