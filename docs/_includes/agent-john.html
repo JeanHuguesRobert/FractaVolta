@@ -72,6 +72,9 @@
 
   <div class="agent-john__app" data-john-app hidden>
     <div class="agent-john__toolbar">
+      <button type="button" class="agent-john__btn agent-john__btn--ghost" data-john-expand aria-pressed="false">
+        {% if john_fr %}Plein écran{% else %}Full page{% endif %}
+      </button>
       <button type="button" class="agent-john__btn agent-john__btn--ghost" data-john-new>
         {% if john_fr %}Nouveau fil{% else %}New thread{% endif %}
       </button>

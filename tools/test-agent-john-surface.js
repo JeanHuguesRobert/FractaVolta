@@ -18,6 +18,7 @@ assert.match(fr, /agent_page: true/);
 
 const include = read("_includes/agent-john.html");
 assert.match(include, /data-john-consent-processing/);
+assert.match(include, /data-john-expand/);
 assert.match(include, /data-john-consent-memory/);
 assert.match(include, /oleole\.acorsica\.org/);
 assert.match(include, /cogentia\.fractavolta\.com\/guide\/chat/);
@@ -26,6 +27,8 @@ const js = read("assets/agent-john.js");
 assert.match(js, /fractavolta\.agent-john\.v1/);
 assert.match(js, /surface: "agent-john"/);
 assert.match(js, /localStorage/);
+assert.match(js, /agent-john-immersive/);
+assert.match(js, /requestFullscreen/);
 
 const legalEn = read("legal/agent-john.md");
 const legalFr = read("fr/legal/agent-john.md");

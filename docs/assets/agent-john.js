@@ -17,6 +17,7 @@
     var form = root.querySelector("[data-john-form]");
     var input = root.querySelector(".agent-john__input");
     var submit = root.querySelector("[data-john-submit]");
+    var expandBtn = root.querySelector("[data-john-expand]");
     var storeKey = "fractavolta.agent-john.v1";
     var consentVersion = "2026-08-22";
     var ttlMs = 7 * 24 * 60 * 60 * 1000;
@@ -116,6 +117,38 @@
       clearStore();
       log.textContent = "";
       showConsent();
+    });
+
+    function isImmersive() {
+      return root.classList.contains("agent-john--immersive") || document.fullscreenElement === root;
+    }
+
+    function setImmersive(on) {
+      root.classList.toggle("agent-john--immersive", on);
+      document.documentElement.classList.toggle("agent-john-immersive", on);
+      if (expandBtn) {
+        expandBtn.setAttribute("aria-pressed", on ? "true" : "false");
+        expandBtn.textContent = on ? text("Exit full page", "Réduire") : text("Full page", "Plein écran");
+      }
+    }
+
+    if (expandBtn) {
+      expandBtn.addEventListener("click", function () {
+        var next = !isImmersive();
+        setImmersive(next);
+        if (next && root.requestFullscreen) {
+          root.requestFullscreen().catch(function () {});
+        } else if (!next && document.fullscreenElement && document.exitFullscreen) {
+          document.exitFullscreen().catch(function () {});
+        }
+      });
+    }
+    document.addEventListener("fullscreenchange", function () {
+      if (document.fullscreenElement === root) setImmersive(true);
+      if (!document.fullscreenElement) setImmersive(false);
+    });
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape" && isImmersive() && !document.fullscreenElement) setImmersive(false);
     });
 
     root.querySelector("[data-john-new]").addEventListener("click", function () {

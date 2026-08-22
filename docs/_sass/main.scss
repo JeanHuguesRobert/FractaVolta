@@ -1205,6 +1205,11 @@ th {
 .agent-john__form {
   display: grid;
   gap: 0.5rem;
+  position: sticky;
+  bottom: 0;
+  background: $bg;
+  padding-top: 0.6rem;
+  border-top: $border-thin;
 }
 
 .agent-john__label {
@@ -1248,12 +1253,66 @@ th {
 }
 
 .agent-john .guide-widget__log {
-  min-height: 12rem;
-  max-height: 55vh;
-  overflow: auto;
+  min-height: 8rem;
+  max-height: none;
+  overflow: visible;
   border: $border-thin;
   padding: 0.75rem;
   background: $bg-alt;
+}
+
+html.agent-john-immersive,
+html.agent-john-immersive body {
+  height: 100%;
+  overflow: hidden;
+}
+
+html.agent-john-immersive .site-header,
+html.agent-john-immersive .site-footer,
+html.agent-john-immersive .agent-page__header,
+html.agent-john-immersive .agent-page__intro,
+html.agent-john-immersive .agent-john__banner,
+html.agent-john-immersive .agent-john__identity {
+  display: none;
+}
+
+html.agent-john-immersive .site-main--agent,
+html.agent-john-immersive .agent-page {
+  padding: 0;
+  margin: 0;
+  max-width: none;
+}
+
+.agent-john:fullscreen,
+.agent-john:-webkit-full-screen,
+html.agent-john-immersive .agent-john {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  max-width: none;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: $bg;
+}
+
+.agent-john:fullscreen .agent-john__app,
+.agent-john:-webkit-full-screen .agent-john__app,
+html.agent-john-immersive .agent-john__app {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.agent-john:fullscreen .guide-widget__log,
+.agent-john:-webkit-full-screen .guide-widget__log,
+html.agent-john-immersive .agent-john .guide-widget__log {
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
 }
 
 @media (max-width: 560px) {
