@@ -7,7 +7,7 @@ description: 'FractaVolta en Corse : transformer le solaire local en capacité u
 canonical_url: https://fractavolta.com/fr/
 last_stamped_at: 2026-06-02T00:00:00.000Z
 author: unknown
-date: unknown
+date: "2026-06-02"
 provenance:
   origin_type: unknown
   origin_repository: unknown

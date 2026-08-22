@@ -7,7 +7,7 @@ description: 'FractaVolta turns local energy into traceable capacity: packetized
 canonical_url: https://fractavolta.com/
 last_stamped_at: 2026-06-02T00:00:00.000Z
 author: unknown
-date: unknown
+date: "2026-06-02"
 provenance:
   origin_type: unknown
   origin_repository: unknown
