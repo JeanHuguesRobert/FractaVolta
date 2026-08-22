@@ -1,0 +1,111 @@
+{% assign guide_endpoint = site.guide_endpoint | default: 'https://cogentia.fractavolta.com/guide/chat' %}
+{% assign john_lang = page.lang | default: site.lang | default: 'en' %}
+{% assign john_fr = false %}
+{% if john_lang == 'fr' %}{% assign john_fr = true %}{% endif %}
+<section
+  class="agent-john"
+  data-john-endpoint="{{ guide_endpoint }}"
+  data-john-locale="{{ john_lang }}"
+  data-john-legal="{% if john_fr %}{{ '/fr/legal/agent-john' | relative_url }}{% else %}{{ '/legal/agent-john' | relative_url }}{% endif %}"
+  aria-label="{% if john_fr %}Agent John{% else %}Agent John{% endif %}"
+>
+  <div class="agent-john__banner" aria-hidden="true">
+    <span class="agent-john__swatch agent-john__swatch--red"></span>
+    <span class="agent-john__swatch agent-john__swatch--yellow"></span>
+    <span class="agent-john__swatch agent-john__swatch--blue"></span>
+  </div>
+
+  <aside class="agent-john__identity">
+    <p class="agent-john__kicker">{% if john_fr %}Un agent{% else %}An agent{% endif %}</p>
+    <p class="agent-john__mandate">
+      {% if john_fr %}
+        Lecture seule, corpus public, citations. Pas une personne. Pas de compte.
+      {% else %}
+        Read-only, public corpus, citations. Not a person. No account.
+      {% endif %}
+    </p>
+    <ul class="agent-john__links">
+      <li><a href="{% if john_fr %}{{ '/fr/guide' | relative_url }}{% else %}{{ '/guide' | relative_url }}{% endif %}">{% if john_fr %}Guide public{% else %}Public Guide{% endif %}</a></li>
+      <li><a href="https://oleole.acorsica.org" rel="noopener">Olé Olé</a></li>
+      <li><a href="https://github.com/JeanHuguesRobert/cogentia" rel="noopener">Cogentia</a></li>
+    </ul>
+  </aside>
+
+  <div class="agent-john__consent" data-john-consent hidden>
+    <h2>{% if john_fr %}Consentement{% else %}Consent{% endif %}</h2>
+    <p>
+      {% if john_fr %}
+        Avant d'envoyer une question, acceptez le traitement sur le VPS fracta.
+        La mémoire dans ce navigateur est optionnelle.
+      {% else %}
+        Before sending a question, accept processing on the fracta VPS.
+        Memory in this browser is optional.
+      {% endif %}
+      <a href="{% if john_fr %}{{ '/fr/legal/agent-john' | relative_url }}{% else %}{{ '/legal/agent-john' | relative_url }}{% endif %}">
+        {% if john_fr %}Lire la notice{% else %}Read the notice{% endif %}
+      </a>.
+    </p>
+    <label class="agent-john__check">
+      <input type="checkbox" data-john-consent-processing required>
+      <span>
+        {% if john_fr %}
+          J'accepte que ma question soit envoyée à Agent John sur fracta pour obtenir une réponse (nécessaire).
+        {% else %}
+          I agree to send my question to Agent John on fracta to get an answer (required).
+        {% endif %}
+      </span>
+    </label>
+    <label class="agent-john__check">
+      <input type="checkbox" data-john-consent-memory>
+      <span>
+        {% if john_fr %}
+          Conserver le fil dans ce navigateur, que je pourrai exporter ou effacer (optionnel).
+        {% else %}
+          Keep the thread in this browser, which I can export or delete (optional).
+        {% endif %}
+      </span>
+    </label>
+    <button type="button" class="agent-john__btn" data-john-consent-accept>
+      {% if john_fr %}Continuer{% else %}Continue{% endif %}
+    </button>
+  </div>
+
+  <div class="agent-john__app" data-john-app hidden>
+    <div class="agent-john__toolbar">
+      <button type="button" class="agent-john__btn agent-john__btn--ghost" data-john-new>
+        {% if john_fr %}Nouveau fil{% else %}New thread{% endif %}
+      </button>
+      <button type="button" class="agent-john__btn agent-john__btn--ghost" data-john-export>
+        {% if john_fr %}Exporter{% else %}Export{% endif %}
+      </button>
+      <button type="button" class="agent-john__btn agent-john__btn--ghost" data-john-delete>
+        {% if john_fr %}Effacer ce fil{% else %}Delete this thread{% endif %}
+      </button>
+      <button type="button" class="agent-john__btn agent-john__btn--ghost" data-john-withdraw>
+        {% if john_fr %}Retirer le consentement{% else %}Withdraw consent{% endif %}
+      </button>
+    </div>
+    <div class="agent-john__threads" data-john-threads aria-label="{% if john_fr %}Conversations{% else %}Conversations{% endif %}"></div>
+    <div class="agent-john__log guide-widget__log" data-john-log aria-live="polite"></div>
+    <div class="agent-john__prompts" data-john-prompts>
+      {% if john_fr %}
+        <button type="button" data-john-prompt="Explique FractaVolta en Corse à un propriétaire ou à une commune.">FractaVolta en Corse</button>
+        <button type="button" data-john-prompt="Qu'est-ce qu'un jumeau numérique Cogentia, et en quoi es-tu un agent public ?">Jumeau / agent</button>
+        <button type="button" data-john-prompt="Propose un parcours de lecture public en 10 minutes sur FractaVolta.">Parcours 10 min</button>
+      {% else %}
+        <button type="button" data-john-prompt="Explain FractaVolta simply for a first-time visitor.">Understand FractaVolta</button>
+        <button type="button" data-john-prompt="What is a Cogentia digital twin, and in what sense are you a public agent?">Twin / agent</button>
+        <button type="button" data-john-prompt="Give me a 10-minute public reading path.">10 min path</button>
+      {% endif %}
+    </div>
+    <form class="agent-john__form" data-john-form>
+      <label class="agent-john__label" for="agent-john-question">
+        {% if john_fr %}Votre question{% else %}Your question{% endif %}
+      </label>
+      <textarea id="agent-john-question" class="agent-john__input" name="question" rows="3" maxlength="1200" required></textarea>
+      <button class="agent-john__btn agent-john__btn--ask" type="submit" data-john-submit>
+        {% if john_fr %}Demander à John{% else %}Ask John{% endif %}
+      </button>
+    </form>
+  </div>
+</section>

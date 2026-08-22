@@ -14,6 +14,8 @@ status: "active — dedicated public Guide page"
 
 The Guide answers from the **public corpus only**. It cites sources, separates what is certain from what still needs checking, and keeps local paths and private material out of view.
 
+To talk to the **named public agent** (same engine, agent identity, browser-local threads, RGPD consent), use [Agent John](/john).
+
 ## How to use this page
 
 1. Ask a question below or pick a suggested prompt.

@@ -3,6 +3,8 @@ main:
     url: /
   - title: Guide
     url: /guide
+  - title: Agent John
+    url: /john
   - title: Energy packets
     url: /energy-packets
   - title: Partners

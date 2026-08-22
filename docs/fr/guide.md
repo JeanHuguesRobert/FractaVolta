@@ -14,6 +14,8 @@ status: "active — page dédiée au Guide public"
 
 Le Guide répond uniquement à partir du **corpus public**. Il cite ses sources, distingue ce qui est établi de ce qui reste à vérifier, et n'expose ni chemins locaux ni contenus privés.
 
+Pour parler à l'**agent public nommé** (même moteur, identité d'agent, fils dans le navigateur, consentement RGPD), utilisez [Agent John](/fr/john).
+
 ## Comment utiliser cette page
 
 1. Posez une question ci-dessous ou choisissez une suggestion.

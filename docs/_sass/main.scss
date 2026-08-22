@@ -1089,6 +1089,173 @@ th {
   color: $ink-soft;
 }
 
+.site-main--agent {
+  padding-top: 0;
+}
+
+.agent-page__header,
+.agent-page__intro {
+  max-width: 52rem;
+  margin: 0 auto;
+  padding: 0 1rem 1.25rem;
+}
+
+.agent-john {
+  max-width: 52rem;
+  margin: 0 auto 3rem;
+  border: $border;
+  background: $bg;
+}
+
+.agent-john__banner {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: 0.75rem;
+  border-bottom: $border;
+}
+
+.agent-john__swatch--red { background: $red; }
+.agent-john__swatch--yellow { background: $yellow; }
+.agent-john__swatch--blue { background: $blue; }
+
+.agent-john__identity,
+.agent-john__consent,
+.agent-john__app {
+  padding: 1rem 1.25rem;
+  border-bottom: $border-thin;
+}
+
+.agent-john__kicker {
+  font-weight: 700;
+  margin: 0 0 0.35rem;
+}
+
+.agent-john__mandate {
+  color: $ink-soft;
+  margin: 0 0 0.75rem;
+}
+
+.agent-john__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.25rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.agent-john__consent h2 {
+  margin-top: 0;
+}
+
+.agent-john__check {
+  display: flex;
+  gap: 0.6rem;
+  align-items: flex-start;
+  margin: 0.75rem 0;
+  cursor: pointer;
+}
+
+.agent-john__check input {
+  margin-top: 0.3rem;
+}
+
+.agent-john__toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.agent-john__threads {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 0.75rem;
+}
+
+.agent-john__thread {
+  border: $border-thin;
+  background: $bg-alt;
+  font: inherit;
+  padding: 0.25rem 0.55rem;
+  cursor: pointer;
+}
+
+.agent-john__thread.is-current {
+  border: $border;
+  background: $yellow;
+}
+
+.agent-john__prompts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0.75rem 0;
+}
+
+.agent-john__prompts button {
+  border: $border-thin;
+  background: $bg;
+  font: inherit;
+  padding: 0.35rem 0.6rem;
+  cursor: pointer;
+}
+
+.agent-john__form {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.agent-john__label {
+  font-weight: 700;
+}
+
+.agent-john__input {
+  width: 100%;
+  border: $border;
+  font: inherit;
+  padding: 0.6rem;
+  background: $bg;
+  color: $ink;
+  resize: vertical;
+}
+
+.agent-john__btn {
+  border: $border;
+  background: $yellow;
+  font: inherit;
+  font-weight: 700;
+  padding: 0.45rem 0.75rem;
+  cursor: pointer;
+}
+
+.agent-john__btn--ghost {
+  background: $bg;
+  font-weight: 500;
+}
+
+.agent-john__btn--ask {
+  justify-self: start;
+  background: $blue;
+  color: #fff;
+}
+
+.agent-john__btn:disabled {
+  cursor: progress;
+  background: $bg-alt;
+  color: $ink-soft;
+}
+
+.agent-john .guide-widget__log {
+  min-height: 12rem;
+  max-height: 55vh;
+  overflow: auto;
+  border: $border-thin;
+  padding: 0.75rem;
+  background: $bg-alt;
+}
+
 @media (max-width: 560px) {
   .guide-widget:not(.guide-widget--page) {
     right: 0.75rem;
