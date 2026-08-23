@@ -493,7 +493,8 @@ https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/UNCONSCIOUS_G
 - [Research Index — FractaVolta](index.md)
 - [État du corpus](https://github.com/acorsica/gouvernance/blob/main/etat-du-corpus.md)
 - [Initiatives liées à l’Institut Mariani](https://github.com/acorsica/institut-mariani/blob/main/initiatives.md)
-- Mariani Village
+- [Research Index - Mariani Village](https://github.com/JeanHuguesRobert/JeanHuguesRobert/blob/main/marianivillage-index.md)
+- [Mariani Village](https://github.com/acorsica/marianivillage/blob/main/README.md)
 - [Mariani Village — cadrage actuel](https://github.com/acorsica/marianivillage/blob/main/CADRAGE.md)
 - [Research Index - Mariani Village](https://github.com/acorsica/marianivillage/blob/main/research/index.md)
 - [Statut du dépôt `acorsica/marianivillage`](https://github.com/acorsica/marianivillage/blob/main/STATUT.md)

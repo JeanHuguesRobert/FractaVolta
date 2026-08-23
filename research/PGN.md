@@ -391,6 +391,9 @@ The future of resilient infrastructure lies not in larger centralized systems bu
 - [VIGILIA — alias FractaVolta](../vigilia.md)
 - [The Inox Programming Language — Specification](https://github.com/JeanHuguesRobert/Inox/blob/master/research/inox-spec.md)
 - [Research Index — Inseme](https://github.com/JeanHuguesRobert/inseme/blob/main/research/index.md)
+- [Research Index — Cogentia](https://github.com/JeanHuguesRobert/JeanHuguesRobert/blob/main/cogentia-index.md)
+- [Research Index — Inseme](https://github.com/JeanHuguesRobert/JeanHuguesRobert/blob/main/inseme-index.md)
+- [Research Index — MareNostrum](https://github.com/JeanHuguesRobert/JeanHuguesRobert/blob/main/marenostrum-index.md)
 - [DHITL, Democratic Humans In The Loop](https://github.com/JeanHuguesRobert/marenostrum/blob/main/research/DHITL.md)
 - [Research Index — MareNostrum](https://github.com/JeanHuguesRobert/marenostrum/blob/main/research/index.md)
 <!-- END_AUTO: backlinks -->

@@ -425,6 +425,8 @@ The antifragility of the energy layer **propagates structurally** to the inferen
 - [The Unconscious Grid — moved](../UNCONSCIOUS_GRID.md)
 - [Concept Index — Inox](https://github.com/JeanHuguesRobert/Inox/blob/master/research/concepts.md)
 - [Research Index — Inox](https://github.com/JeanHuguesRobert/Inox/blob/master/research/index.md)
-- The Iɴᴏx programming language
+- [The Iɴᴏx programming language](https://github.com/JeanHuguesRobert/Inox/blob/master/README.md)
+- [Concept Index — Inox](https://github.com/JeanHuguesRobert/JeanHuguesRobert/blob/main/Inox-concepts.md)
+- [Research Index — Inox](https://github.com/JeanHuguesRobert/JeanHuguesRobert/blob/main/Inox-index.md)
 - [Pacte anti-capture solaire et inférentielle](https://github.com/JeanHuguesRobert/marenostrum/blob/main/research/pacte_anti_capture_solaire_inferentielle.md)
 <!-- END_AUTO: backlinks -->

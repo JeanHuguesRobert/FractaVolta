@@ -526,5 +526,6 @@ That is the real return of direct current: not as the defeated current of Edison
 - [For researchers](../docs/for-researchers.md)
 - [FractaVolta](../README.md)
 - [Research Index — FractaVolta](index.md)
+- [Research Index — MareNostrum](https://github.com/JeanHuguesRobert/JeanHuguesRobert/blob/main/marenostrum-index.md)
 - [Research Index — MareNostrum](https://github.com/JeanHuguesRobert/marenostrum/blob/main/research/index.md)
 <!-- END_AUTO: backlinks -->
