@@ -23,7 +23,7 @@ assert.match(include, /Jumeau public|Public twin/);
 assert.match(include, /data-john-consent-processing/);
 assert.match(include, /data-john-expand/);
 assert.match(include, /data-john-consent-memory/);
-assert.match(include, /oleole\.acorsica\.org/);
+assert.match(include, /fracta\.fractavolta\.com\/oleole/);
 assert.match(include, /cogentia\.fractavolta\.com\/guide\/chat/);
 
 const js = read("assets/agent-john.js");
@@ -49,5 +49,15 @@ assert.match(legalFr, /navigateur/);
 const layout = read("_layouts/default.html");
 assert.match(layout, /agent-john\.js/);
 assert.match(layout, /page\.agent_page/);
+assert.match(layout, /marked@17\.0\.1/);
+assert.match(layout, /dompurify@3\.3\.1/);
+assert.match(layout, /markdown-renderer\.js/);
 
-console.log(JSON.stringify({ ok: true, checks: ["copy", "consent", "storage", "legal", "layout"] }));
+const renderer = read("assets/markdown-renderer.js");
+assert.match(renderer, /marked\.parse/);
+assert.match(renderer, /DOMPurify\.sanitize/);
+assert.match(renderer, /noopener noreferrer/);
+assert.match(js, /CogentiaMarkdown\.render/);
+assert.match(read("assets/guide.js"), /CogentiaMarkdown\.render/);
+
+console.log(JSON.stringify({ ok: true, checks: ["copy", "consent", "storage", "legal", "layout", "rich_markdown"] }));

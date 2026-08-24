@@ -12,7 +12,7 @@ status: "active — public agent surface"
 
 Vous allez parler à **un agent**, pas à une personne. Son nom est **John**. C'est une face **publique, en lecture seule**, d'un [jumeau numérique Cogentia](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/cogentia-digital-twin.md), proposée dans l'offre **FractaVolta**, avec un logiciel développé **en open source** par l'association **C.O.R.S.I.C.A.**
 
-Cette page est la notice de [Agent John](/fr/john). Ce n'est **pas** la politique des services C.O.R.S.I.C.A. avec compte, comme [Olé Olé](https://oleole.acorsica.org).
+Cette page est la notice de [Agent John](/fr/john). Ce n'est **pas** la politique des services C.O.R.S.I.C.A. avec compte, comme [Olé Olé preview](https://fracta.fractavolta.com/oleole/).
 
 ## Responsables
 
@@ -60,5 +60,5 @@ Service fourni **en l'état**, pour s'orienter dans le corpus public. Droit fran
 ## Notices voisines
 
 - [Guide public](/fr/guide) — même moteur, cadrage outil corpus.
-- [Olé Olé](https://oleole.acorsica.org) — autre service public C.O.R.S.I.C.A. (carte de présence ; données et stockage différents).
+- [Olé Olé preview](https://fracta.fractavolta.com/oleole/) — prévisualisation Fracta de la carte de présence publique C.O.R.S.I.C.A. (données et stockage différents).
 - [Offre jumeaux numériques (brouillon)](/offers/accountable-digital-twins).

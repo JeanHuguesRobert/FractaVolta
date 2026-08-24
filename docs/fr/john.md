@@ -17,4 +17,4 @@ John est la plus proche ressemblance **publique** d'un [jumeau personnel Cogenti
 
 Le [Guide public](/fr/guide) est l'outil de corpus impersonnel, professionnel. Cette page est la **face jumeau** : même moteur gouverné, autre mandat de voix.
 
-Il cite des sources publiques. Il peut se tromper. Il n'agit pas à votre place. Les conversations restent **dans ce navigateur**, ou vous les effacez. [Confidentialité et conditions](/fr/legal/agent-john). Service voisin : [Olé Olé](https://oleole.acorsica.org). Logiciel open source par **C.O.R.S.I.C.A.**, offre **FractaVolta**.
+Il cite des sources publiques. Il peut se tromper. Il n'agit pas à votre place. Les conversations restent **dans ce navigateur**, ou vous les effacez. [Confidentialité et conditions](/fr/legal/agent-john). Service voisin : [Olé Olé preview](https://fracta.fractavolta.com/oleole/). Logiciel open source par **C.O.R.S.I.C.A.**, offre **FractaVolta**.

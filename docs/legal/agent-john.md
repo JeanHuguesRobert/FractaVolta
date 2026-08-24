@@ -12,7 +12,7 @@ status: "active — public agent surface"
 
 You are about to talk to **an agent**, not a person. Its name is **John**. It is a **public, read-only** face of a [Cogentia Digital Twin](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/cogentia-digital-twin.md), offered by **FractaVolta**, with software developed **open source** by the association **C.O.R.S.I.C.A.**
 
-This page is the legal notice for [Agent John](/john). It is **not** the account-based policy of other C.O.R.S.I.C.A. services such as [Olé Olé](https://oleole.acorsica.org).
+This page is the legal notice for [Agent John](/john). It is **not** the account-based policy of other C.O.R.S.I.C.A. services such as [Olé Olé preview](https://fracta.fractavolta.com/oleole/).
 
 ## Who is responsible
 
@@ -60,5 +60,5 @@ The service is provided **as is**, for information about the public corpus. Fren
 ## Related notices
 
 - [Public Guide](/guide) — same engine, corpus-tool framing.
-- [Olé Olé](https://oleole.acorsica.org) — another public C.O.R.S.I.C.A. service (presence map; different data, including durable storage).
+- [Olé Olé preview](https://fracta.fractavolta.com/oleole/) — Fracta preview of the public C.O.R.S.I.C.A. presence map (different data, including durable storage).
 - [FractaVolta Digital Twins offer (draft)](/offers/accountable-digital-twins).

@@ -17,4 +17,4 @@ John is the closest **public** likeness of a [Cogentia Personal Twin](https://gi
 
 The [Public Guide](/guide) is the impersonal, professional corpus tool. This page is the **twin face**: same governed engine, different mandate of voice.
 
-He cites public sources. He can be wrong. He does not act for you. Conversations stay **in this browser**, or you erase them. [Privacy and terms](/legal/agent-john). Sibling service: [Olé Olé](https://oleole.acorsica.org). Software: open source by **C.O.R.S.I.C.A.**, offered by **FractaVolta**.
+He cites public sources. He can be wrong. He does not act for you. Conversations stay **in this browser**, or you erase them. [Privacy and terms](/legal/agent-john). Sibling service: [Olé Olé preview](https://fracta.fractavolta.com/oleole/). Software: open source by **C.O.R.S.I.C.A.**, offered by **FractaVolta**.

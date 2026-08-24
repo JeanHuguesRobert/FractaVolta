@@ -217,6 +217,7 @@
     }
 
     function renderMarkdown(target, markdown) {
+      if (window.CogentiaMarkdown) return window.CogentiaMarkdown.render(target, markdown);
       target.textContent = "";
       var lines = String(markdown || "").replace(/\r\n/g, "\n").split("\n");
       var index = 0;
@@ -295,33 +296,37 @@
 
     function appendInlineMarkdown(target, textValue) {
       var source = String(textValue || "");
-      var pattern = /(\*\*[^*]+\*\*|`[^`]+`|\[[^\]]+\]\([^)]+\))/g;
+      // Keep rendering deliberately DOM-based: public Guide answers can use
+      // common Markdown, but never become executable/injected HTML.
+      var pattern = /(\*\*[^*\n]+\*\*|__[^_\n]+__|~~[^~\n]+~~|`[^`\n]+`|\[[^\]]+\]\([^)\n]+\)|\*[^*\n]+\*|_[^_\n]+_|<https?:\/\/[^\s>]+>|https?:\/\/[^\s<]+)/g;
       var last = 0;
       var match;
       while ((match = pattern.exec(source))) {
         if (match.index > last) target.appendChild(document.createTextNode(source.slice(last, match.index)));
         var token = match[0];
-        if (token.indexOf("**") === 0) {
+        if (token.indexOf("**") === 0 || token.indexOf("__") === 0) {
           var strong = document.createElement("strong");
           strong.textContent = token.slice(2, -2);
           target.appendChild(strong);
+        } else if (token.indexOf("*") === 0 || token.indexOf("_") === 0) {
+          var emphasis = document.createElement("em");
+          emphasis.textContent = token.slice(1, -1);
+          target.appendChild(emphasis);
+        } else if (token.indexOf("~~") === 0) {
+          var deleted = document.createElement("del");
+          deleted.textContent = token.slice(2, -2);
+          target.appendChild(deleted);
         } else if (token.indexOf("`") === 0) {
           var code = document.createElement("code");
           code.textContent = token.slice(1, -1);
           target.appendChild(code);
-        } else {
+        } else if (token.indexOf("[") === 0) {
           var parts = token.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
           var href = parts ? safeHref(parts[2]) : "";
-          if (href) {
-            var link = document.createElement("a");
-            link.href = href;
-            link.target = "_blank";
-            link.rel = "noopener";
-            link.textContent = parts[1];
-            target.appendChild(link);
-          } else {
-            target.appendChild(document.createTextNode(parts ? parts[1] : token));
-          }
+          appendSafeLink(target, href, parts ? parts[1] : token);
+        } else {
+          var bareHref = safeHref(token.replace(/^<|>$/g, ""));
+          appendSafeLink(target, bareHref, token.replace(/^<|>$/g, ""));
         }
         last = pattern.lastIndex;
       }
@@ -331,6 +336,19 @@
     function safeHref(value) {
       var href = String(value || "").trim();
       return /^(https?:|mailto:|\/|#)/i.test(href) ? href : "";
+    }
+
+    function appendSafeLink(target, href, label) {
+      if (!href) {
+        target.appendChild(document.createTextNode(label));
+        return;
+      }
+      var link = document.createElement("a");
+      link.href = href;
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
+      link.textContent = label;
+      target.appendChild(link);
     }
 
     function addAgentHandoff(block, data) {
