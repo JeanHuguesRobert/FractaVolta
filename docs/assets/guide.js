@@ -123,6 +123,28 @@
           text("Selected " + (data.source_count || 0) + " public source(s)", (data.source_count || 0) + " source(s) publique(s) selectionnee(s)"),
           "done"
         );
+      } else if (event.name === "guide_trace" && data.provider_trace && data.provider_trace.step === "acp.queue") {
+        var position = data.provider_trace.queue_position || 1;
+        progress.head.textContent = text("Waiting for local capacity", "Attente d'une capacite locale");
+        progress.status.textContent = text(
+          "Another public request is using the local assistant. Your turn is queued.",
+          "Une autre demande publique utilise l'assistant local. Votre tour est en file."
+        );
+        setProgressStep(
+          progress,
+          "provider-queue",
+          text("Queued behind " + position + " request(s)", "En file derriere " + position + " demande(s)"),
+          "active"
+        );
+      } else if (event.name === "guide_trace" && data.provider_trace && data.provider_trace.step === "acp.queue_acquired") {
+        progress.head.textContent = text("Local capacity available", "Capacite locale disponible");
+        progress.status.textContent = text("Preparing the answer...", "Preparation de la reponse...");
+        setProgressStep(
+          progress,
+          "provider-queue",
+          text("Local capacity acquired", "Capacite locale obtenue"),
+          "done"
+        );
       } else if (event.name === "guide_web_search") {
         var webCount = Array.isArray(data.source_ids) ? data.source_ids.length : 0;
         setProgressStep(
