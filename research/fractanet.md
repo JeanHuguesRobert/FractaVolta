@@ -9,11 +9,11 @@ x-email: "jhr@baronsmariani.org"
 x-website: "https://fractavolta.com"
 canonical_path: "FractaVolta/research/fractanet.md"
 canonical_url: "https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/fractanet.md"
-version: "0.3.3-draft"
+version: "0.4.0-draft"
 status: "working-paper — capability-regimes integration pass under human validation"
 date: "2026-06-10"
-last_modified_at: "2026-06-15"
-last_stamped_at: "2026-06-15"
+last_modified_at: "2026-09-06"
+last_stamped_at: "2026-09-06"
 license: "CC BY-SA 4.0"
 language: "en"
 type: "source-document"
@@ -28,6 +28,7 @@ related_repositories:
 related_documents:
   - "FractaVolta/research/generalized_packet_networks.md"
   - "FractaVolta/research/capability_regimes.md"
+  - "FractaVolta/research/raix.md"
   - "FractaVolta/research/inference_packet_network.md"
   - "FractaVolta/research/thermal_packet_networks.md"
   - "FractaVolta/research/packet_paper_template.md"
@@ -46,6 +47,8 @@ related_documents:
   - "marenostrum/safe_compute_exergy.md"
   - "marenostrum/compute-exergy-omitted-variable.md"
   - "marenostrum/CXU_SPEC.md"
+  - "https://github.com/JeanHuguesRobert/barons-Mariani/blob/main/research/the_network_is_the_learning_computer.md"
+  - "https://github.com/JeanHuguesRobert/barons-Mariani/blob/main/research/potentics_of_compute.md"
 related_document_urls:
   - "https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/generalized_packet_networks.md"
   - "https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/capability_regimes.md"
@@ -906,47 +909,44 @@ This is only a toy example. It illustrates the ordering principle, not a final m
 
 ---
 
-## 20. RAIX — Redundant Array of Independent X
+## 20. RAIX — Generalized Arrays of Capabilities
 
-RAIX generalizes RAID.
+RAIX generalizes the array logic of RAID beyond storage disks to arbitrary capability-bearing substrates $X$:
+- nodes, gateways, routes, APIs, caches, storage;
+- energy vectors, models, agents, registries, policies, traces, jurisdictions, institutions.
 
-Where RAID originally concerns redundant arrays of independent disks, RAIX concerns redundant arrays of independent X, where X may be:
+As corrected in [`raix.md`](raix.md), **redundancy is only one operating regime of RAIX**. An array configures an organized plurality of heterogeneous resources to provide:
+$$
+\text{aggregation, parallelism, redundancy, specialization, diversity / exploration}
+$$
+delivering a collective capability $C_{\text{collective}}(T) = F_T(C_1, \dots, C_n)$ with an array gain $G_{\text{RAIX}}(T) > 1$ across the Edge AI continuum ($\text{MCU} \to \text{NPU} \to \text{SBC} \to \text{GPU} \to \text{Cloud}$).
 
-- nodes;
-- gateways;
-- routes;
-- APIs;
-- caches;
-- storage;
-- energy sources;
-- models;
-- agents;
-- registries;
-- policies;
-- traces;
-- jurisdictions;
-- institutions;
-- communities.
-
-RAIX is justified only if redundancy increases useful capacity, resilience, sovereignty, or anti-capture more than it increases cost, noise, and complexity.
+RAIX is justified only if organization increases useful capacity, resilience, sovereignty, or anti-capture more than it increases coordination cost, noise, and complexity.
 
 ### 20.1 Minimal RAIX taxonomy
 
-| X | Redundancy question | Capture risk reduced |
+| X | Capability array question | Capture risk reduced |
 |---|---|---|
 | Data | Are there independent copies or derivable reconstructions? | storage monopoly, data loss |
 | Gateway | Can another gateway execute or supervise the verb? | infrastructure choke point |
-| Route | Can traffic or execution be rerouted? | network or provider lock-in |
+| Route | Can traffic or execution be rerouted through alternative topologies? | network or provider lock-in |
 | Cache | Can stale/fresh alternatives preserve service? | endpoint dependency |
 | Registry | Can verbs and policies survive registry capture? | namespace/capability monopoly |
 | Trace | Can audit evidence survive local deletion or tampering? | accountability capture |
-| Model | Can another model or agent evaluate the act? | AI vendor capture |
-| Energy | Can another source provide useful capacity? | energy dependency |
+| Model | Can specialized local SLMs / remote LLMs cooperatively evaluate the act? | AI vendor capture |
+| Energy | Can renewable, battery, or grid vectors dynamically substitute? | energy dependency |
 | Institution | Can authority be checked or forked? | political capture |
 
-RAIX remains underdefined at this stage. It needs its own taxonomy and metrics. But it already acts as a design test:
+### 20.2 Compute Weather: forecasting composition opportunity
 
-> **Where is the single point of failure? Where is the single point of capture?**
+To avoid capacity faults and coordination collapse across intermittent, decentralized edge nodes, Fractanet incorporates **Compute Weather** (formalized in *Potentics of Compute* [`potentics_of_compute.md`](https://github.com/JeanHuguesRobert/barons-Mariani/blob/main/research/potentics_of_compute.md) §6.5).
+
+Compute Weather is not a financial price forecast; it is a calibrated physical and behavioural forecast beneath price:
+- which compute profiles and node topologies will probably be available;
+- expected transit delay, network partition hazards, and preemption probabilities;
+- the likelihood that an assembled capability array $C_{\text{collective}}(T)$ will satisfy service levels without mid-journey collapse.
+
+Its core operational role in Fractanet is **forecasting composition opportunities**: identifying transient windows where solar, thermal, and edge compute resources align so that complex cognitive or inference packets can be routed through high-gain temporary arrays ($G_{\text{RAIX}} > 1$).
 
 ---
 

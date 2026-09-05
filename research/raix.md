@@ -5,8 +5,8 @@ description: "Source note correcting the too-narrow interpretation of RAIX as ge
 author: "Jean Hugues Noël Robert, baron Mariani"
 affiliation: "Institut Mariani / C.O.R.S.I.C.A. / FractaVolta"
 date: "2026-08-22"
-last_modified_at: "2026-08-22"
-version: "0.1"
+last_modified_at: "2026-09-06"
+version: "0.2"
 status: "working source note — consolidated from Fractanet, Potentics of Compute and Learning Computer investigation"
 license: "CC BY-SA 4.0"
 language: "en"
@@ -38,7 +38,12 @@ tags:
   - exploration
   - learning-computer
   - fractanet
+  - edge-ai
+  - compute-weather
 update_policy: "UP-DEFAULT-REVIEWED"
+changelog:
+  - "v0.2 (2026-09-06) — Integrates Edge AI hardware continuum (MCU -> NPU -> SBC -> GPU -> Cloud) and Compute Weather composition forecasting (Issue barons-Mariani#55)."
+  - "v0.1 (2026-08-22) — Initial source note correcting RAIX scope from simple redundancy to generalized capability arrays."
 ---
 
 # RAIX — Generalized Arrays of Capabilities
@@ -110,6 +115,30 @@ Several resources can satisfy equivalent capability requirements, enabling fallb
 ### 3.4 Specialization
 
 Heterogeneous resources contribute according to comparative advantage: MCU for real-time control, NPU for inference, GPU for dense tensor work, CPU for irregular logic, local model for privacy, remote model for difficult reasoning, battery for short response, grid for sustained supply.
+
+#### 3.4.1 The Edge AI Hardware Scale ($\text{MCU} \to \text{NPU} \to \text{SBC} \to \text{GPU} \to \text{Cloud}$)
+
+In distributed computing and physical infrastructure, RAIX specialization organizes across a concrete hardware continuum:
+
+$$
+\text{MCU} \longrightarrow \text{NPU} \longrightarrow \text{SBC} \longrightarrow \text{GPU} \longrightarrow \text{Cloud}
+$$
+
+1. **Microcontroller (MCU)** (e.g., ESP32, STM32, Cortex-M):
+   - Real-time deterministic execution, sub-millisecond physical actuation, sensor sampling.
+   - Rossignol Échelon 0 vital monitoring (hardware interlocks, water/energy cutoffs, non-overrideable safety thresholds) requiring zero network connectivity.
+2. **Neural Processing Unit (NPU)** (e.g., Hailo-8, RK3588 NPU, local Edge TPU):
+   - Energy-efficient local inference (0.5 to 5W), low-latency embeddings, edge SLM execution (1B–3B quantized models).
+   - Real-time perception and feature extraction without exporting raw sensor data.
+3. **Single-Board Computer (SBC)** (e.g., Raspberry Pi 5, Orange Pi, industrial x86 gateways):
+   - Local node coordination, SQLite / filesystem L1 storage, COP bus / SubBus routing, local hash verification of traces.
+   - Inter-tier orchestration between MCU real-time triggers and upstream models.
+4. **Local Workstation / GPU** (e.g., RTX / embedded GPUs):
+   - Local dense tensor workloads, medium-weight SLM/LLM inference (7B–70B), fine-tuning, synthetic verification.
+   - Preserves data sovereignty and zero-cloud operational capability for sovereign enclaves.
+5. **Frontier Cloud Models**:
+   - Escalated high-dimensional semantic synthesis, deep doctrinal evaluation, code generation.
+   - Invoked strictly as an escalation tier under explicit Mandate and budget envelope (`mandateRef`).
 
 ### 3.5 Diversity and exploration
 
@@ -203,6 +232,15 @@ where `U` is explicitly defined for the experiment and may include delivered thr
 This is not proposed as a universal scalar metric. It is an experiment-local comparison instrument.
 
 A negative or sub-unit result is valuable evidence: coordination may destroy the supposed gain.
+
+### 8.1 Compute Weather: forecasting composition opportunities
+
+As formalized in *Potentics of Compute* ([`potentics_of_compute.md`](https://github.com/JeanHuguesRobert/barons-Mariani/blob/main/research/potentics_of_compute.md) §6.5), the realization of $G_{\text{RAIX}}(T) > 1$ across intermittent, decentralized edge nodes requires an operational instrument: **Compute Weather**.
+
+Compute Weather is not a financial price forecast; it is a calibrated physical and behavioural forecast beneath price:
+- predicting whether complementary nodes (e.g., solar-powered NPU + battery + low-latency mesh link) will coincide;
+- forecasting the probability that a temporary capability array can complete a cognitive packet journey without preemption or capacity faults;
+- guiding dynamic array composition before committing critical tasks.
 
 ## 9. Architectural consequence
 

@@ -9,10 +9,10 @@ x-email: "jhr@baronsmariani.org"
 x-website: "https://fractavolta.com"
 canonical_path: "FractaVolta/research/capability_regimes.md"
 canonical_url: "https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/capability_regimes.md"
-version: "0.1-draft"
+version: "0.2-draft"
 status: "source working paper — draft under human validation"
 date: "2026-06-15"
-last_modified_at: "2026-06-15"
+last_modified_at: "2026-09-06"
 license: "CC BY-SA 4.0"
 language: "en"
 type: "source-document"
@@ -20,6 +20,7 @@ source_or_derived: "source-document"
 repository: "FractaVolta"
 related_documents:
   - "FractaVolta/research/fractanet.md"
+  - "FractaVolta/research/raix.md"
   - "FractaVolta/research/generalized_packet_networks.md"
   - "FractaVolta/research/inference_packet_network.md"
   - "FractaVolta/research/thermal_packet_networks.md"
@@ -31,6 +32,8 @@ related_documents:
   - "cogentia/research/cogentia_continuation_packet_routing.md"
   - "inseme/packages/cop-core/Invariants.md"
   - "inseme/packages/cop-core/ImplementationProfiles.md"
+  - "https://github.com/JeanHuguesRobert/barons-Mariani/blob/main/research/the_network_is_the_learning_computer.md"
+  - "https://github.com/JeanHuguesRobert/barons-Mariani/blob/main/research/potentics_of_compute.md"
 tags:
   - fractanet
   - capability-regimes
@@ -46,6 +49,9 @@ tags:
   - preemption
   - local-first
   - fallback
+  - edge-ai
+  - compute-weather
+  - array-gain
 human_validation_required: true
 review_status: "initial ChatGPT-assisted draft produced from conversation on 2026-06-15; human validation remains required"
 document_role: "source"
@@ -223,38 +229,52 @@ This is why the concept is Fractanet-native: it is **fractal decision under cons
 
 ## 6. Relation to RAIX
 
-RAIX is the redundancy principle:
+RAIX is the **plural capability array principle**:
 
 ```text
-Redundant Array of Independent X
+Array of Independent X (Aggregation, Parallelism, Redundancy, Specialization, Exploration)
 ```
 
-where `X` may be compute, model, agent, gateway, route, cache, trace, policy, energy source, institution or human reviewer.
+where `X` may be compute, model, agent, gateway, route, cache, trace, policy, energy source, institution or human reviewer (see [`raix.md`](raix.md)).
+
+Redundancy is only one operational regime of RAIX. Across different regimes, an array configures heterogeneous resources to deliver a collective capability:
+
+$$
+C_{\text{collective}}(T) = F_T(C_1, C_2, \ldots, C_n)
+$$
+
+with the objective of achieving an array gain $G_{\text{RAIX}}(T) > 1$ under task class $T$.
 
 Capability regimes add one crucial point:
 
 > **RAIX capacity does not need to be active everywhere all the time. It must be mobilizable when the regime requires it.**
 
-This matters economically. A system should not always embed maximal intelligence in every unit. It should embed enough local capability for ordinary and fallback regimes, then mobilize stronger or rarer capacities when the regime changes and the deadline allows.
+This matters economically and architecturally across the **Edge AI hardware continuum**:
+
+$$
+\text{MCU} \longrightarrow \text{NPU} \longrightarrow \text{SBC} \longrightarrow \text{GPU} \longrightarrow \text{Cloud}
+$$
+
+A system should not always embed maximal cloud intelligence in every unit. It should embed enough local MCU/NPU capability for ordinary, perturbed, and degraded regimes, mobilizing heavier GPU/Cloud capacities only when the regime escalates.
 
 Formula:
 
 ```text
 Do not overbuild every node for every exceptional case.
 Do not centralize every critical decision either.
-Prepare graded, redundant, traceable capacity mobilization.
+Prepare graded, composable, traceable capacity mobilization.
 ```
 
-RAIX therefore becomes regime-sensitive:
+RAIX therefore becomes regime-sensitive across the hardware continuum:
 
-| Regime | RAIX role |
-|---|---|
-| Ordinary | efficiency, ordinary redundancy, local autonomy |
-| Perturbed | alternative routes, additional observation, trace strengthening |
-| Degraded | fallback capacity, degraded service, local-first resilience |
-| Critical | prioritized compute, preemptive routing, external capacity surge |
-| Vital | reserved capacity, hard invariants, mandatory trace, human/institutional escalation |
-| Recovery | trace replication, audit, repair, rule update |
+| Regime | RAIX role | Hardware mobilization |
+|---|---|---|
+| Ordinary | efficiency, local autonomy, aggregation | MCU / NPU local SLM inference (1–3B), zero cloud cost |
+| Perturbed | alternative routes, additional observation, trace capture | SBC bus mediation, SubBus failover, NPU feature extraction |
+| Degraded | fallback capacity, local-first resilience, hard invariants | MCU deterministic execution (Rossignol Échelon 0 vital thresholds) under network partition |
+| Critical | prioritized compute, preemptive routing, capacity surge | Local GPU / Cloud frontier reasoning models under explicit mandate |
+| Vital | reserved capacity, hard hardware interlocks, mandatory trace | Hardware interlocks, immutable trace logging, human/institutional escalation |
+| Recovery | trace replication, audit, postmortem replay, policy update | In-memory trace replay (`side.js`), Ithaca assimilation, routing rule update |
 
 ---
 
