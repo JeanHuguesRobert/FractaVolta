@@ -61,6 +61,12 @@ Le [Guide public](./guide) aide les visiteurs à poser des questions ancrées da
 
 Chaque réponse cite des sources. Pour aller plus loin, le Guide prépare un prompt à copier vers ChatGPT, Claude, Grok ou un autre agent, puis à faire revenir ici avec une question de suivi.
 
+## Participer
+
+FractaVolta est ouvert aux échanges et aux contributions. La [porte de participation](../discord/) permet de rejoindre la conversation sur Discord, de contribuer sur GitHub, de consulter la documentation publique ou de prendre contact directement.
+
+Le serveur Discord est ouvert à toute personne souhaitant suivre, questionner, discuter ou contribuer. Discord est un espace de conversation vivant ; les traces durables du projet restent indépendantes d'une plateforme particulière.
+
 ## Ce que nous cherchons maintenant
 
 FractaVolta cherche des partenaires et des sites pilotes en Corse :
@@ -95,7 +101,7 @@ FractaVolta cherche des partenaires et des sites pilotes en Corse :
 - partenaires intéressés par un pilote.
 
 **Vous souhaitez lancer un échange ou un audit de seconde vie ?**  
-Écrivez-nous : [jhr@baronsmariani.org](mailto:jhr@baronsmariani.org) ou contactez-nous sur [LinkedIn](https://www.linkedin.com/company/fractavolta/).
+Écrivez-nous : [jhr@baronsmariani.org](mailto:jhr@baronsmariani.org), [rejoignez la conversation](../discord/) ou contactez-nous sur [LinkedIn](https://www.linkedin.com/company/fractavolta/).
 
 ## Marchés prioritaires
 
