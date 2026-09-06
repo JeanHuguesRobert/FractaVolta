@@ -78,6 +78,7 @@ The highest-value use of local solar is not always exporting electrons. It can b
 
 ## Entry points
 
+- [Join and participate](./discord/) — Discord conversation, GitHub contribution, public documentation, and direct contact.
 - [Energy packets](./energy-packets) — the basic shift from flow to accountable capacity.
 - [For partners](./for-partners) — commercial and institutional engagement.
 - [For deployers](./for-deployers) — concrete deployment patterns, including DC-native units and Mariani Village.
@@ -102,4 +103,4 @@ This is governed by the [Cogentia Commons methodology](https://github.com/JeanHu
 
 Early-stage. The architecture is documented across energy, compute, cognition, and civic layers. Local deployment pages have been added for Corsica. Prototype work is proceeding through Rossignol Node and related field-oriented experiments.
 
-Contact: [jhr@baronsmariani.org](mailto:jhr@baronsmariani.org) · [LinkedIn – FractaVolta](https://www.linkedin.com/company/fractavolta/)
+Contact: [jhr@baronsmariani.org](mailto:jhr@baronsmariani.org) · [Discord](./discord/) · [GitHub](https://github.com/JeanHuguesRobert/FractaVolta) · [LinkedIn – FractaVolta](https://www.linkedin.com/company/fractavolta/)
