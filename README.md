@@ -177,7 +177,6 @@ Foundational papers: [UNCONSCIOUS_GRID.md](./research/UNCONSCIOUS_GRID.md), [DC_
 ### Layer 2 — Compute
 
 Sovereign AI inference is the highest-value application of stranded Mediterranean solar exergy. Where exporting electrons through the SARCO cable yields €40–80/MWh, the same exergy converted into inference tokens yields ×10–×40 the revenue — and the bottleneck is bypassed: inference tokens travel the internet, not the cable.
-
 The pricing unit is the **CXU** (Compute eXergy Unit) — defined in the [MareNostrum framework](https://github.com/JeanHuguesRobert/marenostrum/blob/main/research/CXU_SPEC.md) — which incorporates hardware efficiency, system efficiency, and SLA premium into a single auditable price per unit of useful inference.
 
 The new [Inference Packet Networks](research/inference_packet_network.md) paper extends the packet logic to cognition itself: inference workloads as versioned, signed, locally executable units providing bounded continuity when hyperscale systems are degraded, unavailable, or geopolitically disrupted.
@@ -249,16 +248,16 @@ See [mariani_village.md](./research/mariani_village.md).
 
 ## Why Diversity Is the Source
 
-The FractaVolta framework is antifragile — in Taleb's precise sense — because its packet-switched architecture naturally produces diversity, and diversity is the source of resilience at every layer.
+The FractaVolta framework is **resilient by architecture** because packet-switching naturally produces diversity, redundancy, and substitutability at every layer. Those properties are prerequisites for bounded antifragility, not proof of it. In the corpus sense, a system is antifragile only when a bounded perturbation leaves a retained trace and a durable improvement in capacity, optionality, knowledge, or corrective ability under [Measured Risk](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/measured_risk.md).
 
 Diversity of vectors (battery, methanol, ammonia, SAF) means no single price shock collapses the energy network. Diversity of form factors (phone to vessel) means no single technology failure interrupts service. Diversity of routes (ferry, road, rail, aircraft) means no single closure blocks flow. Diversity of governance (cooperative, municipal, academic, commercial) means no single institutional actor can capture the protocol. Diversity of cognitive providers (Claude, ChatGPT, local models, human judges) means no single AI vendor can lock the reasoning. Diversity of civic instances (per-commune deployments) means no single platform operator can capture the deliberation.
 
 **RAIB — Redundant Array of Inexpensive Batteries.**
 **RAIA — Redundant Array of Inexpensive Agents** (the cognitive equivalent — by construction, since `agent: "*"` is the protocol default).
 
-Commodity-grade LFP cells cost €80–120/kWh. Second-life cells retired from electric vehicles at 70–80% residual capacity cost €30–60/kWh. A fleet of inexpensive batteries managed by intelligent routing software is more resilient than a single premium system, for the same reason that ARPANET was more resilient than the telephone network: failure is distributed, graceful, and informative rather than catastrophic and silent.
+Commodity-grade LFP cells cost €80–120/kWh. Second-life cells retired from electric vehicles at 70–80% residual capacity cost €30–60/kWh. A fleet of inexpensive batteries managed by intelligent routing software is more resilient than a single premium system, for the same reason that ARPANET was more resilient than the telephone network: failure is distributed, graceful, and informative rather than catastrophic and silent. **RAIB becomes antifragile only when those bounded failures are assimilated into better routing, maintenance, chemistry/vendor selection, operating envelopes, or fleet composition, so that the subsequent system state is better informed than the previous one.**
 
-The same logic applies to cognition: a corpus of replaceable agents resuming typed continuations is more resilient than a vendor-locked monolith. Failure is distributed and informative; backtracking is structured; reasoning is preserved.
+The same distinction applies to cognition. A corpus of replaceable agents resuming typed continuations is more resilient than a vendor-locked monolith. Failure is distributed and informative; backtracking is structured; reasoning is preserved. **RAIA/Cogentia exhibits an antifragile mechanism only where a bounded failed or degraded handoff leaves a reusable trace that durably improves later routing, prompts, policies, continuations, or agent substitution. If nothing durable changes, the property is resilience, not antifragility.**
 
 ---
 
@@ -363,7 +362,7 @@ All papers: CC BY-SA 4.0. All software: MIT.
 
 **Knowledge methodology**: [Cogentia Commons](https://github.com/JeanHuguesRobert/cogentia) — traceable, auditable, AI-connectable. Governed by living persons alone.
 
-**RAIB** (Redundant Array of Inexpensive Batteries) + **RAIA** (Redundant Array of Inexpensive Agents): commodity layers, intelligent routing, antifragile by architecture, not by contract.
+**RAIB** (Redundant Array of Inexpensive Batteries) + **RAIA** (Redundant Array of Inexpensive Agents): commodity layers and intelligent routing are resilient by architecture; they are antifragile only where bounded failures leave reusable traces and improve subsequent routing, composition, or procedures under [Measured Risk](https://github.com/JeanHuguesRobert/cogentia/blob/main/research/measured_risk.md).
 
 **Pouzin's principle, generalized**: datagrams won for information; they will win for energy, cognition, and civic deliberation.
 
