@@ -8,9 +8,10 @@ x-address: "1 cours Paoli, F-20250 Corte, Corsica, France"
 x-email: "jhr@baronsmariani.org"
 x-website: "https://fractavolta.com"
 canonical_url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/generalized_packet_networks.md
-version: "0.3"
+version: "0.4"
 status: "working-paper"
 date: "2026-05-22"
+last_modified_at: "2026-09-19"
 last_modified_at: "2026-05-22"
 last_stamped_at: 2026-06-01
 license: "CC BY-SA 4.0"
@@ -383,6 +384,85 @@ institutional load    = λ_requests · h̄_processing
 The name "Erlang" is historically specific to telephony [5]. The underlying construct — **resource–time occupancy** — applies wherever packets arrive and occupy service resources for finite durations.
 
 **Substrate-specific qualification.** The Poisson assumption (memoryless inter-arrival times) is often violated outside telephony. Burst arrivals, self-similar traffic [29], scheduled flows, or strategic timing all break the simple Erlang formulation. GPN inherits the construct, not the assumption.
+
+### 5.1.1 From circuit occupancy to packetized capability traffic
+
+The scalar Erlang form is useful, but it must not silently re-import circuit-switching semantics into a packet network.
+
+A circuit-oriented model can be pictured as:
+
+~~~text
+request
+→ reserve one end-to-end resource path
+→ hold it for h
+→ release it
+~~~
+
+A packet-oriented model instead consumes resources locally and sequentially:
+
+~~~text
+packet
+→ capability A for h1
+→ buffer / cache
+→ capability B for h2
+→ maybe fork
+   ├→ capability C1
+   ├→ capability C2
+   └→ verifier
+→ join / continue
+~~~
+
+No end-to-end capacity reservation is implied. Resource occupancy is local to each hop, while the packet identity and continuation survive handler substitution.
+
+For a resource or capability class r, a local offered load can still be written:
+
+$
+A_r = \sum_k \lambda_k \cdot \bar{h}_{k,r}
+$
+
+where k ranges over packet classes that may use r.
+
+Across heterogeneous capability classes, the natural object is therefore not necessarily one scalar Erlang but a vector, or more generally a field, of offered demand:
+
+$
+\mathbf{A} = (A_{r_1}, A_{r_2}, \ldots, A_{r_n})
+$
+
+and, when locality and time matter:
+
+$
+A(r, x, t)
+$
+
+where r denotes a capability class, x a locality or admissible execution domain, and t time.
+
+This matters especially for compute and cognition. A single incoming work item may induce different effective traffic depending on policy:
+
+~~~text
+ordinary packet
+→ one inference
+
+high-risk packet
+→ several decorrelated inferences
+→ verifier
+→ possible human judgment
+~~~
+
+Thus **effective capability traffic is partly endogenous**:
+
+$
+Traffic_{effective}
+=
+f(raw\ demand, routing, redundancy, verification, risk, deadline, policy)
+$
+
+Redundancy can improve robustness while also increasing occupancy, queueing, energy use, latency, privacy exposure, and coordination cost. It must therefore be treated as a governed traffic-generating decision rather than as free reliability.
+
+Working interpretation:
+
+> **The generalized Erlang remains a local occupancy measure. Packet switching generalizes the problem from sizing reserved circuits to dynamically routing and statistically multiplexing heterogeneous capability demand.**
+
+This formulation deliberately does not define a new universal traffic unit. It identifies the measurement problem that a future Fractanet traffic theory would need to solve.
 
 ### 5.2 Traffic intensity, saturation, congestion
 
