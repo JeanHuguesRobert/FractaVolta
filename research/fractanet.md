@@ -12,7 +12,7 @@ canonical_url: "https://github.com/JeanHuguesRobert/FractaVolta/blob/main/resear
 version: "0.4.0-draft"
 status: "working-paper — capability-regimes integration pass under human validation"
 date: "2026-06-10"
-last_modified_at: "2026-09-06"
+last_modified_at: "2026-09-19"
 last_stamped_at: "2026-09-06"
 license: "CC BY-SA 4.0"
 language: "en"
@@ -950,6 +950,63 @@ Its core operational role in Fractanet is **forecasting composition opportunitie
 
 ---
 
+## 20.1 Capability traffic: from circuit sizing to packet multiplexing
+
+Fractanet inherits the generalized Erlang notion of resource-time occupancy from GPN, but its architecture is explicitly packet-switched rather than circuit-reservation based.
+
+The operational distinction is:
+
+~~~text
+circuit model
+→ reserve capacity for a session / path
+→ keep it occupied
+→ release it
+
+Fractanet packet model
+→ express bounded capability demand
+→ resolve an admissible next hop
+→ occupy that capability locally
+→ persist / forward the resulting state
+→ resolve the next requirement later, possibly elsewhere
+~~~
+
+For one capability class, ordinary queueing and occupancy measures remain useful. Across the network, however, Fractanet sees a time-varying heterogeneous demand field rather than one interchangeable pool:
+
+$
+A(c, x, t)
+$
+
+where c is a capability, x a locality or execution domain, and t time.
+
+Examples include:
+
+~~~text
+compute.batch
+model.inference
+symbolic.verify
+human.review
+storage.persist
+energy.charge
+network.transit
+institutional.approve
+~~~
+
+A Cognitive Packet or continuation need not bind itself to a provider. It can emit a requirement into this capability field; routing then selects a temporary handler according to mandate, locality, cost, availability, risk and regime.
+
+RAIX makes traffic generation itself policy-dependent. Under higher consequence or uncertainty, a packet may be deliberately replicated across diverse handlers, verified independently, or escalated to a human. This adds traffic in exchange for lower residual risk.
+
+Therefore:
+
+> **Fractanet statistically multiplexes capabilities, not merely links.**
+
+and:
+
+> **Redundancy is both a reliability mechanism and a traffic-generating act whose marginal risk reduction must justify its marginal cost, delay and exposure.**
+
+This connects GPN traffic theory, RAIX, Measured Risk and the Learning Computer without introducing a mandatory new traffic ontology. The immediate implementation implication is narrower: capability requirements, execution bindings and receipts must remain provider-independent and traceably correlated.
+
+---
+
 ## 21. Capability regimes and decision under uncertainty
 
 Fractanet does not route capacity in an abstract vacuum. Every packet circulates under a regime of constraints.
@@ -1300,6 +1357,7 @@ The document claims only that a shared architectural grammar is emerging and tha
 9. How much of the generalized envelope can be shared across data, energy, water, goods, inference, and mandates?
 10. What is the minimum demo that proves the fractal invariant without overbuilding?
 11. What is the minimal capability-regime vocabulary that should enter the Fractanet envelope?
+12. Which traffic measures best describe heterogeneous capability demand without collapsing packet routing back into circuit-style scalar capacity?
 
 ### 30.1 Corpus anchors for open questions
 
@@ -1357,6 +1415,7 @@ Success criterion:
 | COP is the supervision plane | strong internal claim |
 | JavaScript is adoption-only | recommendation |
 | RAIX prevents both failure and capture | promising but underformalized |
+| Fractanet statistically multiplexes heterogeneous capability demand rather than reserving end-to-end compute circuits | working architectural claim |
 | Capability regimes make routing decision-aware under uncertainty | central integration claim |
 | Exergy is the correct optimization concept | central but requires metrics |
 | Physical packet compatibility is plausible | to be demonstrated |
