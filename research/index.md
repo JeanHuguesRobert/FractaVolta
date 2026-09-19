@@ -122,3 +122,47 @@ This repository instantiates the **physical infrastructure layer** of the [DHITL
 ## Newly indexed working corpus (July 2026)
 
 - [Ownership Packets and the Cognitive Orchestration Protocol](ownership_packets_and_cop.md)
+
+<!-- BEGIN_AUTO: index_catalog -->
+## Corpus catalog
+
+*Generated navigation. Editorial sections above remain human-maintained.*
+
+| Document | Role | Updated |
+|---|---|---|
+| [Idea to explore / POC FractaBuffer — minimal high-power buffering and capability-priced comfort](../.cogentia/issues/jeanhuguesrobert-fractavolta/issue-00028.md) | source | unknown |
+| [Idea to explore Circular command center using Wacom input and recycled photo frames](../.cogentia/issues/jeanhuguesrobert-fractavolta/issue-00003.md) | source | unknown |
+| [Idea to explore Domestic relay and smartphone compute node](../.cogentia/issues/jeanhuguesrobert-fractavolta/issue-00009.md) | source | unknown |
+| [Product idea Memory AirTag / Œuf Trace — opportunistic GNSS trace tag without SIM](../.cogentia/issues/jeanhuguesrobert-fractavolta/issue-00004.md) | source | unknown |
+| [Accountable Digital Twins — commercial differentiation through Archia + COP/Accounting](../.cogentia/issues/jeanhuguesrobert-fractavolta/issue-00017.md) | source | unknown |
+| [Accountable Digital Twins — Commercial Thesis for FractaVolta](accountable_digital_twin_commercial_thesis.md) | source | 2026-08-08 |
+| [Assured Capacity Reservations](assured-capacity-reservations.md) | source | 2026-07-29 |
+| [Benchmark the Accountable Digital Twin differentiation against adjacent AI governance markets](../.cogentia/issues/jeanhuguesrobert-fractavolta/issue-00018.md) | source | unknown |
+| [Case 002 — Guide: answer a real visitor question through a Cognitive Packet Odyssey](../.cogentia/issues/jeanhuguesrobert-fractavolta/issue-00025.md) | source | unknown |
+| [Case study: reuse legacy copper and DECT handsets as voice nodes](../.cogentia/issues/jeanhuguesrobert-fractavolta/issue-00012.md) | source | unknown |
+| [Continuation — packetisation, Inox Micro, nœuds vocaux et capacité assurée](../.cogentia/issues/jeanhuguesrobert-fractavolta/issue-00015.md) | source | unknown |
+| [Continue FractaLog integration across FractaNet and COP](../.cogentia/issues/jeanhuguesrobert-fractavolta/issue-00010.md) | source | unknown |
+| [CPKT-2026-001 — Substitution Experiment on Claim C11](CPKT-2026-001_c11_substitution.md) | source | 2026-07-21 |
+| [CPKT-2026-001 : Hop 3 humain accompli — publication sous condition d'accord](../.cogentia/issues/jeanhuguesrobert-fractavolta/issue-00014.md) | source | unknown |
+| [EDF Corse Open Data / near-real-time ingestion — extend the Corsica Digital Twin sensor layer beyond the grid signal](../.cogentia/issues/jeanhuguesrobert-fractavolta/issue-00027.md) | source | unknown |
+| [Energy-flexible compute SLA for ZNI solar, storage and curtailment](../.cogentia/issues/jeanhuguesrobert-fractavolta/issue-00020.md) | source | unknown |
+| [FractaLog: formalize registers, ledgers and Official Journal as projections](../.cogentia/issues/jeanhuguesrobert-fractavolta/issue-00019.md) | source | unknown |
+| [FractaVolta](../README.md) | source | 2026-09-12 |
+| [FractaVolta — modèle commercial de subvention croisée](commercial_cross_subsidy_model.md) | source | 2026-08-14 |
+| [From Quantum to Vote](network_taxonomy.md) | source | 2026-07-24 |
+| [Jana — complete the logo-generator retrofit](../.cogentia/issues/jeanhuguesrobert-fractavolta/issue-00021.md) | source | unknown |
+| [Jana logo generator](../tools/jana-logo-generator/README.md) | source | 2026-08-13 |
+| [Mariani Village — extend from housing fleet to distributed autonomy habitat](../.cogentia/issues/jeanhuguesrobert-fractavolta/issue-00024.md) | source | unknown |
+| [Monitorer et republier ouvertement le « Signal réseau Corse » d’EDF — premier capteur du Corsica Digital Twin](../.cogentia/issues/jeanhuguesrobert-fractavolta/issue-00023.md) | source | unknown |
+| [Offer — configurable visual profiles for Fractanet Digital Twins](../.cogentia/issues/jeanhuguesrobert-fractavolta/issue-00022.md) | source | unknown |
+| [Potentics of Compute — turn C6 and C7 into measured experiments](../.cogentia/issues/jeanhuguesrobert-fractavolta/issue-00016.md) | source | unknown |
+| [Propagate canonical RAIX definition into Fractanet and generated views](../.cogentia/issues/jeanhuguesrobert-fractavolta/issue-00026.md) | source | unknown |
+| [Provenance — Jana logo generator](../tools/jana-logo-generator/PROVENANCE.md) | source | 2026-08-13 |
+| [RAIX — Generalized Arrays of Capabilities](raix.md) | source | 2026-09-06 |
+| [Restructure docs site as EN-first with selective FR derived products](../.cogentia/issues/jeanhuguesrobert-fractavolta/issue-00005.md) | source | unknown |
+| [Suivi — Seconde Vie Logistique](../.cogentia/issues/jeanhuguesrobert-fractavolta/issue-00007.md) | source | unknown |
+| [Track follow-up improvements after EN-first / FR-operational site restructuring](../.cogentia/issues/jeanhuguesrobert-fractavolta/issue-00006.md) | source | unknown |
+| [v0.5+ : intégrer les découvertes F1–F5 de CPKT-2026-001 comme résistances (§8)](../.cogentia/issues/jeanhuguesrobert-fractavolta/issue-00013.md) | source | unknown |
+| [When Cognition Became Traffic](when_cognition_became_traffic.md) | source | 2026-07-21 |
+
+<!-- END_AUTO: index_catalog -->
