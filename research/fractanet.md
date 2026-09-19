@@ -9,7 +9,7 @@ x-email: "jhr@baronsmariani.org"
 x-website: "https://fractavolta.com"
 canonical_path: "FractaVolta/research/fractanet.md"
 canonical_url: "https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/fractanet.md"
-version: "0.4.1-draft"
+version: "0.4.2-draft"
 status: "working-paper — capability-regimes integration pass under human validation"
 date: "2026-06-10"
 last_modified_at: "2026-09-19"
@@ -1043,6 +1043,26 @@ Polling, retries and redundant runs SHOULD therefore use explicit budgets, bound
 Compact rule:
 
 > **Control capacity is capacity. Powerful control verbs consume scarce resources and must be routed, budgeted and preserved accordingly.**
+
+A useful current profile is GitHub itself:
+
+~~~text
+Issue / comment
+→ control rendezvous
+→ versioned repository state
+→ CI / Actions handler
+→ webhook or polling
+→ Receipt
+→ Continuation
+~~~
+
+This profile is intentionally non-sovereign. GitHub may be highly useful today and unavailable tomorrow. Fractanet MUST therefore treat such a provider as a temporary control-capability locality, never as the owner of logical continuity.
+
+The portable invariant is:
+
+> **Provider availability may disappear; Continuation identity, authority, causal history and reconstructible state must not disappear with it.**
+
+The same pattern should remain satisfiable by another forge, a local runner, an Oracle VPS, another CI provider, or a future Fractanet node, subject to mandate, locality, budget and capability constraints.
 
 This connects GPN traffic theory, RAIX, Measured Risk and the Learning Computer without introducing a mandatory new traffic ontology. The immediate implementation implication is narrower: capability requirements, execution bindings and receipts must remain provider-independent and traceably correlated.
 
