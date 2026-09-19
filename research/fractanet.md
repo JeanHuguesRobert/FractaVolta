@@ -9,7 +9,7 @@ x-email: "jhr@baronsmariani.org"
 x-website: "https://fractavolta.com"
 canonical_path: "FractaVolta/research/fractanet.md"
 canonical_url: "https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/fractanet.md"
-version: "0.4.0-draft"
+version: "0.4.1-draft"
 status: "working-paper — capability-regimes integration pass under human validation"
 date: "2026-06-10"
 last_modified_at: "2026-09-19"
@@ -1002,6 +1002,47 @@ Therefore:
 and:
 
 > **Redundancy is both a reliability mechanism and a traffic-generating act whose marginal risk reduction must justify its marginal cost, delay and exposure.**
+
+### 20.1.1 Control capacity is itself scarce traffic
+
+A generalized control plane may expose disproportionately powerful capabilities: start work, inspect state, correlate execution, retry, cancel, reroute, poll, fetch logs, trigger redundant verification, or escalate to another handler.
+
+Those capabilities are not free merely because they belong to the control plane. They may consume:
+
+- provider quotas and rate limits;
+- paid or metered compute;
+- workflow minutes and concurrency slots;
+- API calls;
+- log/artifact retention;
+- human attention;
+- security exposure;
+- scarce recovery opportunities.
+
+Therefore the control plane MUST treat its own interventions as governed resource consumption.
+
+A useful default is:
+
+~~~text
+ordinary work
+→ cheapest admissible local observation/action
+
+uncertain or failed continuity
+→ bounded recovery polling / retry
+
+high consequence or high irreversibility
+→ justified additional verification / redundancy
+
+critical case
+→ preserve sufficient control reserve for recovery and escalation
+~~~
+
+This implies a **control reserve** principle: a system SHOULD avoid exhausting provider quotas, concurrency, or rate limits on low-value control activity when those same resources may later be required for diagnosis, recovery, safety, or a consequential act.
+
+Polling, retries and redundant runs SHOULD therefore use explicit budgets, bounded backoff, caching and coalescing where possible. A control-plane action SHOULD be taken because its expected marginal value exceeds its marginal resource consumption and exposure, not merely because an API makes it technically possible.
+
+Compact rule:
+
+> **Control capacity is capacity. Powerful control verbs consume scarce resources and must be routed, budgeted and preserved accordingly.**
 
 This connects GPN traffic theory, RAIX, Measured Risk and the Learning Computer without introducing a mandatory new traffic ontology. The immediate implementation implication is narrower: capability requirements, execution bindings and receipts must remain provider-independent and traceably correlated.
 
