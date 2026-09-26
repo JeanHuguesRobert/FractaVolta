@@ -8,11 +8,10 @@ x-address: "1 cours Paoli, F-20250 Corte, Corsica, France"
 x-email: "jhr@baronsmariani.org"
 x-website: "https://fractavolta.com"
 canonical_url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/generalized_packet_networks.md
-version: "0.4"
+version: "0.4.1"
 status: "working-paper"
 date: "2026-05-22"
-last_modified_at: "2026-09-19"
-last_modified_at: "2026-05-22"
+last_modified_at: "2026-09-26"
 last_stamped_at: 2026-06-01
 license: "CC BY-SA 4.0"
 layout: default
@@ -587,6 +586,40 @@ Many physical objects are both. A domestic hot-water tank buffers mismatch betwe
 | Compression | reduce storage cost at retrieval cost |
 
 The point is not that society is a computer. The point is that computer science has produced reusable operational patterns for managing packets under constraints, which can be borrowed with discipline.
+
+
+### 5.6.1 Composable buffer hierarchies
+
+Buffers become more powerful when they are composed across scales. A network need not choose one packet size or one transport regime. Small packets can be accumulated into larger logistical units, moved across a backbone, then decomposed again near demand.
+
+The energy case makes the structure physical:
+
+```text
+local source
+→ small stationary buffer
+→ mobile battery packet
+→ light vehicle
+→ consolidation hub
+→ container-scale battery buffer
+→ heavy transport
+→ station buffer
+→ final load
+```
+
+Each level performs two operations:
+
+1. **rate decoupling** — absorbing mismatch between upstream arrivals and downstream service;
+2. **scale transition** — changing the efficient unit of transport without requiring a continuous end-to-end circuit.
+
+A scale transition may involve aggregation, disaggregation, repacking, or merely a change of custodian and carrier. The generalized packet identity should survive this transition through lineage and provenance even when the physical containment changes.
+
+This yields a reusable GPN pattern:
+
+> **A buffer chain is a sequence of independently useful packet stores whose capacities and service rates are chosen to decouple adjacent network layers.**
+
+The pattern applies beyond energy: parcel depots, cold chains, compute job queues, inference batching, cognitive continuations, and administrative case handling can all exhibit multi-level buffering. The substrate-specific constraints remain decisive.
+
+The energy implementation is developed concretely in [Electricity in Containers](./electricity_in_containers.md).
 
 ### 5.7 Backbone and last mile
 
