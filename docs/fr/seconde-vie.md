@@ -96,6 +96,12 @@ L’objectif n’est pas seulement de produire un kWh moins cher. L’objectif e
 
 Le propriétaire n’a pas à devenir énergéticien, logisticien ou opérateur de recharge. FractaVolta organise le modèle avec des partenaires qualifiés, des contrats réversibles et une traçabilité des flux.
 
+## Simuler la chaîne logistique
+
+Le [simulateur FractaVolta](./simulateur) permet d'explorer les effets du prix payé au producteur, des distances, de la taille des buffers et du choix entre hub fixe et conteneurs mobiles.
+
+Il s'agit d'un outil exploratoire : les résultats ne constituent ni une promesse de rentabilité ni une validation de faisabilité pour un site donné.
+
 ## Suite utile
 
 - Voir les [marchés locaux](./marches).
