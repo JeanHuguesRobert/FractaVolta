@@ -82,6 +82,10 @@ Un bon site pilote réunit plusieurs critères :
 
 **Le solaire local ne doit pas devenir une rente captée. Il doit devenir une capacité locale.**
 
+## Tester un marché
+
+Le [simulateur FractaVolta](./simulateur) permet de tester comment la distance entre producteurs, buffers et stations de recharge modifie le coût du kWh livré, et d'identifier les configurations qui méritent une étude de terrain.
+
 ## Suite utile
 
 Vous avez un site qui correspond à ces critères ?
