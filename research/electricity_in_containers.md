@@ -6,6 +6,7 @@ license: "CC BY-SA 4.0"
 last_stamped_at: 2026-06-01
 title: "Electricity in Containers"
 date: "2026-04-27"
+last_modified_at: "2026-09-26"
 status: "working-paper — auto-filled (frontmatter cleanup)"
 document_role: "source"
 document_kind: "research-paper"
@@ -95,6 +96,56 @@ Containerized electricity appears naturally across multiple scales. This is not 
 Each scale level has different economics, different logistics constraints, and different regulatory exposure. The personal and vehicle scales are already widespread; the neighborhood and district scales are emerging; the regional scale is demonstrated but not yet deployed at volume.
 
 The fractal property: the same store-and-forward logic operates at every scale. A service provider can enter at any scale, demonstrate the model, and extend upward or downward as density and economics allow.
+
+
+### 3.1 Hierarchical Buffer Chains and Carrier Handoff
+
+The fractal form factors above become substantially more useful when they are composed rather than treated as isolated product sizes. A packetized energy network can use a **chain of buffers at different scales**, with each level absorbing a mismatch in rate, distance, vehicle size, or local demand.
+
+A concrete pattern is:
+
+```text
+local source
+  → local stationary buffer
+  → light mobile battery packet
+  → light vehicle / van
+  → consolidation hub
+  → container-scale buffer
+  → heavy tractor
+  → charging-station buffer
+  → EV charging demand
+```
+
+The essential operation at each boundary is not necessarily an electrical transfer. It can be a **custody and carrier handoff**: the same charged battery module moves from one transport regime to another, or several smaller packets are consolidated into a larger logistical unit. This avoids unnecessary battery-to-battery conversions and preserves provenance.
+
+A practical illustrative chain is:
+
+- a light electric van such as a Kia PV5 transports one swappable battery module from a local production or charging point to a consolidation hub;
+- the hub accumulates many such modules asynchronously;
+- the modules are assembled or racked into an ISO-container-scale energy buffer;
+- a road tractor exchanges a depleted container for a charged one and transports the charged buffer to a high-demand charging station;
+- the station consumes from the container while another buffer is being filled elsewhere.
+
+The tractor should not wait for the container to fill. Likewise, the light vehicle should not wait for the heavy vehicle. **The buffers decouple the clocks of the system.**
+
+This suggests a general compositional rule:
+
+> **Packetized energy logistics is a hierarchy of buffers joined by carrier handoffs. Each layer should be sized to absorb the rate mismatch between adjacent layers, while preserving packet identity, state of charge, provenance, safety state, and destination constraints.**
+
+This is analogous to a memory hierarchy only at the level of operational structure: small, fast, local buffers sit close to fragmented supply or demand; larger, slower buffers aggregate traffic for efficient backbone transport.
+
+The architecture therefore combines three familiar patterns:
+
+```text
+packetization
++ buffer hierarchy
++ hub-and-spoke consolidation
+= multi-scale store-and-forward energy logistics
+```
+
+The important design variable is no longer only battery capacity. It is the **ratio between packet size, transport payload, arrival rate, holding time, consolidation threshold, and destination demand**. Those variables determine whether a given scale transition reduces cost and congestion or merely adds handling overhead.
+
+This section is a concrete energy-layer instance of the more general buffer/cache and backbone/last-mile abstractions in [Generalized Packet Networks](./generalized_packet_networks.md), and of the cross-scale invariants described in [Fractanet](./fractanet.md).
 
 ---
 
