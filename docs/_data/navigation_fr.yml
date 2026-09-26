@@ -11,6 +11,8 @@ main:
     url: /fr/seconde-vie
   - title: Marchés locaux
     url: /fr/marches
+  - title: Simulateur
+    url: /fr/simulateur
   - title: Agriculteurs
     url: /fr/agriculteurs
   - title: Collectivités
