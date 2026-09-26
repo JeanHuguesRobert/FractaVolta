@@ -9,10 +9,10 @@ x-email: "jhr@baronsmariani.org"
 x-website: "https://fractavolta.com"
 canonical_path: "FractaVolta/research/fractanet.md"
 canonical_url: "https://github.com/JeanHuguesRobert/FractaVolta/blob/main/research/fractanet.md"
-version: "0.4.2-draft"
+version: "0.4.3-draft"
 status: "working-paper — capability-regimes integration pass under human validation"
 date: "2026-06-10"
-last_modified_at: "2026-09-19"
+last_modified_at: "2026-09-26"
 last_stamped_at: "2026-09-06"
 license: "CC BY-SA 4.0"
 language: "en"
@@ -1288,6 +1288,43 @@ A continuation appears at several scales:
 5. **Institutional process:** a pending mandate or approval remains valid only under explicit conditions.
 
 The invariant is not a metaphor. It is the repeated structure: preserve enough state to resume an act under controlled conditions.
+
+
+### 25.2 Cross-scale example: energy buffer chain
+
+The energy layer provides a concrete physical example of the same fractal invariant.
+
+```text
+source buffer
+→ light mobile packet
+→ local carrier
+→ consolidation hub
+→ container buffer
+→ heavy carrier
+→ station buffer
+→ vehicle/load
+```
+
+The packet changes scale and carrier while the control-plane concerns remain recognizable: identity, state, provenance, destination, priority, safety state, custody, and trace.
+
+The hub is not merely a warehouse. It is a **scale-transition router**. It receives many small asynchronous arrivals, buffers them, decides when a larger transport unit is ready, and exposes that unit to the backbone carrier. The destination performs the inverse operation.
+
+In Fractanet terms, this suggests that routing should be able to represent:
+
+- parent/child packet lineage across aggregation and disaggregation;
+- custody transfer without semantic loss;
+- capacity and state-of-charge summaries;
+- consolidation thresholds;
+- expected holding time;
+- carrier capability and payload limits;
+- destination demand and priority;
+- failure, quarantine, and rerouting states.
+
+The design lesson is broader than energy:
+
+> **Fractal packet networks need explicit scale-transition nodes, not only routers between peers.**
+
+The concrete energy logistics case is documented in [Electricity in Containers](./electricity_in_containers.md); the generalized buffer-chain abstraction is documented in [Generalized Packet Networks](./generalized_packet_networks.md).
 
 ---
 
