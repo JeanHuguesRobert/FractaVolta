@@ -1,0 +1,23 @@
+[Unit]
+Description=FractaVolta mobile energy buffer simulator
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=ubuntu
+Group=ubuntu
+WorkingDirectory=/srv/cogentia/repos/FractaVolta/simulators/mobile-energy-buffers
+Environment=PYTHONUNBUFFERED=1
+ExecStart=/srv/cogentia/venvs/fractavolta-sim/bin/streamlit run app.py \
+  --server.headless=true \
+  --server.address=100.84.109.87 \
+  --server.port=8502 \
+  --server.baseUrlPath=simulateur
+Restart=on-failure
+RestartSec=5
+NoNewPrivileges=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target
