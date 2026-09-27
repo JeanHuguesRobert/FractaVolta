@@ -6,31 +6,35 @@ from fractasim import Assumptions, Producer, simulate, PRODUCERS, STATIONS, FIXE
 
 st.set_page_config(page_title="FractaVolta — Buffers mobiles", page_icon="⚡", layout="wide")
 st.title("FractaVolta — chaîne agile de buffers énergétiques")
-st.caption("MVP : producteurs Seconde Vie → PV5 → buffers mobiles → tracteurs → stations.")
+st.caption("MVP : producteurs Seconde Vie → tracteur léger → buffers mobiles → tracteurs → stations.")
 
 with st.sidebar:
     st.header("Hypothèses")
     packet_kwh = st.slider("Energy Packet (kWh)", 20, 100, 50, 5)
-    pv5_payload = st.slider("Charge énergie / rotation PV5 (kWh)", 50, 200, 150, 10)
+    light_payload = st.slider("Énergie transportée par rotation légère (kWh)", 50, 300, 150, 10)
     container_kwh = st.slider("Capacité utile conteneur (kWh)", 1500, 4000, 3000, 100)
     efficiency = st.slider("Rendement source → borne", 0.75, 0.98, 0.90, 0.01)
     producer_price = st.slider("Prix producteur par défaut (€/kWh)", 0.05, 0.20, 0.10, 0.005)
-    pv5_driver = st.slider("Coût conducteur PV5 (€/h)", 15, 45, 28, 1)
-    pv5_consumption = st.slider("Conso PV5 + remorque (kWh/km)", 0.20, 0.60, 0.35, 0.01)
-    truck_consumption = st.slider("Conso tracteur (kWh/km)", 0.8, 2.2, 1.20, 0.05)
+    light_driver = st.slider("Coût conducteur tracteur léger (€/h)", 15, 45, 28, 1)
+    light_consumption = st.slider("Conso tracteur léger + remorque (kWh/km)", 0.20, 0.80, 0.35, 0.01)
+    light_towing_kg = st.slider("Capacité de tractage — tracteur léger (kg)", 500, 5000, 1500, 100)
+    heavy_consumption = st.slider("Conso tracteur lourd (kWh/km)", 0.8, 2.5, 1.20, 0.05)
+    heavy_towing_kg = st.slider("Capacité de tractage — tracteur lourd (kg)", 10000, 50000, 30000, 1000)
     autonomy_pct = st.slider("Autonomie de conduite des véhicules (%)", 0, 100, 0, 5)
-    st.caption("Scénario prospectif : ce paramètre réduit le coût de conduite des PV5 et tracteurs. La manutention reste humaine dans ce modèle.")
+    st.caption("Scénario prospectif : ce paramètre réduit le coût de conduite des tracteurs légers et lourds. La manutention reste humaine dans ce modèle.")
     battery_cycle = st.slider("Usure batterie (€/kWh livré)", 0.00, 0.10, 0.04, 0.005)
     charger_ops = st.slider("Borne + exploitation (€/kWh)", 0.00, 0.15, 0.05, 0.005)
 
 a = Assumptions(
     packet_kwh=float(packet_kwh),
-    pv5_payload_kwh=float(pv5_payload),
+    light_payload_kwh=float(light_payload),
     container_kwh=float(container_kwh),
     source_to_charger_efficiency=float(efficiency),
-    pv5_driver_eur_h=float(pv5_driver),
-    pv5_consumption_kwh_km=float(pv5_consumption),
-    truck_consumption_kwh_km=float(truck_consumption),
+    light_driver_eur_h=float(light_driver),
+    light_consumption_kwh_km=float(light_consumption),
+    heavy_consumption_kwh_km=float(heavy_consumption),
+    light_towing_capacity_kg=float(light_towing_kg),
+    heavy_towing_capacity_kg=float(heavy_towing_kg),
     battery_cycle_eur_kwh_delivered=float(battery_cycle),
     charger_ops_eur_kwh_delivered=float(charger_ops),
     vehicle_autonomy=float(autonomy_pct) / 100.0,
@@ -49,13 +53,23 @@ fixed = simulate(producers, STATIONS, FIXED_HUB, MOBILE_BUFFERS, a, "fixed")
 mobile = simulate(producers, STATIONS, FIXED_HUB, MOBILE_BUFFERS, a, "mobile")
 
 d_cost = fixed.total_cost_eur_kwh - mobile.total_cost_eur_kwh
-d_km = fixed.pv5_km_day - mobile.pv5_km_day
+d_km = fixed.light_km_day - mobile.light_km_day
 
 c1,c2,c3,c4 = st.columns(4)
 c1.metric("Coût mobile", f"{mobile.total_cost_eur_kwh:.3f} €/kWh", f"{-d_cost:.3f} vs hub fixe", delta_color="inverse")
 c2.metric("Marge mobile", f"{mobile.margin_eur_kwh:.3f} €/kWh", f"{mobile.margin_day:,.0f} €/j")
-c3.metric("Kilomètres PV5", f"{mobile.pv5_km_day:,.0f} km/j", f"{-d_km:,.0f} vs hub fixe", delta_color="inverse")
+c3.metric("Kilomètres tracteur léger", f"{mobile.light_km_day:,.0f} km/j", f"{-d_km:,.0f} vs hub fixe", delta_color="inverse")
 c4.metric("Énergie livrée", f"{mobile.delivered_kwh_day/1000:.2f} MWh/j", f"{mobile.gross_kwh_day/1000:.2f} MWh bruts")
+
+with st.expander("Capacités de tractage"):
+    st.markdown(f"""
+Le modèle distingue deux classes génériques : **tracteur léger** et **tracteur lourd**.
+
+- Tracteur léger : capacité déclarée **{light_towing_kg:,.0f} kg**
+- Tracteur lourd : capacité déclarée **{heavy_towing_kg:,.0f} kg**
+
+Ces valeurs expriment une contrainte physique de véhicule. Elles ne sont pas converties automatiquement en kWh, car il faut connaître la masse réelle de la batterie, de sa structure, de la remorque et des équipements. Un modèle comme le Kia PV5 peut servir d’exemple de tracteur léger, mais il n’est pas la définition de la catégorie.
+""")
 
 with st.expander("Pourquoi tester la conduite autonome ?"):
     st.markdown("""
@@ -107,8 +121,8 @@ with tab_map:
 
 with tab_fin:
     df=pd.DataFrame([
-        {"Scénario":fixed.name,"Coût €/kWh":fixed.total_cost_eur_kwh,"Marge €/kWh":fixed.margin_eur_kwh,"Marge €/j":fixed.margin_day,"km PV5/j":fixed.pv5_km_day,"km PL/j":fixed.truck_km_day},
-        {"Scénario":mobile.name,"Coût €/kWh":mobile.total_cost_eur_kwh,"Marge €/kWh":mobile.margin_eur_kwh,"Marge €/j":mobile.margin_day,"km PV5/j":mobile.pv5_km_day,"km PL/j":mobile.truck_km_day},
+        {"Scénario":fixed.name,"Coût €/kWh":fixed.total_cost_eur_kwh,"Marge €/kWh":fixed.margin_eur_kwh,"Marge €/j":fixed.margin_day,"km tracteur léger/j":fixed.light_km_day,"km tracteur lourd/j":fixed.heavy_km_day},
+        {"Scénario":mobile.name,"Coût €/kWh":mobile.total_cost_eur_kwh,"Marge €/kWh":mobile.margin_eur_kwh,"Marge €/j":mobile.margin_day,"km tracteur léger/j":mobile.light_km_day,"km tracteur lourd/j":mobile.heavy_km_day},
     ])
     st.dataframe(df,use_container_width=True,hide_index=True)
     bar=go.Figure()
@@ -118,8 +132,8 @@ with tab_fin:
     st.plotly_chart(bar,use_container_width=True)
 
     costs=pd.DataFrame({
-        "Poste":["Achat producteurs","Collecte PV5","Backbone PL","Cycle batterie + borne"],
-        "€/jour":[mobile.purchase_cost_day,mobile.pv5_cost_day,mobile.truck_cost_day,mobile.storage_charger_cost_day],
+        "Poste":["Achat producteurs","Collecte légère","Transport lourd","Cycle batterie + borne"],
+        "€/jour":[mobile.purchase_cost_day,mobile.light_cost_day,mobile.heavy_cost_day,mobile.storage_charger_cost_day],
     })
     pie=go.Figure(data=[go.Pie(labels=costs["Poste"],values=costs["€/jour"],hole=.45)])
     pie.update_layout(height=420)
