@@ -2,7 +2,7 @@
 title: Simulateur FractaVolta
 subtitle: Explorer les conditions économiques et logistiques d'une chaîne de buffers énergétiques mobiles.
 lang: fr
-description: "Simulateur exploratoire FractaVolta : producteurs Seconde Vie, collecte PV5, conteneurs mobiles, transport lourd et stations de recharge."
+description: "Simulateur exploratoire FractaVolta : producteurs Seconde Vie, collecte légère, conteneurs mobiles, transport lourd et stations de recharge."
 canonical_url: https://fractavolta.com/fr/simulateur
 date: "2026-09-26"
 status: "prototype exploratoire"
@@ -24,9 +24,20 @@ L'application interactive est servie depuis l'infrastructure FractaVolta. La pag
 
 Le prototype permet notamment de faire varier la taille des paquets énergétiques, l'énergie transportée par rotation légère, la capacité d'un conteneur, le rendement de la chaîne, le prix payé aux producteurs, les coûts des véhicules, le coût des cycles de batterie, les coûts de station et un **niveau prospectif d'autonomie de conduite**.
 
+## Deux catégories de tracteurs
+
+Le simulateur distingue désormais deux catégories génériques :
+
+- **tracteur léger** : véhicule de collecte locale capable de tracter une remorque ou un petit paquet énergétique ;
+- **tracteur lourd** : véhicule destiné au déplacement des gros buffers et conteneurs entre zones de production et lieux de consommation.
+
+Le Kia PV5 peut rester un exemple concret de tracteur léger, mais il n'est plus une hypothèse structurante du modèle.
+
+Pour chaque catégorie, la **capacité de tractage en kilogrammes** est un paramètre distinct de la **quantité d'énergie transportée en kWh**. Le simulateur ne transforme pas automatiquement l'un en l'autre : cette conversion exige de connaître la masse réelle des cellules, de leur enveloppe, de la remorque et des équipements.
+
 ## Et si les véhicules deviennent autonomes ?
 
-Une part importante du coût de la collecte locale vient aujourd'hui du temps de conduite. Le simulateur permet donc d'explorer un scénario futur dans lequel les utilitaires de collecte et les poids lourds deviennent progressivement capables de circuler sans conducteur humain à bord.
+Une part importante du coût de la collecte locale vient aujourd'hui du temps de conduite. Le simulateur permet donc d'explorer un scénario futur dans lequel les tracteurs légers de collecte et les tracteurs lourds deviennent progressivement capables de circuler sans conducteur humain à bord.
 
 Le paramètre **Autonomie de conduite** va de 0 à 100 %. Il réduit uniquement le coût de conduite dans le modèle. Il ne suppose pas que le chargement, le déchargement, la maintenance ou la supervision de la chaîne énergétique sont eux-mêmes automatisés.
 
