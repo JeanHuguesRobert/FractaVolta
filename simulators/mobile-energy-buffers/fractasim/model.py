@@ -54,6 +54,7 @@ class Assumptions:
     vehicle_autonomy: float = 0.0  # 0..1; reduces driving labour only, not handling
     light_towing_capacity_kg: float = 1500.0  # declared towing capability; not converted to kWh automatically
     heavy_towing_capacity_kg: float = 30000.0  # declared towing capability; not converted to kWh automatically
+    retail_price_ttc_eur_kwh: float | None = None  # optional uniform client price override
 
 @dataclass
 class ScenarioResult:
@@ -117,7 +118,7 @@ def simulate(producers, stations, fixed_hub, mobile_buffers, assumptions, mode):
     total_kwh = total/delivered if delivered else 0.0
 
     demand = sum(s.demand_kwh_day for s in stations)
-    weighted_ttc = sum(s.demand_kwh_day*s.public_price_ttc_eur_kwh for s in stations)/demand
+    weighted_ttc = assumptions.retail_price_ttc_eur_kwh if assumptions.retail_price_ttc_eur_kwh is not None else sum(s.demand_kwh_day*s.public_price_ttc_eur_kwh for s in stations)/demand
     sell_ht = weighted_ttc/(1+assumptions.vat)
     revenue = delivered*sell_ht
     margin = revenue-total
