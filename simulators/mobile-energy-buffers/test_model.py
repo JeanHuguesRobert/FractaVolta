@@ -21,3 +21,16 @@ assert caps.light_towing_capacity_kg == 1800
 assert caps.heavy_towing_capacity_kg == 32000
 assert caps.light_payload_kwh == 150.0
 print("TOWING", int(caps.light_towing_capacity_kg), int(caps.heavy_towing_capacity_kg))
+
+
+retail_low=Assumptions(retail_price_ttc_eur_kwh=0.50)
+retail_high=Assumptions(retail_price_ttc_eur_kwh=0.80)
+m_low=simulate(PRODUCERS,STATIONS,FIXED_HUB,MOBILE_BUFFERS,retail_low,"mobile")
+m_high=simulate(PRODUCERS,STATIONS,FIXED_HUB,MOBILE_BUFFERS,retail_high,"mobile")
+assert m_high.margin_eur_kwh > m_low.margin_eur_kwh
+
+break_even_ttc = m.total_cost_eur_kwh * (1.0 + a.vat)
+retail_be=Assumptions(retail_price_ttc_eur_kwh=break_even_ttc)
+m_be=simulate(PRODUCERS,STATIONS,FIXED_HUB,MOBILE_BUFFERS,retail_be,"mobile")
+assert abs(m_be.margin_eur_kwh) < 1e-9
+print("RETAIL", round(m_low.margin_eur_kwh,4), round(m_high.margin_eur_kwh,4), round(break_even_ttc,4))
