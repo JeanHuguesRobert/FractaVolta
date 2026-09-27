@@ -27,7 +27,7 @@ with st.sidebar:
     charger_ops = st.slider("Borne + exploitation (€/kWh)", 0.00, 0.15, 0.05, 0.005)
 
     st.header("Gain usager — carburant seulement")
-    fuel_price = st.slider("Prix carburant thermique (€/L)", 1.20, 3.00, 2.17, 0.01)
+    fuel_price = st.slider("Prix carburant thermique (€/L)", 1.20, 3.00, 2.00, 0.01)
     thermal_consumption = st.slider("Conso véhicule thermique (L/100 km)", 3.0, 12.0, 6.5, 0.1)
     ev_consumption = st.slider("Conso véhicule électrique (kWh/100 km)", 10.0, 30.0, 17.0, 0.5)
     small_km = st.slider("Petit rouleur (km/mois)", 100, 1500, 500, 50)
