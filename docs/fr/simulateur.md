@@ -24,6 +24,20 @@ L'application interactive est servie depuis l'infrastructure FractaVolta. La pag
 
 Le prototype permet notamment de faire varier la taille des paquets énergétiques, l'énergie transportée par rotation légère, la capacité d'un conteneur, le rendement de la chaîne, le prix payé aux producteurs, les coûts des véhicules, le coût des cycles de batterie, les coûts de station et un **niveau prospectif d'autonomie de conduite**.
 
+## Prix client final et marge par kWh
+
+Le simulateur permet de faire varier le **prix client final TTC par kWh**, c'est-à-dire l'équivalent du prix « à la pompe » pour une recharge électrique.
+
+À partir de ce prix, le modèle calcule la recette hors taxe, puis la compare au coût modélisé par kWh effectivement livré au client final. Il affiche ainsi :
+
+- la **marge contributive par kWh livré** ;
+- la marge journalière correspondant au volume livré ;
+- le **prix d'équilibre TTC**, c'est-à-dire le prix client auquel cette marge contributive devient nulle.
+
+Cette mesure permet d'étudier directement la sensibilité économique du modèle au prix payé par l'usager final.
+
+Elle ne doit cependant pas être confondue avec une rentabilité comptable complète : le prototype ne représente pas encore exhaustivement les CAPEX, le financement, les assurances, toutes les taxes spécifiques, ni le taux réel d'utilisation des véhicules, buffers et bornes.
+
 ## Deux catégories de tracteurs
 
 Le simulateur distingue désormais deux catégories génériques :
