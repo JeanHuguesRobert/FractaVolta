@@ -18,6 +18,8 @@ with st.sidebar:
     pv5_driver = st.slider("Coût conducteur PV5 (€/h)", 15, 45, 28, 1)
     pv5_consumption = st.slider("Conso PV5 + remorque (kWh/km)", 0.20, 0.60, 0.35, 0.01)
     truck_consumption = st.slider("Conso tracteur (kWh/km)", 0.8, 2.2, 1.20, 0.05)
+    autonomy_pct = st.slider("Autonomie de conduite des véhicules (%)", 0, 100, 0, 5)
+    st.caption("Scénario prospectif : ce paramètre réduit le coût de conduite des PV5 et tracteurs. La manutention reste humaine dans ce modèle.")
     battery_cycle = st.slider("Usure batterie (€/kWh livré)", 0.00, 0.10, 0.04, 0.005)
     charger_ops = st.slider("Borne + exploitation (€/kWh)", 0.00, 0.15, 0.05, 0.005)
 
@@ -31,6 +33,7 @@ a = Assumptions(
     truck_consumption_kwh_km=float(truck_consumption),
     battery_cycle_eur_kwh_delivered=float(battery_cycle),
     charger_ops_eur_kwh_delivered=float(charger_ops),
+    vehicle_autonomy=float(autonomy_pct) / 100.0,
 )
 
 producers = [
@@ -53,6 +56,15 @@ c1.metric("Coût mobile", f"{mobile.total_cost_eur_kwh:.3f} €/kWh", f"{-d_cost
 c2.metric("Marge mobile", f"{mobile.margin_eur_kwh:.3f} €/kWh", f"{mobile.margin_day:,.0f} €/j")
 c3.metric("Kilomètres PV5", f"{mobile.pv5_km_day:,.0f} km/j", f"{-d_km:,.0f} vs hub fixe", delta_color="inverse")
 c4.metric("Énergie livrée", f"{mobile.delivered_kwh_day/1000:.2f} MWh/j", f"{mobile.gross_kwh_day/1000:.2f} MWh bruts")
+
+with st.expander("Pourquoi tester la conduite autonome ?"):
+    st.markdown("""
+La collecte capillaire multiplie les petites rotations et donc les heures de conduite. Si, à l’avenir, les utilitaires et les poids lourds peuvent circuler de façon autonome, ce poste de coût peut fortement diminuer.
+
+Le curseur **Autonomie de conduite** ne suppose pas que toute la chaîne est robotisée : il réduit uniquement le coût de conduite. Le chargement, le déchargement et les autres opérations de manutention restent comptés comme aujourd’hui.
+
+Cela permet d’explorer une conséquence importante du modèle FractaVolta : **plus le transport devient autonome, plus des paquets énergétiques petits et nombreux peuvent devenir économiquement intéressants**, ce qui favorise un réseau distribué et agile.
+""")
 
 tab_map, tab_fin, tab_sens, tab_data = st.tabs(["Carte réseau","Économie","Sensibilité","Données"])
 
@@ -130,6 +142,20 @@ with tab_sens:
     f.add_hline(y=0,line_dash="dash")
     f.update_layout(xaxis_title="Prix producteur (€/kWh)",yaxis_title="Marge contributive (€/kWh)",height=500)
     st.plotly_chart(f,use_container_width=True)
+
+    st.subheader("Sensibilité à la conduite autonome")
+    autonomy_points=[]
+    for pct in range(0,101,10):
+        aa = Assumptions(**{**a.__dict__, "vehicle_autonomy": pct/100.0})
+        rf=simulate(producers,STATIONS,FIXED_HUB,MOBILE_BUFFERS,aa,"fixed")
+        rm=simulate(producers,STATIONS,FIXED_HUB,MOBILE_BUFFERS,aa,"mobile")
+        autonomy_points.append({"Autonomie (%)":pct,"Hub fixe":rf.total_cost_eur_kwh,"Buffers mobiles":rm.total_cost_eur_kwh})
+    adf=pd.DataFrame(autonomy_points)
+    af=go.Figure()
+    af.add_scatter(x=adf["Autonomie (%)"],y=adf["Hub fixe"],mode="lines+markers",name="Hub fixe")
+    af.add_scatter(x=adf["Autonomie (%)"],y=adf["Buffers mobiles"],mode="lines+markers",name="Buffers mobiles")
+    af.update_layout(xaxis_title="Autonomie de conduite (%)",yaxis_title="Coût total (€/kWh)",height=500)
+    st.plotly_chart(af,use_container_width=True)
 
 with tab_data:
     st.dataframe(pd.DataFrame([p.__dict__ for p in producers]),use_container_width=True,hide_index=True)
