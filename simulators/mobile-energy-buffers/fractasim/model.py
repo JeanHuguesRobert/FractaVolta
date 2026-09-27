@@ -51,6 +51,7 @@ class Assumptions:
     battery_cycle_eur_kwh_delivered: float = 0.04
     charger_ops_eur_kwh_delivered: float = 0.05
     vat: float = 0.20
+    vehicle_autonomy: float = 0.0  # 0..1; reduces driving labour only, not handling
 
 @dataclass
 class ScenarioResult:
@@ -76,10 +77,12 @@ def distance(a: Tuple[float,float], b: Tuple[float,float]) -> float:
     return hypot(a[0]-b[0], a[1]-b[1])
 
 def pv5_cost_km(a: Assumptions) -> float:
-    return a.pv5_vehicle_eur_km + a.pv5_consumption_kwh_km*a.pv5_energy_eur_kwh + a.pv5_driver_eur_h/a.pv5_speed_kmh
+    driving_labour = (1.0 - a.vehicle_autonomy) * a.pv5_driver_eur_h / a.pv5_speed_kmh
+    return a.pv5_vehicle_eur_km + a.pv5_consumption_kwh_km*a.pv5_energy_eur_kwh + driving_labour
 
 def truck_cost_km(a: Assumptions) -> float:
-    return a.truck_vehicle_eur_km + a.truck_consumption_kwh_km*a.truck_energy_eur_kwh + a.truck_driver_eur_h/a.truck_speed_kmh
+    driving_labour = (1.0 - a.vehicle_autonomy) * a.truck_driver_eur_h / a.truck_speed_kmh
+    return a.truck_vehicle_eur_km + a.truck_consumption_kwh_km*a.truck_energy_eur_kwh + driving_labour
 
 def simulate(producers, stations, fixed_hub, mobile_buffers, assumptions, mode):
     gross = sum(p.production_kwh_day for p in producers)
