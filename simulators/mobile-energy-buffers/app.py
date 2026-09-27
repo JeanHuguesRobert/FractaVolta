@@ -2,7 +2,7 @@ import pandas as pd
 import plotly.graph_objects as go
 import streamlit as st
 
-from fractasim import Assumptions, Producer, simulate, PRODUCERS, STATIONS, FIXED_HUB, MOBILE_BUFFERS
+from fractasim import Assumptions, Producer, simulate, user_fuel_savings, PRODUCERS, STATIONS, FIXED_HUB, MOBILE_BUFFERS
 
 st.set_page_config(page_title="FractaVolta — Buffers mobiles", page_icon="⚡", layout="wide")
 st.title("FractaVolta — chaîne agile de buffers énergétiques")
@@ -25,6 +25,15 @@ with st.sidebar:
     st.caption("Scénario prospectif : ce paramètre réduit le coût de conduite des tracteurs légers et lourds. La manutention reste humaine dans ce modèle.")
     battery_cycle = st.slider("Usure batterie (€/kWh livré)", 0.00, 0.10, 0.04, 0.005)
     charger_ops = st.slider("Borne + exploitation (€/kWh)", 0.00, 0.15, 0.05, 0.005)
+
+    st.header("Gain usager — carburant seulement")
+    fuel_price = st.slider("Prix carburant thermique (€/L)", 1.20, 3.00, 2.17, 0.01)
+    thermal_consumption = st.slider("Conso véhicule thermique (L/100 km)", 3.0, 12.0, 6.5, 0.1)
+    ev_consumption = st.slider("Conso véhicule électrique (kWh/100 km)", 10.0, 30.0, 17.0, 0.5)
+    small_km = st.slider("Petit rouleur (km/mois)", 100, 1500, 500, 50)
+    medium_km = st.slider("Rouleur moyen (km/mois)", 500, 2500, 1000, 50)
+    large_km = st.slider("Gros rouleur (km/mois)", 1000, 5000, 2000, 100)
+    st.caption("Comparaison limitée au coût d’énergie d’usage : carburant liquide vs électricité. Achat, entretien, assurance et financement du véhicule sont exclus.")
 
 a = Assumptions(
     packet_kwh=float(packet_kwh),
@@ -65,6 +74,36 @@ c2.metric("Marge contributive", f"{mobile.margin_eur_kwh:.3f} €/kWh livré", f
 c3.metric("Kilomètres tracteur léger", f"{mobile.light_km_day:,.0f} km/j", f"{-d_km:,.0f} vs hub fixe", delta_color="inverse")
 c4.metric("Énergie livrée", f"{mobile.delivered_kwh_day/1000:.2f} MWh/j", f"{mobile.gross_kwh_day/1000:.2f} MWh bruts")
 c5.metric("Prix d’équilibre TTC", f"{break_even_ttc:.3f} €/kWh", f"prix client {retail_price_ttc:.2f} €")
+
+user_profiles = [
+    ("Petit rouleur", small_km),
+    ("Rouleur moyen", medium_km),
+    ("Gros rouleur", large_km),
+]
+user_savings = [
+    (label, user_fuel_savings(km, thermal_consumption, fuel_price, ev_consumption, retail_price_ttc))
+    for label, km in user_profiles
+]
+
+st.subheader("Gain usager : passer du thermique à l’électrique")
+g1,g2,g3 = st.columns(3)
+for col, (label, r) in zip((g1,g2,g3), user_savings):
+    col.metric(label, f"{r['saving_month']:.0f} €/mois", f"{r['saving_year']:.0f} €/an")
+st.caption(
+    f"À {fuel_price:.2f} €/L et {thermal_consumption:.1f} L/100 km, le thermique coûte "
+    f"{user_savings[0][1]['thermal_cost_100km']:.2f} €/100 km. "
+    f"À {retail_price_ttc:.2f} €/kWh et {ev_consumption:.1f} kWh/100 km, l’électrique coûte "
+    f"{user_savings[0][1]['electric_cost_100km']:.2f} €/100 km."
+)
+
+with st.expander("Comment lire le gain usager ?"):
+    st.markdown("""
+Ce calcul répond à une question volontairement étroite : **combien l’usager économise-t-il chaque mois sur l’énergie nécessaire pour rouler ?**
+
+Il compare le coût d’un véhicule thermique en litres/100 km au coût d’un véhicule électrique en kWh/100 km, au prix client final choisi dans le simulateur.
+
+Les trois profils servent seulement de repères de kilométrage et restent modifiables. Le résultat n’inclut pas le prix d’achat du véhicule, le financement, l’entretien, l’assurance, les pneus, les taxes ou la valeur de revente.
+""")
 
 with st.expander("Prix final et marge par kWh"):
     st.markdown(f"""
@@ -175,6 +214,18 @@ with tab_sens:
     f.add_hline(y=0,line_dash="dash")
     f.update_layout(xaxis_title="Prix producteur (€/kWh)",yaxis_title="Marge contributive (€/kWh)",height=500)
     st.plotly_chart(f,use_container_width=True)
+
+    st.subheader("Gain usager selon le kilométrage")
+    km_points=[]
+    for km in range(250,3001,250):
+        r=user_fuel_savings(km,thermal_consumption,fuel_price,ev_consumption,retail_price_ttc)
+        km_points.append({"Kilométrage mensuel":km,"Gain mensuel":r["saving_month"]})
+    kdf=pd.DataFrame(km_points)
+    kf=go.Figure()
+    kf.add_scatter(x=kdf["Kilométrage mensuel"],y=kdf["Gain mensuel"],mode="lines+markers",name="Gain usager")
+    kf.add_hline(y=0,line_dash="dash")
+    kf.update_layout(xaxis_title="Kilométrage mensuel (km)",yaxis_title="Économie carburant (€/mois)",height=500)
+    st.plotly_chart(kf,use_container_width=True)
 
     st.subheader("Sensibilité au prix client final")
     retail_points=[]
