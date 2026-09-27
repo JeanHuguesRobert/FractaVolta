@@ -20,9 +20,46 @@ Le modèle compare notamment un hub fixe, des conteneurs ou buffers mobiles pré
 
 L'application interactive est servie depuis l'infrastructure FractaVolta. La page que vous lisez reste la référence éditoriale et documentaire.
 
+## Pourquoi ce modèle en Corse ?
+
+En Corse, le prix des carburants dépend à la fois des marchés énergétiques mondiaux et de contraintes structurelles propres à l'île.
+
+L'Autorité de la concurrence relève depuis plusieurs années plusieurs facteurs durables : forte dépendance des ménages à l'automobile, approvisionnement des carburants uniquement par voie maritime, acheminement routier rendu plus coûteux par le relief, forte saisonnalité de la demande liée au tourisme, capacités de stockage limitées et marché de la distribution particulièrement concentré.
+
+Ces caractéristiques rendent le coût de la mobilité automobile particulièrement sensible à l'organisation locale de l'approvisionnement et de la distribution. L'Autorité de la concurrence a d'ailleurs de nouveau souligné en 2025 la forte concentration du secteur et l'absence, en Corse, de la pression concurrentielle exercée sur le continent par les grandes et moyennes surfaces.
+
+L'électricité ouvre une autre chaîne de valeur : une partie de l'énergie nécessaire à la mobilité peut être produite localement, stockée, déplacée puis livrée aux véhicules.
+
+Cela ne signifie pas que l'électricité est automatiquement moins chère. Elle exige elle aussi des investissements, du stockage, du transport, des bornes et une organisation économique viable.
+
+Le simulateur permet donc de poser ensemble deux questions :
+
+1. **À quel prix peut-on livrer durablement un kWh électrique au client final ?**
+2. **À ce prix, combien un automobiliste économise-t-il sur son énergie en passant du thermique à l'électrique ?**
+
+Le calcul de gain usager se limite volontairement, à ce stade, à la dépense d'énergie. Il ne compare pas encore le prix d'achat, le financement, l'entretien, l'assurance ou la valeur de revente des véhicules.
+
+Sources institutionnelles :
+- [Autorité de la concurrence — avis 20-A-11 du 17 novembre 2020](https://www.autoritedelaconcurrence.fr/fr/avis/relatif-au-niveau-de-concentration-des-marches-en-corse-et-son-impact-sur-la-concurrence)
+- [Autorité de la concurrence — carburants en Corse, décision annoncée le 17 novembre 2025](https://www.autoritedelaconcurrence.fr/fr/communiques-de-presse/carburants-en-corse-lautorite-de-la-concurrence-inflige-une-sanction-de-1875)
+
 ## Ce que l'on peut modifier
 
 Le prototype permet notamment de faire varier la taille des paquets énergétiques, l'énergie transportée par rotation légère, la capacité d'un conteneur, le rendement de la chaîne, le prix payé aux producteurs, les coûts des véhicules, le coût des cycles de batterie, les coûts de station et un **niveau prospectif d'autonomie de conduite**.
+
+## Gain usager : thermique → électrique
+
+Le simulateur estime aussi le gain budgétaire lié au passage d'un véhicule thermique à un véhicule électrique, en se limitant au **coût de l'énergie pour rouler**.
+
+Trois profils de kilométrage servent de repères :
+
+- petit rouleur ;
+- rouleur moyen ;
+- gros rouleur.
+
+Le kilométrage mensuel de chaque profil reste modifiable. Le visiteur peut également modifier le prix du carburant liquide, la consommation du véhicule thermique, la consommation du véhicule électrique et le prix final du kWh.
+
+Le résultat est affiché en économie mensuelle et annuelle. Cette comparaison ne constitue pas un calcul de coût total de possession : achat du véhicule, financement, entretien, assurance, pneumatiques, fiscalité et valeur de revente restent hors modèle pour l'instant.
 
 ## Prix client final et marge par kWh
 
