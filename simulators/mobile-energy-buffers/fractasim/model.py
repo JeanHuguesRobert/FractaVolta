@@ -124,3 +124,25 @@ def simulate(producers, stations, fixed_hub, mobile_buffers, assumptions, mode):
     margin = revenue-total
 
     return ScenarioResult("Hub fixe" if mode=="fixed" else "Buffers mobiles", gross, delivered, pv5_km, pv5_cost, heavy_km, heavy_cost, purchase, storage_charger, total, total_kwh, revenue, margin, margin/delivered)
+
+
+def user_fuel_savings(
+    monthly_km: float,
+    thermal_l_per_100km: float,
+    fuel_eur_l: float,
+    ev_kwh_per_100km: float,
+    electricity_eur_kwh: float,
+) -> dict:
+    """Fuel-only user economics for switching thermal -> electric."""
+    thermal_cost = monthly_km / 100.0 * thermal_l_per_100km * fuel_eur_l
+    electric_cost = monthly_km / 100.0 * ev_kwh_per_100km * electricity_eur_kwh
+    saving = thermal_cost - electric_cost
+    return {
+        "monthly_km": monthly_km,
+        "thermal_cost_month": thermal_cost,
+        "electric_cost_month": electric_cost,
+        "saving_month": saving,
+        "saving_year": saving * 12.0,
+        "thermal_cost_100km": thermal_l_per_100km * fuel_eur_l,
+        "electric_cost_100km": ev_kwh_per_100km * electricity_eur_kwh,
+    }
