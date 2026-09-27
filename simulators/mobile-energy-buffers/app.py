@@ -15,6 +15,7 @@ with st.sidebar:
     container_kwh = st.slider("Capacité utile conteneur (kWh)", 1500, 4000, 3000, 100)
     efficiency = st.slider("Rendement source → borne", 0.75, 0.98, 0.90, 0.01)
     producer_price = st.slider("Prix producteur par défaut (€/kWh)", 0.05, 0.20, 0.10, 0.005)
+    retail_price_ttc = st.slider("Prix client final TTC (€/kWh)", 0.30, 1.00, 0.65, 0.01)
     light_driver = st.slider("Coût conducteur tracteur léger (€/h)", 15, 45, 28, 1)
     light_consumption = st.slider("Conso tracteur léger + remorque (kWh/km)", 0.20, 0.80, 0.35, 0.01)
     light_towing_kg = st.slider("Capacité de tractage — tracteur léger (kg)", 500, 5000, 1500, 100)
@@ -38,6 +39,7 @@ a = Assumptions(
     battery_cycle_eur_kwh_delivered=float(battery_cycle),
     charger_ops_eur_kwh_delivered=float(charger_ops),
     vehicle_autonomy=float(autonomy_pct) / 100.0,
+    retail_price_ttc_eur_kwh=float(retail_price_ttc),
 )
 
 producers = [
@@ -55,11 +57,28 @@ mobile = simulate(producers, STATIONS, FIXED_HUB, MOBILE_BUFFERS, a, "mobile")
 d_cost = fixed.total_cost_eur_kwh - mobile.total_cost_eur_kwh
 d_km = fixed.light_km_day - mobile.light_km_day
 
-c1,c2,c3,c4 = st.columns(4)
+break_even_ttc = mobile.total_cost_eur_kwh * (1.0 + a.vat)
+
+c1,c2,c3,c4,c5 = st.columns(5)
 c1.metric("Coût mobile", f"{mobile.total_cost_eur_kwh:.3f} €/kWh", f"{-d_cost:.3f} vs hub fixe", delta_color="inverse")
-c2.metric("Marge mobile", f"{mobile.margin_eur_kwh:.3f} €/kWh", f"{mobile.margin_day:,.0f} €/j")
+c2.metric("Marge contributive", f"{mobile.margin_eur_kwh:.3f} €/kWh livré", f"{mobile.margin_day:,.0f} €/j")
 c3.metric("Kilomètres tracteur léger", f"{mobile.light_km_day:,.0f} km/j", f"{-d_km:,.0f} vs hub fixe", delta_color="inverse")
 c4.metric("Énergie livrée", f"{mobile.delivered_kwh_day/1000:.2f} MWh/j", f"{mobile.gross_kwh_day/1000:.2f} MWh bruts")
+c5.metric("Prix d’équilibre TTC", f"{break_even_ttc:.3f} €/kWh", f"prix client {retail_price_ttc:.2f} €")
+
+with st.expander("Prix final et marge par kWh"):
+    st.markdown(f"""
+Le curseur **Prix client final TTC** représente le prix affiché au client final à la borne, l’équivalent du prix « à la pompe » pour l’électricité.
+
+Le modèle retire la TVA avant de calculer la recette opérateur. Avec les hypothèses actuelles :
+
+- prix client TTC : **{retail_price_ttc:.2f} €/kWh** ;
+- coût modélisé : **{mobile.total_cost_eur_kwh:.3f} €/kWh livré** ;
+- marge contributive : **{mobile.margin_eur_kwh:.3f} €/kWh livré** ;
+- prix d’équilibre TTC : **{break_even_ttc:.3f} €/kWh**.
+
+Cette marge n’est pas encore une rentabilité comptable complète : le prototype ne modélise pas encore tous les CAPEX, coûts financiers, assurances, fiscalités spécifiques ou taux d’utilisation réels des actifs.
+""")
 
 with st.expander("Capacités de tractage"):
     st.markdown(f"""
@@ -156,6 +175,21 @@ with tab_sens:
     f.add_hline(y=0,line_dash="dash")
     f.update_layout(xaxis_title="Prix producteur (€/kWh)",yaxis_title="Marge contributive (€/kWh)",height=500)
     st.plotly_chart(f,use_container_width=True)
+
+    st.subheader("Sensibilité au prix client final")
+    retail_points=[]
+    for price in [0.30+i*0.025 for i in range(29)]:
+        aa = Assumptions(**{**a.__dict__, "retail_price_ttc_eur_kwh": price})
+        rf=simulate(producers,STATIONS,FIXED_HUB,MOBILE_BUFFERS,aa,"fixed")
+        rm=simulate(producers,STATIONS,FIXED_HUB,MOBILE_BUFFERS,aa,"mobile")
+        retail_points.append({"Prix client TTC":price,"Hub fixe":rf.margin_eur_kwh,"Buffers mobiles":rm.margin_eur_kwh})
+    rdf=pd.DataFrame(retail_points)
+    pf=go.Figure()
+    pf.add_scatter(x=rdf["Prix client TTC"],y=rdf["Hub fixe"],mode="lines",name="Hub fixe")
+    pf.add_scatter(x=rdf["Prix client TTC"],y=rdf["Buffers mobiles"],mode="lines",name="Buffers mobiles")
+    pf.add_hline(y=0,line_dash="dash")
+    pf.update_layout(xaxis_title="Prix client final TTC (€/kWh)",yaxis_title="Marge contributive (€/kWh livré)",height=500)
+    st.plotly_chart(pf,use_container_width=True)
 
     st.subheader("Sensibilité à la conduite autonome")
     autonomy_points=[]
