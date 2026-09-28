@@ -190,7 +190,7 @@ c5.metric("Prix d'équilibre TTC", f"{break_even_ttc:.3f} €/kWh", f"prix clien
 f1, f2, f3, f4, f5 = st.columns(5)
 f1.metric("Conteneurs 3 MWh requis", f"{mobile.containers_needed} unités", f"{mobile.containers_needed * 3:.0f} MWh de stockage tampon")
 f2.metric("Tracteurs lourds", f"{mobile.heavy_tractors_needed} en rotation", f"{mobile.heavy_km_day:,.0f} km/j de conteneurs")
-f3.metric("Tracteurs légers", f"{mobile.light_tractors_needed} en rotation", f"{mobile.light_km_day:,.0f} km/j capillaires", delta=f"{-d_km:,.0f} km vs hub fixe", delta_color="inverse")
+f3.metric("Tracteurs légers", f"{mobile.light_tractors_needed} en rotation", f"{-d_km:,.0f} km vs hub", delta_color="inverse", help=f"{mobile.light_km_day:,.0f} km/j de navettes capillaires")
 f4.metric("CO₂ fossile évité", f"{mobile.co2_avoided_tons_year:,.0f} t/an", "remplacement fossile insulaire")
 f5.metric("Sites solaires modélisés", f"{len(active_producers)}", f"{sum(1 for p in active_producers if getattr(p, 'tension', 'BT')=='HTA')} HTA, {sum(1 for p in active_producers if getattr(p, 'tension', 'BT')=='BT')} BT")
 
@@ -200,7 +200,7 @@ fx1.metric("Énergie fatale sauvée", f"{mobile.curtailed_kwh_day/1000:.2f} MWh/
 fx2.metric("Fioul EDF économisé", f"{mobile.thermal_fuel_saved_eur_day:,.0f} €/j", f"{mobile.thermal_fuel_saved_eur_day*365/1000:,.0f} k€/an économisés par EDF")
 fx3.metric("Carburant fossile évité", f"{mobile.fuel_liters_saved_year:,.0f} L/an", f"{mobile.fuel_liters_saved_year/1000:.1f} m³ de fioul Lucciana/Vazzio")
 fx4.metric("Prime de flexibilité", f"{mobile.flexibility_revenue_day*365/1000:,.1f} k€/an", f"+{mobile.flexibility_revenue_day:,.0f} €/j pour FractaVolta")
-fx5.metric("Marge bonifiée", f"{mobile.margin_with_flexibility_eur_kwh:.3f} €/kWh", f"{mobile.margin_with_flexibility_day:,.0f} €/j avec prime flexibilité", delta=f"+{mobile.flexibility_revenue_day:,.0f} €/j", delta_color="normal")
+fx5.metric("Marge bonifiée", f"{mobile.margin_with_flexibility_eur_kwh:.3f} €/kWh", f"+{mobile.flexibility_revenue_day:,.0f} €/j", delta_color="normal", help=f"{mobile.margin_with_flexibility_day:,.0f} €/j avec prime flexibilité")
 
 
 user_profiles = [
