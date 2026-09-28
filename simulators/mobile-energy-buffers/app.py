@@ -223,7 +223,7 @@ with tab_map:
                 lon=[b.x, s.x],
                 lat=[b.y, s.y],
                 mode="lines",
-                line=dict(width=3, color="#7C3AED", dash="dash"),
+                line=dict(width=3, color="#7C3AED"),
                 showlegend=False,
                 hoverinfo="skip",
             ))
