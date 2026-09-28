@@ -1,6 +1,6 @@
 from __future__ import annotations
 from dataclasses import dataclass, asdict
-from math import hypot
+from math import hypot, sin, cos, radians, atan2, sqrt
 from typing import Tuple
 
 @dataclass(frozen=True)
@@ -76,8 +76,25 @@ class ScenarioResult:
     def to_dict(self):
         return asdict(self)
 
-def distance(a: Tuple[float,float], b: Tuple[float,float]) -> float:
-    return hypot(a[0]-b[0], a[1]-b[1])
+def haversine_km(lat1: float, lon1: float, lat2: float, lon2: float) -> float:
+    r = 6371.0
+    phi1, phi2 = radians(lat1), radians(lat2)
+    dphi = radians(lat2 - lat1)
+    dlambda = radians(lon2 - lon1)
+    a = sin(dphi / 2) ** 2 + cos(phi1) * cos(phi2) * sin(dlambda / 2) ** 2
+    return 2 * r * atan2(sqrt(a), sqrt(1 - a))
+
+def distance(a: Tuple[float, float], b: Tuple[float, float]) -> float:
+    """Calculate distance in km.
+    Uses Haversine with Corsican road tortuosity factor (~1.30) if coordinates
+    are GPS (lat 40-45), or Euclidean hypot for synthetic grids.
+    Supports (lon, lat) where x=lon, y=lat.
+    """
+    if 40.0 <= a[1] <= 45.0 and 40.0 <= b[1] <= 45.0:
+        return haversine_km(a[1], a[0], b[1], b[0]) * 1.30
+    if 40.0 <= a[0] <= 45.0 and 40.0 <= b[0] <= 45.0:
+        return haversine_km(a[0], a[1], b[0], b[1]) * 1.30
+    return hypot(a[0] - b[0], a[1] - b[1])
 
 def light_cost_km(a: Assumptions) -> float:
     driving_labour = (1.0 - a.vehicle_autonomy) * a.light_driver_eur_h / a.light_speed_kmh

@@ -44,3 +44,25 @@ assert u_small["saving_month"] > 0
 assert abs(u_medium["saving_month"] - 2*u_small["saving_month"]) < 1e-9
 assert abs(u_large["saving_month"] - 4*u_small["saving_month"]) < 1e-9
 print("USER_SAVINGS", round(u_small["saving_month"],2), round(u_medium["saving_month"],2), round(u_large["saving_month"],2))
+
+
+from fractasim.data import CORRIDORS
+from fractasim.model import distance
+import json, os
+
+assert "T20 (Ajaccio–Corte–Bastia)" in CORRIDORS
+assert len(CORRIDORS["T20 (Ajaccio–Corte–Bastia)"]) > 5
+d_corte_bastia = distance((9.1490, 42.3094), (9.4509, 42.6973))
+assert 55.0 <= d_corte_bastia <= 75.0  # realistic road km Corte-Bastia
+
+reg_path = os.path.join(os.path.dirname(__file__), "data", "registre_producteurs_edf_corse.json")
+assert os.path.exists(reg_path), "Register file must exist"
+with open(reg_path, "r", encoding="utf-8") as f:
+    reg = json.load(f)
+assert len(reg) >= 700
+hta_count = sum(1 for r in reg if r.get("tension") == "HTA")
+assert hta_count >= 30
+total_p = sum(r.get("puissance_kw", 0) for r in reg)
+assert 200_000 <= total_p <= 250_000  # ~233 MWc
+print("CORSICA_GIS_OK", round(d_corte_bastia, 1), "km", len(reg), "producers", round(total_p/1000, 1), "MWc")
+

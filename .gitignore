@@ -153,3 +153,11 @@ docs/.jekyll-cache/
 docs/.jekyll-metadata
 docs/Gemfile.lock
 docs/vendor/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+simulators/mobile-energy-buffers/data_raw.json
+
