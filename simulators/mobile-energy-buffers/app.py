@@ -31,12 +31,39 @@ def load_solar_register():
 solar_register = load_solar_register()
 
 with st.sidebar:
-    st.header("Hypothèses")
+    st.header("1. Périmètre de simulation")
+    scope_options = [
+        "Échantillon pilote (12 sites témoins MVP — 4,5 MWh/j)",
+        "Seconde Vie Imminente ≤ 2030 (61 sites — 24,1 MWc)",
+        "Seconde Vie Court terme 2031–2035 (145 sites — 99,9 MWc)",
+        "Total Seconde Vie ≤ 2035 (206 sites — 124,1 MWc)",
+        "Grandes centrales HTA sol (34 parcs — 154,6 MWc)",
+        "Bassin Plaine Orientale (255 sites — 86,6 MWc)",
+        "Bassin Ajaccio (157 sites — 46,9 MWc)",
+        "Bassin Bastia (139 sites — 42,3 MWc)",
+        "Bassin Corte (183 sites — 56,6 MWc)",
+    ]
+    if "custom_producers" in st.session_state and st.session_state["custom_producers"]:
+        custom_label = f"Sélection personnalisée ({len(st.session_state['custom_producers'])} sites)"
+        if custom_label not in scope_options:
+            scope_options.append(custom_label)
+        default_scope_idx = scope_options.index(custom_label) if st.session_state.get("simulation_scope") == custom_label else 0
+    else:
+        default_scope_idx = 0
+
+    selected_scope = st.selectbox(
+        "Échelle modélisée :",
+        scope_options,
+        index=default_scope_idx,
+        help="Passez de l'échantillon pilote à l'échelle macro du registre des producteurs solaires en Corse."
+    )
+
+    st.header("2. Hypothèses techno-économiques")
     packet_kwh = st.slider("Energy Packet (kWh)", 20, 100, 50, 5)
     light_payload = st.slider("Énergie transportée par rotation légère (kWh)", 50, 300, 150, 10)
     container_kwh = st.slider("Capacité utile conteneur (kWh)", 1500, 4000, 3000, 100)
     efficiency = st.slider("Rendement source → borne", 0.75, 0.98, 0.90, 0.01)
-    producer_price = st.slider("Prix producteur par défaut (€/kWh)", 0.05, 0.20, 0.10, 0.005)
+    producer_price = st.slider("Prix d'achat producteur par défaut (€/kWh)", 0.05, 0.20, 0.10, 0.005)
     retail_price_ttc = st.slider("Prix client final TTC (€/kWh)", 0.30, 1.00, 0.65, 0.01)
     light_driver = st.slider("Coût conducteur tracteur léger (€/h)", 15, 45, 28, 1)
     light_consumption = st.slider("Conso tracteur léger + remorque (kWh/km)", 0.20, 0.80, 0.35, 0.01)
@@ -44,18 +71,17 @@ with st.sidebar:
     heavy_consumption = st.slider("Conso tracteur lourd (kWh/km)", 0.8, 2.5, 1.20, 0.05)
     heavy_towing_kg = st.slider("Capacité de tractage — tracteur lourd (kg)", 10000, 50000, 30000, 1000)
     autonomy_pct = st.slider("Autonomie de conduite des véhicules (%)", 0, 100, 0, 5)
-    st.caption("Scénario prospectif : ce paramètre réduit le coût de conduite des tracteurs légers et lourds. La manutention reste humaine dans ce modèle.")
+    st.caption("Scénario prospectif : ce paramètre réduit le coût de conduite des tracteurs légers et lourds. La manutention reste humaine.")
     battery_cycle = st.slider("Usure batterie (€/kWh livré)", 0.00, 0.10, 0.04, 0.005)
     charger_ops = st.slider("Borne + exploitation (€/kWh)", 0.00, 0.15, 0.05, 0.005)
 
-    st.header("Gain usager — carburant seulement")
+    st.header("3. Gain usager — carburant seulement")
     fuel_price = st.slider("Prix carburant thermique (€/L)", 1.20, 3.00, 2.00, 0.01)
     thermal_consumption = st.slider("Conso véhicule thermique (L/100 km)", 3.0, 12.0, 6.5, 0.1)
     ev_consumption = st.slider("Conso véhicule électrique (kWh/100 km)", 10.0, 30.0, 17.0, 0.5)
     small_km = st.slider("Petit rouleur (km/mois)", 100, 1500, 500, 50)
     medium_km = st.slider("Rouleur moyen (km/mois)", 500, 2500, 1000, 50)
     large_km = st.slider("Gros rouleur (km/mois)", 1000, 5000, 2000, 100)
-    st.caption("Comparaison limitée au coût d'énergie d'usage : carburant liquide vs électricité. Achat, entretien, assurance et financement du véhicule sont exclus.")
 
 a = Assumptions(
     packet_kwh=float(packet_kwh),
@@ -73,28 +99,94 @@ a = Assumptions(
     retail_price_ttc_eur_kwh=float(retail_price_ttc),
 )
 
-producers = [
-    Producer(
-        p.id, p.cluster, p.x, p.y, p.production_kwh_day,
-        p.alternative_eur_kwh,
-        max(float(producer_price), p.alternative_eur_kwh + 0.001)
-    )
-    for p in PRODUCERS
-]
+# Résolution des producteurs selon le périmètre sélectionné
+if selected_scope == "Échantillon pilote (12 sites témoins MVP — 4,5 MWh/j)":
+    active_producers = [
+        Producer(
+            p.id, p.cluster, p.x, p.y, p.production_kwh_day,
+            p.alternative_eur_kwh,
+            max(float(producer_price), p.alternative_eur_kwh + 0.001),
+            tension=getattr(p, "tension", "BT"),
+        )
+        for p in PRODUCERS
+    ]
+    scope_desc = "12 sites représentatifs répartis sur Bastia, Ajaccio, Corte et Plaine Orientale."
+elif selected_scope.startswith("Sélection personnalisée"):
+    records = st.session_state.get("custom_producers", [])
+    active_producers = [
+        Producer(
+            id=r["id"],
+            cluster=r["cluster"],
+            x=r["longitude"],
+            y=r["latitude"],
+            production_kwh_day=float(r.get("production_estimee_kwh_jour", 300)),
+            alternative_eur_kwh=0.085,
+            fracta_price_eur_kwh=max(float(producer_price), 0.085 + 0.001),
+            tension=r.get("tension", "BT"),
+        )
+        for r in records
+    ]
+    scope_desc = f"{len(records)} sites filtrés sur mesure depuis l'explorateur du Registre."
+else:
+    if "≤ 2030" in selected_scope:
+        subset = [r for r in solar_register if r.get("horizon_seconde_vie") == "Imminent (<= 2030)"]
+    elif "2031–2035" in selected_scope:
+        subset = [r for r in solar_register if r.get("horizon_seconde_vie") == "Court terme (2031-2035)"]
+    elif "Total Seconde Vie" in selected_scope:
+        subset = [r for r in solar_register if r.get("horizon_seconde_vie") in ["Imminent (<= 2030)", "Court terme (2031-2035)"]]
+    elif "Grandes centrales HTA" in selected_scope:
+        subset = [r for r in solar_register if r.get("tension") == "HTA"]
+    elif "Plaine Orientale" in selected_scope:
+        subset = [r for r in solar_register if r.get("cluster") == "Plaine Orientale"]
+    elif "Ajaccio" in selected_scope:
+        subset = [r for r in solar_register if r.get("cluster") == "Ajaccio"]
+    elif "Bastia" in selected_scope:
+        subset = [r for r in solar_register if r.get("cluster") == "Bastia"]
+    elif "Corte" in selected_scope:
+        subset = [r for r in solar_register if r.get("cluster") == "Corte"]
+    else:
+        subset = solar_register
 
-fixed = simulate(producers, STATIONS, FIXED_HUB, MOBILE_BUFFERS, a, "fixed")
-mobile = simulate(producers, STATIONS, FIXED_HUB, MOBILE_BUFFERS, a, "mobile")
+    active_producers = [
+        Producer(
+            id=r["id"],
+            cluster=r["cluster"],
+            x=r["longitude"],
+            y=r["latitude"],
+            production_kwh_day=float(r.get("production_estimee_kwh_jour", 300)),
+            alternative_eur_kwh=0.085,
+            fracta_price_eur_kwh=max(float(producer_price), 0.085 + 0.001),
+            tension=r.get("tension", "BT"),
+        )
+        for r in subset
+    ]
+    scope_desc = f"{len(subset)} sites issus de l'extraction officielle ODRÉ / EDF-SEI."
+
+fixed = simulate(active_producers, STATIONS, FIXED_HUB, MOBILE_BUFFERS, a, "fixed")
+mobile = simulate(active_producers, STATIONS, FIXED_HUB, MOBILE_BUFFERS, a, "mobile")
 
 d_cost = fixed.total_cost_eur_kwh - mobile.total_cost_eur_kwh
 d_km = fixed.light_km_day - mobile.light_km_day
 break_even_ttc = mobile.total_cost_eur_kwh * (1.0 + a.vat)
 
+# Bandeau de synthèse du périmètre
+st.info(f"📍 **Périmètre actif : {selected_scope}** — {len(active_producers)} producteurs simulés ({mobile.gross_kwh_day/1000:.2f} MWh/j bruts, {mobile.delivered_kwh_day/1000:.2f} MWh/j livrés). *{scope_desc}*")
+
+# Ligne 1 : Indicateurs Économiques
 c1, c2, c3, c4, c5 = st.columns(5)
-c1.metric("Coût mobile", f"{mobile.total_cost_eur_kwh:.3f} €/kWh", f"{-d_cost:.3f} vs hub fixe", delta_color="inverse")
+c1.metric("Coût de revient mobile", f"{mobile.total_cost_eur_kwh:.3f} €/kWh", f"{-d_cost:.3f} vs hub fixe", delta_color="inverse")
 c2.metric("Marge contributive", f"{mobile.margin_eur_kwh:.3f} €/kWh livré", f"{mobile.margin_day:,.0f} €/j")
-c3.metric("Kilomètres tracteur léger", f"{mobile.light_km_day:,.0f} km/j", f"{-d_km:,.0f} vs hub fixe", delta_color="inverse")
+c3.metric("Marge globale annuelle", f"{mobile.margin_day * 365 / 1000:,.1f} k€/an", f"recette : {mobile.revenue_ht_day * 365 / 1000:,.0f} k€ HT/an")
 c4.metric("Énergie livrée", f"{mobile.delivered_kwh_day/1000:.2f} MWh/j", f"{mobile.gross_kwh_day/1000:.2f} MWh bruts")
 c5.metric("Prix d'équilibre TTC", f"{break_even_ttc:.3f} €/kWh", f"prix client {retail_price_ttc:.2f} €")
+
+# Ligne 2 : Dimensionnement de la Flotte & Impact Environnemental
+f1, f2, f3, f4, f5 = st.columns(5)
+f1.metric("Conteneurs 3 MWh requis", f"{mobile.containers_needed} unités", f"{mobile.containers_needed * 3:.0f} MWh de stockage tampon")
+f2.metric("Tracteurs lourds", f"{mobile.heavy_tractors_needed} en rotation", f"{mobile.heavy_km_day:,.0f} km/j de conteneurs")
+f3.metric("Tracteurs légers", f"{mobile.light_tractors_needed} en rotation", f"{mobile.light_km_day:,.0f} km/j capillaires", delta=f"{-d_km:,.0f} km vs hub fixe", delta_color="inverse")
+f4.metric("CO₂ fossile évité", f"{mobile.co2_avoided_tons_year:,.0f} t/an", "remplacement fossile insulaire")
+f5.metric("Sites solaires modélisés", f"{len(active_producers)}", f"{sum(1 for p in active_producers if getattr(p, 'tension', 'BT')=='HTA')} HTA, {sum(1 for p in active_producers if getattr(p, 'tension', 'BT')=='BT')} BT")
 
 user_profiles = [
     ("Petit rouleur", small_km),
@@ -117,27 +209,24 @@ st.caption(
     f"{user_savings[0][1]['electric_cost_100km']:.2f} €/100 km."
 )
 
-with st.expander("Comment lire le gain usager ?"):
-    st.markdown("""
-Ce calcul répond à une question volontairement étroite : **combien l'usager économise-t-il chaque mois sur l'énergie nécessaire pour rouler ?**
-
-Il compare le coût d'un véhicule thermique en litres/100 km au coût d'un véhicule électrique en kWh/100 km, au prix client final choisi dans le simulateur.
-
-Les trois profils servent seulement de repères de kilométrage et restent modifiables. Le résultat n'inclut pas le prix d'achat du véhicule, le financement, l'entretien, l'assurance, les pneus, les taxes ou la valeur de revente.
+with st.expander("Comment lire les métriques de flotte et de dimensionnement ?"):
+    st.markdown(f"""
+- **Conteneurs 3 MWh** : Nombre d'unités de stockage nécessaires pour tamponner la production journalière (**{mobile.containers_needed} conteneurs** pour **{mobile.gross_kwh_day/1000:.1f} MWh/jour**).
+- **Massification HTA vs Capillarité BT** : Les parcs au sol HTA (> 1 MW) hébergent directement les conteneurs mobiles (aucun trajet léger). Les toitures et hangars BT (< 250 kW) sont collectés par tracteurs légers en rotation de **{light_payload:.0f} kWh**.
+- **Tracteurs légers et lourds** : Nombre de véhicules équivalents calculé sur la base de vacations de conduite de 7h/jour.
+- **CO₂ évité** : Émissions évitées par rapport à un mix thermique insulaire ou du carburant diesel de transport routier (~0,70 kg CO₂ / kWh décarboné).
 """)
 
 with st.expander("Prix final et marge par kWh"):
     st.markdown(f"""
 Le curseur **Prix client final TTC** représente le prix affiché au client final à la borne, l'équivalent du prix « à la pompe » pour l'électricité.
 
-Le modèle retire la TVA avant de calculer la recette opérateur. Avec les hypothèses actuelles :
+Le modèle retire la TVA avant de calculer la recette opérateur. Avec le périmètre actif :
 
 - prix client TTC : **{retail_price_ttc:.2f} €/kWh** ;
 - coût modélisé : **{mobile.total_cost_eur_kwh:.3f} €/kWh livré** ;
 - marge contributive : **{mobile.margin_eur_kwh:.3f} €/kWh livré** ;
 - prix d'équilibre TTC : **{break_even_ttc:.3f} €/kWh**.
-
-Cette marge n'est pas encore une rentabilité comptable complète : le prototype ne modélise pas encore tous les CAPEX, coûts financiers, assurances, fiscalités spécifiques ou taux d'utilisation réels des actifs.
 """)
 
 with st.expander("Capacités de tractage"):
@@ -147,16 +236,12 @@ Le modèle distingue deux classes génériques : **tracteur léger** et **tracte
 - Tracteur léger : capacité déclarée **{light_towing_kg:,.0f} kg**
 - Tracteur lourd : capacité déclarée **{heavy_towing_kg:,.0f} kg**
 
-Ces valeurs expriment une contrainte physique de véhicule. Elles ne sont pas converties automatiquement en kWh, car il faut connaître la masse réelle de la batterie, de sa structure, de la remorque et des équipements.
+Ces valeurs expriment une contrainte physique de véhicule.
 """)
 
 with st.expander("Pourquoi tester la conduite autonome ?"):
     st.markdown("""
 La collecte capillaire multiplie les petites rotations et donc les heures de conduite. Si, à l'avenir, les utilitaires et les poids lourds peuvent circuler de façon autonome, ce poste de coût peut fortement diminuer.
-
-Le curseur **Autonomie de conduite** ne suppose pas que toute la chaîne est robotisée : il réduit uniquement le coût de conduite. Le chargement, le déchargement et les autres opérations de manutention restent comptés comme aujourd'hui.
-
-Cela permet d'explorer une conséquence importante du modèle FractaVolta : **plus le transport devient autonome, plus des paquets énergétiques petits et nombreux peuvent devenir économiquement intéressants**, ce qui favorise un réseau distribué et agile.
 """)
 
 tab_map, tab_reg, tab_fin, tab_sens, tab_data = st.tabs([
@@ -175,7 +260,7 @@ with tab_map:
     with col_m1:
         solar_view = st.radio(
             "Sources solaires affichées :",
-            ["Producteurs modélisés (12 sites)", "Grandes centrales solaires HTA (34 parcs)", "Tous les sites de production (742 sites)"],
+            [f"Producteurs du périmètre simulé ({len(active_producers)} sites)", "Grandes centrales solaires HTA (34 parcs)", "Tous les sites de production (742 sites)"],
             horizontal=True,
         )
     with col_m2:
@@ -203,17 +288,18 @@ with tab_map:
 
     # Flux logistiques (si activés)
     if show_flows:
-        # Collecte capillaire légère (Producteur -> Buffer mobile)
-        for p in producers:
-            b = MOBILE_BUFFERS[p.cluster]
-            fig_map.add_trace(go.Scattermap(
-                lon=[p.x, b.x],
-                lat=[p.y, b.y],
-                mode="lines",
-                line=dict(width=1.5, color="#94A3B8"),
-                showlegend=False,
-                hoverinfo="skip",
-            ))
+        # Collecte capillaire légère pour sites BT
+        for p in active_producers:
+            if getattr(p, "tension", "BT") != "HTA":
+                b = MOBILE_BUFFERS[p.cluster]
+                fig_map.add_trace(go.Scattermap(
+                    lon=[p.x, b.x],
+                    lat=[p.y, b.y],
+                    mode="lines",
+                    line=dict(width=1.2, color="#94A3B8"),
+                    showlegend=False,
+                    hoverinfo="skip",
+                ))
 
         # Navettes lourdes conteneurs (Buffer mobile -> Station urbaine)
         station_by_cluster = {s.cluster: s for s in STATIONS}
@@ -229,21 +315,19 @@ with tab_map:
             ))
 
     # Sources solaires
-    if solar_view == "Producteurs modélisés (12 sites)":
+    if solar_view.startswith("Producteurs du périmètre simulé"):
         fig_map.add_trace(go.Scattermap(
-            lon=[p.x for p in producers],
-            lat=[p.y for p in producers],
-            mode="markers+text",
-            text=[p.id.replace("P0", "P").replace("P", "P") for p in producers],
-            textposition="top right",
-            name="Producteurs modélisés (MVP)",
+            lon=[p.x for p in active_producers],
+            lat=[p.y for p in active_producers],
+            mode="markers",
+            name=f"Simulés ({len(active_producers)} sites)",
             marker=dict(
-                size=[10 + (p.production_kwh_day / 50) for p in producers],
-                color="#F59E0B",
-                opacity=0.9,
+                size=[14 if getattr(p, "tension", "BT") == "HTA" else 8 for p in active_producers],
+                color=["#DC2626" if getattr(p, "tension", "BT") == "HTA" else "#F59E0B" for p in active_producers],
+                opacity=0.85,
             ),
-            customdata=[[p.cluster, p.production_kwh_day, p.fracta_price_eur_kwh] for p in producers],
-            hovertemplate="<b>%{text}</b><br>Bassin : %{customdata[0]}<br>Production : %{customdata[1]:.0f} kWh/j<br>Achat : %{customdata[2]:.3f} €/kWh<extra></extra>",
+            customdata=[[p.id, p.cluster, p.production_kwh_day, getattr(p, "tension", "BT")] for p in active_producers],
+            hovertemplate="<b>%{customdata[0]}</b> (%{customdata[3]})<br>Bassin : %{customdata[1]}<br>Production : %{customdata[2]:,.0f} kWh/j<extra></extra>",
         ))
     elif solar_view == "Grandes centrales solaires HTA (34 parcs)":
         hta_sites = [r for r in solar_register if r.get("tension") == "HTA"]
@@ -296,7 +380,7 @@ with tab_map:
         mode="markers+text",
         text=[FIXED_HUB.id],
         textposition="top left",
-        name="Hub central fixe (scénario comparatif)",
+        name="Hub central fixe (Corte)",
         marker=dict(size=14, color="#64748B", symbol="circle"),
         hoverinfo="text",
     ))
@@ -339,7 +423,6 @@ Données consolidées issues du **Registre national des installations de product
 
 En Corse (zone non interconnectée au réseau continental), les producteurs photovoltaïques disposent historiquement de contrats d'**Obligation d'Achat (OA)** d'une durée de 20 ans avec EDF.
 À l'échéance de ce contrat, les installations entrent en **Seconde Vie** : elles perdent leur tarif d'achat garanti et s'exposent à des contraintes d'écrêtement sévères imposées par EDF-SEI pour préserver la stabilité du réseau insulaire.
-FractaVolta offre un débouché local immédiat via sa flotte de **buffers mobiles**.
 """)
 
     if solar_register:
@@ -398,6 +481,17 @@ FractaVolta offre un débouché local immédiat via sa flotte de **buffers mobil
                 filtered_df["nom"].str.lower().str.contains(q, na=False)
             ]
 
+        # Action d'injection directe dans la simulation
+        col_act1, col_act2 = st.columns([3, 1])
+        with col_act1:
+            st.info(f"💡 Ce filtre isole **{len(filtered_df)}** installations ({filtered_df['puissance_kw'].sum()/1000:.2f} MWc, production estimée : {filtered_df['production_estimee_kwh_jour'].sum()/1000:.1f} MWh/jour).")
+        with col_act2:
+            if st.button("🚀 Simuler cette sélection", type="primary", use_container_width=True):
+                custom_lbl = f"Sélection personnalisée ({len(filtered_df)} sites)"
+                st.session_state["simulation_scope"] = custom_lbl
+                st.session_state["custom_producers"] = filtered_df.to_dict(orient="records")
+                st.rerun()
+
         # Table d'affichage
         display_cols = [
             "commune",
@@ -448,6 +542,9 @@ with tab_fin:
             "Marge €/j": fixed.margin_day,
             "km tracteur léger/j": fixed.light_km_day,
             "km tracteur lourd/j": fixed.heavy_km_day,
+            "Conteneurs": fixed.containers_needed,
+            "Tracteurs lourds": fixed.heavy_tractors_needed,
+            "Tracteurs légers": fixed.light_tractors_needed,
         },
         {
             "Scénario": mobile.name,
@@ -456,6 +553,9 @@ with tab_fin:
             "Marge €/j": mobile.margin_day,
             "km tracteur léger/j": mobile.light_km_day,
             "km tracteur lourd/j": mobile.heavy_km_day,
+            "Conteneurs": mobile.containers_needed,
+            "Tracteurs lourds": mobile.heavy_tractors_needed,
+            "Tracteurs légers": mobile.light_tractors_needed,
         },
     ])
     st.dataframe(df_fin, use_container_width=True, hide_index=True)
@@ -476,10 +576,12 @@ with tab_fin:
 
 with tab_sens:
     points = []
+    # Sample producers for fast interactive response if fleet is very large
+    sample_producers = active_producers[:30] if len(active_producers) > 30 else active_producers
     for price in [0.05 + i * 0.005 for i in range(31)]:
         ps = [
-            Producer(p.id, p.cluster, p.x, p.y, p.production_kwh_day, p.alternative_eur_kwh, max(price, p.alternative_eur_kwh + 0.001))
-            for p in PRODUCERS
+            Producer(p.id, p.cluster, p.x, p.y, p.production_kwh_day, p.alternative_eur_kwh, max(price, p.alternative_eur_kwh + 0.001), getattr(p, "tension", "BT"))
+            for p in sample_producers
         ]
         rf = simulate(ps, STATIONS, FIXED_HUB, MOBILE_BUFFERS, a, "fixed")
         rm = simulate(ps, STATIONS, FIXED_HUB, MOBILE_BUFFERS, a, "mobile")
@@ -508,8 +610,8 @@ with tab_sens:
     retail_points = []
     for price in [0.30 + i * 0.025 for i in range(29)]:
         aa = Assumptions(**{**a.__dict__, "retail_price_ttc_eur_kwh": price})
-        rf = simulate(producers, STATIONS, FIXED_HUB, MOBILE_BUFFERS, aa, "fixed")
-        rm = simulate(producers, STATIONS, FIXED_HUB, MOBILE_BUFFERS, aa, "mobile")
+        rf = simulate(sample_producers, STATIONS, FIXED_HUB, MOBILE_BUFFERS, aa, "fixed")
+        rm = simulate(sample_producers, STATIONS, FIXED_HUB, MOBILE_BUFFERS, aa, "mobile")
         retail_points.append({"Prix client TTC": price, "Hub fixe": rf.margin_eur_kwh, "Buffers mobiles": rm.margin_eur_kwh})
     rdf = pd.DataFrame(retail_points)
     pf = go.Figure()
@@ -523,8 +625,8 @@ with tab_sens:
     autonomy_points = []
     for pct in range(0, 101, 10):
         aa = Assumptions(**{**a.__dict__, "vehicle_autonomy": pct / 100.0})
-        rf = simulate(producers, STATIONS, FIXED_HUB, MOBILE_BUFFERS, aa, "fixed")
-        rm = simulate(producers, STATIONS, FIXED_HUB, MOBILE_BUFFERS, aa, "mobile")
+        rf = simulate(sample_producers, STATIONS, FIXED_HUB, MOBILE_BUFFERS, aa, "fixed")
+        rm = simulate(sample_producers, STATIONS, FIXED_HUB, MOBILE_BUFFERS, aa, "mobile")
         autonomy_points.append({"Autonomie (%)": pct, "Hub fixe": rf.total_cost_eur_kwh, "Buffers mobiles": rm.total_cost_eur_kwh})
     adf = pd.DataFrame(autonomy_points)
     af = go.Figure()
@@ -534,8 +636,12 @@ with tab_sens:
     st.plotly_chart(af, use_container_width=True)
 
 with tab_data:
-    st.dataframe(pd.DataFrame([p.__dict__ for p in producers]), use_container_width=True, hide_index=True)
+    st.subheader(f"Producteurs modélisés dans le scénario actif ({len(active_producers)} sites)")
+    st.dataframe(pd.DataFrame([p.__dict__ for p in active_producers]), use_container_width=True, hide_index=True)
+    
+    st.subheader("Bilan comparatif et dimensionnement de flotte")
     export = pd.DataFrame([fixed.to_dict(), mobile.to_dict()])
+    st.dataframe(export, use_container_width=True, hide_index=True)
     st.download_button("Télécharger résultats CSV", export.to_csv(index=False).encode("utf-8"), "fractavolta_simulation.csv", "text/csv")
 
 st.divider()

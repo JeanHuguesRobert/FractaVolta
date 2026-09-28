@@ -1,4 +1,4 @@
-from fractasim import Assumptions, simulate, PRODUCERS, STATIONS, FIXED_HUB, MOBILE_BUFFERS
+from fractasim import Assumptions, Producer, simulate, PRODUCERS, STATIONS, FIXED_HUB, MOBILE_BUFFERS
 a=Assumptions()
 f=simulate(PRODUCERS,STATIONS,FIXED_HUB,MOBILE_BUFFERS,a,"fixed")
 m=simulate(PRODUCERS,STATIONS,FIXED_HUB,MOBILE_BUFFERS,a,"mobile")
@@ -64,5 +64,19 @@ hta_count = sum(1 for r in reg if r.get("tension") == "HTA")
 assert hta_count >= 30
 total_p = sum(r.get("puissance_kw", 0) for r in reg)
 assert 200_000 <= total_p <= 250_000  # ~233 MWc
+assert m.containers_needed == 2
+assert m.light_tractors_needed >= 1
+assert m.heavy_tractors_needed >= 1
+assert m.co2_avoided_tons_year > 0
+
+# Test HTA producer direct buffering (no light km generated)
+p_hta = [Producer("P_HTA", "Bastia", 9.42, 42.42, 10000, 0.08, 0.10, "HTA")]
+m_hta = simulate(p_hta, STATIONS, FIXED_HUB, MOBILE_BUFFERS, a, "mobile")
+assert m_hta.light_km_day == 0.0
+assert m_hta.heavy_km_day > 0.0
+assert m_hta.containers_needed == 4
+
 print("CORSICA_GIS_OK", round(d_corte_bastia, 1), "km", len(reg), "producers", round(total_p/1000, 1), "MWc")
+print("FLEET_SIZING_OK", m.containers_needed, "containers", m.light_tractors_needed, "light", m.heavy_tractors_needed, "heavy")
+
 

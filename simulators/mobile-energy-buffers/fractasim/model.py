@@ -1,6 +1,6 @@
 from __future__ import annotations
 from dataclasses import dataclass, asdict
-from math import hypot, sin, cos, radians, atan2, sqrt
+from math import hypot, sin, cos, radians, atan2, sqrt, ceil
 from typing import Tuple
 
 @dataclass(frozen=True)
@@ -12,6 +12,7 @@ class Producer:
     production_kwh_day: float
     alternative_eur_kwh: float
     fracta_price_eur_kwh: float
+    tension: str = "BT"
 
 @dataclass(frozen=True)
 class Station:
@@ -72,6 +73,10 @@ class ScenarioResult:
     revenue_ht_day: float
     margin_day: float
     margin_eur_kwh: float
+    containers_needed: int = 0
+    light_tractors_needed: int = 0
+    heavy_tractors_needed: int = 0
+    co2_avoided_tons_year: float = 0.0
 
     def to_dict(self):
         return asdict(self)
@@ -109,38 +114,75 @@ def simulate(producers, stations, fixed_hub, mobile_buffers, assumptions, mode):
     delivered = gross * assumptions.source_to_charger_efficiency
     pv5_km = pv5_cost = purchase = 0.0
     cluster_gross = {}
+    pv5_trips = 0.0
 
     for p in producers:
         target = fixed_hub if mode == "fixed" else mobile_buffers[p.cluster]
-        d = distance((p.x,p.y),(target.x,target.y))
-        trips = p.production_kwh_day / assumptions.light_payload_kwh
-        km = 2*d*trips
-        pv5_km += km
-        pv5_cost += km*light_cost_km(assumptions) + trips*assumptions.light_driver_eur_h*assumptions.light_handling_h_trip
-        cluster_gross[p.cluster] = cluster_gross.get(p.cluster,0) + p.production_kwh_day
-        purchase += p.production_kwh_day*p.fracta_price_eur_kwh
+        d = distance((p.x, p.y), (target.x, target.y))
+        
+        is_hta = getattr(p, "tension", "BT") == "HTA"
+        if not is_hta:
+            trips = p.production_kwh_day / assumptions.light_payload_kwh
+            km = 2 * d * trips
+            pv5_km += km
+            pv5_trips += trips
+            pv5_cost += km * light_cost_km(assumptions) + trips * assumptions.light_driver_eur_h * assumptions.light_handling_h_trip
 
-    station_by_cluster = {s.cluster:s for s in stations}
+        cluster_gross[p.cluster] = cluster_gross.get(p.cluster, 0) + p.production_kwh_day
+        purchase += p.production_kwh_day * p.fracta_price_eur_kwh
+
+    station_by_cluster = {s.cluster: s for s in stations}
     heavy_km = departures = 0.0
     for cluster, energy in cluster_gross.items():
         s = station_by_cluster[cluster]
         origin = fixed_hub if mode == "fixed" else mobile_buffers[cluster]
         dep = energy / assumptions.container_kwh
         departures += dep
-        heavy_km += 2*distance((origin.x,origin.y),(s.x,s.y))*dep
+        heavy_km += 2 * distance((origin.x, origin.y), (s.x, s.y)) * dep
 
-    heavy_cost = heavy_km*heavy_cost_km(assumptions) + departures*assumptions.heavy_driver_eur_h*assumptions.heavy_handling_h_move
-    storage_charger = delivered*(assumptions.battery_cycle_eur_kwh_delivered + assumptions.charger_ops_eur_kwh_delivered)
+    heavy_cost = heavy_km * heavy_cost_km(assumptions) + departures * assumptions.heavy_driver_eur_h * assumptions.heavy_handling_h_move
+    storage_charger = delivered * (assumptions.battery_cycle_eur_kwh_delivered + assumptions.charger_ops_eur_kwh_delivered)
     total = pv5_cost + heavy_cost + purchase + storage_charger
-    total_kwh = total/delivered if delivered else 0.0
+    total_kwh = total / delivered if delivered else 0.0
 
     demand = sum(s.demand_kwh_day for s in stations)
-    weighted_ttc = assumptions.retail_price_ttc_eur_kwh if assumptions.retail_price_ttc_eur_kwh is not None else sum(s.demand_kwh_day*s.public_price_ttc_eur_kwh for s in stations)/demand
-    sell_ht = weighted_ttc/(1+assumptions.vat)
-    revenue = delivered*sell_ht
-    margin = revenue-total
+    weighted_ttc = (
+        assumptions.retail_price_ttc_eur_kwh
+        if assumptions.retail_price_ttc_eur_kwh is not None
+        else sum(s.demand_kwh_day * s.public_price_ttc_eur_kwh for s in stations) / demand
+    )
+    sell_ht = weighted_ttc / (1 + assumptions.vat)
+    revenue = delivered * sell_ht
+    margin = revenue - total
 
-    return ScenarioResult("Hub fixe" if mode=="fixed" else "Buffers mobiles", gross, delivered, pv5_km, pv5_cost, heavy_km, heavy_cost, purchase, storage_charger, total, total_kwh, revenue, margin, margin/delivered)
+    # Fleet sizing (number of active 3 MWh containers and tractor shifts)
+    containers_needed = max(1, ceil(gross / assumptions.container_kwh)) if gross > 0 else 0
+    light_hours = pv5_km / assumptions.light_speed_kmh + pv5_trips * assumptions.light_handling_h_trip
+    light_tractors_needed = ceil(light_hours / 7.0)
+    heavy_hours = heavy_km / assumptions.heavy_speed_kmh + departures * assumptions.heavy_handling_h_move
+    heavy_tractors_needed = ceil(heavy_hours / 7.0)
+    co2_avoided_tons_year = round(delivered * 365.0 * 0.70 / 1000.0, 1)
+
+    return ScenarioResult(
+        "Hub fixe" if mode == "fixed" else "Buffers mobiles",
+        gross,
+        delivered,
+        pv5_km,
+        pv5_cost,
+        heavy_km,
+        heavy_cost,
+        purchase,
+        storage_charger,
+        total,
+        total_kwh,
+        revenue,
+        margin,
+        margin / delivered if delivered else 0.0,
+        containers_needed=containers_needed,
+        light_tractors_needed=light_tractors_needed,
+        heavy_tractors_needed=heavy_tractors_needed,
+        co2_avoided_tons_year=co2_avoided_tons_year,
+    )
 
 
 def user_fuel_savings(
