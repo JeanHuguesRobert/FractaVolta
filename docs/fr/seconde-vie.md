@@ -96,11 +96,17 @@ L’objectif n’est pas seulement de produire un kWh moins cher. L’objectif e
 
 Le propriétaire n’a pas à devenir énergéticien, logisticien ou opérateur de recharge. FractaVolta organise le modèle avec des partenaires qualifiés, des contrats réversibles et une traçabilité des flux.
 
-## Simuler la chaîne logistique
+## Simuler la chaîne logistique et tester votre gisement
 
-Le [simulateur FractaVolta](./simulateur) permet d'explorer les effets du prix payé au producteur, des distances, de la taille des buffers et du choix entre hub fixe et conteneurs mobiles.
+Le **[simulateur interactif FractaVolta](https://fracta.fractavolta.com/simulateur/)** permet d'explorer les flux physiques et économiques d'une chaîne de buffers mobiles en Corse :
+* Intégration du **registre officiel EDF-SEI** (742 installations, 233 MWc en Corse, dont 124 MWc sortant des contrats d'obligation d'achat d'ici 2035) ;
+* Simulation sur mesure : de votre toiture agricole à l'échelle d'un bassin territorial (Plaine Orientale, Ajaccio, Bastia, Corte) ;
+* Calcul des coûts de revient, de la marge contributive, du dimensionnement de flotte et de la valorisation de la flexibilité réseau (énergie fatale évitée face aux centrales thermiques).
 
-Il s'agit d'un outil exploratoire : les résultats ne constituent ni une promesse de rentabilité ni une validation de faisabilité pour un site donné.
+👉 [**Tester le simulateur en direct**](https://fracta.fractavolta.com/simulateur/)  
+📖 [Consulter la documentation et méthodologie complète](./simulateur)
+
+Il s'agit d'un outil exploratoire : les résultats ne constituent ni une promesse de rentabilité commerciale ni une validation réglementaire pour un site donné.
 
 ## Suite utile
 

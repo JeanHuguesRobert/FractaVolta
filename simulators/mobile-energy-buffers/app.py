@@ -18,8 +18,18 @@ from fractasim import (
 from fractasim.data import CORRIDORS
 
 st.set_page_config(page_title="FractaVolta — Buffers mobiles Corse", page_icon="⚡", layout="wide")
-st.title("FractaVolta — Chaîne agile de buffers énergétiques")
-st.caption("Modélisation insulaire corse : producteurs Seconde Vie → collecte légère → buffers mobiles → corridors T20/T10/T50 → stations urbaines.")
+
+col_head_title, col_head_links = st.columns([3, 2])
+with col_head_title:
+    st.title("⚡ FractaVolta — Chaîne agile de buffers énergétiques")
+    st.caption("Modélisation insulaire corse : producteurs Seconde Vie → collecte légère → buffers mobiles → corridors T20/T10/T50 → stations urbaines.")
+with col_head_links:
+    st.markdown("""
+    <div style="text-align: right; padding-top: 1.2rem; font-size: 0.95rem;">
+        <a href="https://fractavolta.com/fr/simulateur" target="_blank" style="text-decoration: none; font-weight: 600; margin-right: 18px; color: #2563EB;">📖 Présentation du simulateur</a>
+        <a href="https://fractavolta.com/fr/seconde-vie" target="_blank" style="text-decoration: none; font-weight: 600; color: #059669;">☀️ Accueil Seconde Vie</a>
+    </div>
+    """, unsafe_allow_html=True)
 
 @st.cache_data
 def load_solar_register():
@@ -32,6 +42,18 @@ def load_solar_register():
 solar_register = load_solar_register()
 
 with st.sidebar:
+    st.markdown("""
+    <div style="background-color: rgba(37, 99, 235, 0.08); border: 1px solid rgba(37, 99, 235, 0.2); border-radius: 8px; padding: 10px 14px; margin-bottom: 15px;">
+        <div style="font-weight: 600; margin-bottom: 6px; font-size: 0.9rem;">🧭 Retours et Liens éditoriaux</div>
+        <div style="font-size: 0.85rem; line-height: 1.6;">
+            • <a href="https://fractavolta.com/fr/simulateur" target="_blank" style="text-decoration: none; font-weight: 500;">📖 <b>Présentation du simulateur</b></a><br>
+            • <a href="https://fractavolta.com/fr/seconde-vie" target="_blank" style="text-decoration: none; font-weight: 500;">☀️ <b>Accueil Seconde Vie</b></a><br>
+            • <a href="https://fractavolta.com/fr/agriculteurs" target="_blank" style="text-decoration: none;">🚜 Espace Agriculteurs</a><br>
+            • <a href="https://fractavolta.com/fr/collectivites" target="_blank" style="text-decoration: none;">🏛️ Espace Collectivités</a><br>
+            • <a href="https://fractavolta.com/fr/" target="_blank" style="text-decoration: none;">🌐 Portail FractaVolta</a>
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
     st.header("1. Périmètre de simulation")
     scope_options = [
         "Échantillon pilote (12 sites témoins MVP — 4,5 MWh/j)",
@@ -742,4 +764,14 @@ with tab_data:
     st.download_button("Télécharger résultats CSV", export.to_csv(index=False).encode("utf-8"), "fractavolta_simulation.csv", "text/csv")
 
 st.divider()
-st.caption("Modélisation exploratoire Corsica — données solaires ODRÉ / EDF-SEI 2023 ; aucune promesse commerciale ou validation réglementaire.")
+col_foot1, col_foot2 = st.columns([3, 2])
+with col_foot1:
+    st.caption("Modélisation exploratoire Corsica — données solaires ODRÉ / EDF-SEI 2023 ; aucune promesse commerciale ou validation réglementaire.")
+with col_foot2:
+    st.markdown("""
+    <div style="text-align: right; font-size: 0.85rem; padding-top: 4px;">
+        <a href="https://fractavolta.com/fr/simulateur" target="_blank" style="text-decoration: none; font-weight: 500;">📖 Présentation du simulateur</a> &nbsp;•&nbsp;
+        <a href="https://fractavolta.com/fr/seconde-vie" target="_blank" style="text-decoration: none; font-weight: 500;">☀️ Accueil Seconde Vie</a> &nbsp;•&nbsp;
+        <a href="https://github.com/JeanHuguesRobert/FractaVolta" target="_blank" style="text-decoration: none;">💻 GitHub</a>
+    </div>
+    """, unsafe_allow_html=True)
