@@ -81,6 +81,7 @@ with st.sidebar:
     ev_consumption = st.slider("Conso véhicule électrique (kWh/100 km)", 10.0, 30.0, 17.0, 0.5)
     small_km = st.slider("Petit rouleur (km/mois)", 100, 1500, 500, 50)
     medium_km = st.slider("Rouleur moyen (km/mois)", 500, 2500, 1000, 50)
+    large_km = st.slider("Gros rouleur (km/mois)", 1000, 5000, 2000, 100)
     st.header("4. Flexibilité réseau & Écrêtement EDF-SEI")
     curtailment_pct = st.slider("Taux d'écrêtement solaire évité (%)", 0, 50, 20, 5, help="Part de la production solaire aux heures de midi qui serait bridée ou déconnectée par EDF-SEI sans nos conteneurs.")
     thermal_fuel_eur = st.slider("Coût fioul évité centrales EDF (€/kWh)", 0.10, 0.35, 0.18, 0.01, help="Coût du combustible fossile évité aux centrales thermiques de Lucciana et du Vazzio lors de la pointe du soir.")
