@@ -56,6 +56,9 @@ class Assumptions:
     light_towing_capacity_kg: float = 1500.0  # declared towing capability; not converted to kWh automatically
     heavy_towing_capacity_kg: float = 30000.0  # declared towing capability; not converted to kWh automatically
     retail_price_ttc_eur_kwh: float | None = None  # optional uniform client price override
+    curtailment_rate: float = 0.20  # fraction of peak solar generation saved from grid curtailment
+    thermal_avoided_fuel_eur_kwh: float = 0.18  # EDF-SEI fossil fuel cost saved per kWh (Lucciana/Vazzio)
+    flexibility_remuneration_eur_kwh: float = 0.04  # potential flexibility fee paid by grid operator to FractaVolta
 
 @dataclass
 class ScenarioResult:
@@ -77,6 +80,12 @@ class ScenarioResult:
     light_tractors_needed: int = 0
     heavy_tractors_needed: int = 0
     co2_avoided_tons_year: float = 0.0
+    curtailed_kwh_day: float = 0.0
+    thermal_fuel_saved_eur_day: float = 0.0
+    flexibility_revenue_day: float = 0.0
+    fuel_liters_saved_year: float = 0.0
+    margin_with_flexibility_day: float = 0.0
+    margin_with_flexibility_eur_kwh: float = 0.0
 
     def to_dict(self):
         return asdict(self)
@@ -163,6 +172,14 @@ def simulate(producers, stations, fixed_hub, mobile_buffers, assumptions, mode):
     heavy_tractors_needed = ceil(heavy_hours / 7.0)
     co2_avoided_tons_year = round(delivered * 365.0 * 0.70 / 1000.0, 1)
 
+    # Flexibility & thermal fuel avoidance (EDF-SEI insular grid stabilization)
+    curtailed_kwh_day = gross * assumptions.curtailment_rate
+    thermal_fuel_saved_eur_day = delivered * assumptions.thermal_avoided_fuel_eur_kwh
+    flexibility_revenue_day = delivered * assumptions.flexibility_remuneration_eur_kwh
+    fuel_liters_saved_year = round((delivered * 365.0) / 10.0, 0)  # ~10 kWh per liter of heavy/light fuel in power plants
+    margin_with_flexibility_day = margin + flexibility_revenue_day
+    margin_with_flexibility_eur_kwh = margin_with_flexibility_day / delivered if delivered else 0.0
+
     return ScenarioResult(
         "Hub fixe" if mode == "fixed" else "Buffers mobiles",
         gross,
@@ -182,6 +199,12 @@ def simulate(producers, stations, fixed_hub, mobile_buffers, assumptions, mode):
         light_tractors_needed=light_tractors_needed,
         heavy_tractors_needed=heavy_tractors_needed,
         co2_avoided_tons_year=co2_avoided_tons_year,
+        curtailed_kwh_day=curtailed_kwh_day,
+        thermal_fuel_saved_eur_day=thermal_fuel_saved_eur_day,
+        flexibility_revenue_day=flexibility_revenue_day,
+        fuel_liters_saved_year=fuel_liters_saved_year,
+        margin_with_flexibility_day=margin_with_flexibility_day,
+        margin_with_flexibility_eur_kwh=margin_with_flexibility_eur_kwh,
     )
 
 

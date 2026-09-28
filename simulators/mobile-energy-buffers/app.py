@@ -81,7 +81,10 @@ with st.sidebar:
     ev_consumption = st.slider("Conso véhicule électrique (kWh/100 km)", 10.0, 30.0, 17.0, 0.5)
     small_km = st.slider("Petit rouleur (km/mois)", 100, 1500, 500, 50)
     medium_km = st.slider("Rouleur moyen (km/mois)", 500, 2500, 1000, 50)
-    large_km = st.slider("Gros rouleur (km/mois)", 1000, 5000, 2000, 100)
+    st.header("4. Flexibilité réseau & Écrêtement EDF-SEI")
+    curtailment_pct = st.slider("Taux d'écrêtement solaire évité (%)", 0, 50, 20, 5, help="Part de la production solaire aux heures de midi qui serait bridée ou déconnectée par EDF-SEI sans nos conteneurs.")
+    thermal_fuel_eur = st.slider("Coût fioul évité centrales EDF (€/kWh)", 0.10, 0.35, 0.18, 0.01, help="Coût du combustible fossile évité aux centrales thermiques de Lucciana et du Vazzio lors de la pointe du soir.")
+    flexibility_fee = st.slider("Prime de flexibilité rémunérée (€/kWh)", 0.00, 0.15, 0.04, 0.005, help="Rémunération de flexibilité/réserve versée par l'opérateur (EDF-SEI / CRE) pour l'évitement de combustible fossile et la tenue de réseau.")
 
 a = Assumptions(
     packet_kwh=float(packet_kwh),
@@ -97,6 +100,9 @@ a = Assumptions(
     charger_ops_eur_kwh_delivered=float(charger_ops),
     vehicle_autonomy=float(autonomy_pct) / 100.0,
     retail_price_ttc_eur_kwh=float(retail_price_ttc),
+    curtailment_rate=float(curtailment_pct) / 100.0,
+    thermal_avoided_fuel_eur_kwh=float(thermal_fuel_eur),
+    flexibility_remuneration_eur_kwh=float(flexibility_fee),
 )
 
 # Résolution des producteurs selon le périmètre sélectionné
@@ -188,6 +194,15 @@ f3.metric("Tracteurs légers", f"{mobile.light_tractors_needed} en rotation", f"
 f4.metric("CO₂ fossile évité", f"{mobile.co2_avoided_tons_year:,.0f} t/an", "remplacement fossile insulaire")
 f5.metric("Sites solaires modélisés", f"{len(active_producers)}", f"{sum(1 for p in active_producers if getattr(p, 'tension', 'BT')=='HTA')} HTA, {sum(1 for p in active_producers if getattr(p, 'tension', 'BT')=='BT')} BT")
 
+# Ligne 3 : Flexibilité insulaire & Évitement de carburant thermique EDF-SEI
+fx1, fx2, fx3, fx4, fx5 = st.columns(5)
+fx1.metric("Énergie fatale sauvée", f"{mobile.curtailed_kwh_day/1000:.2f} MWh/j", f"{mobile.curtailed_kwh_day*365/1000:,.0f} MWh/an sauvés d'écrêtement")
+fx2.metric("Fioul EDF économisé", f"{mobile.thermal_fuel_saved_eur_day:,.0f} €/j", f"{mobile.thermal_fuel_saved_eur_day*365/1000:,.0f} k€/an économisés par EDF")
+fx3.metric("Carburant fossile évité", f"{mobile.fuel_liters_saved_year:,.0f} L/an", f"{mobile.fuel_liters_saved_year/1000:.1f} m³ de fioul Lucciana/Vazzio")
+fx4.metric("Prime de flexibilité", f"{mobile.flexibility_revenue_day*365/1000:,.1f} k€/an", f"+{mobile.flexibility_revenue_day:,.0f} €/j pour FractaVolta")
+fx5.metric("Marge bonifiée", f"{mobile.margin_with_flexibility_eur_kwh:.3f} €/kWh", f"{mobile.margin_with_flexibility_day:,.0f} €/j avec prime flexibilité", delta=f"+{mobile.flexibility_revenue_day:,.0f} €/j", delta_color="normal")
+
+
 user_profiles = [
     ("Petit rouleur", small_km),
     ("Rouleur moyen", medium_km),
@@ -215,6 +230,23 @@ with st.expander("Comment lire les métriques de flotte et de dimensionnement ?"
 - **Massification HTA vs Capillarité BT** : Les parcs au sol HTA (> 1 MW) hébergent directement les conteneurs mobiles (aucun trajet léger). Les toitures et hangars BT (< 250 kW) sont collectés par tracteurs légers en rotation de **{light_payload:.0f} kWh**.
 - **Tracteurs légers et lourds** : Nombre de véhicules équivalents calculé sur la base de vacations de conduite de 7h/jour.
 - **CO₂ évité** : Émissions évitées par rapport à un mix thermique insulaire ou du carburant diesel de transport routier (~0,70 kg CO₂ / kWh décarboné).
+""")
+
+with st.expander("Pourquoi EDF-SEI devrait rémunérer cette flexibilité ?"):
+    st.markdown(f"""
+En Corse (Zone Non Interconnectée au réseau continental), le système électrique présente une double asymétrie quotidienne :
+
+1. **L'écrêtement solaire méridien (Énergie fatale)** :
+   Aux heures de pointe d'ensoleillement (11h–15h), l'injection solaire combinée aux autres EnR excède le plafond technique de pénétration instantanée (fixé à **35 %** par le code de l'énergie pour garantir la stabilité de fréquence). Faute de capacité de stockage suffisante, EDF-SEI est contraint de brider ou déconnecter les parcs solaires. Sans conteneurs mobiles, cette énergie propre est **définitivement perdue**.
+
+2. **La pointe du soir aux hydrocarbures importés (Centrales de Lucciana et du Vazzio)** :
+   Entre 18h et 22h, la demande explose alors que la production solaire est nulle. EDF-SEI compense en démarrant les moteurs thermiques de Lucciana (Bastia) et du Vazzio (Ajaccio), brûlant des hydrocarbures importés avec un coût marginal de combustible de **{thermal_fuel_eur:.2f} €/kWh**. Ce surcoût colossal est historiquement compensé par la solidarité nationale via les Charges de Service Public de l'Énergie (CSPE).
+
+3. **L'économie directe créée pour EDF-SEI** :
+   En absorbant l'énergie fatale de midi dans ses conteneurs de 3 MWh pour la restituer le soir aux bornes urbaines, FractaVolta évite à EDF-SEI de brûler **{mobile.fuel_liters_saved_year:,.0f} litres de fioul par an**, générant une économie brute de carburant de **{mobile.thermal_fuel_saved_eur_day * 365 / 1000:,.0f} k€ par an**.
+
+4. **L'alignement économique de la prime de flexibilité** :
+   Une rémunération de réserve/flexibilité de **{flexibility_fee:.3f} €/kWh** versée par l'opérateur de réseau ne représente qu'une fraction de l'économie réalisée par EDF-SEI (**{thermal_fuel_eur:.2f} €/kWh** de combustible évité). Cette prime génère **+{mobile.flexibility_revenue_day * 365 / 1000:,.1f} k€/an** de chiffre d'affaires additionnel pour FractaVolta, rendant le réseau mobile pérenne tout en allégeant les charges de service public.
 """)
 
 with st.expander("Prix final et marge par kWh"):
@@ -534,45 +566,108 @@ En Corse (zone non interconnectée au réseau continental), les producteurs phot
         st.warning("Le fichier de données du registre n'est pas disponible.")
 
 with tab_fin:
+    st.subheader("Bilan économique & Valorisation de la flexibilité insulaire")
+    
     df_fin = pd.DataFrame([
         {
             "Scénario": fixed.name,
-            "Coût €/kWh": fixed.total_cost_eur_kwh,
-            "Marge €/kWh": fixed.margin_eur_kwh,
-            "Marge €/j": fixed.margin_day,
-            "km tracteur léger/j": fixed.light_km_day,
-            "km tracteur lourd/j": fixed.heavy_km_day,
-            "Conteneurs": fixed.containers_needed,
+            "Coût (€/kWh)": fixed.total_cost_eur_kwh,
+            "Marge brute (€/kWh)": fixed.margin_eur_kwh,
+            "Prime flex. (€/kWh)": a.flexibility_remuneration_eur_kwh,
+            "Marge bonifiée (€/kWh)": fixed.margin_with_flexibility_eur_kwh,
+            "Marge brute (€/j)": fixed.margin_day,
+            "Marge bonifiée (€/j)": fixed.margin_with_flexibility_day,
+            "Économie fioul EDF (€/j)": fixed.thermal_fuel_saved_eur_day,
+            "Conteneurs 3 MWh": fixed.containers_needed,
             "Tracteurs lourds": fixed.heavy_tractors_needed,
             "Tracteurs légers": fixed.light_tractors_needed,
         },
         {
             "Scénario": mobile.name,
-            "Coût €/kWh": mobile.total_cost_eur_kwh,
-            "Marge €/kWh": mobile.margin_eur_kwh,
-            "Marge €/j": mobile.margin_day,
-            "km tracteur léger/j": mobile.light_km_day,
-            "km tracteur lourd/j": mobile.heavy_km_day,
-            "Conteneurs": mobile.containers_needed,
+            "Coût (€/kWh)": mobile.total_cost_eur_kwh,
+            "Marge brute (€/kWh)": mobile.margin_eur_kwh,
+            "Prime flex. (€/kWh)": a.flexibility_remuneration_eur_kwh,
+            "Marge bonifiée (€/kWh)": mobile.margin_with_flexibility_eur_kwh,
+            "Marge brute (€/j)": mobile.margin_day,
+            "Marge bonifiée (€/j)": mobile.margin_with_flexibility_day,
+            "Économie fioul EDF (€/j)": mobile.thermal_fuel_saved_eur_day,
+            "Conteneurs 3 MWh": mobile.containers_needed,
             "Tracteurs lourds": mobile.heavy_tractors_needed,
             "Tracteurs légers": mobile.light_tractors_needed,
         },
     ])
     st.dataframe(df_fin, use_container_width=True, hide_index=True)
 
-    bar = go.Figure()
-    bar.add_bar(name="Hub central fixe (Corte)", x=["Coût", "Marge"], y=[fixed.total_cost_eur_kwh, fixed.margin_eur_kwh])
-    bar.add_bar(name="Buffers mobiles (Corridors)", x=["Coût", "Marge"], y=[mobile.total_cost_eur_kwh, mobile.margin_eur_kwh])
-    bar.update_layout(barmode="group", yaxis_title="€/kWh", height=420)
-    st.plotly_chart(bar, use_container_width=True)
+    col_b1, col_b2 = st.columns([3, 2])
+    with col_b1:
+        bar = go.Figure()
+        bar.add_bar(name="Hub central fixe (Corte)", x=["Coût de revient", "Marge d'arbitrage", "Marge + Prime Flexibilité"], y=[fixed.total_cost_eur_kwh, fixed.margin_eur_kwh, fixed.margin_with_flexibility_eur_kwh], marker_color="#64748B")
+        bar.add_bar(name="Buffers mobiles (Corridors)", x=["Coût de revient", "Marge d'arbitrage", "Marge + Prime Flexibilité"], y=[mobile.total_cost_eur_kwh, mobile.margin_eur_kwh, mobile.margin_with_flexibility_eur_kwh], marker_color="#059669")
+        bar.update_layout(barmode="group", yaxis_title="€/kWh livré", height=400, legend=dict(orientation="h", yanchor="bottom", y=1.02))
+        st.plotly_chart(bar, use_container_width=True)
 
-    costs = pd.DataFrame({
-        "Poste": ["Achat producteurs", "Collecte légère", "Transport lourd", "Cycle batterie + borne"],
-        "€/jour": [mobile.purchase_cost_day, mobile.light_cost_day, mobile.heavy_cost_day, mobile.storage_charger_cost_day],
-    })
-    pie = go.Figure(data=[go.Pie(labels=costs["Poste"], values=costs["€/jour"], hole=0.45)])
-    pie.update_layout(height=420)
-    st.plotly_chart(pie, use_container_width=True)
+    with col_b2:
+        costs = pd.DataFrame({
+            "Poste": ["Achat producteurs", "Collecte légère", "Transport lourd", "Cycle batterie + borne"],
+            "€/jour": [mobile.purchase_cost_day, mobile.light_cost_day, mobile.heavy_cost_day, mobile.storage_charger_cost_day],
+        })
+        pie = go.Figure(data=[go.Pie(labels=costs["Poste"], values=costs["€/jour"], hole=0.45)])
+        pie.update_layout(height=400, margin=dict(l=10, r=10, t=20, b=10))
+        st.plotly_chart(pie, use_container_width=True)
+
+    st.subheader("Profil horaire journalier : absorption de l'écrêtement méridien & restitution en pointe du soir")
+    st.caption("Modélisation de la courbe journalière type en Corse : absorption de l'excédent solaire (11h–15h) et restitution aux bornes urbaines (18h–23h), évitant le démarrage des moteurs fioul de Lucciana et du Vazzio.")
+
+    hours = list(range(24))
+    # Normalized solar production profile (bell curve between 6h and 19h, peak at 13h)
+    solar_weights = [max(0.0, math.sin(math.pi * (h - 6) / 13.0))**1.8 if 6 <= h <= 19 else 0.0 for h in hours]
+    sum_weights = sum(solar_weights) or 1.0
+    solar_hourly_kwh = [(w / sum_weights) * mobile.gross_kwh_day for w in solar_weights]
+
+    # Curtailed energy absorbed by mobile buffers (peaks between 10h and 15h)
+    curtailed_hourly_kwh = [p * a.curtailment_rate if 10 <= h <= 15 else 0.0 for h, p in zip(hours, solar_hourly_kwh)]
+
+    # Grid direct injection
+    grid_injection_kwh = [p - c for p, c in zip(solar_hourly_kwh, curtailed_hourly_kwh)]
+
+    # Discharged energy at urban charging stations during evening mobility peak (17h to 23h)
+    ev_evening_weights = [0.0]*17 + [0.12, 0.22, 0.26, 0.22, 0.12, 0.06] + [0.0]
+    ev_hourly_kwh = [w * mobile.delivered_kwh_day for w in ev_evening_weights]
+
+    fig_flex = go.Figure()
+    fig_flex.add_trace(go.Scatter(
+        x=[f"{h:02d}h" for h in hours],
+        y=[k / 1000.0 for k in grid_injection_kwh],
+        name="Injection réseau autorisée (EnR)",
+        mode="lines",
+        line=dict(color="#10B981", width=2.5),
+        stackgroup="solar",
+    ))
+    fig_flex.add_trace(go.Scatter(
+        x=[f"{h:02d}h" for h in hours],
+        y=[k / 1000.0 for k in curtailed_hourly_kwh],
+        name="Énergie fatale absorbée dans les buffers mobiles",
+        mode="lines",
+        line=dict(color="#F59E0B", width=2.5),
+        fillcolor="rgba(245, 158, 11, 0.45)",
+        stackgroup="solar",
+    ))
+    fig_flex.add_trace(go.Scatter(
+        x=[f"{h:02d}h" for h in hours],
+        y=[k / 1000.0 for k in ev_hourly_kwh],
+        name="Restitution aux bornes le soir (Fioul EDF évité)",
+        mode="lines+markers",
+        line=dict(color="#7C3AED", width=3, dash="dash"),
+    ))
+    fig_flex.update_layout(
+        xaxis_title="Heure de la journée (00h - 23h)",
+        yaxis_title="Énergie horaire (MWh)",
+        height=450,
+        legend=dict(orientation="h", yanchor="bottom", y=1.02),
+        margin=dict(l=20, r=20, t=30, b=20),
+    )
+    st.plotly_chart(fig_flex, use_container_width=True)
+
 
 with tab_sens:
     points = []

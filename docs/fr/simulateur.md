@@ -1,118 +1,122 @@
 ---
 title: Simulateur FractaVolta
-subtitle: Explorer les conditions économiques et logistiques d'une chaîne de buffers énergétiques mobiles.
+subtitle: Explorer les conditions économiques et logistiques d'une chaîne de buffers énergétiques mobiles en Corse.
 lang: fr
-description: "Simulateur exploratoire FractaVolta : producteurs Seconde Vie, collecte légère, conteneurs mobiles, transport lourd et stations de recharge."
+description: "Simulateur exploratoire FractaVolta : topologie insulaire corse, corridors T20/T10/T50, registre officiel EDF-SEI, dimensionnement de flotte et valorisation de la flexibilité réseau."
 canonical_url: https://fractavolta.com/fr/simulateur
-date: "2026-09-26"
-status: "prototype exploratoire"
+date: "2026-09-28"
+status: "prototype exploratoire territorial"
 ---
 
 # Simulateur FractaVolta
 
-Le simulateur permet d'explorer une hypothèse simple : au lieu d'imposer à tous les producteurs de rejoindre un hub fixe, **déplacer les gros buffers vers les zones où l'énergie apparaît**.
+Le simulateur permet d'explorer une hypothèse logistique et physique fondamentale : au lieu d'imposer à tous les producteurs de rejoindre un hub fixe ou de subir les limites d'injection du réseau électrique, **déplacer les gros buffers de stockage vers les zones où l'énergie apparaît**, puis acheminer cette énergie massifiée le long des corridors routiers vers les lieux de consommation urbains.
 
-Le modèle compare notamment un hub fixe, des conteneurs ou buffers mobiles pré-positionnés près des producteurs, la collecte locale par utilitaires électriques, le transport lourd massifié vers les stations de recharge, différents prix payés aux producteurs et différents coûts logistiques.
+Le modèle compare notamment un hub central fixe (Corte), des conteneurs tampons mobiles (3 MWh) pré-positionnés le long des axes structurants, la collecte capillaire par tracteurs légers, le transport lourd massifié vers les stations de recharge rapides, différents prix payés aux producteurs, l'autonomie de conduite et la **valorisation de la flexibilité réseau**.
 
-## Lancer le simulateur
+---
 
-[**Ouvrir le simulateur interactif**](https://fracta.fractavolta.com/simulateur/)
+## Lancer le simulateur en ligne
 
-L'application interactive est servie depuis l'infrastructure FractaVolta. La page que vous lisez reste la référence éditoriale et documentaire.
+👉 [**Ouvrir le simulateur interactif**](https://fracta.fractavolta.com/simulateur/)
 
-## Pourquoi ce modèle en Corse ?
+L'application interactive est déployée en production sur l'infrastructure FractaVolta (`fracta2`, Streamlit, Plotly, OpenStreetMap). La page que vous lisez constitue la référence éditoriale, méthodologique et documentaire.
 
-En Corse, le prix des carburants dépend à la fois des marchés énergétiques mondiaux et de contraintes structurelles propres à l'île.
+---
 
-L'Autorité de la concurrence relève depuis plusieurs années plusieurs facteurs durables : forte dépendance des ménages à l'automobile, approvisionnement des carburants uniquement par voie maritime, acheminement routier rendu plus coûteux par le relief, forte saisonnalité de la demande liée au tourisme, capacités de stockage limitées et marché de la distribution particulièrement concentré.
+## 1. Topologie insulaire réelle : Corridors et Hubs urbains
 
-Ces caractéristiques rendent le coût de la mobilité automobile particulièrement sensible à l'organisation locale de l'approvisionnement et de la distribution. L'Autorité de la concurrence a d'ailleurs de nouveau souligné en 2025 la forte concentration du secteur et l'absence, en Corse, de la pression concurrentielle exercée sur le continent par les grandes et moyennes surfaces.
+Le simulateur intègre une **cartographie OpenStreetMap native** (strictement libre de tout jeton propriétaire, fidèle à la doctrine Anti-Capture) représentative de la géographie de la Corse :
 
-L'électricité ouvre une autre chaîne de valeur : une partie de l'énergie nécessaire à la mobilité peut être produite localement, stockée, déplacée puis livrée aux véhicules.
+* **Les 3 hubs urbains et pôles de consommation majeurs** :
+  * **Bastia** (Grand Bastia / Marana-Golo)
+  * **Corte** (Centre Corse, carrefour nodal insulaire)
+  * **Ajaccio** (Pays Ajaccien / Mezzavia)
+  * *(auquel s'ajoute **Porto-Vecchio** pour mailler l'extrême sud)*
+* **Les 3 corridors de transport routier structurants** :
+  * **T20 (Axe central)** : Ajaccio ➔ Mezzavia ➔ Bocognano ➔ Col de Vizzavona ➔ Vivario ➔ Venaco ➔ Corte ➔ Ponte-Leccia ➔ Casamozza ➔ Bastia.
+  * **T10 (Plaine Orientale)** : Casamozza ➔ Folelli ➔ Moriani ➔ Aléria ➔ Ghisonaccia ➔ Solenzara ➔ Sainte-Lucie ➔ Porto-Vecchio.
+  * **T50 (Transversale Tavignano)** : Corte ➔ Erbajolo ➔ Cateraggio / Aléria.
+* **4 positions de buffers mobiles régionaux (conteneurs 3 MWh)** :
+  * Casamozza (Grand Bastia / jonction T20-T10)
+  * Mezzavia (Pays Ajaccien)
+  * Corte (Centre Corse)
+  * Cateraggio / Aléria (Plaine Orientale)
 
-Cela ne signifie pas que l'électricité est automatiquement moins chère. Elle exige elle aussi des investissements, du stockage, du transport, des bornes et une organisation économique viable.
+Les distances sont calculées en coordonnées géodésiques réelles corrigées du facteur de sinuosité du relief corse (1,30x), reflétant le kilométrage routier réel (ex. 65 km entre Corte et Bastia, 72 km entre Corte et Ajaccio).
 
-Le simulateur permet donc de poser ensemble deux questions :
+---
 
-1. **À quel prix peut-on livrer durablement un kWh électrique au client final ?**
-2. **À ce prix, combien un automobiliste économise-t-il sur son énergie en passant du thermique à l'électrique ?**
+## 2. Le Registre officiel des producteurs solaires (ODRÉ / EDF-SEI)
 
-Le calcul de gain usager se limite volontairement, à ce stade, à la dépense d'énergie. Il ne compare pas encore le prix d'achat, le financement, l'entretien, l'assurance ou la valeur de revente des véhicules.
+Le simulateur intègre les données officielles consolidées du **Registre national des installations de production d'électricité** (ODRÉ / EDF-SEI au 31 décembre 2023) pour la Corse :
 
-Sources institutionnelles :
-- [Autorité de la concurrence — avis 20-A-11 du 17 novembre 2020](https://www.autoritedelaconcurrence.fr/fr/avis/relatif-au-niveau-de-concentration-des-marches-en-corse-et-son-impact-sur-la-concurrence)
-- [Autorité de la concurrence — carburants en Corse, décision annoncée le 17 novembre 2025](https://www.autoritedelaconcurrence.fr/fr/communiques-de-presse/carburants-en-corse-lautorite-de-la-concurrence-inflige-une-sanction-de-1875)
+* **742 installations solaires en service**, totalisant **233,1 MWc** de puissance installée (154,6 MWc en grandes centrales HTA au sol et 78,4 MWc en toitures et hangars agricoles BT).
+* **Le mur contractuel de la Seconde Vie** : en Corse, les parcs solaires bénéficient historiquement d'un contrat d'Obligation d'Achat (OA) de 20 ans avec EDF. À l'issue des 20 ans, ces installations perdent leur tarif d'achat garanti :
+  * **Échéance ≤ 2030 (Imminent)** : **24,1 MWc** (61 sites prioritaires, dont Piève, Casalta, Corte, etc.) ;
+  * **Échéance 2031–2035 (Court terme)** : **99,9 MWc** (145 sites, dont 33 grandes centrales HTA) ;
+  * **Potentiel Seconde Vie d'ici 2035** : **124,1 MWc**, soit **53,2 % de l'ensemble du parc solaire corse** qui sortira des contrats garantis dans les dix prochaines années.
 
-## Ce que l'on peut modifier
+Dans l'onglet dédié du simulateur, un explorateur interactif permet de filtrer ces 742 installations par commune, niveau de tension (`HTA` vs `BT`), horizon de fin d'OA et bassin territorial, avec export CSV complet.
 
-Le prototype permet notamment de faire varier la taille des paquets énergétiques, l'énergie transportée par rotation légère, la capacité d'un conteneur, le rendement de la chaîne, le prix payé aux producteurs, les coûts des véhicules, le coût des cycles de batterie, les coûts de station et un **niveau prospectif d'autonomie de conduite**.
+---
 
-## Gain usager : thermique → électrique
+## 3. Simulation à l'échelle macro & Dimensionnement de flotte
 
-Le simulateur estime aussi le gain budgétaire lié au passage d'un véhicule thermique à un véhicule électrique, en se limitant au **coût de l'énergie pour rouler**.
+Grâce au pont direct entre le registre et le moteur de modélisation, le simulateur ne se limite plus aux 12 sites pilotes témoins du MVP (4,5 MWh/j) : l'utilisateur peut choisir de **simuler tout le parc Seconde Vie imminent (24 MWc, ~89 MWh/j)**, l'horizon 2035 (124 MWc), ou une sélection filtrée sur-mesure.
 
-Trois profils de kilométrage servent de repères :
+Le simulateur calcule automatiquement :
+* **Le nombre de conteneurs 3 MWh requis** : ex. 2 conteneurs pour le MVP témoin, **30 conteneurs** pour absorber la production journalière des 61 sites de la vague 2030 ;
+* **La flotte de tracteurs lourds** : rotations de semi-remorques conteneurs le long des corridors T20/T10/T50 vers les bornes urbaines ;
+* **La flotte de tracteurs légers** : rotations capillaires en paquets de 150 kWh depuis les petites toitures agricoles vers les buffers régionaux ;
+* **La distinction physique HTA / BT** : les grandes centrales au sol (> 1 MW) hébergent directement les conteneurs 3 MWh sur site (0 km tracteur léger), alors que les toitures diffuses bénéficient de la collecte capillaire ;
+* **Les émissions de CO₂ fossile évitées** : tonnes de CO₂ évitées chaque année par rapport au carburant diesel ou au mix thermique insulaire (~0,70 kg CO₂ / kWh décarboné).
 
-- petit rouleur ;
-- rouleur moyen ;
-- gros rouleur.
+---
 
-Le kilométrage mensuel de chaque profil reste modifiable. Le visiteur peut également modifier le prix du carburant liquide, la consommation du véhicule thermique, la consommation du véhicule électrique et le prix final du kWh.
+## 4. Pourquoi EDF-SEI devrait rémunérer cette flexibilité ?
 
-Le résultat est affiché en économie mensuelle et annuelle. Cette comparaison ne constitue pas un calcul de coût total de possession : achat du véhicule, financement, entretien, assurance, pneumatiques, fiscalité et valeur de revente restent hors modèle pour l'instant.
+En Corse (Zone Non Interconnectée - ZNI), le système électrique souffre d'une asymétrie quotidienne structurelle :
 
-## Prix client final et marge par kWh
+### A. L'écrêtement solaire à midi (Énergie fatale)
+Aux heures de pointe d'ensoleillement (11h–15h), la production photovoltaïque dépasse la capacité d'absorption instantanée du réseau insulaire. Pour préserver la stabilité de fréquence, le code de l'énergie et la PPE fixent un plafond de pénétration instantanée des EnR intermittentes (35 %). Faute de stockage, EDF-SEI doit **brider ou déconnecter les centrales solaires**. Cette énergie propre est **purement perdue**.
 
-Le simulateur permet de faire varier le **prix client final TTC par kWh**, c'est-à-dire l'équivalent du prix « à la pompe » pour une recharge électrique.
+### B. La pointe du soir aux hydrocarbures (Centrales de Lucciana et du Vazzio)
+Entre 18h et 22h, la demande d'électricité explose (recharges de véhicules, vie quotidienne) alors que le soleil est couché. EDF-SEI doit compenser en démarrant les moteurs thermiques de **Lucciana** (Bastia) et du **Vazzio** (Ajaccio), brûlant du fioul lourd et du fioul léger importés par bateau.
+Le coût marginal de combustible fossile de ces centrales atteint **0,18 € à 0,35 €/kWh**, un surcoût lourdement compensé par la solidarité nationale via les Charges de Service Public de l'Énergie (CSPE).
 
-À partir de ce prix, le modèle calcule la recette hors taxe, puis la compare au coût modélisé par kWh effectivement livré au client final. Il affiche ainsi :
+### C. Le report de charge opéré par FractaVolta
+En capturant l'énergie fatale de midi dans ses conteneurs mobiles (3 MWh) pour la restituer le soir aux bornes urbaines, FractaVolta :
+1. **Évite l'écrêtement solaire** : réinjection d'énergie décarbonée à coût marginal quasi nul ;
+2. **Évite des millions de litres de fioul importé** : à l'échelle des 61 sites de 2030, FractaVolta évite à EDF-SEI de brûler plus de **2,9 millions de litres de fioul par an** (~5,3 M€/an d'économies de combustible fossile) ;
+3. **Justifie une prime de flexibilité** : si l'opérateur de réseau rémunère ce service d'effacement et de réserve à hauteur de **0,04 €/kWh**, cela ne représente qu'une petite fraction de l'économie de fioul réalisée par EDF (0,18 €/kWh évités), tout en consolidant durablement la rentabilité du réseau mobile (+1,1 M€/an de recettes pour la flotte).
 
-- la **marge contributive par kWh livré** ;
-- la marge journalière correspondant au volume livré ;
-- le **prix d'équilibre TTC**, c'est-à-dire le prix client auquel cette marge contributive devient nulle.
+Le simulateur permet de tester directement l'impact de ce taux d'écrêtement évité (0 à 50 %), du coût du fioul économisé et du montant de la prime de flexibilité.
 
-Cette mesure permet d'étudier directement la sensibilité économique du modèle au prix payé par l'usager final.
+---
 
-Elle ne doit cependant pas être confondue avec une rentabilité comptable complète : le prototype ne représente pas encore exhaustivement les CAPEX, le financement, les assurances, toutes les taxes spécifiques, ni le taux réel d'utilisation des véhicules, buffers et bornes.
+## 5. Gain usager : passer du thermique à l'électrique
 
-## Deux catégories de tracteurs
+Le modèle compare la dépense en carburant d'un véhicule thermique à celle d'un véhicule électrique alimenté aux bornes FractaVolta, selon trois profils modifiables :
+* **Petit rouleur** (500 km/mois)
+* **Rouleur moyen** (1 000 km/mois)
+* **Gros rouleur** (2 000 km/mois)
 
-Le simulateur distingue désormais deux catégories génériques :
+Le calcul s'affiche en économie mensuelle et annuelle, isolant le gain strictement lié à l'énergie pour rouler (hors coût d'acquisition ou assurance).
 
-- **tracteur léger** : véhicule de collecte locale capable de tracter une remorque ou un petit paquet énergétique ;
-- **tracteur lourd** : véhicule destiné au déplacement des gros buffers et conteneurs entre zones de production et lieux de consommation.
+---
 
-Le Kia PV5 peut rester un exemple concret de tracteur léger, mais il n'est plus une hypothèse structurante du modèle.
+## 6. Tracteurs génériques et conduite autonome
 
-Pour chaque catégorie, la **capacité de tractage en kilogrammes** est un paramètre distinct de la **quantité d'énergie transportée en kWh**. Le simulateur ne transforme pas automatiquement l'un en l'autre : cette conversion exige de connaître la masse réelle des cellules, de leur enveloppe, de la remorque et des équipements.
+* **Classes génériques** : le simulateur distingue la contrainte physique de tractage en kilogrammes (ex. 1 500 kg pour un tracteur léger, 30 000 kg pour un tracteur lourd) de la charge utile en kWh.
+* **Autonomie de conduite (0 à 100 %)** : ce paramètre prospectif réduit le coût de la main-d'œuvre de conduite (la manutention restant humaine). Il illustre une propriété clé de FractaVolta : **plus le transport devient autonome, plus la multiplication de petits paquets énergétiques distribués devient économiquement compétitive**.
 
-## Et si les véhicules deviennent autonomes ?
+---
 
-Une part importante du coût de la collecte locale vient aujourd'hui du temps de conduite. Le simulateur permet donc d'explorer un scénario futur dans lequel les tracteurs légers de collecte et les tracteurs lourds deviennent progressivement capables de circuler sans conducteur humain à bord.
+## Liens et ressources
 
-Le paramètre **Autonomie de conduite** va de 0 à 100 %. Il réduit uniquement le coût de conduite dans le modèle. Il ne suppose pas que le chargement, le déchargement, la maintenance ou la supervision de la chaîne énergétique sont eux-mêmes automatisés.
-
-Cette distinction est importante : le simulateur ne prédit pas une date d'arrivée de véhicules autonomes généralisés. Il permet seulement de mesurer ce que leur disponibilité changerait à l'économie du réseau.
-
-L'hypothèse à tester est la suivante : **plus le transport devient autonome, moins la multiplication de petits trajets est pénalisante**, et plus des paquets énergétiques fins et distribués peuvent devenir intéressants. À terme, les véhicules pourraient ainsi fonctionner comme des agents physiques de Fractanet, chargés de déplacer des paquets entre producteurs, buffers et lieux de consommation.
-
-## Ce que les résultats signifient
-
-Les résultats servent à identifier des **zones de plausibilité** et des paramètres dominants. Ils ne constituent ni une promesse de rentabilité, ni une offre commerciale, ni une validation réglementaire, ni une spécification d'ingénierie, ni une preuve qu'un site réel est exploitable.
-
-Les premières simulations utilisent encore des coordonnées synthétiques. L'étape suivante consiste à remplacer progressivement ces points par des sites corses réellement qualifiés : actifs [Seconde Vie](./seconde-vie), emplacements admissibles de buffers et stations de recharge.
-
-## Hypothèse centrale
-
-Le coût dominant peut être la collecte capillaire, pas le transport lourd.
-
-Déplacer un conteneur de plusieurs MWh sur quelques dizaines de kilomètres peut coûter moins cher que d'imposer des kilomètres supplémentaires à de nombreux petits véhicules transportant chacun une fraction de cette énergie.
-
-Le simulateur sert précisément à tester cette intuition au lieu de la supposer vraie.
-
-## Liens
-
-- [FractaVolta Seconde Vie](./seconde-vie)
-- [Marchés locaux](./marches)
-- [Energy packets](../energy-packets)
-- [Corpus FractaVolta sur GitHub](https://github.com/JeanHuguesRobert/FractaVolta)
+* [Simulateur en direct](https://fracta.fractavolta.com/simulateur/)
+* [FractaVolta Seconde Vie](./seconde-vie)
+* [Seconde Vie Logistique](./seconde-vie-logistique)
+* [Marchés locaux](./marches)
+* [Code source et modèles sur GitHub](https://github.com/JeanHuguesRobert/FractaVolta)

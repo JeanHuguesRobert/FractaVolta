@@ -68,6 +68,10 @@ assert m.containers_needed == 2
 assert m.light_tractors_needed >= 1
 assert m.heavy_tractors_needed >= 1
 assert m.co2_avoided_tons_year > 0
+assert m.curtailed_kwh_day > 0.0
+assert m.thermal_fuel_saved_eur_day > 0.0
+assert m.fuel_liters_saved_year > 0.0
+assert m.margin_with_flexibility_day > m.margin_day
 
 # Test HTA producer direct buffering (no light km generated)
 p_hta = [Producer("P_HTA", "Bastia", 9.42, 42.42, 10000, 0.08, 0.10, "HTA")]
