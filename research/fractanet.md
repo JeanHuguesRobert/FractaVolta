@@ -195,6 +195,42 @@ The resulting promise is:
 
 > **No single point of failure. No single point of capture.**
 
+### Embodied and human capability routing
+
+A useful capacity need not be implemented by a machine or software endpoint. A human, an already-planned journey, a shop, a workshop, a printer, a storage point, a vehicle, or a temporary combination of these may act as a Fractanet hop when its capability can be discovered, governed and connected to a continuation.
+
+This extends the existing human/AI interpretation of Fractanet into heterogeneous physical and social routing:
+
+```text
+mission / packet
+→ discover admissible capability
+→ route
+→ human | AI | machine | place | physical object | temporary capability array
+→ effect / trace
+→ continuation
+```
+
+The packet and its mission need not share one permanent substrate. A packet may be represented by an URL, a durable reference, a printed object, a QR-labelled object, or another incarnation while preserving stable identity and provenance. A physical incarnation may also be copied and assigned a new identity; such an **incarnation fork** does not by itself imply a fork of payload or mission.
+
+A mission may itself be represented as a Cognitive Packet and referenced by several incarnations in parallel. This yields a strict separation:
+
+```text
+packet identity
+≠ payload
+≠ mission
+≠ incarnation
+≠ route
+≠ handler
+```
+
+The control plane selects identity, policy, admissible routes, mission references and handlers; the data plane performs the actual carriage, materialization, interpretation or other substrate-specific effect. Human routing therefore does not require the transporter to interpret the payload.
+
+Working formulation:
+
+> **Fractanet does not only route resources; it routes missions toward capacities capable of continuing them.**
+
+This is a working extension, not yet a finished wire protocol. The initial Reality Cases include traceable Casa Mariani product objects and addressable *Suicide Corse* copies.
+
 ---
 
 ## Reading guide — key architectural commitments
