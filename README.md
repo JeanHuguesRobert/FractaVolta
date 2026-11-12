@@ -2,6 +2,7 @@
 title: FractaVolta
 author: unknown
 date: '2026-06-19'
+last_modified_at: '2026-11-13'
 document_role: source
 document_kind: documentation
 visibility: public
@@ -39,6 +40,9 @@ classification_confidence: "strong"
 ## Quick Orientation
 
 - 🌐 https://fractavolta.com — public entry point
+- 🔎 [Cogentia Public Guide](https://cogentia.fractavolta.com/guide) — public corpus navigation and Q&A (HTTP landing verified 13 November 2026)
+- 🤖 [John](https://jhn.baronsmariani.org/) — personal agent web landing page; some actions require authentication
+- 📖 [Living Books directory](https://github.com/JeanHuguesRobert/barons-Mariani/blob/main/README.md#livres-vivants--acc%C3%A8s-public) — public reading links and original project sources
 - 📚 [research/index.md](research/index.md) — generated catalog of published papers and open possibilities
 - 📊 [research/corpus-status.md](research/corpus-status.md) — generated corpus status, backlinks, and navigation checks
 - ⚡ [UNCONSCIOUS_GRID.md](research/UNCONSCIOUS_GRID.md) — packetization argument at the energy layer
