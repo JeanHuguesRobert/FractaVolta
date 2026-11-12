@@ -1,5 +1,10 @@
 ---
 title: FractaVolta
+affiliation: "FractaVolta / Institut Mariani"
+license: "CC BY 4.0"
+language: en
+status: working-paper
+canonical_url: https://github.com/JeanHuguesRobert/FractaVolta/blob/main/README.md
 author: unknown
 date: '2026-06-19'
 last_modified_at: '2026-11-13'
