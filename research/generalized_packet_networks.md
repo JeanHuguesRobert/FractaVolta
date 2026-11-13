@@ -183,7 +183,7 @@ Three terminologically close concepts coexist in the broader literature and in t
 
 ### 2.1 Gelenbe's Cognitive Packet Network (CPN)
 
-E. Gelenbe and collaborators introduced the **Cognitive Packet Network** in 2001 as a routing protocol for communication networks [24]. In CPN, smart packets traverse the network, collect performance information, and use reinforcement learning (in particular neural networks called Random Neural Networks) to adapt routing decisions to changing conditions. The "cognitive" in CPN refers to *the packets themselves having adaptive routing intelligence*, not to cognition in the human or AI-agent sense.
+E. Gelenbe and collaborators introduced the **Cognitive Packet Network** in work published in 1999 and 2001 as an adaptive routing architecture for communication networks [24]. In CPN, smart packets traverse the network, collect performance information, and use reinforcement learning (in particular neural networks called Random Neural Networks) to adapt routing decisions to changing conditions. The "cognitive" in CPN refers to adaptive routing intelligence in exploratory packets and node-local learning, not a requirement that application payloads be non-intelligent. Gelenbe's **dumb packets** are called that because the CPN routing algorithm does not inspect or constrain their application-level content; those payloads can themselves carry code or intelligent applications.
 
 Gelenbe also developed the related **Energy Packet Network (EPN)** [12, 13], which the present corpus builds upon.
 
@@ -193,7 +193,7 @@ CPN is a specific, published, well-defined networking protocol. It is *not* what
 
 The corpus paper *Cognitive Packets: A Minimal Continuation Payload for Human–AI and Multi-Agent Cooperation* [25] introduces "cognitive packets" as a structured unit of cognitive work — context, decisions, assumptions, constraints, provenance, next action — sufficient to enable a task to be reliably resumed across humans, artificial agents, tools, conversations, repositories, and workflow systems. Cognitive packets in this sense are a *payload format*, not a routing protocol. They are transmitted by copy (with self-describing protocol header) or by reference.
 
-This is unrelated to Gelenbe's CPN. The terminological proximity is regrettable but unavoidable given that both authors independently appropriated the word "cognitive" for distinct purposes.
+This differs in scope from Gelenbe's CPN without being unrelated to it: CPN focuses on adaptive transport routing while the present cognitive-packet model explicitly specifies portable purposeful work, mandates, and resumable state as application payload. Both routing and payload may involve intelligence, as further explored in FractaRouting. The terminology has a real historical overlap and must retain explicit attribution.
 
 ### 2.3 Generalized packets (this paper)
 
@@ -743,7 +743,7 @@ AI inference introduces new packet types [27]. An inference packet is a versione
 
 Cognitive packets in the corpus sense [25] are structured units of cognitive work carrying enough state — context, decisions, assumptions, constraints, provenance, next action — to enable continuation across humans, artificial agents, tools, conversations, repositories, and workflow systems. They occupy attention, working memory, agent state, task continuity, interpretation capacity, and trust.
 
-*Scope.* See [25] for the full specification. As stressed in §2, this usage is *unrelated* to Gelenbe's CPN [24].
+*Scope.* See [25] for the full specification. As stressed in §2, this usage is semantically distinct from but architecturally compatible with Gelenbe's CPN [24]; the CPN application payload is not required to be cognitively inert.
 
 A layered model can be sketched:
 
