@@ -359,7 +359,8 @@ The classical distinction is:
 
 Fractanet generalizes this distinction beyond bits.
 
-The **control plane** carries the envelope:
+The **control plane** interprets and acts on information carried by a packet **envelope**, including the following fields. The envelope itself travels with the packet in the data plane: **envelope ≠ control plane**.
+
 
 - origin;
 - destination;
@@ -725,9 +726,9 @@ Thus:
 
 ## 15. COP as supervision plane
 
-COP is the supervision plane of Fractanet.
+COP is an **optional governance and supervision profile** for Fractanet operations that require governed work and effects. It does not replace the ordinary control plane that schedules, selects routes and reconciles primitive work. Neither a primitive continuation nor a local cache hit requires a COP mandate or event by default.
 
-It should describe and trace:
+For operations actually governed by COP, it should describe and trace:
 
 - verb calls;
 - capability checks;
@@ -763,7 +764,7 @@ human.approval.denied
 result.returned
 ```
 
-COP is not the runtime. It is the control and supervision protocol that makes runtime acts inspectable.
+COP is not the runtime or the only control plane. It supplies the additional mandate, accountability and evidence semantics for those runtime acts which fall under COP governance.
 
 ### 15.1 Human approval lifecycle
 
@@ -804,9 +805,7 @@ Fractanet should support at least three execution modes:
 | streaming | progressive results, trace, checkpoints, warnings |
 | continuation | suspendable/restartable execution context |
 
-Long-running execution requires persistent state.
-
-A continuation should preserve, at minimum:
+Long-running execution may remain entirely in RAM while its process remains alive. **Durable** continuation state is required only when recovery, delayed resumption or migration must survive that process/locality. A durable or migrating continuation SHOULD preserve or reference the subset of the following information that is genuinely necessary to resume:
 
 - script version;
 - runtime version;
@@ -820,7 +819,7 @@ A continuation should preserve, at minimum:
 - pending approvals;
 - route candidates or branch state.
 
-Inox is well suited to this because its execution model can be designed around serializable control/data structures. JavaScript should initially be limited to explicit state-based resumable jobs.
+Inox is well suited to this because its execution model can be designed around serializable control/data structures. JavaScript should initially be limited to explicit state-based resumable jobs. Side-style memoization and replay can reconstruct a continuation without serializing a live execution stack. Host-local SQLite is an appropriate operational store; the work is not permanently bound to that host. Versioned handoffs and verified retrieval allow migration. Independent attempts may advance concurrently, with version/causal conflict detection and reconciliation at the minimum sufficient locality; this is not a guarantee of eventual consistency without update propagation and a resolution policy. Deduplicate non-idempotent external effects at their real commit boundary.
 
 ---
 
@@ -887,7 +886,7 @@ Backtracking is useful for:
 - continuation placement;
 - human approval alternatives.
 
-But it must be supervised. Each branch should be visible through COP.
+Exploration should be observable at the level justified by its effects. Primitive, non-governed branches can be supervised locally without COP. When COP governance actually applies, relevant branches and consequential effects are traced through COP.
 
 Formula:
 
@@ -1319,7 +1318,7 @@ A continuation appears at several scales:
 
 1. **Inox VM:** execution state can be suspended and resumed.
 2. **Gateway:** a long-running verb becomes a resumable job.
-3. **COP:** pause/resume events make the suspended act inspectable.
+3. **Optional COP governance:** for governed work, pause/resume events or traces make the suspended act inspectable; primitive continuations do not need COP.
 4. **Cognitive packet:** a reasoning process is packaged for later continuation.
 5. **Institutional process:** a pending mandate or approval remains valid only under explicit conditions.
 
