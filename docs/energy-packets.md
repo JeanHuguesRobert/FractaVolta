@@ -144,3 +144,8 @@ FractaVolta answers this question physically, through energy and compute infrast
 ## FractaVolta in one sentence
 
 **FractaVolta turns local energy into local capacity: measured, stored, routed, used, and traced.**
+
+
+## Domestic application — OpenPowerHub 48V (2026-11-19)
+
+[OpenPowerHub 48V — corpus linkage and validation notes](https://github.com/JeanHuguesRobert/barons-Mariani/blob/main/research/openpowerhub_48v_rattachement_corpus.md) is a proposed **educational domestic energy-buffer demonstrator** developed in the Mariani School of Autonomy / C.O.R.S.I.C.A. It explores solar MPPT, local DC loads, a nominal 48 V LFP buffer, compatible EV V2L backup, and fail-safe local energy management. It is an instance of *measure → store → prioritize → route → trace* and the home's homeostasis/modes-degraded doctrine. Its cost, safety claims, grid-disconnection architecture, interfaces, and performance are **unvalidated**, and domestic installation requires applicable independent electrical/regulatory review. This application does not redefine the foundational energy-packet concept.
