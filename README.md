@@ -133,7 +133,7 @@ By 2000, it had replaced circuit-switched networks.
 
 The electrical grid has not noticed. Neither has cognitive infrastructure.
 
-The grid remains, structurally, a circuit-switched network: dedicated paths, continuous synchronisation, saturation that blocks all flow when any segment is full. The SARCO submarine link between Corsica and Sardinia (150 kV AC, nominally 100 MW, with seasonally constrained available import capacity) is a concrete example of a finite-capacity interconnection.
+The grid remains, structurally, a circuit-switched network: dedicated paths, continuous synchronisation, saturation that blocks all flow when any segment is full. The SARCO submarine cable connecting Corsica to Sardinia — saturated for significant portions of each year, while the island receives some of Europe's highest solar irradiation — is a textbook case.
 
 Cognitive infrastructure remains, structurally, an opaque-runtime monolith: reasoning evaporates inside vendor-locked APIs, decisions cannot be reconstructed, agents are not replaceable, judgment is hidden inside service contracts.
 
@@ -189,7 +189,7 @@ Foundational papers: [UNCONSCIOUS_GRID.md](./research/UNCONSCIOUS_GRID.md), [DC_
 
 ### Layer 2 — Compute
 
-Sovereign AI inference is the highest-value application of stranded Mediterranean solar exergy. Where hypothetical grid export is valued at €40–80/MWh (a modelling assumption, not an observed SARCO export tariff), the same exergy converted into inference tokens is estimated to yield ×10–×40 the revenue — while bypassing dependence on the capacity-limited Corsica–Sardinia SARCO link: inference tokens travel the internet, not the power cable.
+Sovereign AI inference is the highest-value application of stranded Mediterranean solar exergy. Where exporting electrons through the SARCO cable yields €40–80/MWh, the same exergy converted into inference tokens yields ×10–×40 the revenue — and the bottleneck is bypassed: inference tokens travel the internet, not the cable.
 The pricing unit is the **CXU** (Compute eXergy Unit) — defined in the [MareNostrum framework](https://github.com/JeanHuguesRobert/marenostrum/blob/main/research/CXU_SPEC.md) — which incorporates hardware efficiency, system efficiency, and SLA premium into a single auditable price per unit of useful inference.
 
 The new [Inference Packet Networks](research/inference_packet_network.md) paper extends the packet logic to cognition itself: inference workloads as versioned, signed, locally executable units providing bounded continuity when hyperscale systems are degraded, unavailable, or geopolitically disrupted.
@@ -363,7 +363,7 @@ All papers: CC BY-SA 4.0. All software: MIT.
 
 - **Energy layer** — Energy Packet Network (EPN) deployments. Fractal electrochemical packets (0.1 kWh phone battery → 2 MWh ISO container → 100 MWh vessel) routed via conventional logistics. DC-native 48V SELV bus inside every autonomous node. USB-C PD 3.1 as human interface. AC as boundary adapter only. Extended exergy chain: photons → pumps → altitude → turbines → electrons → inference. Gravitational storage via Packetized Gravity Networks (PGN). Inference continuity via Inference Packet Networks (IPN).
 
-- **Compute layer** — Sovereign AI inference priced in CXU (Compute eXergy Unit). Stranded Mediterranean solar exergy → inference tokens → ×10–×40 revenue premium over grid export, bypassing dependence on the finite-capacity SARCO power link via internet routing.
+- **Compute layer** — Sovereign AI inference priced in CXU (Compute eXergy Unit). Stranded Mediterranean solar exergy → inference tokens → ×10–×40 revenue premium over grid export, bypassing the SARCO cable bottleneck via internet routing.
 
 - **Cognition layer** — Cognitive Orchestration Protocol (COP): Event/Topic/Task/Step/Artifact/Continuation as the durable substrate. `cogentia.js` CLI for multi-repo knowledge production with auditable cross-references. `cogentia.continuation.v1` protocol: typed, validated, provider-neutral, capability-bound (`agent: "*"`), Heraclitean (every resume emits a dormant successor — chain is non-terminal). Replaceability soundness test: Claude must be substitutable by another agent or a human without modifying cogentia.js.
 
