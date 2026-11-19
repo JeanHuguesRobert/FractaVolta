@@ -438,7 +438,7 @@ Target: eliminate UPS AC bypass and MV transformer for a fully islanded AI node.
 
 HVDC is useful where fixed corridors are justified (island interconnection, bulk renewable export). EPN is useful where corridors are absent, saturated, contested, slow, or politically captured.
 
-For Corsica specifically: the SARCO submarine interconnection links Corsica to Sardinia at 150 kV AC, with nominal capacity around 100 MW and seasonally constrained available import capacity. The FractaVolta thesis is that AI inference nodes powered by physically transported solar packets bypass SARCO entirely — converting solar exergy to internet-routable computation tokens without needing the cable.
+For Corsica specifically: the SARCO submarine interconnection between Corsica and Sardinia operates at 150 kV AC with limited capacity and political sensitivity. The FractaVolta thesis is that AI inference nodes powered by physically transported solar packets bypass SARCO entirely — converting solar exergy to internet-routable computation tokens without needing the cable.
 
 ### D5 — The packet is the new transformer
 
