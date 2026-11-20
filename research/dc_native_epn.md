@@ -87,6 +87,8 @@ Information networks underwent a comparable architectural shift. The telephone n
 
 *The Unconscious Grid* applies this distinction to energy [4]. It argues that the electrical grid remains structurally circuit-switched, while an EPN applies store-and-forward logic to energy: batteries become packets; vehicles, ferries, and logistics networks become routers; AI inference becomes an application-layer transduction of solar exergy into internet-routable value.
 
+**Related research (20 November 2026):** The ERC-funded [SAFEr Grid project](https://cordis.europa.eu/project/id/101166783/results) investigates *asynchronous energy balancing* across electrically connected subgrids, decoupled by storage and power-electronic energy routers [19, 20]. It offers a complementary engineering research direction for local interfaces and microgrids; it does not require the geographically mobile battery packets of FractaVolta EPN. The comparison is about alternative coupling and transport architectures, not a claim that both systems implement the same DC network.
+
 This is where DC becomes central. A packet-switched information network does not require a continuous physical circuit between sender and receiver. Likewise, an energy packet does not require a continuous electrical circuit between generation and consumption. The packet is charged, isolated, transported, and later discharged.
 
 During all phases of storage and transport, the packet is necessarily DC in nature:
@@ -516,6 +518,10 @@ That is the real return of direct current: not as the defeated current of Edison
 [17] IEC 62619. *Secondary Cells and Batteries Containing Alkaline or Other Non-Acid Electrolytes — Safety Requirements for Secondary Lithium Cells and Batteries, for Use in Industrial Applications*. IEC, 2022.
 
 [18] European Parliament. *Regulation (EU) 2023/1542 Concerning Batteries and Waste Batteries*. OJ L 191, 2023.
+[19] European Research Council / CORDIS. *SAFEr Grid — Store-And-Forward Energy Grid*, grant 101166783, project results (2025–2031). https://cordis.europa.eu/project/id/101166783/results
+
+[20] Schwarz, S. et al. *Resilient low-inertia power systems through asynchronous energy balancing*. *Nature Reviews Electrical Engineering*, 3, 101–110, 2026. https://doi.org/10.1038/s44287-025-00256-5
+
 <!-- BEGIN_AUTO: backlinks -->
 ### Backlinks
 
