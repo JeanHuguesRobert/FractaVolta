@@ -329,6 +329,8 @@ Thus the candidate packet types are not only data packets. They may include:
 - governance packets;
 - mandates, permissions, duties, responsibilities.
 
+**External energy research correspondence (20 November 2026).** [SAFEr Grid (ERC project 101166783)](https://cordis.europa.eu/project/id/101166783/results) and [Schwarz et al. (2026)](https://doi.org/10.1038/s44287-025-00256-5) are pertinent to the *electrical* data-plane case: energy routers buffer and forward energy between asynchronous subgrids. Fractanet's proposed general control-plane grammar could describe such an interface alongside physically transported battery packets, subject to different physics, security and timing contracts. No interoperability with SAFEr Grid or operational Fractanet deployment is asserted here.
+
 This list is not a license to call everything a packet. It is a hypothesis: if a unit is bounded, addressable, delayable or storable, independently governable, and operationally measurable, then it may be packetized. If not, it should not be forced into the framework.
 
 ---
