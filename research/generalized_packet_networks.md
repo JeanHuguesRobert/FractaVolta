@@ -880,6 +880,8 @@ First, logistics and supply-chain theory already treats parcels, pallets, contai
 
 Second, Packetized Energy Management and Energy Packet Networks have already introduced packet language into electrical systems [12–15]. GPN treats these as established substrate-specific instances and asks what abstractions remain valid when the packet is no longer electrical: heat, hydraulic exergy, inference, mandate, or attention.
 
+**2026 related-work addition — asynchronous energy grids.** The ERC Synergy project [SAFEr Grid — Store-And-Forward Energy Grid](https://cordis.europa.eu/project/id/101166783/results) [41] and Schwarz et al.'s “[Resilient low-inertia power systems through asynchronous energy balancing](https://doi.org/10.1038/s44287-025-00256-5)” [42] explore energy buffering/routing between asynchronous *electrically coupled* subgrids. These are relevant to the electrical-energy instance of GPN, alongside Gelenbe's EPN and packetized energy management. The substrate boundary matters: electrical transfer between converter-coupled grids is distinct from FractaVolta's physical movement of charged batteries, and neither by itself establishes a cognitive packet protocol. GPN can compare their occupancy, buffer, routing, delay and loss constraints without equating their physical mechanisms.
+
 Third, governance and digital-institutional systems already discretize authority through votes, signatures, smart contracts, registry entries, tickets, complaints, credentials, and permissions. GPN does not reduce governance to software. It uses the packet abstraction to make authority flows more explicit, auditable, revocable, and comparable.
 
 ---
@@ -1159,6 +1161,10 @@ Whether GPN is a useful framework will be determined by deployment, measurement,
 [39] N. Szabo, "Formalizing and Securing Relationships on Public Networks," *First Monday*, 1997.
 
 [40] S. Nakamoto, *Bitcoin: A Peer-to-Peer Electronic Cash System*, 2008.
+
+[41] European Research Council / CORDIS. *SAFEr Grid — Store-And-Forward Energy Grid*, grant 101166783, 2025–2031. https://cordis.europa.eu/project/id/101166783/results
+
+[42] S. Schwarz et al., “Resilient low-inertia power systems through asynchronous energy balancing,” *Nature Reviews Electrical Engineering*, vol. 3, pp. 101–110, 2026. https://doi.org/10.1038/s44287-025-00256-5
 
 ---
 
