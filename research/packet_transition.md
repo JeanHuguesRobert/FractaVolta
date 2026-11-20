@@ -192,6 +192,8 @@ The technical preconditions are met:
 - **Routing**: ferry networks, road logistics, price signals, AI dispatch (Cogentia [4])
 - **Delivery**: DC discharge at point of use, kWh metering, custody transfer
 
+**External research note (20 November 2026).** The ERC Synergy project [SAFEr Grid — Store-And-Forward Energy Grid](https://cordis.europa.eu/project/id/101166783/results) (grant 101166783, 2025–2031) pursues *asynchronous energy balancing* across independent electrical subgrids; see Schwarz et al. (2026), “[Resilient low-inertia power systems through asynchronous energy balancing](https://doi.org/10.1038/s44287-025-00256-5).” This is a separate packet-transition pathway from transporting charged batteries by road or sea. The companion publication by Piller and Fredberg, “[New Dynamics of Change? AI-Led and AI-Generated Change in the Electrical Grid](https://doi.org/10.1177/00218863261490158)” (2026), is also pertinent to this essay's interest in organizational change. These references document related research; they do not alter the paper's own interpretation of the transition.
+
 The DC-native architecture [5] is the natural electrical form of the EPN: photovoltaics generate DC, batteries store DC, electronic loads consume DC. AC becomes a boundary protocol rather than the universal substrate.
 
 ### 5.2 Habitat (Mariani Village, 2025)
