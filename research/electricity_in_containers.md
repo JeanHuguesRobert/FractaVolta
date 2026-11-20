@@ -76,6 +76,8 @@ The analogy to containerized electricity is structural, not decorative:
 
 The analogy has limits: electrons cannot be error-corrected, and energy storage has self-discharge losses that data does not. But the structural logic holds: store-and-forward power enables **asynchronous energy logistics** that complements synchronous grid distribution.
 
+**Related research (20 November 2026).** [SAFEr Grid](https://cordis.europa.eu/project/id/101166783/results) (ERC Synergy grant 101166783) and the 2026 paper “[Resilient low-inertia power systems through asynchronous energy balancing](https://doi.org/10.1038/s44287-025-00256-5)” investigate store-and-forward balancing between *electrically interconnected*, asynchronous subgrids. That research is complementary, not identical, to the present proposal: SAFEr Grid buffers energy across electrical interfaces; this paper also routes the *charged storage device itself* through physical logistics. A hybrid system could evaluate both links under shared cost, delay, loss, safety, and service constraints; this is a research question, not a demonstrated deployment.
+
 This is also, in an ironic sense, the practical realization of wireless power transmission — not through resonant fields as Nikola Tesla imagined, but through logistics.
 
 ---
